@@ -14,6 +14,7 @@ from __future__ import annotations
 import operator
 from typing import Annotated, Any, TypedDict
 
+from .modes.base import ModeContext
 from .schemas import (
     BehaviorBible,
     Brief,
@@ -59,6 +60,7 @@ class DramaState(TypedDict, total=False):
     # ---- 输入 ----
     brief: Brief
     workspace: str
+    mode_context: ModeContext
 
     # ---- 立项底座（冻结后只读）----
     genre_id: str

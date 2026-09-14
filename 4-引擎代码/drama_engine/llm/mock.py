@@ -35,6 +35,7 @@ from ..schemas import (
     BehaviorBible,
     CastDraft,
     Episode,
+    EpisodePlan,
     FactLedger,
     GadgetSpec,
     JudgeResponse,
@@ -107,6 +108,7 @@ class MockLLMProvider(BaseLLMProvider):
             OutlineDraft: self._outline,
             FactLedger: self._ledger,
             Episode: self._episode,
+            EpisodePlan: self._episode_plan,
             JudgeResponse: self._judge,
             LineRewrites: self._line_rewrites,
         }.get(schema)
@@ -584,6 +586,36 @@ class MockLLMProvider(BaseLLMProvider):
             covered.add(ep)
 
     # ------------------------------------------------------------------ 剧本
+    # ---- Phase 1.5: Episode Plan (轻量规划) ----
+    def _episode_plan(self, ctx: dict, dirty: bool, user: str) -> dict:
+        entry = ctx.get("outline_entry") or {}
+        ep_no = int(entry.get("episode", 1))
+        return {
+            "episode": ep_no,
+            "title": entry.get("title", f"第{ep_no}集"),
+            "goal": entry.get("core_goal", "推进主线"),
+            "dramatic_question": "主角能挺过这一关吗？",
+            "hook": "开场直接进入危机现场",
+            "beats": [
+                {"order": 1, "function": "hook", "event": "危机爆发",
+                 "new_information": "敌人出现", "character_choice": "迎战而非退缩",
+                 "consequence": "受伤但守住阵地", "tension": 7},
+                {"order": 2, "function": "conflict", "event": "资源耗尽",
+                 "new_information": "隐藏盟友的身份", "character_choice": "信任新盟友",
+                 "consequence": "获得关键资源", "tension": 8},
+                {"order": 3, "function": "climax", "event": "决战",
+                 "new_information": "敌人的真正目的", "character_choice": "牺牲次要目标",
+                 "consequence": "击退敌人但留下隐患", "tension": 9},
+                {"order": 4, "function": "cliffhanger", "event": "更大的威胁浮现",
+                 "new_information": "只是更大阴谋的序幕", "character_choice": "决定追查到底",
+                 "consequence": "下一集的方向", "tension": 8},
+            ],
+            "reversal": "盟友原来是敌人安插的间谍",
+            "climax": "主角在绝境中做出抉择",
+            "cliffhanger": "幕后黑手露出真容",
+            "continuity_notes": "承接前一集的叛国案线索",
+        }
+
     def _episode(self, ctx: dict, dirty: bool, user: str) -> dict:
         entry = ctx.get("outline_entry") or {}
         ep_no = int(entry.get("episode", 1))

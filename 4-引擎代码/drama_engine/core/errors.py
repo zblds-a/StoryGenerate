@@ -25,6 +25,7 @@ class EngineErrorCode(str, Enum):
     EMPTY_OUTPUT = "EMPTY_OUTPUT"
     GENERATION_CANCELLED = "GENERATION_CANCELLED"
     INTERNAL_ERROR = "INTERNAL_ERROR"
+    MODE_NOT_SUPPORTED = "MODE_NOT_SUPPORTED"
 
 
 class StoryEngineError(Exception):

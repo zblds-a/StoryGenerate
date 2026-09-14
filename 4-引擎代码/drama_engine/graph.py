@@ -178,13 +178,21 @@ def run_pipeline(
     target_duration_sec: int = 180,
     locked_assets: list[str] | None = None,
     thread_id: str = "local",
+    story_mode: str | None = None,
     graph=None,
 ) -> dict[str, Any]:
     """命令行 / 服务层入口。
 
     Runtime 通过工厂注入而不是当作参数层层传递 —— 节点只需要 LLMSpec 与 Protocol，
     不应该看见 HTTP 客户端、API key 这类基础设施细节。
+
+    Phase 2: 新增 story_mode 参数。默认 None → viral_drama。
     """
+    from .modes import get_mode, ModeContext
+
+    mode = get_mode(story_mode)
+    mode_ctx = ModeContext.from_mode(mode)
+
     set_runtime_factory(lambda: runtime)
     app = graph or build_graph()
     initial = {
@@ -194,6 +202,7 @@ def run_pipeline(
             target_duration_sec=target_duration_sec,
             locked_assets=locked_assets or [],
         ),
+        "mode_context": mode_ctx,
         "workspace": workspace,
         "episodes": [],
         "findings": [],

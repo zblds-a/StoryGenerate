@@ -24,7 +24,13 @@ from pathlib import Path
 from .config import RuleLibrary
 from .contracts import InMemoryTelemetry, Runtime
 from .graph import build_graph
+from .modes import get_mode, ModeContext
 from .mocks import MockMarketRetriever, MockTTSRenderer
+
+
+def _resolve_mode(key: str | None) -> ModeContext:
+    """CLI helper: resolve mode key → ModeContext."""
+    return ModeContext.from_mode(get_mode(key))
 
 
 def _build_runtime(kind: str, telemetry, inject_violations: bool,
@@ -71,6 +77,7 @@ def main(argv: list[str] | None = None) -> int:
                         help="只注入语义缺陷（Tier-1 全绿），验证语义裁判真的在工作")
     parser.add_argument("--evidence-demo", action="store_true",
                         help="只造声明与正文脱节，验证证据评审层（假反转/假因果/假信任/标签空转）")
+    parser.add_argument("--story-mode", default=None, help="故事模式，默认 viral_drama")
     args = parser.parse_args(argv)
 
     demo = args.violations_demo or args.tier2_demo or args.evidence_demo
@@ -87,6 +94,7 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     app = build_graph(use_checkpoint=not demo)
+    mode = _resolve_mode(args.story_mode)
     initial = {
         "brief": {
             "raw_idea": args.idea,
@@ -95,6 +103,7 @@ def main(argv: list[str] | None = None) -> int:
             "locked_assets": [a.strip() for a in args.assets.split(",") if a.strip()],
         },
         "workspace": str(Path(args.workspace or ".").resolve()),
+        "mode_context": mode.model_dump(),
         "episodes": [], "findings": [], "unclaimed": [], "trace": [], "budgets": {},
     }
     config = {
