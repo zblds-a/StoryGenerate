@@ -1,76 +1,136 @@
-"""模型分级路由。
+"""模型分级路由 —— Phase 1 重构。
 
-这里是成本控制的核心论点：**不是所有节点都值得用最强模型。**
-
-杠杆率差异极大：
-  - 开场 3 秒钩子、二次反转、结尾强钩子 —— 决定完播率，用最强模型，一个 token 都不能省。
-  - 中段推进、音频化改写、字段补全 —— 结构固定、可校验，用便宜模型，错了还有校验节点兜底。
-
-因此"用哪个模型"是节点的属性，不是全局配置。
+变更:
+  - 逻辑档位：FAST / BALANCED / STRONG / LONG（新）
+  - 向后兼容：cheap→FAST, balanced→BALANCED, strong/reasoning→STRONG, long→LONG
+  - ModelTierMap 从 Settings 读取默认模型映射
+  - resolve_spec 自动附加 node_timeout_sec
 """
 from __future__ import annotations
 
+from typing import Any
+
+from ..core.settings import Settings, get_settings
 from .base import LLMSpec
 
-# 节点 role → 模型档位。tier 由部署方在部署配置里映射到具体模型名。
-MODEL_ROUTING: dict[str, dict] = {
-    # 高杠杆：结构决策 + 剧作判断，一旦错，后面全错
-    # max_tokens 已考虑 reasoning tokens 开销（DeepSeek 模型约 50-80% 为推理 token）
-    "topic_select":        {"tier": "reasoning", "temperature": 0.3, "max_tokens": 8192},
-    "gadget_design":       {"tier": "reasoning", "temperature": 0.5, "max_tokens": 16384},
-    "cast_design":         {"tier": "reasoning", "temperature": 0.6, "max_tokens": 16384},
-    # 人物选择规律：决定"人物是否有魅力"，与开头钩子同级的高杠杆节点
-    "behavior_design":     {"tier": "reasoning", "temperature": 0.7, "max_tokens": 32768},
-    # 账本是核对型产物，需要的是严谨而非灵感，温度压低
-    "fact_ledger":         {"tier": "reasoning", "temperature": 0.2, "max_tokens": 32768},
-    "outline":             {"tier": "reasoning", "temperature": 0.5, "max_tokens": 32768},
-    # 最高杠杆：三处钩子单独用强模型生成
-    "hook_open":           {"tier": "strong",    "temperature": 0.9, "max_tokens": 4096},
-    "hook_reversal":       {"tier": "strong",    "temperature": 0.9, "max_tokens": 4096},
-    "hook_cliffhanger":    {"tier": "strong",    "temperature": 0.95, "max_tokens": 4096},
-    # 中低杠杆：结构化填充，便宜模型足够，校验节点兜底
-    "episode_beats":       {"tier": "cheap",     "temperature": 0.85, "max_tokens": 32768},
-    "audio_adapt":         {"tier": "cheap",     "temperature": 0.4, "max_tokens": 16384},
-    "repair_beat":         {"tier": "strong",    "temperature": 0.7, "max_tokens": 16384},
-    "repair_audio":        {"tier": "cheap",     "temperature": 0.3, "max_tokens": 8192},
-    "repair_cast":         {"tier": "reasoning", "temperature": 0.4, "max_tokens": 8192},
-    "repair_gadget":       {"tier": "reasoning", "temperature": 0.4, "max_tokens": 8192},
-    "repair_behavior":     {"tier": "reasoning", "temperature": 0.6, "max_tokens": 16384},
-    "repair_ledger":       {"tier": "reasoning", "temperature": 0.3, "max_tokens": 16384},
-    "repair_outline":      {"tier": "reasoning", "temperature": 0.4, "max_tokens": 16384},
-    "repair_compliance":   {"tier": "reasoning", "temperature": 0.3, "max_tokens": 8192},
-    # 语义裁判：温度 0，同一份剧本两次跑必须得到同一结论
-    "judge":               {"tier": "strong",    "temperature": 0.0, "max_tokens": 16384},
+# ---- 逻辑档位常量 ----
+TIER_FAST = "FAST"
+TIER_BALANCED = "BALANCED"
+TIER_STRONG = "STRONG"
+TIER_LONG = "LONG"
+
+# 旧档位 → 新档位映射
+_LEGACY_TIER_MAP: dict[str, str] = {
+    "cheap": TIER_FAST,
+    "balanced": TIER_BALANCED,
+    "strong": TIER_STRONG,
+    "reasoning": TIER_STRONG,
+    "long": TIER_LONG,
+    "fast": TIER_FAST,
 }
 
-DEFAULT_ROUTE = {"tier": "cheap", "temperature": 0.7, "max_tokens": 16384}
+
+def normalize_tier(tier: str) -> str:
+    """将旧档位名标准化为新档位名。"""
+    return _LEGACY_TIER_MAP.get(tier.lower(), tier.upper())
+
+
+# 节点 role → 配置。
+# tier 可使用新名（FAST/BALANCED/STRONG/LONG）或旧名（cheap/reasoning/strong）。
+MODEL_ROUTING: dict[str, dict] = {
+    # ===== FAST =====
+    "topic_select":        {"tier": TIER_FAST,     "temperature": 0.3, "max_tokens": 8192},
+    "fact_ledger":         {"tier": TIER_FAST,     "temperature": 0.2, "max_tokens": 32768},
+    "judge":               {"tier": TIER_FAST,     "temperature": 0.0, "max_tokens": 16384},
+    "audio_adapt":         {"tier": TIER_FAST,     "temperature": 0.4, "max_tokens": 16384},
+    "repair_json":         {"tier": TIER_FAST,     "temperature": 0.3, "max_tokens": 8192},
+    "repair_audio":        {"tier": TIER_FAST,     "temperature": 0.3, "max_tokens": 8192},
+
+    # ===== BALANCED =====
+    "cast_design":         {"tier": TIER_BALANCED, "temperature": 0.6, "max_tokens": 16384},
+    "repair_cast":         {"tier": TIER_BALANCED, "temperature": 0.4, "max_tokens": 8192},
+    "episode_beats":       {"tier": TIER_BALANCED, "temperature": 0.85, "max_tokens": 32768},
+    "repair_beat":         {"tier": TIER_BALANCED, "temperature": 0.7, "max_tokens": 16384},
+
+    # ===== STRONG =====
+    "gadget_design":       {"tier": TIER_STRONG,   "temperature": 0.5, "max_tokens": 16384},
+    "behavior_design":     {"tier": TIER_STRONG,   "temperature": 0.7, "max_tokens": 32768},
+    "outline":             {"tier": TIER_STRONG,   "temperature": 0.5, "max_tokens": 32768},
+    "hook_open":           {"tier": TIER_STRONG,   "temperature": 0.9, "max_tokens": 4096},
+    "hook_reversal":       {"tier": TIER_STRONG,   "temperature": 0.9, "max_tokens": 4096},
+    "hook_cliffhanger":    {"tier": TIER_STRONG,   "temperature": 0.95, "max_tokens": 4096},
+    "repair_gadget":       {"tier": TIER_STRONG,   "temperature": 0.4, "max_tokens": 8192},
+    "repair_behavior":     {"tier": TIER_STRONG,   "temperature": 0.6, "max_tokens": 16384},
+    "repair_outline":      {"tier": TIER_STRONG,   "temperature": 0.4, "max_tokens": 16384},
+
+    # ===== LONG =====
+    "repair_ledger":       {"tier": TIER_LONG,     "temperature": 0.3, "max_tokens": 16384},
+    "repair_compliance":   {"tier": TIER_LONG,     "temperature": 0.3, "max_tokens": 8192},
+}
+
+DEFAULT_ROUTE = {"tier": TIER_FAST, "temperature": 0.7, "max_tokens": 16384}
 
 
 class ModelTierMap:
-    """档位 → 具体模型名。部署时用环境变量或配置文件覆盖即可，无需改代码。
+    """档位 → 具体模型名。
 
-    优先级：构造函数 mapping > 环境变量 DRAMA_LLM_MODEL > 默认 mock。
-    设置 DRAMA_LLM_MODEL 即可让所有档位指向同一模型（适合单模型部署）；
-    需要分档位时传入显式 mapping。
+    优先级：构造函数 mapping > STORY_LLM_*_MODEL 环境变量 > DRAMA_LLM_MODEL > mock
     """
 
-    def __init__(self, mapping: dict[str, str] | None = None) -> None:
+    def __init__(self, mapping: dict[str, str] | None = None,
+                 settings: Settings | None = None) -> None:
         import os
 
+        self._settings = settings or get_settings()
         env_model = os.environ.get("DRAMA_LLM_MODEL")
-        self.mapping = mapping or {
-            "reasoning": env_model or "mock",
-            "strong": env_model or "mock",
-            "cheap": env_model or "mock",
+
+        self.mapping: dict[str, str] = {
+            TIER_FAST:     mapping.get(TIER_FAST) if mapping else (
+                self._settings.llm_fast_model or env_model or "mock"),
+            TIER_BALANCED: mapping.get(TIER_BALANCED) if mapping else (
+                self._settings.llm_balanced_model or env_model or "mock"),
+            TIER_STRONG:   mapping.get(TIER_STRONG) if mapping else (
+                self._settings.llm_strong_model or env_model or "mock"),
+            TIER_LONG:     mapping.get(TIER_LONG) if mapping else (
+                self._settings.llm_long_model or env_model or "mock"),
+        } if mapping else {
+            TIER_FAST:     self._settings.llm_fast_model or env_model or "mock",
+            TIER_BALANCED: self._settings.llm_balanced_model or env_model or "mock",
+            TIER_STRONG:   self._settings.llm_strong_model or env_model or "mock",
+            TIER_LONG:     self._settings.llm_long_model or env_model or "mock",
         }
 
+        # 向后兼容旧档位名
+        self.mapping["cheap"] = self.mapping[TIER_FAST]
+        self.mapping["reasoning"] = self.mapping[TIER_STRONG]
+        self.mapping["strong"] = self.mapping[TIER_STRONG]
+
     def resolve(self, tier: str) -> str:
-        return self.mapping.get(tier, self.mapping.get("cheap", "mock"))
+        normalized = normalize_tier(tier)
+        return self.mapping.get(normalized, self.mapping.get(TIER_FAST, "mock"))
+
+    def describe(self) -> dict[str, str]:
+        return {t: self.resolve(t) for t in
+                (TIER_FAST, TIER_BALANCED, TIER_STRONG, TIER_LONG)}
 
 
-def resolve_spec(role: str, tier_map: ModelTierMap | None = None, **overrides) -> LLMSpec:
-    tier_map = tier_map or ModelTierMap()
-    config = dict(MODEL_ROUTING.get(role, DEFAULT_ROUTE))
-    model = tier_map.resolve(config.pop("tier"))
+def resolve_spec(role: str, tier_map: ModelTierMap | None = None,
+                 settings: Settings | None = None, **overrides) -> LLMSpec:
+    """解析节点 → LLMSpec。
+
+    自动附加 node_timeout_sec（从 settings.node_timeouts 读取）。
+    """
+    tier_map = tier_map or ModelTierMap(settings=settings)
+    s = settings or get_settings()
+
+    config: dict[str, Any] = dict(MODEL_ROUTING.get(role, DEFAULT_ROUTE))
+    tier = normalize_tier(config.pop("tier"))
+    model = tier_map.resolve(tier)
     config.update(overrides)
-    return LLMSpec(role=role, model=model, **config)
+
+    # 自动注入 node_timeout_sec
+    extra = config.setdefault("extra", {})
+    if role in s.node_timeouts:
+        extra.setdefault("node_timeout_sec", s.node_timeouts[role])
+
+    return LLMSpec(role=role, model=model, tier=tier, **config)

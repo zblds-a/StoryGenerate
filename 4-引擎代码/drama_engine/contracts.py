@@ -25,6 +25,7 @@ class LLMSpec(BaseModel):
 
     role: str = "default"          # 节点用途，如 "gadget_design" / "episode_beats"
     model: str = "mock"
+    tier: str = ""                  # 逻辑档位 FAST/BALANCED/STRONG/LONG
     temperature: float = 0.8
     max_tokens: int = 4096
     # 允许注入供应商侧参数（如 top_p、thinking 开关），编排层不感知其含义

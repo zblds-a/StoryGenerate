@@ -1,4 +1,9 @@
-"""节点公共工具：从 RunnableConfig 取规则库与运行时，以及计数/重试的工具函数。"""
+"""节点公共工具：从 RunnableConfig 取规则库与运行时，以及计数/重试/修复预算的工具函数。
+
+Phase 1 新增：
+  - Repair Budget: 全局修复次数上限 + 单阶段修复次数上限
+  - Deadline-aware: 修复前检查剩余时间
+"""
 from __future__ import annotations
 
 from typing import Any
@@ -7,16 +12,16 @@ from langchain_core.runnables import RunnableConfig
 
 from ..config import RuleLibrary
 from ..contracts import Runtime
+from ..core.settings import get_settings
 
 MAX_ATTEMPTS = 3
 
+# Phase 1: 修复预算（可通过 settings 覆盖）
+_REPAIR_SETTINGS = get_settings()
+
 
 def deps(config: RunnableConfig | None) -> tuple[RuleLibrary, Runtime]:
-    """约定：图以 config={"configurable": {"lib": ..., "runtime": ...}} 调用。
-
-    依赖从 config 走而不是全局单例，是为了让同一进程内可以并行跑多个不同规则库版本的项目
-    （灰度发布新规则库时必须有这个能力）。
-    """
+    """约定：图以 config={"configurable": {"lib": ..., "runtime": ...}} 调用。"""
     cfg: dict[str, Any] = (config or {}).get("configurable") or {}
     lib = cfg.get("lib")
     runtime = cfg.get("runtime")
@@ -27,7 +32,6 @@ def deps(config: RunnableConfig | None) -> tuple[RuleLibrary, Runtime]:
 
 # ---------------------------------------------------------------- 计数器（累加）
 def bump(key: str, n: int = 1) -> dict[str, int]:
-    """返回计数器增量。由 sum_dict reducer 负责累加 —— 节点只管报自己用了几次。"""
     return {key: n}
 
 
@@ -37,9 +41,35 @@ def attempt_of(state: dict, key: str) -> int:
 
 
 def next_attempt(state: dict, key: str) -> tuple[int, dict[str, int]]:
-    """返回 (新一轮次号, 待写入的 attempts 增量)。"""
     value = attempt_of(state, key) + 1
     return value, {key: value}
+
+
+# ---------------------------------------------------------------- Repair Budget (Phase 1)
+def repair_count(state: dict) -> int:
+    """全局修复总次数。"""
+    return int((state.get("repair_counts") or {}).get("total", 0))
+
+
+def repair_count_for_stage(state: dict, stage: str) -> int:
+    """单阶段修复次数。"""
+    return int((state.get("repair_counts") or {}).get(stage, 0))
+
+
+def check_repair_budget(state: dict, stage: str) -> bool:
+    """检查修复预算是否充足。返回 True 表示允许执行修复。"""
+    total = repair_count(state)
+    stage_count = repair_count_for_stage(state, stage)
+    if total >= _REPAIR_SETTINGS.max_total_repairs:
+        return False
+    if stage_count >= _REPAIR_SETTINGS.max_repairs_per_stage:
+        return False
+    return True
+
+
+def record_repair(stage: str) -> dict[str, int]:
+    """记录一次修复（返回 repair_counts 增量）。"""
+    return {"total": 1, stage: 1}
 
 
 # ---------------------------------------------------------------- 校验结论工具
@@ -51,7 +81,6 @@ def findings_payload(findings) -> list[dict]:
 
 
 def only(findings, route: str) -> list[dict]:
-    """取出应交给某个修复节点的违规。"""
     return [p for p in findings_payload(findings) if p.get("route") == route]
 
 
@@ -62,19 +91,12 @@ def has_errors(report) -> bool:
 
 
 def error_signature(report) -> str:
-    """违规集合的指纹（只看规则编号，不看具体文案）。"""
     if report is None:
         return ""
     return ",".join(sorted({f.rule_id for f in report.errors}))
 
 
 def stuck_guard(state: dict, key: str, report) -> dict[str, Any]:
-    """记录本轮违规指纹，并判断修复是否"卡住"。
-
-    动机：模型在某条规则上反复失败时，再重试一次的结果通常与上一次相同。
-    无限重试是最常见的生产事故来源 —— 预算被烧光，问题一个没解决。
-    因此只要**连续两轮的违规指纹完全一致**，就判定修复无效，立即放弃并交人工。
-    """
     sig = error_signature(report)
     prev = (state.get("attempts") or {}).get(f"{key}_sig")
     return {
@@ -87,10 +109,16 @@ def is_stuck(state: dict, key: str) -> bool:
     return bool((state.get("attempts") or {}).get(f"{key}_stuck", 0))
 
 
-def should_repair(state: dict, key: str, limit_key: str | None = None) -> bool:
-    """统一的修复决策：有 error、未超轮次上限、且没有卡住。"""
+def should_repair(state: dict, key: str, limit_key: str | None = None,
+                  stage: str = "") -> bool:
+    """统一的修复决策：有 error、未超轮次上限、未卡住、修复预算充足。"""
     if not has_errors(state.get("project_report")):
         return False
     if attempt_of(state, limit_key or key) >= MAX_ATTEMPTS:
         return False
-    return not is_stuck(state, key)
+    if is_stuck(state, key):
+        return False
+    # Phase 1: 修复预算
+    if stage and not check_repair_budget(state, stage):
+        return False
+    return True

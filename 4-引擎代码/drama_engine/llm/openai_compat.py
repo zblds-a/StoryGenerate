@@ -1,22 +1,35 @@
-"""OpenAI 兼容适配器。
+"""OpenAI 兼容适配器 —— Phase 1 重构。
 
-为什么只写这一个就够：DeepSeek / 通义千问（DashScope 兼容模式）/ Kimi / 智谱 GLM /
-OpenAI / 以及本地 vLLM、Ollama 的 /v1 端点，全部遵循同一套 Chat Completions 协议。
-差别只在 base_url 与 model 名 —— 那是配置，不是代码。
-
-不引入官方 SDK，用 httpx 直发请求的理由：少一层依赖、少一层版本漂移，
-且能方便地把供应商私有字段（如 reasoning 开关）从 spec.extra 透传下去。
+变更:
+  - httpx.Timeout 拆分 connect/read/write/pool
+  - 按 HTTP 状态码区分可重试/不可重试
+  - DeadlineContext 集成：每次调用前检查剩余时间
+  - 错误统一映射到 core.errors 标准错误码
+  - build_provider_from_env: prod 环境禁止 Mock fallback
 """
 from __future__ import annotations
 
 import json
 import time
+from typing import Any
 
 import httpx
 
+from ..core.deadline import DeadlineContext
+from ..core.errors import (
+    HTTP_NON_RETRYABLE_STATUSES,
+    HTTP_RETRYABLE_STATUSES,
+    GenerationTimeoutError,
+    ModelInvalidOutputError,
+    ModelNotConfiguredError,
+    ModelTimeoutError,
+    ModelUnavailableError,
+    classify_http_error,
+)
+from ..core.settings import get_settings
 from .base import BaseLLMProvider, LLMResult, LLMSpec, estimate_tokens
 
-# 常见供应商的默认端点，供部署时直接引用
+# 常见供应商的默认端点
 KNOWN_ENDPOINTS = {
     "deepseek": "https://api.deepseek.com/v1",
     "dashscope": "https://dashscope.aliyuncs.com/compatible-mode/v1",
@@ -28,22 +41,42 @@ KNOWN_ENDPOINTS = {
 
 
 class OpenAICompatProvider(BaseLLMProvider):
-    """任意 OpenAI 兼容端点。"""
+    """任意 OpenAI 兼容端点。Phase 1 增强：分层超时 + 智能重试 + Deadline 感知。"""
 
     def __init__(
         self,
         api_key: str,
         base_url: str = KNOWN_ENDPOINTS["deepseek"],
-        timeout_sec: float = 120.0,
-        max_retries: int = 2,
+        connect_timeout: float = 15.0,
+        read_timeout: float = 60.0,
+        write_timeout: float = 30.0,
+        pool_timeout: float = 5.0,
+        max_retries: int = 1,
     ) -> None:
         self.name = "openai_compat"
         self.api_key = api_key
         self.base_url = base_url.rstrip("/")
-        self.timeout_sec = timeout_sec
         self.max_retries = max_retries
 
-    def complete(self, spec: LLMSpec, system: str, user: str) -> LLMResult:
+        # 分层超时
+        self._timeout = httpx.Timeout(
+            connect=connect_timeout,
+            read=read_timeout,
+            write=write_timeout,
+            pool=pool_timeout,
+        )
+
+    def complete(
+        self,
+        spec: LLMSpec,
+        system: str,
+        user: str,
+        deadline: DeadlineContext | None = None,
+    ) -> LLMResult:
+        """执行一次 LLM 调用。
+
+        deadline: 若提供，实际 read timeout = min(read_timeout, deadline.remaining)
+        """
         payload: dict = {
             "model": spec.model,
             "messages": [
@@ -53,13 +86,34 @@ class OpenAICompatProvider(BaseLLMProvider):
             "temperature": spec.temperature,
             "max_tokens": spec.max_tokens,
         }
-        # 供应商私有参数透传：编排层不解释它们的含义
         payload.update(spec.extra.get("provider_params", {}))
         if spec.extra.get("json_mode"):
             payload["response_format"] = {"type": "json_object"}
 
+        # 按节点设定 read timeout，受 deadline 约束
+        node_timeout = spec.extra.get("node_timeout_sec")
+        read_to = self._timeout.read
+        if node_timeout is not None:
+            read_to = min(read_to, node_timeout)
+        if deadline is not None:
+            read_to = min(read_to, deadline.remaining_seconds())
+
+        effective_timeout = httpx.Timeout(
+            connect=self._timeout.connect,
+            read=read_to,
+            write=self._timeout.write,
+            pool=self._timeout.pool,
+        )
+
         last_error: Exception | None = None
         for attempt in range(self.max_retries + 1):
+            # 每次重试前都检查 deadline
+            if deadline is not None and deadline.expired():
+                raise GenerationTimeoutError(
+                    f"Deadline 已过期（已用 {deadline.elapsed():.1f}s），"
+                    f"第 {attempt + 1} 次调用被拒绝"
+                )
+
             t0 = time.perf_counter()
             try:
                 resp = httpx.post(
@@ -69,8 +123,22 @@ class OpenAICompatProvider(BaseLLMProvider):
                         "Content-Type": "application/json",
                     },
                     json=payload,
-                    timeout=self.timeout_sec,
+                    timeout=effective_timeout,
                 )
+                status = resp.status_code
+
+                # 非重试型错误：立即失败
+                if status in HTTP_NON_RETRYABLE_STATUSES:
+                    raise classify_http_error(status, f"HTTP {status}")
+
+                # 重试型错误
+                if status in HTTP_RETRYABLE_STATUSES:
+                    last_error = classify_http_error(status, f"HTTP {status}")
+                    if attempt < self.max_retries:
+                        time.sleep(1.5 * (attempt + 1))
+                        continue
+                    raise last_error
+
                 resp.raise_for_status()
                 data = resp.json()
                 latency = int((time.perf_counter() - t0) * 1000)
@@ -82,29 +150,68 @@ class OpenAICompatProvider(BaseLLMProvider):
                     output_tokens=usage.get("completion_tokens") or 0,
                     latency_ms=latency,
                 )
-            except Exception as exc:  # noqa: BLE001 - 需要覆盖网络/协议/限流多种异常
-                last_error = exc
+
+            except (GenerationTimeoutError, ModelInvalidOutputError,
+                    ModelUnavailableError, ModelTimeoutError):
+                raise  # 这些已经是我们的错误类型，直接抛出
+
+            except httpx.TimeoutException as exc:
+                last_error = ModelTimeoutError(str(exc))
                 if attempt < self.max_retries:
-                    time.sleep(1.5 * (attempt + 1))  # 指数退避
-        raise RuntimeError(f"LLM 调用失败（已重试 {self.max_retries} 次）: {last_error}")
+                    time.sleep(1.5 * (attempt + 1))
+                    continue
 
-    def describe(self) -> dict:
-        return {"provider": self.name, "base_url": self.base_url}
+            except httpx.HTTPStatusError as exc:
+                code = exc.response.status_code
+                last_error = classify_http_error(code, str(exc))
+                if code in HTTP_RETRYABLE_STATUSES and attempt < self.max_retries:
+                    time.sleep(1.5 * (attempt + 1))
+                    continue
+                raise last_error
+
+            except Exception as exc:
+                last_error = ModelUnavailableError(str(exc))
+                if attempt < self.max_retries:
+                    time.sleep(1.5 * (attempt + 1))
+                    continue
+
+        raise (last_error or ModelUnavailableError("LLM 调用失败"))
 
 
-def build_provider_from_env() -> BaseLLMProvider:
-    """按环境变量装配。未配置密钥时回落到 Mock，保证流水线始终可跑。"""
+def build_provider_from_env() -> OpenAICompatProvider:
+    """按环境变量装配。prod 环境缺少密钥时抛出异常。"""
     import os
 
+    settings = get_settings()
+    key = settings.llm_api_key
+
+    # ---- Prod Mock Guard ----
+    if not key:
+        if settings.is_prod:
+            raise ModelNotConfiguredError(
+                "生产环境缺少 API Key。请设置 DRAMA_LLM_API_KEY 或 STORY_LLM_API_KEY。"
+            )
+        # dev/test 允许 Mock fallback（通过调用方处理）
+        raise ModelNotConfiguredError("未配置 API Key（dev/test 环境可回退 Mock）")
+
+    return OpenAICompatProvider(
+        api_key=key,
+        base_url=settings.llm_base_url,
+        connect_timeout=settings.http_connect_timeout_sec,
+        read_timeout=settings.http_read_timeout_sec,
+        write_timeout=settings.http_write_timeout_sec,
+        max_retries=settings.max_retries,
+    )
+
+
+def build_provider_from_env_safe() -> BaseLLMProvider:
+    """安全版：dev/test 环境下缺少密钥时回退 Mock。"""
     from .mock import MockLLMProvider
 
-    key = os.environ.get("DRAMA_LLM_API_KEY") or os.environ.get("OPENAI_API_KEY")
-    if not key:
-        return MockLLMProvider()
-
-    vendor = os.environ.get("DRAMA_LLM_VENDOR", "deepseek").lower()
-    base_url = os.environ.get("DRAMA_LLM_BASE_URL") or KNOWN_ENDPOINTS.get(
-        vendor, KNOWN_ENDPOINTS["deepseek"]
-    )
-    timeout = float(os.environ.get("DRAMA_LLM_TIMEOUT", "180"))
-    return OpenAICompatProvider(api_key=key, base_url=base_url, timeout_sec=timeout)
+    try:
+        return build_provider_from_env()
+    except ModelNotConfiguredError:
+        settings = get_settings()
+        if settings.allow_mock:
+            return MockLLMProvider()
+        raise
