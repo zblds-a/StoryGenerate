@@ -142,6 +142,7 @@ def judge(items: list[dict], llm: LLMProvider, lib: RuleLibrary,
     )
 
     spec = resolve_spec("judge", extra={
+        "json_mode": True,
         "judge_items": items, "claims": claim_items, "context": context or {},
     })
     response: JudgeResponse = llm.complete_structured(spec, _SYSTEM, user, JudgeResponse)

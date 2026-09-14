@@ -15,44 +15,53 @@ from .base import LLMSpec
 # 节点 role → 模型档位。tier 由部署方在部署配置里映射到具体模型名。
 MODEL_ROUTING: dict[str, dict] = {
     # 高杠杆：结构决策 + 剧作判断，一旦错，后面全错
-    "topic_select":        {"tier": "reasoning", "temperature": 0.3, "max_tokens": 2048},
-    "gadget_design":       {"tier": "reasoning", "temperature": 0.5, "max_tokens": 3072},
-    "cast_design":         {"tier": "reasoning", "temperature": 0.6, "max_tokens": 3072},
+    # max_tokens 已考虑 reasoning tokens 开销（DeepSeek 模型约 50-80% 为推理 token）
+    "topic_select":        {"tier": "reasoning", "temperature": 0.3, "max_tokens": 8192},
+    "gadget_design":       {"tier": "reasoning", "temperature": 0.5, "max_tokens": 16384},
+    "cast_design":         {"tier": "reasoning", "temperature": 0.6, "max_tokens": 16384},
     # 人物选择规律：决定"人物是否有魅力"，与开头钩子同级的高杠杆节点
-    "behavior_design":     {"tier": "reasoning", "temperature": 0.7, "max_tokens": 6144},
+    "behavior_design":     {"tier": "reasoning", "temperature": 0.7, "max_tokens": 32768},
     # 账本是核对型产物，需要的是严谨而非灵感，温度压低
-    "fact_ledger":         {"tier": "reasoning", "temperature": 0.2, "max_tokens": 6144},
-    "outline":             {"tier": "reasoning", "temperature": 0.5, "max_tokens": 8192},
+    "fact_ledger":         {"tier": "reasoning", "temperature": 0.2, "max_tokens": 32768},
+    "outline":             {"tier": "reasoning", "temperature": 0.5, "max_tokens": 32768},
     # 最高杠杆：三处钩子单独用强模型生成
-    "hook_open":           {"tier": "strong",    "temperature": 0.9, "max_tokens": 1024},
-    "hook_reversal":       {"tier": "strong",    "temperature": 0.9, "max_tokens": 1024},
-    "hook_cliffhanger":    {"tier": "strong",    "temperature": 0.95, "max_tokens": 1024},
+    "hook_open":           {"tier": "strong",    "temperature": 0.9, "max_tokens": 4096},
+    "hook_reversal":       {"tier": "strong",    "temperature": 0.9, "max_tokens": 4096},
+    "hook_cliffhanger":    {"tier": "strong",    "temperature": 0.95, "max_tokens": 4096},
     # 中低杠杆：结构化填充，便宜模型足够，校验节点兜底
-    "episode_beats":       {"tier": "cheap",     "temperature": 0.85, "max_tokens": 4096},
-    "audio_adapt":         {"tier": "cheap",     "temperature": 0.4, "max_tokens": 4096},
-    "repair_beat":         {"tier": "strong",    "temperature": 0.7, "max_tokens": 2048},
-    "repair_audio":        {"tier": "cheap",     "temperature": 0.3, "max_tokens": 2048},
-    "repair_cast":         {"tier": "reasoning", "temperature": 0.4, "max_tokens": 2048},
-    "repair_gadget":       {"tier": "reasoning", "temperature": 0.4, "max_tokens": 2048},
-    "repair_behavior":     {"tier": "reasoning", "temperature": 0.6, "max_tokens": 4096},
-    "repair_ledger":       {"tier": "reasoning", "temperature": 0.3, "max_tokens": 4096},
-    "repair_outline":      {"tier": "reasoning", "temperature": 0.4, "max_tokens": 4096},
-    "repair_compliance":   {"tier": "reasoning", "temperature": 0.3, "max_tokens": 2048},
+    "episode_beats":       {"tier": "cheap",     "temperature": 0.85, "max_tokens": 32768},
+    "audio_adapt":         {"tier": "cheap",     "temperature": 0.4, "max_tokens": 16384},
+    "repair_beat":         {"tier": "strong",    "temperature": 0.7, "max_tokens": 16384},
+    "repair_audio":        {"tier": "cheap",     "temperature": 0.3, "max_tokens": 8192},
+    "repair_cast":         {"tier": "reasoning", "temperature": 0.4, "max_tokens": 8192},
+    "repair_gadget":       {"tier": "reasoning", "temperature": 0.4, "max_tokens": 8192},
+    "repair_behavior":     {"tier": "reasoning", "temperature": 0.6, "max_tokens": 16384},
+    "repair_ledger":       {"tier": "reasoning", "temperature": 0.3, "max_tokens": 16384},
+    "repair_outline":      {"tier": "reasoning", "temperature": 0.4, "max_tokens": 16384},
+    "repair_compliance":   {"tier": "reasoning", "temperature": 0.3, "max_tokens": 8192},
     # 语义裁判：温度 0，同一份剧本两次跑必须得到同一结论
-    "judge":               {"tier": "strong",    "temperature": 0.0, "max_tokens": 4096},
+    "judge":               {"tier": "strong",    "temperature": 0.0, "max_tokens": 16384},
 }
 
-DEFAULT_ROUTE = {"tier": "cheap", "temperature": 0.7, "max_tokens": 4096}
+DEFAULT_ROUTE = {"tier": "cheap", "temperature": 0.7, "max_tokens": 16384}
 
 
 class ModelTierMap:
-    """档位 → 具体模型名。部署时用环境变量或配置文件覆盖即可，无需改代码。"""
+    """档位 → 具体模型名。部署时用环境变量或配置文件覆盖即可，无需改代码。
+
+    优先级：构造函数 mapping > 环境变量 DRAMA_LLM_MODEL > 默认 mock。
+    设置 DRAMA_LLM_MODEL 即可让所有档位指向同一模型（适合单模型部署）；
+    需要分档位时传入显式 mapping。
+    """
 
     def __init__(self, mapping: dict[str, str] | None = None) -> None:
+        import os
+
+        env_model = os.environ.get("DRAMA_LLM_MODEL")
         self.mapping = mapping or {
-            "reasoning": "mock",
-            "strong": "mock",
-            "cheap": "mock",
+            "reasoning": env_model or "mock",
+            "strong": env_model or "mock",
+            "cheap": env_model or "mock",
         }
 
     def resolve(self, tier: str) -> str:

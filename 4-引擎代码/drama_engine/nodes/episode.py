@@ -66,6 +66,7 @@ def gen_beats(state: EpisodeState, config: RunnableConfig) -> dict[str, Any]:
         continuity_text=continuity_text,
     )
     spec = resolve_spec("episode_beats", extra={
+        "json_mode": True,
         "attempt": attempts,
         "outline_entry": entry.model_dump(),
         "cast": state["cast"],

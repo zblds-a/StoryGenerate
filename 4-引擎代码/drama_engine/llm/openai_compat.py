@@ -106,4 +106,5 @@ def build_provider_from_env() -> BaseLLMProvider:
     base_url = os.environ.get("DRAMA_LLM_BASE_URL") or KNOWN_ENDPOINTS.get(
         vendor, KNOWN_ENDPOINTS["deepseek"]
     )
-    return OpenAICompatProvider(api_key=key, base_url=base_url)
+    timeout = float(os.environ.get("DRAMA_LLM_TIMEOUT", "180"))
+    return OpenAICompatProvider(api_key=key, base_url=base_url, timeout_sec=timeout)
