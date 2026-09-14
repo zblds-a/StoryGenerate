@@ -49,13 +49,17 @@ MODEL_ROUTING: dict[str, dict] = {
     # ===== BALANCED =====
     "cast_design":         {"tier": TIER_BALANCED, "temperature": 0.6, "max_tokens": 16384},
     "repair_cast":         {"tier": TIER_BALANCED, "temperature": 0.4, "max_tokens": 8192},
-    "episode_beats":       {"tier": TIER_BALANCED, "temperature": 0.85, "max_tokens": 32768},
+    # Phase 1.5: 旧 episode_beats 已拆为 episode_plan + episode_writer
+    "episode_writer":      {"tier": TIER_BALANCED, "temperature": 0.85, "max_tokens": 16384},
+    "episode_beats":       {"tier": TIER_BALANCED, "temperature": 0.85, "max_tokens": 16384},
     "repair_beat":         {"tier": TIER_BALANCED, "temperature": 0.7, "max_tokens": 16384},
 
     # ===== STRONG =====
     "gadget_design":       {"tier": TIER_STRONG,   "temperature": 0.5, "max_tokens": 16384},
     "behavior_design":     {"tier": TIER_STRONG,   "temperature": 0.7, "max_tokens": 32768},
     "outline":             {"tier": TIER_STRONG,   "temperature": 0.5, "max_tokens": 32768},
+    # Phase 1.5: 只规划不写正文
+    "episode_plan":        {"tier": TIER_STRONG,   "temperature": 0.7, "max_tokens": 8192},
     "hook_open":           {"tier": TIER_STRONG,   "temperature": 0.9, "max_tokens": 4096},
     "hook_reversal":       {"tier": TIER_STRONG,   "temperature": 0.9, "max_tokens": 4096},
     "hook_cliffhanger":    {"tier": TIER_STRONG,   "temperature": 0.95, "max_tokens": 4096},
@@ -63,8 +67,8 @@ MODEL_ROUTING: dict[str, dict] = {
     "repair_behavior":     {"tier": TIER_STRONG,   "temperature": 0.6, "max_tokens": 16384},
     "repair_outline":      {"tier": TIER_STRONG,   "temperature": 0.4, "max_tokens": 16384},
 
-    # ===== LONG =====
-    "repair_ledger":       {"tier": TIER_LONG,     "temperature": 0.3, "max_tokens": 16384},
+    # ===== FAST ===== (also repair_ledger)
+    "repair_ledger":       {"tier": TIER_FAST,     "temperature": 0.3, "max_tokens": 16384},
     "repair_compliance":   {"tier": TIER_LONG,     "temperature": 0.3, "max_tokens": 8192},
 }
 

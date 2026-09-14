@@ -437,3 +437,81 @@ def repair_instruction(route: str, findings: list[dict]) -> str:
         return base + " 这是账目层缺陷：改的是账本，不是台词。" \
                       " 数字、余量、认知边界必须记账；靠改台词掩盖账目矛盾只会让矛盾后移。"
     return base
+
+
+# ======================================================================
+# Phase 1.5: episode_plan + episode_writer 拆分
+# ======================================================================
+def episode_plan(
+    lib: RuleLibrary,
+    outline_entry: dict,
+    cast: list[dict],
+    gadget: dict,
+    duration_sec: int,
+    continuity_text: str = "",
+) -> tuple[str, str]:
+    """STRONG 模型：只负责'想清楚'，不生成完整台词。"""
+    system = (
+        "你是一名广播剧编剧。你只负责规划本集的内容结构，**不写完整台词**。\n"
+        "你的输出是给 Writer 用的蓝图——清晰、精确、每一步都有目的。\n"
+        "每个节拍写明：事件、新信息、角色选择与代价、后果。"
+    )
+    ep_no = outline_entry.get("episode", 1)
+    goal = outline_entry.get("core_goal", "")
+    title = outline_entry.get("title", "")
+    ci = outline_entry.get("conflict_intensity", 3)
+
+    cast_names = ", ".join(c.get("name", "?") for c in cast)
+    user = (
+        f"你正在规划一集 {duration_sec} 秒的广播剧。\n\n"
+        f"【本集】第 {ep_no} 集《{title}》\n"
+        f"核心目标：{goal}\n"
+        f"冲突强度：{'★' * ci}\n\n"
+        f"【角色】{cast_names}\n\n"
+        f"【连续性要求】\n{continuity_text or '（无特殊要求）'}\n\n"
+        f"请输出一个 episode_plan JSON。\n"
+        f"包含 3-6 个节拍，覆盖：hook → 冲突展开 → 反转 → 高潮 → cliffhanger。\n"
+        f"每个节拍需写明 event / new_information / character_choice / consequence。\n"
+        f"不要写台词——那是 Writer 的工作。"
+    )
+    return system, user
+
+
+def episode_writer(
+    lib: RuleLibrary,
+    plan: dict,
+    cast: list[dict],
+    gadget: dict,
+    duration_sec: int,
+    continuity_text: str = "",
+) -> tuple[str, str]:
+    """BALANCED 模型：根据已验证的 Plan 生成完整台词。"""
+    plan_json = json.dumps(plan, ensure_ascii=False, indent=2)
+    cast_names = ", ".join(c.get("name", "?") for c in cast)
+
+    # 紧凑版节拍表（只传关键参数）
+    beat_params = lib.beat_sheet_for(duration_sec)
+    beat_text = "\n".join(
+        f"  {b.get('segment', '?')} ({b.get('start_sec', 0)}s-{b.get('end_sec', 0)}s) "
+        f"→ {b.get('label', '')}"
+        for b in beat_params[:8]  # 只传前 8 个关键节拍
+    )
+
+    system = (
+        "你是一名广播剧台词写手。你负责把编剧的 Plan 变成可演出的剧本台词。\n"
+        "你唯一的表达工具是：**人声、音效、音乐、静音**。\n"
+        "严格遵循 Plan 的结构——不要重新设计剧情、不要添加 Plan 中没有的角色。"
+    )
+    user = (
+        f"请根据以下 Plan 写出完整剧本（{duration_sec} 秒）。\n\n"
+        f"【剧本计划】\n{plan_json}\n\n"
+        f"【角色】{cast_names}\n\n"
+        f"【连续性要求】\n{continuity_text or '（无）'}\n\n"
+        f"【节拍时间约束（参考）】\n{beat_text}\n\n"
+        f"【格式要求】\n"
+        f"输出一个 Episode JSON，包含 beats 数组。\n"
+        f"每个 beat 的 segment 必须与 Plan 的 beat order 对应。\n"
+        f"对白需要写出完整台词，音效用简短的 sfx 描述。\n"
+        f"注意：这是 {duration_sec} 秒的短剧，台词要精炼。"
+    )
+    return system, user

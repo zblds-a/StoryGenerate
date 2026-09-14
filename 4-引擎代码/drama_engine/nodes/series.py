@@ -16,6 +16,7 @@ from langgraph.types import Send
 
 from ..continuity import build_claims
 from .. import __version__
+from ..core.output_guard import validate_script
 from ..schemas import Episode, Finding, ValidationReport
 from ..state import DramaState
 from ..validators import validate_series
@@ -183,6 +184,15 @@ def _affected_episodes(report: ValidationReport, outline) -> dict[str, list[int]
 # ============================================================================
 # 装配终产物
 # ============================================================================
+def _apply_output_guard(report: dict, episodes: list) -> None:
+    """Phase 1.5: 最终交付前校验剧本完整性。"""
+    guard = validate_script(report.get("script") or [], min_episodes=0)
+    if not guard.ok():
+        report["output_guard"] = {"passed": False, "issues": guard.issues}
+    else:
+        report["output_guard"] = {"passed": True, "issues": []}
+
+
 def s8_assemble(state: DramaState, config: RunnableConfig) -> dict[str, Any]:
     """装配终产物。
 
@@ -242,6 +252,10 @@ def s8_assemble(state: DramaState, config: RunnableConfig) -> dict[str, Any]:
         "usage": usage,
         "trace": state.get("trace") or [],
     }
+
+    # ---- Phase 1.5: OutputGuard 最终交付校验 ----
+    _apply_output_guard(report, episodes)
+
     return {
         "final_report": report,
         "usage_summary": usage,

@@ -35,12 +35,12 @@ class Settings:
     llm_timeout_sec: float = 180.0
 
     # ---- Deadline ----
-    global_deadline_sec: float = 120.0
-    node_default_timeout_sec: float = 60.0
+    global_deadline_sec: float = 900.0
+    node_default_timeout_sec: float = 120.0
 
     # ---- HTTP ----
     http_connect_timeout_sec: float = 15.0
-    http_read_timeout_sec: float = 60.0
+    http_read_timeout_sec: float = 300.0
     http_write_timeout_sec: float = 30.0
 
     # ---- Retry ----
@@ -55,14 +55,16 @@ class Settings:
 
     # ---- Per-node timeout overrides (seconds) ----
     node_timeouts: dict[str, float] = field(default_factory=lambda: {
-        "topic_select": 30,
-        "gadget_design": 70,
+        "topic_select": 60,
+        "gadget_design": 90,
         "cast_design": 60,
-        "outline": 120,
-        "behavior_design": 120,
+        "outline": 90,
+        "behavior_design": 180,
         "fact_ledger": 60,
+        "episode_plan": 90,
+        "episode_writer": 120,
         "episode_beats": 120,
-        "judge": 30,
+        "judge": 90,
     })
 
     @property

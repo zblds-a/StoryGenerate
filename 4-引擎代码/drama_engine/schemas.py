@@ -293,6 +293,34 @@ class Episode(BaseModel):
     revision: int = 0
 
 
+# ---------------------------------------------------------------- Phase 1.5: Episode Plan + Writer 拆分
+class EpisodeBeatPlan(BaseModel):
+    """单个节拍的计划——只描述'发生什么'，不写完整台词。"""
+    order: int
+    function: str = Field(description="hook / setup / conflict / reversal / cliffhanger / transition")
+    event: str = Field(description="本拍发生的事件（一句话）")
+    new_information: str = Field(default="", description="本拍释放了什么新信息")
+    character_choice: str = Field(default="", description="角色在本拍做了什么选择，代价是什么")
+    consequence: str = Field(default="", description="这个选择的直接后果")
+    tension: int = Field(default=3, ge=1, le=10, description="张力评分 1-10")
+
+
+class EpisodePlan(BaseModel):
+    """STRONG 模型产出的轻量剧本计划。
+    只负责'想清楚'——不生成完整台词。Writer 节点据此展开正文。
+    """
+    episode: int
+    title: str
+    goal: str = Field(description="本集一句话核心目标")
+    dramatic_question: str = Field(description="本集的戏剧问题（观众想知道答案的问题）")
+    hook: str = Field(description="开场钩子（怎么写能抓住注意力）")
+    beats: list[EpisodeBeatPlan] = Field(default_factory=list, min_length=1)
+    reversal: str = Field(default="", description="本集的反转点")
+    climax: str = Field(default="", description="本集的高潮场景")
+    cliffhanger: str = Field(default="", description="结尾悬念钩子")
+    continuity_notes: str = Field(default="", description="需要在本集兑现的连续性事实")
+
+
 # ---------------------------------------------------------------- 校验
 class Finding(BaseModel):
     """一条校验结论。

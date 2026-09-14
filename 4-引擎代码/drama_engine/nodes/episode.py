@@ -25,7 +25,7 @@ from langgraph.graph import END, START, StateGraph
 from .. import prompts
 from ..continuity import continuity_slice, render_continuity
 from ..llm.router import resolve_spec
-from ..schemas import Episode, LineRewrites
+from ..schemas import Episode, EpisodePlan, LineRewrites
 from ..state import EpisodeState
 from ..validators import validate_episode
 from ..validators.deterministic import beats_missing_sfx, offending_lines
@@ -46,36 +46,44 @@ _DEGRADE_TO_BEAT = {
 # 生成
 # ============================================================================
 def gen_beats(state: EpisodeState, config: RunnableConfig) -> dict[str, Any]:
+    """Phase 1.5: 拆分为 Plan(STRONG) → Writer(BALANCED)。
+
+    向后兼容：外部接口不变，仍产出 Episode。
+    """
     lib, runtime = deps(config)
     entry = state["outline_entry"]
     duration = state["brief"].target_duration_sec
     attempts = int(state.get("attempt", 0))
 
-    # 连续性切片：只注入"本集必须承接的账目 + 本集角色的选择规律 + 本集发生的关系转折"，
-    # 不注入其它集的正文。隔离的是文本，连续的是事实 —— 前者保多样性，后者保一致性。
+    # 连续性切片
     slice_ = continuity_slice(
         state.get("ledger"), state.get("behavior"), entry.episode, state["cast"],
         total_episodes=state["brief"].target_episodes,
     )
     continuity_text = render_continuity(slice_)
 
-    system, user = prompts.episode_beats(
-        lib, entry.model_dump(), [c.model_dump() for c in state["cast"]],
-        state["gadget"].model_dump(), duration,
-        [f.model_dump() for f in state.get("findings") or []],
-        continuity_text=continuity_text,
-    )
-    spec = resolve_spec("episode_beats", extra={
-        "json_mode": True,
-        "attempt": attempts,
-        "outline_entry": entry.model_dump(),
-        "cast": state["cast"],
-        "duration_sec": duration,
-        "continuity": slice_,
-    })
-    episode: Episode = runtime.llm.complete_structured(spec, system, user, Episode)
+    cast_dicts = [c.model_dump() for c in state["cast"]]
+    gadget_dict = state["gadget"].model_dump()
 
-    # 节拍边界以规则库为准回填，不采信模型的自由发挥
+    # Step 1: EpisodePlan (STRONG)
+    plan_system, plan_user = prompts.episode_plan(
+        lib, entry.model_dump(), cast_dicts, gadget_dict, duration, continuity_text,
+    )
+    plan_spec = resolve_spec("episode_plan", extra={
+        "json_mode": True, "attempt": attempts,
+    })
+    plan = runtime.llm.complete_structured(plan_spec, plan_system, plan_user, EpisodePlan)
+
+    # Step 2: EpisodeWriter (BALANCED) —— 根据 Plan 写正文
+    writer_system, writer_user = prompts.episode_writer(
+        lib, plan.model_dump(), cast_dicts, gadget_dict, duration, continuity_text,
+    )
+    writer_spec = resolve_spec("episode_writer", extra={
+        "json_mode": True, "attempt": attempts,
+    })
+    episode: Episode = runtime.llm.complete_structured(writer_spec, writer_system, writer_user, Episode)
+
+    # 节拍边界以规则库为准回填
     episode = _enforce_beat_bounds(episode, lib, entry.episode)
     episode = episode.model_copy(update={"revision": attempts})
     return {
