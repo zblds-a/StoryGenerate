@@ -15,6 +15,7 @@ import operator
 from typing import Annotated, Any, TypedDict
 
 from .modes.base import ModeContext
+from .characters.models import CharacterInput, ResolvedCharacter
 from .schemas import (
     BehaviorBible,
     Brief,
@@ -61,6 +62,8 @@ class DramaState(TypedDict, total=False):
     brief: Brief
     workspace: str
     mode_context: ModeContext
+    character_inputs: list[CharacterInput]
+    resolved_characters: list[ResolvedCharacter]
 
     # ---- 立项底座（冻结后只读）----
     genre_id: str

@@ -179,19 +179,25 @@ def run_pipeline(
     locked_assets: list[str] | None = None,
     thread_id: str = "local",
     story_mode: str | None = None,
+    characters: list | None = None,
     graph=None,
 ) -> dict[str, Any]:
     """命令行 / 服务层入口。
 
-    Runtime 通过工厂注入而不是当作参数层层传递 —— 节点只需要 LLMSpec 与 Protocol，
-    不应该看见 HTTP 客户端、API key 这类基础设施细节。
-
-    Phase 2: 新增 story_mode 参数。默认 None → viral_drama。
+    Phase 3: 新增 characters 参数 —— 支持用户提供部分/全部角色。
+    characters=None → 完全走旧 Cast 生成逻辑（backward compatible）。
     """
     from .modes import get_mode, ModeContext
+    from .characters import CharacterResolver
 
     mode = get_mode(story_mode)
     mode_ctx = ModeContext.from_mode(mode)
+
+    # Phase 3: Character Resolver
+    max_chars = lib.max_characters(5)
+    resolver = CharacterResolver(max_characters=max_chars)
+    char_inputs = list(characters) if characters else []
+    resolved, missing_count = resolver.resolve(char_inputs)
 
     set_runtime_factory(lambda: runtime)
     app = graph or build_graph()
@@ -203,6 +209,8 @@ def run_pipeline(
             locked_assets=locked_assets or [],
         ),
         "mode_context": mode_ctx,
+        "character_inputs": char_inputs,
+        "resolved_characters": resolved,
         "workspace": workspace,
         "episodes": [],
         "findings": [],

@@ -185,15 +185,44 @@ def repair_gadget(state: dict, config: RunnableConfig) -> dict:
 def s3_cast(state: dict, config: RunnableConfig) -> dict:
     lib, runtime = deps(config)
     brief: Brief = state["brief"]
+    resolved = state.get("resolved_characters") or []
+    char_inputs = state.get("character_inputs") or []
+    missing_count = max(0, lib.max_characters(5) - len(resolved))
+
+    # Phase 3: 如果有用户角色，注入 pinned context
+    pinned_text = ""
+    if resolved:
+        from ..characters.resolver import CharacterResolver
+        resolver = CharacterResolver(max_characters=lib.max_characters(5))
+        pinned_text = resolver.pin_prompt_context(resolved)
+
     system, user = prompts.cast_design(
-        lib, brief.raw_idea, state["recipe_id"], state["gadget"].model_dump()
+        lib, brief.raw_idea, state["recipe_id"], state["gadget"].model_dump(),
+        pinned_characters=pinned_text,
+        missing_count=missing_count,
     )
     spec = resolve_spec("cast_design", extra={"attempt": attempt_of(state, "cast_attempt")})
     draft: CastDraft = runtime.llm.complete_structured(spec, system, user, CastDraft)
+
+    # Phase 3: Canon Overlay —— 确保 LLM 不改用户 Canon
+    cards_dicts = [c.model_dump() for c in draft.cards]
+    if resolved:
+        from ..characters.overlay import reconcile_cast
+        cards_dicts, conflicts = reconcile_cast(cards_dicts, resolved)
+        # Re-hydrate
+        from ..schemas import CharacterCard
+        draft = CastDraft(cards=[CharacterCard(**c) for c in cards_dicts])
+    else:
+        conflicts = []
+
     return {
         "cast": draft.cards,
+        "character_inputs": char_inputs,
+        "resolved_characters": resolved,
         "budgets": bump("llm_calls"),
-        "trace": [f"s3_cast:{[c.name for c in draft.cards]}"],
+        "canon_conflicts": conflicts,
+        "trace": [f"s3_cast:{[c.name for c in draft.cards]}"
+                  f" pinned={len(resolved)} missing={missing_count}"],
     }
 
 
@@ -244,9 +273,15 @@ def repair_cast(state: dict, config: RunnableConfig) -> dict:
 def s3b_behavior(state: dict, config: RunnableConfig) -> dict:
     lib, runtime = deps(config)
     brief: Brief = state["brief"]
+    resolved = state.get("resolved_characters") or []
+
+    # Phase 3: Build runtime overrides text from user inputs
+    runtime_text = _runtime_overrides_text(resolved)
+
     system, user = prompts.behavior_design(
         lib, brief.raw_idea, state["gadget"].model_dump(),
         [c.model_dump() for c in state["cast"]],
+        runtime_overrides=runtime_text,
     )
     spec = resolve_spec("behavior_design", extra={
         "attempt": attempt_of(state, "behavior_attempt"),
@@ -254,11 +289,55 @@ def s3b_behavior(state: dict, config: RunnableConfig) -> dict:
         "total_episodes": brief.target_episodes,
     })
     bible: BehaviorBible = runtime.llm.complete_structured(spec, system, user, BehaviorBible)
+
+    # Phase 3: Runtime Overlay —— 确保用户 goal/fear 不被覆盖
+    if resolved:
+        bible = _apply_runtime_overlay(bible, resolved)
+
     return {
         "behavior": bible,
         "budgets": bump("llm_calls"),
         "trace": [f"s3b_behavior:cards={len(bible.cards)} relations={len(bible.relations)}"],
     }
+
+
+def _runtime_overrides_text(resolved: list) -> str:
+    """为 behavior_design prompt 生成 Runtime Override 约束文本。"""
+    if not resolved:
+        return ""
+    user_chars = [r for r in resolved if r.source == "user" and r.runtime_override_fields]
+    if not user_chars:
+        return ""
+    lines = ["【本次故事 Runtime 约束 —— 用户已明确指定，必须保留】"]
+    for r in user_chars:
+        lines.append(f"\n角色 {r.name}: {r.runtime.summary()}")
+    return "\n".join(lines)
+
+
+def _apply_runtime_overlay(bible: "BehaviorBible", resolved: list) -> "BehaviorBible":
+    """覆盖用户 Runtime Override 到 LLM 输出的 BehaviorCard 上。"""
+    from ..characters.overlay import overlay_runtime
+    user_chars = {r.name: r for r in resolved if r.runtime_override_fields}
+    if not user_chars:
+        return bible
+
+    for card in bible.cards:
+        resolved_char = user_chars.get(card.name)
+        if resolved_char:
+            rt_dict = {
+                "goal": card.desire,
+                "fear": card.fear,
+            }
+            fixed_rt, _ = overlay_runtime(
+                rt_dict, resolved_char.runtime,
+                resolved_char.runtime_override_fields, resolved_char.role_id,
+            )
+            # Apply back to BehaviorCard
+            if "goal" in resolved_char.runtime_override_fields:
+                card.desire = fixed_rt.get("goal", card.desire)
+            if "fear" in resolved_char.runtime_override_fields:
+                card.fear = fixed_rt.get("fear", card.fear)
+    return bible
 
 
 def gate_behavior(state: dict, config: RunnableConfig) -> dict:

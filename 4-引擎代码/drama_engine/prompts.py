@@ -82,7 +82,8 @@ def gadget_design(lib: RuleLibrary, idea: str, genre_id: str, locked_assets: lis
 
 # ------------------------------------------------------------------ 立项：角色
 def cast_design(lib: RuleLibrary, idea: str, recipe_id: str,
-                gadget: dict, prior_findings: list[dict] | None = None) -> tuple[str, str]:
+                gadget: dict, prior_findings: list[dict] | None = None,
+                pinned_characters: str = "", missing_count: int = 0) -> tuple[str, str]:
     recipe = lib.recipe(recipe_id) or {}
     slots = lib.formula.get("character_slots", [])
     slot_text = "\n".join(
@@ -105,6 +106,7 @@ def cast_design(lib: RuleLibrary, idea: str, recipe_id: str,
         f"配方槽位建议：A={recipe.get('A')}；B={recipe.get('B')}；C={recipe.get('C')}；"
         f"D={recipe.get('D')}；E={recipe.get('E')}\n"
         f"音频落地提醒：{recipe.get('landing_note', '')}\n\n"
+        f"{pinned_characters + chr(10) * 2 if pinned_characters else ''}"
         f"【五槽位模型】\n{slot_text}\n\n"
         f"【角色卡字段】\n{field_text}\n\n"
         f"【金手指设定】\n{json.dumps(gadget, ensure_ascii=False, indent=2)}\n\n"
@@ -122,7 +124,8 @@ def cast_design(lib: RuleLibrary, idea: str, recipe_id: str,
 
 # ------------------------------------------------------------------ 立项：人物行为卡
 def behavior_design(lib: RuleLibrary, idea: str, gadget: dict, cast: list[dict],
-                    prior_findings: list[dict] | None = None) -> tuple[str, str]:
+                    prior_findings: list[dict] | None = None,
+                    runtime_overrides: str = "") -> tuple[str, str]:
     """行为卡提示词。
 
     组装原则与其它提示词一致：所有约束文本从规则库取，不抄进提示词。
@@ -155,6 +158,7 @@ def behavior_design(lib: RuleLibrary, idea: str, gadget: dict, cast: list[dict],
     )
     user = (
         f"创意：{idea}\n\n"
+        f"{runtime_overrides + chr(10) * 2 if runtime_overrides else ''}"
         f"【压力类型（选择的坐标系）】\n{pressures}\n\n"
         f"【关系轴（关系变化的坐标系）】\n{axes}\n\n"
         f"【角色卡（听觉辨识度已定，你要补的是行为）】\n"

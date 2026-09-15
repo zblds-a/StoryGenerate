@@ -139,6 +139,13 @@ class RuleLibrary:
     def max_voiced_characters(self) -> int:
         return self.formula.get("audio_drama_constraints", {}).get("max_voiced_characters", 5)
 
+    def max_characters(self, default: int = 5) -> int:
+        """Phase 3: 泛用的角色上限（适用于 CharacterResolver）。
+
+        当前默认读取 max_voiced_characters。未来不同 Mode 可 override。
+        """
+        return self.max_voiced_characters
+
     @property
     def visual_blacklist(self) -> list[str]:
         return (
