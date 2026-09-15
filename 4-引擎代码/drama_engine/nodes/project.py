@@ -282,6 +282,9 @@ def _cast_from_pinned(state: dict, resolved: list, tele=None) -> dict:
         "budgets": {"llm_calls": 0},
         "trace": ["s3_cast:all_pinned"],
     }
+
+
+def repair_cast(state: dict, config: RunnableConfig) -> dict:
     lib, runtime = deps(config)
     brief: Brief = state["brief"]
     prior = only(state["project_report"].findings, "repair_cast")
