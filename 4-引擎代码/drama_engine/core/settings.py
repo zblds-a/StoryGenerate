@@ -57,10 +57,10 @@ class Settings:
     node_timeouts: dict[str, float] = field(default_factory=lambda: {
         "topic_select": 60,
         "gadget_design": 90,
-        "cast_design": 60,
+        "cast_design": 120,
         "outline": 90,
         "behavior_design": 180,
-        "fact_ledger": 60,
+        "fact_ledger": 120,
         "episode_plan": 90,
         "episode_writer": 120,
         "episode_beats": 120,

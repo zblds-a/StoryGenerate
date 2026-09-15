@@ -83,6 +83,11 @@ def gen_beats(state: EpisodeState, config: RunnableConfig) -> dict[str, Any]:
     })
     episode: Episode = runtime.llm.complete_structured(writer_spec, writer_system, writer_user, Episode)
 
+    # 修复 LLM 可能输出的非法 event 值
+    episode = _normalize_line_events(episode)
+
+    # 节拍边界以规则库为准回填
+
     # 节拍边界以规则库为准回填
     episode = _enforce_beat_bounds(episode, lib, entry.episode)
     episode = episode.model_copy(update={"revision": attempts})
@@ -106,6 +111,44 @@ def _enforce_beat_bounds(episode: Episode, lib, ep_no: int) -> Episode:
             beat = beat.model_copy(update={"start_sec": float(lo), "end_sec": float(hi)})
         beats.append(beat)
     return episode.model_copy(update={"beats": beats, "episode": ep_no})
+
+
+# LLM 可能输出的非法 event 值 → 合法 BeatEvent 映射
+_EVENT_FIX_MAP: dict[str, str] = {
+    "conflict": "beat",
+    "setup": "hook",
+    "climax": "reversal",
+    "resolution": "release",
+    "transition": "beat",
+    "intro": "hook",
+    "outro": "release",
+    "exposition": "beat",
+    "complication": "beat",
+    "crisis": "reversal",
+    "epilogue": "release",
+    "prologue": "hook",
+}
+
+
+def _normalize_line_events(episode: Episode) -> Episode:
+    """修复 LLM 可能输出的非法 BeatEvent 值。
+
+    模型在生成 lines 时偶尔会写出不在 {hook,beat,release,reversal,cliffhanger} 中的 event。
+    这是 Pydantic 严格校验下最常见的 schema 拒绝 —— 做确定性映射而非再问一次模型。
+    """
+    from ..schemas import BeatEvent
+
+    valid = set(BeatEvent.__args__)  # type: ignore[attr-defined]
+    beats = []
+    for beat in episode.beats:
+        lines = []
+        for line in beat.lines:
+            if line.event and line.event not in valid:
+                mapped = _EVENT_FIX_MAP.get(line.event, "beat")
+                line = line.model_copy(update={"event": mapped})
+            lines.append(line)
+        beats.append(beat.model_copy(update={"lines": lines}))
+    return episode.model_copy(update={"beats": beats})
 
 
 # ============================================================================
