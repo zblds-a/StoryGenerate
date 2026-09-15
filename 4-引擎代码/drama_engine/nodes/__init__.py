@@ -1,4 +1,5 @@
 from .episode import build_episode_graph
+from .parallel_ledger_plan import parallel_ledger_plan  # Phase 4.5D
 from .project import (
     gate_behavior,
     gate_bible,
@@ -28,6 +29,7 @@ from .series import dispatch_episodes, gen_episode, s7_series_validate, s8_assem
 
 __all__ = [
     "build_episode_graph", "dispatch_episodes", "gen_episode",
+    "parallel_ledger_plan",  # Phase 4.5D
     "s7_series_validate", "s8_assemble",
     "s0_intake", "s1_topic", "s2_gadget", "s3_cast", "s3b_behavior", "s4_outline",
     "s5_ledger",

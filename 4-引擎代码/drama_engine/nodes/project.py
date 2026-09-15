@@ -631,7 +631,15 @@ def route_after_behavior(state: dict) -> str:
 
 
 def route_after_outline(state: dict) -> str:
-    return "repair_outline" if should_repair(state, "outline_attempt") else "s5_ledger"
+    if should_repair(state, "outline_attempt"):
+        return "repair_outline"
+    # Phase 4.5D: 如果并行特性开启 & 多集任务，走 parallel_ledger_plan
+    import os
+    if os.environ.get("STORY_PARALLEL_ENABLED", "true").lower() == "true":
+        target_eps = getattr(state.get("brief", {}), "target_episodes", 1) if hasattr(state.get("brief"), "target_episodes") else 1
+        if target_eps > 1:
+            return "parallel_ledger_plan"
+    return "s5_ledger"
 
 
 def route_after_ledger(state: dict) -> str:

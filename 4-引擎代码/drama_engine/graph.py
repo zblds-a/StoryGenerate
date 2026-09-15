@@ -59,6 +59,7 @@ from .nodes import (
     gate_ledger,
     gate_outline,
     gen_episode,
+    parallel_ledger_plan,   # Phase 4.5D
     repair_behavior,
     repair_cast,
     repair_gadget,
@@ -108,6 +109,7 @@ def build_graph(checkpointer=None, use_checkpoint: bool = True):
     graph.add_node("gate_outline", gate_outline)
     graph.add_node("repair_outline", repair_outline)
     graph.add_node("s5_ledger", s5_ledger)
+    graph.add_node("parallel_ledger_plan", parallel_ledger_plan)  # Phase 4.5D
     graph.add_node("gate_ledger", gate_ledger)
     graph.add_node("repair_ledger", repair_ledger)
     graph.add_node("gate_bible", gate_bible)
@@ -145,9 +147,13 @@ def build_graph(checkpointer=None, use_checkpoint: bool = True):
     graph.add_edge("s4_outline", "gate_outline")
     graph.add_conditional_edges(
         "gate_outline", route_after_outline,
-        {"repair_outline": "repair_outline", "s5_ledger": "s5_ledger"},
+        {"repair_outline": "repair_outline", "s5_ledger": "s5_ledger",
+         "parallel_ledger_plan": "parallel_ledger_plan"},  # Phase 4.5D
     )
     graph.add_edge("repair_outline", "gate_outline")
+
+    # Phase 4.5D: parallel path → gate_bible (skips gate_ledger, reconciler handles validation)
+    graph.add_edge("parallel_ledger_plan", "gate_bible")
 
     graph.add_edge("s5_ledger", "gate_ledger")
     graph.add_conditional_edges(
