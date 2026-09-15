@@ -11,7 +11,7 @@ from typing import Any, TypeVar
 
 from pydantic import BaseModel, ValidationError
 
-from ..contracts import LLMProvider, LLMResult, LLMSpec  # noqa: F401  (re-export)
+from ..contracts import LLMProvider, LLMResult, LLMSpec, TokenUsage  # noqa: F401  (re-export)
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -36,6 +36,19 @@ class BaseLLMProvider:
 
     name = "base"
 
+    # Phase 4: telemetry reference, injected by Runtime
+    _telemetry: Any = None
+
+    def _trace_llm_call(self, spec: LLMSpec, result: "LLMResult", latency_ms: int) -> None:
+        """记录一次 LLM 调用到 Telemetry（如果已注入）。"""
+        if self._telemetry is None:
+            return
+        self._telemetry.record(TokenUsage(
+            node=spec.role, model=spec.model,
+            input_tokens=result.input_tokens, output_tokens=result.output_tokens,
+            latency_ms=latency_ms, cached=False,
+        ))
+
     def complete(self, spec: LLMSpec, system: str, user: str) -> LLMResult:
         raise NotImplementedError
 
@@ -46,7 +59,11 @@ class BaseLLMProvider:
         instruction = SCHEMA_INSTRUCTION.format(schema=schema_json)
         full_system = f"{system}\n\n{instruction}" if system else instruction
 
+        # Phase 4: trace every LLM call
+        t0 = time.monotonic()
         result = self.complete(spec, full_system, user)
+        latency_ms = int((time.monotonic() - t0) * 1000)
+        self._trace_llm_call(spec, result, latency_ms)
         parsed, errors = _try_parse(result.text, schema)
         if parsed is not None:
             return parsed

@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import json
 import re
+import time
 from typing import Any
 
 from ..schemas import (
@@ -91,6 +92,7 @@ class MockLLMProvider(BaseLLMProvider):
 
     # ------------------------------------------------------------------ 结构化
     def complete_structured(self, spec: LLMSpec, system: str, user: str, schema: type):
+        t0 = time.monotonic()
         self.call_log.append({"role": spec.role, "structured": True, "schema": schema.__name__})
         ctx: dict[str, Any] = dict(spec.extra or {})
         attempt: int = int(ctx.get("attempt", 0))
@@ -114,7 +116,17 @@ class MockLLMProvider(BaseLLMProvider):
         }.get(schema)
         if builder is None:
             raise NotImplementedError(f"Mock 未实现该 Schema: {schema.__name__}")
-        return schema.model_validate(builder(ctx, dirty, user))
+        result = schema.model_validate(builder(ctx, dirty, user))
+
+        # Phase 4: telemetry trace
+        latency_ms = int((time.monotonic() - t0) * 1000)
+        self._trace_llm_call(spec, LLMResult(
+            text="[mock]", model=spec.model,
+            input_tokens=estimate_tokens(system + user),
+            output_tokens=estimate_tokens(user),  # rough
+        ), latency_ms)
+
+        return result
 
     # ------------------------------------------------------------------ 选题
     def _topic(self, ctx: dict, dirty: bool, user: str) -> dict:

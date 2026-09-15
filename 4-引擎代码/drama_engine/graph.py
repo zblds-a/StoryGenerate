@@ -181,22 +181,35 @@ def run_pipeline(
     story_mode: str | None = None,
     characters: list | None = None,
     graph=None,
+    repos=None,   # Phase 4: optional persistence Repositories
 ) -> dict[str, Any]:
     """命令行 / 服务层入口。
 
     Phase 3: 新增 characters 参数 —— 支持用户提供部分/全部角色。
+    Phase 4: 新增 repos 参数 —— persistence 支持 character_id DB 加载。
     characters=None → 完全走旧 Cast 生成逻辑（backward compatible）。
     """
     from .modes import get_mode, ModeContext
-    from .characters import CharacterResolver
+    from .characters import CharacterResolver, CharacterInput
 
     mode = get_mode(story_mode)
     mode_ctx = ModeContext.from_mode(mode)
 
+    # Phase 4: hydrate character_id → DB CharacterTemplate (if repos available)
+    char_inputs: list[CharacterInput] = []
+    if characters and repos:
+        from .persistence.hydration import hydrate_character_inputs
+        # Convert to dict form for hydration service
+        raw_list = _to_raw_character_list(characters)
+        char_inputs = hydrate_character_inputs(raw_list, repos.character_template)
+    elif characters:
+        char_inputs = [c if isinstance(c, CharacterInput) else _dict_to_char_input(c)
+                       for c in characters]
+        char_inputs = [c for c in char_inputs if c is not None]
+
     # Phase 3: Character Resolver
     max_chars = lib.max_characters(5)
     resolver = CharacterResolver(max_characters=max_chars)
-    char_inputs = list(characters) if characters else []
     resolved, missing_count = resolver.resolve(char_inputs)
 
     set_runtime_factory(lambda: runtime)
@@ -222,3 +235,32 @@ def run_pipeline(
               "configurable_thread": thread_id}
     config["configurable"]["thread_id"] = thread_id
     return app.invoke(initial, config)
+
+
+# ---- Phase 4 helpers ---- #
+def _to_raw_character_list(characters: list) -> list[dict]:
+    """将 CharacterInput 对象或 dict 统一转换为 dict 列表。"""
+    from .characters import CharacterInput
+    result = []
+    for c in characters:
+        if isinstance(c, CharacterInput):
+            result.append({
+                "character_id": c.character_id or c.canon.character_id if c.canon else "",
+                "canon": c.canon.model_dump() if hasattr(c.canon, "model_dump") else {},
+                "runtime": c.runtime.model_dump() if hasattr(c.runtime, "model_dump") else {},
+            })
+        elif isinstance(c, dict):
+            result.append(c)
+    return result
+
+
+def _dict_to_char_input(d: dict) -> "CharacterInput":
+    """将 dict 转换为 CharacterInput（backward compat）。"""
+    from .characters import CharacterInput, CharacterCanon, CharacterRuntimeInput
+    canon = CharacterCanon(**d.get("canon", {})) if d.get("canon") else CharacterCanon(name="")
+    runtime = CharacterRuntimeInput(**d.get("runtime", {})) if d.get("runtime") else CharacterRuntimeInput()
+    return CharacterInput(
+        character_id=d.get("character_id", ""),
+        canon=canon,
+        runtime=runtime,
+    )
