@@ -11,6 +11,7 @@ parallel_ledger_plan 内部：
 """
 from __future__ import annotations
 
+import os
 import time
 from typing import Any
 
@@ -47,6 +48,7 @@ def parallel_ledger_plan(state: dict, config) -> dict:
     tele = getattr(runtime, "telemetry", None)
 
     snapshot = frozen_snapshot(state)
+    target_eps = snapshot.get("target_episodes", 1)
 
     # Branch A: FactLedger
     def _run_ledger() -> dict:
@@ -61,19 +63,26 @@ def parallel_ledger_plan(state: dict, config) -> dict:
 
     # Branch B: EpisodePlan Draft (uses frozen snapshot, does NOT see ledger)
     def _run_plan_draft() -> dict:
+        from ..llm.router import resolve_spec
         from ..prompts import episode_plan as _plan_prompt
         from ..schemas import EpisodePlan
 
-        outline_entry = (snapshot.get("outline") or [{}])[0] if snapshot.get("outline") else {}
-        cast_dicts = [
-            c.model_dump() if hasattr(c, "model_dump") else c
-            for c in snapshot.get("cast", [])
-        ]
-        gadget_dict = (
-            snapshot["gadget"].model_dump()
-            if hasattr(snapshot.get("gadget"), "model_dump")
-            else snapshot.get("gadget", {})
-        )
+        outline_list = snapshot.get("outline") or []
+        if outline_list:
+            first = outline_list[0]
+            outline_entry = first.model_dump() if hasattr(first, "model_dump") else (dict(first) if isinstance(first, dict) else {})
+        else:
+            outline_entry = {}
+        cast_dicts = []
+        for c in (snapshot.get("cast") or []):
+            if hasattr(c, "model_dump"):
+                cast_dicts.append(c.model_dump())
+            elif isinstance(c, dict):
+                cast_dicts.append(c)
+        gadget_dict = {}
+        g = snapshot.get("gadget")
+        if g:
+            gadget_dict = g.model_dump() if hasattr(g, "model_dump") else (dict(g) if isinstance(g, dict) else {})
         dur = getattr(snapshot.get("brief"), "target_duration_sec", 90) if hasattr(snapshot.get("brief"), "target_duration_sec") else 90
 
         system, user = _plan_prompt(
@@ -86,11 +95,8 @@ def parallel_ledger_plan(state: dict, config) -> dict:
             "plan_budget": {"llm_calls": 1},
         }
 
-    # Guard: 仅 1 episode 时 plan_draft 无意义（gen_episode 已做 plan）
-    # 回退到正常串行
-    target_eps = snapshot.get("target_episodes", 1)
+    # Guard: 仅 1 episode 时 plan_draft 无意义
     if target_eps <= 1:
-        # 回退：只跑 ledger
         ledger_result = _run_ledger()
         return {
             **ledger_result,
@@ -119,6 +125,8 @@ def parallel_ledger_plan(state: dict, config) -> dict:
             ledger_data = r.result
         elif r.branch_id == "plan_draft" and r.success:
             plan_data = r.result
+        elif not r.success:
+            pass  # branch failure handled by RepairBudget, result propagated as None
 
     # Reconcile: 代码映射 plan draft 中的 fact references 到真实 ledger fact_ids
     plan_draft = plan_data.get("episode_plan_draft", {})
