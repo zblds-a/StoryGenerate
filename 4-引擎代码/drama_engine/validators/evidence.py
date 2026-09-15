@@ -73,14 +73,24 @@ _SUBJECT_SUFFIXES = (
 # ============================================================================
 # 文本工具
 # ============================================================================
-def episode_text(episode: Episode) -> str:
-    """把整集正文压成一段可检索文本（含说话人与节拍标记）。"""
+def episode_text(episode: Episode, max_chars: int = 3000) -> str:
+    """把整集正文压成可检索文本（含说话人与节拍标记）。
+
+    Phase 4.5C: max_chars 截断，避免向 judge 发送完整长文本。
+    """
     parts: list[str] = []
+    total = 0
     for beat in episode.beats:
-        parts.append(f"[{beat.segment} {beat.label}]")
+        header = f"[{beat.segment} {beat.label}]"
+        parts.append(header)
+        total += len(header)
         for ln in beat.lines:
             who = ln.speaker or ln.kind
-            parts.append(f"{who}: {ln.text}")
+            line = f"{who}: {ln.text}"
+            parts.append(line)
+            total += len(line)
+        if total > max_chars:
+            break
     return "\n".join(parts)
 
 
