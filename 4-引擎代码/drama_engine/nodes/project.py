@@ -144,6 +144,20 @@ def s2_gadget(state: dict, config: RunnableConfig) -> dict:
     brief: Brief = state["brief"]
     tele = getattr(runtime, "telemetry", None)
 
+    # Phase 5: Capability routing — mode 不支持 GADGET 时跳过
+    mode_ctx = state.get("mode_context")
+    if mode_ctx and not mode_ctx.supports("gadget"):
+        if tele:
+            tele.event("node_skipped", {
+                "node": "gadget_design",
+                "reason": "mode_capability_disabled",
+            })
+        return {
+            "gadget": None,
+            "budgets": {"llm_calls": 0},
+            "trace": ["s2_gadget:skipped (mode does not support gadget)"],
+        }
+
     # Phase 4.5C: 如果 locked_assets 已提供 ≥2 个 gadget asset，跳过 LLM
     if brief.locked_assets and len(brief.locked_assets) >= 2:
         gadget = _gadget_from_assets(brief.locked_assets, state.get("genre_id", ""))
@@ -172,6 +186,17 @@ def s2_gadget(state: dict, config: RunnableConfig) -> dict:
 
 def gate_gadget(state: dict, config: RunnableConfig) -> dict:
     lib, runtime = deps(config)
+
+    # Phase 5: mode 不支持 Gadget → 直通，不校验
+    if state.get("gadget") is None:
+        return {
+            "project_report": None,
+            "findings": [],
+            "outstanding_gadget": [],
+            "budgets": {"llm_calls": 0},
+            "trace": ["gate_gadget:skipped (gadget not applicable)"],
+        }
+
     report = validate_gadget(state["gadget"], lib, runtime.llm)
     return {
         "project_report": report,

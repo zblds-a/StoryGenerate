@@ -113,7 +113,9 @@ class TestModeRegistry:
 
     def test_available_modes(self):
         modes = available_modes()
-        assert modes == ["viral_drama"]
+        # Phase 5: general added alongside viral_drama
+        assert "viral_drama" in modes
+        assert "general" in modes
 
     def test_default_mode_key(self):
         assert default_mode_key() == "viral_drama"

@@ -519,3 +519,66 @@ def episode_writer(
         f"注意：这是 {duration_sec} 秒的短剧，台词要精炼。"
     )
     return system, user
+
+
+# ============================================================================
+# Phase 5: mode_prompt_context — Mode 专用指令片段
+# ============================================================================
+def mode_prompt_context(mode_context, resolved_template: dict | None = None) -> str:
+    """根据 Mode 返回专属叙事指令。
+
+    Viral Drama:
+        - 强 Hook, 高密度推进, 金手指, 五槽位, 穿越/打脸/逆袭
+    General:
+        - 自然人物动机, 因果推进, 关系变化, 结构完整
+        - 不强制 Gadget, 不强制 Five-slot, 不强制穿越/打脸/逆袭
+        - Template-driven outline (如果 resolved_template 提供)
+
+    这个函数返回值一般追加到 System Prompt 末尾。
+    """
+    key = getattr(mode_context, "key", "") or ""
+    caps = getattr(mode_context, "capabilities", set()) or set()
+
+    if key == "general":
+        parts = [
+            "你是一名专业的故事编剧。",
+            "请创作一个结构完整、人物驱动、适合广播剧表达的故事。",
+            "",
+            "核心要求：",
+            "- 人物必须有明确的目标、动机和恐惧",
+            "- 故事推进以人物的主动选择为驱动，不是旁白解释",
+            "- 冲突必须来自人物的内部需求与外部环境的碰撞",
+            "- 关系变化是故事的核心动力之一",
+            "- 保持因果连贯：每一个事件都是前一个事件的结果",
+            "",
+            "不要强加以下元素：",
+            "- 金手指 / 超能力 / 系统（除非故事设定天生需要）",
+            "- 强制五槽位角色配置",
+            "- 穿越 / 重生",
+            "- 身份反转打脸 / 极端逆袭",
+            "- 强制每分钟爆点",
+        ]
+        if resolved_template:
+            tmpl_name = resolved_template.get("name", "")
+            tmpl_beats = resolved_template.get("beats", [])
+            if tmpl_beats:
+                parts.append(f"\n叙事结构 ({tmpl_name}):")
+                for b in tmpl_beats:
+                    req = "必须" if b.get("required", True) else "可选"
+                    parts.append(f"  [{req}] {b['key']}: {b['purpose']}")
+        return "\n".join(parts)
+
+    elif key == "viral_drama":
+        return (
+            "你是一名爆款广播剧编剧。\n"
+            "核心要求：\n"
+            "- 强 Hook 开场，前 10 秒必须抓住听众\n"
+            "- 高密度剧情推进，每分钟一个爆点或反转\n"
+            "- 五槽位角色（A/B/C/D/E）各有明确功能和选择规律\n"
+            "- 金手指是故事的引擎，但不能滥用\n"
+            "- 每集结尾必须有 cliffhanger\n"
+            "- 对白精炼、音效饱满、情绪张力强"
+        )
+
+    # 未知 mode → 空
+    return ""
