@@ -185,6 +185,8 @@ def run_pipeline(
     locked_assets: list[str] | None = None,
     thread_id: str = "local",
     story_mode: str | None = None,
+    story_template_id: str | None = None,       # Phase 5
+    story_template_version: int | None = None,   # Phase 5
     characters: list | None = None,
     graph=None,
     repos=None,   # Phase 4: optional persistence Repositories
@@ -193,13 +195,31 @@ def run_pipeline(
 
     Phase 3: 新增 characters 参数 —— 支持用户提供部分/全部角色。
     Phase 4: 新增 repos 参数 —— persistence 支持 character_id DB 加载。
+    Phase 5: 新增 story_template_id/version —— Template Resolver 集成。
     characters=None → 完全走旧 Cast 生成逻辑（backward compatible）。
     """
-    from .modes import get_mode, ModeContext
+    from .modes import ModeContext, get_mode
     from .characters import CharacterResolver, CharacterInput
+    from .templates.resolver import StoryTemplateResolver, build_template_resolver
+    from .templates.repository import MemoryStoryTemplateRepository
+    from .templates.defaults import BUILTIN_TEMPLATES
 
     mode = get_mode(story_mode)
     mode_ctx = ModeContext.from_mode(mode)
+
+    # Phase 5: Template Resolver
+    template_repo = MemoryStoryTemplateRepository()
+    for t in BUILTIN_TEMPLATES:
+        template_repo.create(t)
+    default_template_id: dict[str, str] = {
+        "general": "GENERAL_THREE_ACT",
+    }
+    template_resolver = StoryTemplateResolver(template_repo, default_template_id)
+    resolved_template = template_resolver.resolve(
+        template_id=story_template_id,
+        version=story_template_version,
+        mode_key=mode_ctx.key,
+    )
 
     # Phase 4: hydrate character_id → DB CharacterTemplate (if repos available)
     char_inputs: list[CharacterInput] = []
@@ -228,6 +248,7 @@ def run_pipeline(
             locked_assets=locked_assets or [],
         ),
         "mode_context": mode_ctx,
+        "resolved_template": resolved_template.model_dump() if resolved_template else None,  # Phase 5
         "character_inputs": char_inputs,
         "resolved_characters": resolved,
         "workspace": workspace,

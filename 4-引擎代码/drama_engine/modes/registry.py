@@ -58,7 +58,9 @@ class ModeRegistry:
     def _bootstrap(self) -> None:
         """自动注册内建 Mode。"""
         from .viral_drama.mode import ViralDramaMode
+        from .general.mode import GeneralMode   # Phase 5
         self.register(ViralDramaMode())
+        self.register(GeneralMode())             # Phase 5
 
     def register(self, mode: StoryMode) -> None:
         """注册一个 Mode。重复注册相同 key 会覆盖（非生产推荐，但允许测试）。"""
