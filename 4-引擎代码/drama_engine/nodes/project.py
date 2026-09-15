@@ -142,6 +142,19 @@ def _advisory(rule_id: str, message: str) -> Finding:
 def s2_gadget(state: dict, config: RunnableConfig) -> dict:
     lib, runtime = deps(config)
     brief: Brief = state["brief"]
+    tele = getattr(runtime, "telemetry", None)
+
+    # Phase 4.5C: 如果 locked_assets 已提供 ≥2 个 gadget asset，跳过 LLM
+    if brief.locked_assets and len(brief.locked_assets) >= 2:
+        gadget = _gadget_from_assets(brief.locked_assets, state.get("genre_id", ""))
+        if tele:
+            tele.event("node_skipped", {"node": "gadget_design", "reason": "locked_assets_provided"})
+        return {
+            "gadget": gadget,
+            "budgets": {"llm_calls": 0},
+            "trace": [f"s2_gadget:assets={len(brief.locked_assets)}_locked"],
+        }
+
     system, user = prompts.gadget_design(
         lib, brief.raw_idea, state["genre_id"], brief.locked_assets
     )
