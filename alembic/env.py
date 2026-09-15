@@ -1,41 +1,40 @@
 """Alembic 环境配置。
 
-从 PersistenceSettings 读取 DATABASE_URL。
+从 PersistenceSettings / DATABASE_URL 读取连接。
+
 生产 Schema 修改必须通过 alembic upgrade head。
+
+开发时代替 config：
+    1. 设置 DATABASE_URL 环境变量
+    2. alembic upgrade head
+    3. alembic revision --autogenerate -m "描述"
 """
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
-from drama_engine.persistence.models import Base
-from drama_engine.persistence.settings import PersistenceSettings
+# Phase 4.1: 从环境变量读取 DATABASE_URL（生产级）
+import os
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "4-引擎代码"))
+
+from drama_engine.persistence.models import Base  # noqa: E402
 
 config = context.config
-settings = PersistenceSettings.from_env()
-
-if settings.backend == "postgres" and settings.database_url:
-    config.set_main_option("sqlalchemy.url", settings.database_url)
-elif settings.backend == "memory":
-    # 内存模式不使用 Alembic
-    pass
+database_url = os.environ.get("DATABASE_URL", "")
+if database_url:
+    config.set_main_option("sqlalchemy.url", database_url)
 
 target_metadata = Base.metadata
 
 
 def run_migrations_offline() -> None:
-    """离线迁移（生成 SQL 脚本）。"""
     url = config.get_main_option("sqlalchemy.url")
-    context.configure(
-        url=url,
-        target_metadata=target_metadata,
-        literal_binds=True,
-        dialect_opts={"paramstyle": "named"},
-    )
+    context.configure(url=url, target_metadata=target_metadata, literal_binds=True)
     with context.begin_transaction():
         context.run_migrations()
 
 
 def run_migrations_online() -> None:
-    """在线迁移（直接执行）。"""
     connectable = engine_from_config(
         config.get_section(config.config_ini_section, {}),
         prefix="sqlalchemy.",
@@ -47,8 +46,7 @@ def run_migrations_online() -> None:
             context.run_migrations()
 
 
-if settings.backend == "postgres" and settings.database_url:
-    if context.is_offline_mode():
-        run_migrations_offline()
-    else:
-        run_migrations_online()
+if context.is_offline_mode():
+    run_migrations_offline()
+else:
+    run_migrations_online()

@@ -81,9 +81,23 @@ def s1_topic(state: dict, config: RunnableConfig) -> dict:
     """
     lib, runtime = deps(config)
     brief: Brief = state["brief"]
-    system, user = prompts.topic_select(lib, brief.raw_idea)
-    spec = resolve_spec("topic_select")
-    choice: TopicChoice = runtime.llm.complete_structured(spec, system, user, TopicChoice)
+    tele = getattr(runtime, "telemetry", None)
+
+    # Phase 4.5B: 如果 brief 已显式指定 genre_key，跳过 LLM
+    explicit_genre = getattr(brief, "explicit_genre", None) or ""
+    if explicit_genre and explicit_genre in lib.genres_dict():
+        genre_data = lib.genres_dict()[explicit_genre]
+        choice = TopicChoice(
+            genre_id=explicit_genre,
+            recipe_id=genre_data.get("default_recipe", "R1"),
+            rationale=f"用户显式指定赛道: {explicit_genre}",
+        )
+        if tele:
+            tele.event("node_skipped", {"node": "topic_select", "reason": "explicit_genre"})
+    else:
+        system, user = prompts.topic_select(lib, brief.raw_idea)
+        spec = resolve_spec("topic_select")
+        choice: TopicChoice = runtime.llm.complete_structured(spec, system, user, TopicChoice)
 
     genre = lib.genre(choice.genre_id)
     findings: list[Finding] = []
@@ -188,6 +202,12 @@ def s3_cast(state: dict, config: RunnableConfig) -> dict:
     resolved = state.get("resolved_characters") or []
     char_inputs = state.get("character_inputs") or []
     missing_count = max(0, lib.max_characters(5) - len(resolved))
+    tele = getattr(runtime, "telemetry", None)
+
+    # Phase 4.5B: 5 chars all pinned → 跳过 LLM，纯代码生成 Cast
+    if missing_count == 0 and len(resolved) == lib.max_characters(5):
+        return _cast_from_pinned(state, resolved, tele)
+    # ...
 
     # Phase 3: 如果有用户角色，注入 pinned context
     pinned_text = ""
@@ -238,7 +258,30 @@ def gate_cast(state: dict, config: RunnableConfig) -> dict:
     }
 
 
-def repair_cast(state: dict, config: RunnableConfig) -> dict:
+def _cast_from_pinned(state: dict, resolved: list, tele=None) -> dict:
+    """Phase 4.5B: 全部角色已 pinned → 纯代码构造 Cast，跳过 LLM。"""
+    if tele:
+        tele.event("node_skipped", {"node": "cast_design", "reason": "all_pinned"})
+    from ..schemas import CharacterCard
+    cards = []
+    for i, r in enumerate(resolved):
+        c = r.canon
+        cards.append(CharacterCard(
+            name=c.name or f"角色{i+1}",
+            slot=f"role_{i+1:02d}",
+            is_voiced=True,
+            gender=c.gender or "male",
+            age_range=c.identity or "--",
+            personality="由用户指定",
+            motivation=r.runtime.goal or c.motivation or "",
+            relationship="待定",
+            voice_anchor=getattr(c, "voice_anchor", "") or "",
+        ))
+    return {
+        "cast": CastDraft(cards=cards),
+        "budgets": {"llm_calls": 0},
+        "trace": ["s3_cast:all_pinned"],
+    }
     lib, runtime = deps(config)
     brief: Brief = state["brief"]
     prior = only(state["project_report"].findings, "repair_cast")

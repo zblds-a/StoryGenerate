@@ -411,6 +411,8 @@ class JudgeVerdict(BaseModel):
     reason: str = ""
     evidence: str = Field(default="", description="剧本或大纲中的原文片段，用于人工复核")
     claim_id: str = Field(default="", description="声明兑现裁决时的声明 id")
+    severity: str = Field(default="", description="error | warning | info（Phase 4.5: batch judge 可直接输出 severity）")
+    scope: str = Field(default="", description="batch judge 的裁决来源 scope：gadget / outline / episode-N")
     fake_pattern: str = Field(
         default="", description="伪证模式：label_only / fake_reversal / fake_trust / "
                                 "fake_causality / countdown_drift / knowledge_leak / resource_drift"
