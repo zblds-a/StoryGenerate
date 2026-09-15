@@ -234,7 +234,92 @@ def run_pipeline(
     config = {"configurable": {"lib": lib, "runtime": runtime}, "recursion_limit": 120,
               "configurable_thread": thread_id}
     config["configurable"]["thread_id"] = thread_id
-    return app.invoke(initial, config)
+    result = app.invoke(initial, config)
+
+    # Phase 4C: History Persistence（非阻塞；失败不丢故事）
+    if repos:
+        _persist_run_result(result, repos, idea, thread_id, story_mode, runtime)
+
+    return result
+
+
+def _persist_run_result(
+    result: dict,
+    repos,
+    idea: str,
+    thread_id: str,
+    story_mode: str | None,
+    runtime,
+) -> None:
+    """Phase 4C: 非阻塞保存生成结果到持久化存储。"""
+    import logging
+    import uuid
+    from datetime import datetime, timezone
+
+    _log = logging.getLogger("drama_engine.persistence")
+    report = result.get("final_report") or {}
+    if not report:
+        return
+
+    request_id = thread_id
+    story_id = uuid.uuid4().hex
+    now = datetime.now(timezone.utc)
+
+    try:
+        # 1. StoryJob
+        from .persistence.repository import StoryJob
+        job = StoryJob(
+            job_id=uuid.uuid4().hex, request_id=request_id,
+            status="completed", story_mode=story_mode or "",
+            input_json={"idea": idea},
+        )
+        repos.story_job.create(job)
+
+        # 2. StoryRecord (含角色快照)
+        from .persistence.repository import StoryRecord
+        cast = report.get("cast", [])
+        record = StoryRecord(
+            story_id=story_id, request_id=request_id,
+            job_id=job.job_id, story_mode=story_mode or "",
+            title="", summary=report.get("genre_id", ""),
+            output_json=report,
+            resolved_character_snapshot=[
+                {"name": c.get("name", ""), "role_id": c.get("role_id", ""),
+                 "gender": c.get("gender", ""), "identity": c.get("identity", "")}
+                for c in cast
+            ],
+            engine_version=report.get("engine_version", ""),
+        )
+        repos.story_record.create(record)
+
+        # 3. GenerationTraces (batch)
+        from .persistence.repository import GenerationTrace
+        tele = getattr(runtime, "telemetry", None)
+        if tele:
+            usage = tele.summary() if hasattr(tele, "summary") else {}
+            # Record overall trace
+            repos.generation_trace.batch_create([
+                GenerationTrace(
+                    trace_id=uuid.uuid4().hex, request_id=request_id,
+                    job_id=job.job_id, node="total",
+                    latency_ms=usage.get("total_latency_ms", 0),
+                )
+            ])
+
+        # 4. QualityResults
+        from .persistence.repository import QualityResult
+        validation = report.get("validation", {}).get("outstanding", {})
+        by_rule = validation.get("by_rule", {})
+        for rule_id, detail in by_rule.items():
+            repos.quality_result.create(QualityResult(
+                story_id=story_id, rule_id=rule_id,
+                severity="error" if "error" in str(detail).lower() else "warning",
+                passed="PASS" in str(detail),
+                details_json={"detail": detail},
+            ))
+
+    except Exception as exc:
+        _log.warning("PERSISTENCE_WRITE_FAILED: story=%s error=%s", story_id, exc)
 
 
 # ---- Phase 4 helpers ---- #
