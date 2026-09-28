@@ -115,6 +115,8 @@ class DramaState(TypedDict, total=False):
 
     # ---- 终产物 ----
     final_report: dict
+    # Phase 6: 散文故事产出（仅 prose_story content form）
+    prose: Any  # ProseStory — 不参与 reducer（逐集串行或单集）
 
 
 class EpisodeState(TypedDict, total=False):

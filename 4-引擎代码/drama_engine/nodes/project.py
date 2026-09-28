@@ -152,8 +152,10 @@ def s2_gadget(state: dict, config: RunnableConfig) -> dict:
                 "node": "gadget_design",
                 "reason": "mode_capability_disabled",
             })
+        # Phase 6.1: 返回空 GadgetSpec 而非 None，避免下游 .model_dump() 崩溃
+        empty = GadgetSpec(assets=[], core_conflict="")
         return {
-            "gadget": None,
+            "gadget": empty,
             "budgets": {"llm_calls": 0},
             "trace": ["s2_gadget:skipped (mode does not support gadget)"],
         }
@@ -188,7 +190,7 @@ def gate_gadget(state: dict, config: RunnableConfig) -> dict:
     lib, runtime = deps(config)
 
     # Phase 5: mode 不支持 Gadget → 直通，不校验
-    if state.get("gadget") is None:
+    if not state.get("gadget") or not getattr(state["gadget"], "assets", []):
         return {
             "project_report": None,
             "findings": [],
@@ -255,7 +257,8 @@ def s3_cast(state: dict, config: RunnableConfig) -> dict:
         pinned_text = resolver.pin_prompt_context(resolved)
 
     system, user = prompts.cast_design(
-        lib, brief.raw_idea, state["recipe_id"], state["gadget"].model_dump(),
+        lib, brief.raw_idea, state["recipe_id"],
+        state["gadget"].model_dump() if state.get("gadget") else {},
         pinned_characters=pinned_text,
         missing_count=missing_count,
     )
