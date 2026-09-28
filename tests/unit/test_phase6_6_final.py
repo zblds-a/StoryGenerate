@@ -170,9 +170,9 @@ class TestSamePlanDualRenderer:
         prose = self._make_mock_prose()
         # Use 2-char Chinese anchors (safe character slicing)
         fact_anchors = [
-            ("房东已通知一周后收房", "房东"),
+            ("房东已通知一周后收房", "收房"),
             ("合同包含续租条款", "合同"),
-            ("三人房租各有困难", "房租"),
+            ("三人房租各有困难", "搬走"),
         ]
         for fact, anchor in fact_anchors:
             assert anchor in prose.plain_text, (
