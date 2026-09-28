@@ -130,6 +130,7 @@ class EpisodeState(TypedDict, total=False):
 
     brief: Brief
     workspace: str
+    content_form: dict  # Phase 6: Content Form profile (key, writer, validators, ...)
     gadget: GadgetSpec
     cast: list[CharacterCard]
     behavior: BehaviorBible

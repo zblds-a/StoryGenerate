@@ -43,6 +43,8 @@ from ..schemas import (
     Line,
     LineRewrites,
     OutlineDraft,
+    ProseParagraph,
+    ProseStory,
     TopicChoice,
 )
 from .base import BaseLLMProvider, LLMResult, LLMSpec, estimate_tokens
@@ -113,6 +115,7 @@ class MockLLMProvider(BaseLLMProvider):
             EpisodePlan: self._episode_plan,
             JudgeResponse: self._judge,
             LineRewrites: self._line_rewrites,
+            ProseStory: self._prose_story,
         }.get(schema)
         if builder is None:
             raise NotImplementedError(f"Mock 未实现该 Schema: {schema.__name__}")
@@ -596,6 +599,93 @@ class MockLLMProvider(BaseLLMProvider):
             target = next((e for e in entries if e["kind"] == "promise"), entries[-1])
             target["expected_mentions"] = sorted(set(target["expected_mentions"]) | {ep})
             covered.add(ep)
+
+    # ------------------------------------------------------------------ 散文故事
+    def _prose_story(self, ctx: dict, dirty: bool, user: str) -> dict:
+        """生成 ProseStory mock。
+
+        6–8 段自然散文，对白嵌入叙述，不出现广播剧标签。
+        """
+        entry = ctx.get("outline_entry") or {}
+        ep_no = int(entry.get("episode", 1))
+        cast = ctx.get("cast") or []
+        hero = next((c.name for c in cast if c.slot == "A"), "周牧")
+        protector = next((c.name for c in cast if c.slot == "C"), "裴肃")
+        rival = next((c.name for c in cast if c.faction == "antagonist"), "崔敬")
+        witness = next((c.name for c in cast if c.slot == "E"), None)
+
+        title = entry.get("title", f"第{ep_no}章")
+
+        para_templates = [
+            (
+                f"帐外的雨已经下了整整一夜。{hero}把最后一支针管放进开水里烫了烫，"
+                f"手指稳得像在做一台演习了无数次的手术。她对身后的目光毫不在意"
+                f"——那些目光里有怀疑，有惧怕，甚至还有几分看热闹的意思。"
+                f"「他这条命能不能留，看今晚。」她没有回头，声音比帐外的雨还凉。"
+            ),
+            (
+                f"{protector}站在帐门口，甲片上的雨水还在往下淌。他没有进来，"
+                f"只是隔着三步的距离看完了{hero}给伤兵清创的整个过程。"
+                f"「这不是军医的手法。」他开口，语调沉得像一块铁。"
+                f"「确实不是。」{hero}把手上的血擦在围裙上，「但你需要的是结果。」"
+            ),
+            (
+                f"伤兵的体温在后半夜开始回落。{hero}坐在他身边，每隔一刻钟摸一次他的额头。"
+                f"帐外的马蹄声来了又走，走了又来，但她一次都没有抬头。"
+                f"伤口周围的红色已经退了将近一半——这是她到这个世界以来见到的第一个好消息。"
+            ),
+            (
+                f"天还没亮，{rival}就带着人进了帐。他扫了一眼伤兵的脸色，"
+                f"又扫了一眼{hero}手上那支空了的针管，嘴角往下沉了沉。"
+                f"「你给他打了什么？」他问，语气像在审一个犯人。"
+                f"{hero}站起来，平视着他的眼睛：「能让他活过今天的东西。」"
+            ),
+            (
+                f"消息传得比风还快。上午还没过完，营里已经有人在传"
+                f"——那个来历不明的女人用手里的药救回了一条命。"
+                f"有人信，有人不信，也有人开始盘算怎么从她手里把这药弄过来。"
+                f"{hero}什么也没解释。她把剩下的药收进贴身的布袋里，"
+                f"在袋子外面打了个死结。「下一支，」她在心里说，「是给下一个人的。」"
+            ),
+            (
+                f"午后，{witness or '一个老军医'}找到了{hero}。他没有问药的事，"
+                f"只是站在伤兵身边看了很久，久到{hero}以为他要开口责难。"
+                f"「四十年了，」老人终于开了口，声音像旧木被碾碎，"
+                f"「我没有见过一个人可以在伤口溃烂到这种程度之后还能退烧。」"
+                f"他转过脸来，满是皱纹的眼里有一种比惊讶更沉的东西。"
+                f"「所以我留下来了。」他说，「我要看到结果。」"
+            ),
+            (
+                f"第三天的黄昏，伤兵睁开了眼睛。他第一个看见的人就是{hero}。"
+                f"「别动。」她在他说出任何话之前按住了他的肩膀。"
+                f"「你的命是我跟人用头换来的，别再弄丢了。」"
+                f"帐帘被风掀开一条缝，夕阳的光落在那支空了第二次的针管上。"
+                f"{hero}把那道光看了一眼，然后把它和针管一起收进了布袋。"
+            ),
+            (
+                f"入夜之后，{protector}又来了。这一次他没有站在门外。"
+                f"他走进来，在伤兵的床前站了一会儿，然后转身对{hero}说了一句话，"
+                f"声音压得极低：「明天，会有人来查你。」他顿了一下，"
+                f"甲片在烛火下泛着冷光。「你救回来的每一个人，我都记着。」"
+                f"他说完就走了，留下{hero}一个人在灯影里。"
+                f"她低头看了看自己的手——那双做了无数次急救的手，"
+                f"在这个世界第一次有了分量。"
+            ),
+        ]
+
+        # 取 6–8 段，按集号循环选择
+        count = min(8, max(6, len(para_templates)))
+        selected = [para_templates[i % len(para_templates)] for i in range(count)
+                    if (i + ep_no) % len(para_templates) < len(para_templates)][:count]
+        if len(selected) < 6:
+            selected = para_templates[:count]
+
+        paragraphs = [ProseParagraph(text=t) for t in selected]
+
+        return {
+            "title": title,
+            "paragraphs": [p.model_dump() for p in paragraphs],
+        }
 
     # ------------------------------------------------------------------ 剧本
     # ---- Phase 1.5: Episode Plan (轻量规划) ----

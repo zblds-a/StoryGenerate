@@ -468,3 +468,28 @@ class LineRewrites(BaseModel):
 
     lines: list[Line] = Field(description="改写后的台词，id 必须与输入一致")
     note: str = ""
+
+
+# ============================================================================
+# Phase 6: Prose Story 输出 Schema
+# ============================================================================
+class ProseParagraph(BaseModel):
+    """散文故事段落。"""
+
+    text: str = Field(description="段落文本")
+
+
+class ProseStory(BaseModel):
+    """散文故事输出。
+
+    这是 prose_story 内容形式的最终产出。
+    plain_text 由 paragraphs 自动计算，保证段落与纯文本永远一致。
+    """
+
+    title: str = Field(description="故事标题")
+    paragraphs: list[ProseParagraph] = Field(default_factory=list, description="故事段落数组")
+
+    @property
+    def plain_text(self) -> str:
+        """所有段落用 \\n\\n 拼接的纯文本。"""
+        return "\n\n".join(p.text for p in self.paragraphs)

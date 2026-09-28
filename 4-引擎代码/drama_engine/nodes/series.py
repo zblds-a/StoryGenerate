@@ -57,6 +57,7 @@ def dispatch_episodes(state: DramaState, config: RunnableConfig) -> list[Send]:
         payloads.append({
             "brief": brief,
             "workspace": state.get("workspace", ""),
+            "content_form": state.get("content_form", {}),  # Phase 6
             "gadget": state["gadget"],
             "cast": cast,
             # 冻结后的底座：子图只读，并以"本集切片"的形式注入提示词
@@ -82,6 +83,21 @@ def gen_episode(state: dict, config: RunnableConfig) -> dict[str, Any]:
     集数很多、单集成本很高时，可以把这里换成把子图注册为节点 + 显式 reducer。
     """
     result = _episode_graph().invoke(state, config)
+
+    # Phase 6: 检测 prose_story 输出
+    prose_output = result.get("prose")
+    if prose_output is not None:
+        # prose_story 路径：返回 prose 数据
+        calls = int((result.get("budgets") or {}).get("llm_calls", 1))
+        return_data: dict[str, Any] = {
+            "trace": list(result.get("trace") or []),
+            "budgets": {"llm_calls": calls},
+            "prose": prose_output,  # Phase 6: prose 输出
+        }
+        # prose 路径不产生 episode/findings/outstanding_episodes/unclaimed
+        return return_data
+
+    # 音频路径：提取 episode
     episode: Episode = result["episode"]
 
     # 子图自己报上来的调用数（生成 + 每轮校验的语义裁判 + 每轮修复），

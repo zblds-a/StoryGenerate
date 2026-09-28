@@ -582,3 +582,85 @@ def mode_prompt_context(mode_context, resolved_template: dict | None = None) -> 
 
     # 未知 mode → 空
     return ""
+
+
+# ============================================================================
+# Phase 6: content_form_prompt_context — Content Form 指令片段
+# ============================================================================
+def content_form_prompt_context(form_profile: dict) -> str:
+    """根据 Content Form 返回表达方式指令。
+
+    audio_drama → 对白为主、旁白简洁、音效合理
+    prose_story → 连续叙事、自然段落、场景描写、对白嵌入
+
+    这个函数返回值追加到 Writer System Prompt 末尾。
+    """
+    key = form_profile.get("key", "")
+
+    if key == "prose_story":
+        return (
+            "你是一名短篇故事作者。\n"
+            "请根据以下故事计划，写出一篇完整的散文故事。\n\n"
+            "核心要求：\n"
+            "- 使用连续叙述段落，不要角色名: 标签格式\n"
+            "- 对白自然嵌入段落中（如：「你真的决定走了？」林然问。）\n"
+            "- 场景要有具体描写：环境、动作、微表情\n"
+            "- 段落之间自然衔接，不要硬切\n"
+            "- 保持稳定的叙事视角\n"
+            "- 故事节奏自然推进，不要跳跃\n\n"
+            "格式要求：\n"
+            "- 输出 ProseStory JSON\n"
+            "- paragraphs 数组：每个元素是一个完整段落（字符串）\n"
+            "- 不要出现 SFX / NARRATOR / 音效 等广播剧标签\n"
+            "- 对白不要用「角色名：台词」格式\n"
+        )
+
+    if key == "audio_drama":
+        return (
+            "你是一名广播剧台词写手。\n"
+            "你唯一的表达工具是：**人声、音效、音乐、静音**。\n"
+            "对白清晰，旁白简洁，音效合理。\n"
+        )
+
+    return ""
+
+
+# ============================================================================
+# Phase 6: prose_writer — 散文故事 Writer Prompt
+# ============================================================================
+def prose_writer(
+    lib: "RuleLibrary",
+    plan: dict,
+    cast: list[dict],
+    behavior: dict | None,
+    ledger: dict | None,
+    target_chars: int = 2000,
+    continuity_text: str = "",
+) -> tuple[str, str]:
+    """BALANCED 模型：基于 Story Plan 输出完整散文故事。"""
+    import json
+
+    plan_json = json.dumps(plan, ensure_ascii=False, indent=2)
+    cast_names = ", ".join(c.get("name", "?") for c in cast) if cast else "（无）"
+
+    system = (
+        "你是一名短篇故事作者。请根据故事计划写出完整的散文故事。\n"
+    )
+    user = (
+        f"请根据以下故事计划，写出一篇完整的散文故事（目标 {target_chars} 字左右）。\n\n"
+        f"【故事计划】\n{plan_json}\n\n"
+        f"【角色】{cast_names}\n\n"
+        f"【连续性要求】\n{continuity_text or '（无）'}\n\n"
+        f"【输出要求】\n"
+        f"输出一个 ProseStory JSON：\n"
+        f"  title: 故事标题\n"
+        f"  paragraphs: 故事段落数组（每个元素是字符串）\n"
+        f"  plain_text: 所有段落用 \\n\\n 拼接的纯文本\n\n"
+        f"写作要求：\n"
+        f"- 对白自然嵌入叙述（「你真要走？」林然停下脚步。）\n"
+        f"- 场景要有具体的环境、动作描写\n"
+        f"- 视角稳定，节奏自然\n"
+        f"- 不要出现广播剧格式标签（SFX、NARRATOR、音效等）\n"
+        f"- 不要输出大纲或要点列表，必须是完整故事\n"
+    )
+    return system, user

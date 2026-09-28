@@ -25,7 +25,7 @@ from langgraph.graph import END, START, StateGraph
 from .. import prompts
 from ..continuity import continuity_slice, render_continuity
 from ..llm.router import resolve_spec
-from ..schemas import Episode, EpisodePlan, LineRewrites
+from ..schemas import Episode, EpisodePlan, LineRewrites, ProseStory
 from ..state import EpisodeState
 from ..validators import validate_episode
 from ..validators.deterministic import beats_missing_sfx, offending_lines
@@ -149,6 +149,54 @@ def _normalize_line_events(episode: Episode) -> Episode:
             lines.append(line)
         beats.append(beat.model_copy(update={"lines": lines}))
     return episode.model_copy(update={"beats": beats})
+
+
+# ============================================================================
+# 散文故事 Writer（Phase 6: prose_story）
+# ============================================================================
+def prose_writer(state: EpisodeState, config: RunnableConfig) -> dict[str, Any]:
+    """散文故事生成节点。
+
+    content_form == "prose_story" 时走这条路。
+    调用 prompts.prose_writer → runtime.llm.complete_structured(ProseStory)。
+    """
+    lib, runtime = deps(config)
+    entry = state["outline_entry"]
+    attempts = int(state.get("attempt", 0))
+
+    # 连续性切片
+    slice_ = continuity_slice(
+        state.get("ledger"), state.get("behavior"), entry.episode, state["cast"],
+        total_episodes=state["brief"].target_episodes,
+    )
+    continuity_text = render_continuity(slice_)
+
+    cast_dicts = [c.model_dump() for c in state["cast"]]
+    behavior_dict = state["behavior"].model_dump() if state.get("behavior") else None
+    ledger_dict = state["ledger"].model_dump() if state.get("ledger") else None
+
+    # content_form 中的 prose metadata
+    form_profile = state.get("content_form", {})
+    metadata = form_profile.get("metadata", {})
+    target_chars = int(metadata.get("target_chars", 2000))
+
+    # 构建 prose_writer 提示词
+    plan_dict = entry.model_dump()
+    system, user = prompts.prose_writer(
+        lib, plan_dict, cast_dicts, behavior_dict, ledger_dict,
+        target_chars=target_chars, continuity_text=continuity_text,
+    )
+
+    writer_spec = resolve_spec("prose_writer", extra={
+        "json_mode": True, "attempt": attempts,
+    })
+    prose: ProseStory = runtime.llm.complete_structured(writer_spec, system, user, ProseStory)
+
+    return {
+        "prose": prose,
+        "budgets": bump("llm_calls"),
+        "trace": [f"ep{entry.episode}:prose_writer(rev{attempts})"],
+    }
 
 
 # ============================================================================
@@ -365,6 +413,18 @@ def repair_compliance(state: EpisodeState, config: RunnableConfig) -> dict[str, 
 # ============================================================================
 # 路由
 # ============================================================================
+def route_start(state: EpisodeState) -> str:
+    """根据 content_form 决定走散文 Writer 还是音频 Writer。
+
+    prose_story → prose_writer
+    audio_drama / 缺失 → gen_beats（现有路径）
+    """
+    form = state.get("content_form", {})
+    if isinstance(form, dict) and form.get("key") == "prose_story":
+        return "prose_writer"
+    return "gen_beats"
+
+
 def route_after_validate(state: EpisodeState) -> str:
     # 只看本轮结论（current），不看累积日志 —— 否则修复回路无法退出
     errors = [f for f in (state.get("current") or []) if f.severity == "error"]
@@ -405,15 +465,30 @@ def build_episode_graph():
 
     单独编译的意义：这个子图可以脱离主图单独测试（给定一份大纲条目就能跑），
     这对调试价值很大 —— 出问题时能确定是"这一集的生成逻辑"还是"整条流水线的编排"。
+
+    Phase 6: content_form 路由 ——
+      prose_story → prose_writer → END
+      audio_drama / 缺失 → gen_beats → validate_ep → (repair → validate_ep)* → END
     """
     graph = StateGraph(EpisodeState)
     graph.add_node("gen_beats", gen_beats)
+    graph.add_node("prose_writer", prose_writer)  # Phase 6
     graph.add_node("validate_ep", validate_ep)
     graph.add_node("repair_audio", repair_audio)
     graph.add_node("repair_beat", repair_beat)
     graph.add_node("repair_compliance", repair_compliance)
 
-    graph.add_edge(START, "gen_beats")
+    # Phase 6: 根据 content_form 路由 START
+    graph.add_conditional_edges(
+        START,
+        route_start,
+        {
+            "prose_writer": "prose_writer",
+            "gen_beats": "gen_beats",
+        },
+    )
+    graph.add_edge("prose_writer", END)  # 散文路径不走校验回路
+
     graph.add_edge("gen_beats", "validate_ep")
     graph.add_conditional_edges(
         "validate_ep",
