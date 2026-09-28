@@ -187,6 +187,7 @@ def run_pipeline(
     story_mode: str | None = None,
     story_template_id: str | None = None,       # Phase 5
     story_template_version: int | None = None,   # Phase 5
+    content_form: str | None = None,              # Phase 6
     characters: list | None = None,
     graph=None,
     repos=None,   # Phase 4: optional persistence Repositories
@@ -221,6 +222,10 @@ def run_pipeline(
         mode_key=mode_ctx.key,
     )
 
+    # Phase 6: Content Form resolution
+    from .content_forms.resolver import resolve_content_form
+    content_form_profile = resolve_content_form(content_form)
+
     # Phase 4: hydrate character_id → DB CharacterTemplate (if repos available)
     char_inputs: list[CharacterInput] = []
     if characters and repos:
@@ -249,6 +254,7 @@ def run_pipeline(
         ),
         "mode_context": mode_ctx,
         "resolved_template": resolved_template.model_dump() if resolved_template else None,  # Phase 5
+        "content_form": content_form_profile.model_dump(),  # Phase 6
         "character_inputs": char_inputs,
         "resolved_characters": resolved,
         "workspace": workspace,

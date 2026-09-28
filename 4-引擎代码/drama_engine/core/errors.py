@@ -38,6 +38,9 @@ class EngineErrorCode(str, Enum):
     STORY_TEMPLATE_MODE_INCOMPATIBLE = "STORY_TEMPLATE_MODE_INCOMPATIBLE"
     STORY_TEMPLATE_INVALID = "STORY_TEMPLATE_INVALID"
 
+    # Phase 6: Content Form
+    CONTENT_FORM_NOT_SUPPORTED = "CONTENT_FORM_NOT_SUPPORTED"
+
 
 class StoryEngineError(Exception):
     """引擎所有错误的基类。"""
