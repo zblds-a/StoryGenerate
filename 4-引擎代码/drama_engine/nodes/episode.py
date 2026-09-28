@@ -25,7 +25,7 @@ from langgraph.graph import END, START, StateGraph
 from .. import prompts
 from ..continuity import continuity_slice, render_continuity
 from ..llm.router import resolve_spec
-from ..schemas import Episode, EpisodePlan, LineRewrites, ProseStory
+from ..schemas import Episode, EpisodePlan, Finding, LineRewrites, ProseStory
 from ..state import EpisodeState
 from ..validators import validate_episode
 from ..validators.deterministic import beats_missing_sfx, offending_lines
@@ -196,6 +196,55 @@ def prose_writer(state: EpisodeState, config: RunnableConfig) -> dict[str, Any]:
         "prose": prose,
         "budgets": bump("llm_calls"),
         "trace": [f"ep{entry.episode}:prose_writer(rev{attempts})"],
+    }
+
+
+# ============================================================================
+# 散文故事校验（Phase 6.1: runtime prose validator）
+# ============================================================================
+def prose_validate(state: EpisodeState, config: RunnableConfig) -> dict[str, Any]:
+    """Prose 结构校验 + OutputGuard。
+
+    Phase 6.1: 真实 runtime 执行，不是只存在函数。
+    0 LLM 调用 —— 纯代码校验。
+    """
+    from ..content_forms.validators import validate_prose_structure, prose_output_guard
+
+    prose = state.get("prose")
+    if prose is None:
+        return {
+            "findings": [],
+            "current": [],
+            "trace": ["prose_validate:no_prose_output"],
+        }
+
+    # Step 1: 结构校验
+    result = validate_prose_structure(prose)
+    findings = []
+    for f in result.get("findings", []):
+        from ..schemas import Finding
+        findings.append(Finding(
+            rule_id=f["rule_id"],
+            severity=f["severity"],
+            message=f["message"],
+            route="prose_structure",
+        ))
+
+    # Step 2: OutputGuard
+    guard = prose_output_guard(prose)
+    if not guard["passed"]:
+        findings.append(Finding(
+            rule_id="PROSE_GUARD",
+            severity="error",
+            message=guard["reason"],
+            route="prose_structure",
+        ))
+
+    return {
+        "findings": findings,
+        "current": findings,
+        "budgets": {"llm_calls": 0},
+        "trace": [f"prose_validate:passed={result['passed']} errors={len(findings)}"],
     }
 
 
@@ -414,15 +463,24 @@ def repair_compliance(state: EpisodeState, config: RunnableConfig) -> dict[str, 
 # 路由
 # ============================================================================
 def route_start(state: EpisodeState) -> str:
-    """根据 content_form 决定走散文 Writer 还是音频 Writer。
+    """Phase 6.1: Content Form 不再在 START 处分叉。
 
-    prose_story → prose_writer
-    audio_drama / 缺失 → gen_beats（现有路径）
+    **所有** content form 都先经过 gen_beats（共享 Story Planning）。
+    Content Form 分叉移至 gen_beats 之后的 route_content_form。
+    """
+    return "gen_beats"
+
+
+def route_content_form(state: EpisodeState) -> str:
+    """Story Planning (gen_beats) 完成后的 Content Form 分叉。
+
+    prose_story → prose_writer → prose_validate → END
+    audio_drama / 缺失 → validate_ep → (repair loop) → END
     """
     form = state.get("content_form", {})
     if isinstance(form, dict) and form.get("key") == "prose_story":
         return "prose_writer"
-    return "gen_beats"
+    return "validate_ep"
 
 
 def route_after_validate(state: EpisodeState) -> str:
@@ -466,30 +524,38 @@ def build_episode_graph():
     单独编译的意义：这个子图可以脱离主图单独测试（给定一份大纲条目就能跑），
     这对调试价值很大 —— 出问题时能确定是"这一集的生成逻辑"还是"整条流水线的编排"。
 
-    Phase 6: content_form 路由 ——
-      prose_story → prose_writer → END
-      audio_drama / 缺失 → gen_beats → validate_ep → (repair → validate_ep)* → END
+    Phase 6.1: Content Form 分叉位于 Story Planning 之后 ——
+      START → gen_beats（共享 Planning）
+        ├─ prose_story  → prose_writer → prose_validate → END
+        └─ audio_drama  → validate_ep → (repair → validate_ep)* → END
     """
     graph = StateGraph(EpisodeState)
     graph.add_node("gen_beats", gen_beats)
-    graph.add_node("prose_writer", prose_writer)  # Phase 6
+    graph.add_node("prose_writer", prose_writer)       # Phase 6
+    graph.add_node("prose_validate", prose_validate)   # Phase 6.1
     graph.add_node("validate_ep", validate_ep)
     graph.add_node("repair_audio", repair_audio)
     graph.add_node("repair_beat", repair_beat)
     graph.add_node("repair_compliance", repair_compliance)
 
-    # Phase 6: 根据 content_form 路由 START
+    # Phase 6.1: 所有 content form 都从 gen_beats（共享 Planning）开始
+    graph.add_edge(START, "gen_beats")
+
+    # 在 Planning 后按 Content Form 分叉
     graph.add_conditional_edges(
-        START,
-        route_start,
+        "gen_beats",
+        route_content_form,
         {
             "prose_writer": "prose_writer",
-            "gen_beats": "gen_beats",
+            "validate_ep": "validate_ep",
         },
     )
-    graph.add_edge("prose_writer", END)  # 散文路径不走校验回路
 
-    graph.add_edge("gen_beats", "validate_ep")
+    # Prose 路径：writer → validator → END
+    graph.add_edge("prose_writer", "prose_validate")
+    graph.add_edge("prose_validate", END)
+
+    # Audio 路径：validator → (repair loop) → END
     graph.add_conditional_edges(
         "validate_ep",
         route_after_validate,

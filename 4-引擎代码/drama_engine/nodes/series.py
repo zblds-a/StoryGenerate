@@ -81,21 +81,27 @@ def gen_episode(state: dict, config: RunnableConfig) -> dict[str, Any]:
     换取的是**输出字段的完全可控** —— 子图的内部状态（attempt、局部 findings）
     不会污染主状态。代价是子图不参与主图的 checkpoint，长任务恢复时需要按集粒度重跑。
     集数很多、单集成本很高时，可以把这里换成把子图注册为节点 + 显式 reducer。
+
+    Phase 6.1: gen_beats（共享 Planning）之后按 Content Form 分叉。
+    prose_story → prose_writer → prose_validate → END
+    audio_drama → validate_ep → repair_loop → END
     """
     result = _episode_graph().invoke(state, config)
 
-    # Phase 6: 检测 prose_story 输出
+    # Phase 6.1: 检测 prose_story 输出
     prose_output = result.get("prose")
     if prose_output is not None:
-        # prose_story 路径：返回 prose 数据
+        # prose_story 路径：优先返回 prose 数据
+        # gen_beats 仍会产生 audio episode（shared planning 的副作用），
+        # 但 prose 路径以 ProseStory 为最终产出
         calls = int((result.get("budgets") or {}).get("llm_calls", 1))
-        return_data: dict[str, Any] = {
+        return {
             "trace": list(result.get("trace") or []),
             "budgets": {"llm_calls": calls},
-            "prose": prose_output,  # Phase 6: prose 输出
+            "prose": prose_output,       # Phase 6: ProseStory 产出
+            "findings": list(result.get("findings") or []),
+            "current": list(result.get("current") or []),
         }
-        # prose 路径不产生 episode/findings/outstanding_episodes/unclaimed
-        return return_data
 
     # 音频路径：提取 episode
     episode: Episode = result["episode"]
