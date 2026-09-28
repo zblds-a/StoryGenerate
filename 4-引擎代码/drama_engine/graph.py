@@ -270,6 +270,21 @@ def run_pipeline(
     config["configurable"]["thread_id"] = thread_id
     result = app.invoke(initial, config)
 
+    # Phase 6.4: 从 episode_results 投影 prose 兼容字段
+    ep_results = result.get("episode_results") or []
+    if ep_results:
+        first = ep_results[0]
+        # 如果 transport 是 dict，转换为 model
+        if isinstance(first, dict):
+            from .schemas import EpisodeRenderResult
+            first = EpisodeRenderResult.model_validate(first)
+        if first.prose_story is not None:
+            result["prose"] = first.prose_story
+        if first.content_form == "audio_drama" and first.audio_episode is not None:
+            # 确保 episodes 字段也正确
+            if not result.get("episodes"):
+                result["episodes"] = [ep_results[0].audio_episode if hasattr(ep_results[0], "audio_episode") else None]
+
     # Phase 4C: History Persistence（非阻塞；失败不丢故事）
     if repos:
         _persist_run_result(result, repos, idea, thread_id, story_mode, runtime)

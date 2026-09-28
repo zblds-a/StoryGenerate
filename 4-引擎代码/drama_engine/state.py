@@ -165,3 +165,5 @@ class EpisodeState(TypedDict, total=False):
     # 主图看不见子图内部的模型调用，只按"1 次生成"记账会严重低估成本。
     budgets: Annotated[dict[str, int], sum_dict]
     trace: Annotated[list[str], operator.add]
+    # Phase 6: 散文故事产出（prose_story content form 写入；audio 路径忽略）
+    prose: Any

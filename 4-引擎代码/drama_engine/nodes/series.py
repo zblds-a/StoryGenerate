@@ -65,6 +65,7 @@ def dispatch_episodes(state: DramaState, config: RunnableConfig) -> list[Send]:
             "ledger": ledger,
             "outline_entry": entry,
             "claims": claims,
+            "prose": None,       # Phase 6.4: 预初始化确保子图 invoke 返回 prose 字段
             "attempt": 0,
             "max_attempts": 2,
             "findings": [],
