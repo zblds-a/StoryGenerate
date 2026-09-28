@@ -263,6 +263,7 @@ def run_pipeline(
         "unclaimed": [],
         "trace": [],
         "budgets": {},
+        "prose": None,  # Phase 6.2: 预初始化，确保 Send fan-in 接受 prose 字段
     }
     config = {"configurable": {"lib": lib, "runtime": runtime}, "recursion_limit": 120,
               "configurable_thread": thread_id}

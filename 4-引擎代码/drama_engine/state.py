@@ -64,6 +64,10 @@ class DramaState(TypedDict, total=False):
     mode_context: ModeContext
     character_inputs: list[CharacterInput]
     resolved_characters: list[ResolvedCharacter]
+    # Phase 5: Story Template
+    resolved_template: dict | None
+    # Phase 6: Content Form profile
+    content_form: dict | None
 
     # ---- 立项底座（冻结后只读）----
     genre_id: str
