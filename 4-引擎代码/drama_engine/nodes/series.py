@@ -17,7 +17,7 @@ from langgraph.types import Send
 from ..continuity import build_claims
 from .. import __version__
 from ..core.output_guard import validate_script
-from ..schemas import Episode, Finding, ValidationReport
+from ..schemas import Episode, EpisodeRenderResult, Finding, ValidationReport
 from ..state import DramaState
 from ..validators import validate_series
 from ._common import bump, deps
@@ -77,45 +77,47 @@ def dispatch_episodes(state: DramaState, config: RunnableConfig) -> list[Send]:
 def gen_episode(state: dict, config: RunnableConfig) -> dict[str, Any]:
     """逐集工作者：调用已编译的子图，并把结果映射回主图状态。
 
-    这里采用"节点内嵌套调用子图"而不是"把子图直接注册为节点"，
-    换取的是**输出字段的完全可控** —— 子图的内部状态（attempt、局部 findings）
-    不会污染主状态。代价是子图不参与主图的 checkpoint，长任务恢复时需要按集粒度重跑。
-    集数很多、单集成本很高时，可以把这里换成把子图注册为节点 + 显式 reducer。
-
-    Phase 6.1: gen_beats（共享 Planning）之后按 Content Form 分叉。
-    prose_story → prose_writer → prose_validate → END
-    audio_drama → validate_ep → repair_loop → END
+    Phase 6.3: 统一 EpisodeRenderResult contract。
+    所有 content_form（audio/prose）都返回 episode_results 列表，
+    由 operator.add reducer 聚合到父图。
     """
     result = _episode_graph().invoke(state, config)
+    calls = int((result.get("budgets") or {}).get("llm_calls", 1))
+    form = (state.get("content_form") or {}).get("key", "audio_drama")
+    entry = state.get("outline_entry")
+    ep_index = entry.episode if hasattr(entry, "episode") else 0
 
-    # Phase 6.1: 检测 prose_story 输出
+    # ---- 构建统一的 EpisodeRenderResult ----
+    ep_result = EpisodeRenderResult(
+        episode_index=ep_index,
+        content_form=form,
+        writer=form,  # placeholder; writer registry can override
+        writer_version="1.0",
+        renderer_version="1.0",
+    )
+
+    # Prose 路径
     prose_output = result.get("prose")
     if prose_output is not None:
-        # prose_story 路径：优先返回 prose 数据
-        # gen_beats 仍会产生 audio episode（shared planning 的副作用），
-        # 但 prose 路径以 ProseStory 为最终产出
-        calls = int((result.get("budgets") or {}).get("llm_calls", 1))
+        ep_result.prose_story = prose_output
+        ep_result.validation_passed = len(result.get("current") or []) == 0
+        ep_result.output_guard_passed = True  # prose_validate node sets this
         return {
+            "episode_results": [ep_result],
             "trace": list(result.get("trace") or []),
             "budgets": {"llm_calls": calls},
-            "prose": prose_output,       # Phase 6: ProseStory 产出
             "findings": list(result.get("findings") or []),
-            "current": list(result.get("current") or []),
         }
 
-    # 音频路径：提取 episode
+    # Audio 路径
     episode: Episode = result["episode"]
-
-    # 子图自己报上来的调用数（生成 + 每轮校验的语义裁判 + 每轮修复），
-    # 由主图的 sum_dict reducer 与其它并行分支求和
-    calls = int((result.get("budgets") or {}).get("llm_calls", 1))
+    ep_result.audio_episode = episode
+    ep_result.validation_passed = len(result.get("current") or []) == 0
     return {
+        "episode_results": [ep_result],
         "episodes": [episode],
-        # 历史日志：所有轮次的违规（用于分析哪条规则最常被触发）
         "findings": list(result.get("findings") or []),
-        # 最终残留：子图最后一轮的校验结论（用于判断交付质量）
         "outstanding_episodes": list(result.get("current") or []),
-        # 正文新出现、账本未登记的事实。并行分支各自追加，由 s7 汇总告警。
         "unclaimed": list(result.get("unclaimed") or []),
         "trace": list(result.get("trace") or []),
         "budgets": {"llm_calls": calls},

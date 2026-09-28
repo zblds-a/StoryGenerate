@@ -493,3 +493,38 @@ class ProseStory(BaseModel):
     def plain_text(self) -> str:
         """所有段落用 \\n\\n 拼接的纯文本。"""
         return "\n\n".join(p.text for p in self.paragraphs)
+
+
+# ============================================================================
+# Phase 6.3: Episode Render Result — fan-out → fan-in 统一契约
+# ============================================================================
+class EpisodeRenderResult(BaseModel):
+    """每个 episode branch 返回的不可歧义的渲染结果。
+
+    Audio 和 Prose 使用同一 Schema：
+      - audio_drama → audio_episode 非 None, prose_story 为 None
+      - prose_story → prose_story 非 None, audio_episode 为 None
+    """
+
+    episode_index: int = Field(description="集号（1-based）")
+    content_form: str = Field(description="audio_drama | prose_story")
+
+    # 共享 Plan（gen_beats 产出）
+    plan: dict | None = Field(default=None, description="EpisodePlan as dict")
+
+    # Content Form 产出（二选一）
+    audio_episode: Episode | None = Field(default=None, description="广播剧 Episode")
+    prose_story: ProseStory | None = Field(default=None, description="散文故事 ProseStory")
+
+    # 校验结果
+    validation_passed: bool = Field(default=False)
+    validation_findings: list = Field(default_factory=list)
+
+    # OutputGuard
+    output_guard_passed: bool = Field(default=False)
+    output_guard_reason: str = Field(default="")
+
+    # 元数据
+    writer: str | None = Field(default=None)
+    writer_version: str | None = Field(default=None)
+    renderer_version: str | None = Field(default=None)

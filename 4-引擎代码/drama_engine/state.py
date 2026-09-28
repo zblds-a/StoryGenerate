@@ -22,6 +22,7 @@ from .schemas import (
     CharacterCard,
     Claim,
     Episode,
+    EpisodeRenderResult,
     FactLedger,
     Finding,
     GadgetSpec,
@@ -83,6 +84,8 @@ class DramaState(TypedDict, total=False):
 
     # ---- 逐集产物（并行写入，按集号归并）----
     episodes: Annotated[list[Episode], merge_episodes]
+    # Phase 6.3: 统一 fan-out → fan-in contract（Audio + Prose）
+    episode_results: Annotated[list[EpisodeRenderResult], operator.add]
 
     # ---- 校验与修复 ----
     findings: Annotated[list[Finding], operator.add]
