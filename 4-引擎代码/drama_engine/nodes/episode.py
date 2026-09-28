@@ -244,7 +244,8 @@ def prose_validate(state: EpisodeState, config: RunnableConfig) -> dict[str, Any
         "findings": findings,
         "current": findings,
         "budgets": {"llm_calls": 0},
-        "trace": [f"prose_validate:passed={result['passed']} errors={len(findings)}"],
+        "output_guard_passed": guard["passed"],
+        "trace": [f"prose_validate:passed={result['passed']} guard={guard['passed']} errors={len(findings)}"],
     }
 
 

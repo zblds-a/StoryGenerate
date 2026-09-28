@@ -331,6 +331,7 @@ def _persist_run_result(
             story_id=story_id, request_id=request_id,
             job_id=job.job_id, story_mode=story_mode or "",
             title="", summary=report.get("genre_id", ""),
+            content_json=_build_content_json(result),
             output_json=report,
             resolved_character_snapshot=[
                 {"name": c.get("name", ""), "role_id": c.get("role_id", ""),
@@ -338,6 +339,11 @@ def _persist_run_result(
                 for c in cast
             ],
             engine_version=report.get("engine_version", ""),
+            template_ids=[
+                (result.get("resolved_template") or {}).get("template_id", "")
+            ] if result.get("resolved_template") else [],
+            content_form=(result.get("content_form") or {}).get("key", ""),
+            renderer_version=(result.get("content_form") or {}).get("version", ""),
         )
         repos.story_record.create(record)
 
@@ -369,6 +375,37 @@ def _persist_run_result(
 
     except Exception as exc:
         _log.warning("PERSISTENCE_WRITE_FAILED: story=%s error=%s", story_id, exc)
+
+
+def _build_content_json(result: dict) -> dict[str, Any]:
+    """Phase 6.5: 从 pipeline result 构建 content_json 持久化 payload。"""
+    payload: dict[str, Any] = {}
+
+    # ---- episode_results (canonical) ----
+    ep_results = result.get("episode_results") or []
+    if ep_results:
+        serialized = []
+        for er in ep_results:
+            if hasattr(er, "model_dump"):
+                serialized.append(er.model_dump(mode="json"))
+            else:
+                serialized.append(er)
+        payload["episode_results"] = serialized
+
+    # ---- prose payload (convenience; single-episode) ----
+    prose = result.get("prose")
+    if prose is not None and hasattr(prose, "model_dump"):
+        payload["prose"] = prose.model_dump(mode="json")
+
+    # ---- content_form metadata ----
+    payload["content_form"] = (result.get("content_form") or {}).get("key", "")
+
+    # ---- template ----
+    tpl = result.get("resolved_template") or {}
+    payload["template_id"] = tpl.get("template_id", "")
+    payload["template_version"] = tpl.get("version", "")
+
+    return payload
 
 
 # ---- Phase 4 helpers ---- #

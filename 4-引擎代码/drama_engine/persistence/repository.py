@@ -105,6 +105,8 @@ class StoryRecord:
     model_mapping_snapshot: dict[str, Any] = field(default_factory=dict)
     rule_versions: dict[str, Any] = field(default_factory=dict)
     template_ids: list[str] = field(default_factory=list)
+    content_form: str = ""          # Phase 6: audio_drama | prose_story
+    renderer_version: str = ""      # Phase 6: content form renderer version
     created_at: datetime | None = None
 
 

@@ -102,7 +102,7 @@ def gen_episode(state: dict, config: RunnableConfig) -> dict[str, Any]:
     if prose_output is not None:
         ep_result.prose_story = prose_output
         ep_result.validation_passed = len(result.get("current") or []) == 0
-        ep_result.output_guard_passed = True  # prose_validate node sets this
+        ep_result.output_guard_passed = result.get("output_guard_passed", False)
         return {
             "episode_results": [ep_result],
             "trace": list(result.get("trace") or []),

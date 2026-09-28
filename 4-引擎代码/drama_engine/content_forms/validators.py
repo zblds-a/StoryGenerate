@@ -108,6 +108,13 @@ def prose_output_guard(prose: ProseStory | None, target_chars: int = 2000) -> di
     if not prose.paragraphs:
         return {"passed": False, "reason": "No paragraphs"}
 
+    # Phase 6.5: 音频标签污染检测（与 P06 对齐）
+    full_text = prose.plain_text
+    audio_markers = ["SFX:", "NARRATOR:", "【音效】", "【旁白】", "（音效）", "（旁白）"]
+    for marker in audio_markers:
+        if marker in full_text:
+            return {"passed": False, "reason": f"Audio label contamination: {marker}"}
+
     return {"passed": True, "reason": ""}
 
 

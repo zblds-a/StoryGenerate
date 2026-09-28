@@ -159,6 +159,8 @@ class EpisodeState(TypedDict, total=False):
     # 修复是否卡住：连续两轮违规指纹一致即判定无效修复，立即放行交人工
     last_sig: str
     stuck: bool
+    # Phase 6.5: OutputGuard 结果（prose_validate 写入；gen_episode 读取）
+    output_guard_passed: bool
     # 本集正文中新出现、账本未登记的事实（供 s7 汇总告警）
     unclaimed: Annotated[list[str], operator.add]
     # 子图内部的调用计数。必须由子图自己报上来：
