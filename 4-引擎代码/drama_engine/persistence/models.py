@@ -121,6 +121,10 @@ class StoryJobModel(Base):
     job_id = Column(String(64), nullable=False, index=True)
     request_id = Column(String(64), nullable=False, unique=True)
 
+    # Phase 7: long-form linking
+    run_id = Column(String(64), nullable=True, index=True)
+    story_id = Column(String(64), nullable=True, index=True)
+
     status = Column(String(32), default="pending")
     current_stage = Column(String(64), nullable=True)
 
@@ -129,11 +133,26 @@ class StoryJobModel(Base):
     story_mode = Column(String(32), nullable=True)
     mode_version = Column(String(16), nullable=True)
 
+    # Phase 7: additional config
+    template_id = Column(String(64), nullable=True)
+    content_form = Column(String(32), nullable=True)
+    generation_scale = Column(String(32), nullable=True)
+
+    # Phase 7: progress tracking
+    progress_pct = Column(Integer, default=0)
+    current_chapter = Column(Integer, default=0)
+    total_chapters = Column(Integer, default=0)
+    message = Column(Text, nullable=True)
+
+    # Phase 7: cancellation
+    cancel_requested = Column(Integer, default=0)  # 0/1 boolean
+
     error_code = Column(String(64), nullable=True)
     error_message = Column(Text, nullable=True)
 
     created_at = Column(DateTime(timezone=True), default=_utcnow)
     started_at = Column(DateTime(timezone=True), nullable=True)
+    updated_at = Column(DateTime(timezone=True), nullable=True)
     finished_at = Column(DateTime(timezone=True), nullable=True)
     deadline_at = Column(DateTime(timezone=True), nullable=True)
 
@@ -215,3 +234,34 @@ class QualityResultModel(Base):
     details_json = Column(JSONB().with_variant(JSON, "sqlite"), default=dict)
 
     created_at = Column(DateTime(timezone=True), default=_utcnow)
+
+
+# ============================================================================
+# generation_checkpoints  (Phase 7)
+# ============================================================================
+class GenerationCheckpointModel(Base):
+    __tablename__ = "generation_checkpoints"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    run_id = Column(String(64), nullable=False, index=True)
+    story_id = Column(String(64), nullable=True)
+
+    generation_scale = Column(String(32), default="long_form")
+    stage = Column(String(64), nullable=False)
+
+    last_completed_chapter = Column(Integer, default=0)
+    next_chapter = Column(Integer, default=1)
+
+    # JSONB: 完整的可恢复状态 (plan, context, etc.)
+    state_json = Column(JSONB().with_variant(JSON, "sqlite"), default=dict)
+
+    config_fingerprint = Column(String(64), nullable=True)
+    status = Column(String(32), default="resumable")
+    version = Column(String(16), default="1.0")
+
+    created_at = Column(DateTime(timezone=True), default=_utcnow)
+    updated_at = Column(DateTime(timezone=True), default=_utcnow, onupdate=_utcnow)
+
+    __table_args__ = (
+        UniqueConstraint("run_id", "stage", name="uq_gcp_runid_stage"),
+    )

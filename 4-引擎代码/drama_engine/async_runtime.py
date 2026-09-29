@@ -288,12 +288,14 @@ class LongFormWorker:
         lib: Any = None,
         runtime_factory: Callable[[], Any] | None = None,
         workspace: str = "",
+        story_record_repo: Any = None,
     ):
         self.job_repo = job_repo
         self.checkpoint_repo = checkpoint_repo
         self.lib = lib
         self._runtime_factory = runtime_factory
         self.workspace = workspace
+        self.story_record_repo = story_record_repo
 
     def execute_job(self, job: LongFormJobRecord) -> None:
         """Execute a single job synchronously (called by run_job_async)."""
@@ -353,7 +355,40 @@ class LongFormWorker:
                 message="Assembling final result",
             )
 
-            # Complete
+            # Persist StoryRecord BEFORE marking job COMPLETED
+            story_id = result.get("story_id", job.story_id)
+            if self.story_record_repo is not None:
+                try:
+                    from drama_engine.persistence.repository import StoryRecord
+                    record = StoryRecord(
+                        story_id=story_id,
+                        request_id=job.request_id,
+                        job_id=job.job_id,
+                        story_mode=job.story_mode,
+                        title="",
+                        content_json={
+                            "generation_scale": "long_form",
+                            "chapter_results": result.get("chapter_results", []),
+                            "plan": result.get("plan", {}),
+                            "content_form": job.content_form,
+                            "template_id": job.template_id,
+                        },
+                        output_json=result,
+                        engine_version="0.2.1",
+                        content_form=job.content_form,
+                        template_ids=[job.template_id] if job.template_id else [],
+                    )
+                    self.story_record_repo.create(record)
+                except Exception:
+                    # StoryRecord persist failed → job FAILED, not COMPLETED
+                    self.job_repo.update(job.job_id,
+                        status=LongFormJobStatus.FAILED,
+                        error_message="StoryRecord persistence failed",
+                        completed_at=time.time(),
+                    )
+                    return
+
+            # Complete — only after StoryRecord persisted
             self.job_repo.update(job.job_id,
                 status=LongFormJobStatus.COMPLETED,
                 stage="completed",
@@ -361,7 +396,7 @@ class LongFormWorker:
                 current_chapter=job.total_chapters,
                 completed_at=time.time(),
                 message="Job completed",
-                story_id=result.get("story_id", job.story_id),
+                story_id=story_id,
                 run_id=result.get("run_id", job.run_id),
                 final_result=result,
             )
