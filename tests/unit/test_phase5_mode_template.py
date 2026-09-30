@@ -86,11 +86,13 @@ class TestModeRegistry:
     """Mode Registry: viral_drama + general 注册与发现。"""
 
     def test_both_modes_registered(self):
-        """viral_drama 和 general 都已注册。"""
+        """viral_drama, general, mystery, serialized 都已注册。"""
         modes = available_modes()
         assert "viral_drama" in modes
         assert "general" in modes
-        assert len(modes) == 2
+        assert "mystery" in modes      # Phase 9
+        assert "serialized" in modes   # Phase 9
+        assert len(modes) == 4
 
     def test_get_viral_drama(self):
         mode = get_mode("viral_drama")
