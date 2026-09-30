@@ -41,6 +41,9 @@ class EngineErrorCode(str, Enum):
     # Phase 6: Content Form
     CONTENT_FORM_NOT_SUPPORTED = "CONTENT_FORM_NOT_SUPPORTED"
 
+    # Phase 7: Persistence
+    PERSISTENCE_ERROR = "PERSISTENCE_ERROR"
+
 
 class StoryEngineError(Exception):
     """引擎所有错误的基类。"""

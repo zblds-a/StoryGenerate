@@ -381,8 +381,10 @@ class LongFormWorker:
                     self.story_record_repo.create(record)
                 except Exception:
                     # StoryRecord persist failed → job FAILED, not COMPLETED
+                    from drama_engine.core.errors import EngineErrorCode
                     self.job_repo.update(job.job_id,
                         status=LongFormJobStatus.FAILED,
+                        error_code=EngineErrorCode.PERSISTENCE_ERROR.value,
                         error_message="StoryRecord persistence failed",
                         completed_at=time.time(),
                     )
