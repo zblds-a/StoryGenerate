@@ -117,7 +117,7 @@ class TestContentFormRegistry:
         from drama_engine.forms.registry import get_form_handler
         handler = get_form_handler("standup")
         vs = handler.validators()
-        ok, msg = vs[0].validate("这是一个很好笑的段子 " * 10)
+        ok, msg = vs[0].validate("铺垫开场——这是一个很好笑的段子 " * 10)
         assert ok
 
     def test_standup_validator_empty(self):

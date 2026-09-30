@@ -111,30 +111,103 @@ class NovelValidator:
 
 
 class StorytellingValidator:
+    VALID_SEGMENT_KINDS = {"narration", "dialogue", "quote", "pacing_beat"}
+
     def validate(self, output: str) -> tuple[bool, str]:
         if not output or not output.strip():
             return False, "storytelling: empty output"
         if len(output.strip()) < 30:
             return False, "storytelling: output too short"
+        # Must have a narrator-led structure — cannot be pure multi-speaker drama
+        lines = output.strip().split("\n")
+        has_narration = False
+        for line in lines[:20]:
+            line = line.strip()
+            if not line:
+                continue
+            # Pure audio drama pattern: "角色A：" — check if ALL content lines are speaker-prefixed
+            if line and not line.startswith("角色") and not line.startswith("说"):
+                has_narration = True
+                break
+        if not has_narration:
+            # May still be valid with explicit narrator — check for keyword
+            text_lower = output.lower()
+            if "narrator" not in text_lower and "讲述" not in text_lower:
+                if _all_lines_are_speaker_format(lines):
+                    return False, "storytelling: pure multi-speaker drama — needs narrator-led structure"
         return True, ""
 
 
 class StandupValidator:
+    VALID_SEGMENT_KINDS = {"setup", "punchline", "callback", "transition"}
+
     def validate(self, output: str) -> tuple[bool, str]:
         if not output or not output.strip():
             return False, "standup: empty output"
         if len(output.strip()) < 20:
             return False, "standup: output too short"
+        # Must have at least one setup and one punchline
+        text_lower = output.lower()
+        has_setup = "setup" in text_lower or "铺垫" in output or "开场" in output
+        has_punchline = "punchline" in text_lower or "笑点" in output or "包袱" in output or "段子" in output
+        if not has_setup:
+            return False, "standup: no setup segment found"
+        if not has_punchline:
+            return False, "standup: no punchline segment found"
+        # Setup must appear before punchline
+        setup_pos = _find_first(output, ["setup", "铺垫", "开场"])
+        punch_pos = _find_first(output, ["punchline", "笑点", "包袱", "段子"])
+        if setup_pos >= 0 and punch_pos >= 0 and setup_pos > punch_pos:
+            return False, "standup: setup must appear before punchline"
         return True, ""
 
 
 class CrosstalkValidator:
+    VALID_ROLES = {"dougen", "penggen", "逗哏", "捧哏", "甲", "乙", "p1", "p2"}
+
     def validate(self, output: str) -> tuple[bool, str]:
         if not output or not output.strip():
             return False, "crosstalk: empty output"
         if len(output.strip()) < 20:
             return False, "crosstalk: output too short"
+        # Must have exactly two performer lanes
+        text_lower = output.lower()
+        role_count = sum(1 for r in ["dougen", "penggen", "逗哏", "捧哏", "p1", "p2"] if r.lower() in text_lower)
+        if role_count < 2:
+            return False, "crosstalk: requires two performer roles (dougen/penggen or equivalent)"
+        # Both performers must have content — not just one speaking
+        lines = [l.strip() for l in output.split("\n") if l.strip()]
+        speaker_lines = [l for l in lines if "：" in l or ":" in l]
+        if len(speaker_lines) < 2:
+            return False, "crosstalk: both performers must have dialogue"
         return True, ""
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Helpers
+# ═══════════════════════════════════════════════════════════════════
+def _all_lines_are_speaker_format(lines: list[str]) -> bool:
+    """Check if text is pure multi-speaker drama format (角色A：...)."""
+    content_lines = [l.strip() for l in lines if l.strip() and len(l.strip()) > 3]
+    if len(content_lines) < 3:
+        return False
+    speaker_count = 0
+    for line in content_lines:
+        if "：" in line or ":" in line:
+            prefix = line.split("：")[0].split(":")[0].strip()
+            # Short prefix (≤10 chars) looks like a speaker name
+            if len(prefix) <= 10:
+                speaker_count += 1
+    return speaker_count >= len(content_lines) * 0.6
+
+
+def _find_first(text: str, keywords: list[str]) -> int:
+    """Find first occurrence position of any keyword; -1 if none."""
+    for kw in keywords:
+        pos = text.lower().find(kw.lower())
+        if pos >= 0:
+            return pos
+    return -1
 
 
 # ═══════════════════════════════════════════════════════════════════
