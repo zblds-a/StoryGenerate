@@ -15,6 +15,7 @@ from sqlalchemy import (
     Column,
     DateTime,
     Enum,
+    Float,
     Integer,
     MetaData,
     String,
@@ -264,4 +265,29 @@ class GenerationCheckpointModel(Base):
 
     __table_args__ = (
         UniqueConstraint("run_id", "stage", name="uq_gcp_runid_stage"),
+    )
+
+
+# ============================================================================
+# character_memory  (Phase 8)
+# ============================================================================
+class CharacterMemoryModel(Base):
+    __tablename__ = "character_memory"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    memory_id = Column(String(64), nullable=False, unique=True, index=True)
+    character_id = Column(String(64), nullable=False, index=True)
+
+    memory_type = Column(String(32), nullable=False)
+    content = Column(Text, nullable=False)
+    importance = Column(Float, default=0.0)
+
+    source_story_id = Column(String(64), nullable=False, index=True)
+
+    created_at = Column(DateTime(timezone=True), default=_utcnow)
+    expires_at = Column(DateTime(timezone=True), nullable=True)
+
+    __table_args__ = (
+        UniqueConstraint("character_id", "source_story_id", "memory_type", "content",
+                         name="uq_cm_char_source_type_content"),
     )

@@ -73,16 +73,29 @@ class TestAlembicChain:
         assert len(py_files) >= 1, f"No migration files in {versions_dir}"
 
     def test_alembic_down_revision_is_none(self):
-        """First migration has down_revision=None (correct for single root)."""
+        """First migration has down_revision=None; chain is continuous.
+
+        Phase 8 adds 002 with down_revision=001 — both verified.
+        """
         import importlib.util, os
         versions_dir = os.path.join(os.path.dirname(__file__), "..", "..", "alembic", "versions")
-        py_files = [f for f in os.listdir(versions_dir) if f.endswith(".py")] if os.path.isdir(versions_dir) else []
-        for f in sorted(py_files):
+        py_files = sorted([f for f in os.listdir(versions_dir) if f.endswith(".py")]) if os.path.isdir(versions_dir) else []
+
+        revisions = {}
+        for f in py_files:
             spec = importlib.util.spec_from_file_location("migration", os.path.join(versions_dir, f))
             mod = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(mod)
             dr = getattr(mod, "down_revision", None)
-            assert dr is None, f"{f}: down_revision={dr}, expected None (single root)"
+            rev = getattr(mod, "revision", None)
+            revisions[rev or f] = dr
+
+        # 001 must be root (down_revision=None)
+        assert revisions.get("001") is None, f"001 must be root, got down_revision={revisions.get('001')}"
+
+        # Phase 8: 002 must chain to 001
+        if "002" in revisions:
+            assert revisions["002"] == "001", f"002 must chain to 001, got {revisions['002']}"
 
 
 # ══════════════════════════════════════════════════════════════════════

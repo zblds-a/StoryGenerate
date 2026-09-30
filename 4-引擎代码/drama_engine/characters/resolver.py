@@ -177,3 +177,74 @@ class CharacterResolver:
             "canon_locked": sum(len(s.canon_locked_fields) for s in snapshots),
             "runtime_overrides": sum(len(s.runtime_override_fields) for s in snapshots),
         }
+
+    # ------------------------------------------------------------------
+    # Phase 8: Memory Integration  (non-breaking enrichment)
+    # ------------------------------------------------------------------
+    def enrich_with_memory(
+        self,
+        snapshots: list[ResolvedCharacter],
+        memory_service: Any = None,
+        story_query: str = "",
+    ) -> list[ResolvedCharacter]:
+        """Enrich resolved characters with selected Character Memory.
+
+        Only modifies Runtime fields that are NOT already set by user
+        or runtime_defaults. Selected memories are stored separately.
+
+        When memory_service is None or disabled, returns snapshots unchanged.
+        """
+        if memory_service is None or not getattr(memory_service, "enabled", False):
+            return snapshots
+
+        enriched: list[ResolvedCharacter] = []
+        for s in snapshots:
+            if not s.character_id:
+                enriched.append(s)
+                continue
+
+            # Select relevant memories
+            selected = memory_service.select_for_character(
+                s.character_id, story_query,
+            )
+            if not selected:
+                enriched.append(s)
+                continue
+
+            # Canon guard
+            safe, conflicts = memory_service.filter_by_canon(s.canon, selected)
+
+            # Only fill Runtime fields that are not already set
+            runtime = s.runtime
+            for sm in safe:
+                self._apply_memory_to_runtime(runtime, sm)
+
+            # Store selected memory IDs for traceability
+            s.selected_memories = [sm.memory_id for sm in safe]  # type: ignore[attr-defined]
+            s.memory_contexts = [sm.summary() for sm in safe]  # type: ignore[attr-defined]
+            enriched.append(s)
+
+        return enriched
+
+    def _apply_memory_to_runtime(
+        self, runtime: Any, sm: Any,
+    ) -> None:
+        """Apply a selected memory to Runtime if the field is empty.
+
+        Priority: User > runtime_defaults > Memory > Director.
+        """
+        mapping = {
+            "goal_outcome": "goal",
+            "preference": "stance",
+            "belief_or_attitude": "stance",
+            "relationship": "motivation",
+            "experience": None,  # experience is contextual, not direct field
+        }
+
+        target_field = mapping.get(sm.memory_type)
+        if target_field is None:
+            return
+
+        current = getattr(runtime, target_field, None)
+        if current is None or (isinstance(current, str) and not current.strip()):
+            setattr(runtime, target_field, sm.content)

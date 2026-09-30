@@ -57,3 +57,20 @@ def create_story_record_repo(backend: str = "memory", session: Any = None) -> An
     else:
         from .memory_repo import InMemoryRecordRepo
         return InMemoryRecordRepo()
+
+
+def create_character_memory_repo(backend: str = "memory", session: Any = None) -> Any:
+    """Create a CharacterMemory repository.
+
+    Args:
+        backend: "memory" | "postgres"
+        session: SQLAlchemy Session (required for postgres)
+    """
+    if backend == "postgres":
+        from .memory_repo import PostgresCharacterMemoryRepository
+        if session is None:
+            raise ValueError("session required for postgres backend")
+        return PostgresCharacterMemoryRepository(session)
+    else:
+        from .memory_repo import InMemoryCharacterMemoryRepository
+        return InMemoryCharacterMemoryRepository()

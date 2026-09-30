@@ -180,6 +180,10 @@ class ResolvedCharacter(BaseModel):
     canon_locked_fields: list[str] = Field(default_factory=list)
     runtime_override_fields: list[str] = Field(default_factory=list)
 
+    # Phase 8: Selected Character Memory
+    selected_memories: list[str] = Field(default_factory=list, description="Selected memory IDs")
+    memory_contexts: list[str] = Field(default_factory=list, description="Memory summaries for Prompt")
+
     # 如果 Canon overlay 发生冲突
     canon_conflicts: list[dict] = Field(default_factory=list)
 
