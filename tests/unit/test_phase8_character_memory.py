@@ -238,7 +238,12 @@ class TestMemorySelector:
         assert result[0].memory_id == "m1"
 
     def test_chinese_keyword(self):
-        """中文 keyword relevance must work."""
+        """中文 keyword relevance: CJK 2-gram lexical overlap.
+
+        query  "我想要去旧书店看看" → tokens: 我想,想要,要去,去旧,旧书,书店,店看,看看
+        m1     "在旧书店发现了一本古籍" → tokens: 在旧,旧书,书店,店发,... → overlap "旧书","书店" (2/8)
+        m2     "学会了驾驶直升机" → zero overlap (0/8)
+        """
         sel = MemorySelector()
         mems = [
             {"memory_id": "m1", "character_id": "c1", "content": "在旧书店发现了一本古籍",
@@ -248,6 +253,20 @@ class TestMemorySelector:
         ]
         result = sel.select("c1", mems, "我想要去旧书店看看")
         assert result[0].memory_id == "m1"
+        # keyword_score for m1 > 0 (real overlap), m2 == 0 (no overlap)
+        assert result[0].keyword_score > 0
+        assert result[1].keyword_score == 0.0
+
+    def test_chinese_keyword_no_semantic_synonym(self):
+        """No semantic mapping: '古籍' alone vs '旧书店' has no CJK bigram overlap."""
+        sel = MemorySelector()
+        mems = [
+            {"memory_id": "m1", "character_id": "c1", "content": "古籍",
+             "importance": 0.5, "source_story_id": "s1", "created_at": _utcnow().isoformat()},
+        ]
+        result = sel.select("c1", mems, "旧书店")
+        # "古籍" → bigram "古籍"; "旧书店" → bigrams "旧书","书店" → zero overlap
+        assert result[0].keyword_score == 0.0
 
     def test_expired_excluded(self):
         sel = MemorySelector()
@@ -290,8 +309,16 @@ class TestMemorySelector:
         ]
         result = sel.select("c1", mems, "无关")
         assert len(result) == 2
+        assert len(result) <= cfg.memory_top_n
 
     def test_char_budget(self):
+        """char budget enforces max_chars — only first memory fits.
+
+        Each memory content = 15 chars. max_chars = 20.
+        First memory (15) ≤ 20 → selected.
+        Second memory = 15 + 15 = 30 > 20 → break.
+        Only 1 selected.
+        """
         cfg = MemorySelectorConfig(memory_top_n=10, memory_max_chars=20)
         sel = MemorySelector(cfg)
         mems = [
@@ -301,9 +328,87 @@ class TestMemorySelector:
              "created_at": _utcnow().isoformat()}
             for i in range(5)
         ]
-        # Each memory is 15 chars, budget = 20 → only 1 fits
         result = sel.select("c1", mems, "无关")
         assert len(result) == 1
+        actual_chars = sum(len(sm.content) for sm in result)
+        assert actual_chars <= cfg.memory_max_chars
+        assert actual_chars == 15  # exactly one memory of 15 chars
+
+    def test_top_n_and_budget_combined(self):
+        """Both top_n=3 and max_chars=30 constrain: 3 memories of 10 chars each.
+
+        With 5 available memories of 10 chars each:
+        top_n=3 → at most 3.
+        char budget=30 → 3 * 10 = 30 ≤ 30 → exactly 3 selected.
+        """
+        cfg = MemorySelectorConfig(memory_top_n=3, memory_max_chars=30)
+        sel = MemorySelector(cfg)
+        mems = [
+            {"memory_id": f"m{i}", "character_id": "c1",
+             "content": "A" * 10,
+             "importance": 0.5, "source_story_id": f"s{i}",
+             "created_at": _utcnow().isoformat()}
+            for i in range(5)
+        ]
+        result = sel.select("c1", mems, "无关")
+        assert len(result) == 3  # capped by top_n
+        actual_chars = sum(len(sm.content) for sm in result)
+        assert actual_chars == 30  # exactly at budget
+        assert actual_chars <= cfg.memory_max_chars
+
+    def test_combined_budget_tight(self):
+        """top_n=5 but char budget only fits 2 memories of 12 chars each."""
+        cfg = MemorySelectorConfig(memory_top_n=5, memory_max_chars=25)
+        sel = MemorySelector(cfg)
+        mems = [
+            {"memory_id": f"m{i}", "character_id": "c1",
+             "content": "B" * 12,
+             "importance": 0.5, "source_story_id": f"s{i}",
+             "created_at": _utcnow().isoformat()}
+            for i in range(10)
+        ]
+        result = sel.select("c1", mems, "无关")
+        # 12 + 12 = 24 ≤ 25; 12 + 12 + 12 = 36 > 25 → break → 2 selected
+        assert len(result) == 2
+        assert len(result) <= cfg.memory_top_n
+        actual_chars = sum(len(sm.content) for sm in result)
+        assert actual_chars <= cfg.memory_max_chars
+        assert actual_chars == 24
+
+    def test_budget_oversized_single_memory(self):
+        """A single memory content > max_chars → skipped entirely."""
+        cfg = MemorySelectorConfig(memory_top_n=5, memory_max_chars=10)
+        sel = MemorySelector(cfg)
+        mems = [
+            {"memory_id": "m-big", "character_id": "c1",
+             "content": "X" * 30,  # 30 > max_chars=10
+             "importance": 0.5, "source_story_id": "s1",
+             "created_at": _utcnow().isoformat()},
+        ]
+        result = sel.select("c1", mems, "无关")
+        # Oversized memory should be skipped (not truncated)
+        assert len(result) == 0
+
+    def test_char_budget_never_exceeds_max_chars(self):
+        """End-to-end: selector output total chars never exceeds config."""
+        cfg = MemorySelectorConfig(memory_top_n=20, memory_max_chars=50)
+        sel = MemorySelector(cfg)
+        now_ts = _utcnow().isoformat()
+        mems = [
+            {"memory_id": f"m{i:03d}", "character_id": "c1",
+             "content": "C" * (5 + i),  # sizes: 5,6,7,8,9,10,11,...
+             "importance": 0.5, "source_story_id": f"s{i}",
+             "created_at": now_ts}  # identical timestamps → stable sort
+            for i in range(20)
+        ]
+        result = sel.select("c1", mems, "无关")
+        actual_chars = sum(len(sm.content) for sm in result)
+        assert actual_chars <= cfg.memory_max_chars
+        assert len(result) <= cfg.memory_top_n
+        # Lexical sort: m000,m001,m002,m003,m004,m005,m006,...
+        # Sizes: 5+6+7+8+9+10=45 ≤ 50; +11=56 > 50 → 6 selected
+        assert len(result) == 6
+        assert actual_chars == 45
 
     def test_stable_order(self):
         """Same score → deterministic tie-break."""
