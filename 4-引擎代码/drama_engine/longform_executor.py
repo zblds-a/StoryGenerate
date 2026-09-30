@@ -551,7 +551,10 @@ def _assemble_long_form_result(
         "status": context.status,
         "chapter_count": len(chapters_sorted),
         "total_chapters": plan.chapter_count,
-        "checkpoints": [cp.to_dict() for cp in checkpoint_repo.list_by_run(run_id)],
+        "checkpoints": [
+            cp.to_dict() if hasattr(cp, 'to_dict') else cp
+            for cp in checkpoint_repo.list_by_run(run_id)
+        ],
     }
 
 

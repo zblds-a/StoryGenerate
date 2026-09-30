@@ -120,7 +120,21 @@ class PostgresCheckpointRepository:
         self._session = session
 
     def save_or_update(self, checkpoint: dict[str, Any]) -> None:
-        """Save or update checkpoint by run_id + stage unique constraint."""
+        """Save or update checkpoint by run_id + stage unique constraint.
+
+        Accepts both dict and GenerationCheckpoint (Pydantic/dataclass) objects.
+        """
+        if not isinstance(checkpoint, dict):
+            # Convert Pydantic/dataclass object to dict
+            import dataclasses
+            if dataclasses.is_dataclass(checkpoint):
+                checkpoint = dataclasses.asdict(checkpoint)
+            elif hasattr(checkpoint, 'model_dump'):
+                checkpoint = checkpoint.model_dump(mode='json')
+            elif hasattr(checkpoint, 'dict'):
+                checkpoint = checkpoint.dict()
+            elif hasattr(checkpoint, '__dict__'):
+                checkpoint = checkpoint.__dict__
         existing = (
             self._session.query(GenerationCheckpointModel)
             .filter_by(run_id=checkpoint["run_id"], stage=checkpoint["stage"])
