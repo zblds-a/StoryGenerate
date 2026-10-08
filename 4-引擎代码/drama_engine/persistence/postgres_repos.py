@@ -146,24 +146,66 @@ class PostgresCheckpointRepository:
             row = _checkpoint_dict_to_row(checkpoint)
             self._session.add(row)
         self._session.flush()
+        self._session.commit()
 
-    def get_latest(self, run_id: str) -> dict[str, Any] | None:
+    def get_latest(self, run_id: str):
+        """返回 GenerationCheckpoint（兼容 InMemoryCheckpointRepository 接口）。"""
         row = (
             self._session.query(GenerationCheckpointModel)
             .filter_by(run_id=run_id)
             .order_by(GenerationCheckpointModel.last_completed_chapter.desc())
             .first()
         )
-        return _checkpoint_row_to_dict(row) if row else None
+        if row is None:
+            return None
+        from ..longform_executor import GenerationCheckpoint
+        d = _checkpoint_row_to_dict(row)
+        state = d.get("state_json", {})
+        if isinstance(state, str):
+            import json
+            state = json.loads(state)
+        return GenerationCheckpoint(
+            run_id=d["run_id"],
+            story_id=d.get("story_id", ""),
+            generation_scale=d.get("generation_scale", "long_form"),
+            stage=d.get("stage", ""),
+            last_completed_chapter=d.get("last_completed_chapter", 0),
+            next_chapter=d.get("next_chapter", 1),
+            state_json=state,
+            config_fingerprint=d.get("config_fingerprint", ""),
+            status=d.get("status", "resumable"),
+            version=d.get("version", "1.0"),
+        )
 
-    def list_by_run(self, run_id: str) -> list[dict[str, Any]]:
+    def list_by_run(self, run_id: str) -> list:
+        """返回 GenerationCheckpoint 列表。"""
         rows = (
             self._session.query(GenerationCheckpointModel)
             .filter_by(run_id=run_id)
             .order_by(GenerationCheckpointModel.last_completed_chapter)
             .all()
         )
-        return [_checkpoint_row_to_dict(r) for r in rows]
+        from ..longform_executor import GenerationCheckpoint
+        result = []
+        for row in rows:
+            d = _checkpoint_row_to_dict(row)
+            state = d.get("state_json", {})
+            if isinstance(state, str):
+                import json
+                state = json.loads(state)
+            result.append(GenerationCheckpoint(
+                run_id=d["run_id"],
+                story_id=d.get("story_id", ""),
+                generation_scale=d.get("generation_scale", "long_form"),
+                stage=d.get("stage", ""),
+                last_completed_chapter=d.get("last_completed_chapter", 0),
+                next_chapter=d.get("next_chapter", 1),
+                state_json=state,
+                config_fingerprint=d.get("config_fingerprint", ""),
+                status=d.get("status", "resumable"),
+                version=d.get("version", "1.0"),
+            ))
+        return result
 
     def get_by_stage(self, run_id: str, stage: str) -> dict[str, Any] | None:
         row = (

@@ -146,6 +146,10 @@ class StandupValidator:
             return False, "standup: empty output"
         if len(output.strip()) < 20:
             return False, "standup: output too short"
+        # Must be single-performer — reject multi-speaker dialogue patterns
+        speaker_count = self._count_speakers(output)
+        if speaker_count > 1:
+            return False, f"standup: requires single performer, detected {speaker_count} speakers"
         # Must have at least one setup and one punchline
         text_lower = output.lower()
         has_setup = "setup" in text_lower or "铺垫" in output or "开场" in output
@@ -160,6 +164,18 @@ class StandupValidator:
         if setup_pos >= 0 and punch_pos >= 0 and setup_pos > punch_pos:
             return False, "standup: setup must appear before punchline"
         return True, ""
+
+    def _count_speakers(self, text: str) -> int:
+        """Count distinct speaker prefixes (甲：, 乙：, etc.)."""
+        lines = text.strip().split("\n")
+        speakers = set()
+        for line in lines:
+            line = line.strip()
+            if "：" in line or ":" in line:
+                prefix = line.split("：")[0].split(":")[0].strip()
+                if prefix and len(prefix) <= 4:
+                    speakers.add(prefix)
+        return len(speakers)
 
 
 class CrosstalkValidator:

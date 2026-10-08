@@ -81,6 +81,14 @@ class GenerationCheckpoint:
             "updated_at": self.updated_at.isoformat() if self.updated_at else "",
         }
 
+    def __getitem__(self, key: str) -> Any:
+        """Dict-like access for backward compatibility with PostgresCheckpointRepository consumers."""
+        return self.to_dict()[key]
+
+    def get(self, key: str, default: Any = None) -> Any:
+        """Dict-like .get() for backward compatibility."""
+        return self.to_dict().get(key, default)
+
     @classmethod
     def from_dict(cls, d: dict[str, Any]) -> "GenerationCheckpoint":
         return cls(
