@@ -15,18 +15,48 @@ from typing import Sequence, Union
 
 from alembic import op
 from sqlalchemy import (
-    Column, Integer, String, Text, DateTime, JSON,
+    Column, Integer, String, Text, DateTime, JSON, inspect,
     UniqueConstraint,
 )
+from sqlalchemy.dialects.postgresql import JSONB
+
+from drama_engine.persistence.models import Base
 
 # revision identifiers, used by Alembic.
 revision: str = "001"
-down_revision: Union[str, None] = "000"
+down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
+    bind = op.get_bind()
+    legacy_tables = [
+        Base.metadata.tables[name] for name in (
+            "character_templates", "story_templates", "story_records",
+            "generation_traces", "quality_results",
+        )
+    ]
+    Base.metadata.create_all(bind, tables=legacy_tables, checkfirst=True)
+    if not inspect(bind).has_table("story_jobs"):
+        op.create_table(
+            "story_jobs",
+            Column("id", Integer, primary_key=True, autoincrement=True),
+            Column("job_id", String(64), nullable=False),
+            Column("request_id", String(64), nullable=False, unique=True),
+            Column("status", String(32), nullable=True),
+            Column("current_stage", String(64), nullable=True),
+            Column("input_json", JSONB().with_variant(JSON(), "sqlite"), nullable=True),
+            Column("story_mode", String(32), nullable=True),
+            Column("mode_version", String(16), nullable=True),
+            Column("error_code", String(64), nullable=True),
+            Column("error_message", Text(), nullable=True),
+            Column("created_at", DateTime(timezone=True), nullable=True),
+            Column("started_at", DateTime(timezone=True), nullable=True),
+            Column("finished_at", DateTime(timezone=True), nullable=True),
+            Column("deadline_at", DateTime(timezone=True), nullable=True),
+        )
+        op.create_index("ix_story_jobs_job_id", "story_jobs", ["job_id"])
     # ── Extend story_jobs ──
     for col, col_type in [
         ("run_id", String(64)),
@@ -41,10 +71,8 @@ def upgrade() -> None:
         ("cancel_requested", Integer()),
         ("updated_at", DateTime(timezone=True)),
     ]:
-        try:
+        if col not in {column["name"] for column in inspect(bind).get_columns("story_jobs")}:
             op.add_column("story_jobs", Column(col, col_type, nullable=True))
-        except Exception:
-            pass  # Column may already exist
 
     # ── Create generation_checkpoints ──
     op.create_table(

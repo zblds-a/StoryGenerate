@@ -274,6 +274,7 @@ class ApprovedPlanSnapshot(WorkflowModel):
     plan_fingerprint: str
     request: dict[str, Any]
     preview: PlanPreview
+    model_mapping_snapshot: dict[str, str] = Field(default_factory=dict)
     approved_at: datetime = Field(default_factory=utcnow)
 
 

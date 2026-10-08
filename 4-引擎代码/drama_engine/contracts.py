@@ -37,6 +37,7 @@ class LLMResult(BaseModel):
     model: str
     input_tokens: int = 0
     output_tokens: int = 0
+    latency_ms: int = 0
     cached: bool = False
 
 

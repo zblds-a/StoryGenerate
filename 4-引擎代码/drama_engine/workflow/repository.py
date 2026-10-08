@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from sqlalchemy.orm import Session
+from ..core.settings import get_settings
 
 from ..persistence.models import (
     CharacterProfileRevisionModel,
@@ -111,6 +112,7 @@ class InMemoryWorkflowRepository:
                 for character_id, planned in plan.character_profile_revision_map.items()
             }
             _validate_approval(plan, expected_revision, fingerprint, current_revisions)
+            _validate_source_version(self, request, plan, self._principals[plan_id])
             approved = plan.model_copy(
                 update={
                     "status": PlanStatus.APPROVED,
@@ -126,6 +128,7 @@ class InMemoryWorkflowRepository:
                 plan_fingerprint=fingerprint,
                 request=request,
                 preview=approved,
+                model_mapping_snapshot=_model_mapping_snapshot(),
             )
             job = GenerationJob(
                 job_id=uuid.uuid4().hex,
@@ -317,6 +320,7 @@ class SqlAlchemyWorkflowRepository:
                 profile_revisions[character_id] = profile.revision if profile else planned
             _validate_approval(preview, expected_revision, fingerprint, profile_revisions)
             request = dict(row.request_snapshot)
+            _validate_source_version(self, request, preview, row.principal_id)
             approved = preview.model_copy(update={
                 "status": PlanStatus.APPROVED,
                 "requires_confirmation": False,
@@ -329,6 +333,7 @@ class SqlAlchemyWorkflowRepository:
             snapshot = ApprovedPlanSnapshot(
                 plan_id=plan_id, plan_revision=expected_revision,
                 plan_fingerprint=fingerprint, request=request, preview=approved,
+                model_mapping_snapshot=_model_mapping_snapshot(),
             )
             job = GenerationJob(
                 job_id=uuid.uuid4().hex, request_id=request["request_id"],
@@ -499,6 +504,30 @@ def _validate_approval(
         for character_id, approved_revision in plan.character_profile_revision_map.items():
             if current_profile_revisions.get(character_id) != approved_revision:
                 raise WorkflowConflictError("STALE_PLAN")
+
+
+def _model_mapping_snapshot() -> dict[str, str]:
+    settings = get_settings()
+    return {
+        "FAST": settings.llm_fast_model,
+        "BALANCED": settings.llm_balanced_model,
+        "STRONG": settings.llm_strong_model,
+        "LONG": settings.llm_long_model,
+    }
+
+
+def _validate_source_version(repository, request: dict[str, Any], plan: PlanPreview, principal_id: str) -> None:
+    if plan.source_reference is None:
+        return
+    selector = SourceSelector.model_validate(request["source_selector"])
+    if selector.type == "by_id":
+        return
+    try:
+        current = repository.resolve_source(selector, principal_id)
+    except WorkflowNotFoundError as exc:
+        raise WorkflowConflictError("STALE_PLAN") from exc
+    if current.story_version_id != plan.source_reference.story_version_id:
+        raise WorkflowConflictError("STALE_PLAN")
 
 
 def _source_from_delivery(
