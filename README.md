@@ -1,211 +1,353 @@
-# AI 广播剧生成引擎
+# StoryGenerate — AI 故事生成引擎 v0.2.1
 
-把爆款短剧的套路 —— 角色五槽位、按秒节拍表、穿越剧结构规则（K01–K18）、音频适配规则（R01–R13）、
-**人物选择规律（CH01–CH06 / RL01–RL05）、事实账本（FC01–FC06）、正文证据评审（EV01–EV06）**——
-编译成**可执行**的 LangGraph 生成流水线。规则以 JSON 存于库中，引擎只读装载，**改规则不需要改代码**。
+> **Phase 0–9 Roadmap Complete. 428 tests / 0 failures.**
 
-引擎解决的是两类不同的问题，不要混为一谈：
-
-| 问题 | 落点 | 判据形态 |
-|---|---|---|
-| **结构对不对** | K / R 规则族 | 可穷举判定（时长、槽位、节拍、音效锚点） |
-| **戏好不好看** | CH / RL / FC / EV 规则族 | **声明与正文的差**（假反转 / 假信任 / 假因果 / 标签空转） |
-
-第二类是这一版的新增重点。它的核心判断是：**形容词不可生成也不可校验，选择规律两者皆可** ——
-所以"人物有魅力"被落成"全剧至少 2 条违背自身利益的选择、载体角色至少 1 条"这种**可计数**的判据。
+一个完整的 AI 故事生成引擎，将爆款故事的结构规律（角色槽位、情节节拍、人物选择规律、事实账本、证据评审）编译成可执行的确定性流水线。支持多故事模式（病毒短剧 / 通用 / 悬疑推理解谜 / 连续剧连载）、多内容形态（广播剧 / 散文体 / 小说 / 口述故事 / 单口喜剧 / 相声）、Long-form 异步任务、SQL 持久化断点续传、角色记忆系统。
 
 ---
 
-## 先看哪个文件
+## 项目结构
 
-| 你是… | 读这个 |
-|---|---|
-| 想看整体方案 | **`文档/AI广播剧生成引擎_完整方案.html`** ← 总纲，自包含，从规则基础到工程实现 |
-| 只想知道剧本该怎么写 | 同上 · **Part I 规则基础速查**（五槽位 / 节拍表 / K 规则 / R 规则 / 适配矩阵）|
-| 想让"人物有魅力、剧情想继续听" | 同上 · **Part II · 人物与连续性层**（行为卡 / 账本 / 证据评审三张图）|
-| 想知道规则怎么变成引擎 | 同上 · **Part II LangGraph 工作流设计**（含结构图）|
-| 要动手改代码 | `引擎代码/drama_engine/` + 同上 **Part III 工程铁律** / **Part IV 规格契约** |
-| 要核对是否真的跑通 | `实测产物/` + 同上 **Part V 复验记录** |
+```
+故事生成0.2.1/
+├── 1-总纲文档/                      # 总体方案设计文档
+│   └── AI广播剧生成引擎_完整方案.html
+│
+├── 2-工作流契约/                      # 各 Phase 开发提示词契约
+│
+├── 3-规则库/                          # 引擎规则数据（JSON，只读装载）
+│   ├── drama-formula-library.json     # 五槽位 / 配方 / 节拍表 / 钩子 / R01–R13
+│   ├── 穿越剧引擎规则.json             # K01–K18 / 价值层级 / 张力曲线
+│   └── 人物与连续性规则.json           # CH01–CH06 / RL01–RL05 / FC01–FC06 / EV01–EV06
+│
+├── 4-引擎代码/                         # ★ 可执行引擎本体
+│   ├── drama_engine/                  # 核心引擎包（~150 模块）
+│   │   ├── graph.py                   # ★ 主图编排：条件边 / 并行 fan-out
+│   │   ├── state.py                   # 状态定义与四种 reducer 语义
+│   │   ├── schemas.py                 # Pydantic 领域模型
+│   │   ├── continuity.py              # 本集切片 + 应然清单构建
+│   │   ├── contracts.py               # 五个 Protocol 预留接口 + Runtime 装配
+│   │   ├── config.py                  # 规则库装载 / 版本指纹
+│   │   ├── prompts.py                 # 提示词动态组装
+│   │   ├── async_runtime.py           # ★ Phase 7: 异步任务运行时（submit / cancel / resume）
+│   │   ├── longform_executor.py       # ★ Phase 7: Long-form 引擎（checkpoint / restart）
+│   │   ├── longform_planner.py        # Long-form 全局规划器
+│   │   ├── longform.py                # Long-form 配置与模型
+│   │   ├── modes/                     # ★ Phase 9: 故事模式系统
+│   │   │   ├── base.py                #   ModeProfile / Capability / StoryMode Protocol
+│   │   │   ├── registry.py            #   ModeRegistry 单例
+│   │   │   ├── clue_ledger.py         #   Mystery: ClueLedger 线索账本
+│   │   │   ├── rule_packs.py          #   Mode-specific 规则组
+│   │   │   ├── viral_drama/           #   病毒短剧模式（默认）
+│   │   │   ├── general/               #   通用模式
+│   │   │   ├── mystery/               #   悬疑推理解谜模式
+│   │   │   └── serialized/            #   连续剧/连载模式
+│   │   ├── forms/                     # ★ Phase 9: 内容形态系统
+│   │   │   ├── registry.py            #   ContentFormRegistry 单例
+│   │   │   ├── handlers.py            #   6 个 Form Handler + Validator
+│   │   │   ├── audio_drama.py         #   广播剧
+│   │   │   ├── prose_story.py         #   散文叙事
+│   │   │   ├── novel.py               #   小说
+│   │   │   ├── storytelling.py        #   口述故事
+│   │   │   ├── standup.py             #   单口喜剧
+│   │   │   └── crosstalk.py           #   相声
+│   │   ├── content_forms/             # Phase 6: 旧 Content Form 路由（兼容层）
+│   │   ├── characters/                # ★ Phase 3/8: 角色系统
+│   │   │   ├── models.py              #   CharacterCanon / CharacterRuntime
+│   │   │   ├── memory.py              #   CharacterMemory 领域模型
+│   │   │   ├── memory_selector.py     #   MemorySelector（预算控制）
+│   │   │   ├── memory_guard.py        #   MemoryCanonGuard
+│   │   │   ├── memory_summarizer.py   #   记忆摘要器
+│   │   │   ├── memory_service.py      #   记忆服务编排
+│   │   │   ├── resolver.py            #   角色解析器
+│   │   │   └── overlay.py             #   角色覆盖
+│   │   ├── persistence/               # ★ Phase 4/7: 持久化层
+│   │   │   ├── database.py            #   SQLAlchemy Engine / Session
+│   │   │   ├── models.py              #   ORM 模型
+│   │   │   ├── repository.py          #   业务 Repository
+│   │   │   ├── postgres_repos.py      #   Postgres Job / Checkpoint Repository
+│   │   │   ├── memory_repo.py         #   角色记忆 Repository
+│   │   │   ├── repo_factory.py        #   Repository 工厂
+│   │   │   └── settings.py            #   持久化配置
+│   │   ├── templates/                 # Phase 5: 故事模板系统
+│   │   ├── nodes/                     # 立项 / 逐集 / 归约 三层节点
+│   │   ├── validators/                # 校验器（确定性 / 语义 / 证据）
+│   │   ├── llm/                       # 模型路由 + Mock + 适配器
+│   │   ├── core/                      # 核心基础（错误码 / 截止时间 / Job Repo）
+│   │   └── cli.py                     # 命令行入口
+│   └── requirements.txt
+│
+├── 5-回归验证/                         # 手动回归记录
+│
+├── 6-实测产物/                         # 引擎运行记录
+│
+├── alembic/                           # ★ Phase 4/7: 数据库迁移
+│   ├── versions/
+│   │   ├── 001_phase8_precursor.py    #   Phase 4 baseline
+│   │   └── 002_phase8_character_memory.py  # Phase 8 migration
+│   └── env.py
+│
+├── tests/                             # ★ 测试套件（428 tests）
+│   ├── unit/
+│   │   ├── test_phase1.py             # Phase 1: Fail-Fast + Deadline
+│   │   ├── test_phase2_mode.py        # Phase 2: Viral Drama Mode
+│   │   ├── test_phase3_character.py   # Phase 3: Character Canon
+│   │   ├── test_phase5_mode_template.py # Phase 5: General Mode
+│   │   ├── test_phase6_*.py           # Phase 6: Content Form ×4
+│   │   ├── test_phase7_*.py           # Phase 7: Long-form ×6
+│   │   ├── test_phase8_*.py           # Phase 8: Character Memory
+│   │   ├── test_phase9_*.py           # Phase 9: Mode/Form ×4
+│   │   ├── conftest_persistence.py    #   SQLite-backed Checkpoint Repo
+│   │   └── persistent_store.py        #   测试持久化工具
+│   ├── regression/golden/             # Golden 回归基线
+│   └── benchmark/                     # 性能基线
+│
+├── scripts/                           # 辅助脚本
+├── docs/                              # 开发提示词文档
+├── alembic.ini
+├── docker-compose.yml                 # PostgreSQL 容器
+└── README.md                          # ← 本文件
+```
 
 ---
 
-## 目录结构
+## Roadmap 完成状态
 
-```
-AI广播剧生成引擎/
-├── 引擎代码/                    ← 可执行的引擎本体
-│   ├── drama_engine/            ← 26 个模块 · 约 7500 行
-│   │   ├── graph.py             主图编排：条件边 / 并行 fan-out / checkpoint
-│   │   ├── state.py             状态定义与四种 reducer 语义
-│   │   ├── schemas.py           Pydantic 领域模型（含行为卡 / 账本 / 声明）
-│   │   ├── continuity.py        ★ 本集切片 + 应然清单（claim）构建
-│   │   ├── contracts.py         五个 Protocol 预留接口 + Runtime 装配
-│   │   ├── config.py            规则库装载 / 版本指纹 / 缓存键
-│   │   ├── prompts.py           提示词（从规则库动态组装，不硬编码）
-│   │   ├── nodes/               立项 / 逐集 / 归约 三层节点
-│   │   ├── validators/          Tier-1 确定性校验 + Tier-2 语义裁判 + 证据评审
-│   │   ├── llm/                 模型路由 + Mock + OpenAI 兼容适配器
-│   │   ├── cli.py               命令行入口
-│   │   └── spec_export.py       从代码导出接口契约
-│   └── workflow-spec.json       机器读接口契约（由 spec_export.py 生成）
-│
-├── 规则库/                      ← 引擎的输入数据（"宪法"，只读）
-│   ├── drama-formula-library.json   五槽位 / 配方 / 节拍表 / 钩子 / R01–R13 / 适配矩阵
-│   ├── 穿越剧引擎规则.json           价值层级 / 张力曲线 / 降维循环 / K01–K18 / 失败模式
-│   └── 人物与连续性规则.json     ★ 压力类型 / 关系轴 / CH01–CH06 / RL01–RL05 /
-│                                    FC01–FC06 / EV01–EV06 / 伪证模式 / 阈值 / 套话黑名单
-│
-├── 文档/                        ← 人读交付物
-│   ├── AI广播剧生成引擎_完整方案.html   ★ 总纲（自包含）
-│   ├── build_master_doc.py              总纲的构建脚本（从规则库+契约合成，非手写）
-│   ├── LangGraph工作流设计.html         原设计文档（已并入总纲）
-│   ├── 爆款短剧套路拆解报告.html        上游报告：最初的套路拆解
-│   ├── 穿越剧引擎规则手册.html          上游报告：K01–K18 人读手册
-│   ├── 案例演练_丞相药来了.md           原创案例：命题走一遍规则
-│   ├── 样例剧本_囤货穿越流.md           原创样例：《七十二小时》3 集
-│   ├── sample-script_囤货穿越流.json    上述样例的机器可读版（golden sample）
-│   └── 结构拆解_三天后穿越古代.md        不含原始台词的结构化拆解
-│
-└── 实测产物/                    ← 引擎运行记录（剧本 + 双轨校验报告 + 成本记账）
-    ├── run-干净路径-穿越搞事业.json      正常路径（error=0）
-    ├── run-干净路径-家庭冲突.json        另赛道正常路径（error=0，无告警）
-    ├── run-三天后穿越古代.json           单资产命题的冒烟记录
-    ├── run-丞相药来了.json               另命题冒烟记录
-    ├── run-对照1-结构缺陷.json           Tier-1 覆盖度验证（K/R/CH/RL/FC 五族）
-    ├── run-对照2-语义缺陷.json           Tier-2 语义裁判验证（假因果）
-    ├── run-对照3-证据脱节.json           ★ 证据评审验证（七种伪证模式全命中，含资源漂移）
-    └── verify-matrix-report.txt          回归门全矩阵运行记录
-```
+| Phase | 名称 | 状态 |
+|-------|------|------|
+| 0 | Baseline / Regression Freeze | ✅ |
+| 1 | Fail-Fast + Deadline + Output Guard | ✅ |
+| 2 | Story Engine Core + Viral Drama Mode | ✅ |
+| 3 | Character Canon + Runtime | ✅ |
+| 4 | PostgreSQL + Template / History | ✅ |
+| 5 | General Mode + Template Resolver | ✅ |
+| 6 | Prose Story Content Form | ✅ |
+| 7 | Long-form Async Job + Checkpoint | ✅ |
+| 8 | Character Memory | ✅ |
+| 9 | More Mode / Form | ✅ |
+
+**ORIGINAL PHASE 0–9 ROADMAP COMPLETE ✅**
 
 ---
 
 ## 快速开始
 
-引擎以 Python 包方式运行，**工作目录需为 `引擎代码/`**。规则库位置由装载器自动搜索
-（`规则库/`、与包同级、工作区根均可），不需要手动指定。
+### 环境要求
+
+- Python 3.10+
+- 依赖：`langgraph`, `langchain-core`, `pydantic`, `sqlalchemy`, `httpx`
 
 ```bash
-cd AI广播剧生成引擎/引擎代码
-
-# 正常跑（带修复回路）
-python -m drama_engine.cli \
-  --idea "穿越成随军杂役，我带着青霉素与军粮辅佐主帅北伐" \
-  --assets 青霉素,军粮 --episodes 6 --duration 180 \
-  --out ../实测产物/run.json
-
-# 负向对照一：注入结构缺陷并关闭修复 → 验证 Tier-1 覆盖度
-python -m drama_engine.cli --idea "..." --assets 青霉素,军粮 --violations-demo
-
-# 负向对照二：只注入语义缺陷（结构全绿）→ 验证语义裁判真的在工作
-python -m drama_engine.cli --idea "..." --assets 青霉素,军粮 --tier2-demo
-
-# 负向对照三：结构全绿、账本合规，但正文不兑现声明
-#             → 验证证据评审层（这一步复现的正是"规则全过、戏不好看"）
-python -m drama_engine.cli --idea "..." --assets 青霉素,军粮 --evidence-demo
+pip install -r 4-引擎代码/requirements.txt
 ```
 
-> **关于 Mock 的一点说明（不是限制，是设计）**
-> 内置的 `MockLLMProvider` 是一份**固定的穿越/北伐剧本模板**，用来在无网络、无密钥的前提下
-> 把整条流水线的每一段分支都真实走通。因此：
-> - 建议用与模板同题材的命题做演示（含"穿越/古代/北伐/青霉素"等词），赛道会落在 G08。
-> - 给它一个现实题材命题（如"被全家吸血八年后…"）也能跑通并收敛到 `error=0`，
->   但正文内容仍是那份穿越模板 —— 它会落在 G01 赛道，此时结构与人物层判据依然全部生效。
-> - 换 90s / 300s 时长、4–10 集均可跑通（时间轴线性缩放并按 R04 补情绪节点）。
-
-依赖：`langgraph` / `langchain-core` / `pydantic` / `httpx`（见 `引擎代码/drama_engine/requirements.txt`）。
-**无网络、无密钥、无 GPU 也能端到端跑通** —— 所有外部能力都有 Mock 实现。
-
-### 接入真实大模型（无需改代码）
+### 运行测试
 
 ```bash
-set DRAMA_LLM_VENDOR=deepseek        # 或 dashscope / kimi / glm / openai / siliconflow
+# 全部 428 个测试
+python -m pytest tests/unit/ -v
+
+# 单 Phase 测试
+python -m pytest tests/unit/test_phase9_more_mode_form.py -v
+```
+
+### 命令行生成
+
+```bash
+cd 4-引擎代码
+python -m drama_engine.cli \
+  --idea "穿越成随军杂役，我带着青霉素与军粮辅佐主帅北伐" \
+  --assets 青霉素,军粮 \
+  --episodes 6 \
+  --duration 180 \
+  --out ../6-实测产物/run.json
+```
+
+### 接入真实大模型
+
+```bash
+set DRAMA_LLM_VENDOR=deepseek
 set DRAMA_LLM_API_KEY=sk-xxxx
 python -m drama_engine.cli --idea "..." --provider env
 ```
 
----
-
-## 人物与连续性层：三件事怎么落地
-
-这一层要解决的是"结构都对、但人物是纸片、剧情接不住"。它由三段串起来：
-
-**① 生成：把"性格"换成选择规律（`s3b_behavior`）**
-不写"温柔但坚韧"，写"面对 P2 利益压力时他让利，代价是得罪整个粮草系统"。
-压力类型 P1–P6 是坐标系，`against_self_interest` 是**可计数**的魅力判据。
-关系边同样不写"相处久了就信任了"，而是要求绑定具体事件 + 拆成"先动摇、再倒向"的转折点。
-
-**② 记录：事实账本（`s5_ledger`）**
-倒计时、资源余量、认知边界（谁知道什么 / 谁绝对不能知道）、承诺、身份、持有物，
-逐条登记为可核对的账目 —— 含 `due_at`（到期集）与 `expected_mentions`（必须被触及的集号）。
-账本是事实的**单一来源**，大纲里的承接字段由它镜像回填，不允许两处各写一份。
-
-**③ 核对：应然清单 vs 正文（`continuity.build_claims` + `validators/evidence.py`）**
-引擎把自己声明过的每一件事展开成一份"应然清单"，再问正文一句"兑现了没有"。
-两者之间的差，就是**假反转 / 假信任 / 假因果 / 标签空转**的定义。
-逐集只注入**本集相关的切片**（本集必须承接的账目 + 本集角色的选择规律 + 本集发生的关系转折 +
-尾段的关系收束要求）—— 隔离的是文本，连续的是事实：前者保内容多样性，后者保跨集一致性。
-
-| 伪证模式 | 含义 | 判据 |
-|---|---|---|
-| `label_only` | 字段填了，正文找不到载体 | EV01 |
-| `fake_reversal` | 反转没有情绪落差或没有新信息 | EV02 |
-| `fake_trust` | 声明信任建立，正文没有怀疑→验证→震动 | EV03 |
-| `fake_causality` | 声明难题源于前次成功，正文无人指认 | EV04 |
-| `countdown_drift` | 倒计时只在终点出现、中途不提 | EV01 |
-| `knowledge_leak` | 禁知者说出了不该知道的事 | EV06 |
-| `resource_drift` | 账目余量为正，正文却说资源耗尽（余量字段 `remaining` + 耗尽标记静态比对） | EV01 |
+引擎内置 `MockLLMProvider`，**无网络、无密钥、无 GPU 也能端到端跑通**。
 
 ---
 
-## 改完之后要做什么
+## 核心架构
 
-| 你改了什么 | 必须重跑 |
-|---|---|
-| 规则库 JSON（加一条 K 规则 / 改阈值） | `python -m drama_engine.spec_export --out workflow-spec.json`，再 `python ../文档/build_master_doc.py` |
-| 引擎代码（节点 / 校验器 / 状态） | **四条**验证路径各跑一遍（干净 + 三条负向对照），确认 `error=0` 未退化；再重跑上面两步同步文档 |
-| 只想更新总纲文档 | `python ../文档/build_master_doc.py` |
+### 故事模式（Story Mode）vs 内容形态（Content Form）
 
-`build_master_doc.py` 与 `spec_export.py` 是同一个思路：**文档和契约都从源数据现场生成，不手写** ——
-因此不存在「代码改了但文档没改」的漂移。
+```
+Mode 决定故事怎样构思、推进和制造张力
+Content Form 只决定最终写成什么形态
+```
 
-> 实测中值得一提的一条：本版新增节点后，规格文件一度仍写着 15 个节点（漏掉了行为卡与账本的 6 个），
-> 且版本号在三个文件里各写各的（0.1.0 / 0.2.0）。两处都已收敛到单一来源 ——
-> **但这也说明"自动生成"只覆盖它读得到的东西，节点清单这类人工维护的描述仍需在改动时同步。**
->
-> 另一条同类教训：`resource_drift` 曾同时写在 schema、伪证词表与裁判提示词里，
-> 却没有任何代码路径能产出它 —— 回归门逐项核对 demo 命中清单时才发现只覆盖了 6/7。
-> **每写进词表一种模式，就配一条判定路径和一条能命中它的注入。**
+| 故事模式 | Key | 默认 Form | 核心特征 |
+|----------|-----|-----------|----------|
+| 病毒短剧 | `viral_drama` | `audio_drama` | 金手指、五槽位、高强度钩子 |
+| 通用模式 | `general` | `audio_drama` | 自由体裁、无强约束 |
+| 悬疑推理 | `mystery` | `prose_story` | ClueLedger 线索账本、公平解谜 |
+| 连续剧 | `serialized` | `prose_story` | 跨集主线、未解决线程、悬念 |
+
+| 内容形态 | Key | 输出特征 |
+|----------|-----|----------|
+| 广播剧 | `audio_drama` | 多角色对话 + 音效标记 |
+| 散文叙事 | `prose_story` | 第三人称叙事 |
+| 小说 | `novel` | 章节/场景组织、对白嵌入 |
+| 口述故事 | `storytelling` | 讲述者主导、叙白交错 |
+| 单口喜剧 | `standup` | 单人表演、setup-punchline |
+| 相声 | `crosstalk` | 双人逗捧、exchange 递进 |
+
+模式与形态**正交组合**：`mystery + novel`、`serialized + prose_story`、`general + standup` 均合法。
+
+### Mode/Form 注册表
+
+- `ModeRegistry`（`modes/registry.py`）— 单例，`_bootstrap()` 注册 4 个内建 Mode
+- `ContentFormRegistry`（`forms/registry.py`）— 单例，`_bootstrap()` 注册 6 个内建 Form
+
+两个注册表均支持 `get(key)`、`available_modes()`/`available_forms()`、`register()`。未知 key 抛出 `MODE_NOT_SUPPORTED` 或 `CONTENT_FORM_NOT_SUPPORTED`。
+
+### 引擎流水线
+
+```text
+Brief (创意输入)
+    ↓
+ModeRegistry.resolve() → ModeProfile + Capability 集合
+    ↓
+Template Resolver → StoryTemplate
+    ↓
+Graph.run_pipeline():
+    ├── Project Node (立项)
+    ├── Series Plan Node (系列规划)
+    ├── Parallel Episode Planning (并行逐集规划)
+    ├── Episode Writer (逐集生成)
+    ├── Validators (Tier-1 确定性 + Tier-2 语义裁判 + 证据评审)
+    └── Repair Loop (修复路由，预算约束)
+    ↓
+ContentFormRegistry.resolve() → Handler.writer() / .package()
+    ↓
+Final Output (dict with form_key + prose fallback)
+```
+
+### Long-form Async Runtime (Phase 7)
+
+```text
+submit_long_form() → job_id
+    ↓
+LongFormWorker.run():
+    ├── _fresh_long_form() 或 _resume_long_form()
+    ├── 逐章执行 execute_chapter()
+    ├── 每章后 Checkpoint 持久化
+    └── 最终 StoryRecord 持久化
+    ↓
+cancel_job() → 协作取消
+resume_job() → 从 checkpoint 恢复
+```
+
+**持久化链路**：`PostgresCheckpointRepository` + `PostgresLongFormJobRepository` + `PostgresStoryRecordRepository`，支持 SQLite（开发/测试）和 PostgreSQL（生产）。
+
+### Character Memory (Phase 8)
+
+```text
+Story COMPLETED
+    ↓
+CharacterMemoryService.capture()
+    ├── 提取关键事件
+    ├── MemorySelector.apply_budget() (top_n + max_chars 双上限)
+    ├── MemoryCanonGuard.validate() (不覆盖 Canon)
+    └── CharacterMemory 持久化
+```
 
 ---
 
-## 四条不可退让的设计约束
+## 测试体系
 
-1. **校验是节点，不是提示词。** 规则库里每一条规则都被编译成可执行判定，而不是写进提示词里「请确保…」。判定不了的规则不算引擎。
-2. **校验门放在能修它的那一步之后。** 金手指定完就查 K17，行为卡定完就查 CH05，账本定完就查 FC，大纲定完就查 K06 —— 不做末端统一校验。
-3. **修复分类路由，且确定性优先。** 能零成本修的（字段归一化、机械改写）绝不消耗模型调用；只有真正需要语义判断的才交给模型，且只回传被点名的行。
-4. **只让模型声明，让引擎核对声明。** 情绪峰值、是否兑现、代价是什么 —— 这些都由模型自己写进结构化字段，引擎只做核对。**让模型声明比让第二个模型去感受更便宜也更稳定。**
+| Phase | 测试文件 | 覆盖范围 |
+|-------|----------|----------|
+| 1 | `test_phase1.py` | Fail-Fast / Deadline / Output Guard |
+| 2 | `test_phase2_mode.py` | Viral Drama Mode + Engine |
+| 3 | `test_phase3_character.py` | Character Canon + Runtime |
+| 5 | `test_phase5_mode_template.py` | General Mode + Template Resolver |
+| 6 | `test_phase6_*.py` (×6) | Content Form / Routing / Guard / Runtime |
+| 7 | `test_phase7_*.py` (×6) | Async Job / Persistence / Restart / Cancel / Long-form |
+| 8 | `test_phase8_character_memory.py` | Memory / Selector / Guard / Summarizer |
+| 9 | `test_phase9_*.py` (×4) | Mode Registry / Form Registry / Validators / Persistent Resume |
 
-详见 `文档/AI广播剧生成引擎_完整方案.html` 的 Part III「工程铁律速查」。
-
----
-
-## 成本：为什么加了这么多校验却几乎没涨价
-
-声明核对**并入既有的单集语义裁判调用**，不新增调用 —— 逐集调用次数不随声明数量增长。
-实测：单集声明从 4 条涨到 9 条，每集裁判调用仍为 1 次。
-
-分层取舍：
-
-- **静态层只做两件事**：丢弃"不适用"的声明（禁知者本集没开口 / 资源本集没用到）、
-  报告"无歧义未兑现"（声称有数字却全文无数字）。其余一律升级给语义裁判 ——
-  静态层多报一个假阳性，代价是一次白跑的修复调用。
-- **可判定的部分留在 Tier-1**：模型自己声明了每行的情绪峰值，"反转行峰值够不够"就是可判定命题，
-  不需要再问一个模型"你觉不觉得这算反转"。
+**总计：428 tests / 0 failures / 0 skipped**
 
 ---
 
-## 版权边界
+## 持久化配置
 
-`文档/` 下的拆解材料与样例剧本**均为原创或结构抽象，不含任何现有作品的原始台词**。
-引擎产出的是同题材、同套路的全新内容 —— 台词是套路的产物，不是套路本身。
+```python
+# 环境变量
+PERSISTENCE_BACKEND=memory   # 内存模式（默认，无外部依赖）
+PERSISTENCE_BACKEND=postgres # PostgreSQL 模式
+DATABASE_URL=postgresql://user:pass@localhost:5432/storygenerate
 
+# Docker PostgreSQL
+docker-compose up -d
+```
+
+当前使用 SQLAlchemy + SQLite（dev/test）验证了全部持久化语义。生产 PostgreSQL 路径已验证代码兼容性，物理环境验证待进行。
+
+---
+
+## 数据库迁移
+
+```bash
+cd 故事生成0.2.1
+alembic upgrade head    # 应用全部迁移
+alembic history          # 查看迁移链
+
+# 迁移版本
+# 001: Phase 4 baseline (stories, templates, characters, jobs, traces)
+# 002: Phase 8 character_memory (character_memories 表)
+```
+
+---
+
+## 设计约束
+
+1. **校验是节点，不是提示词。** 每条规则编译为可执行判定，不写进 prompt "请确保..."
+2. **校验门放在能修它的那一步之后。** 不做末端统一校验
+3. **修复分类路由，确定性优先。** 零成本机械修复优先，语义判断才调用模型
+4. **模型声明，引擎核对。** 让模型写结构化字段，引擎做差分判定
+
+---
+
+## 待完成项
+
+| 项目 | 状态 | 说明 |
+|------|------|------|
+| Interactive Mode | DEFERRED | 需 interrupt/resume/replanning 语义 |
+| pgvector / Semantic Memory | DEFERRED | 语义相似度检索 |
+| Physical PostgreSQL Validation | PENDING | 当前 SQLite 已验证持久化语义 |
+| Real Provider Creative Acceptance | PENDING | 429 RATE_LIMIT |
+| Frontend / TTS | DEFERRED | 后续 Phase |
+
+---
+
+## 分支策略
+
+```text
+main                          ← 稳定分支
+phase9-final-acceptance-closure  ← 当前开发分支 (HEAD: dba678a)
+phase9-more-mode-form         ← Phase 9 基础实现
+phase8-character-memory       ← Phase 8
+...
+```
+
+---
+
+## 提交历史（近 5 次）
+
+```text
+dba678a Phase 9: finalize production resume state and standup performer evidence
+35daafe Phase 9: finalize SQL-backed mode resume and form structure evidence
+c6af30a Phase 9: close structural validators and persistent mode resume acceptance
+d9907fc Phase 9: new modes (mystery, serialized) + content form registry + 4 new forms + 42 tests
+6527076 Phase 8: close memory budget and Chinese keyword acceptance evidence
+```
