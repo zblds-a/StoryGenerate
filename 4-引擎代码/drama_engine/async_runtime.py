@@ -61,6 +61,7 @@ class LongFormJobRecord:
     """Extended Job record for long-form async execution."""
     job_id: str = field(default_factory=lambda: uuid.uuid4().hex[:12])
     request_id: str = ""
+    idea: str = ""
     run_id: str = ""
     story_id: str = ""
 
@@ -99,6 +100,7 @@ class LongFormJobRecord:
         return {
             "job_id": self.job_id,
             "request_id": self.request_id,
+            "idea": self.idea,
             "run_id": self.run_id,
             "story_id": self.story_id,
             "story_mode": self.story_mode,
@@ -236,6 +238,7 @@ def submit_long_form(
 
     job = LongFormJobRecord(
         request_id=thread_id,
+        idea=idea,
         run_id=uuid.uuid4().hex,
         story_id=uuid.uuid4().hex,
         story_mode=story_mode,
@@ -321,7 +324,7 @@ class LongFormWorker:
 
             # Run long-form (sync, but in worker thread)
             result = run_long_form(
-                idea=job.request_id or "long-form job",  # FIXME: store idea in job
+                idea=job.idea or "long-form job",
                 workspace=self.workspace,
                 lib=self.lib,
                 runtime=runtime,
@@ -336,6 +339,36 @@ class LongFormWorker:
 
             # Update progress per chapter from result
             chapter_results = result.get("chapter_results") or []
+
+            # A returned dict is not proof of success.  The long-form engine
+            # deliberately returns resumable failed results, so validate the
+            # result before persisting a StoryRecord or marking the job done.
+            result_status = result.get("status")
+            completed_chapters = result.get("chapter_count", len(chapter_results))
+            all_chapters_completed = all(
+                (cr.get("status") if isinstance(cr, dict) else getattr(cr, "status", None))
+                == "completed"
+                for cr in chapter_results
+            )
+            if (
+                result_status != "completed"
+                or completed_chapters != job.total_chapters
+                or len(chapter_results) != job.total_chapters
+                or not all_chapters_completed
+            ):
+                self.job_repo.update(
+                    job.job_id,
+                    status=LongFormJobStatus.FAILED,
+                    stage="failed",
+                    error_code="GENERATION_INCOMPLETE",
+                    error_message=(
+                        f"Long-form result not complete: status={result_status}, "
+                        f"chapters={completed_chapters}/{job.total_chapters}"
+                    ),
+                    completed_at=time.time(),
+                    final_result=result,
+                )
+                return
             for cr in chapter_results:
                 self._check_cancel(job)
                 ci = cr.get("chapter_index", 0)
@@ -471,6 +504,7 @@ def resume_job(
     # Create new job record for the resumed run
     resume_job = LongFormJobRecord(
         request_id=original.request_id,
+        idea=original.idea,
         run_id=original.run_id,
         story_id=original.story_id,
         story_mode=original.story_mode,
@@ -487,7 +521,7 @@ def resume_job(
 
     # Run resume
     result = run_long_form(
-        idea=original.request_id,
+        idea=original.idea or "long-form job",
         workspace=workspace,
         lib=lib,
         runtime=runtime,

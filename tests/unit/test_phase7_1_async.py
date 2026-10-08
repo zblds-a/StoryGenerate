@@ -52,6 +52,23 @@ def _make_lib():
 IDEA = "三个年轻人在合租屋面临房东收房，决定共同面对"
 
 
+def test_longform_worker_rejects_failed_return(monkeypatch):
+    repo = InMemoryLongFormJobRepository()
+    job = submit_long_form("original idea", job_repo=repo, target_chapters=2)
+
+    def failed_result(**kwargs):
+        assert kwargs["idea"] == "original idea"
+        return {
+            "status": "failed", "chapter_count": 1, "total_chapters": 2,
+            "chapter_results": [{"chapter_index": 1, "status": "completed"}],
+        }
+
+    monkeypatch.setattr("drama_engine.longform_executor.run_long_form", failed_result)
+    LongFormWorker(repo).execute_job(job)
+    assert repo.get(job.job_id).status == LongFormJobStatus.FAILED
+    assert repo.get(job.job_id).error_code == "GENERATION_INCOMPLETE"
+
+
 # ══════════════════════════════════════════════════════════════════════
 # Progress Calculator
 # ══════════════════════════════════════════════════════════════════════
@@ -114,6 +131,7 @@ class TestAsyncSubmit:
         loaded = job_repo.get(job.job_id)
         assert loaded is not None
         assert loaded.generation_scale == "long_form"
+        assert loaded.idea == IDEA
 
 
 # ══════════════════════════════════════════════════════════════════════

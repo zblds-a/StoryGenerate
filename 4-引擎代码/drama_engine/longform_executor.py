@@ -186,6 +186,7 @@ def execute_chapter(
     context: LongFormContext,
     brief: Brief,
     runtime: Any = None,
+    story_mode: str = "general",
     content_form: str = "prose_story",
     lib: Any = None,
     workspace: str = "",
@@ -227,7 +228,7 @@ def execute_chapter(
         lib=lib,
         runtime=runtime,
         target_episodes=1,
-        story_mode="general",
+        story_mode=story_mode,
         content_form=content_form,
     )
 
@@ -395,7 +396,8 @@ def _fresh_long_form(
         context.current_chapter = ch_plan.chapter_index
         result = execute_chapter(
             plan=plan, chapter_plan=ch_plan, context=context, brief=brief,
-            runtime=runtime, content_form=content_form, lib=lib, workspace=workspace,
+            runtime=runtime, story_mode=story_mode, content_form=content_form,
+            lib=lib, workspace=workspace,
             fail_at_chapter=fail_at_chapter,
         )
 
@@ -498,7 +500,8 @@ def _resume_long_form(
         context.current_chapter = ch_plan.chapter_index
         result = execute_chapter(
             plan=plan, chapter_plan=ch_plan, context=context, brief=brief,
-            runtime=runtime, content_form=content_form, lib=lib, workspace=workspace,
+            runtime=runtime, story_mode=story_mode, content_form=content_form,
+            lib=lib, workspace=workspace,
             fail_at_chapter=fail_at_chapter,
         )
 

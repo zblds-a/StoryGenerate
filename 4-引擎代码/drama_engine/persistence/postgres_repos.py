@@ -59,7 +59,7 @@ class PostgresLongFormJobRepository:
             error_code=job_data.get("error_code", ""),
             error_message=job_data.get("error_message", ""),
             created_at=_utcnow(),
-            input_json={"idea": job_data.get("request_id", "")},
+            input_json={"idea": job_data.get("idea", "")},
         )
         self._session.add(row)
         self._session.flush()
@@ -224,6 +224,7 @@ def _job_row_to_dict(row: StoryJobModel) -> dict[str, Any]:
     return {
         "job_id": row.job_id,
         "request_id": row.request_id or "",
+        "idea": (row.input_json or {}).get("idea", ""),
         "run_id": row.run_id or "",
         "story_id": row.story_id or "",
         "story_mode": row.story_mode or "",

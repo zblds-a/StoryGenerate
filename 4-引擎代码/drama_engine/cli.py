@@ -66,7 +66,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="drama_engine", description="AI 广播剧生成引擎")
     parser.add_argument("--idea", required=True, help="一句话创意")
     parser.add_argument("--episodes", type=int, default=8)
-    parser.add_argument("--duration", type=int, default=180, choices=[90, 150, 180, 300])
+    parser.add_argument("--duration", type=int, default=180, choices=[90, 120, 150, 180, 300])
     parser.add_argument("--assets", default="", help="指定金手指，逗号分隔")
     parser.add_argument("--workspace", default=None, help="规则库所在目录")
     parser.add_argument("--out", default="run-output.json")

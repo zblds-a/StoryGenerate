@@ -56,7 +56,7 @@ def s0_intake(state: dict) -> dict:
         brief = Brief.model_validate(brief)
     if brief is None:
         raise ValueError("缺少 brief")
-    if brief.target_duration_sec not in (90, 150, 180, 300):
+    if brief.target_duration_sec not in (90, 120, 150, 180, 300):
         brief = brief.model_copy(update={"target_duration_sec": 180})
     return {
         "brief": brief,
