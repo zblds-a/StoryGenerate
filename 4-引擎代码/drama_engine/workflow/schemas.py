@@ -167,6 +167,12 @@ class BaseStoryRequest(WorkflowModel):
     safety_profile: SafetyProfile | None = None
     client_context: dict[str, Any] = Field(default_factory=dict)
 
+    @model_validator(mode="after")
+    def validate_safety_profile(self):
+        if self.safety_profile and self.safety_profile.content_rating != self.creation_preferences.content_rating:
+            raise ValueError("safety_profile rating must match creation_preferences rating")
+        return self
+
 
 class CreateStoryRequest(BaseStoryRequest):
     intent: Literal[StoryIntent.CREATE] = StoryIntent.CREATE
@@ -212,6 +218,7 @@ class ResolvedSourceReference(WorkflowModel):
     last_played_position_ms: int | None = None
     story_summary: str = ""
     continuity_snapshot: dict[str, Any] = Field(default_factory=dict)
+    source_content_snapshot: dict[str, Any] = Field(default_factory=dict)
 
 
 class EpisodeOutline(WorkflowModel):
@@ -261,6 +268,8 @@ class PlanPreview(WorkflowModel):
     auto_filled_fields: list[str] = Field(default_factory=list)
     inherited_fields: list[str] = Field(default_factory=list)
     impact_analysis: dict[str, Any] = Field(default_factory=dict)
+    model_trace: list[dict[str, Any]] = Field(default_factory=list)
+    rule_versions: dict[str, str] = Field(default_factory=dict)
     explicit_fields: list[str] = Field(default_factory=list)
     plan_fingerprint: str
     allowed_actions: list[str] = Field(default_factory=lambda: ["revise_plan", "approve_plan", "cancel_plan"])
@@ -372,11 +381,13 @@ class EpisodeDelivery(WorkflowModel):
 class PerformanceValidationReport(WorkflowModel):
     validation_status: Literal["PASSED", "FAILED"]
     spoken_line_count: int = 0
+    emotion_coverage: float = 0.0
     tone_coverage: float = 0.0
     emphasis_coverage: float = 0.0
     emphasis_span_validity: float = 0.0
     continuity_passed: bool = True
     outline_alignment_passed: bool = True
+    content_rating_passed: bool = True
     warnings: list[str] = Field(default_factory=list)
 
 
@@ -403,6 +414,7 @@ class StoryDelivery(WorkflowModel):
     status: StoryVersionStatus = StoryVersionStatus.CANDIDATE
     engine_version: str = "0.3.0"
     rule_versions: dict[str, Any] = Field(default_factory=dict)
+    model_trace: list[dict[str, Any]] = Field(default_factory=list)
     created_at: datetime = Field(default_factory=utcnow)
 
 

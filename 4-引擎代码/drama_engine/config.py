@@ -126,6 +126,19 @@ class RuleLibrary:
 
     def beat_sheet_for(self, duration_sec: int) -> list[dict]:
         """按目标时长解算节拍表。这是约束求解，不是让模型自由发挥。"""
+        if duration_sec in (120, 180, 300):
+            # The source JSON supplies a canonical 180-second sheet. Some
+            # segment-level overrides for 300 seconds are incomplete; scale
+            # every boundary together so the final hook reaches the target.
+            source = self.beat_segments
+            boundaries = [source[0]["range"][0], *(item["range"][1] for item in source)]
+            base_duration = boundaries[-1]
+            scaled = [round(value * duration_sec / base_duration) for value in boundaries]
+            return [
+                {**{k: v for k, v in segment.items() if k != "duration_scaling"},
+                 "range": [scaled[index], scaled[index + 1]]}
+                for index, segment in enumerate(source)
+            ]
         out: list[dict] = []
         for seg in self.beat_segments:
             seg = dict(seg)

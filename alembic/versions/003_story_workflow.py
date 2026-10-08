@@ -116,8 +116,33 @@ def upgrade() -> None:
         batch.create_unique_constraint("uq_story_jobs_job_id", ["job_id"])
         batch.create_unique_constraint("uq_story_jobs_idempotency_key", ["idempotency_key"])
 
+    if op.get_bind().dialect.name == "postgresql":
+        op.execute("""
+        CREATE FUNCTION prevent_story_version_content_update() RETURNS trigger AS $$
+        BEGIN
+            IF NEW.story_id IS DISTINCT FROM OLD.story_id
+               OR NEW.version_no IS DISTINCT FROM OLD.version_no
+               OR NEW.parent_story_version_id IS DISTINCT FROM OLD.parent_story_version_id
+               OR NEW.approved_plan_id IS DISTINCT FROM OLD.approved_plan_id
+               OR NEW.approved_plan_revision IS DISTINCT FROM OLD.approved_plan_revision
+               OR NEW.delivery_json::jsonb IS DISTINCT FROM OLD.delivery_json::jsonb THEN
+                RAISE EXCEPTION 'story version content is immutable';
+            END IF;
+            RETURN NEW;
+        END;
+        $$ LANGUAGE plpgsql;
+        """)
+        op.execute("""
+        CREATE TRIGGER trg_story_version_immutable
+        BEFORE UPDATE ON story_versions
+        FOR EACH ROW EXECUTE FUNCTION prevent_story_version_content_update();
+        """)
+
 
 def downgrade() -> None:
+    if op.get_bind().dialect.name == "postgresql":
+        op.execute("DROP TRIGGER IF EXISTS trg_story_version_immutable ON story_versions")
+        op.execute("DROP FUNCTION IF EXISTS prevent_story_version_content_update()")
     with op.batch_alter_table("story_jobs") as batch:
         batch.drop_constraint("uq_story_jobs_idempotency_key", type_="unique")
         batch.drop_constraint("uq_story_jobs_job_id", type_="unique")

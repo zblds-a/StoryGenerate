@@ -7,6 +7,7 @@ from typing import Any, Protocol
 
 from pydantic import BaseModel, Field
 
+from ..config import RuleLibrary
 from ..llm.router import ModelTierMap, resolve_spec
 from .performance import normalize_utterance, validate_story_delivery
 from .schemas import (
@@ -45,6 +46,7 @@ class LLMPlanGenerator:
 
     def __init__(self, provider):
         self.provider = provider
+        self.lib = RuleLibrary.load()
 
     def generate(self, request, source, characters, previous=None, feedback="") -> PlanContent:
         preferences = request.creation_preferences.model_dump(mode="json")
@@ -57,6 +59,7 @@ class LLMPlanGenerator:
             "intent": request.intent,
             "user_instruction": request.user_instruction,
             "preferences": preferences,
+            "beat_sheet": self.lib.beat_sheet_for(request.creation_preferences.target_duration_sec),
             "characters": [item.model_dump(mode="json") for item in characters],
             "source": source.model_dump(mode="json") if source else None,
             "template_ref": request.template_ref.model_dump(mode="json") if request.template_ref else None,
@@ -100,6 +103,8 @@ class LLMPerformanceAnnotator:
     def annotate(self, lines, context) -> list[Utterance]:
         aliases = {
             "audio_cue": "sfx", "sound_effect": "sfx", "sound": "sfx",
+            "effect": "sfx", "bgm": "music", "background_music": "music",
+            "dialog": "dialogue", "voice_over": "narration", "narrative": "narration",
             "scene_direction": "action", "stage_direction": "action", "silence": "action",
         }
         lines = [{**line, "kind": aliases.get(line.get("kind"), line.get("kind"))} for line in lines]
@@ -209,9 +214,11 @@ class ApprovedPlanLLMExecutor:
     def __init__(self, provider, annotator: PerformanceAnnotator | None = None):
         self.provider = provider
         self.annotator = annotator or LLMPerformanceAnnotator(provider)
+        self.lib = RuleLibrary.load()
 
     def execute(self, snapshot: ApprovedPlanSnapshot) -> StoryDelivery:
         preview = snapshot.preview
+        trace_start = len(getattr(self.provider, "call_history", []))
         prefs = preview.resolved_preferences
         source = preview.source_reference
         tier_map = ModelTierMap(mapping=snapshot.model_mapping_snapshot) if snapshot.model_mapping_snapshot else None
@@ -226,6 +233,7 @@ class ApprovedPlanLLMExecutor:
                 "approved_plan_fingerprint": snapshot.plan_fingerprint,
                 "story_plan": preview.plan.model_dump(mode="json"),
                 "episode_outline": outline.model_dump(mode="json"),
+                "beat_sheet": self.lib.beat_sheet_for(prefs.target_duration_sec),
                 "preferences": prefs.model_dump(mode="json"),
                 "characters": [c.model_dump(mode="json") for c in preview.character_snapshots],
                 "source": source.model_dump(mode="json") if source else None,
@@ -235,9 +243,29 @@ class ApprovedPlanLLMExecutor:
                     "dialogue 行必须填写 speaker_role_id；narration 行无需填写。"
                 ),
             }, ensure_ascii=False)
-            draft = self.provider.complete_structured(
-                resolve_spec("episode_writer", tier_map=tier_map), system, user, DraftEpisode
-            )
+            draft = None
+            estimated = 0
+            for attempt in range(3):
+                draft = self.provider.complete_structured(
+                    resolve_spec("episode_writer", tier_map=tier_map), system,
+                    user if attempt == 0 else user + (
+                        f"\n上次输出估算{estimated}秒，不满足目标{prefs.target_duration_sec}秒。"
+                        "请重写完整本集并调整有效对白与旁白量，保留大纲所有节拍。"
+                    ),
+                    DraftEpisode,
+                )
+                spoken_chars = sum(
+                    len(line.text) for scene in draft.scenes for line in scene.lines
+                    if line.kind in ("dialogue", "narration")
+                )
+                estimated = round(spoken_chars / 3.5)
+                if 0.65 * prefs.target_duration_sec <= estimated <= 1.4 * prefs.target_duration_sec:
+                    break
+            if not 0.65 * prefs.target_duration_sec <= estimated <= 1.4 * prefs.target_duration_sec:
+                raise ValueError(
+                    f"DURATION_VALIDATION_FAILED: episode {outline.index} estimated {estimated}s "
+                    f"for target {prefs.target_duration_sec}s"
+                )
             scenes: list[SceneDelivery] = []
             for scene_index, scene in enumerate(draft.scenes, 1):
                 lines = [{
@@ -262,9 +290,6 @@ class ApprovedPlanLLMExecutor:
                     title=scene.title, location=scene.location,
                     dramatic_goal=scene.dramatic_goal, utterances=utterances,
                 ))
-            spoken_chars = sum(len(u.text) for scene in scenes for u in scene.utterances
-                               if u.kind in ("dialogue", "narration"))
-            estimated = round(spoken_chars / 3.5)
             episodes.append(EpisodeDelivery(
                 episode_id=f"ep-{outline.index}-{uuid.uuid4().hex[:8]}",
                 index=outline.index, title=draft.title, synopsis=draft.synopsis,
@@ -276,6 +301,11 @@ class ApprovedPlanLLMExecutor:
                 validation_status="PASSED", ready_for_playback=True,
             ))
         same_story = source and snapshot.request["intent"] in ("continue", "revise")
+        prior_state = source.continuity_snapshot if source else {}
+        unresolved = list(prior_state.get("unresolved_threads") or [])
+        for episode in episodes:
+            unresolved = [thread for thread in unresolved if thread not in episode.closed_threads]
+            unresolved.extend(thread for thread in episode.new_open_threads if thread not in unresolved)
         delivery = StoryDelivery(
             story_id=source.story_id if same_story else uuid.uuid4().hex,
             story_version_id=uuid.uuid4().hex,
@@ -289,7 +319,17 @@ class ApprovedPlanLLMExecutor:
             tags=[prefs.genre, prefs.tone_style, prefs.audience_band, prefs.content_rating],
             story_mode=prefs.story_mode, character_snapshot=preview.character_snapshots,
             outline=preview.plan, episodes=episodes,
-            continuity_state={"source": source.model_dump(mode="json") if source else None},
+            rule_versions=preview.rule_versions,
+            continuity_state={
+                "source_version_id": source.story_version_id if source else None,
+                "facts": [*(prior_state.get("facts") or []), *(
+                    fact for ep in episodes for fact in ep.fact_delta
+                )],
+                "relationships": [*(prior_state.get("relationships") or []), *(
+                    change for ep in episodes for change in ep.relationship_delta
+                )],
+                "unresolved_threads": unresolved,
+            },
             quality_report={"validation_status": "FAILED"},
         )
         judgement = self.provider.complete_structured(
@@ -306,6 +346,7 @@ class ApprovedPlanLLMExecutor:
         report = validate_story_delivery(delivery).model_copy(update={
             "outline_alignment_passed": judgement.outline_alignment_passed,
             "continuity_passed": judgement.continuity_passed,
+            "content_rating_passed": judgement.content_rating_passed,
             "warnings": judgement.reasons,
         })
         if not judgement.content_rating_passed:
@@ -315,7 +356,13 @@ class ApprovedPlanLLMExecutor:
             })
         if not judgement.outline_alignment_passed or not judgement.continuity_passed:
             report = report.model_copy(update={"validation_status": "FAILED"})
-        return delivery.model_copy(update={"quality_report": report})
+        return delivery.model_copy(update={
+            "quality_report": report,
+            "model_trace": [
+                *preview.model_trace,
+                *getattr(self.provider, "call_history", [])[trace_start:],
+            ],
+        })
 
 
 class DeterministicPerformanceAnnotator:

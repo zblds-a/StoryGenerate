@@ -57,6 +57,7 @@ def validate_story_delivery(delivery: StoryDelivery) -> PerformanceValidationRep
     spoken = [u for u in utterances if u.kind in SPOKEN_KINDS]
     errors = [error for utterance in utterances for error in validate_utterance(utterance)]
     count = len(spoken)
+    emotion_valid = sum(bool(u.emotion) for u in spoken)
     tone_valid = sum(bool(u.emotion and (u.tone_instruction or "").strip()) for u in spoken)
     emphasis_valid = sum(bool(u.emphasis) for u in spoken)
     span_total = sum(len(u.emphasis) for u in spoken)
@@ -71,6 +72,7 @@ def validate_story_delivery(delivery: StoryDelivery) -> PerformanceValidationRep
     return PerformanceValidationReport(
         validation_status="PASSED" if count > 0 and not errors else "FAILED",
         spoken_line_count=count,
+        emotion_coverage=emotion_valid / count if count else 0.0,
         tone_coverage=tone_valid / count if count else 0.0,
         emphasis_coverage=emphasis_valid / count if count else 0.0,
         emphasis_span_validity=span_valid / span_total if span_total else 0.0,

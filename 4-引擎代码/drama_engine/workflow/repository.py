@@ -8,6 +8,7 @@ from typing import Any
 
 from sqlalchemy.orm import Session
 from ..core.settings import get_settings
+from ..config import PROMPT_VERSION, RuleLibrary
 
 from ..persistence.models import (
     CharacterProfileRevisionModel,
@@ -55,6 +56,12 @@ class InMemoryWorkflowRepository:
         self._version_principals: dict[str, str] = {}
         self._profiles: dict[tuple[str, str], list[dict[str, Any]]] = {}
         self._playback_events: list[dict[str, Any]] = []
+
+    def commit(self) -> None:
+        return None
+
+    def rollback(self) -> None:
+        return None
 
     def create_plan(
         self,
@@ -170,7 +177,7 @@ class InMemoryWorkflowRepository:
             values = [item for item in self._versions.values() if self._version_principals[item.story_version_id] == principal_id]
             if series_id:
                 values = [item for item in values if item.series_id == series_id]
-            return sorted(values, key=lambda item: item.created_at, reverse=True)
+            return list(reversed(values))
 
     def resolve_source(self, selector: SourceSelector, principal_id: str) -> ResolvedSourceReference:
         with self._lock:
@@ -182,7 +189,11 @@ class InMemoryWorkflowRepository:
                 if delivery and self._version_principals.get(delivery.story_version_id) != principal_id:
                     delivery = None
             elif selector.type == "last_played":
-                events = [e for e in self._playback_events if e["principal_id"] == principal_id]
+                events = [
+                    e for e in self._playback_events
+                    if e["principal_id"] == principal_id
+                    and self._version_principals.get(e["story_version_id"]) == principal_id
+                ]
                 if selector.series_id:
                     events = [
                         e for e in events
@@ -230,6 +241,8 @@ class InMemoryWorkflowRepository:
 
     def record_playback_event(self, event: dict[str, Any]) -> None:
         with self._lock:
+            if self._version_principals.get(event["story_version_id"]) != event["principal_id"]:
+                raise WorkflowNotFoundError("STORY_VERSION_NOT_FOUND")
             payload = dict(event)
             payload.setdefault("occurred_at", utcnow())
             self._playback_events.append(payload)
@@ -240,6 +253,12 @@ class SqlAlchemyWorkflowRepository:
 
     def __init__(self, session: Session):
         self.session = session
+
+    def commit(self) -> None:
+        self.session.commit()
+
+    def rollback(self) -> None:
+        self.session.rollback()
 
     def create_plan(self, request, context: OperationContext, preview: PlanPreview) -> PlanPreview:
         row = StoryPlanModel(
@@ -359,7 +378,7 @@ class SqlAlchemyWorkflowRepository:
             return job
 
     def get_job(self, job_id: str) -> GenerationJob | None:
-        row = self.session.query(StoryJobModel).filter_by(job_id=job_id).first()
+        row = self.session.query(StoryJobModel).filter_by(job_id=job_id).populate_existing().first()
         return GenerationJob.model_validate(row.input_snapshot["job"]) if row and row.input_snapshot else None
 
     def save_job(self, job: GenerationJob) -> GenerationJob:
@@ -414,7 +433,7 @@ class SqlAlchemyWorkflowRepository:
         query = self.session.query(StoryVersionModel).filter_by(principal_id=principal_id)
         if series_id:
             query = query.filter_by(series_id=series_id)
-        return [StoryDelivery.model_validate(row.delivery_json) for row in query.order_by(StoryVersionModel.created_at.desc()).all()]
+        return [StoryDelivery.model_validate(row.delivery_json) for row in query.order_by(StoryVersionModel.id.desc()).all()]
 
     def resolve_source(self, selector: SourceSelector, principal_id: str) -> ResolvedSourceReference:
         row = None
@@ -433,7 +452,7 @@ class SqlAlchemyWorkflowRepository:
             )
             if selector.series_id:
                 event_query = event_query.filter(StoryVersionModel.series_id == selector.series_id)
-            event = event_query.order_by(PlaybackEventModel.occurred_at.desc()).first()
+            event = event_query.order_by(PlaybackEventModel.occurred_at.desc(), PlaybackEventModel.id.desc()).first()
             if event:
                 row = self.session.query(StoryVersionModel).filter_by(
                     story_version_id=event.story_version_id, principal_id=principal_id
@@ -447,7 +466,7 @@ class SqlAlchemyWorkflowRepository:
                 query = query.filter_by(series_id=selector.series_id)
             if selector.story_id:
                 query = query.filter_by(story_id=selector.story_id)
-            row = query.order_by(StoryVersionModel.created_at.desc()).first()
+            row = query.order_by(StoryVersionModel.id.desc()).first()
         if row is None:
             raise WorkflowNotFoundError("SOURCE_NOT_FOUND")
         delivery = StoryDelivery.model_validate(row.delivery_json)
@@ -486,6 +505,11 @@ class SqlAlchemyWorkflowRepository:
         }
 
     def record_playback_event(self, event: dict[str, Any]) -> None:
+        version = self.session.query(StoryVersionModel).filter_by(
+            story_version_id=event["story_version_id"], principal_id=event["principal_id"]
+        ).first()
+        if version is None:
+            raise WorkflowNotFoundError("STORY_VERSION_NOT_FOUND")
         self.session.add(PlaybackEventModel(**event))
         self.session.flush()
 
@@ -500,6 +524,8 @@ def _validate_approval(
         raise WorkflowConflictError("STALE_PLAN")
     if plan.plan_fingerprint != fingerprint:
         raise WorkflowConflictError("STALE_PLAN")
+    if plan.rule_versions and plan.rule_versions != _rule_versions():
+        raise WorkflowConflictError("STALE_PLAN")
     if current_profile_revisions is not None:
         for character_id, approved_revision in plan.character_profile_revision_map.items():
             if current_profile_revisions.get(character_id) != approved_revision:
@@ -513,6 +539,16 @@ def _model_mapping_snapshot() -> dict[str, str]:
         "BALANCED": settings.llm_balanced_model,
         "STRONG": settings.llm_strong_model,
         "LONG": settings.llm_long_model,
+    }
+
+
+def _rule_versions() -> dict[str, str]:
+    lib = RuleLibrary.load()
+    return {
+        "formula": lib.formula_version,
+        "timetravel": lib.timetravel_version,
+        "continuity": lib.continuity_version,
+        "prompt": PROMPT_VERSION,
     }
 
 
@@ -533,6 +569,23 @@ def _validate_source_version(repository, request: dict[str, Any], plan: PlanPrev
 def _source_from_delivery(
     delivery: StoryDelivery, reason: str, episode_id: str | None, position: int | None,
 ) -> ResolvedSourceReference:
+    content_snapshot = {
+        "approved_outline": delivery.outline.model_dump(mode="json"),
+        "episodes": [{
+            "episode_id": episode.episode_id,
+            "index": episode.index,
+            "title": episode.title,
+            "summary": episode.episode_summary,
+            "fact_delta": episode.fact_delta,
+            "relationship_delta": episode.relationship_delta,
+            "new_open_threads": episode.new_open_threads,
+            "closed_threads": episode.closed_threads,
+        } for episode in delivery.episodes],
+    }
+    if episode_id:
+        selected = next((episode for episode in delivery.episodes if episode.episode_id == episode_id), None)
+        if selected:
+            content_snapshot["selected_episode"] = selected.model_dump(mode="json")
     return ResolvedSourceReference(
         story_id=delivery.story_id,
         story_version_id=delivery.story_version_id,
@@ -543,4 +596,5 @@ def _source_from_delivery(
         last_played_position_ms=position,
         story_summary=delivery.summary,
         continuity_snapshot=delivery.continuity_state,
+        source_content_snapshot=content_snapshot,
     )

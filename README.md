@@ -1,6 +1,6 @@
 # StoryGenerate — AI 故事生成引擎 v0.2.1
 
-> **Phase 0–9 Roadmap Complete. 428 tests / 0 failures.**
+> **原 Phase 0–9 Roadmap 完成；获批大纲工作流正在进行真实模型验收。**
 
 一个完整的 AI 故事生成引擎，将爆款故事的结构规律（角色槽位、情节节拍、人物选择规律、事实账本、证据评审）编译成可执行的确定性流水线。支持多故事模式（病毒短剧 / 通用 / 悬疑推理解谜 / 连续剧连载）、多内容形态（广播剧 / 散文体 / 小说 / 口述故事 / 单口喜剧 / 相声）、Long-form 异步任务、SQL 持久化断点续传、角色记忆系统。
 
@@ -141,10 +141,12 @@
 pip install -r 4-引擎代码/requirements.txt
 ```
 
+新工作流推荐从仓库根目录安装：`python -m pip install -e '.[dev]'`。
+
 ### 运行测试
 
 ```bash
-# 全部 428 个测试
+# 全部单元测试（包含原有 428 项）
 python -m pytest tests/unit/ -v
 
 # 单 Phase 测试
@@ -172,6 +174,25 @@ python -m drama_engine.cli --idea "..." --provider env
 ```
 
 引擎内置 `MockLLMProvider`，**无网络、无密钥、无 GPU 也能端到端跑通**。
+
+### 获批大纲工作流（新增）
+
+`drama_engine.workflow` 提供框架无关的 `StoryWorkflowService` 与 JSON Schema。正式 Create 流程为
+`prepare_story_plan → revise_story_plan（可选）→ approve_story_plan → generate_from_approved_plan`。
+生成入口只接收已持久化审批快照的 Job ID；交付版本须通过逐句演绎、集数、Mode、大纲与模型质量门。
+`continue/revise/remix` 也先产出 Plan，版本谱系保留来源 ID；旧 `run_pipeline` 是兼容入口。
+
+正式故事执行器使用 `ApprovedPlanLLMExecutor`、`LLMPlanGenerator` 和 `SqlAlchemyWorkflowRepository`。
+将 `DRAMA_LLM_API_KEY`、`DATABASE_URL` 注入运行进程后，先执行 `alembic upgrade head`，
+应用服务会在每次状态转移后提交 SQLAlchemy Session；调用方不要把同一 Session 用于其它未提交业务写入。
+`content_form` 首发仅接受 `audio_drama`；
+`120/180/300` 秒为产品值，`90/150` 秒仍兼容。SQLite 只用于快速测试。
+
+真实模型网关在 2026-10-08 探测时，原 Fast 模型 `deepseek-v4-flash` 返回 HTTP 404。
+当前验收显式设置 `STORY_LLM_FAST_MODEL=qwen/qwen3.6-flash`；其余 Tier 沿用既定映射。
+运行 `python tests/acceptance/probe_models.py` 可重新探测五个模型，
+`python tests/acceptance/real_create_matrix.py` 可执行 12 个固定真实 Create 样本。
+这两个脚本均要求真实 API Key，不会回落 Mock。PostgreSQL 事务测试需要 `TEST_DATABASE_URL`。
 
 ---
 

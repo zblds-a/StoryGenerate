@@ -9,6 +9,7 @@ from pydantic import TypeAdapter
 from .adapters import PlanGenerator, StoryExecutor
 from .performance import validate_story_delivery
 from .repository import WorkflowConflictError, WorkflowNotFoundError
+from .repository import _rule_versions
 from .schemas import (
     AudienceBand,
     CharacterSnapshot,
@@ -34,6 +35,10 @@ _CANON_LOCKED_FIELDS = {
 }
 
 
+class GenerationCancelled(WorkflowConflictError):
+    """Cancellation requested before a generated candidate was published."""
+
+
 class StoryWorkflowService:
     def __init__(self, repository, plan_generator: PlanGenerator, story_executor: StoryExecutor):
         self.repository = repository
@@ -51,12 +56,24 @@ class StoryWorkflowService:
         source = None
         if request.intent != StoryIntent.CREATE:
             source = self.repository.resolve_source(request.source_selector, context.principal_id)
+            if request.intent == StoryIntent.REVISE:
+                target_episode_id = request.edit.target.get("episode_id") or source.episode_id
+                if target_episode_id:
+                    delivery = self.repository.get_story_version(source.story_version_id)
+                    selected = next((ep for ep in delivery.episodes if ep.episode_id == target_episode_id), None)
+                    if selected:
+                        content_snapshot = dict(source.source_content_snapshot)
+                        content_snapshot["selected_episode"] = selected.model_dump(mode="json")
+                        source = source.model_copy(update={"source_content_snapshot": content_snapshot})
         characters = self._resolve_characters(request, context)
         impact_analysis = self._analyze_impact(request, source)
         explicit_fields = sorted(request.creation_preferences.model_fields_set)
         preferences, auto_fields = self._resolve_preferences(request)
+        rule_versions = _rule_versions()
         request = request.model_copy(update={"creation_preferences": preferences})
+        trace_start = len(getattr(getattr(self.plan_generator, "provider", None), "call_history", []))
         content = self.plan_generator.generate(request, source, characters)
+        model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
         self._validate_plan_shape(content, preferences)
         plan_id = uuid.uuid4().hex
         payload = {
@@ -65,6 +82,7 @@ class StoryWorkflowService:
             "characters": [item.model_dump(mode="json") for item in characters],
             "source": source.model_dump(mode="json") if source else None,
             "impact_analysis": impact_analysis,
+            "rule_versions": rule_versions,
         }
         preview = PlanPreview(
             plan_id=plan_id,
@@ -78,10 +96,14 @@ class StoryWorkflowService:
             character_profile_revision_map={item.character_id: item.profile_revision for item in characters},
             auto_filled_fields=auto_fields,
             impact_analysis=impact_analysis,
+            model_trace=model_trace,
+            rule_versions=rule_versions,
             explicit_fields=explicit_fields,
             plan_fingerprint=plan_fingerprint(payload),
         )
-        return self.repository.create_plan(request, context, preview)
+        result = self.repository.create_plan(request, context, preview)
+        self.repository.commit()
+        return result
 
     def revise_story_plan(self, plan_id: str, expected_revision: int, feedback: str) -> PlanPreview:
         if not feedback.strip():
@@ -92,11 +114,17 @@ class StoryWorkflowService:
             raise WorkflowNotFoundError(plan_id)
         if current.status != PlanStatus.AWAITING_APPROVAL or current.plan_revision != expected_revision:
             raise WorkflowConflictError("STALE_PLAN")
+        if current.rule_versions != _rule_versions():
+            raise WorkflowConflictError("STALE_PLAN")
         request = _REQUEST_ADAPTER.validate_python(raw_request)
+        trace_start = len(getattr(getattr(self.plan_generator, "provider", None), "call_history", []))
         content = self.plan_generator.generate(
             request, current.source_reference, current.character_snapshots,
             previous=current.plan, feedback=feedback,
         )
+        model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
+        if not content.change_summary:
+            content = content.model_copy(update={"change_summary": [feedback.strip()]})
         self._validate_plan_shape(content, current.resolved_preferences)
         payload = {
             "plan": content.model_dump(mode="json"),
@@ -104,14 +132,18 @@ class StoryWorkflowService:
             "characters": [item.model_dump(mode="json") for item in current.character_snapshots],
             "source": current.source_reference.model_dump(mode="json") if current.source_reference else None,
             "impact_analysis": current.impact_analysis,
+            "rule_versions": current.rule_versions,
         }
         revised = current.model_copy(update={
             "plan_revision": expected_revision + 1,
             "plan": content,
             "plan_fingerprint": plan_fingerprint(payload),
+            "model_trace": [*current.model_trace, *model_trace],
             "updated_at": utcnow(),
         })
-        return self.repository.save_revision(revised, feedback)
+        result = self.repository.save_revision(revised, feedback)
+        self.repository.commit()
+        return result
 
     def approve_story_plan(
         self, plan_id: str, expected_revision: int,
@@ -120,9 +152,11 @@ class StoryWorkflowService:
         plan = self.repository.get_plan(plan_id)
         if plan is None:
             raise WorkflowNotFoundError(plan_id)
-        return self.repository.approve_and_create_job(
+        result = self.repository.approve_and_create_job(
             plan_id, expected_revision, fingerprint, idempotency_key
         )
+        self.repository.commit()
+        return result
 
     def generate_from_approved_plan(self, job_id: str):
         job = self.repository.get_job(job_id)
@@ -136,17 +170,27 @@ class StoryWorkflowService:
             "status": WorkflowJobStatus.RUNNING, "stage": "generation", "progress_pct": 10,
         })
         self.repository.save_job(running)
+        self.repository.commit()
         try:
             delivery = self.story_executor.execute(job.input_snapshot)
+            latest = self.repository.get_job(job_id)
+            if latest.status == WorkflowJobStatus.CANCEL_REQUESTED:
+                self.repository.save_job(latest.model_copy(update={
+                    "status": WorkflowJobStatus.CANCELLED, "stage": "cancelled",
+                }))
+                self.repository.commit()
+                raise GenerationCancelled("JOB_CANCELLED")
             validating = running.model_copy(update={
                 "status": WorkflowJobStatus.VALIDATING, "stage": "validating", "progress_pct": 90,
             })
             self.repository.save_job(validating)
+            self.repository.commit()
             report = validate_story_delivery(delivery)
             executor_report = delivery.quality_report
             report = report.model_copy(update={
                 "outline_alignment_passed": executor_report.outline_alignment_passed,
                 "continuity_passed": executor_report.continuity_passed,
+                "content_rating_passed": executor_report.content_rating_passed,
                 "warnings": [*report.warnings, *executor_report.warnings],
             })
             approved = job.input_snapshot.preview
@@ -168,6 +212,7 @@ class StoryWorkflowService:
                 and executor_report.validation_status == "PASSED"
                 and report.outline_alignment_passed
                 and report.continuity_passed
+                and report.content_rating_passed
                 and episode_ready and snapshot_match
             )
             delivery = delivery.model_copy(update={
@@ -185,8 +230,12 @@ class StoryWorkflowService:
                 "result_story_version_id": delivery.story_version_id,
             })
             self.repository.save_job(succeeded)
+            self.repository.commit()
             return delivery
+        except GenerationCancelled:
+            raise
         except Exception as exc:
+            self.repository.rollback()
             failed = running.model_copy(update={
                 "status": WorkflowJobStatus.FAILED,
                 "stage": "failed",
@@ -194,6 +243,7 @@ class StoryWorkflowService:
                 "error_message": str(exc),
             })
             self.repository.save_job(failed)
+            self.repository.commit()
             raise
 
     def get_story_plan(self, plan_id: str):
@@ -219,7 +269,9 @@ class StoryWorkflowService:
             updated = job.model_copy(update={"status": WorkflowJobStatus.CANCEL_REQUESTED})
         else:
             return job
-        return self.repository.save_job(updated)
+        result = self.repository.save_job(updated)
+        self.repository.commit()
+        return result
 
     def update_character_profile(
         self, character_id: str, expected_revision: int, patch: dict[str, Any],
@@ -229,9 +281,11 @@ class StoryWorkflowService:
         if forbidden:
             raise ValueError(f"CHARACTER_CANON_LOCKED: {forbidden}")
         context = operation_context or OperationContext()
-        return self.repository.update_character_profile(
+        result = self.repository.update_character_profile(
             context.principal_id, character_id, expected_revision, patch
         )
+        self.repository.commit()
+        return result
 
     def record_playback_event(self, event: dict[str, Any], operation_context=None) -> None:
         context = operation_context or OperationContext()
@@ -239,6 +293,7 @@ class StoryWorkflowService:
         payload.setdefault("event_id", uuid.uuid4().hex)
         payload["principal_id"] = context.principal_id
         self.repository.record_playback_event(payload)
+        self.repository.commit()
 
     @staticmethod
     def _resolve_preferences(request):
@@ -266,15 +321,20 @@ class StoryWorkflowService:
                 raise ValueError(f"CHARACTER_NOT_FOUND: {character_id}")
             canon = dict(raw.get("canon") or {})
             profile = dict(raw.get("profile") or {})
-            profile.update(request.characters.temporary_profile_overrides.get(character_id, {}))
+            overrides = request.characters.temporary_profile_overrides.get(character_id, {})
+            forbidden = sorted(_CANON_LOCKED_FIELDS & set(overrides))
+            if forbidden:
+                raise ValueError(f"CHARACTER_CANON_LOCKED: {forbidden}")
+            profile.update(overrides)
+            current_revision = raw.get("profile_revision", 1)
+            requested_revision = request.characters.character_profile_revisions.get(character_id)
+            if requested_revision is not None and requested_revision != current_revision:
+                raise WorkflowConflictError("CHARACTER_VERSION_CONFLICT")
             binding = bindings.get(character_id, {})
             output.append(CharacterSnapshot(
                 character_id=character_id,
                 canon_revision=raw.get("canon_revision", 1),
-                profile_revision=raw.get(
-                    "profile_revision",
-                    request.characters.character_profile_revisions.get(character_id, 1),
-                ),
+                profile_revision=current_revision,
                 canon=canon,
                 profile=profile,
                 role_id=binding.get("story_role_id"),

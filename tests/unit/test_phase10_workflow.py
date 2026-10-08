@@ -9,7 +9,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
 from drama_engine.persistence.models import Base
+from drama_engine.config import RuleLibrary
 from drama_engine.workflow.performance import normalize_utterance, validate_story_delivery, validate_utterance
+from drama_engine.workflow.adapters import LLMPerformanceAnnotator
 from drama_engine.workflow.repository import (
     InMemoryWorkflowRepository,
     SqlAlchemyWorkflowRepository,
@@ -134,6 +136,13 @@ def make_service(repository=None, valid=True):
 
 
 class TestRequestContract:
+    @pytest.mark.parametrize("duration", [120, 180, 300])
+    def test_product_duration_beat_sheet_is_contiguous(self, duration):
+        sheet = RuleLibrary.load().beat_sheet_for(duration)
+        assert sheet[0]["range"][0] == 0
+        assert sheet[-1]["range"][1] == duration
+        assert all(left["range"][1] == right["range"][0] for left, right in zip(sheet, sheet[1:]))
+
     def test_teen_cannot_request_mature_content(self):
         with pytest.raises(ValidationError):
             CreationPreferences(audience_band="14-17", content_rating="mature_non_explicit")
@@ -230,6 +239,28 @@ class TestGenerationAndPerformanceGate:
             service.generate_from_approved_plan(job.job_id)
         assert service.get_generation_job(job.job_id).status == WorkflowJobStatus.FAILED
 
+    @pytest.mark.parametrize("field,value", [
+        ("emotion", None), ("tone_instruction", None), ("emphasis", []),
+        ("performer_id", None),
+    ])
+    def test_each_required_cue_independently_blocks_ready(self, field, value):
+        class BrokenCueExecutor(FixedStoryExecutor):
+            def execute(self, snapshot):
+                delivery = super().execute(snapshot)
+                episode = delivery.episodes[0]
+                scene = episode.scenes[0]
+                broken = scene.utterances[0].model_copy(update={field: value})
+                scene = scene.model_copy(update={"utterances": [broken]})
+                episode = episode.model_copy(update={"scenes": [scene]})
+                return delivery.model_copy(update={"episodes": [episode]})
+
+        service = StoryWorkflowService(InMemoryWorkflowRepository(), FixedPlanGenerator(), BrokenCueExecutor())
+        plan = service.prepare_story_plan(make_request())
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, f"missing-{field}")
+        with pytest.raises(ValueError, match="VALIDATION_FAILED"):
+            service.generate_from_approved_plan(job.job_id)
+        assert service.get_generation_job(job.job_id).status == WorkflowJobStatus.FAILED
+
     def test_missing_target_episode_cannot_be_ready(self):
         class ShortExecutor(FixedStoryExecutor):
             def execute(self, snapshot):
@@ -242,6 +273,19 @@ class TestGenerationAndPerformanceGate:
         with pytest.raises(ValueError, match="VALIDATION_FAILED"):
             service.generate_from_approved_plan(job.job_id)
         assert service.get_generation_job(job.job_id).status == WorkflowJobStatus.FAILED
+
+    def test_cancel_request_prevents_publishing_after_generation(self):
+        class CancellingExecutor(FixedStoryExecutor):
+            def execute(self, snapshot):
+                service.cancel_generation_job(job.job_id)
+                return super().execute(snapshot)
+
+        service = StoryWorkflowService(InMemoryWorkflowRepository(), FixedPlanGenerator(), CancellingExecutor())
+        plan = service.prepare_story_plan(make_request())
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "cancel")
+        with pytest.raises(WorkflowConflictError, match="JOB_CANCELLED"):
+            service.generate_from_approved_plan(job.job_id)
+        assert service.get_generation_job(job.job_id).status == WorkflowJobStatus.CANCELLED
 
     def test_emphasis_uses_unicode_codepoint_half_open_span(self):
         utterance = normalize_utterance(Utterance(
@@ -257,6 +301,17 @@ class TestGenerationAndPerformanceGate:
 
     def test_sfx_does_not_require_spoken_cues(self):
         assert validate_utterance(Utterance(line_id="sfx1", kind="sfx", audio_cue_ref="door")) == []
+
+    def test_known_audio_aliases_are_normalized_but_unknown_kind_fails(self):
+        class NoCallProvider:
+            def complete_structured(self, *args, **kwargs):
+                raise AssertionError("non-spoken cue must not invoke the model")
+
+        annotator = LLMPerformanceAnnotator(NoCallProvider())
+        output = annotator.annotate([{"line_id": "cue", "kind": "bgm", "text": "轻音乐"}], {})
+        assert output[0].kind == "music"
+        with pytest.raises(ValueError, match="unsupported utterance kinds"):
+            annotator.annotate([{"line_id": "bad", "kind": "laser", "text": ""}], {})
 
 
 class TestSourcesAndLineage:
@@ -400,3 +455,19 @@ class TestSqlRepository:
                 service.resolve_story_reference(
                     SourceSelector(type="by_id", story_version_id=delivery.story_version_id), bob
                 )
+
+    def test_failed_generation_state_survives_session_restart(self, tmp_path):
+        engine = create_engine(f"sqlite:///{tmp_path / 'failed.db'}")
+        Base.metadata.create_all(engine)
+        with Session(engine) as session:
+            service = make_service(SqlAlchemyWorkflowRepository(session), valid=False)
+            plan = service.prepare_story_plan(make_request())
+            job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "failed-job")
+            with pytest.raises(ValueError, match="VALIDATION_FAILED"):
+                service.generate_from_approved_plan(job.job_id)
+            job_id = job.job_id
+        with Session(engine) as session:
+            service = make_service(SqlAlchemyWorkflowRepository(session))
+            restored = service.get_generation_job(job_id)
+            assert restored.status == WorkflowJobStatus.FAILED
+            assert restored.result_story_version_id is None

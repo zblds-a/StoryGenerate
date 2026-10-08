@@ -57,6 +57,7 @@ class OpenAICompatProvider(BaseLLMProvider):
         self.api_key = api_key
         self.base_url = base_url.rstrip("/")
         self.max_retries = max_retries
+        self.call_history: list[dict[str, Any]] = []
 
         # 分层超时
         self._timeout = httpx.Timeout(
@@ -129,10 +130,20 @@ class OpenAICompatProvider(BaseLLMProvider):
 
                 # 非重试型错误：立即失败
                 if status in HTTP_NON_RETRYABLE_STATUSES:
+                    self.call_history.append({
+                        "role": spec.role, "requested_model": spec.model,
+                        "attempt": attempt + 1, "error": f"HTTP {status}",
+                        "latency_ms": int((time.perf_counter() - t0) * 1000),
+                    })
                     raise classify_http_error(status, f"HTTP {status}")
 
                 # 重试型错误
                 if status in HTTP_RETRYABLE_STATUSES:
+                    self.call_history.append({
+                        "role": spec.role, "requested_model": spec.model,
+                        "attempt": attempt + 1, "error": f"HTTP {status}",
+                        "latency_ms": int((time.perf_counter() - t0) * 1000),
+                    })
                     last_error = classify_http_error(status, f"HTTP {status}")
                     if attempt < self.max_retries:
                         time.sleep(1.5 * (attempt + 1))
@@ -143,19 +154,32 @@ class OpenAICompatProvider(BaseLLMProvider):
                 data = resp.json()
                 latency = int((time.perf_counter() - t0) * 1000)
                 usage = data.get("usage") or {}
-                return LLMResult(
+                result = LLMResult(
                     text=data["choices"][0]["message"]["content"] or "",
                     model=data.get("model", spec.model),
                     input_tokens=usage.get("prompt_tokens") or estimate_tokens(system + user),
                     output_tokens=usage.get("completion_tokens") or 0,
                     latency_ms=latency,
                 )
+                self.call_history.append({
+                    "role": spec.role, "requested_model": spec.model,
+                    "actual_model": result.model, "attempt": attempt + 1,
+                    "input_tokens": result.input_tokens,
+                    "output_tokens": result.output_tokens,
+                    "latency_ms": result.latency_ms,
+                })
+                return result
 
             except (GenerationTimeoutError, ModelInvalidOutputError,
                     ModelUnavailableError, ModelTimeoutError):
                 raise  # 这些已经是我们的错误类型，直接抛出
 
             except httpx.TimeoutException as exc:
+                self.call_history.append({
+                    "role": spec.role, "requested_model": spec.model,
+                    "attempt": attempt + 1, "error": "timeout",
+                    "latency_ms": int((time.perf_counter() - t0) * 1000),
+                })
                 last_error = ModelTimeoutError(str(exc))
                 if attempt < self.max_retries:
                     time.sleep(1.5 * (attempt + 1))
@@ -164,12 +188,22 @@ class OpenAICompatProvider(BaseLLMProvider):
             except httpx.HTTPStatusError as exc:
                 code = exc.response.status_code
                 last_error = classify_http_error(code, str(exc))
+                self.call_history.append({
+                    "role": spec.role, "requested_model": spec.model,
+                    "attempt": attempt + 1, "error": f"HTTP {code}",
+                    "latency_ms": int((time.perf_counter() - t0) * 1000),
+                })
                 if code in HTTP_RETRYABLE_STATUSES and attempt < self.max_retries:
                     time.sleep(1.5 * (attempt + 1))
                     continue
                 raise last_error
 
             except Exception as exc:
+                self.call_history.append({
+                    "role": spec.role, "requested_model": spec.model,
+                    "attempt": attempt + 1, "error": type(exc).__name__,
+                    "latency_ms": int((time.perf_counter() - t0) * 1000),
+                })
                 last_error = ModelUnavailableError(str(exc))
                 if attempt < self.max_retries:
                     time.sleep(1.5 * (attempt + 1))
