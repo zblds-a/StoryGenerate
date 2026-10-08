@@ -170,16 +170,24 @@ class CrosstalkValidator:
             return False, "crosstalk: empty output"
         if len(output.strip()) < 20:
             return False, "crosstalk: output too short"
-        # Must have exactly two performer lanes
+        # Detect declared performer roles
         text_lower = output.lower()
-        role_count = sum(1 for r in ["dougen", "penggen", "逗哏", "捧哏", "p1", "p2"] if r.lower() in text_lower)
-        if role_count < 2:
+        found_roles = {r for r in self.VALID_ROLES if r.lower() in text_lower}
+        dougen_present = any(r in found_roles for r in {"dougen", "逗哏", "p1", "甲"})
+        penggen_present = any(r in found_roles for r in {"penggen", "捧哏", "p2", "乙"})
+        if not dougen_present or not penggen_present:
             return False, "crosstalk: requires two performer roles (dougen/penggen or equivalent)"
-        # Both performers must have content — not just one speaking
+        # Both performers must have dialogue
         lines = [l.strip() for l in output.split("\n") if l.strip()]
         speaker_lines = [l for l in lines if "：" in l or ":" in l]
         if len(speaker_lines) < 2:
             return False, "crosstalk: both performers must have dialogue"
+        # Explicitly check for undeclared speakers
+        for line in speaker_lines:
+            prefix = line.split("：")[0].split(":")[0].strip().lower()
+            if prefix and len(prefix) <= 10:
+                if prefix not in self.VALID_ROLES:
+                    return False, f"crosstalk: unknown exchange speaker '{prefix}'"
         return True, ""
 
 

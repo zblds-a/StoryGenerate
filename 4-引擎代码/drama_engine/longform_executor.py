@@ -297,7 +297,7 @@ def run_long_form(
     content_form: str = "prose_story",
     target_chapters: int = 3,
     fail_at_chapter: int | None = None,
-    checkpoint_repo: InMemoryCheckpointRepository | None = None,
+    checkpoint_repo: Any = None,
     resume_from: str | None = None,
     thread_id: str = "local",
 ) -> dict[str, Any]:
@@ -346,7 +346,7 @@ def _fresh_long_form(
     run_id: str, story_id: str, brief: Brief, workspace: str, lib: Any, runtime: Any,
     story_mode: str, story_template_id: str | None, story_template_version: int | None,
     content_form: str, target_chapters: int, fail_at_chapter: int | None,
-    checkpoint_repo: InMemoryCheckpointRepository, thread_id: str,
+    checkpoint_repo: Any, thread_id: str,
 ) -> dict[str, Any]:
     """Fresh long-form generation."""
     from .longform import resolve_long_form_profile
@@ -438,7 +438,7 @@ def _resume_long_form(
     run_id: str, brief: Brief, workspace: str, lib: Any, runtime: Any,
     story_mode: str, story_template_id: str | None, story_template_version: int | None,
     content_form: str, fail_at_chapter: int | None,
-    checkpoint_repo: InMemoryCheckpointRepository, thread_id: str,
+    checkpoint_repo: Any, thread_id: str,
 ) -> dict[str, Any]:
     """从 checkpoint 恢复 long-form 执行。"""
     latest = checkpoint_repo.get_latest(run_id)
@@ -537,7 +537,7 @@ def _assemble_long_form_result(
     context: LongFormContext,
     run_id: str,
     story_id: str,
-    checkpoint_repo: InMemoryCheckpointRepository,
+    checkpoint_repo: Any,
 ) -> dict[str, Any]:
     """Assemble final long-form result."""
     chapters_sorted = sorted(context.completed_chapters.values(), key=lambda c: c.chapter_index)
