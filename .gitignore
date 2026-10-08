@@ -27,3 +27,4 @@ Thumbs.db
 
 # Local test artifacts
 .test-tmp/
+*.egg-info/

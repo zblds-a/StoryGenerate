@@ -119,7 +119,7 @@ class StoryJobModel(Base):
     __tablename__ = "story_jobs"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    job_id = Column(String(64), nullable=False, index=True)
+    job_id = Column(String(64), nullable=False, unique=True, index=True)
     request_id = Column(String(64), nullable=False, unique=True)
 
     # Phase 7: long-form linking
@@ -130,6 +130,11 @@ class StoryJobModel(Base):
     current_stage = Column(String(64), nullable=True)
 
     input_json = Column(JSONB().with_variant(JSON, "sqlite"), default=dict)
+    idempotency_key = Column(String(128), nullable=True, unique=True, index=True)
+    approved_plan_id = Column(String(64), nullable=True, index=True)
+    approved_plan_revision = Column(Integer, nullable=True)
+    input_snapshot = Column(JSONB().with_variant(JSON, "sqlite"), default=dict)
+    result_story_version_id = Column(String(64), nullable=True, index=True)
 
     story_mode = Column(String(32), nullable=True)
     mode_version = Column(String(16), nullable=True)
@@ -291,3 +296,96 @@ class CharacterMemoryModel(Base):
         UniqueConstraint("character_id", "source_story_id", "memory_type", "content",
                          name="uq_cm_char_source_type_content"),
     )
+
+
+# ============================================================================
+# Approved-plan story workflow (Phase 10)
+# ============================================================================
+class StoryPlanModel(Base):
+    __tablename__ = "story_plans"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    plan_id = Column(String(64), nullable=False, unique=True, index=True)
+    request_id = Column(String(64), nullable=False, index=True)
+    principal_id = Column(String(128), nullable=False, default="local", index=True)
+    intent = Column(String(32), nullable=False)
+    status = Column(String(32), nullable=False)
+    current_revision = Column(Integer, nullable=False, default=1)
+    request_snapshot = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
+    source_reference = Column(JSONB().with_variant(JSON, "sqlite"), default=dict)
+    created_at = Column(DateTime(timezone=True), default=_utcnow)
+    updated_at = Column(DateTime(timezone=True), default=_utcnow, onupdate=_utcnow)
+
+
+class StoryPlanRevisionModel(Base):
+    __tablename__ = "story_plan_revisions"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    plan_id = Column(String(64), nullable=False, index=True)
+    revision = Column(Integer, nullable=False)
+    status = Column(String(32), nullable=False)
+    plan_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
+    character_snapshot = Column(JSONB().with_variant(JSON, "sqlite"), default=list)
+    source_snapshot = Column(JSONB().with_variant(JSON, "sqlite"), default=dict)
+    fingerprint = Column(String(64), nullable=False)
+    feedback = Column(Text, nullable=True)
+    created_at = Column(DateTime(timezone=True), default=_utcnow)
+
+    __table_args__ = (
+        UniqueConstraint("plan_id", "revision", name="uq_story_plan_revision"),
+    )
+
+
+class StoryVersionModel(Base):
+    __tablename__ = "story_versions"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    story_version_id = Column(String(64), nullable=False, unique=True, index=True)
+    story_id = Column(String(64), nullable=False, index=True)
+    version_no = Column(Integer, nullable=False, default=1)
+    parent_story_version_id = Column(String(64), nullable=True, index=True)
+    lineage_type = Column(String(32), nullable=False)
+    series_id = Column(String(64), nullable=True, index=True)
+    principal_id = Column(String(128), nullable=False, default="local", index=True)
+    approved_plan_id = Column(String(64), nullable=False, index=True)
+    approved_plan_revision = Column(Integer, nullable=False)
+    status = Column(String(32), nullable=False, default="CANDIDATE")
+    ready_for_playback = Column(Integer, nullable=False, default=0)
+    title = Column(String(512), nullable=True)
+    summary = Column(Text, nullable=True)
+    delivery_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
+    continuity_json = Column(JSONB().with_variant(JSON, "sqlite"), default=dict)
+    created_at = Column(DateTime(timezone=True), default=_utcnow)
+
+    __table_args__ = (
+        UniqueConstraint("story_id", "version_no", name="uq_story_version_number"),
+    )
+
+
+class CharacterProfileRevisionModel(Base):
+    __tablename__ = "character_profile_revisions"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    principal_id = Column(String(128), nullable=False, default="local", index=True)
+    character_id = Column(String(64), nullable=False, index=True)
+    revision = Column(Integer, nullable=False)
+    status = Column(String(32), nullable=False, default="active")
+    profile_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
+    created_at = Column(DateTime(timezone=True), default=_utcnow)
+
+    __table_args__ = (
+        UniqueConstraint("principal_id", "character_id", "revision", name="uq_character_profile_revision"),
+    )
+
+
+class PlaybackEventModel(Base):
+    __tablename__ = "playback_events"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    event_id = Column(String(64), nullable=False, unique=True, index=True, default=_new_id)
+    principal_id = Column(String(128), nullable=False, default="local", index=True)
+    story_version_id = Column(String(64), nullable=False, index=True)
+    episode_id = Column(String(64), nullable=True)
+    playback_position_ms = Column(Integer, nullable=False, default=0)
+    event_type = Column(String(32), nullable=False, default="progress")
+    occurred_at = Column(DateTime(timezone=True), default=_utcnow, index=True)
