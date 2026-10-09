@@ -62,7 +62,7 @@ class Settings:
         "behavior_design": 180,
         "fact_ledger": 120,
         "episode_plan": 90,
-        "episode_writer": 120,
+        "episode_writer": 240,
         "episode_beats": 120,
         "judge": 90,
     })

@@ -232,6 +232,12 @@ def draft_episode_contract_errors(
     return estimated, errors
 
 
+def spoken_character_budget(target_duration_sec: int) -> tuple[int, int, int]:
+    """Return the exact count window used by the duration quality gate."""
+    ideal = round(target_duration_sec * 3.5)
+    return (ideal * 17 + 19) // 20, ideal, ideal * 23 // 20
+
+
 class QualityDecision(BaseModel):
     outline_alignment_passed: bool
     continuity_passed: bool
@@ -256,6 +262,7 @@ class ApprovedPlanLLMExecutor:
         episodes: list[EpisodeDelivery] = []
         first_preview_blurb = ""
         for outline in preview.plan.episode_outlines:
+            min_chars, ideal_chars, max_chars = spoken_character_budget(prefs.target_duration_sec)
             system = (
                 "你是广播剧编剧。严格根据用户已审批的大纲写完整正文；不得改变每集目标、关键节拍、结局、"
                 "角色 Canon、受众分级或内容形式。对白与旁白要适合朗读。"
@@ -274,6 +281,8 @@ class ApprovedPlanLLMExecutor:
                 "template_snapshot": preview.template_snapshot,
                 "instruction": (
                     f"创作第{outline.index}集，目标时长{prefs.target_duration_sec}秒。"
+                    f"对白与旁白的文字总量（含标点，按 Unicode 字符计）必须在{min_chars}至{max_chars}字，"
+                    f"尽量接近{ideal_chars}字；音效、音乐、动作说明不计入这个字数。"
                     "每个 major_beat 都要在场景中可辨认地实现；请写足适配时长的对白与旁白。"
                     "dialogue 行必须填写 speaker_role_id；narration 行无需填写。"
                 ),
@@ -287,7 +296,9 @@ class ApprovedPlanLLMExecutor:
                     resolve_spec("episode_writer", tier_map=tier_map), system,
                     user if attempt == 0 else user + (
                         f"\n上次输出未通过：{'；'.join(contract_errors)}。"
-                        "请重写完整本集，调整有效对白与旁白量；对白只能使用审批角色的 role_id，"
+                        f"对白加旁白目标为{ideal_chars}字，允许范围{min_chars}–{max_chars}字；"
+                        "请重写完整本集，严格调整有效对白与旁白量，不要用音效或旁白空话凑数；"
+                        "对白只能使用审批角色的 role_id，"
                         "不能增加新发声角色。保留大纲所有节拍。"
                     ),
                     DraftEpisode,

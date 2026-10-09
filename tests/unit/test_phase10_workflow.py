@@ -16,6 +16,7 @@ from drama_engine.templates.resolver import StoryTemplateResolver
 from drama_engine.workflow.performance import normalize_utterance, validate_story_delivery, validate_utterance
 from drama_engine.workflow.adapters import (
     DraftEpisode, LLMPerformanceAnnotator, draft_episode_contract_errors,
+    spoken_character_budget,
 )
 from drama_engine.workflow.repository import (
     InMemoryWorkflowRepository,
@@ -261,6 +262,10 @@ class TestGenerationAndPerformanceGate:
         estimated, errors = draft_episode_contract_errors(draft, 300, {"role-1"})
         assert estimated < 255
         assert any("duration estimate" in error for error in errors)
+
+    def test_spoken_character_budget_matches_gate(self):
+        assert spoken_character_budget(120) == (357, 420, 483)
+        assert spoken_character_budget(300) == (893, 1050, 1207)
 
     def test_episode_contract_rejects_unapproved_role(self):
         draft = DraftEpisode.model_validate({
