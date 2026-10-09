@@ -10,6 +10,12 @@ from pydantic import BaseModel, Field
 from ..config import RuleLibrary
 from ..llm.router import ModelTierMap, resolve_spec
 from .performance import normalize_utterance, validate_story_delivery
+from .storycraft_prompts import (
+    PLAN_SYSTEM_V2,
+    EPISODE_SYSTEM_V2,
+    PERFORMANCE_SYSTEM_V2,
+    JUDGE_SYSTEM_V2,
+)
 from .schemas import (
     ApprovedPlanSnapshot,
     CharacterSnapshot,
@@ -51,11 +57,7 @@ class LLMPlanGenerator:
 
     def generate(self, request, source, characters, previous=None, feedback="", template=None) -> PlanContent:
         preferences = request.creation_preferences.model_dump(mode="json")
-        system = (
-            "你是 StoryGenerate 的故事策划器。只负责产生待用户审批的大纲，绝不写完整正文。"
-            "大纲必须可供广播剧执行，严格遵守受众、内容分级、角色固定设定、时长和包含/规避项。"
-            "mature_non_explicit 允许成熟主题但禁止露骨色情和极端血腥描写。"
-        )
+        system = PLAN_SYSTEM_V2
         payload = {
             "intent": request.intent,
             "user_instruction": request.user_instruction,
@@ -119,10 +121,7 @@ class LLMPerformanceAnnotator:
         annotations: dict[str, PerformanceAnnotation] = {}
         if spoken:
             tier_map = ModelTierMap(mapping=context["model_mapping_snapshot"]) if context.get("model_mapping_snapshot") else None
-            system = (
-                "你是中文广播剧表演指导。为每条对白或旁白给出自然、可执行的情绪、语气和重音。"
-                "emphasis.span_text 必须逐字存在于原句；同一短语重复时用 occurrence 标明第几次。"
-            )
+            system = PERFORMANCE_SYSTEM_V2
             user = json.dumps({"context": context, "spoken_lines": spoken}, ensure_ascii=False, indent=2)
             pending = spoken
             for attempt in range(3):
@@ -263,13 +262,7 @@ class ApprovedPlanLLMExecutor:
         first_preview_blurb = ""
         for outline in preview.plan.episode_outlines:
             min_chars, ideal_chars, max_chars = spoken_character_budget(prefs.target_duration_sec)
-            system = (
-                "你是广播剧编剧。严格根据用户已审批的大纲写完整正文；不得改变每集目标、关键节拍、结局、"
-                "角色 Canon、受众分级或内容形式。对白与旁白要适合朗读。"
-                "mature_non_explicit 不含露骨色情和极端血腥。"
-                "另写 preview_blurb：给用户播放前看的 1–2 句无剧透简介，交代人物、处境和悬念，"
-                "不揭示真相或结局，不使用‘本故事讲述’等套话。只输出结构化 JSON。"
-            )
+            system = EPISODE_SYSTEM_V2
             user = json.dumps({
                 "approved_plan_fingerprint": snapshot.plan_fingerprint,
                 "story_plan": preview.plan.model_dump(mode="json"),
@@ -384,7 +377,7 @@ class ApprovedPlanLLMExecutor:
         )
         judgement = self.provider.complete_structured(
             resolve_spec("judge", tier_map=tier_map, temperature=0),
-            "你是严格的故事发布质检员。核对获批大纲、跨集连续性与内容分级。只根据输入证据判断，不能默认通过。",
+            JUDGE_SYSTEM_V2,
             json.dumps({
                 "approved_plan": preview.plan.model_dump(mode="json"),
                 "audience_band": prefs.audience_band,
