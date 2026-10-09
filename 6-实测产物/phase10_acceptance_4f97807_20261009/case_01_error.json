@@ -1,0 +1,6 @@
+{
+  "index": 1,
+  "ready": false,
+  "error_type": "ValueError",
+  "error": "EPISODE_CONTRACT_FAILED: episode 1: duration estimate 147s outside 85%-115% of 120s"
+}

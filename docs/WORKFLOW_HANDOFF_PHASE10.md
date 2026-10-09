@@ -96,6 +96,11 @@ StoryVersion 正文与来源身份。正式环境先备份，再运行 `alembic 
 新版工作流现在要求显式提供 `StoryTemplateResolver`，将解析后的模板快照
 写入 Plan、指纹和审批 Job；没有 Resolver 时显式模板请求报错，不再被忽略。
 模板数据库仓库使用 `StoryTemplateModel` 而非直接查询 Pydantic 模型。
-新增持久化快照回归测试后，本次全量单元测试为 477 项通过。
-2026-10-09 检查时 Docker Desktop Linux 引擎未响应，故本轮 PostgreSQL
-集成测试未完成；不要以 SQLite 测试替代正式数据库验收。
+新增持久化快照和字数预算回归测试后，全量单元测试达到 478 项。2026-10-09
+Docker PostgreSQL 16 恢复并保持 healthy，数据库为 `003 (head)`；重复迁移成功，
+PostgreSQL 集成测试 2/2 通过，覆盖并发审批／幂等／重启和模板快照。
+完整发布数据库矩阵仍未执行，详见 `docs/EXPERT_CONSULTATION_2026-10-09.md`。
+
+随后真实批次在 `4f97807` 暴露 120 秒正文生成成 147 秒及模型读取超时；
+`3aa483d` 已给正文节点加入精确目标字数范围并把 Prompt 版本升级至 `p1.3.0`，
+但单例复测遭遇 TLS EOF。当前新 SHA 没有 12/12 READY 证据，不能发布。
