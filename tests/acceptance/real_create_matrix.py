@@ -42,6 +42,7 @@ CASES = [
     ("36-55", "mature_non_explicit", 300, "viral_drama", 4, "都市", "四位邻居因老楼改造冲突而重新审视各自的人生选择。"),
 ]
 REVISED = {2, 5, 8, 11}
+_ATTEMPT_EVIDENCE: dict[int, list[dict]] = {}
 
 
 def run_case(index: int) -> dict:
@@ -73,21 +74,7 @@ def run_case(index: int) -> dict:
         },
     }
     provider = build_provider_from_env()
-    calls = []
-    original_complete = provider.complete
-
-    def tracked_complete(spec, system, user, *args, **kwargs):
-        result = original_complete(spec, system, user, *args, **kwargs)
-        calls.append({
-            "role": spec.role, "requested_model": spec.model,
-            "actual_model": result.model,
-            "input_tokens": result.input_tokens,
-            "output_tokens": result.output_tokens,
-            "latency_ms": result.latency_ms,
-        })
-        return result
-
-    provider.complete = tracked_complete
+    _ATTEMPT_EVIDENCE[index] = provider.call_history
     with tempfile.TemporaryDirectory(prefix="storygenerate-live-", ignore_cleanup_errors=True) as temp:
         engine = create_engine(f"sqlite:///{Path(temp) / 'workflow.db'}")
         Base.metadata.create_all(engine)
@@ -112,10 +99,19 @@ def run_case(index: int) -> dict:
             session.commit()
             delivery = service.generate_from_approved_plan(job.job_id)
             session.commit()
+            attempts = list(provider.call_history)
+            successful = [call for call in attempts if call.get("status") == "success"]
+            targeted_repairs = [
+                call for call in attempts
+                if call.get("attempt_kind") == "targeted_duration_repair"
+            ]
             evidence = {
                 "index": index, "git_sha": subprocess.check_output(
                     ["git", "rev-parse", "--short", "HEAD"], text=True
                 ).strip(),
+                "working_tree_dirty": bool(subprocess.check_output(
+                    ["git", "status", "--porcelain", "--untracked-files=no"], text=True
+                ).strip()),
                 "audience_band": band, "content_rating": rating,
                 "duration": duration, "mode": mode, "characters": character_count,
                 "plan_revision": plan.plan_revision, "plan_id": plan.plan_id,
@@ -126,8 +122,21 @@ def run_case(index: int) -> dict:
                 "tone_coverage": delivery.quality_report.tone_coverage,
                 "emphasis_coverage": delivery.quality_report.emphasis_coverage,
                 "latency_sec": round(time.monotonic() - start, 2),
-                "llm_calls": calls,
-                "llm_attempts": provider.call_history,
+                "first_draft_contract_passed": not targeted_repairs,
+                "targeted_duration_repair_calls": len(targeted_repairs),
+                "llm_call_count": len(attempts),
+                "reported_input_tokens": sum(
+                    call.get("input_tokens", 0) for call in successful
+                    if call.get("usage_source") == "reported"
+                ),
+                "reported_output_tokens": sum(
+                    call.get("output_tokens", 0) for call in successful
+                    if call.get("usage_source") == "reported"
+                ),
+                "usage_unavailable_calls": sum(
+                    call.get("usage_source") == "unavailable" for call in attempts
+                ),
+                "llm_attempts": attempts,
                 "rule_sha256": {
                     path.name: hashlib.sha256(path.read_bytes()).hexdigest()
                     for path in (Path(__file__).resolve().parents[2] / "3-规则库").glob("*.json")
@@ -161,9 +170,23 @@ def main() -> int:
         try:
             return run_case(index)
         except Exception as exc:
+            attempts = list(_ATTEMPT_EVIDENCE.get(index, []))
             result = {
                 "index": index, "ready": False,
                 "error_type": type(exc).__name__, "error": str(exc)[:500],
+                "llm_call_count": len(attempts),
+                "reported_input_tokens": sum(
+                    call.get("input_tokens", 0) for call in attempts
+                    if call.get("usage_source") == "reported"
+                ),
+                "reported_output_tokens": sum(
+                    call.get("output_tokens", 0) for call in attempts
+                    if call.get("usage_source") == "reported"
+                ),
+                "usage_unavailable_calls": sum(
+                    call.get("usage_source") == "unavailable" for call in attempts
+                ),
+                "llm_attempts": attempts,
             }
             output_dir = os.environ.get("STORY_ACCEPTANCE_OUTPUT_DIR")
             if output_dir:

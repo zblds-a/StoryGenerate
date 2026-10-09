@@ -15,7 +15,7 @@ from drama_engine.workflow.storycraft_prompts import (
 
 
 def test_version_is_bumped_for_new_prompt_snapshot():
-    assert PROMPT_VERSION == "p1.4.1"
+    assert PROMPT_VERSION == "p1.5.0"
 
 
 def test_planner_prompt_has_causality_and_confirmation_boundaries():
@@ -28,6 +28,7 @@ def test_episode_prompt_requires_audible_evidence_and_character_agency():
     assert len(EPISODE_SYSTEM_V2) > 700
     for clause in ("已审批", "角色选择", "major_beat", "speaker_role_id", "Unicode", "fact_delta", "preview_blurb"):
         assert clause in EPISODE_SYSTEM_V2
+    assert "creative_packet" in EPISODE_SYSTEM_V2
 
 
 def test_annotator_keeps_text_unchanged_and_requires_resolvable_emphasis():

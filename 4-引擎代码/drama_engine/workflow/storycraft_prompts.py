@@ -64,6 +64,9 @@ EPISODE_SYSTEM_V2 = """\
 【时长与节奏】
 用户数据中明确给出的对白+旁白 Unicode 字符预算是硬要求，包含标点；音效、音乐、动作不计。动笔前在内部按 major_beats 分配大致字数和场景数量，生成后内部重新估算，只输出最终 JSON。优先增补有代价的行动、信息验证或人物抉择，不重复同一事实；超长时删掉重复解释，不能删掉因果依据。每集结尾须呼应开局提出的具体问题，满足 approved ending 类型。
 
+【创作包的使用】
+creative_packet 是系统依据获批快照确定性整理的执行约束，不是新的自由创意。逐场落实 scene_cards 的 required_beats、audible_change 和字数分配；character_logic 中未提供的动机、知情范围不得为了方便解局而擅自补写。audio_time_budget_sec 中的过场时间只是声音设计建议，可能与台词重叠；当前硬门仍是 3.5 字/秒的文本估算，不代表真实 TTS 时长，也不得因此用重复文字填充。
+
 【交付字段】
 DraftEpisode 包含 title、synopsis、preview_blurb、scenes、episode_summary、ending_hook、fact_delta、relationship_delta、new_open_threads、closed_threads。preview_blurb 为播放前 1–2 句、15–160 字、单段、无剧透、不得揭示谜底或结局。事实与关系增量只能写本集真正发生并有正文证据的变化，不能凭空宣布完成。
 只输出符合 Schema 的 JSON。不要输出解释、Markdown、长篇创作分析。

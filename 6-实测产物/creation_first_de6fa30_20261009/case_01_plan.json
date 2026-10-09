@@ -1,0 +1,155 @@
+{
+  "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "时光发条",
+    "premise": "小镇少年林星在修理爷爷遗留的旧钟表时，意外发现钟表能播放家人的隐藏留言，在执念与释怀中学会了真正的告别。",
+    "theme": "告别、陪伴、放下执念与亲情传承。",
+    "beginning": "林星在深夜的钟表铺试图修好爷爷的遗物怀表，遭遇机械故障，却意外触发了爷爷的录音。",
+    "development": "林星发现上发条能解锁不同留言，为了听到最后的告别而过度上紧发条，面临损坏怀表的危机，并在爷爷录音的劝导下陷入内心挣扎。",
+    "climax": "林星选择松开手，让发条自然回转，听到了爷爷真正的告别语，释怀了内心的执念。",
+    "ending": "林星完成与爷爷的告别，但钟表突然传出另一位家人的新留言，留下关于家庭秘密的新悬念。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "停摆的告别",
+        "core_goal": "林星试图修好爷爷的怀表并听完所有留言，最终学会放下执念，完成告别。",
+        "major_beats": [
+          "[0-2s] 突发巨大的齿轮卡壳刺耳声，旧钟表传出爷爷带机械底噪的留言‘星子，别修了’，直接打破深夜的宁静。",
+          "[2-7s] 林星在钟表铺工作台前，焦急地用镊子拨弄停摆的怀表，交代他必须修好它以听取爷爷临终遗言的困境。",
+          "[7-20s] 林星烦躁地用螺丝刀强撬后盖，触发隐藏机关，钟表发出清脆‘滴答’声并逆转，播放出爷爷温和的修表教学录音，配合音乐断点化解焦躁。",
+          "[20-80s] 林星发现上发条能解锁留言，便疯狂上弦想听最终告别，导致发条发出濒临崩断的警告声；爷爷录音提醒‘弦太紧会断’，迫使林星在毁掉怀表与放弃执念间做出选择。",
+          "[80-113s] 林星选择松开手让发条自然回转，触发钟表共鸣，播放出爷爷‘表停人往前走’的最终告别，林星落泪释怀，完成心理转变。",
+          "[113-120s] 林星收起怀表时，钟表突然传出带电流声的母亲声音‘妈妈有话对你说’，以强烈的新悬念切断情绪，戛然而止。"
+        ],
+        "ending": "Closed/Open：林星完成了与爷爷的告别（Closed），但意外触发了母亲的新留言，留下关于母亲下落的悬念（Open）。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "林星（角色1）": "声音从焦躁、执拗转为释然、温柔。动作音效（工具碰撞、上发条、呼吸声）需清晰，体现内心挣扎。",
+      "家人留言处理": "爷爷和母亲的声音通过旧钟表音效（带机械底噪、混响或电流声）播放，与林星的现实环境音形成空间对比。若需后续实时互动，需补齐家人角色。"
+    },
+    "continuity_constraints": [
+      "旧钟表的留言机制必须依赖物理动作（如撬后盖、上发条、松发条）触发，不能凭空播放。",
+      "爷爷的留言内容必须与修表或人生哲理相关，符合老一辈手艺人的设定。",
+      "结尾的母亲留言必须带有不同于爷爷录音的音效特征（如电流声或失真），暗示其来源或状态不同。"
+    ],
+    "change_summary": [
+      "林星从执着于修复遗物、强求听完所有留言，转变为接受‘表停人往前走’的道理，学会了放下。",
+      "怀表从‘损坏的遗物’变成了‘连接家人情感的媒介’，并在结尾揭示了更多家庭秘密。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "966b4c5e6494442190141aa5d25bd28d",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:06:22.618746+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 2489,
+      "output_tokens": 3122,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2191,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "178a4716-4dd2-44d1-aac4-eafc59dd81a3",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 54709,
+      "completed_at": "2026-10-09T07:07:17.328150+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.5.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "1303efd624890145c1da68610d22f159c555e40a5b5eab14a70244dd6fc70571",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-09T07:07:17.523385Z",
+  "updated_at": "2026-10-09T07:07:17.523385Z"
+}

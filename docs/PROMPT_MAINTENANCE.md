@@ -35,7 +35,12 @@
 `StoryDelivery`。改它们不会改变正式工作流的节点提示词。
 
 
-## StoryCraft v2 候选提示词（p1.4.1）
+## StoryCraft v2 创作优先提示词（p1.5.0）
+
+p1.5.0 在 p1.4.1 基础上加入确定性的 `EpisodeCreativePacket`：角色行动逻辑、知情范围、
+连续性事实、逐场任务与字数预算会在正文调用前由应用代码整理，不新增模型调用。正文首次
+生成失败时不再循环重写整集；只有纯时长硬错误允许一次单场替换。相关位置为
+`workflow/creative_context.py` 与 `ApprovedPlanLLMExecutor._repair_duration_scene`。
 
 新审批工作流的四份 system prompt 已抽到 `4-引擎代码/drama_engine/workflow/storycraft_prompts.py`：
 

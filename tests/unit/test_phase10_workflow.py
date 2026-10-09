@@ -18,6 +18,7 @@ from drama_engine.workflow.adapters import (
     DraftEpisode, LLMPerformanceAnnotator, draft_episode_contract_errors,
     spoken_character_budget,
 )
+from drama_engine.workflow.creative_context import build_episode_creative_packet
 from drama_engine.workflow.repository import (
     InMemoryWorkflowRepository,
     SqlAlchemyWorkflowRepository,
@@ -170,6 +171,19 @@ class TestRequestContract:
 
 
 class TestPlanApprovalWorkflow:
+    def test_approved_plan_builds_deterministic_scene_level_creation_packet(self):
+        service = make_service()
+        plan = service.prepare_story_plan(make_request(target_duration_sec=180, dialogue_density="high"))
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "packet")
+        packet = build_episode_creative_packet(
+            job.input_snapshot, plan.plan.episode_outlines[0], 536, 630, 724,
+        )
+        assert sum(card.spoken_character_budget for card in packet.scene_cards) == 630
+        assert all(card.required_beats for card in packet.scene_cards)
+        assert packet.audio_time_budget_sec["independent_transition_advisory"] > 0
+        assert packet.audio_time_budget_sec["spoken_text_gate_estimate"] == 180
+        assert packet.spoken_character_budget == {"minimum": 536, "ideal": 630, "maximum": 724}
+
     def test_explicit_template_is_frozen_in_plan_and_job(self):
         templates = MemoryStoryTemplateRepository()
         templates.create(StoryTemplateSpec(

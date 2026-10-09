@@ -21,7 +21,8 @@ Create 流程：`prepare_story_plan` →（可选）`revise_story_plan` →
 `summary` 继续承担剧情概括与连续性用途，二者不混用。缺少简介会阻止新交付通过质量门。
 发声行必须有有效 `emotion`、`tone_instruction`、至少一个重音索引以及
 `performer_id`。重音 `[start_char, end_char)` 按 Unicode 码点由确定性代码解析。
-模型注释失败时最多定向修复两次；时长超界时最多重写两次。
+模型注释失败时最多定向修复两次；正文只进行一次首次创作，若唯一错误是时长越界，
+最多替换一个场景一次，不再全文循环重写。
 还需通过集数、Plan 快照、连续性、大纲与内容分级质量门，才可提交 READY 版本。
 
 Continue 区分 `next_episode` 与 `resume_playback`；后者不创建故事 Plan，
