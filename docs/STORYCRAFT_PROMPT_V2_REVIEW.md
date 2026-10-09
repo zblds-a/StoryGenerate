@@ -1,5 +1,7 @@
 # StoryGenerate StoryCraft v2：故事质量诊断与 A/B 验收
 
+> **方向更新（2026-10-09）：** 根据最新业务决策，本 PR 的主目标改为“前置策划与正文 Prompt 强化，争取一次成稿”；**不把文学 Judge、反复重写与评分系统作为主线**。本文保留此前诊断与 A/B 方法供追溯，新的优先级及 Token 统计后续任务以 [CREATION_FIRST_AND_TOKEN_ACCOUNTING.md](CREATION_FIRST_AND_TOKEN_ACCOUNTING.md) 为准。上线端仅保留结构、安全和关键连续性必要核验；人工文学盲评用于离线 Prompt 版本研究。
+
 > 基线：codex/story-workflow @ 86cdeda，候选分支：review/storycraft-prompts-v2-20261009。
 > **状态：源码已接入新的创作提示词；尚未运行该分支的真实模型验收。不得将本文件作为发布证明。**
 
