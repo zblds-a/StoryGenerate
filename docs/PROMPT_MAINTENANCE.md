@@ -35,14 +35,14 @@
 `StoryDelivery`。改它们不会改变正式工作流的节点提示词。
 
 
-## StoryCraft v2 候选提示词（p1.4.0）
+## StoryCraft v2 候选提示词（p1.4.1）
 
 新审批工作流的四份 system prompt 已抽到 `4-引擎代码/drama_engine/workflow/storycraft_prompts.py`：
 
 - `PLAN_SYSTEM_V2`：大纲的行动、代价、因果与音频线索；
 - `EPISODE_SYSTEM_V2`：已获批大纲的场景写作、对白潜台词、反转与时长；
 - `PERFORMANCE_SYSTEM_V2`：逐句语气和重音，保留正文；
-- `JUDGE_SYSTEM_V2`：证据化大纲一致性、连续性、分级判断。
+- `JUDGE_SYSTEM_V2`：只做必要的大纲关键事件、明显连续性冲突与分级核验，不承担文学评分和常规全文重写。
 
 正式调用位置仍在 `workflow/adapters.py`，但不再直接在该文件维护以上四份长提示词。开发新业务规则请优先改结构化契约和确定性校验，不要通过 Prompt 绕过发布硬门。更改候选提示词后仍应提升 `PROMPT_VERSION`，避免已审批 Plan 的规则版本发生静默漂移。
 
