@@ -17,6 +17,8 @@ Create 流程：`prepare_story_plan` →（可选）`revise_story_plan` →
 `mature_non_explicit` 须 18+，禁止露骨色情与极端血腥。
 
 正文交付含 `StoryDelivery → EpisodeDelivery → SceneDelivery → Utterance`。
+新交付增加 `preview_blurb`，供播放前展示 1–2 句无剧透简介；
+`summary` 继续承担剧情概括与连续性用途，二者不混用。缺少简介会阻止新交付通过质量门。
 发声行必须有有效 `emotion`、`tone_instruction`、至少一个重音索引以及
 `performer_id`。重音 `[start_char, end_char)` 按 Unicode 码点由确定性代码解析。
 模型注释失败时最多定向修复两次；时长超界时最多重写两次。
@@ -86,3 +88,14 @@ StoryVersion 正文与来源身份。正式环境先备份，再运行 `alembic 
 目标的 85%–115%，并在演绎标注前拒绝未审批的对白角色；新增负向测试，
 全量 471 项单元测试通过。这些代码修改尚未完成同一新 SHA 的 12 例
 真实模型复验，不能沿用本批次的 7/12 作为新代码发布结果。
+
+## 模板录入与新版工作流
+
+模板采用版本化 `StoryTemplateSpec` JSON；格式、校验／导入命令和示例见
+`docs/TEMPLATE_AUTHORING.md`。`template_ref` 必须包含 ID 和 revision。
+新版工作流现在要求显式提供 `StoryTemplateResolver`，将解析后的模板快照
+写入 Plan、指纹和审批 Job；没有 Resolver 时显式模板请求报错，不再被忽略。
+模板数据库仓库使用 `StoryTemplateModel` 而非直接查询 Pydantic 模型。
+新增持久化快照回归测试后，本次全量单元测试为 477 项通过。
+2026-10-09 检查时 Docker Desktop Linux 引擎未响应，故本轮 PostgreSQL
+集成测试未完成；不要以 SQLite 测试替代正式数据库验收。

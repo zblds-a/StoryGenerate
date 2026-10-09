@@ -261,6 +261,7 @@ class PlanPreview(WorkflowModel):
     intent: StoryIntent
     requires_confirmation: bool = True
     source_reference: ResolvedSourceReference | None = None
+    template_snapshot: dict[str, Any] | None = None
     plan: PlanContent
     resolved_preferences: CreationPreferences
     character_snapshots: list[CharacterSnapshot] = Field(default_factory=list)
@@ -402,6 +403,7 @@ class StoryDelivery(WorkflowModel):
     approved_plan_revision: int
     title: str
     summary: str
+    preview_blurb: str = ""
     tags: list[str] = Field(default_factory=list)
     story_mode: str
     content_form: Literal["audio_drama"] = "audio_drama"

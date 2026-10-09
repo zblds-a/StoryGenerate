@@ -40,10 +40,14 @@ class GenerationCancelled(WorkflowConflictError):
 
 
 class StoryWorkflowService:
-    def __init__(self, repository, plan_generator: PlanGenerator, story_executor: StoryExecutor):
+    def __init__(
+        self, repository, plan_generator: PlanGenerator, story_executor: StoryExecutor,
+        template_resolver=None,
+    ):
         self.repository = repository
         self.plan_generator = plan_generator
         self.story_executor = story_executor
+        self.template_resolver = template_resolver
 
     def prepare_story_plan(
         self, request: StoryOperationRequest | dict[str, Any],
@@ -69,10 +73,22 @@ class StoryWorkflowService:
         impact_analysis = self._analyze_impact(request, source)
         explicit_fields = sorted(request.creation_preferences.model_fields_set)
         preferences, auto_fields = self._resolve_preferences(request)
+        template_snapshot = None
+        if request.template_ref:
+            if self.template_resolver is None:
+                raise WorkflowConflictError("TEMPLATE_RESOLVER_NOT_CONFIGURED")
+            resolved = self.template_resolver.resolve(
+                template_id=request.template_ref.template_id,
+                version=request.template_ref.template_revision,
+                mode_key=preferences.story_mode,
+            )
+            template_snapshot = resolved.model_dump(mode="json")
         rule_versions = _rule_versions()
         request = request.model_copy(update={"creation_preferences": preferences})
         trace_start = len(getattr(getattr(self.plan_generator, "provider", None), "call_history", []))
-        content = self.plan_generator.generate(request, source, characters)
+        content = self.plan_generator.generate(
+            request, source, characters, template=template_snapshot,
+        )
         model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
         self._validate_plan_shape(content, preferences)
         plan_id = uuid.uuid4().hex
@@ -81,6 +97,7 @@ class StoryWorkflowService:
             "preferences": preferences.model_dump(mode="json"),
             "characters": [item.model_dump(mode="json") for item in characters],
             "source": source.model_dump(mode="json") if source else None,
+            "template": template_snapshot,
             "impact_analysis": impact_analysis,
             "rule_versions": rule_versions,
         }
@@ -90,6 +107,7 @@ class StoryWorkflowService:
             status=PlanStatus.AWAITING_APPROVAL,
             intent=request.intent,
             source_reference=source,
+            template_snapshot=template_snapshot,
             plan=content,
             resolved_preferences=preferences,
             character_snapshots=characters,
@@ -120,7 +138,7 @@ class StoryWorkflowService:
         trace_start = len(getattr(getattr(self.plan_generator, "provider", None), "call_history", []))
         content = self.plan_generator.generate(
             request, current.source_reference, current.character_snapshots,
-            previous=current.plan, feedback=feedback,
+            previous=current.plan, feedback=feedback, template=current.template_snapshot,
         )
         model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
         if not content.change_summary:
@@ -131,6 +149,7 @@ class StoryWorkflowService:
             "preferences": current.resolved_preferences.model_dump(mode="json"),
             "characters": [item.model_dump(mode="json") for item in current.character_snapshots],
             "source": current.source_reference.model_dump(mode="json") if current.source_reference else None,
+            "template": current.template_snapshot,
             "impact_analysis": current.impact_analysis,
             "rule_versions": current.rule_versions,
         }

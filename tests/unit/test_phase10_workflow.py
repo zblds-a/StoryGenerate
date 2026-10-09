@@ -10,6 +10,9 @@ from sqlalchemy.orm import Session
 
 from drama_engine.persistence.models import Base
 from drama_engine.config import RuleLibrary
+from drama_engine.templates.models import StoryTemplateSpec, TemplateBeat
+from drama_engine.templates.repository import MemoryStoryTemplateRepository
+from drama_engine.templates.resolver import StoryTemplateResolver
 from drama_engine.workflow.performance import normalize_utterance, validate_story_delivery, validate_utterance
 from drama_engine.workflow.adapters import (
     DraftEpisode, LLMPerformanceAnnotator, draft_episode_contract_errors,
@@ -33,6 +36,7 @@ from drama_engine.workflow.schemas import (
     SceneDelivery,
     SourceSelector,
     StoryDelivery,
+    StoryTemplateRef,
     StoryVersionStatus,
     Utterance,
     WorkflowJobStatus,
@@ -41,7 +45,7 @@ from drama_engine.workflow.service import StoryWorkflowService
 
 
 class FixedPlanGenerator:
-    def generate(self, request, source, characters, previous=None, feedback=""):
+    def generate(self, request, source, characters, previous=None, feedback="", template=None):
         prefs = request.creation_preferences
         suffix = f"（{feedback}）" if feedback else ""
         return PlanContent(
@@ -106,6 +110,7 @@ class FixedStoryExecutor:
             approved_plan_revision=snapshot.plan_revision,
             title=snapshot.preview.plan.title,
             summary=snapshot.preview.plan.premise,
+            preview_blurb="一位城市居民面临新的选择，必须在现实阻碍中找到自己的方向。",
             story_mode=prefs.story_mode,
             outline=snapshot.preview.plan,
             episodes=episodes,
@@ -129,11 +134,12 @@ def make_request(**preference_overrides):
     )
 
 
-def make_service(repository=None, valid=True):
+def make_service(repository=None, valid=True, template_resolver=None):
     return StoryWorkflowService(
         repository or InMemoryWorkflowRepository(),
         FixedPlanGenerator(),
         FixedStoryExecutor(valid=valid),
+        template_resolver=template_resolver,
     )
 
 
@@ -163,6 +169,29 @@ class TestRequestContract:
 
 
 class TestPlanApprovalWorkflow:
+    def test_explicit_template_is_frozen_in_plan_and_job(self):
+        templates = MemoryStoryTemplateRepository()
+        templates.create(StoryTemplateSpec(
+            template_id="SPY_TURN", version=1, name="谍战转折",
+            supported_modes=["mystery"],
+            beats=[TemplateBeat(key="false_clue", purpose="假线索诱导错误判断")],
+        ))
+        service = make_service(template_resolver=StoryTemplateResolver(templates))
+        request = make_request(story_mode="mystery").model_copy(update={
+            "template_ref": StoryTemplateRef(template_id="SPY_TURN", template_revision=1),
+        })
+        plan = service.prepare_story_plan(request)
+        assert plan.template_snapshot["beats"][0]["key"] == "false_clue"
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "template")
+        assert job.input_snapshot.preview.template_snapshot == plan.template_snapshot
+
+    def test_explicit_template_needs_resolver(self):
+        request = make_request(story_mode="mystery").model_copy(update={
+            "template_ref": StoryTemplateRef(template_id="SPY_TURN", template_revision=1),
+        })
+        with pytest.raises(WorkflowConflictError, match="TEMPLATE_RESOLVER_NOT_CONFIGURED"):
+            make_service().prepare_story_plan(request)
+
     def test_create_returns_plan_without_story(self):
         service = make_service()
         plan = service.prepare_story_plan(make_request())
@@ -249,10 +278,23 @@ class TestGenerationAndPerformanceGate:
         job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "generate")
         delivery = service.generate_from_approved_plan(job.job_id)
         assert delivery.ready_for_playback is True
+        assert delivery.preview_blurb
         assert delivery.status == StoryVersionStatus.READY
         assert len(delivery.episodes) == 2
         assert service.get_generation_job(job.job_id).status == WorkflowJobStatus.SUCCEEDED
         assert service.get_story_version(delivery.story_version_id) == delivery
+
+    def test_missing_preview_blurb_blocks_playback(self):
+        service = make_service()
+        plan = service.prepare_story_plan(make_request())
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "blurb")
+        candidate = FixedStoryExecutor().execute(job.input_snapshot)
+        invalid = candidate.model_copy(update={"preview_blurb": ""})
+        report = validate_story_delivery(invalid)
+        assert report.validation_status == "FAILED"
+        assert "preview_blurb is required" in report.warnings
+        too_short = candidate.model_copy(update={"preview_blurb": "故事简介"})
+        assert validate_story_delivery(too_short).validation_status == "FAILED"
 
     def test_missing_performance_cue_fails_job(self):
         service = make_service(valid=False)
@@ -434,6 +476,32 @@ class TestSourcesAndLineage:
 
 
 class TestSqlRepository:
+    def test_template_snapshot_survives_sqlite_restart(self, tmp_path):
+        engine = create_engine(f"sqlite:///{tmp_path / 'template-workflow.db'}")
+        Base.metadata.create_all(engine)
+        templates = MemoryStoryTemplateRepository()
+        templates.create(StoryTemplateSpec(
+            template_id="SPY_TURN", version=1, name="谍战转折",
+            supported_modes=["mystery"],
+            beats=[TemplateBeat(key="false_clue", purpose="假线索")],
+        ))
+        request = make_request(story_mode="mystery").model_copy(update={
+            "template_ref": StoryTemplateRef(template_id="SPY_TURN", template_revision=1),
+        })
+        with Session(engine) as session:
+            service = make_service(
+                SqlAlchemyWorkflowRepository(session),
+                template_resolver=StoryTemplateResolver(templates),
+            )
+            plan = service.prepare_story_plan(request)
+        with Session(engine) as session:
+            service = make_service(SqlAlchemyWorkflowRepository(session))
+            restored = service.get_story_plan(plan.plan_id)
+            assert restored.template_snapshot == plan.template_snapshot
+            job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "template-sql")
+            assert job.input_snapshot.preview.template_snapshot == plan.template_snapshot
+        engine.dispose()
+
     def test_sqlite_roundtrip_and_approval_restart(self, tmp_path):
         engine = create_engine(f"sqlite:///{tmp_path / 'workflow.db'}")
         Base.metadata.create_all(engine)
@@ -452,7 +520,9 @@ class TestSqlRepository:
             version_id = delivery.story_version_id
         with Session(engine) as session:
             service = make_service(SqlAlchemyWorkflowRepository(session))
-            assert service.get_story_version(version_id).ready_for_playback is True
+            restored_story = service.get_story_version(version_id)
+            assert restored_story.ready_for_playback is True
+            assert restored_story.preview_blurb
 
     def test_sqlite_idempotency_and_principal_isolation(self, tmp_path):
         engine = create_engine(f"sqlite:///{tmp_path / 'isolation.db'}")

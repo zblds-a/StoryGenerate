@@ -56,6 +56,11 @@ def validate_story_delivery(delivery: StoryDelivery) -> PerformanceValidationRep
     utterances = [u for ep in delivery.episodes for scene in ep.scenes for u in scene.utterances]
     spoken = [u for u in utterances if u.kind in SPOKEN_KINDS]
     errors = [error for utterance in utterances for error in validate_utterance(utterance)]
+    blurb = delivery.preview_blurb.strip()
+    if not blurb:
+        errors.append("preview_blurb is required")
+    elif len(blurb) < 15 or len(blurb) > 160 or "\n" in blurb:
+        errors.append("preview_blurb must be one paragraph of 15-160 characters")
     count = len(spoken)
     emotion_valid = sum(bool(u.emotion) for u in spoken)
     tone_valid = sum(bool(u.emotion and (u.tone_instruction or "").strip()) for u in spoken)

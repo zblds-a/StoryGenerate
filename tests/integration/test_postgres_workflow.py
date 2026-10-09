@@ -16,7 +16,7 @@ from drama_engine.workflow.service import StoryWorkflowService
 
 
 class PlanGenerator:
-    def generate(self, request, source, characters, previous=None, feedback=""):
+    def generate(self, request, source, characters, previous=None, feedback="", template=None):
         return PlanContent(
             title="数据库验收", premise=request.user_instruction, theme="选择",
             beginning="开场", development="冲突", climax="选择", ending="收束",

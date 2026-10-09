@@ -5,9 +5,9 @@
 """
 from __future__ import annotations
 
-from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from ..persistence.models import StoryTemplateModel
 from .models import StoryTemplateSpec
 from .repository import StoryTemplateRepository
 
@@ -23,44 +23,45 @@ class PostgresStoryTemplateRepository:
         self._session = session
 
     def get(self, template_id: str, version: int | None = None) -> StoryTemplateSpec | None:
+        query = self._session.query(StoryTemplateModel).filter_by(
+            template_id=template_id, status="active",
+        )
         if version is not None:
-            stmt = (
-                select(StoryTemplateSpec)
-                .where(
-                    StoryTemplateSpec.template_id == template_id,
-                    StoryTemplateSpec.version == version,
-                )
-            )
-        else:
-            # 最新 active version
-            stmt = (
-                select(StoryTemplateSpec)
-                .where(StoryTemplateSpec.template_id == template_id)
-                .order_by(StoryTemplateSpec.version.desc())
-                .limit(1)
-            )
-        return self._session.execute(stmt).scalars().first()
+            query = query.filter_by(version=version)
+        row = query.order_by(StoryTemplateModel.version.desc()).first()
+        return StoryTemplateSpec.model_validate(row.template_json) if row else None
 
     def create(self, spec: StoryTemplateSpec) -> StoryTemplateSpec:
-        existing = self.get(spec.template_id, spec.version)
+        existing = self._session.query(StoryTemplateModel).filter_by(
+            template_id=spec.template_id, version=spec.version,
+        ).first()
         if existing:
             raise ValueError(
                 f"模板 {spec.template_id} v{spec.version} 已存在。"
                 f"请增加 version 或删除旧版。"
             )
-        self._session.add(spec)
+        self._session.add(StoryTemplateModel(
+            template_id=spec.template_id,
+            version=spec.version,
+            status="active",
+            name=spec.name,
+            supported_modes=spec.supported_modes,
+            supported_forms=["audio_drama"],
+            tags=spec.tone_hints,
+            template_json=spec.model_dump(mode="json"),
+        ))
         self._session.flush()
         return spec
 
     def list(self, mode: str | None = None) -> list[StoryTemplateSpec]:
-        stmt = select(StoryTemplateSpec).order_by(
-            StoryTemplateSpec.template_id,
-            StoryTemplateSpec.version.desc(),
-        )
-        results = self._session.execute(stmt).scalars().all()
+        results = self._session.query(StoryTemplateModel).filter_by(status="active").order_by(
+            StoryTemplateModel.template_id,
+            StoryTemplateModel.version.desc(),
+        ).all()
+        specs = [StoryTemplateSpec.model_validate(row.template_json) for row in results]
         if mode:
-            results = [t for t in results if mode in (t.supported_modes or [])]
-        return list(results)
+            specs = [t for t in specs if mode in t.supported_modes]
+        return specs
 
 
 def build_postgres_template_repo(session: Session) -> PostgresStoryTemplateRepository:

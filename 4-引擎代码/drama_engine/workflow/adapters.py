@@ -34,6 +34,7 @@ class PlanGenerator(Protocol):
         characters: list[CharacterSnapshot],
         previous: PlanContent | None = None,
         feedback: str = "",
+        template: dict[str, Any] | None = None,
     ) -> PlanContent: ...
 
 
@@ -48,7 +49,7 @@ class LLMPlanGenerator:
         self.provider = provider
         self.lib = RuleLibrary.load()
 
-    def generate(self, request, source, characters, previous=None, feedback="") -> PlanContent:
+    def generate(self, request, source, characters, previous=None, feedback="", template=None) -> PlanContent:
         preferences = request.creation_preferences.model_dump(mode="json")
         system = (
             "你是 StoryGenerate 的故事策划器。只负责产生待用户审批的大纲，绝不写完整正文。"
@@ -63,6 +64,7 @@ class LLMPlanGenerator:
             "characters": [item.model_dump(mode="json") for item in characters],
             "source": source.model_dump(mode="json") if source else None,
             "template_ref": request.template_ref.model_dump(mode="json") if request.template_ref else None,
+            "template_snapshot": template,
             "safety_profile": request.safety_profile.model_dump(mode="json") if request.safety_profile else None,
             "edit_policy": request.edit.model_dump(mode="json") if hasattr(request, "edit") else None,
             "remix_policy": request.remix.model_dump(mode="json") if hasattr(request, "remix") else None,
@@ -192,6 +194,7 @@ class DraftScene(BaseModel):
 class DraftEpisode(BaseModel):
     title: str
     synopsis: str
+    preview_blurb: str = ""
     scenes: list[DraftScene] = Field(min_length=1)
     episode_summary: str
     ending_hook: str = ""
@@ -251,11 +254,14 @@ class ApprovedPlanLLMExecutor:
         source = preview.source_reference
         tier_map = ModelTierMap(mapping=snapshot.model_mapping_snapshot) if snapshot.model_mapping_snapshot else None
         episodes: list[EpisodeDelivery] = []
+        first_preview_blurb = ""
         for outline in preview.plan.episode_outlines:
             system = (
                 "你是广播剧编剧。严格根据用户已审批的大纲写完整正文；不得改变每集目标、关键节拍、结局、"
                 "角色 Canon、受众分级或内容形式。对白与旁白要适合朗读。"
-                "mature_non_explicit 不含露骨色情和极端血腥。只输出结构化 JSON。"
+                "mature_non_explicit 不含露骨色情和极端血腥。"
+                "另写 preview_blurb：给用户播放前看的 1–2 句无剧透简介，交代人物、处境和悬念，"
+                "不揭示真相或结局，不使用‘本故事讲述’等套话。只输出结构化 JSON。"
             )
             user = json.dumps({
                 "approved_plan_fingerprint": snapshot.plan_fingerprint,
@@ -265,6 +271,7 @@ class ApprovedPlanLLMExecutor:
                 "preferences": prefs.model_dump(mode="json"),
                 "characters": [c.model_dump(mode="json") for c in preview.character_snapshots],
                 "source": source.model_dump(mode="json") if source else None,
+                "template_snapshot": preview.template_snapshot,
                 "instruction": (
                     f"创作第{outline.index}集，目标时长{prefs.target_duration_sec}秒。"
                     "每个 major_beat 都要在场景中可辨认地实现；请写足适配时长的对白与旁白。"
@@ -295,6 +302,8 @@ class ApprovedPlanLLMExecutor:
                     f"EPISODE_CONTRACT_FAILED: episode {outline.index}: "
                     + "; ".join(contract_errors)
                 )
+            if not episodes:
+                first_preview_blurb = draft.preview_blurb.strip() or draft.synopsis.strip()
             scenes: list[SceneDelivery] = []
             for scene_index, scene in enumerate(draft.scenes, 1):
                 lines = [{
@@ -345,6 +354,7 @@ class ApprovedPlanLLMExecutor:
             approved_plan_id=snapshot.plan_id,
             approved_plan_revision=snapshot.plan_revision,
             title=preview.plan.title, summary=preview.plan.premise,
+            preview_blurb=first_preview_blurb or preview.plan.premise,
             tags=[prefs.genre, prefs.tone_style, prefs.audience_band, prefs.content_rating],
             story_mode=prefs.story_mode, character_snapshot=preview.character_snapshots,
             outline=preview.plan, episodes=episodes,
@@ -472,6 +482,7 @@ class GraphStoryExecutor:
             approved_plan_revision=snapshot.plan_revision,
             title=preview.plan.title,
             summary=preview.plan.premise,
+            preview_blurb=preview.plan.premise,
             tags=[prefs.genre, prefs.tone_style, prefs.audience_band, prefs.content_rating],
             story_mode=prefs.story_mode,
             character_snapshot=preview.character_snapshots,
