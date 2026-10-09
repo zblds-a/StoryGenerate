@@ -8,7 +8,9 @@ from typing import Any, Protocol
 from pydantic import BaseModel, Field
 
 from ..config import RuleLibrary
+from ..llm.usage_context import usage_scope
 from ..llm.router import ModelTierMap, resolve_spec
+from .creative_context import build_episode_creative_packet
 from .performance import normalize_utterance, validate_story_delivery
 from .storycraft_prompts import (
     PLAN_SYSTEM_V2,
@@ -126,7 +128,7 @@ class LLMPerformanceAnnotator:
             pending = spoken
             for attempt in range(3):
                 batch = self.provider.complete_structured(
-                    resolve_spec("episode_writer", tier_map=tier_map, temperature=0.3), system,
+                    resolve_spec("performance_annotation", tier_map=tier_map, temperature=0.3), system,
                     user if attempt == 0 else json.dumps({
                         "repair_only_lines": pending,
                         "instruction": "只修复这些行；重音短语必须在原文中逐字出现。",
@@ -203,6 +205,17 @@ class DraftEpisode(BaseModel):
     closed_threads: list[str] = Field(default_factory=list)
 
 
+class DraftScenePatch(BaseModel):
+    """One replacement scene used for a bounded duration repair."""
+
+    scene_index: int = Field(ge=1)
+    lines: list[DraftLine] = Field(min_length=1)
+
+
+class DraftScenePatchBatch(BaseModel):
+    patches: list[DraftScenePatch] = Field(min_length=1, max_length=1)
+
+
 def draft_episode_contract_errors(
     draft: DraftEpisode, target_duration_sec: int, approved_role_ids: set[str],
 ) -> tuple[int, list[str]]:
@@ -262,6 +275,9 @@ class ApprovedPlanLLMExecutor:
         first_preview_blurb = ""
         for outline in preview.plan.episode_outlines:
             min_chars, ideal_chars, max_chars = spoken_character_budget(prefs.target_duration_sec)
+            creative_packet = build_episode_creative_packet(
+                snapshot, outline, min_chars, ideal_chars, max_chars,
+            )
             system = EPISODE_SYSTEM_V2
             user = json.dumps({
                 "approved_plan_fingerprint": snapshot.plan_fingerprint,
@@ -272,6 +288,7 @@ class ApprovedPlanLLMExecutor:
                 "characters": [c.model_dump(mode="json") for c in preview.character_snapshots],
                 "source": source.model_dump(mode="json") if source else None,
                 "template_snapshot": preview.template_snapshot,
+                "creative_packet": creative_packet.model_dump(mode="json"),
                 "instruction": (
                     f"创作第{outline.index}集，目标时长{prefs.target_duration_sec}秒。"
                     f"对白与旁白的文字总量（含标点，按 Unicode 字符计）必须在{min_chars}至{max_chars}字，"
@@ -284,23 +301,31 @@ class ApprovedPlanLLMExecutor:
             estimated = 0
             contract_errors: list[str] = []
             approved_role_ids = {item.role_id for item in preview.character_snapshots}
-            for attempt in range(3):
+            with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="first_draft"):
                 draft = self.provider.complete_structured(
-                    resolve_spec("episode_writer", tier_map=tier_map), system,
-                    user if attempt == 0 else user + (
-                        f"\n上次输出未通过：{'；'.join(contract_errors)}。"
-                        f"对白加旁白目标为{ideal_chars}字，允许范围{min_chars}–{max_chars}字；"
-                        "请重写完整本集，严格调整有效对白与旁白量，不要用音效或旁白空话凑数；"
-                        "对白只能使用审批角色的 role_id，"
-                        "不能增加新发声角色。保留大纲所有节拍。"
-                    ),
+                    resolve_spec("episode_writer", tier_map=tier_map), system, user,
                     DraftEpisode,
+                )
+            estimated, contract_errors = draft_episode_contract_errors(
+                draft, prefs.target_duration_sec, approved_role_ids,
+            )
+            # One bounded scene repair is allowed for a deterministic length miss.
+            # Cast/schema/fact failures are not hidden behind a full-episode rewrite.
+            if contract_errors and all(error.startswith("duration estimate") for error in contract_errors):
+                draft = self._repair_duration_scene(
+                    draft=draft,
+                    creative_packet=creative_packet,
+                    target_duration_sec=prefs.target_duration_sec,
+                    observed_sec=estimated,
+                    min_chars=min_chars,
+                    ideal_chars=ideal_chars,
+                    max_chars=max_chars,
+                    approved_role_ids=approved_role_ids,
+                    tier_map=tier_map,
                 )
                 estimated, contract_errors = draft_episode_contract_errors(
                     draft, prefs.target_duration_sec, approved_role_ids,
                 )
-                if not contract_errors:
-                    break
             if contract_errors:
                 raise ValueError(
                     f"EPISODE_CONTRACT_FAILED: episode {outline.index}: "
@@ -406,6 +431,54 @@ class ApprovedPlanLLMExecutor:
                 *getattr(self.provider, "call_history", [])[trace_start:],
             ],
         })
+
+    def _repair_duration_scene(
+        self, *, draft: DraftEpisode, creative_packet, target_duration_sec: int,
+        observed_sec: int, min_chars: int, ideal_chars: int, max_chars: int,
+        approved_role_ids: set[str], tier_map: ModelTierMap | None,
+    ) -> DraftEpisode:
+        """Replace only one scene; never rewrite the already-valid whole episode."""
+        scene_counts = [
+            sum(len(line.text) for line in scene.lines if line.kind in ("dialogue", "narration"))
+            for scene in draft.scenes
+        ]
+        scene_index = max(range(len(scene_counts)), key=scene_counts.__getitem__)
+        current_total = sum(scene_counts)
+        desired_scene_chars = max(40, scene_counts[scene_index] + ideal_chars - current_total)
+        card = next(
+            (item for item in creative_packet.scene_cards if item.scene_index == scene_index + 1),
+            None,
+        )
+        repair_user = json.dumps({
+            "repair_type": "duration_only_single_scene",
+            "target_episode_duration_sec": target_duration_sec,
+            "observed_episode_duration_sec": observed_sec,
+            "episode_spoken_character_window": {"min": min_chars, "ideal": ideal_chars, "max": max_chars},
+            "replace_scene_index": scene_index + 1,
+            "replacement_scene_spoken_character_target": desired_scene_chars,
+            "scene_card": card.model_dump(mode="json") if card else None,
+            "approved_role_ids": sorted(role for role in approved_role_ids if role),
+            "original_scene": draft.scenes[scene_index].model_dump(mode="json"),
+            "instruction": (
+                "只返回这一场的替换 lines，不改其他场、标题、简介、事实增量或结局。"
+                "保留本场 required_beats、因果依据与人物选择；压缩时删重复解释，"
+                "扩写时增加验证信息或有代价的行动，不得增加新人物或新反转。"
+            ),
+        }, ensure_ascii=False)
+        with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="targeted_duration_repair"):
+            result = self.provider.complete_structured(
+                resolve_spec("episode_writer", tier_map=tier_map, temperature=0.45),
+                EPISODE_SYSTEM_V2,
+                repair_user,
+                DraftScenePatchBatch,
+            )
+        patch = result.patches[0]
+        if patch.scene_index != scene_index + 1:
+            raise ValueError("EPISODE_DURATION_REPAIR_WRONG_SCENE")
+        replacement = draft.scenes[scene_index].model_copy(update={"lines": patch.lines})
+        scenes = list(draft.scenes)
+        scenes[scene_index] = replacement
+        return draft.model_copy(update={"scenes": scenes})
 
 
 class DeterministicPerformanceAnnotator:

@@ -75,6 +75,7 @@ class BaseLLMProvider:
             + "\n请重新输出完整的 JSON 对象。"
         )
         result2 = self.complete(spec, full_system, retry_user)
+        self._trace_llm_call(spec, result2, result2.latency_ms)
         parsed2, errors2 = _try_parse(result2.text, schema)
         if parsed2 is not None:
             return parsed2

@@ -1,0 +1,155 @@
+{
+  "plan_id": "149fab531ea742a0b38e6c44f52e3078",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "时光的回声",
+    "premise": "小镇少年在整理遗物时，发现旧钟表能播放已故奶奶的留言，在钟表即将彻底损坏的抉择中，他学会了真正的告别与陪伴。",
+    "theme": "告别不是遗忘，而是带着爱继续前行；陪伴可以跨越生死与物质。",
+    "beginning": "旧钟表突然发出异响并传出已故奶奶的声音，打破了少年沉溺于悲伤的现状，引出他试图留住声音的渴望。",
+    "development": "少年在修复钟表的过程中发现了隐藏的信件，并面临发条即将崩断的危机，必须在‘保留机芯’与‘听完留言’之间做出痛苦抉择。",
+    "climax": "少年选择听完留言，钟表在奶奶最后一句‘去外头看看’的叮嘱中彻底停摆，少年在泪水中完成了内心的释怀与告别。",
+    "ending": "少年放下旧表准备出门，手机却收到了奶奶生前设置的定时语音，以温暖的悬念收尾，暗示爱以新的方式延续。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "停摆前的最后一句叮嘱",
+        "core_goal": "少年通过旧钟表的留言完成与已故奶奶的心理告别，理解陪伴的真谛。",
+        "major_beats": [
+          "【0-2s 黄金钩子】旧钟表内部发出巨大的齿轮卡壳爆响，紧接着传出已故奶奶清晰的录音‘星儿，饭在锅里’，少年（角色1）从发呆中猛然惊醒。",
+          "【2-20s 矛盾与反转】少年急于听到更多声音，不顾机芯老化强行拧动发条。钟表发出刺耳摩擦声后弹出暗格，掉出爷爷的旧信件，同时开始连续播放奶奶生前的多段录音，少年从焦躁转为震惊与贪婪地聆听。",
+          "【20-80s 中段推进】少年一边阅读信件一边听录音，发现钟表发条因强行上劲即将彻底崩断。他面临抉择：停下钟表可保住机芯但再也听不到新留言，继续播放则会毁坏机芯。少年咬牙选择继续，试图听完最后的话。",
+          "【80-113s 高潮与二次反转】齿轮崩裂声连续响起，奶奶的声音变得断断续续。最后一句留言不是日常叮嘱，而是‘别守着旧表了，去外头看看吧’。钟表彻底停摆，少年在泪水中放下钟表，完成了心理上的告别。",
+          "【113-120s 强钩子】少年擦干眼泪准备出门，口袋里的手机突然震动。他点开一条未知号码发来的定时语音，里面竟是奶奶的声音‘出门记得带伞’。旧表停摆但爱以新方式延续，故事在温情与悬念中戛然而止。"
+        ],
+        "ending": "少年放下旧钟表走出房门，手机收到奶奶生前设置的定时语音提醒带伞。旧物虽停摆，但爱与陪伴以新的方式延续，留下温暖且余韵悠长的开放式结局。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "少年（角色1）的声音需体现从初期的焦躁、执拗，到中段的挣扎，再到最后的释怀与温柔。奶奶的录音声音需带有老式留声机的底噪和轻微的失真感，以区分现实与录音。",
+      "sound_design": "核心音效为老式机械钟表的滴答声、齿轮咬合声、发条紧绷与崩断的金属声。手机震动和现代语音播放的清脆提示音需与老钟表的沉闷音效形成鲜明对比。"
+    },
+    "continuity_constraints": [
+      "旧钟表是机械结构，发声原理必须通过物理发条和齿轮驱动，不能出现电子屏幕或蓝牙等现代科技设定。",
+      "奶奶的录音内容必须保持日常、琐碎但充满关爱的基调，不能出现说教或宏大叙事。",
+      "手机收到的定时语音必须是奶奶生前通过现代通讯工具设置的，与旧钟表的机械录音形成时代对比。"
+    ],
+    "change_summary": [
+      "少年的心理状态从沉溺于过去、试图通过死物留住亲人，转变为接受现实、带着亲人的爱继续生活。",
+      "旧钟表的状态从勉强运转、播放留言，到发条崩断、彻底停摆，象征着少年对旧物执念的放下。",
+      "陪伴的载体从物理意义上的旧钟表，转移到了精神层面的记忆与现代科技（手机定时语音）的延续。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "149fab531ea742a0b38e6c44f52e3078",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "dc62aebb291e4bb08eb9f48e155db914",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T06:58:15.366110+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 2489,
+      "output_tokens": 3410,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2381,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1ec9477a-3256-4673-87a1-f642501b33a8",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 54941,
+      "completed_at": "2026-10-09T06:59:10.308885+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.5.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "604cd4b7626d306b8cc41653435c034eebd8961d72e7f74208ac6b6dda6c79ec",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-09T06:59:10.381357Z",
+  "updated_at": "2026-10-09T06:59:10.382357Z"
+}

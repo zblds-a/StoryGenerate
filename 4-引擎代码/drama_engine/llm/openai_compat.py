@@ -11,6 +11,8 @@ from __future__ import annotations
 
 import json
 import time
+import uuid
+from datetime import datetime, timezone
 from typing import Any
 
 import httpx
@@ -27,7 +29,9 @@ from ..core.errors import (
     classify_http_error,
 )
 from ..core.settings import get_settings
+from ..config import PROMPT_VERSION
 from .base import BaseLLMProvider, LLMResult, LLMSpec, estimate_tokens
+from .usage_context import current_usage_context
 
 # 常见供应商的默认端点
 KNOWN_ENDPOINTS = {
@@ -66,6 +70,21 @@ class OpenAICompatProvider(BaseLLMProvider):
             write=write_timeout,
             pool=pool_timeout,
         )
+
+    def _attempt_metadata(self, spec: LLMSpec, attempt: int, started_at: datetime) -> dict[str, Any]:
+        context = current_usage_context()
+        return {
+            **context,
+            "call_id": uuid.uuid4().hex,
+            "provider": self.name,
+            "stage": context.get("stage") or "generation",
+            "node": context.get("node") or spec.role,
+            "role": spec.role,
+            "requested_model": spec.model,
+            "attempt": attempt + 1,
+            "prompt_version": PROMPT_VERSION,
+            "started_at": started_at.isoformat(),
+        }
 
     def complete(
         self,
@@ -116,6 +135,8 @@ class OpenAICompatProvider(BaseLLMProvider):
                 )
 
             t0 = time.perf_counter()
+            started_at = datetime.now(timezone.utc)
+            attempt_meta = self._attempt_metadata(spec, attempt, started_at)
             try:
                 resp = httpx.post(
                     f"{self.base_url}/chat/completions",
@@ -131,18 +152,20 @@ class OpenAICompatProvider(BaseLLMProvider):
                 # 非重试型错误：立即失败
                 if status in HTTP_NON_RETRYABLE_STATUSES:
                     self.call_history.append({
-                        "role": spec.role, "requested_model": spec.model,
-                        "attempt": attempt + 1, "error": f"HTTP {status}",
+                        **attempt_meta, "status": "error", "error": f"HTTP {status}",
+                        "error_code": f"HTTP_{status}", "usage_source": "unavailable",
                         "latency_ms": int((time.perf_counter() - t0) * 1000),
+                        "completed_at": datetime.now(timezone.utc).isoformat(),
                     })
                     raise classify_http_error(status, f"HTTP {status}")
 
                 # 重试型错误
                 if status in HTTP_RETRYABLE_STATUSES:
                     self.call_history.append({
-                        "role": spec.role, "requested_model": spec.model,
-                        "attempt": attempt + 1, "error": f"HTTP {status}",
+                        **attempt_meta, "status": "error", "error": f"HTTP {status}",
+                        "error_code": f"HTTP_{status}", "usage_source": "unavailable",
                         "latency_ms": int((time.perf_counter() - t0) * 1000),
+                        "completed_at": datetime.now(timezone.utc).isoformat(),
                     })
                     last_error = classify_http_error(status, f"HTTP {status}")
                     if attempt < self.max_retries:
@@ -154,6 +177,9 @@ class OpenAICompatProvider(BaseLLMProvider):
                 data = resp.json()
                 latency = int((time.perf_counter() - t0) * 1000)
                 usage = data.get("usage") or {}
+                prompt_details = usage.get("prompt_tokens_details") or {}
+                completion_details = usage.get("completion_tokens_details") or {}
+                usage_reported = "prompt_tokens" in usage or "completion_tokens" in usage
                 result = LLMResult(
                     text=data["choices"][0]["message"]["content"] or "",
                     model=data.get("model", spec.model),
@@ -162,11 +188,19 @@ class OpenAICompatProvider(BaseLLMProvider):
                     latency_ms=latency,
                 )
                 self.call_history.append({
-                    "role": spec.role, "requested_model": spec.model,
+                    **attempt_meta,
                     "actual_model": result.model, "attempt": attempt + 1,
                     "input_tokens": result.input_tokens,
                     "output_tokens": result.output_tokens,
+                    "cache_read_tokens": prompt_details.get("cached_tokens", 0) or 0,
+                    "cache_write_tokens": prompt_details.get("cache_creation_tokens", 0) or 0,
+                    "reasoning_tokens": completion_details.get("reasoning_tokens", 0) or 0,
+                    "reasoning_included_in_output": True,
+                    "usage_source": "reported" if usage_reported else "estimated",
+                    "provider_request_id": resp.headers.get("x-request-id") or data.get("id"),
+                    "status": "success", "error_code": None,
                     "latency_ms": result.latency_ms,
+                    "completed_at": datetime.now(timezone.utc).isoformat(),
                 })
                 return result
 
@@ -176,9 +210,10 @@ class OpenAICompatProvider(BaseLLMProvider):
 
             except httpx.TimeoutException as exc:
                 self.call_history.append({
-                    "role": spec.role, "requested_model": spec.model,
-                    "attempt": attempt + 1, "error": "timeout",
+                    **attempt_meta, "status": "timeout", "error": "timeout",
+                    "error_code": "MODEL_TIMEOUT", "usage_source": "unavailable",
                     "latency_ms": int((time.perf_counter() - t0) * 1000),
+                    "completed_at": datetime.now(timezone.utc).isoformat(),
                 })
                 last_error = ModelTimeoutError(str(exc))
                 if attempt < self.max_retries:
@@ -189,9 +224,10 @@ class OpenAICompatProvider(BaseLLMProvider):
                 code = exc.response.status_code
                 last_error = classify_http_error(code, str(exc))
                 self.call_history.append({
-                    "role": spec.role, "requested_model": spec.model,
-                    "attempt": attempt + 1, "error": f"HTTP {code}",
+                    **attempt_meta, "status": "error", "error": f"HTTP {code}",
+                    "error_code": f"HTTP_{code}", "usage_source": "unavailable",
                     "latency_ms": int((time.perf_counter() - t0) * 1000),
+                    "completed_at": datetime.now(timezone.utc).isoformat(),
                 })
                 if code in HTTP_RETRYABLE_STATUSES and attempt < self.max_retries:
                     time.sleep(1.5 * (attempt + 1))
@@ -200,9 +236,10 @@ class OpenAICompatProvider(BaseLLMProvider):
 
             except Exception as exc:
                 self.call_history.append({
-                    "role": spec.role, "requested_model": spec.model,
-                    "attempt": attempt + 1, "error": type(exc).__name__,
+                    **attempt_meta, "status": "error", "error": type(exc).__name__,
+                    "error_code": type(exc).__name__, "usage_source": "unavailable",
                     "latency_ms": int((time.perf_counter() - t0) * 1000),
+                    "completed_at": datetime.now(timezone.utc).isoformat(),
                 })
                 last_error = ModelUnavailableError(str(exc))
                 if attempt < self.max_retries:

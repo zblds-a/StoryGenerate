@@ -6,6 +6,7 @@ from typing import Any
 
 from pydantic import TypeAdapter
 
+from ..llm.usage_context import usage_scope
 from .adapters import PlanGenerator, StoryExecutor
 from .performance import validate_story_delivery
 from .repository import WorkflowConflictError, WorkflowNotFoundError
@@ -85,13 +86,21 @@ class StoryWorkflowService:
             template_snapshot = resolved.model_dump(mode="json")
         rule_versions = _rule_versions()
         request = request.model_copy(update={"creation_preferences": preferences})
+        plan_id = uuid.uuid4().hex
         trace_start = len(getattr(getattr(self.plan_generator, "provider", None), "call_history", []))
-        content = self.plan_generator.generate(
-            request, source, characters, template=template_snapshot,
-        )
+        with usage_scope(
+            principal_id=context.principal_id,
+            request_id=request.request_id,
+            plan_id=plan_id,
+            stage="planning",
+            node="outline",
+            attempt_kind="initial_plan",
+        ):
+            content = self.plan_generator.generate(
+                request, source, characters, template=template_snapshot,
+            )
         model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
         self._validate_plan_shape(content, preferences)
-        plan_id = uuid.uuid4().hex
         payload = {
             "plan": content.model_dump(mode="json"),
             "preferences": preferences.model_dump(mode="json"),
@@ -136,10 +145,17 @@ class StoryWorkflowService:
             raise WorkflowConflictError("STALE_PLAN")
         request = _REQUEST_ADAPTER.validate_python(raw_request)
         trace_start = len(getattr(getattr(self.plan_generator, "provider", None), "call_history", []))
-        content = self.plan_generator.generate(
-            request, current.source_reference, current.character_snapshots,
-            previous=current.plan, feedback=feedback, template=current.template_snapshot,
-        )
+        with usage_scope(
+            request_id=request.request_id,
+            plan_id=plan_id,
+            stage="planning",
+            node="outline",
+            attempt_kind="user_plan_revision",
+        ):
+            content = self.plan_generator.generate(
+                request, current.source_reference, current.character_snapshots,
+                previous=current.plan, feedback=feedback, template=current.template_snapshot,
+            )
         model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
         if not content.change_summary:
             content = content.model_copy(update={"change_summary": [feedback.strip()]})
@@ -191,7 +207,14 @@ class StoryWorkflowService:
         self.repository.save_job(running)
         self.repository.commit()
         try:
-            delivery = self.story_executor.execute(job.input_snapshot)
+            with usage_scope(
+                request_id=job.request_id,
+                job_id=job.job_id,
+                plan_id=job.approved_plan_id,
+                stage="generation",
+                attempt_kind="approved_job",
+            ):
+                delivery = self.story_executor.execute(job.input_snapshot)
             latest = self.repository.get_job(job_id)
             if latest.status == WorkflowJobStatus.CANCEL_REQUESTED:
                 self.repository.save_job(latest.model_copy(update={

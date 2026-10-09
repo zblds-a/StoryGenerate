@@ -43,6 +43,7 @@ MODEL_ROUTING: dict[str, dict] = {
     "fact_ledger":         {"tier": TIER_FAST,     "temperature": 0.2, "max_tokens": 32768},
     "judge":               {"tier": TIER_FAST,     "temperature": 0.0, "max_tokens": 16384},
     "audio_adapt":         {"tier": TIER_FAST,     "temperature": 0.4, "max_tokens": 16384},
+    "performance_annotation": {"tier": TIER_FAST,  "temperature": 0.3, "max_tokens": 8192},
     "repair_json":         {"tier": TIER_FAST,     "temperature": 0.3, "max_tokens": 8192},
     "repair_audio":        {"tier": TIER_FAST,     "temperature": 0.3, "max_tokens": 8192},
 
