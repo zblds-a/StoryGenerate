@@ -127,6 +127,7 @@ def run_case(index: int) -> dict:
                 "emphasis_coverage": delivery.quality_report.emphasis_coverage,
                 "latency_sec": round(time.monotonic() - start, 2),
                 "llm_calls": calls,
+                "llm_attempts": provider.call_history,
                 "rule_sha256": {
                     path.name: hashlib.sha256(path.read_bytes()).hexdigest()
                     for path in (Path(__file__).resolve().parents[2] / "3-规则库").glob("*.json")
@@ -172,7 +173,10 @@ def main() -> int:
                     json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
                 )
             return result
-    with ThreadPoolExecutor(max_workers=min(3, len(indices))) as pool:
+    workers = int(os.environ.get("STORY_ACCEPTANCE_MAX_WORKERS", "2"))
+    if workers < 1 or workers > 3:
+        raise ValueError("STORY_ACCEPTANCE_MAX_WORKERS must be 1-3")
+    with ThreadPoolExecutor(max_workers=min(workers, len(indices))) as pool:
         futures = {pool.submit(one, index): index for index in indices}
         for future in as_completed(futures):
             result = future.result()

@@ -10,6 +10,9 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.orm import Session
 
 from drama_engine.persistence.models import Base
+from drama_engine.templates.models import StoryTemplateSpec, TemplateBeat
+from drama_engine.templates.postgres_repository import PostgresStoryTemplateRepository
+from drama_engine.templates.resolver import StoryTemplateResolver
 from drama_engine.workflow.repository import SqlAlchemyWorkflowRepository, WorkflowConflictError
 from drama_engine.workflow.schemas import EpisodeOutline, PlanContent
 from drama_engine.workflow.service import StoryWorkflowService
@@ -89,3 +92,35 @@ def test_postgres_approval_is_atomic_idempotent_and_survives_restart(pg_engine):
         assert restored.approved_plan_id == plan.plan_id
         assert restored.input_snapshot.request["user_instruction"] == request["user_instruction"]
         assert service.get_story_plan(plan.plan_id).status == "APPROVED"
+
+
+@pytest.mark.postgres
+def test_postgres_template_snapshot_survives_approval(pg_engine):
+    template = StoryTemplateSpec(
+        template_id="SPY_PG_TEST", version=1, name="数据库模板",
+        supported_modes=["mystery"],
+        beats=[TemplateBeat(key="reversal", purpose="线索反转")],
+    )
+    with Session(pg_engine) as session:
+        templates = PostgresStoryTemplateRepository(session)
+        templates.create(template)
+        service = StoryWorkflowService(
+            SqlAlchemyWorkflowRepository(session), PlanGenerator(), NeverExecute(),
+            template_resolver=StoryTemplateResolver(templates),
+        )
+        plan = service.prepare_story_plan({
+            "intent": "create", "request_id": uuid.uuid4().hex,
+            "idempotency_key": uuid.uuid4().hex,
+            "user_instruction": "谍战线索反转",
+            "creation_preferences": {"story_mode": "mystery"},
+            "template_ref": {"template_id": template.template_id, "template_revision": 1},
+        })
+        session.commit()
+    with Session(pg_engine) as session:
+        service = StoryWorkflowService(
+            SqlAlchemyWorkflowRepository(session), PlanGenerator(), NeverExecute(),
+        )
+        restored = service.get_story_plan(plan.plan_id)
+        assert restored.template_snapshot["beats"][0]["key"] == "reversal"
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, uuid.uuid4().hex)
+        assert job.input_snapshot.preview.template_snapshot == restored.template_snapshot

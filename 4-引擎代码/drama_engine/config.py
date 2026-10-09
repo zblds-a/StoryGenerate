@@ -27,7 +27,7 @@ CONTINUITY_LIB = "人物与连续性规则.json"
 LIB_SEARCH_DIRS = ("", "规则库", "3-规则库", "rules", "..", "../规则库", "../3-规则库", "../rules")
 
 # 提示词版本。规则库或提示词任一变化，都必须让生成缓存失效。
-PROMPT_VERSION = "p1.1.0"
+PROMPT_VERSION = "p1.2.0"
 
 
 def _default_workspace() -> Path:
