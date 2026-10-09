@@ -1,0 +1,903 @@
+{
+  "story_id": "32182dffe3ca48b693464e3e0038086e",
+  "story_version_id": "c8c047dc035b4f1b9e7dcbf50d419205",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+  "approved_plan_revision": 1,
+  "title": "时光发条",
+  "summary": "小镇少年林星在修理爷爷遗留的旧钟表时，意外发现钟表能播放家人的隐藏留言，在执念与释怀中学会了真正的告别。",
+  "preview_blurb": "深夜的钟表铺里，少年林星试图修好爷爷留下的旧怀表，却意外触发了隐藏在齿轮间的秘密留言。当发条濒临崩断，他能否听懂爷爷最后的告别？",
+  "tags": [
+    "温情",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "时光发条",
+    "premise": "小镇少年林星在修理爷爷遗留的旧钟表时，意外发现钟表能播放家人的隐藏留言，在执念与释怀中学会了真正的告别。",
+    "theme": "告别、陪伴、放下执念与亲情传承。",
+    "beginning": "林星在深夜的钟表铺试图修好爷爷的遗物怀表，遭遇机械故障，却意外触发了爷爷的录音。",
+    "development": "林星发现上发条能解锁不同留言，为了听到最后的告别而过度上紧发条，面临损坏怀表的危机，并在爷爷录音的劝导下陷入内心挣扎。",
+    "climax": "林星选择松开手，让发条自然回转，听到了爷爷真正的告别语，释怀了内心的执念。",
+    "ending": "林星完成与爷爷的告别，但钟表突然传出另一位家人的新留言，留下关于家庭秘密的新悬念。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "停摆的告别",
+        "core_goal": "林星试图修好爷爷的怀表并听完所有留言，最终学会放下执念，完成告别。",
+        "major_beats": [
+          "[0-2s] 突发巨大的齿轮卡壳刺耳声，旧钟表传出爷爷带机械底噪的留言‘星子，别修了’，直接打破深夜的宁静。",
+          "[2-7s] 林星在钟表铺工作台前，焦急地用镊子拨弄停摆的怀表，交代他必须修好它以听取爷爷临终遗言的困境。",
+          "[7-20s] 林星烦躁地用螺丝刀强撬后盖，触发隐藏机关，钟表发出清脆‘滴答’声并逆转，播放出爷爷温和的修表教学录音，配合音乐断点化解焦躁。",
+          "[20-80s] 林星发现上发条能解锁留言，便疯狂上弦想听最终告别，导致发条发出濒临崩断的警告声；爷爷录音提醒‘弦太紧会断’，迫使林星在毁掉怀表与放弃执念间做出选择。",
+          "[80-113s] 林星选择松开手让发条自然回转，触发钟表共鸣，播放出爷爷‘表停人往前走’的最终告别，林星落泪释怀，完成心理转变。",
+          "[113-120s] 林星收起怀表时，钟表突然传出带电流声的母亲声音‘妈妈有话对你说’，以强烈的新悬念切断情绪，戛然而止。"
+        ],
+        "ending": "Closed/Open：林星完成了与爷爷的告别（Closed），但意外触发了母亲的新留言，留下关于母亲下落的悬念（Open）。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "林星（角色1）": "声音从焦躁、执拗转为释然、温柔。动作音效（工具碰撞、上发条、呼吸声）需清晰，体现内心挣扎。",
+      "家人留言处理": "爷爷和母亲的声音通过旧钟表音效（带机械底噪、混响或电流声）播放，与林星的现实环境音形成空间对比。若需后续实时互动，需补齐家人角色。"
+    },
+    "continuity_constraints": [
+      "旧钟表的留言机制必须依赖物理动作（如撬后盖、上发条、松发条）触发，不能凭空播放。",
+      "爷爷的留言内容必须与修表或人生哲理相关，符合老一辈手艺人的设定。",
+      "结尾的母亲留言必须带有不同于爷爷录音的音效特征（如电流声或失真），暗示其来源或状态不同。"
+    ],
+    "change_summary": [
+      "林星从执着于修复遗物、强求听完所有留言，转变为接受‘表停人往前走’的道理，学会了放下。",
+      "怀表从‘损坏的遗物’变成了‘连接家人情感的媒介’，并在结尾揭示了更多家庭秘密。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-69d956bc",
+      "index": 1,
+      "title": "停摆的告别",
+      "synopsis": "林星在深夜修理爷爷的遗物怀表，意外发现上发条能解锁家人的隐藏留言。为了听到爷爷的最终告别，他过度上紧发条，面临损坏怀表的危机。在爷爷录音的劝导下，林星学会放下执念，完成告别，却意外触发了母亲的新留言，揭开家庭秘密的悬念。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 119,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "停摆的怀表",
+          "location": "深夜的钟表铺工作台前",
+          "dramatic_goal": "林星试图修好怀表以听取爷爷遗言，意外触发机关并发现上发条能解锁留言。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "刺耳的齿轮卡壳声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "（带机械底噪的爷爷留言）星子，别修了。",
+              "emotion": "calm",
+              "tone_instruction": "声音略带沙哑与电流杂音感，语速平缓，语气像日常叮嘱般自然。",
+              "emphasis": [
+                {
+                  "span_text": "别修了",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 18,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "录制时贴近麦克风模拟老式收音机质感，句末留0.5秒空白接环境音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "爷爷，我还没听懂您最后那句遗言呢！这破表怎么偏偏在这个时候又停了？",
+              "emotion": "worried",
+              "tone_instruction": "前半句带着急切与不甘，咬字稍重；后半句语气转为焦躁的质问，尾音微微发颤。",
+              "emphasis": [
+                {
+                  "span_text": "还没听懂",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "偏偏在这个时候",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "气息微促，第一句说完后换气一次，第二句保持紧凑节奏，避免拖沓。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林星焦急地用镊子拨弄着怀表。爷爷走后，这块旧表成了他唯一的念想。他必须修好它，听完那句没听清的临终遗言。",
+              "emotion": "serious",
+              "tone_instruction": "叙述口吻平稳但暗含张力，重点词加重咬字，句间停顿清晰以区分动作与心理描写。",
+              "emphasis": [
+                {
+                  "span_text": "唯一的念想",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 31,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "必须修好它",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 38,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "每句号末做轻微气口停顿，第三句“临终遗言”四字放慢半拍，突出执念感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "用螺丝刀强撬后盖，触发隐藏机关",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "清脆的滴答声逆转",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l7",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "（爷爷温和的留言）修表啊，得顺着齿轮的脾气，急不得。",
+              "emotion": "tender",
+              "tone_instruction": "声音放松带笑意，语气如长辈手把手教学般耐心，后半句放缓并带出安抚感。",
+              "emphasis": [
+                {
+                  "span_text": "顺着齿轮的脾气",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 21,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "急不得",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 25,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "录制时嘴角微扬保持松弛状态，“急不得”三字采用降调处理，句尾留白2秒配合音乐进入。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "紧绷的发条",
+          "location": "深夜的钟表铺工作台前",
+          "dramatic_goal": "林星为听最终告别疯狂上弦，在怀表濒临损坏与放弃执念间陷入挣扎。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "顺着脾气？原来上发条就能解锁留言！只要上满，我就能听到最后那句告别了！",
+              "emotion": "excited",
+              "tone_instruction": "语气骤然上扬，带着发现新方法的惊喜，后半句语速加快，透出迫切感。",
+              "emphasis": [
+                {
+                  "span_text": "原来上发条就能解锁留言",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 16,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "最后那句告别了",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 34,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "在‘顺着脾气？’后留0.3秒停顿，模拟脑中灵光一闪的瞬间。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "疯狂上发条",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "发条发出濒临崩断的警告声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "还差一点……再紧一点就能听到最后那句了！",
+              "emotion": "serious",
+              "tone_instruction": "气息微促，咬字加重，‘再紧一点’压低声音带出紧绷感，尾音上扬显急切。",
+              "emphasis": [
+                {
+                  "span_text": "再紧一点",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "最后那句了",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 19,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.98,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "‘还差一点……’处做半秒气口停顿，模拟拧动发条时的用力与喘息。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "（爷爷带底噪的留言）星子，记住，弦太紧，是会断的。",
+              "emotion": "tender",
+              "tone_instruction": "音色加混响模拟旧录音质感，语速放缓，‘记住’二字沉稳叮嘱，后半句语气转轻显无奈。",
+              "emphasis": [
+                {
+                  "span_text": "记住",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 15,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "是会断的",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 24,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "全程保持平稳气声，句末自然收弱，不拖长音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我不能毁了它，可我也不能不听！爷爷，您最后到底想告诉我什么？",
+              "emotion": "serious",
+              "tone_instruction": "前半句语气决绝带颤音，‘可’字后换气转折，后半句声音微哑，透出无助与追问。",
+              "emphasis": [
+                {
+                  "span_text": "不能不听",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "到底想告诉我什么",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "在‘可’字前加入急促吸气声，模拟情绪拉扯的瞬间。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "发条濒临崩断的悲鸣让林星陷入挣扎，是毁掉遗物还是放弃执念，他必须做出选择。",
+              "emotion": "serious",
+              "tone_instruction": "叙述者中低音区平稳推进，‘濒临崩断’加重咬字渲染危机感，‘做出选择’处语气下沉留白。",
+              "emphasis": [
+                {
+                  "span_text": "濒临崩断",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "做出选择",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 36,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首轻微环境音铺垫后起音，句末自然渐弱，为下一幕留出空间。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "回转与悬念",
+          "location": "深夜的钟表铺工作台前",
+          "dramatic_goal": "林星松开手完成告别，却意外触发母亲的新留言，留下强烈悬念。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林星看着手中颤抖的怀表，深吸一口气，缓缓松开了手。",
+              "emotion": "calm",
+              "tone_instruction": "语速放缓，气息下沉，在松开处做轻微停顿后自然吐出。",
+              "emphasis": [
+                {
+                  "span_text": "缓缓松开",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留白两秒，仅保留环境底噪过渡。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "发条自然回转的轻柔滴答声，钟表共鸣",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "（爷爷清晰的留言）表停了，人得往前走。星子，好好活。",
+              "emotion": "tender",
+              "tone_instruction": "语气平和温暖，尾音微扬，像长辈叮嘱般自然收尾。",
+              "emphasis": [
+                {
+                  "span_text": "人得往前走",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 18,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "往前走后换气一次，接星子时音量略降，营造录音回放感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（哽咽）表停了，人得往前走……爷爷，我终于明白了。",
+              "emotion": "sad",
+              "tone_instruction": "嗓音微颤，前半句压抑情绪，后半句逐渐放开，尾音带哭腔但克制。",
+              "emphasis": [
+                {
+                  "span_text": "终于明白了",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "往前走……处拉长元音并伴随轻微抽泣气声，爷爷前停顿一秒。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林星落泪释怀，将怀表小心翼翼地收进抽屉。就在此时，钟表内部突然再次传出声音。",
+              "emotion": "neutral",
+              "tone_instruction": "叙述平稳，动作描写轻柔，句末突然起音稍提以制造转折。",
+              "emphasis": [
+                {
+                  "span_text": "突然再次",
+                  "occurrence": 1,
+                  "start_char": 29,
+                  "end_char": 33,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "收进抽屉后加衣物摩擦音效提示位，突然前急停半拍。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "带电流失真的声音",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "（带电流声的母亲留言）星子，妈妈有句重要的话对你说……",
+              "emotion": "mysterious",
+              "tone_instruction": "声音叠加轻微电子失真效果，语气急切中透着神秘，省略号处气息渐弱。",
+              "emphasis": [
+                {
+                  "span_text": "重要的话",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末不闭合，直接切断至黑场，保留电流底噪三秒。",
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "本集讲述了林星在修理爷爷遗物怀表时，通过物理动作触发隐藏留言的故事。他从焦躁执拗到疯狂上弦，最终在爷爷“表停人往前走”的劝导下释怀放手。结尾母亲带有电流声的留言戛然而止，为后续剧情埋下伏笔。",
+      "ending_hook": "怀表里传出的母亲留言究竟隐藏着什么家庭秘密？母亲的下落又在哪里？",
+      "fact_delta": [
+        {
+          "fact": "怀表留言机制",
+          "before": "未知",
+          "after": "必须依赖撬后盖、上发条、松发条等物理动作触发"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林星与爷爷的遗物",
+          "before": "执着于修复以获取遗言",
+          "after": "接受表停人往前走的道理，将怀表视为情感媒介并释怀收起"
+        }
+      ],
+      "new_open_threads": [
+        "母亲留言的具体内容与下落之谜"
+      ],
+      "closed_threads": [
+        "林星对爷爷临终遗言的执念"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "怀表留言机制",
+        "before": "未知",
+        "after": "必须依赖撬后盖、上发条、松发条等物理动作触发"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林星与爷爷的遗物",
+        "before": "执着于修复以获取遗言",
+        "after": "接受表停人往前走的道理，将怀表视为情感媒介并释怀收起"
+      }
+    ],
+    "unresolved_threads": [
+      "母亲留言的具体内容与下落之谜"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 14,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.5.0"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "966b4c5e6494442190141aa5d25bd28d",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:06:22.618746+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 2489,
+      "output_tokens": 3122,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2191,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "178a4716-4dd2-44d1-aac4-eafc59dd81a3",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 54709,
+      "completed_at": "2026-10-09T07:07:17.328150+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "09d0f14c2c794cc9bb6ad5c988ca367c",
+      "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "8f77bc95d7b5431692f2aa7762f1511e",
+      "provider": "openai_compat",
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:07:18.173515+00:00",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 4911,
+      "output_tokens": 8475,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 6624,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1164200a-c8c8-4f6d-85e4-03bfc4e4cca2",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 145295,
+      "completed_at": "2026-10-09T07:09:43.469564+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "09d0f14c2c794cc9bb6ad5c988ca367c",
+      "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "c3f9b32d5b3140e18ab8c51eea736220",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:09:43.483182+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2118,
+      "output_tokens": 6408,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5584,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "f73c6023-d089-4f6f-9106-f97473c49cca",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 41407,
+      "completed_at": "2026-10-09T07:10:24.890428+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "09d0f14c2c794cc9bb6ad5c988ca367c",
+      "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "d1aedc37f3bf4b01872ec61233a2f694",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:10:25.034127+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2191,
+      "output_tokens": 4460,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3542,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "109f00af-08fc-410f-be18-2b40f2920606",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 28423,
+      "completed_at": "2026-10-09T07:10:53.457553+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "09d0f14c2c794cc9bb6ad5c988ca367c",
+      "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "ef0bc89962504ecbbfec0e4b76a1d173",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:10:53.577163+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2177,
+      "output_tokens": 4307,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3601,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "c1925f97-6a3c-491c-b5da-e529c745d763",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 27935,
+      "completed_at": "2026-10-09T07:11:21.513027+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "09d0f14c2c794cc9bb6ad5c988ca367c",
+      "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "ba630500562641b2adef8ae0cddf9e07",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:11:23.107477+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2216,
+      "output_tokens": 4169,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3478,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1ad4f0a9-5309-4d7f-948b-447599def948",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 26167,
+      "completed_at": "2026-10-09T07:11:49.274998+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "09d0f14c2c794cc9bb6ad5c988ca367c",
+      "plan_id": "c2c5772673a646ae8183bd4ae0de8038",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "dc5b139cf6724e77a43389bb54d00ea4",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:11:49.482046+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 5996,
+      "output_tokens": 2017,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1975,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "3f995535-46c8-4c4f-861b-5f6802e2d3aa",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 16446,
+      "completed_at": "2026-10-09T07:12:05.929063+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T07:11:49.455059Z"
+}

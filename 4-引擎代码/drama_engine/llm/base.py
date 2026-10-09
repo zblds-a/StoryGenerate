@@ -12,6 +12,7 @@ from typing import Any, TypeVar
 from pydantic import BaseModel, ValidationError
 
 from ..contracts import LLMProvider, LLMResult, LLMSpec, TokenUsage  # noqa: F401  (re-export)
+from .usage_context import usage_scope
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -74,7 +75,8 @@ class BaseLLMProvider:
             + "\n".join(f"- {e}" for e in errors)
             + "\n请重新输出完整的 JSON 对象。"
         )
-        result2 = self.complete(spec, full_system, retry_user)
+        with usage_scope(attempt_kind="json_schema_repair"):
+            result2 = self.complete(spec, full_system, retry_user)
         self._trace_llm_call(spec, result2, result2.latency_ms)
         parsed2, errors2 = _try_parse(result2.text, schema)
         if parsed2 is not None:

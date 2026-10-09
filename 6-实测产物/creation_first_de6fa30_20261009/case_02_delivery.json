@@ -1,0 +1,1098 @@
+{
+  "story_id": "e634f7e3cd5e41f49717c6ae6b54963b",
+  "story_version_id": "f11015de04a0429596d3d6fa99c2ab31",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "af8d7314c41040899778ff6b57adf9a1",
+  "approved_plan_revision": 2,
+  "title": "归位的星空",
+  "summary": "校图书馆每晚有一本书自动归位，两位朋友在深夜潜伏追踪，最终发现这是一个休学学长为鼓励熬夜同学而留下的温暖机关。",
+  "preview_blurb": "闭馆后的图书馆，一本《追星星的人》连续三天自动飞回书架。深夜潜伏的两人，即将揭开轻悬疑事件背后的温暖真相。",
+  "tags": [
+    "轻悬疑",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "outline": {
+    "title": "归位的星空",
+    "premise": "校图书馆每晚有一本书自动归位，两位朋友在深夜潜伏追踪，最终发现这是一个休学学长为鼓励熬夜同学而留下的温暖机关。",
+    "theme": "青春期的隐性关怀、友谊与温暖的陪伴，打破悬疑外壳下的治愈内核。",
+    "beginning": "校图书馆闭馆后，一本《追星星的人》连续三天自动飞回书架。角色1和角色2决定深夜潜伏，揭开这个轻悬疑事件背后的真相。",
+    "development": "两人通过手电筒和近距离检查，打破了灵异猜想，发现书脊上的透明鱼线。顺着鱼线，他们追踪到顶楼废弃钟表室，发现机关与闭馆打铃机械钟相连。",
+    "climax": "在钟表室，角色1在面临破坏机关还是耐心拆解的选择时，选择了后者，保全了机关并找到休学学长的手记，揭晓自动归位是学长为了逼迫角色1按时休息而设计的温暖机关。",
+    "ending": "角色1选择顺应学长的期待，主动将书放回触发槽。在开场的归位音效与星空投影、未播完的温柔录音中戛然而止，完成情感落地与首尾呼应。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "追星星的机关",
+        "core_goal": "查明图书馆书本自动归位的真相，通过关键选择完成从悬疑到温暖的情感落地，并呼应开场。",
+        "major_beats": [
+          "【0-3秒 黄金钩子】闭馆广播余音刚落，黑暗中突发‘嗖——啪’的清脆声响，一本书精准飞入高层书架。",
+          "【3-10秒 矛盾三要素】角色1和角色2躲在借阅台后，角色1压低声音确认：‘《追星星的人》又自动归位了，今晚必须查出是谁在装神弄鬼。’",
+          "【10-30秒 第一次反转】角色2猛然打开强光手电照向书架，以为能照出鬼影却空无一人（压抑）；角色1冲上前一把抽出书，发现书脊粘着极细的透明鱼线，伴随‘铮’的琴弦音效断点（爆发）。",
+          "【30-120秒 中段推进】两人顺着鱼线摸索，台词短促交锋。潜入顶楼废弃钟表室，发现卷线器与闭馆打铃的机械钟齿轮相连。角色2急于求成，拿出剪刀想直接剪断绷紧的鱼线查看底部的铁盒。",
+          "【120-170秒 升级/二次反转】角色1面临选择：剪断线会彻底破坏机关，不剪则难以取出铁盒。角色1选择制止角色2，小心翼翼地手动解除齿轮卡扣，保全了机关并取出铁盒。盒内是休学学长的手记，揭晓真相：学长知道角色1备战天文竞赛压力过大，特意制作机关每天强制收走书，逼迫其按时休息。",
+          "【170-180秒 强钩子】手记最后一页写着：‘如果你解开了机关，请把书放回触发槽，早点睡。’角色1做出明确选择，主动将书放入槽中。伴随开场同样的‘嗖——啪’声，书本归位，天花板瞬间亮起璀璨星空，学长预录的温柔语音响起：‘别熬夜了，星星在梦里……’声音未落，音频戛然而止。"
+        ],
+        "ending": "悬念彻底解开，角色1通过主动归位书本的选择接受关怀。在星空投影与未播完的录音中戛然而止，首尾音效呼应，情绪达到最高点后留白。",
+        "target_duration_sec": 180
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "角色1声音带有疲惫但充满探究欲，面临选择时语气需有从犹豫到坚定的转变；角色2声音清脆、行动力强、略带急躁。两人互动需体现默契与压低声音的紧张感。",
+      "sound_design": "重点设计书本滑过轨道的‘嗖啪’声（首尾呼应）、鱼线绷紧的‘铮’声、机械齿轮转动与卡扣解除的清脆金属声，以及结尾星空投影亮起的空灵音效。"
+    },
+    "continuity_constraints": [
+      "书本归位必须依赖物理机关（鱼线与卷线器），禁止出现超自然或灵异解释。",
+      "角色1和角色2是仅有的发声角色，学长的声音只能作为预录音频在结尾出现，且不能有实时互动。",
+      "开场的‘嗖——啪’归位音效必须在结尾角色1主动触发时原样重现，形成听觉闭环。"
+    ],
+    "change_summary": [
+      "人物认知与选择变化：角色1从怀疑灵异、试图破坏机关，转变为理解学长苦心，并主动选择顺应机关去休息。",
+      "环境状态变化：从黑暗紧张的图书馆借阅区，转移到充满温暖回忆与星空投影的顶楼钟表室。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-3a2f0f7c",
+      "index": 1,
+      "title": "追星星的机关",
+      "synopsis": "校图书馆每晚有一本书自动归位，两位朋友在深夜潜伏追踪，最终发现这是一个休学学长为鼓励熬夜同学而留下的温暖机关。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 178,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "深夜归位",
+          "location": "校图书馆借阅区",
+          "dramatic_goal": "确立悬疑基调，交代角色动机，引出书本自动归位的异常现象。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "闭馆广播余音刚落，黑暗中突发“嗖——啪”的清脆声响，一本书精准飞入高层书架。",
+              "emotion": "neutral",
+              "tone_instruction": "语速平稳铺陈，读到拟声词时略微停顿并加重咬字以突出画面感。",
+              "emphasis": [
+                {
+                  "span_text": "精准飞入",
+                  "occurrence": 1,
+                  "start_char": 29,
+                  "end_char": 33,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "保持中距离麦克风收音，句尾自然收气不拖音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "(压低声音) 《追星星的人》又自动归位了。这已经是第三天了。",
+              "emotion": "serious",
+              "tone_instruction": "气息收紧贴麦低语，前半句陈述事实，后半句语气加重透出疲惫与警觉。",
+              "emphasis": [
+                {
+                  "span_text": "又自动归位了",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 20,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "第三天了",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "贴近麦克风采用耳语式发声，避免喷麦，句间留0.5秒呼吸间隙。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "(紧张) 到底是谁在装神弄鬼？",
+              "emotion": "worried",
+              "tone_instruction": "语速加快带出焦躁感，尾音微微上扬但保持克制，体现强压下的不安。",
+              "emphasis": [
+                {
+                  "span_text": "装神弄鬼",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "气息微促，咬字干脆，问句结尾不做拖长处理直接切断。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "今晚必须查清楚，不能再被这声音吓到了。",
+              "emotion": "serious",
+              "tone_instruction": "语气由坚定转为略带自嘲的决绝，重音落在行动指令上，整体音量维持低调。",
+              "emphasis": [
+                {
+                  "span_text": "必须查清楚",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 7,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.98,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "胸腔共鸣下沉支撑语气，逗号处微顿换气，后半句咬字逐渐清晰有力。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "鱼线踪迹",
+          "location": "校图书馆书架区",
+          "dramatic_goal": "打破灵异猜想，发现物理机关线索，推动剧情向顶楼转移。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "角色2猛然打开强光手电照向书架，以为能照出鬼影却空无一人。",
+              "emotion": "neutral",
+              "tone_instruction": "语速平稳，在“猛然”处稍作顿挫以配合动作音效，后半句语气收敛。",
+              "emphasis": [
+                {
+                  "span_text": "空无一人",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 28,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末自然收声，留0.5秒空白给后续音效。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "没人？难道真是鬼……",
+              "emotion": "fearful",
+              "tone_instruction": "声音压低带颤音，前半句急促发问，后半句尾音拖长并逐渐气声化。",
+              "emphasis": [
+                {
+                  "span_text": "难道真是鬼",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 8,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“没人？”后停顿0.3秒，轻微倒吸一口气再接后半句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "别瞎说，书还在那儿！",
+              "emotion": "serious",
+              "tone_instruction": "语气干脆果断，“别瞎说”短促制止，“书还在那儿”加重咬字确认事实。",
+              "emphasis": [
+                {
+                  "span_text": "书还在那儿",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 9,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首不换气直接切入，句末干脆截断不留余音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "角色1冲上前一把抽出书，发现书脊粘着极细的透明鱼线，伴随“铮”的琴弦断音，鱼线绷紧了。",
+              "emotion": "serious",
+              "tone_instruction": "叙述节奏加快，在“发现”后微顿突出细节，“绷紧”二字压低嗓音制造张力。",
+              "emphasis": [
+                {
+                  "span_text": "鱼线绷紧了",
+                  "occurrence": 1,
+                  "start_char": 37,
+                  "end_char": 42,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“发现”后微顿0.2秒模拟视线聚焦，后半句语流连贯推进。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "鱼线？！原来是物理机关搞的鬼！",
+              "emotion": "excited",
+              "tone_instruction": "前半句短促上扬表示惊疑，后半句语速加快，重音落在“物理机关”上，语气转为笃定。",
+              "emphasis": [
+                {
+                  "span_text": "物理机关",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 11,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“鱼线？！”后快速换气，紧接着连贯吐出后半句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "顺着线，往上走，看它连到哪。",
+              "emotion": "serious",
+              "tone_instruction": "语气沉稳下达指令，“顺着线”与“往上走”之间保持均匀节拍，尾句略微放缓引导方向。",
+              "emphasis": [
+                {
+                  "span_text": "往上走",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "每两个词组间自然换气，尾句气息下沉不飘。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "钟表室的抉择",
+          "location": "顶楼废弃钟表室",
+          "dramatic_goal": "发现机关核心，角色1做出保全机关的关键选择，揭晓学长留下的手记真相。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "两人顺着鱼线摸索，潜入顶楼废弃钟表室，发现卷线器与闭馆打铃的机械钟齿轮相连。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳推进，在“机械钟齿轮相连”处略微放慢，带出发现的笃定感。",
+              "emphasis": [
+                {
+                  "span_text": "机械钟齿轮相连",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 37,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留0.5秒气口，为下一句角色对话铺垫。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "下面挂着个铁盒。我带了剪刀，直接剪断线拿出来看看不就知道了？",
+              "emotion": "neutral",
+              "tone_instruction": "前半句语气干脆，后半句语速加快，尾音上扬带出急切试探的口吻。",
+              "emphasis": [
+                {
+                  "span_text": "直接剪断线",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 19,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "不就知道了",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“铁盒”后微顿半拍，模拟视线移动与掏剪刀的动作节奏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "别动！剪断线机关就彻底毁了。设计它的人花了不少心思，让我来。",
+              "emotion": "serious",
+              "tone_instruction": "首句短促压低嗓音制止，随后语气转稳，强调“花了不少心思”，尾句坚定承接。",
+              "emphasis": [
+                {
+                  "span_text": "别动！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "彻底毁了",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "让我来",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“别动！”后紧接0.3秒呼吸停顿，体现瞬间拦截的动作感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "角色1小心翼翼地手动解除齿轮卡扣，伴随清脆金属声，鱼线缓缓松弛，铁盒被安全取下。",
+              "emotion": "calm",
+              "tone_instruction": "咬字轻柔清晰，配合“缓缓松弛”自然放缓语速，营造稳妥落地的听感。",
+              "emphasis": [
+                {
+                  "span_text": "小心翼翼",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "安全取下",
+                  "occurrence": 1,
+                  "start_char": 35,
+                  "end_char": 39,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“金属声”一词前预留0.4秒空白，便于后期叠加音效。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "真有你的。这机关设计得真巧妙。盒子里是什么？",
+              "emotion": "happy",
+              "tone_instruction": "前两短句语气上扬带赞叹，第三句转为好奇探问，尾音自然下沉。",
+              "emphasis": [
+                {
+                  "span_text": "真有你的",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "真巧妙",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "是什么",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 21,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“真巧妙”后轻吸一口气，模拟放下工具、凑近查看的状态转换。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "角色1打开铁盒，里面是一本泛黄的手记。",
+              "emotion": "calm",
+              "tone_instruction": "声音放轻，语速平缓，突出“泛黄的手记”的年代感与神秘氛围。",
+              "emphasis": [
+                {
+                  "span_text": "泛黄的手记",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 18,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“打开铁盒”后留0.6秒环境底噪，不抢台词信息量。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "(念，声音微颤) “我知道你备战天文竞赛压力太大，总熬夜。所以我做了这机关，每天闭馆强制收走你的书。别怪学长，只想逼你按时休息。”",
+              "emotion": "tender",
+              "tone_instruction": "整体气息下沉，咬字克制而温柔，“压力太大”处微顿显共情，“按时休息”尾音渐弱带安抚感。",
+              "emphasis": [
+                {
+                  "span_text": "压力太大",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 24,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "强制收走你的书",
+                  "occurrence": 1,
+                  "start_char": 42,
+                  "end_char": 49,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "按时休息",
+                  "occurrence": 1,
+                  "start_char": 59,
+                  "end_char": 63,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首保留0.5秒翻纸摩擦声后的静默，以气声起头，避免突兀。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "休学林学长……原来这不是灵异事件，是他在关心你啊。",
+              "emotion": "reassuring",
+              "tone_instruction": "前半句迟疑停顿，后半句语气转暖，尾音轻柔落地，传递释然与共情。",
+              "emphasis": [
+                {
+                  "span_text": "不是灵异事件",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 16,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "关心你啊",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 24,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“林学长……”后留0.8秒长停顿，模拟情绪沉淀与视线转向角色1的过程。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "星空下的回响",
+          "location": "顶楼废弃钟表室",
+          "dramatic_goal": "角色1接受关怀并主动触发机关，首尾音效呼应，在温暖的高潮中留白。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "角色1翻到手记最后一页。",
+              "emotion": "calm",
+              "tone_instruction": "平稳叙述，语速适中，为下文的情感转折铺垫",
+              "emphasis": [
+                {
+                  "span_text": "最后一页",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 11,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末微顿，留出翻页音效空间",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "(轻声) “如果你解开了机关，请把书放回触发槽，早点睡。”",
+              "emotion": "tender",
+              "tone_instruction": "压低嗓音，语气柔和如耳语，尾音微微上扬带出关切",
+              "emphasis": [
+                {
+                  "span_text": "早点睡",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 27,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "开头轻声提示不读出，直接以气声起音，句末气息渐弱",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "你打算怎么办？",
+              "emotion": "serious",
+              "tone_instruction": "语速稍快，咬字清晰，带着试探与等待的紧迫感",
+              "emphasis": [
+                {
+                  "span_text": "怎么办",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "问句末尾音调自然上扬，留白半秒等对方反应",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "角色1没有犹豫，主动将书放入槽中。“嗖——啪！”书本归位，天花板瞬间亮起璀璨星空。",
+              "emotion": "calm",
+              "tone_instruction": "语气果断干脆，拟声词处做短促停顿，随后语调扬起展现画面感",
+              "emphasis": [
+                {
+                  "span_text": "没有犹豫",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "瞬间亮起",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 36,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "嗖——啪后停顿约0.5秒，再读后续描写，营造视觉冲击的延迟感",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "录音机传出学长温柔的预录语音：“别熬夜了，星星在梦里……”声音未落，音频戛然而止。",
+              "emotion": "tender",
+              "tone_instruction": "前半句模仿录音质感，语气舒缓温暖；后半句转回旁白状态，语速放缓收尾",
+              "emphasis": [
+                {
+                  "span_text": "别熬夜了",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "戛然而止",
+                  "occurrence": 1,
+                  "start_char": 36,
+                  "end_char": 40,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "引用部分用轻微混响感音色演绎，引号结束后立刻切回干声，句末不留余韵",
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "角色1和角色2在深夜图书馆追查书本自动归位的真相。他们顺着鱼线找到顶楼钟表室的物理机关，在面临破坏还是保全的选择时，角色1选择保全机关并发现休学学长的手记。得知学长为逼迫自己按时休息而设计机关后，角色1主动将书放回触发槽，在星空投影与学长的温柔录音中，完成了从悬疑到温暖的情感落地。",
+      "ending_hook": "星空亮起，学长的温柔录音在最高点戛然而止，留下无尽的温暖与余味。",
+      "fact_delta": [
+        {
+          "fact": "书本自动归位并非灵异事件，而是休学林学长利用鱼线和机械钟制作的物理机关。"
+        },
+        {
+          "fact": "学长制作机关的目的是为了逼迫备战天文竞赛的角色1按时休息。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "角色1与休学林学长",
+          "change": "从不解、怀疑到理解并接受学长的隐性关怀。"
+        },
+        {
+          "relationship": "角色1与角色2",
+          "change": "在共同探秘中，角色1的沉稳与角色2的急躁形成互补，友谊更加默契。"
+        }
+      ],
+      "new_open_threads": [
+        "休学林学长何时会回到学校？",
+        "角色1能否在天文竞赛中取得好成绩以回报学长的关心？"
+      ],
+      "closed_threads": [
+        "图书馆书本自动归位的悬疑事件。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "书本自动归位并非灵异事件，而是休学林学长利用鱼线和机械钟制作的物理机关。"
+      },
+      {
+        "fact": "学长制作机关的目的是为了逼迫备战天文竞赛的角色1按时休息。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "角色1与休学林学长",
+        "change": "从不解、怀疑到理解并接受学长的隐性关怀。"
+      },
+      {
+        "relationship": "角色1与角色2",
+        "change": "在共同探秘中，角色1的沉稳与角色2的急躁形成互补，友谊更加默契。"
+      }
+    ],
+    "unresolved_threads": [
+      "休学林学长何时会回到学校？",
+      "角色1能否在天文竞赛中取得好成绩以回报学长的关心？"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 23,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.5.0"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "834484285ccc4581b3acb95608535542",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:12:15.703273+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 2609,
+      "output_tokens": 3841,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2810,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "88a4105b-62dc-4a04-830f-560d0db6d11b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 60147,
+      "completed_at": "2026-10-09T07:13:15.850345+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "65600b1c13184be29a6bbb396ac71344",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:13:15.983434+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3654,
+      "output_tokens": 3499,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2360,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "f283af9a-c362-48e8-9b94-f1a4cfda6f2e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 43818,
+      "completed_at": "2026-10-09T07:13:59.802364+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "0e847cc55f2e4255877bb843e4526af2",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "73c47584f8294775b7f03e26f88d5d78",
+      "provider": "openai_compat",
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:14:00.300514+00:00",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 5777,
+      "output_tokens": 6940,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5045,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "082f990e-5d48-4e5c-b4ff-d6fc05ad1248",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 119765,
+      "completed_at": "2026-10-09T07:16:00.066728+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "0e847cc55f2e4255877bb843e4526af2",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "f4557c83e62b41f2bca2915cf7991c55",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:16:00.120906+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2226,
+      "output_tokens": 3988,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3421,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "b51ba850-822f-4d2b-896b-6e6e12c57131",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 27988,
+      "completed_at": "2026-10-09T07:16:28.109548+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "0e847cc55f2e4255877bb843e4526af2",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "30899ede16444c9791a4d80ef301015a",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:16:28.133415+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2382,
+      "output_tokens": 5433,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4629,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "5563f294-9eba-47e5-a71b-9a5c163f6dd2",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 34920,
+      "completed_at": "2026-10-09T07:17:03.053554+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "0e847cc55f2e4255877bb843e4526af2",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "998aa4fad0ad4c5f936916b0c91776a0",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:17:03.064242+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2601,
+      "output_tokens": 5402,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3945,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "af0c0151-ed08-43c0-9b64-cef16e3adcd4",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 33718,
+      "completed_at": "2026-10-09T07:17:36.782890+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "0e847cc55f2e4255877bb843e4526af2",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "9f1483cf5be24796aa8d17d93e97b0d9",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:17:36.822916+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2304,
+      "output_tokens": 4800,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4053,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "cbfdb2c8-2f43-4daa-a383-b33322a7953f",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 30190,
+      "completed_at": "2026-10-09T07:18:07.013261+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "0e847cc55f2e4255877bb843e4526af2",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "ef87ea704bb84f1bac4e2c2403eda7ac",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:18:07.075459+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7387,
+      "output_tokens": 1644,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1602,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "93222829-aae9-4068-88b5-21680ff73db4",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 12234,
+      "completed_at": "2026-10-09T07:18:19.310354+00:00"
+    }
+  ],
+  "created_at": "2026-10-09T07:18:07.051151Z"
+}

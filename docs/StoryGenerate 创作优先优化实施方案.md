@@ -105,3 +105,11 @@ JSON、Git SHA、Prompt 版本、模型、采样参数、每次调用、Token、
 本轮没有数据库迁移。回滚时恢复 p1.4.1、移除创作包输入和单场修复器、将 performance route 恢复为旧路由即可；
 Phase 10 的 Plan、Job、StoryVersion 数据不受影响。已经用 p1.5.0 创建的 Plan 应按旧版本 Plan 处理为 stale，
 不可跨 Prompt 版本继续执行。
+
+## 8. 本轮验证结果
+
+- 全量单元测试：`489 passed in 314.60s`。
+- PostgreSQL 16：容器 healthy，数据库 `003 (head)`，重复 `upgrade head` 成功。
+- PostgreSQL 集成：`2 passed in 7.19s`。
+- 五档真实模型最小探测：5/5 成功。
+- 正式真实 Create 小样本：2/2 READY、2/2 首次正文硬约束通过、0 次正文局部修复；文学质量仍未放行。

@@ -3,6 +3,8 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from decimal import Decimal
 
+from pydantic import BaseModel
+
 from drama_engine.contracts import LLMSpec
 from drama_engine.llm.accounting import VersionedModelPrice, calculate_supplier_cost
 from drama_engine.llm.openai_compat import OpenAICompatProvider
@@ -63,3 +65,34 @@ def test_provider_records_reported_usage_and_request_context(monkeypatch):
     assert call["cache_read_tokens"] == 7
     assert call["reasoning_tokens"] == 5
     assert call["reasoning_included_in_output"] is True
+
+
+def test_structured_json_repair_has_distinct_attempt_kind(monkeypatch):
+    class Payload(BaseModel):
+        value: int
+
+    responses = iter(["not-json", '{"value": 7}'])
+
+    class Response:
+        status_code = 200
+        headers = {}
+
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {
+                "model": "writer", "choices": [{"message": {"content": next(responses)}}],
+                "usage": {"prompt_tokens": 10, "completion_tokens": 5},
+            }
+
+    monkeypatch.setattr("drama_engine.llm.openai_compat.httpx.post", lambda *args, **kwargs: Response())
+    provider = OpenAICompatProvider("not-a-real-key", base_url="https://example.invalid", max_retries=0)
+    with usage_scope(request_id="req-2", attempt_kind="first_draft"):
+        result = provider.complete_structured(
+            LLMSpec(role="episode_writer", model="writer"), "system", "user", Payload,
+        )
+    assert result.value == 7
+    assert [call.get("attempt_kind") for call in provider.call_history] == [
+        "first_draft", "json_schema_repair",
+    ]

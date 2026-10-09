@@ -180,7 +180,8 @@ class TestPlanApprovalWorkflow:
         )
         assert sum(card.spoken_character_budget for card in packet.scene_cards) == 630
         assert all(card.required_beats for card in packet.scene_cards)
-        assert packet.audio_time_budget_sec["sfx_music_pause_reserve"] > 0
+        assert packet.audio_time_budget_sec["independent_transition_advisory"] > 0
+        assert packet.audio_time_budget_sec["spoken_text_gate_estimate"] == 180
         assert packet.spoken_character_budget == {"minimum": 536, "ideal": 630, "maximum": 724}
 
     def test_explicit_template_is_frozen_in_plan_and_job(self):

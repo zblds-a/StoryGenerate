@@ -1,0 +1,199 @@
+{
+  "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+  "plan_revision": 2,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "归位的星空",
+    "premise": "校图书馆每晚有一本书自动归位，两位朋友在深夜潜伏追踪，最终发现这是一个休学学长为鼓励熬夜同学而留下的温暖机关。",
+    "theme": "青春期的隐性关怀、友谊与温暖的陪伴，打破悬疑外壳下的治愈内核。",
+    "beginning": "校图书馆闭馆后，一本《追星星的人》连续三天自动飞回书架。角色1和角色2决定深夜潜伏，揭开这个轻悬疑事件背后的真相。",
+    "development": "两人通过手电筒和近距离检查，打破了灵异猜想，发现书脊上的透明鱼线。顺着鱼线，他们追踪到顶楼废弃钟表室，发现机关与闭馆打铃机械钟相连。",
+    "climax": "在钟表室，角色1在面临破坏机关还是耐心拆解的选择时，选择了后者，保全了机关并找到休学学长的手记，揭晓自动归位是学长为了逼迫角色1按时休息而设计的温暖机关。",
+    "ending": "角色1选择顺应学长的期待，主动将书放回触发槽。在开场的归位音效与星空投影、未播完的温柔录音中戛然而止，完成情感落地与首尾呼应。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "追星星的机关",
+        "core_goal": "查明图书馆书本自动归位的真相，通过关键选择完成从悬疑到温暖的情感落地，并呼应开场。",
+        "major_beats": [
+          "【0-3秒 黄金钩子】闭馆广播余音刚落，黑暗中突发‘嗖——啪’的清脆声响，一本书精准飞入高层书架。",
+          "【3-10秒 矛盾三要素】角色1和角色2躲在借阅台后，角色1压低声音确认：‘《追星星的人》又自动归位了，今晚必须查出是谁在装神弄鬼。’",
+          "【10-30秒 第一次反转】角色2猛然打开强光手电照向书架，以为能照出鬼影却空无一人（压抑）；角色1冲上前一把抽出书，发现书脊粘着极细的透明鱼线，伴随‘铮’的琴弦音效断点（爆发）。",
+          "【30-120秒 中段推进】两人顺着鱼线摸索，台词短促交锋。潜入顶楼废弃钟表室，发现卷线器与闭馆打铃的机械钟齿轮相连。角色2急于求成，拿出剪刀想直接剪断绷紧的鱼线查看底部的铁盒。",
+          "【120-170秒 升级/二次反转】角色1面临选择：剪断线会彻底破坏机关，不剪则难以取出铁盒。角色1选择制止角色2，小心翼翼地手动解除齿轮卡扣，保全了机关并取出铁盒。盒内是休学学长的手记，揭晓真相：学长知道角色1备战天文竞赛压力过大，特意制作机关每天强制收走书，逼迫其按时休息。",
+          "【170-180秒 强钩子】手记最后一页写着：‘如果你解开了机关，请把书放回触发槽，早点睡。’角色1做出明确选择，主动将书放入槽中。伴随开场同样的‘嗖——啪’声，书本归位，天花板瞬间亮起璀璨星空，学长预录的温柔语音响起：‘别熬夜了，星星在梦里……’声音未落，音频戛然而止。"
+        ],
+        "ending": "悬念彻底解开，角色1通过主动归位书本的选择接受关怀。在星空投影与未播完的录音中戛然而止，首尾音效呼应，情绪达到最高点后留白。",
+        "target_duration_sec": 180
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "角色1声音带有疲惫但充满探究欲，面临选择时语气需有从犹豫到坚定的转变；角色2声音清脆、行动力强、略带急躁。两人互动需体现默契与压低声音的紧张感。",
+      "sound_design": "重点设计书本滑过轨道的‘嗖啪’声（首尾呼应）、鱼线绷紧的‘铮’声、机械齿轮转动与卡扣解除的清脆金属声，以及结尾星空投影亮起的空灵音效。"
+    },
+    "continuity_constraints": [
+      "书本归位必须依赖物理机关（鱼线与卷线器），禁止出现超自然或灵异解释。",
+      "角色1和角色2是仅有的发声角色，学长的声音只能作为预录音频在结尾出现，且不能有实时互动。",
+      "开场的‘嗖——啪’归位音效必须在结尾角色1主动触发时原样重现，形成听觉闭环。"
+    ],
+    "change_summary": [
+      "人物认知与选择变化：角色1从怀疑灵异、试图破坏机关，转变为理解学长苦心，并主动选择顺应机关去休息。",
+      "环境状态变化：从黑暗紧张的图书馆借阅区，转移到充满温暖回忆与星空投影的顶楼钟表室。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "轻悬疑",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "834484285ccc4581b3acb95608535542",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:12:15.703273+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 2609,
+      "output_tokens": 3841,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2810,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "88a4105b-62dc-4a04-830f-560d0db6d11b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 60147,
+      "completed_at": "2026-10-09T07:13:15.850345+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "af8d7314c41040899778ff6b57adf9a1",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "65600b1c13184be29a6bbb396ac71344",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.5.0",
+      "started_at": "2026-10-09T07:13:15.983434+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3654,
+      "output_tokens": 3499,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2360,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "f283af9a-c362-48e8-9b94-f1a4cfda6f2e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 43818,
+      "completed_at": "2026-10-09T07:13:59.802364+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.5.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "dee93b73062d05389d8cf04e72b60e9e7f8825f0a2a8a003fb218b7d6d2fd49b",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-09T07:13:15.851612Z",
+  "updated_at": "2026-10-09T07:13:59.802981Z"
+}

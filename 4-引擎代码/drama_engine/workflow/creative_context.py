@@ -113,7 +113,7 @@ def build_episode_creative_packet(
             "behavior_boundaries": profile.get("behavior_boundaries", []),
         })
 
-    non_spoken_sec = max(12, round(prefs.target_duration_sec * 0.12))
+    transition_sec = max(12, round(prefs.target_duration_sec * 0.12))
     return EpisodeCreativePacket(
         episode_index=outline.index,
         story_promise=preview.plan.premise,
@@ -133,8 +133,11 @@ def build_episode_creative_packet(
         spoken_character_budget={"minimum": min_chars, "ideal": ideal_chars, "maximum": max_chars},
         audio_time_budget_sec={
             "total": prefs.target_duration_sec,
-            "spoken_estimate": prefs.target_duration_sec - non_spoken_sec,
-            "sfx_music_pause_reserve": non_spoken_sec,
+            # The release gate still estimates spoken text at 3.5 chars/sec.  Cue
+            # time is advisory and may overlap speech; it is not additive proof of
+            # real audio duration.  A TTS dry-run must replace this heuristic later.
+            "spoken_text_gate_estimate": prefs.target_duration_sec,
+            "independent_transition_advisory": transition_sec,
         },
     )
 
