@@ -1,0 +1,930 @@
+{
+  "story_id": "a28fe826e8d347bb9fb62a9df2ab9bd7",
+  "story_version_id": "941ee3443f384f12b795bca2d127755f",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "d7457acc61dc4a578b23b54bc0f8182a",
+  "approved_plan_revision": 2,
+  "title": "第十三排书架的秘密",
+  "summary": "两名高中生为了解开校图书馆旧书每晚自动归位的轻悬疑谜团而熬夜探查，最终发现这是已故老馆长留下的温暖守护。",
+  "tags": [
+    "轻悬疑",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "outline": {
+    "title": "第十三排书架的秘密",
+    "premise": "两名高中生为了解开校图书馆旧书每晚自动归位的轻悬疑谜团而熬夜探查，最终发现这是已故老馆长留下的温暖守护。",
+    "theme": "记忆、传承与温暖的守护",
+    "beginning": "林宇和苏然深夜潜伏在图书馆，伴随一声书本合上的脆响，目睹《星空》一书自动归位，决定查明真相。",
+    "development": "通过追踪便签和借阅记录，两人发现归位的书都在默默治愈学生的心结，线索指向已故的老馆长。",
+    "climax": "林宇在探究真相与尊重守护之间做出选择，将书放回书架，触发隐藏机关，掉下老馆长专门留给他们的日记本。",
+    "ending": "日记本提示真正的守护者就在身后，两人回头看到神秘影子，伴随开场同款的书本合上声，留下温暖而悬疑的余韵。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "自动归位的《星空》",
+        "core_goal": "揭开图书馆旧书自动归位的初步线索，展现角色的关键选择，并引出老馆长的温暖守护主题。",
+        "major_beats": [
+          "【0-3s 黄金钩子】深夜寂静的图书馆，突发一声清脆的“啪”（书本合上声），紧接着是一阵轻柔的沙沙脚步声远去。",
+          "【3-10s 矛盾三要素】林宇和苏然躲在书架后低语交代：我们在图书馆，那本《星空》又自己飞回去了，今晚必须抓住这个‘鬼’。",
+          "【10-30s 第一次反转】林宇冲动冲出抓人却扑空摔倒，苏然打开手电筒照向书架，发现书不仅归位，书页里还多了一张刚写好的治愈便签（配合音乐断点爆发）。",
+          "【30-120s 中段推进】两人快速翻阅便签和借阅记录，台词短碎交锋，发现每天归位的书都对应着当天某个学生的心结，且笔迹属于已故的老馆长。",
+          "【120-170s 升级/二次反转】林宇面临选择：是强行带走书去化验，还是尊重这份守护？他最终选择将《星空》轻轻放回书架。书归位瞬间触发隐藏机关，一本旧日记本弹出砸在林宇手中。",
+          "【170-180s 强钩子】日记本最后一页写着‘真正的守护者已经站在你们身后’。两人猛然回头，手电筒照亮一个熟悉的影子，此时开场那声清脆的“啪”再次响起，影子缓缓伸出手，音效戛然而止。"
+        ],
+        "ending": "两人回头看到神秘影子，伴随开场同款的书本合上声，故事在悬疑与温暖交织的最高点戛然而止。",
+        "target_duration_sec": 180
+      }
+    ],
+    "performance_plan": {
+      "voice-1": "林宇，声线清朗，语速较快，带有少年的冲动与好奇，在做出选择时语气转为温柔坚定。",
+      "voice-2": "苏然，声线沉稳，语速适中，带有理性的分析感。",
+      "sound_design": "强调环境音（深夜图书馆的静谧、脚步声、书架机关声），首尾呼应的清脆‘啪’声需做特殊混响处理，音乐以轻柔悬疑过渡到温暖治愈。"
+    },
+    "continuity_constraints": [
+      "场景必须始终保持在深夜的校图书馆内。",
+      "《星空》这本书和老馆长的便签是核心线索，不可偏离。",
+      "首尾必须呼应，开场和结尾的‘啪’声（书本合上声）需保持一致的听觉特征。",
+      "氛围必须保持轻悬疑与温暖的平衡，禁止出现真正的恐怖或血腥元素。"
+    ],
+    "change_summary": [
+      "根据反馈优化了S5阶段，让林宇在‘带走调查’与‘放回尊重’中做出了明确的选择，推动机关触发。",
+      "在S6结尾处加入了与S1开场完全一致的‘啪’书本合上声，实现听觉与情节的自然闭环呼应。",
+      "保留了原有的核心冲突与温暖悬疑基调，严格维持1集180秒的时长与Beat Sheet结构。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-ae74f927",
+      "index": 1,
+      "title": "自动归位的《星空》",
+      "synopsis": "深夜的校图书馆里，旧书《星空》每晚自动归位并留下治愈便签。高中生林宇和苏然深夜探查，发现线索指向已故的老馆长。在揭开真相的过程中，林宇选择尊重这份守护，却意外触发了隐藏机关，引出了一个温暖而悬疑的结局。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 150,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "深夜图书馆的异响",
+          "location": "校图书馆",
+          "dramatic_goal": "引出《星空》自动归位的悬疑现象，确立两人深夜探查的目标。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "深夜的校图书馆，寂静无声。突然，一声清脆的“啪”响起，紧接着是一阵轻柔的沙沙脚步声，渐渐远去。",
+              "emotion": "mysterious",
+              "tone_instruction": "压低声音，营造深夜图书馆的静谧与突如其来的悬疑感，语速先慢后稍快。",
+              "emphasis": [
+                {
+                  "span_text": "寂静无声",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "清脆的“啪”",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 24,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "渐渐远去",
+                  "occurrence": 1,
+                  "start_char": 42,
+                  "end_char": 46,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "配合环境音效，旁白需有空间感。",
+              "audio_cue_ref": "书本合上声（清脆），轻柔的沙沙脚步声"
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "苏然，你听到了吗？那本《星空》又自己飞回去了！",
+              "emotion": "surprised",
+              "tone_instruction": "使用气声，带着难以置信和一丝兴奋，压低音量但难掩激动。",
+              "emphasis": [
+                {
+                  "span_text": "又自己飞回去了",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "林宇性格冲动，语气中带着急切。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "嘘。我们在图书馆，不能出声。今晚必须抓住这个装神弄鬼的“鬼”。",
+              "emotion": "serious",
+              "tone_instruction": "极度压低声音，语气严肃且坚定，带有警告意味，同时展现出行动的决心。",
+              "emphasis": [
+                {
+                  "span_text": "嘘",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 1,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "不能出声",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "装神弄鬼",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "苏然相对冷静，起到控场作用。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我抓住你了！",
+              "emotion": "excited",
+              "tone_instruction": "冲动、短促，带着抓到人的得意，声音在句尾因摔倒动作而戛然而止。",
+              "emphasis": [
+                {
+                  "span_text": "抓住",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 3,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "配合扑通摔倒的音效，尾音可带点闷哼或气息中断。",
+              "audio_cue_ref": "衣服摩擦声，扑通摔倒声"
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "别动。你看书架。",
+              "emotion": "serious",
+              "tone_instruction": "声音极低，语气凝重，带着发现异常时的屏息感，引导对方视线。",
+              "emphasis": [
+                {
+                  "span_text": "别动",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "书架",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "配合手电筒开关声，语气要有画面感。",
+              "audio_cue_ref": "手电筒开关声"
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "手电筒的光束打在书架上，《星空》不仅稳稳归位，书页里还多了一张刚写好的便签。",
+              "emotion": "mysterious",
+              "tone_instruction": "语速放缓，带着揭晓谜底的悬疑感与一丝不可思议，重音落在便签上，为后续音乐爆发做铺垫。",
+              "emphasis": [
+                {
+                  "span_text": "稳稳归位",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "刚写好的便签",
+                  "occurrence": 1,
+                  "start_char": 31,
+                  "end_char": 37,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "旁白需留出气口，配合音乐断点爆发的节奏。",
+              "audio_cue_ref": "纸张摩擦声，音乐断点爆发，转为轻柔悬疑"
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "已故馆长的守护",
+          "location": "校图书馆",
+          "dramatic_goal": "通过便签和借阅记录，揭开归位书籍与学生心结的联系，并发现笔迹属于已故老馆长。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "“愿这本书能抚平你今天的焦虑”……这是写给高二三班的李华的？",
+              "emotion": "surprised",
+              "tone_instruction": "带着疑惑和不可思议的语气，念便签内容时稍微轻柔，后半句转为惊讶的疑问。",
+              "emphasis": [
+                {
+                  "span_text": "抚平你今天的焦虑",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "高二三班的李华",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "念便签时声音放轻，后半句眉头微皱，语气上扬。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "不止。我查了借阅记录，每天自动归位的书，都对应着当天某个有心结的学生。",
+              "emotion": "serious",
+              "tone_instruction": "语气笃定且带着一丝凝重，语速稍快，体现她查资料时的专注和发现规律后的确信。",
+              "emphasis": [
+                {
+                  "span_text": "不止",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "每天自动归位",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 17,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "有心结的学生",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 34,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "边翻书边说，语气连贯，强调“有心结”时带有一点同情和恍然大悟。",
+              "audio_cue_ref": "快速翻阅纸张声"
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "等等，这字迹……怎么这么眼熟？",
+              "emotion": "surprised",
+              "tone_instruction": "突然被打断，语气急促，随后转为疑惑和难以置信，尾音拉长。",
+              "emphasis": [
+                {
+                  "span_text": "等等",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "眼熟",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "凑近看便签，眉头紧锁，声音逐渐变小，陷入回忆。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "是陈馆长。可是……陈馆长三年前就去世了。",
+              "emotion": "fearful",
+              "tone_instruction": "前半句确认时语气肯定，后半句突然意识到问题，声音发颤，语速放慢，透出不可思议和一丝害怕。",
+              "emphasis": [
+                {
+                  "span_text": "陈馆长",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "三年前就去世了",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "倒吸一口凉气，后半句声音压低，眼神充满震惊。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "已故的老馆长……在深夜为这些书写便签？",
+              "emotion": "surprised",
+              "tone_instruction": "喃喃自语，充满不可思议，语气中带着对老馆长的敬意与深深的疑惑。",
+              "emphasis": [
+                {
+                  "span_text": "已故的老馆长",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 6,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "深夜",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音轻缓，像是在确认一个荒诞却又真实的奇迹，尾音渐弱。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "机关与日记本",
+          "location": "校图书馆",
+          "dramatic_goal": "林宇在调查与尊重之间做出选择，放回书籍触发隐藏机关，获得关键道具日记本。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "苏然，这书太邪门了。我们要不要把它带走，拿去化验一下纸张和墨水？",
+              "emotion": "serious",
+              "tone_instruction": "语气带着探究的急切与一丝不解，语速稍快，体现出想要立刻查明真相的冲动。",
+              "emphasis": [
+                {
+                  "span_text": "邪门",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "化验",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 24,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "眉头微皱，身体前倾，眼神紧紧盯着那本《星空》，双手不自觉地比划。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "林宇，你想清楚。这也许是某种恶作剧，但也可能是……一种守护。你忍心破坏它吗？",
+              "emotion": "calm",
+              "tone_instruction": "语气沉稳、温柔且带有引导性，在“守护”前有明显的停顿和情绪沉淀，最后一句反问要直击人心，带着共情。",
+              "emphasis": [
+                {
+                  "span_text": "想清楚",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "守护",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 29,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "破坏",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 35,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "眼神柔和但坚定，轻轻拉住林宇的手臂或拍拍他的肩膀，示意他冷静。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "你说得对。如果是守护，就不该被打扰。我把《星空》轻轻放回去。",
+              "emotion": "calm",
+              "tone_instruction": "语气从刚才的急躁转为释然和轻柔，动作配合台词，声音放轻，体现出对这份“守护”的尊重与认同。",
+              "emphasis": [
+                {
+                  "span_text": "守护",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "轻轻",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "深吸一口气，表情变得柔和，双手捧着书，小心翼翼地将其推入书架原位。",
+              "audio_cue_ref": "深呼吸声，书本放回书架的轻微摩擦声"
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "书归位的瞬间，书架深处传来“咔哒”一声轻响，一个暗格弹了出来。",
+              "emotion": "mysterious",
+              "tone_instruction": "旁白声音压低，带有悬疑感和画面感，“咔哒”处要有节奏的停顿，语速适中，引导听众进入神秘氛围。",
+              "emphasis": [
+                {
+                  "span_text": "咔哒",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 16,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "暗格",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音带有空间混响感，语气客观但暗藏悬念，配合机关触发的音效节奏。",
+              "audio_cue_ref": "隐藏机关触发声（咔哒）"
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "哎？书架后面怎么弹出来一个暗格？里面……有一本旧日记本。",
+              "emotion": "surprised",
+              "tone_instruction": "语气充满惊讶与好奇，前半句语速稍快带有疑问，后半句看到日记本时声音微颤，充满探索欲。",
+              "emphasis": [
+                {
+                  "span_text": "暗格",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 15,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "旧日记本",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 27,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "眼睛睁大，身体不由自主地凑近暗格，伸手去拿日记本，动作带着试探。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "身后的影子",
+          "location": "校图书馆",
+          "dramatic_goal": "日记本留下终极悬念，引出神秘影子，在悬疑与温暖交织的最高点戛然而止。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "“当你们读到这一页时，真正的守护者，已经站在你们身后。”",
+              "emotion": "mysterious",
+              "tone_instruction": "声音微微发颤，带着不可思议与悬疑感，语速放慢，字句清晰，营造出一种跨越时空对话的氛围。",
+              "emphasis": [
+                {
+                  "span_text": "真正的守护者",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 17,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "身后",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "如果是角色念出，带点咽口水的细节；如果是老馆长混响，则空灵温暖。此处按角色念出处理，带点敬畏。",
+              "audio_cue_ref": "翻开日记本声"
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "林宇……你身后……",
+              "emotion": "fearful",
+              "tone_instruction": "声音压得极低，带着明显的颤抖和惊恐，气息不稳，尾音因为害怕而微微发紧。",
+              "emphasis": [
+                {
+                  "span_text": "身后",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "伴随倒吸一口凉气或牙齿打颤的微小细节。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "两人猛然回头，手电筒的光束照亮了一个熟悉的影子。影子缓缓伸出手，此时，开场那声清脆的“啪”再次响起，音效戛然而止。",
+              "emotion": "mysterious",
+              "tone_instruction": "旁白语速紧凑，充满悬疑张力。在“熟悉的影子”处稍微停顿，在“戛然而止”前声音骤然收住，留白给音效。",
+              "emphasis": [
+                {
+                  "span_text": "猛然回头",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "熟悉的影子",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 23,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "戛然而止",
+                  "occurrence": 1,
+                  "start_char": 52,
+                  "end_char": 56,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "旁白情绪层层递进，最后一句配合音效的突然出现，声音要干净利落地切断，不要拖泥带水。",
+              "audio_cue_ref": "猛然转身衣物摩擦声，开场同款书本合上声（带特殊混响），音效戛然而止"
+            }
+          ]
+        }
+      ],
+      "episode_summary": "本集讲述了高中生林宇和苏然在深夜的校图书馆探查旧书《星空》自动归位的谜团。两人发现归位的书籍都附带治愈便签，且线索指向已故的老馆长。在面临是否带走书籍调查的抉择时，林宇选择了尊重与守护，却意外触发了书架的隐藏机关，获得了一本神秘的日记本。日记本的最后一页提示真正的守护者就在身后，伴随着熟悉的书本合上声，故事在悬疑与温暖交织的最高点留下了强烈的悬念。",
+      "ending_hook": "日记本提示真正的守护者就在身后，两人回头看到神秘影子，伴随开场同款的书本合上声，故事在悬疑与温暖交织的最高点戛然而止。",
+      "fact_delta": [
+        {
+          "fact": "《星空》等旧书会在深夜自动归位",
+          "status": "confirmed"
+        },
+        {
+          "fact": "归位的书中夹有治愈便签，且对应特定学生的心结",
+          "status": "confirmed"
+        },
+        {
+          "fact": "便签字迹属于三年前已故的陈馆长",
+          "status": "confirmed"
+        },
+        {
+          "fact": "书架内藏有隐藏机关和旧日记本",
+          "status": "discovered"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "character_1": "林宇",
+          "character_2": "苏然",
+          "change": "林宇从冲动想要强行调查，转变为在苏然引导下学会尊重与理解，两人默契加深。"
+        }
+      ],
+      "new_open_threads": [
+        "神秘影子究竟是谁？是陈馆长的幽灵，还是另有其人？",
+        "日记本里还记录了哪些关于老馆长和图书馆的秘密？"
+      ],
+      "closed_threads": [
+        "《星空》自动归位的初步现象被证实，并发现了便签线索。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "《星空》等旧书会在深夜自动归位",
+        "status": "confirmed"
+      },
+      {
+        "fact": "归位的书中夹有治愈便签，且对应特定学生的心结",
+        "status": "confirmed"
+      },
+      {
+        "fact": "便签字迹属于三年前已故的陈馆长",
+        "status": "confirmed"
+      },
+      {
+        "fact": "书架内藏有隐藏机关和旧日记本",
+        "status": "discovered"
+      }
+    ],
+    "relationships": [
+      {
+        "character_1": "林宇",
+        "character_2": "苏然",
+        "change": "林宇从冲动想要强行调查，转变为在苏然引导下学会尊重与理解，两人默契加深。"
+      }
+    ],
+    "unresolved_threads": [
+      "神秘影子究竟是谁？是陈馆长的幽灵，还是另有其人？",
+      "日记本里还记录了哪些关于老馆长和图书馆的秘密？"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 19,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": [
+      "剧情发展严格遵循获批大纲的节拍表（Beat Sheet），从悬疑钩子、线索发现、角色抉择到机关触发与结尾呼应，关键情节节点完全对齐。",
+      "场景始终限定于深夜校图书馆；核心线索《星空》与老馆长便签贯穿始终；首尾“书本合上声”实现听觉闭环；氛围保持轻悬疑与温暖治愈基调，无恐怖血腥元素，符合连续性约束。",
+      "内容面向14-17岁青少年，主题聚焦记忆传承与校园守护，无任何成人向、暴力或敏感内容，完全符合“Teen”分级标准。"
+    ]
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1915,
+      "output_tokens": 2808,
+      "latency_ms": 34988
+    },
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 2770,
+      "output_tokens": 3102,
+      "latency_ms": 30764
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 3102,
+      "output_tokens": 5306,
+      "latency_ms": 91348
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2118,
+      "output_tokens": 3413,
+      "latency_ms": 59006
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2004,
+      "output_tokens": 3051,
+      "latency_ms": 53411
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2047,
+      "output_tokens": 5777,
+      "latency_ms": 99118
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1868,
+      "output_tokens": 1959,
+      "latency_ms": 34157
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "attempt": 1,
+      "input_tokens": 6727,
+      "output_tokens": 1771,
+      "latency_ms": 12340
+    }
+  ],
+  "created_at": "2026-10-08T09:05:59.203402Z"
+}

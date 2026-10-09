@@ -1,0 +1,74 @@
+{
+  "index": 10,
+  "git_sha": "8b3beec",
+  "audience_band": "36-55",
+  "content_rating": "mature_non_explicit",
+  "duration": 120,
+  "mode": "mystery",
+  "characters": 1,
+  "plan_revision": 1,
+  "plan_id": "47b8f148199b40bb9c4e0cb428170082",
+  "job_id": "a33911bb42cc47349837495370fc7568",
+  "story_version_id": "6016fc62ad2d4199895ea057c4b32496",
+  "ready": true,
+  "spoken_lines": 19,
+  "emotion_coverage": 1.0,
+  "tone_coverage": 1.0,
+  "emphasis_coverage": 1.0,
+  "latency_sec": 344.11,
+  "llm_calls": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 1801,
+      "output_tokens": 2578,
+      "latency_ms": 35357
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2971,
+      "output_tokens": 5033,
+      "latency_ms": 86815
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 1886,
+      "output_tokens": 3738,
+      "latency_ms": 64483
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2127,
+      "output_tokens": 4373,
+      "latency_ms": 75689
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2210,
+      "output_tokens": 3962,
+      "latency_ms": 68253
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7746,
+      "output_tokens": 1736,
+      "latency_ms": 12583
+    }
+  ],
+  "rule_sha256": {
+    "drama-formula-library.json": "1734631061000cff649436ec41fb028e07a56855ea6659a7a4fd6197503a047b",
+    "人物与连续性规则.json": "9b1261702d3462a271e1cebffe48af0909536d00a2241ce4d7037a3cdb02a2df",
+    "穿越剧引擎规则.json": "d40e123c4ce3d87326921293e872c748f4e2c6007aabc8fb548d45e5386132c0"
+  }
+}

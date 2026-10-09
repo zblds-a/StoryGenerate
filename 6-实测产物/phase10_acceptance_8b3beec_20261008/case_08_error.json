@@ -1,0 +1,6 @@
+{
+  "index": 8,
+  "ready": false,
+  "error_type": "ModelTimeoutError",
+  "error": "The read operation timed out"
+}

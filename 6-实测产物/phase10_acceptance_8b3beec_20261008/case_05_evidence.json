@@ -1,0 +1,82 @@
+{
+  "index": 5,
+  "git_sha": "8b3beec",
+  "audience_band": "18-35",
+  "content_rating": "teen",
+  "duration": 180,
+  "mode": "general",
+  "characters": 2,
+  "plan_revision": 2,
+  "plan_id": "bca9c246fa6149beb56d94a727a84376",
+  "job_id": "208ba9b29575430a839bd4b4d60a6558",
+  "story_version_id": "185b654e68b94d6ba9aea46023bd8922",
+  "ready": true,
+  "spoken_lines": 19,
+  "emotion_coverage": 1.0,
+  "tone_coverage": 1.0,
+  "emphasis_coverage": 1.0,
+  "latency_sec": 389.14,
+  "llm_calls": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 1910,
+      "output_tokens": 4016,
+      "latency_ms": 53018
+    },
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 2926,
+      "output_tokens": 3381,
+      "latency_ms": 34098
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 3388,
+      "output_tokens": 5134,
+      "latency_ms": 88229
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2215,
+      "output_tokens": 3698,
+      "latency_ms": 63793
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2180,
+      "output_tokens": 3882,
+      "latency_ms": 67502
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2383,
+      "output_tokens": 3813,
+      "latency_ms": 66030
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 8103,
+      "output_tokens": 2018,
+      "latency_ms": 15281
+    }
+  ],
+  "rule_sha256": {
+    "drama-formula-library.json": "1734631061000cff649436ec41fb028e07a56855ea6659a7a4fd6197503a047b",
+    "人物与连续性规则.json": "9b1261702d3462a271e1cebffe48af0909536d00a2241ce4d7037a3cdb02a2df",
+    "穿越剧引擎规则.json": "d40e123c4ce3d87326921293e872c748f4e2c6007aabc8fb548d45e5386132c0"
+  }
+}

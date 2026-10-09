@@ -1,0 +1,185 @@
+{
+  "plan_id": "6e38068325434eb9a077bfcdf4c03961",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "plan": {
+    "title": "气象站的明日回音",
+    "premise": "四名学生志愿者在废弃的城市气象站进行设备修复时，意外截获了一段来自未来的加密气象警告，他们必须在有限的时间内解开警告背后的真相。",
+    "theme": "青春、责任、对未来的守护与温暖羁绊。",
+    "beginning": "气象站突发设备短路爆音，四名学生面临修复失败和暴风雨即将来临的双重危机。",
+    "development": "在抢修主控板的过程中，他们发现了一段异常频段，解码后竟是一段来自未来的语音留言，警告即将到来的极端气象灾害。",
+    "climax": "学生们克服设备老旧和信号干扰的困难，成功将未来警告与当前气象数据比对，确认了灾害的真实性，并决定手动启动最高级别的气象广播。",
+    "ending": "广播成功发出，但气象站的接收器却收到了第二条来自未来的信息，内容令人震惊，引出更大的危机。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "频段外的明日回音",
+        "core_goal": "四名学生修复气象站并发现来自未来的警告，建立核心悬念。",
+        "major_beats": [
+          "[0-5s] 黄金钩子：巨大的电流爆音和玻璃震碎声，气象站主控台冒出火花，刺耳的警报声骤响。",
+          "[5-17s] 矛盾三要素：角色1大喊主控板烧毁，角色2指出暴风雨还有十分钟就到且备用电源撑不住，角色3和角色4试图手动重启，交代四人在废弃气象站抢修的困境。",
+          "[17-50s] 第一次反转：手动重启失败，陷入绝望时，角色4发现一个未记录的隐藏频段正在接收信号。伴随一声清脆的系统提示音（音效断点），扬声器传出清晰的未来人声：‘不要离开气象站，重复，不要离开！’",
+          "[50-200s] 中段推进：四人震惊，角色1认为是恶作剧，角色2通过声纹和加密协议确认信号真实性。角色3发现未来警告中提到的‘气压骤降点’与当前仪器读数完全吻合。大家从怀疑转为紧张，决定查明警告中提到的‘致命风暴眼’。",
+          "[200-283s] 升级/二次反转：风暴提前降临，狂风掀翻屋顶（中型高潮）。角色1和角色2冒险爬上天线塔手动调整接收器以获取完整信息，角色3和4在室内死死拉住安全绳。信号终于完整，未来人警告的不是外面的风暴，而是气象站地下的某种东西即将苏醒。",
+          "[283-300s] 强钩子：地面开始剧烈震动，控制台屏幕闪烁出红光，未来人的声音变得凄厉：‘它已经发现你们了——’ 声音戛然而止，只剩刺耳的静电白噪音。"
+        ],
+        "ending": "强悬念收尾，地面震动加剧，四人面临未知的地下危机，情绪卡在最高点。",
+        "target_duration_sec": 300
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "角色1沉稳果断，角色2急躁但技术好，角色3细心敏锐，角色4胆小但关键时刻勇敢。整体基调在紧张中透出团队间的温暖与信任。",
+      "sound_design": "强调风雨声、老旧设备的电流声、机械齿轮转动声，以及未来信号的空灵电子音效。爆发点需配合明显的音效断点。"
+    },
+    "continuity_constraints": [
+      "气象站设定为半废弃状态，设备老旧但核心功能仍在。",
+      "未来信号必须通过特定的加密频段接收，不能是普通的无线电。",
+      "四名角色均为普通学生，没有超能力，解决问题依靠科学知识和团队协作。"
+    ],
+    "change_summary": [
+      "初始生成，基于用户提供的四名学生修复气象站并发现未来提醒的指令，严格遵循300秒时长和6个Beat节点的结构要求。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "serialized",
+    "content_form": "audio_drama",
+    "genre": "科幻",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 300,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    },
+    {
+      "character_id": "char-3",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色3",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-3",
+      "performer_id": "voice-3"
+    },
+    {
+      "character_id": "char-4",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色4",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-4",
+      "performer_id": "voice-4"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1,
+    "char-3": 1,
+    "char-4": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 2139,
+      "output_tokens": 2309,
+      "latency_ms": 32042
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "6df78c86b3506aafe38bb13d16f2f05be58396bc1748b157d44ad060675bbe11",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-08T08:59:47.854646Z",
+  "updated_at": "2026-10-08T08:59:47.854646Z"
+}

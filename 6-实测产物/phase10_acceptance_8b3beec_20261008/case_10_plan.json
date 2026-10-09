@@ -1,0 +1,136 @@
+{
+  "plan_id": "47b8f148199b40bb9c4e0cb428170082",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "plan": {
+    "title": "微光账本",
+    "premise": "审计员林悦在审查社区基金时发现贪腐线索，面对暴力威胁，她选择保护掌握原始凭证的孤寡老人并转移证据，却陷入更深的阴谋。",
+    "theme": "坚守良知与保护弱者的温暖正义，以及深渊边缘的极限博弈。",
+    "beginning": "审计员深夜核对账目发现异常，随即遭遇断电与歹徒破门搜寻证据的突发危机。",
+    "development": "审计员在雨夜的老旧社区中找到关键证人王奶奶，两人互相搀扶，在温情安抚与紧张躲避中跟歹徒周旋。",
+    "climax": "两人被逼入死胡同，审计员利用社区广播系统播放贪腐录音，引发全社区关注，逼退歹徒。",
+    "ending": "警笛声逼近，歹徒首领却甩出带有审计员签名的伪造转账书，审计员瞬间从举报者变成“主犯”，在极度错愕中戛然而止。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "账本里的微光与暗礁",
+        "core_goal": "展现审计员发现异常并保护证人的过程，结尾抛出致命反转钩子。",
+        "major_beats": [
+          "[0-2s] 黄金钩子：深夜，碎玻璃爆裂声与沉重的脚步声同时响起，伴随一声低沉的“交出U盘”。",
+          "[2-7s] 矛盾三要素：审计员林悦紧抱账本躲在社区活动室桌下，门外是寻找基金贪腐证据的黑手，她必须把证据送给知情的王奶奶。",
+          "[7-20s] 第一次反转：门被踹开，林悦看似被捕，实则她提前触发了消防喷淋，趁乱砸窗逃出，水花与警报声齐鸣。",
+          "[20-80s] 中段推进：林悦在雨夜的老社区巷道中奔跑找到王奶奶。两人互相搀扶躲避搜查。林悦用温暖的话语安抚惊恐的老人，同时利用对地形的熟悉与歹徒展开短促、紧张的捉迷藏。",
+          "[80-113s] 升级/二次反转：两人被逼入死胡同。林悦果断拉下社区老旧广播室的电闸，用大喇叭播放王奶奶录下的贪腐录音，响彻整个社区，歹徒阵脚大乱。",
+          "[113-120s] 强钩子：警笛声终于响起，歹徒首领却不慌不忙地掏出一份文件——上面竟是林悦自己的签名和指纹，证明她才是挪用公款的“主谋”。林悦瞳孔地震，声音戛然而止。"
+        ],
+        "ending": "警笛声中，歹徒首领展示伪造的“主犯”证据，审计员陷入百口莫辩的绝境，悬念拉满。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "林悦（角色1）：声线坚韧、温暖，喘息声真实，面对老人时语气柔和，面对危机时果断。歹徒首领：声音低沉、带有戏谑感。",
+      "sound_design": "雨声、脚步声、消防喷淋声、老式广播电流声需层次分明，空间感强。",
+      "music_cues": "前半段紧张悬疑，中段加入温暖的钢琴底色体现温情，结尾突转为刺耳的悬疑重音并瞬间静音。"
+    },
+    "continuity_constraints": [
+      "场景必须限制在老旧社区内，保持空间封闭感与地形熟悉度的合理性。",
+      "林悦的动机必须始终围绕“保护王奶奶”和“保全证据”，体现温暖基调。",
+      "时长严格控制在120秒，台词必须精简、短碎，留足音效与呼吸空间。"
+    ],
+    "change_summary": [
+      "根据“warm”基调，在中段推进时加入了审计员安抚老人的温情互动，中和了犯罪题材的冷酷感。",
+      "结尾严格按照S6 beat_sheet要求，设计了身份被反咬的强反转钩子，确保情绪在最高点戛然而止。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "犯罪",
+    "tone_style": "warm",
+    "audience_band": "36-55",
+    "content_rating": "mature_non_explicit",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1801,
+      "output_tokens": 2578,
+      "latency_ms": 35357
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "25894c58bd4ac0dd16741cc7f8fc0c41c2b46cabd0fa0bfc0c88c54a21c634c5",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-08T09:20:21.397868Z",
+  "updated_at": "2026-10-08T09:20:21.397868Z"
+}

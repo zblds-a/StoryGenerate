@@ -1,0 +1,1117 @@
+{
+  "story_id": "3008e64a11d64d6d92f54a04f25b5e20",
+  "story_version_id": "6016fc62ad2d4199895ea057c4b32496",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "47b8f148199b40bb9c4e0cb428170082",
+  "approved_plan_revision": 1,
+  "title": "微光账本",
+  "summary": "审计员林悦在审查社区基金时发现贪腐线索，面对暴力威胁，她选择保护掌握原始凭证的孤寡老人并转移证据，却陷入更深的阴谋。",
+  "tags": [
+    "犯罪",
+    "warm",
+    "36-55",
+    "mature_non_explicit"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "微光账本",
+    "premise": "审计员林悦在审查社区基金时发现贪腐线索，面对暴力威胁，她选择保护掌握原始凭证的孤寡老人并转移证据，却陷入更深的阴谋。",
+    "theme": "坚守良知与保护弱者的温暖正义，以及深渊边缘的极限博弈。",
+    "beginning": "审计员深夜核对账目发现异常，随即遭遇断电与歹徒破门搜寻证据的突发危机。",
+    "development": "审计员在雨夜的老旧社区中找到关键证人王奶奶，两人互相搀扶，在温情安抚与紧张躲避中跟歹徒周旋。",
+    "climax": "两人被逼入死胡同，审计员利用社区广播系统播放贪腐录音，引发全社区关注，逼退歹徒。",
+    "ending": "警笛声逼近，歹徒首领却甩出带有审计员签名的伪造转账书，审计员瞬间从举报者变成“主犯”，在极度错愕中戛然而止。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "账本里的微光与暗礁",
+        "core_goal": "展现审计员发现异常并保护证人的过程，结尾抛出致命反转钩子。",
+        "major_beats": [
+          "[0-2s] 黄金钩子：深夜，碎玻璃爆裂声与沉重的脚步声同时响起，伴随一声低沉的“交出U盘”。",
+          "[2-7s] 矛盾三要素：审计员林悦紧抱账本躲在社区活动室桌下，门外是寻找基金贪腐证据的黑手，她必须把证据送给知情的王奶奶。",
+          "[7-20s] 第一次反转：门被踹开，林悦看似被捕，实则她提前触发了消防喷淋，趁乱砸窗逃出，水花与警报声齐鸣。",
+          "[20-80s] 中段推进：林悦在雨夜的老社区巷道中奔跑找到王奶奶。两人互相搀扶躲避搜查。林悦用温暖的话语安抚惊恐的老人，同时利用对地形的熟悉与歹徒展开短促、紧张的捉迷藏。",
+          "[80-113s] 升级/二次反转：两人被逼入死胡同。林悦果断拉下社区老旧广播室的电闸，用大喇叭播放王奶奶录下的贪腐录音，响彻整个社区，歹徒阵脚大乱。",
+          "[113-120s] 强钩子：警笛声终于响起，歹徒首领却不慌不忙地掏出一份文件——上面竟是林悦自己的签名和指纹，证明她才是挪用公款的“主谋”。林悦瞳孔地震，声音戛然而止。"
+        ],
+        "ending": "警笛声中，歹徒首领展示伪造的“主犯”证据，审计员陷入百口莫辩的绝境，悬念拉满。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "林悦（角色1）：声线坚韧、温暖，喘息声真实，面对老人时语气柔和，面对危机时果断。歹徒首领：声音低沉、带有戏谑感。",
+      "sound_design": "雨声、脚步声、消防喷淋声、老式广播电流声需层次分明，空间感强。",
+      "music_cues": "前半段紧张悬疑，中段加入温暖的钢琴底色体现温情，结尾突转为刺耳的悬疑重音并瞬间静音。"
+    },
+    "continuity_constraints": [
+      "场景必须限制在老旧社区内，保持空间封闭感与地形熟悉度的合理性。",
+      "林悦的动机必须始终围绕“保护王奶奶”和“保全证据”，体现温暖基调。",
+      "时长严格控制在120秒，台词必须精简、短碎，留足音效与呼吸空间。"
+    ],
+    "change_summary": [
+      "根据“warm”基调，在中段推进时加入了审计员安抚老人的温情互动，中和了犯罪题材的冷酷感。",
+      "结尾严格按照S6 beat_sheet要求，设计了身份被反咬的强反转钩子，确保情绪在最高点戛然而止。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-f1c65eab",
+      "index": 1,
+      "title": "账本里的微光与暗礁",
+      "synopsis": "审计员林悦在深夜核对账目时遭遇歹徒突袭，她拼死逃脱并在雨夜找到掌握证据的王奶奶。在利用社区广播曝光贪腐真相后，她却面临被反咬为“主犯”的致命反转。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 92,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "暗夜突围",
+          "location": "社区活动室",
+          "dramatic_goal": "林悦在活动室遭遇歹徒，利用消防喷淋掩护逃脱。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "碎玻璃爆裂，沉重的脚步声同时响起。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "（低沉戏谑）交出U盘。",
+              "emotion": "serious",
+              "tone_instruction": "压低嗓音，带着一丝猫捉老鼠的戏谑与掌控感，尾音微微上扬后迅速收住。",
+              "emphasis": [
+                {
+                  "span_text": "交出",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "U盘",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "气息下沉，声音要有压迫感，体现出反派的从容与阴狠。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（内心，急促喘息）账本在我这，U盘在王奶奶那……必须撑住。",
+              "emotion": "worried",
+              "tone_instruction": "内心独白，伴随急促的呼吸声，语速快但咬字清晰，表现出极度的紧张与自我暗示的坚定。",
+              "emphasis": [
+                {
+                  "span_text": "账本",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "王奶奶",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 21,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "撑住",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "气声较多，体现躲藏时的压抑和体力消耗，语气中透着绝境求生的韧劲。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "门外传来翻找东西的杂乱声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "木门被猛地踹开。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "在这！抓住她！",
+              "emotion": "angry",
+              "tone_instruction": "突然发现目标的暴怒与急切，声音拔高，短促有力，带有强烈的命令口吻。",
+              "emphasis": [
+                {
+                  "span_text": "在这",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "抓住",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 5,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.4,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "爆发力强，处于破音边缘，体现气急败坏和急于立功的贪婪。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（果断）抱歉，今天你们什么都得不到！",
+              "emotion": "serious",
+              "tone_instruction": "破釜沉舟的决绝，语气冷硬果断，没有一丝犹豫，带着反击的快意与蔑视。",
+              "emphasis": [
+                {
+                  "span_text": "抱歉",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "什么都",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "得不到",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 17,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "咬字极重，特别是后半句，配合砸窗或触发机关的动作发力，掷地有声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "消防喷淋爆响，水流倾泻，火警警报声大作。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l9",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "玻璃窗被重物砸碎，林悦翻滚逃出的声音。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "雨夜寻踪",
+          "location": "老旧社区巷道",
+          "dramatic_goal": "林悦找到王奶奶，安抚并躲避搜查。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "大雨滂沱，急促的脚步声踩在积水中。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（压低声音）王奶奶！奶奶！",
+              "emotion": "worried",
+              "tone_instruction": "压低声音，气息急促，带着焦急和寻找的迫切感，咬字清晰但音量克制。",
+              "emphasis": [
+                {
+                  "span_text": "王奶奶",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "奶奶",
+                  "occurrence": 2,
+                  "start_char": 10,
+                  "end_char": 12,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "气声为主，体现雨夜和躲避的环境，眼神四处搜寻。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "（颤抖）悦悦……你流血了。",
+              "emotion": "fearful",
+              "tone_instruction": "声音颤抖，带着哭腔和极度的心疼，语速缓慢，气息不稳。",
+              "emphasis": [
+                {
+                  "span_text": "流血了",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "尾音带一点颤音，表现出老人受惊后的生理反应和看到伤口时的心疼。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（语气温柔坚定）没事，擦破点皮。奶奶，录音笔带了吗？",
+              "emotion": "reassuring",
+              "tone_instruction": "温柔但充满力量，迅速安抚老人情绪，随后立刻切入正题，语气转为干练。",
+              "emphasis": [
+                {
+                  "span_text": "没事",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "录音笔",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句轻柔安抚，后半句眼神和语气变得锐利，体现审计员的专业素质。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "（拍打口袋）在，在呢。他们还在找……",
+              "emotion": "worried",
+              "tone_instruction": "慌乱中带着庆幸，提到歹徒时声音再次压低，充满恐惧。",
+              "emphasis": [
+                {
+                  "span_text": "在",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "在",
+                  "occurrence": 2,
+                  "start_char": 8,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "还在找",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 16,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "伴随拍打口袋的喘息声，前两个“在”字短促，“还在找”声音发虚、拖长。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "别怕，跟着我，走这边小巷。",
+              "emotion": "serious",
+              "tone_instruction": "冷静果断，不容置疑，给老人安全感，动作感强。",
+              "emphasis": [
+                {
+                  "span_text": "跟着我",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "这边",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "仿佛一边说一边拉着老人走，语气坚定，步伐果断。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "远处传来手电筒开关声和杂乱的脚步声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（极低）嘘……别出声。",
+              "emotion": "serious",
+              "tone_instruction": "极低的气声，唇齿音明显，带有强烈的警告意味，一字一顿。",
+              "emphasis": [
+                {
+                  "span_text": "别出声",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.7,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "几乎全是气声，“嘘”字要轻且长，眼神高度警惕，身体紧绷。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l9",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "两人屏住呼吸，脚步声渐渐远去。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l10",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（松口气）安全了。奶奶，我们去广播室。",
+              "emotion": "calm",
+              "tone_instruction": "明显松了一口气，声音恢复正常音量，语气重新变得干练和果断。",
+              "emphasis": [
+                {
+                  "span_text": "安全了",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "广播室",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 18,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "伴随一个轻微的呼气声，随后立刻恢复理智，语速适中，目标明确。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "绝地反击与深渊",
+          "location": "社区广播室旁死胡同",
+          "dramatic_goal": "林悦利用广播曝光证据，却遭遇身份反转的致命打击。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "两人跑入死胡同，前方传来脚步声，无路可退。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "（冷笑）跑啊？怎么不跑了？",
+              "emotion": "playful",
+              "tone_instruction": "压低声音，带着猫捉老鼠的戏谑与轻蔑，尾音微微上扬，体现出反派的从容与掌控感。",
+              "emphasis": [
+                {
+                  "span_text": "跑啊",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 6,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "怎么",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（咬牙）你们休想掩盖真相！",
+              "emotion": "angry",
+              "tone_instruction": "咬牙切齿，从牙缝中挤出，充满不屈与愤恨，声音因用力而微微发紧，带有视死如归的决绝。",
+              "emphasis": [
+                {
+                  "span_text": "休想",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "真相",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "猛拉电闸声，老式广播发出刺耳的电流声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（对着麦克风大喊）全体居民请注意，社区基金被挪用！",
+              "emotion": "serious",
+              "tone_instruction": "气息饱满，声音洪亮且穿透力强，语速加快，带有强烈的紧迫感和警示意味，确保广播效果清晰。",
+              "emphasis": [
+                {
+                  "span_text": "全体居民",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "挪用",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "录音播放声（王奶奶的声音：他们把修路的钱全转走了……）响彻整个社区。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "（气急败坏）关掉！快给我砸了！",
+              "emotion": "angry",
+              "tone_instruction": "破音边缘的嘶吼，气息不稳，充满恐慌与暴怒，动作感极强，表现出计划被破坏时的气急败坏。",
+              "emphasis": [
+                {
+                  "span_text": "关掉",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "砸了",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "警笛声由远及近，划破夜空。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "（突然不慌不忙，轻笑）林悦，你以为你是正义的化身？",
+              "emotion": "calm",
+              "tone_instruction": "语气突然放缓，带着高高在上的轻蔑与嘲弄，尾音拖长，充满戏剧性的反转感与心理压迫。",
+              "emphasis": [
+                {
+                  "span_text": "林悦",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "正义",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l10",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "纸张抖动声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "看看这个。你签字的海外账户转账书，指纹也是你的。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳，咬字清晰，像毒蛇吐信一样一字一顿，带着不容置疑的压迫感和笃定。",
+              "emphasis": [
+                {
+                  "span_text": "签字",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "指纹",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l12",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（震惊，颤抖）这……这不可能！我没签过！",
+              "emotion": "surprised",
+              "tone_instruction": "声音发颤，气息短促，表现出瞳孔地震的生理反应，从难以置信到极力辩解的慌乱与崩溃。",
+              "emphasis": [
+                {
+                  "span_text": "不可能",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "没签过",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l13",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "现在，你是主犯了。",
+              "emotion": "serious",
+              "tone_instruction": "极度冷静，一字一顿，带着尘埃落定的残忍与得意，重音落在最后的宣判上，一锤定音。",
+              "emphasis": [
+                {
+                  "span_text": "现在",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "主犯",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l14",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "刺耳的悬疑重音，瞬间静音。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "第一集：林悦在活动室遭遇黑手，触发消防喷淋逃脱。雨夜中找到王奶奶，安抚并躲避搜查。两人被逼入死胡同，林悦拉下广播电闸播放贪腐录音。警笛响起时，歹徒首领却掏出林悦签名的伪造转账书，林悦瞬间沦为“主犯”。",
+      "ending_hook": "警笛声中，歹徒首领展示伪造的“主犯”证据，审计员陷入百口莫辩的绝境，悬念拉满。",
+      "fact_delta": [
+        {
+          "fact": "社区基金存在严重贪腐",
+          "status": "confirmed",
+          "evidence": "王奶奶手中的录音笔与林悦的账本"
+        },
+        {
+          "fact": "林悦被伪造签名和指纹",
+          "status": "revealed",
+          "evidence": "歹徒首领出示的海外账户转账书"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "character_1": "林悦",
+          "character_2": "王奶奶",
+          "change": "从单纯的救助关系深化为生死相托的战友，林悦展现出极强的保护欲与温情。"
+        },
+        {
+          "character_1": "林悦",
+          "character_2": "歹徒首领",
+          "change": "从猫鼠游戏的对立，瞬间反转为林悦沦为被拿捏的“主犯”，权力关系彻底倒转。"
+        }
+      ],
+      "new_open_threads": [
+        "林悦的签名和指纹是如何被伪造并转移到海外账户上的？",
+        "歹徒首领背后的真正主使是谁，为何能轻易伪造审计员的致命证据？",
+        "警笛声逼近后，林悦如何在百口莫辩的绝境中自证清白？"
+      ],
+      "closed_threads": [
+        "社区活动室U盘争夺战的初步危机（通过消防喷淋逃脱解除）。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "社区基金存在严重贪腐",
+        "status": "confirmed",
+        "evidence": "王奶奶手中的录音笔与林悦的账本"
+      },
+      {
+        "fact": "林悦被伪造签名和指纹",
+        "status": "revealed",
+        "evidence": "歹徒首领出示的海外账户转账书"
+      }
+    ],
+    "relationships": [
+      {
+        "character_1": "林悦",
+        "character_2": "王奶奶",
+        "change": "从单纯的救助关系深化为生死相托的战友，林悦展现出极强的保护欲与温情。"
+      },
+      {
+        "character_1": "林悦",
+        "character_2": "歹徒首领",
+        "change": "从猫鼠游戏的对立，瞬间反转为林悦沦为被拿捏的“主犯”，权力关系彻底倒转。"
+      }
+    ],
+    "unresolved_threads": [
+      "林悦的签名和指纹是如何被伪造并转移到海外账户上的？",
+      "歹徒首领背后的真正主使是谁，为何能轻易伪造审计员的致命证据？",
+      "警笛声逼近后，林悦如何在百口莫辩的绝境中自证清白？"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 19,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": [
+      "剧情结构严格遵循获批大纲的起承转合，从发现异常、雨夜寻踪、广播反击到身份反转，核心情节与关键节点完全对应。",
+      "场景始终限定在老旧社区范围内，空间逻辑连贯；主角动机（保护证人、保全证据）贯穿始终；台词精简且留白充足，符合时长与节奏约束。",
+      "内容聚焦悬疑博弈与人性考验，包含暴力威胁与心理压迫元素，但无露骨描写或违规内容，符合“mature_non_explicit”分级标准及36-55岁受众偏好。"
+    ]
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1801,
+      "output_tokens": 2578,
+      "latency_ms": 35357
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2971,
+      "output_tokens": 5033,
+      "latency_ms": 86815
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1886,
+      "output_tokens": 3738,
+      "latency_ms": 64483
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2127,
+      "output_tokens": 4373,
+      "latency_ms": 75689
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2210,
+      "output_tokens": 3962,
+      "latency_ms": 68253
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "attempt": 1,
+      "input_tokens": 7746,
+      "output_tokens": 1736,
+      "latency_ms": 12583
+    }
+  ],
+  "created_at": "2026-10-08T09:25:17.159856Z"
+}

@@ -1,0 +1,134 @@
+{
+  "plan_id": "5038a38a15d440f6912ecffe9c20fd9e",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "plan": {
+    "title": "时光回音",
+    "premise": "小镇少年林星在阁楼发现停摆的旧座钟能播放已故爷爷的留言，在与父亲的冲突中，他通过座钟里的秘密学会了真正的告别与陪伴。",
+    "theme": "告别不是遗忘，而是带着爱继续前行；陪伴有多种形式。",
+    "beginning": "旧座钟突然发声，林星为了听完爷爷的留言拼命修复卡死的发条。",
+    "development": "爷爷的留言揭示了过去，林星与试图搬走座钟的父亲发生冲突，父子对‘如何面对失去’产生分歧。",
+    "climax": "父亲交出钥匙，林星在钟摆里发现父亲隐藏的思念纸条，座钟传出爷爷的指引，父子达成和解。",
+    "ending": "座钟提示反向拧动发条将抹去声音，林星在父亲的鼓励下准备亲手放下过去，故事在悬念与温情中戛然而止。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "第一集：停摆的告别",
+        "core_goal": "展现林星对旧物的执念，揭示父亲的隐忍，完成从‘执着保留’到‘学会放下’的情感转变。",
+        "major_beats": [
+          "【0-2s 黄金钩子】老旧座钟突然发出巨大的‘铛’声，紧接着传出已故爷爷沙哑的声音：‘星儿，时间到了。’（突发听觉事件）",
+          "【2-7s 矛盾三要素】昏暗阁楼里，少年林星抱着停摆的座钟。座钟发条卡死，他必须修好它，听完爷爷最后的留言。",
+          "【7-20s 第一次反转】林星用力掰动发条，手指被划破（压抑），突然‘咔哒’一声，发条顺畅，座钟爆发出温暖的八音盒旋律和爷爷清晰的笑声（爆发），音乐留白断点。",
+          "【20-80s 中段推进】爷爷留言讲述如何面对失去。父亲推门强行要搬走座钟，林星死死护住，父子爆发争吵，林星喊出‘你根本不懂怎么告别’。台词短促锋利。",
+          "【80-113s 升级/二次反转】父亲叹气递出旧钥匙。座钟里爷爷声音响起：‘你爸把最珍贵的东西锁在钟摆里了。’林星打开钟摆，发现全是父亲偷偷写下的思念纸条。反转：父亲并非冷漠。",
+          "【113-120s 强钩子】座钟滴答声加速，爷爷声音空灵：‘现在，把发条反向拧到底。’林星发现发条刻着‘反向拧动，将抹去所有声音’。他震惊看向父亲，父亲却微笑点头。戛然而止。"
+        ],
+        "ending": "林星面临是否抹去爷爷声音的抉择，在父亲的微笑鼓励下，他握紧发条准备完成真正的告别，情绪在最高点悬念收尾。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "林星：少年音，前期焦躁执着，后期释然；父亲：中年音，沉稳隐忍，带有压抑的沧桑感；爷爷：老年音，温暖慈祥，带有磁带般的复古颗粒感。",
+      "sound_design": "核心音效为座钟的机械齿轮声、发条上弦声和八音盒旋律。环境音需突出阁楼的空旷与灰尘感。S6的滴答声加速需配合心跳声增强紧张感。"
+    },
+    "continuity_constraints": [
+      "座钟的机械声必须贯穿始终，作为情绪节拍器。",
+      "父亲的态度转变必须有合理的微表情/呼吸声铺垫，不可突兀。"
+    ],
+    "change_summary": [
+      "根据120秒时长限制，将故事浓缩为单集微广播剧，聚焦于阁楼内的单一场景冲突。",
+      "严格遵循beat_sheet的时间轴分配，确保每个节拍精准卡点。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1795,
+      "output_tokens": 3528,
+      "latency_ms": 45892
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "dbba0026bf4050ab575852e27586096e3a2f105f452cdd74f6ab6f1ac812e3f0",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-08T09:00:01.706269Z",
+  "updated_at": "2026-10-08T09:00:01.706269Z"
+}

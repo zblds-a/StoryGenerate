@@ -1,0 +1,133 @@
+{
+  "plan_id": "fb5c2a9c56534047a0ff89e0d322993d",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "plan": {
+    "title": "第120秒的抉择",
+    "premise": "裁员前夕，职场新人发现项目致命错误，在明哲保身与坚守底线之间做出抉择，却意外收获了前辈的并肩作战。",
+    "theme": "职场中的诚实、勇气与代际传承的温暖。",
+    "beginning": "裁员名单打印的刺耳声中，新人发现项目数据错误，面临是否公开的挣扎。",
+    "development": "新人顶住压力发送揭露邮件，引发办公室震荡，被主管叫去谈话，气氛紧张。",
+    "climax": "主管并未责罚，反而坦白自己早已知情却懦弱退缩，新人的勇气唤醒了主管的初心，两人决定共同面对高层。",
+    "ending": "高层介入准备开除两人，主管却拿出创业计划书，带着新人昂首离开，留下温暖的余韵与悬念。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "第120秒的抉择",
+        "core_goal": "展现新人在裁员危机中坚守底线的勇气，并引出前辈并肩作战的温暖反转。",
+        "major_beats": [
+          "S1(0-2s): 黄金钩子。裁员名单打印机突然发出刺耳的卡纸警报声，打破办公室死寂。",
+          "S2(2-7s): 矛盾三要素。新人（角色1）盯着屏幕上的项目致命错误数据，手指悬在‘全员发送’键上，内心挣扎是否要在被裁前当这个吹哨人。",
+          "S3(7-20s): 第一次反转/爽点。前辈路过低声警告‘别犯傻’，新人深吸一口气，伴随清脆的键盘敲击声和邮件发送成功的提示音，果断公开错误。",
+          "S4(20-80s): 中段推进。办公室瞬间死寂后爆发窃窃私语。主管将新人叫进办公室，台词短促交锋。主管质问动机，新人坚持‘不能让客户承担后果’，气氛压抑到极点。",
+          "S5(80-113s): 升级/二次反转。主管突然卸下伪装，叹气承认自己早知错误但迫于高层压力隐瞒。主管被新人的纯粹打动，撕毁手中的裁员同意书，决定带新人一起向高层摊牌。",
+          "S6(113-120s): 强钩子。办公室门被高层猛然推开，冷冷宣布两人被解雇。主管却笑着递给新人一份新公司的合伙协议：‘走，我们自己干。’声音戛然而止。"
+        ],
+        "ending": "主管与新人共同面对被解雇的结局，但主管抛出创业邀请，将职场危机转化为温暖的新起点，情绪在最高昂处收尾。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "角色1（新人）声线清透、带有初入职场的青涩但内心坚定；主管声线沉稳、疲惫但带有被唤醒后的力量感。",
+      "sound_design": "突出办公环境的白噪音与突发音效（如打印机警报、键盘回车、邮件提示音）的对比，增强紧张感。结尾使用温暖昂扬的弦乐起头后瞬间切断。"
+    },
+    "continuity_constraints": [
+      "角色1必须保持‘普通人’的设定，没有金手指，依靠纯粹的道德直觉做出选择。",
+      "全剧时长严格控制在120秒，台词必须精简，留白给音效和情绪。"
+    ],
+    "change_summary": [
+      "根据‘warm’基调要求，将原本可能走向黑暗或压抑的职场揭露事件，转化为前辈被后辈打动、两人携手创业的温暖结局。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "serialized",
+    "content_form": "audio_drama",
+    "genre": "职场",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "mature_non_explicit",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1796,
+      "output_tokens": 2852,
+      "latency_ms": 37276
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "ee12d476d309c1d59d9727e27a10610fc53989a960d4ad4153fef6427fe4787d",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-08T09:12:46.231545Z",
+  "updated_at": "2026-10-08T09:12:46.231545Z"
+}

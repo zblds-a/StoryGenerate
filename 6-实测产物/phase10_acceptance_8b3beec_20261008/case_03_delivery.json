@@ -1,0 +1,1508 @@
+{
+  "story_id": "a961c792f86949368fe165f472cf84d0",
+  "story_version_id": "561e7f35df934d7fad22437dc298a9c9",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "6e38068325434eb9a077bfcdf4c03961",
+  "approved_plan_revision": 1,
+  "title": "气象站的明日回音",
+  "summary": "四名学生志愿者在废弃的城市气象站进行设备修复时，意外截获了一段来自未来的加密气象警告，他们必须在有限的时间内解开警告背后的真相。",
+  "tags": [
+    "科幻",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "serialized",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    },
+    {
+      "character_id": "char-3",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色3",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-3",
+      "performer_id": "voice-3"
+    },
+    {
+      "character_id": "char-4",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色4",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-4",
+      "performer_id": "voice-4"
+    }
+  ],
+  "outline": {
+    "title": "气象站的明日回音",
+    "premise": "四名学生志愿者在废弃的城市气象站进行设备修复时，意外截获了一段来自未来的加密气象警告，他们必须在有限的时间内解开警告背后的真相。",
+    "theme": "青春、责任、对未来的守护与温暖羁绊。",
+    "beginning": "气象站突发设备短路爆音，四名学生面临修复失败和暴风雨即将来临的双重危机。",
+    "development": "在抢修主控板的过程中，他们发现了一段异常频段，解码后竟是一段来自未来的语音留言，警告即将到来的极端气象灾害。",
+    "climax": "学生们克服设备老旧和信号干扰的困难，成功将未来警告与当前气象数据比对，确认了灾害的真实性，并决定手动启动最高级别的气象广播。",
+    "ending": "广播成功发出，但气象站的接收器却收到了第二条来自未来的信息，内容令人震惊，引出更大的危机。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "频段外的明日回音",
+        "core_goal": "四名学生修复气象站并发现来自未来的警告，建立核心悬念。",
+        "major_beats": [
+          "[0-5s] 黄金钩子：巨大的电流爆音和玻璃震碎声，气象站主控台冒出火花，刺耳的警报声骤响。",
+          "[5-17s] 矛盾三要素：角色1大喊主控板烧毁，角色2指出暴风雨还有十分钟就到且备用电源撑不住，角色3和角色4试图手动重启，交代四人在废弃气象站抢修的困境。",
+          "[17-50s] 第一次反转：手动重启失败，陷入绝望时，角色4发现一个未记录的隐藏频段正在接收信号。伴随一声清脆的系统提示音（音效断点），扬声器传出清晰的未来人声：‘不要离开气象站，重复，不要离开！’",
+          "[50-200s] 中段推进：四人震惊，角色1认为是恶作剧，角色2通过声纹和加密协议确认信号真实性。角色3发现未来警告中提到的‘气压骤降点’与当前仪器读数完全吻合。大家从怀疑转为紧张，决定查明警告中提到的‘致命风暴眼’。",
+          "[200-283s] 升级/二次反转：风暴提前降临，狂风掀翻屋顶（中型高潮）。角色1和角色2冒险爬上天线塔手动调整接收器以获取完整信息，角色3和4在室内死死拉住安全绳。信号终于完整，未来人警告的不是外面的风暴，而是气象站地下的某种东西即将苏醒。",
+          "[283-300s] 强钩子：地面开始剧烈震动，控制台屏幕闪烁出红光，未来人的声音变得凄厉：‘它已经发现你们了——’ 声音戛然而止，只剩刺耳的静电白噪音。"
+        ],
+        "ending": "强悬念收尾，地面震动加剧，四人面临未知的地下危机，情绪卡在最高点。",
+        "target_duration_sec": 300
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "角色1沉稳果断，角色2急躁但技术好，角色3细心敏锐，角色4胆小但关键时刻勇敢。整体基调在紧张中透出团队间的温暖与信任。",
+      "sound_design": "强调风雨声、老旧设备的电流声、机械齿轮转动声，以及未来信号的空灵电子音效。爆发点需配合明显的音效断点。"
+    },
+    "continuity_constraints": [
+      "气象站设定为半废弃状态，设备老旧但核心功能仍在。",
+      "未来信号必须通过特定的加密频段接收，不能是普通的无线电。",
+      "四名角色均为普通学生，没有超能力，解决问题依靠科学知识和团队协作。"
+    ],
+    "change_summary": [
+      "初始生成，基于用户提供的四名学生修复气象站并发现未来提醒的指令，严格遵循300秒时长和6个Beat节点的结构要求。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-c5c7b7ea",
+      "index": 1,
+      "title": "气象站的明日回音",
+      "synopsis": "四名学生志愿者在废弃的城市气象站进行设备修复时，意外截获了一段来自未来的加密气象警告，他们必须在有限的时间内解开警告背后的真相。",
+      "duration_target_sec": 300,
+      "duration_estimate_sec": 206,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "黄金钩子与矛盾爆发",
+          "location": "废弃气象站主控室",
+          "dramatic_goal": "展现突发危机，交代四人困境",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "巨大的电流爆音，玻璃震碎声，主控台冒出火花，刺耳的警报声骤响。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "废弃的城市气象站，此刻正被风暴与未知的恐惧吞噬。",
+              "emotion": "serious",
+              "tone_instruction": "低沉、压抑，带有悬疑感，语速缓慢，营造风暴来临前的窒息感与末日氛围。",
+              "emphasis": [
+                {
+                  "span_text": "废弃",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "吞噬",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 23,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "旁白需贴近麦克风，使用气声增加空间感和压迫感，尾音渐弱消散在风暴音效中。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "主控板烧毁了！快切断备用电源！",
+              "emotion": "worried",
+              "tone_instruction": "极度焦急，声音因紧张而发紧，大喊，带有破音的边缘感，表现出突发状况的惊慌。",
+              "emphasis": [
+                {
+                  "span_text": "烧毁",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "快",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 8,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.5,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "伴随急促的咳嗽或喘息，表现出被火花和浓烟呛到的感觉，动作幅度大。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "来不及了！暴风雨还有十分钟就到，备用电源根本撑不住！",
+              "emotion": "fearful",
+              "tone_instruction": "语速极快，带着绝望和崩溃的边缘，声音颤抖，强调时间的紧迫和无力回天的恐慌。",
+              "emphasis": [
+                {
+                  "span_text": "来不及",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "十分钟",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "根本",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 22,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.6,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "呼吸急促，字与字之间咬得很紧，体现出千钧一发的危机感，情绪处于爆发边缘。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "角色4，快来帮忙！我们一起手动重启！",
+              "emotion": "serious",
+              "tone_instruction": "强作镇定但难掩焦急，声音洪亮以盖过警报声，带有指挥和命令的口吻，试图稳住局面。",
+              "emphasis": [
+                {
+                  "span_text": "帮忙",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "手动重启",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 17,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "边喊边有翻找工具或敲击键盘的动作音效配合，声音要有穿透力，展现出队长的担当。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-4",
+              "narrator_id": null,
+              "performer_id": "voice-4",
+              "text": "好、好的！我来了！",
+              "emotion": "fearful",
+              "tone_instruction": "结巴、慌乱，声音发颤，带着极度的紧张和一丝哭腔，表现出新手的笨拙与害怕。",
+              "emphasis": [
+                {
+                  "span_text": "好",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 1,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "来了",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "'好、好的'之间要有明显的慌乱停顿和倒吸凉气的声音，表现出被吓到且手忙脚乱、跌跌撞撞跑过来的状态。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "来自未来的警告",
+          "location": "废弃气象站主控室",
+          "dramatic_goal": "发现隐藏频段，确认未来信号真实性",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "手动重启失败的机械卡壳声，警报声持续。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "不行！齿轮卡死了！",
+              "emotion": "worried",
+              "tone_instruction": "焦急、用力，带着强烈的挫败感，声音紧绷。",
+              "emphasis": [
+                {
+                  "span_text": "不行",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "卡死了",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "伴随用力拉扯或敲击机械的喘息声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-4",
+              "narrator_id": null,
+              "performer_id": "voice-4",
+              "text": "完了……我们要被困死在这里了……",
+              "emotion": "fearful",
+              "tone_instruction": "绝望、颤抖，声音逐渐变弱，带着哭腔。",
+              "emphasis": [
+                {
+                  "span_text": "完了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "困死",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速放慢，尾音发颤，表现出心理防线崩溃的边缘。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-4",
+              "narrator_id": null,
+              "performer_id": "voice-4",
+              "text": "等等！你们看这个屏幕！有一个未记录的隐藏频段正在接收信号！",
+              "emotion": "surprised",
+              "tone_instruction": "突然的惊喜，音调瞬间拔高，急切且充满不可思议。",
+              "emphasis": [
+                {
+                  "span_text": "等等",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "隐藏频段",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "接收信号",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 28,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "情绪从绝望瞬间转为震惊，语速加快。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "一声清脆的系统提示音（音效断点），所有警报声瞬间安静。扬声器传出带有轻微电音的未来人声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-5",
+              "narrator_id": null,
+              "performer_id": "role-5",
+              "text": "不要离开气象站，重复，不要离开！",
+              "emotion": "serious",
+              "tone_instruction": "机械但带有强烈的警告意味，急促、严厉，带有电音质感。",
+              "emphasis": [
+                {
+                  "span_text": "不要离开",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "重复",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "不要离开",
+                  "occurrence": 2,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音需做后期电音处理，表演时咬字要极其清晰、生硬。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "这声音……难道是附近电台的恶作剧？",
+              "emotion": "surprised",
+              "tone_instruction": "疑惑、自我安慰，略带怀疑和试探。",
+              "emphasis": [
+                {
+                  "span_text": "恶作剧",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "眉头紧锁，试图用常理解释超自然现象。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "不可能！我刚刚跑了声纹比对，这加密协议是军方废弃的量子级，而且信号衰减特征……这绝不是现代能伪造的！这频段至少超前了五十年！",
+              "emotion": "serious",
+              "tone_instruction": "极度震惊但保持专业笃定，语速较快，情绪激动。",
+              "emphasis": [
+                {
+                  "span_text": "不可能",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "军方废弃",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 24,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "绝不是",
+                  "occurrence": 1,
+                  "start_char": 40,
+                  "end_char": 43,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "五十年",
+                  "occurrence": 1,
+                  "start_char": 58,
+                  "end_char": 61,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "像连珠炮一样输出专业术语，越说越觉得不可思议。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "你们看气压计！未来警告里提到的‘气压骤降点’，和现在仪器上的读数完全吻合！连小数点后的数值都一模一样！",
+              "emotion": "surprised",
+              "tone_instruction": "倒吸凉气，极度震惊，声音因恐惧和难以置信而发紧。",
+              "emphasis": [
+                {
+                  "span_text": "气压计",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "完全吻合",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 36,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "一模一样",
+                  "occurrence": 1,
+                  "start_char": 46,
+                  "end_char": 50,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "指着仪器，手可能在发抖，语气中带着对未知的敬畏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l10",
+              "kind": "dialogue",
+              "speaker_role_id": "role-4",
+              "narrator_id": null,
+              "performer_id": "voice-4",
+              "text": "真……真的是从未来发来的？那、那如果我们离开了，会遭遇什么？",
+              "emotion": "fearful",
+              "tone_instruction": "结巴、恐惧，声音发抖，充满对未知的害怕。",
+              "emphasis": [
+                {
+                  "span_text": "未来",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "遭遇什么",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "咽口水，呼吸急促，表现出心理上的退缩。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l11",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "别怕，有我们在。如果这警告是真的，那‘致命风暴眼’到底在哪？",
+              "emotion": "reassuring",
+              "tone_instruction": "沉稳、安抚，迅速从震惊中抽离，转入冷静分析。",
+              "emphasis": [
+                {
+                  "span_text": "别怕",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "致命风暴眼",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 24,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "队长风范，语气坚定，给队友安全感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l12",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "我正在解析剩下的数据……信号干扰太强了，天线塔的接收器偏了，我得上去看看。",
+              "emotion": "serious",
+              "tone_instruction": "专注、果断，带点焦急，行动力强。",
+              "emphasis": [
+                {
+                  "span_text": "干扰太强",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 18,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "偏了",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 29,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "上去看看",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 36,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "一边敲击键盘一边做出决定，动作利落。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l13",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "外面风那么大，太危险了！",
+              "emotion": "worried",
+              "tone_instruction": "急切劝阻，充满担忧，音量提高。",
+              "emphasis": [
+                {
+                  "span_text": "风那么大",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "太危险",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "下意识地伸手想拉住对方，语气中带着恳求。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l14",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "没时间了，我去帮角色2。角色3，角色4，你们在室内盯紧数据，准备好安全绳！记住，无论发生什么，我们四个要一起活下去。",
+              "emotion": "serious",
+              "tone_instruction": "果断、不容置疑，展现领导力，语气坚定。",
+              "emphasis": [
+                {
+                  "span_text": "没时间了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "盯紧",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 27,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "一起活下去",
+                  "occurrence": 1,
+                  "start_char": 52,
+                  "end_char": 57,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "打断劝阻，眼神坚定，分配任务时语速快而清晰。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l15",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "明白！",
+              "emotion": "serious",
+              "tone_instruction": "干脆、坚定，克服恐惧，执行力强。",
+              "emphasis": [
+                {
+                  "span_text": "明白",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "短促有力，立刻进入工作状态。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l16",
+              "kind": "dialogue",
+              "speaker_role_id": "role-4",
+              "narrator_id": null,
+              "performer_id": "voice-4",
+              "text": "我、我也会保护好数据的！",
+              "emotion": "worried",
+              "tone_instruction": "虽然害怕但努力鼓起勇气，声音微颤但态度坚决。",
+              "emphasis": [
+                {
+                  "span_text": "保护好",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "结巴了一下，随后深吸一口气，给自己和队友打气。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "风暴降临与真相揭晓",
+          "location": "气象站天线塔与主控室",
+          "dramatic_goal": "克服风暴获取完整信号，揭示地下危机",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "狂风呼啸，屋顶被掀翻的巨大撕裂声，杂物飞舞。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "狂风撕裂了老旧的铁皮屋顶，暴雨如注，灌入这个摇摇欲坠的控制室。",
+              "emotion": "serious",
+              "tone_instruction": "语速稍快，带着紧张和压迫感，描绘出风暴的破坏力，声音要有画面感。",
+              "emphasis": [
+                {
+                  "span_text": "撕裂",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "摇摇欲坠",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "旁白需配合风雨音效，语气紧凑。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-4",
+              "narrator_id": null,
+              "performer_id": "voice-4",
+              "text": "啊！屋顶被掀开了！风太大了！",
+              "emotion": "fearful",
+              "tone_instruction": "惊恐大喊，声音有被风雨声掩盖的挣扎感，带着破音和颤抖。",
+              "emphasis": [
+                {
+                  "span_text": "掀开",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "太大",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "伴随倒吸凉气或惊呼的起音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "抓紧固定物！角色2，天线塔那边怎么样？",
+              "emotion": "worried",
+              "tone_instruction": "焦急大喊，试图盖过风雨声，语气急促且充满关切。",
+              "emphasis": [
+                {
+                  "span_text": "抓紧",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "天线塔",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音要穿透环境音，带有指挥者的果断与焦急。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "卡住了！手动摇杆生锈了！角色3，把安全绳扔过来！",
+              "emotion": "worried",
+              "tone_instruction": "在风雨中挣扎的喘息声，焦急且用力，大声呼救，带有挫败感。",
+              "emphasis": [
+                {
+                  "span_text": "卡住",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "生锈",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "安全绳",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 20,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "咬字用力，表现出肢体对抗狂风的紧绷感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "接住！角色4，别发呆，一起拉！",
+              "emotion": "serious",
+              "tone_instruction": "果断、用力，带着命令的口吻，边喊边发力，声音沉稳有力。",
+              "emphasis": [
+                {
+                  "span_text": "接住",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "别发呆",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "一起拉",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "重音落在动词上，体现团队协作的紧迫感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-4",
+              "narrator_id": null,
+              "performer_id": "voice-4",
+              "text": "一、二、拉！",
+              "emotion": "serious",
+              "tone_instruction": "憋气用力的喊声，短促有力，节奏感强。",
+              "emphasis": [
+                {
+                  "span_text": "拉",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 5,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "数字之间要有发力的停顿，'拉'字要爆发出来。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "好了！接收器校准完毕！信号正在导入！",
+              "emotion": "excited",
+              "tone_instruction": "如释重负且激动，在风雨中大喊，带着终于成功的喜悦。",
+              "emphasis": [
+                {
+                  "span_text": "好了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "校准完毕",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "导入",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 17,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语调上扬，透出劫后余生的庆幸。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "信号干扰声减弱，未来人声变得清晰。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l10",
+              "kind": "dialogue",
+              "speaker_role_id": "role-5",
+              "narrator_id": null,
+              "performer_id": "role-5",
+              "text": "警告……致命风暴眼不在地表……重复，不在地表……气象站地下……休眠舱……它即将苏醒……",
+              "emotion": "mysterious",
+              "tone_instruction": "伴随电流麦的失真感，声音空灵、机械、断断续续，透着令人毛骨悚然的警告意味。",
+              "emphasis": [
+                {
+                  "span_text": "不在地表",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "地下",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 29,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "苏醒",
+                  "occurrence": 1,
+                  "start_char": 39,
+                  "end_char": 41,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "省略号处要有明显的电流卡顿和延迟感，语气冰冷。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "地下？这废弃的气象站下面怎么会有休眠舱？",
+              "emotion": "surprised",
+              "tone_instruction": "震惊、难以置信，声音发颤，带着对未知的恐惧和疑惑。",
+              "emphasis": [
+                {
+                  "span_text": "地下",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "休眠舱",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速放慢，表现出大脑正在处理这个荒谬信息的停顿。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l12",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "数据解析完毕……这不是气象灾害……这是某种……未知生物苏醒的前兆！",
+              "emotion": "fearful",
+              "tone_instruction": "从专注转为极度的恐惧和震惊，声音逐渐发抖，最后半句几乎是喊出来的。",
+              "emphasis": [
+                {
+                  "span_text": "不是",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "未知生物",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 27,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "苏醒",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句看着屏幕喃喃自语，后半句意识到真相后声音拔高，充满绝望。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "强悬念收尾",
+          "location": "废弃气象站主控室",
+          "dramatic_goal": "地面震动，未知生物发现主角，戛然而止",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "地面开始剧烈震动，控制台屏幕闪烁出红光，警报声再次响起但变得扭曲。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "地震了？！控制台屏幕全变红了！",
+              "emotion": "fearful",
+              "tone_instruction": "声音因剧烈晃动而发颤，带着极度的惊恐与慌乱，语速加快，表现出难以置信和害怕。",
+              "emphasis": [
+                {
+                  "span_text": "地震了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "全变红了",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "伴随身体失去平衡的喘息声，声音可以带一点破音或颤抖，表现出突发危机下的生理性恐惧。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-5",
+              "narrator_id": null,
+              "performer_id": "role-5",
+              "text": "它已经发现你们了——",
+              "emotion": "fearful",
+              "tone_instruction": "声音经过电波传输带有失真感，语气凄厉、绝望且极度紧迫，字字泣血，尾音被强行切断。",
+              "emphasis": [
+                {
+                  "span_text": "已经发现",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "你们",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "需后期加入无线电失真和电流麦效果，尾音“了——”被突然的静电白噪音粗暴截断，不要自然收尾，留下强烈的悬念与恐怖感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "声音戛然而止，只剩刺耳的静电白噪音，持续3秒后淡出。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "第1集：频段外的明日回音。四名学生修复气象站并发现来自未来的警告，建立核心悬念。",
+      "ending_hook": "地面震动加剧，四人面临未知的地下危机，情绪卡在最高点。",
+      "fact_delta": [
+        {
+          "fact": "气象站地下存在未知休眠舱",
+          "status": "new"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "characters": [
+            "角色1",
+            "角色2",
+            "角色3",
+            "角色4"
+          ],
+          "change": "在危机中建立了深厚的信任与团队羁绊"
+        }
+      ],
+      "new_open_threads": [
+        "气象站地下休眠舱里究竟是什么？",
+        "未来人为什么能发送警告？",
+        "‘它’发现他们后会引发什么后果？"
+      ],
+      "closed_threads": [],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "气象站地下存在未知休眠舱",
+        "status": "new"
+      }
+    ],
+    "relationships": [
+      {
+        "characters": [
+          "角色1",
+          "角色2",
+          "角色3",
+          "角色4"
+        ],
+        "change": "在危机中建立了深厚的信任与团队羁绊"
+      }
+    ],
+    "unresolved_threads": [
+      "气象站地下休眠舱里究竟是什么？",
+      "未来人为什么能发送警告？",
+      "‘它’发现他们后会引发什么后果？"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 31,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": [
+      "剧本场景结构与获批大纲的6个节拍节点完全对应，情节推进、反转点及悬念收尾均严格遵循预设结构。",
+      "严格遵循“半废弃气象站”、“加密频段接收”、“无超能力靠团队协作”三大连续性约束，角色行为逻辑与设定一致，内部叙事连贯。",
+      "内容聚焦青春悬疑与团队冒险，仅包含轻度危机氛围与常规台词，无违规或越级元素，完全符合“Teen（14-17岁）”分级标准。"
+    ]
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 2139,
+      "output_tokens": 2309,
+      "latency_ms": 32042
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 3190,
+      "output_tokens": 5665,
+      "latency_ms": 97552
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "error": "timeout",
+      "latency_ms": 120135
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 2,
+      "input_tokens": 3226,
+      "output_tokens": 6819,
+      "latency_ms": 117032
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1998,
+      "output_tokens": 3846,
+      "latency_ms": 66249
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2782,
+      "output_tokens": 5367,
+      "latency_ms": 92434
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "error": "timeout",
+      "latency_ms": 120150
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 2,
+      "input_tokens": 2422,
+      "output_tokens": 3496,
+      "latency_ms": 60536
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1760,
+      "output_tokens": 2315,
+      "latency_ms": 40258
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "attempt": 1,
+      "input_tokens": 9798,
+      "output_tokens": 2321,
+      "latency_ms": 17746
+    }
+  ],
+  "created_at": "2026-10-08T09:11:45.595732Z"
+}

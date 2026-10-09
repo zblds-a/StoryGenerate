@@ -1,0 +1,943 @@
+{
+  "story_id": "aa2e98c073bc473f9a9ea05413f51cf6",
+  "story_version_id": "68979405fd304ff9a264ca32f38a21cb",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "5038a38a15d440f6912ecffe9c20fd9e",
+  "approved_plan_revision": 1,
+  "title": "时光回音",
+  "summary": "小镇少年林星在阁楼发现停摆的旧座钟能播放已故爷爷的留言，在与父亲的冲突中，他通过座钟里的秘密学会了真正的告别与陪伴。",
+  "tags": [
+    "温情",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "时光回音",
+    "premise": "小镇少年林星在阁楼发现停摆的旧座钟能播放已故爷爷的留言，在与父亲的冲突中，他通过座钟里的秘密学会了真正的告别与陪伴。",
+    "theme": "告别不是遗忘，而是带着爱继续前行；陪伴有多种形式。",
+    "beginning": "旧座钟突然发声，林星为了听完爷爷的留言拼命修复卡死的发条。",
+    "development": "爷爷的留言揭示了过去，林星与试图搬走座钟的父亲发生冲突，父子对‘如何面对失去’产生分歧。",
+    "climax": "父亲交出钥匙，林星在钟摆里发现父亲隐藏的思念纸条，座钟传出爷爷的指引，父子达成和解。",
+    "ending": "座钟提示反向拧动发条将抹去声音，林星在父亲的鼓励下准备亲手放下过去，故事在悬念与温情中戛然而止。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "第一集：停摆的告别",
+        "core_goal": "展现林星对旧物的执念，揭示父亲的隐忍，完成从‘执着保留’到‘学会放下’的情感转变。",
+        "major_beats": [
+          "【0-2s 黄金钩子】老旧座钟突然发出巨大的‘铛’声，紧接着传出已故爷爷沙哑的声音：‘星儿，时间到了。’（突发听觉事件）",
+          "【2-7s 矛盾三要素】昏暗阁楼里，少年林星抱着停摆的座钟。座钟发条卡死，他必须修好它，听完爷爷最后的留言。",
+          "【7-20s 第一次反转】林星用力掰动发条，手指被划破（压抑），突然‘咔哒’一声，发条顺畅，座钟爆发出温暖的八音盒旋律和爷爷清晰的笑声（爆发），音乐留白断点。",
+          "【20-80s 中段推进】爷爷留言讲述如何面对失去。父亲推门强行要搬走座钟，林星死死护住，父子爆发争吵，林星喊出‘你根本不懂怎么告别’。台词短促锋利。",
+          "【80-113s 升级/二次反转】父亲叹气递出旧钥匙。座钟里爷爷声音响起：‘你爸把最珍贵的东西锁在钟摆里了。’林星打开钟摆，发现全是父亲偷偷写下的思念纸条。反转：父亲并非冷漠。",
+          "【113-120s 强钩子】座钟滴答声加速，爷爷声音空灵：‘现在，把发条反向拧到底。’林星发现发条刻着‘反向拧动，将抹去所有声音’。他震惊看向父亲，父亲却微笑点头。戛然而止。"
+        ],
+        "ending": "林星面临是否抹去爷爷声音的抉择，在父亲的微笑鼓励下，他握紧发条准备完成真正的告别，情绪在最高点悬念收尾。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "林星：少年音，前期焦躁执着，后期释然；父亲：中年音，沉稳隐忍，带有压抑的沧桑感；爷爷：老年音，温暖慈祥，带有磁带般的复古颗粒感。",
+      "sound_design": "核心音效为座钟的机械齿轮声、发条上弦声和八音盒旋律。环境音需突出阁楼的空旷与灰尘感。S6的滴答声加速需配合心跳声增强紧张感。"
+    },
+    "continuity_constraints": [
+      "座钟的机械声必须贯穿始终，作为情绪节拍器。",
+      "父亲的态度转变必须有合理的微表情/呼吸声铺垫，不可突兀。"
+    ],
+    "change_summary": [
+      "根据120秒时长限制，将故事浓缩为单集微广播剧，聚焦于阁楼内的单一场景冲突。",
+      "严格遵循beat_sheet的时间轴分配，确保每个节拍精准卡点。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-680c2681",
+      "index": 1,
+      "title": "时光回音",
+      "synopsis": "小镇少年林星在阁楼发现停摆的旧座钟能播放已故爷爷的留言，在与父亲的冲突中，他通过座钟里的秘密学会了真正的告别与陪伴。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 103,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "第一幕：停摆的执念",
+          "location": "昏暗的阁楼",
+          "dramatic_goal": "展现林星对旧物的执念，完成座钟修复的第一次反转",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】巨大的、沉闷的座钟“铛”声，紧接着是齿轮艰涩摩擦的刺耳声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s1_clock_strike"
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "星儿，时间到了。",
+              "emotion": "mysterious",
+              "tone_instruction": "沙哑、空灵，带有老式磁带的底噪质感，语速缓慢，像是在另一个时空深沉地呼唤。",
+              "emphasis": [
+                {
+                  "span_text": "时间",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 5,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音需做后期EQ处理，增加空间混响和磁带失真感，营造突发听觉事件的悬疑氛围。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "昏暗的阁楼里，灰尘在光柱中飞舞。少年林星死死抱着停摆的旧座钟，满头大汗。",
+              "emotion": "calm",
+              "tone_instruction": "沉稳、客观，带有微微的压抑感，画面感强，引导听众进入昏暗阁楼的场景。",
+              "emphasis": [
+                {
+                  "span_text": "死死抱着",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "旁白需保持克制，通过重音突出林星的执念与环境的压抑。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "发条卡死了……不行，我得听完，爷爷还没说完……",
+              "emotion": "worried",
+              "tone_instruction": "焦急、喘息，声音因为用力而发紧，带着执拗和不甘，语速较快。",
+              "emphasis": [
+                {
+                  "span_text": "不行",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "表现出少年面对阻碍时的急躁与对爷爷留言的极度渴望，尾音带一点颤抖。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】用力掰动发条的金属摩擦声，林星倒吸一口凉气。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s3_spring_snap"
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "嘶……",
+              "emotion": "neutral",
+              "tone_instruction": "短促的痛呼，倒吸一口凉气，表现出手指被划破瞬间的本能生理反应。",
+              "emphasis": [
+                {
+                  "span_text": "嘶",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 1,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "纯生理反应，不需要太多情绪铺垫，真实自然即可。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】清脆的“咔哒”声。紧接着，温暖复古的八音盒旋律倾泻而出。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s3_music_box"
+            },
+            {
+              "line_id": "ep1-s1-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "（轻笑，带磁带颗粒感）星儿啊，别怕黑。",
+              "emotion": "tender",
+              "tone_instruction": "温暖、慈祥，带有老式磁带的颗粒感和轻微失真，充满安抚的力量，语速舒缓。",
+              "emphasis": [
+                {
+                  "span_text": "别怕",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 17,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "轻笑要自然，声音中透出包容感，与上一句的焦急形成情绪上的抚慰与对比。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "第二幕：锋利的告别",
+          "location": "昏暗的阁楼",
+          "dramatic_goal": "父子爆发冲突，展现两人对‘如何面对失去’的分歧",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】木门被猛地推开，急促的脚步声逼近。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s4_door_open"
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "林星！把钟放下，搬家公司马上到！",
+              "emotion": "serious",
+              "tone_instruction": "语气严厉、急促，带着不容置疑的命令感，语速较快，体现出急于搬走座钟的焦躁与父亲的威严。",
+              "emphasis": [
+                {
+                  "span_text": "林星",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "放下",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "马上",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音洪亮，带有压迫感，尾音干脆利落不拖长。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我不放！这是爷爷留下的！",
+              "emotion": "angry",
+              "tone_instruction": "语气倔强、抗拒，带着护住心爱之物的执拗和面对父亲强权的委屈与愤怒，声音紧绷。",
+              "emphasis": [
+                {
+                  "span_text": "不放",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "爷爷",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "咬字用力，气息较浅，体现出少年人在激动时的生理反应。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "它坏了！早就该扔了！",
+              "emotion": "angry",
+              "tone_instruction": "语气更加严厉、不耐烦，试图用客观事实来压制林星的情绪，声音提高，带有明显的斥责与烦躁意味。",
+              "emphasis": [
+                {
+                  "span_text": "坏了",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "扔了",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速快，字音咬得重，声音略显干涩以掩饰内心的隐忍。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（大喊）你根本不懂怎么告别！你只想把爷爷的痕迹全抹掉！",
+              "emotion": "angry",
+              "tone_instruction": "情绪彻底爆发，大喊出声，充满对父亲冷漠的控诉和内心的极度委屈，字字句句像刀子一样锋利短促。",
+              "emphasis": [
+                {
+                  "span_text": "根本不懂",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "告别",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "全抹掉",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "破音边缘的呐喊，在“告别”后有一个极短的停顿换气，再喊出后半句，情绪达到顶点。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】座钟的八音盒音乐戛然而止，空气陷入死寂。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s4_music_stop"
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "第三幕：钟摆里的秘密",
+          "location": "昏暗的阁楼",
+          "dramatic_goal": "揭示父亲的隐忍思念，引出最终悬念抉择",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "父亲胸膛剧烈起伏，最终颓然叹气。他从口袋里摸出一把黄铜旧钥匙，放在林星脚边。",
+              "emotion": "serious",
+              "tone_instruction": "语速放缓，带着沉重和无奈，强调父亲妥协的动作与内心的挣扎。",
+              "emphasis": [
+                {
+                  "span_text": "颓然叹气",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "黄铜旧钥匙",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 30,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "（声音沙哑，压抑）打开看看。",
+              "emotion": "tender",
+              "tone_instruction": "声音沙哑，气息下沉，带着隐忍的疲惫和妥协，语气轻柔但坚定。",
+              "emphasis": [
+                {
+                  "span_text": "打开",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "看看",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 13,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】钥匙插入锁孔，转动。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s5_key_turn"
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "（空灵）你爸，把最珍贵的东西锁在钟摆里了。",
+              "emotion": "mysterious",
+              "tone_instruction": "空灵、悠远，带有回忆的温情和指引的意味，语速缓慢，仿佛从远方传来。",
+              "emphasis": [
+                {
+                  "span_text": "最珍贵",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "钟摆",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 18,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】钟摆弹开，纸张散落的沙沙声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s5_papers_fall"
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林星愣住了。地上满是纸条，上面全是父亲字迹：「今天星星笑了」「爸，我好想你」「星星今天考了一百分」。",
+              "emotion": "tender",
+              "tone_instruction": "语气从惊讶转为感动，读纸条内容时带出温情和岁月的痕迹，节奏逐渐放慢。",
+              "emphasis": [
+                {
+                  "span_text": "愣住了",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "父亲字迹",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "我好想你",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 37,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（哽咽）爸……",
+              "emotion": "sad",
+              "tone_instruction": "声音颤抖，带着恍然大悟后的愧疚与感动，气息不稳，尾音拉长并伴随轻微的哽咽。",
+              "emphasis": [
+                {
+                  "span_text": "爸",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 5,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.7,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】座钟滴答声突然加速，如心跳般密集。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s6_ticking_fast"
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "role-3",
+              "text": "现在，把发条反向拧到底。",
+              "emotion": "serious",
+              "tone_instruction": "语气变得郑重，带有宿命感和指引感，字字清晰，不容置疑，推动剧情走向高潮。",
+              "emphasis": [
+                {
+                  "span_text": "现在",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "反向",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "到底",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l10",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林星低头，看到发条根部刻着一行小字：「反向拧动，将抹去所有声音」。他震惊地看向父亲。",
+              "emotion": "surprised",
+              "tone_instruction": "语速加快，突出震惊感，读刻字内容时加重语气，营造强烈的悬念与冲突感。",
+              "emphasis": [
+                {
+                  "span_text": "一行小字",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 17,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "反向拧动",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "抹去所有声音",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "父亲没有阻拦，只是眼眶微红，微笑着点了点头。",
+              "emotion": "tender",
+              "tone_instruction": "语速放缓，充满包容与释然，画面感强，收尾留有余韵，传递出父亲无声的支持。",
+              "emphasis": [
+                {
+                  "span_text": "眼眶微红",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "微笑着",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 17,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "点了点头",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l12",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】滴答声达到顶点，伴随一声沉重的心跳，骤停。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "cue_s6_heartbeat_stop"
+            }
+          ]
+        }
+      ],
+      "episode_summary": "第一集：停摆的告别。林星在阁楼拼命修复停摆的旧座钟以聆听爷爷的留言，却与试图搬走座钟的父亲爆发激烈冲突。在座钟隐藏的秘密中，林星逐渐理解了父亲隐忍的思念，最终面临是否抹去声音的艰难抉择。",
+      "ending_hook": "林星面临是否抹去爷爷声音的抉择，在父亲的微笑鼓励下，他握紧发条准备完成真正的告别，情绪在最高点悬念收尾。",
+      "fact_delta": [
+        {
+          "fact": "林星发现座钟发条反向拧动会抹去所有声音",
+          "type": "discovery"
+        },
+        {
+          "fact": "钟摆里藏着父亲写的思念纸条",
+          "type": "discovery"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "character_1": "林星",
+          "character_2": "父亲",
+          "change": "从误解父亲的冷漠到理解其隐忍的思念，关系破冰并走向和解。"
+        }
+      ],
+      "new_open_threads": [
+        "林星是否会反向拧动发条抹去爷爷的声音？",
+        "座钟反向拧动后会发生什么？"
+      ],
+      "closed_threads": [
+        "林星对父亲不让他保留座钟的误解"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "林星发现座钟发条反向拧动会抹去所有声音",
+        "type": "discovery"
+      },
+      {
+        "fact": "钟摆里藏着父亲写的思念纸条",
+        "type": "discovery"
+      }
+    ],
+    "relationships": [
+      {
+        "character_1": "林星",
+        "character_2": "父亲",
+        "change": "从误解父亲的冷漠到理解其隐忍的思念，关系破冰并走向和解。"
+      }
+    ],
+    "unresolved_threads": [
+      "林星是否会反向拧动发条抹去爷爷的声音？",
+      "座钟反向拧动后会发生什么？"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 17,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": [
+      "大纲对齐：单集剧本完整覆盖获批计划中的起承转合（修复座钟、父子冲突、发现纸条和解、反向拧发条悬念），核心目标与关键节拍完全一致。",
+      "连续性：严格遵循“座钟机械声贯穿”与“父亲态度转变需铺垫”的约束；剧情逻辑自洽，时间轴分配合理，无前后矛盾或设定断裂。",
+      "内容分级：受众为14-17岁，评级为Teen；内容聚焦亲情告别与成长，仅含适度情绪冲突与隐喻性表达，无暴力、色情或成人向元素，符合分级标准。"
+    ]
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1795,
+      "output_tokens": 3528,
+      "latency_ms": 45892
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 3018,
+      "output_tokens": 4855,
+      "latency_ms": 84113
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2029,
+      "output_tokens": 3393,
+      "latency_ms": 59065
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1935,
+      "output_tokens": 3640,
+      "latency_ms": 63420
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2299,
+      "output_tokens": 3232,
+      "latency_ms": 55906
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "attempt": 1,
+      "input_tokens": 6724,
+      "output_tokens": 1699,
+      "latency_ms": 11314
+    }
+  ],
+  "created_at": "2026-10-08T09:04:24.766368Z"
+}

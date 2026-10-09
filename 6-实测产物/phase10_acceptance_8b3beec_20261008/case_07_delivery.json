@@ -1,0 +1,985 @@
+{
+  "story_id": "226405a601db4285a3533ca5c7dec2f4",
+  "story_version_id": "ea7daa50af0946eba28010651c5dd6e2",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "fb5c2a9c56534047a0ff89e0d322993d",
+  "approved_plan_revision": 1,
+  "title": "第120秒的抉择",
+  "summary": "裁员前夕，职场新人发现项目致命错误，在明哲保身与坚守底线之间做出抉择，却意外收获了前辈的并肩作战。",
+  "tags": [
+    "职场",
+    "warm",
+    "18-35",
+    "mature_non_explicit"
+  ],
+  "story_mode": "serialized",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "第120秒的抉择",
+    "premise": "裁员前夕，职场新人发现项目致命错误，在明哲保身与坚守底线之间做出抉择，却意外收获了前辈的并肩作战。",
+    "theme": "职场中的诚实、勇气与代际传承的温暖。",
+    "beginning": "裁员名单打印的刺耳声中，新人发现项目数据错误，面临是否公开的挣扎。",
+    "development": "新人顶住压力发送揭露邮件，引发办公室震荡，被主管叫去谈话，气氛紧张。",
+    "climax": "主管并未责罚，反而坦白自己早已知情却懦弱退缩，新人的勇气唤醒了主管的初心，两人决定共同面对高层。",
+    "ending": "高层介入准备开除两人，主管却拿出创业计划书，带着新人昂首离开，留下温暖的余韵与悬念。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "第120秒的抉择",
+        "core_goal": "展现新人在裁员危机中坚守底线的勇气，并引出前辈并肩作战的温暖反转。",
+        "major_beats": [
+          "S1(0-2s): 黄金钩子。裁员名单打印机突然发出刺耳的卡纸警报声，打破办公室死寂。",
+          "S2(2-7s): 矛盾三要素。新人（角色1）盯着屏幕上的项目致命错误数据，手指悬在‘全员发送’键上，内心挣扎是否要在被裁前当这个吹哨人。",
+          "S3(7-20s): 第一次反转/爽点。前辈路过低声警告‘别犯傻’，新人深吸一口气，伴随清脆的键盘敲击声和邮件发送成功的提示音，果断公开错误。",
+          "S4(20-80s): 中段推进。办公室瞬间死寂后爆发窃窃私语。主管将新人叫进办公室，台词短促交锋。主管质问动机，新人坚持‘不能让客户承担后果’，气氛压抑到极点。",
+          "S5(80-113s): 升级/二次反转。主管突然卸下伪装，叹气承认自己早知错误但迫于高层压力隐瞒。主管被新人的纯粹打动，撕毁手中的裁员同意书，决定带新人一起向高层摊牌。",
+          "S6(113-120s): 强钩子。办公室门被高层猛然推开，冷冷宣布两人被解雇。主管却笑着递给新人一份新公司的合伙协议：‘走，我们自己干。’声音戛然而止。"
+        ],
+        "ending": "主管与新人共同面对被解雇的结局，但主管抛出创业邀请，将职场危机转化为温暖的新起点，情绪在最高昂处收尾。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_direction": "角色1（新人）声线清透、带有初入职场的青涩但内心坚定；主管声线沉稳、疲惫但带有被唤醒后的力量感。",
+      "sound_design": "突出办公环境的白噪音与突发音效（如打印机警报、键盘回车、邮件提示音）的对比，增强紧张感。结尾使用温暖昂扬的弦乐起头后瞬间切断。"
+    },
+    "continuity_constraints": [
+      "角色1必须保持‘普通人’的设定，没有金手指，依靠纯粹的道德直觉做出选择。",
+      "全剧时长严格控制在120秒，台词必须精简，留白给音效和情绪。"
+    ],
+    "change_summary": [
+      "根据‘warm’基调要求，将原本可能走向黑暗或压抑的职场揭露事件，转化为前辈被后辈打动、两人携手创业的温暖结局。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-87e3a2b4",
+      "index": 1,
+      "title": "第120秒的抉择",
+      "synopsis": "裁员前夕，职场新人林晓发现项目致命错误，在明哲保身与坚守底线之间做出抉择。她顶住压力公开数据，意外唤醒了妥协多年的主管，两人携手面对解雇，踏上创业新征程。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 138,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "S1 黄金钩子",
+          "location": "办公区",
+          "dramatic_goal": "用突发音效打破死寂，瞬间抓住听众注意力，零铺垫引入危机。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "刺耳的打印机卡纸警报声，滴滴滴——",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "S2 矛盾三要素",
+          "location": "办公区工位",
+          "dramatic_goal": "交代人物处境与核心冲突，展现新人在裁员前夕的内心挣扎。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "裁员名单还有十分钟公布。而我面前的项目底层数据，存在一个会导致客户系统崩溃的致命漏洞。",
+              "emotion": "serious",
+              "tone_instruction": "语速稍快，带着紧迫感和压抑的紧张感，突出时间的紧迫和问题的严重性，营造暴风雨前的宁静。",
+              "emphasis": [
+                {
+                  "span_text": "十分钟",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "致命漏洞",
+                  "occurrence": 1,
+                  "start_char": 38,
+                  "end_char": 42,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "旁白需带出悬疑和紧张的氛围，咬字清晰，为后续内心挣扎做铺垫。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "(内心混响) 发，就是得罪全公司；不发，客户明天就会遭殃。",
+              "emotion": "worried",
+              "tone_instruction": "内心独白，声音稍微低沉、纠结，语速放慢，体现出天人交战的挣扎感和沉重的心理压力。",
+              "emphasis": [
+                {
+                  "span_text": "得罪全公司",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 16,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "遭殃",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "内心混响，需与旁白区分，表现出新人在巨大压力下的道德困境和犹豫，气息可带一点微颤。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "S3 第一次反转",
+          "location": "办公区工位",
+          "dramatic_goal": "完成压抑到爆发的起伏，前辈警告下新人依然果断发送邮件。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-senior",
+              "narrator_id": null,
+              "performer_id": "role-senior",
+              "text": "(低声，急促) 林晓，你疯了？这时候当吹哨人，第一个裁的就是你！别犯傻！",
+              "emotion": "worried",
+              "tone_instruction": "压低声音但语速极快，带着强烈的警告意味和焦急感，气息急促，体现出怕被旁人听到的紧张和对新人的担忧。",
+              "emphasis": [
+                {
+                  "span_text": "疯了",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "第一个",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 26,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "别犯傻",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 35,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "靠近新人耳边，眼神警惕地扫视周围，手部有按压阻拦的动作。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "(深吸一口气) 抱歉，前辈。",
+              "emotion": "serious",
+              "tone_instruction": "深吸一口气后，声音反而平静下来，但透着不可动摇的坚决。没有犹豫，是对前辈的歉意，更是对自己决定的笃定。",
+              "emphasis": [
+                {
+                  "span_text": "抱歉",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "伴随明显的吸气声，目光从屏幕转向键盘，眼神变得清明且坚定，手指悬停后果断落下。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "清脆的键盘回车声。紧接着“叮”的一声，邮件发送成功。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "第120秒，我按下了全员发送。",
+              "emotion": "calm",
+              "tone_instruction": "旁白，声音沉稳、清晰，带有一种尘埃落定的释然感和轻微的宿命感。语速适中，字正腔圆，突出关键时刻的仪式感。",
+              "emphasis": [
+                {
+                  "span_text": "第120秒",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "全员发送",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "配合键盘敲击声和邮件发送提示音，旁白切入要干脆利落，尾音微微收住，留白给后续的音效和办公室死寂的反应。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "S4 中段推进",
+          "location": "主管办公室",
+          "dramatic_goal": "主管与新人短促交锋，加深矛盾，气氛压抑到极点。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "办公室瞬间死寂，随后爆发压抑的窃窃私语。脚步声，推开办公室门。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-manager",
+              "narrator_id": null,
+              "performer_id": "role-manager",
+              "text": "(冷酷) 把门关上。林晓，你知道这封邮件会让公司损失多少违约金吗？",
+              "emotion": "serious",
+              "tone_instruction": "语气冰冷，带着极强的压迫感，语速不快但字字句句砸在对方心上。",
+              "emphasis": [
+                {
+                  "span_text": "把门关上",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "多少违约金",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "配合关门的动作，声音低沉，眼神带有审视的意味。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "(声音微颤但坚定) 我知道。但如果隐瞒，客户损失的将是整个核心数据库。",
+              "emotion": "serious",
+              "tone_instruction": "声音带着一丝因紧张而产生的微颤，但咬字清晰，语气逐渐变得坚定。",
+              "emphasis": [
+                {
+                  "span_text": "我知道",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "整个核心数据库",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 34,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "呼吸微促，表现出内心的紧张与坚持底线的决心，后半句逐渐稳住气息。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-manager",
+              "narrator_id": null,
+              "performer_id": "role-manager",
+              "text": "(拍桌子) 你现在是泥菩萨过江！为了一个虚无缥缈的职业道德，连饭碗都不要了？",
+              "emotion": "angry",
+              "tone_instruction": "情绪爆发，伴随拍桌子的动作，声音提高，充满恨铁不成钢的愤怒与嘲讽。",
+              "emphasis": [
+                {
+                  "span_text": "泥菩萨过江",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 15,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "虚无缥缈",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 24,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "饭碗",
+                  "occurrence": 1,
+                  "start_char": 31,
+                  "end_char": 33,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "拍桌子后有一个极短的停顿，然后情绪爆发，语速加快，压迫感极强。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "饭碗可以不要，但底线不能丢。代码不会撒谎，我也不能。",
+              "emotion": "serious",
+              "tone_instruction": "面对愤怒的主管，反而平静下来，语气掷地有声，展现出不可动摇的信念。",
+              "emphasis": [
+                {
+                  "span_text": "底线",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "不会撒谎",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "我也不能",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 25,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速放缓，一字一顿，眼神直视主管，展现出破釜沉舟的勇气。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-manager",
+              "narrator_id": null,
+              "performer_id": "role-manager",
+              "text": "(冷笑) 好，很好。既然你这么有骨气，这份裁员同意书，你签了吧。",
+              "emotion": "calm",
+              "tone_instruction": "怒极反笑，语气突然变得异常平静且冷酷，带着一种放弃劝说的决绝和威胁。",
+              "emphasis": [
+                {
+                  "span_text": "好，很好",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "骨气",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 18,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "签了吧",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "冷笑后语速放慢，将文件推过去的动作感，透出一种冷酷的杀伐决断。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene5",
+          "title": "S5 升级与二次反转",
+          "location": "主管办公室",
+          "dramatic_goal": "主管卸下伪装，坦白隐情，被新人的纯粹打动决定摊牌。",
+          "utterances": [
+            {
+              "line_id": "ep1-s5-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "纸张撕裂声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-manager",
+              "narrator_id": null,
+              "performer_id": "role-manager",
+              "text": "(叹气，语气放缓，带着疲惫) 我早在那个漏洞出现时就发现了。但高层压下来，让我闭嘴。我妥协了三年，成了个懦夫。",
+              "emotion": "sad",
+              "tone_instruction": "叹气起头，语速缓慢，声音低沉，带着深深的疲惫和自责，像是在卸下伪装后对自己过去的剖析。",
+              "emphasis": [
+                {
+                  "span_text": "早",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 17,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "闭嘴",
+                  "occurrence": 1,
+                  "start_char": 39,
+                  "end_char": 41,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "三年",
+                  "occurrence": 1,
+                  "start_char": 46,
+                  "end_char": 48,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "懦夫",
+                  "occurrence": 1,
+                  "start_char": 52,
+                  "end_char": 54,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "叹气声要真实，尾音带一点苦涩，表现出卸下重担后的释然与自我厌恶的交织。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "(震惊) 主管……",
+              "emotion": "surprised",
+              "tone_instruction": "极度震惊，声音微微发颤，欲言又止，带着难以置信的停顿。",
+              "emphasis": [
+                {
+                  "span_text": "主管",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "气息要提起来，表现出内心的巨大冲击，省略号处要有明显的留白和呼吸感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-manager",
+              "narrator_id": null,
+              "performer_id": "role-manager",
+              "text": "(轻笑) 你刚才那句‘底线不能丢’，骂醒我了。去他的违约金，去他的裁员。",
+              "emotion": "happy",
+              "tone_instruction": "轻笑释然，前半句语气温和且充满赞赏，后半句语气逐渐上扬，变得坚定、豪迈，透出破釜沉舟的痛快感。",
+              "emphasis": [
+                {
+                  "span_text": "底线不能丢",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 16,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "骂醒",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "去他的",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 26,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "去他的",
+                  "occurrence": 2,
+                  "start_char": 30,
+                  "end_char": 33,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "轻笑要自然，后半句咬字要实，掷地有声，情绪从释怀转向激昂。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "主管把笔扔在桌上。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-manager",
+              "narrator_id": null,
+              "performer_id": "role-manager",
+              "text": "收拾东西。这封邮件，我陪你一起去高层办公室摊牌。",
+              "emotion": "serious",
+              "tone_instruction": "语气果断、坚定，不容置疑。前半句是干脆的指令，后半句是并肩作战的承诺，声音沉稳有力，透着破釜沉舟的决心。",
+              "emphasis": [
+                {
+                  "span_text": "收拾东西",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "陪你",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "摊牌",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 23,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音里要有坚定的力量感，最后一句“摊牌”要干脆利落，不拖泥带水，展现前辈的担当。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene6",
+          "title": "S6 强钩子",
+          "location": "主管办公室",
+          "dramatic_goal": "高层宣布解雇，主管抛出创业邀请，在最高昂处戛然而止。",
+          "utterances": [
+            {
+              "line_id": "ep1-s6-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "办公室大门被猛然推开，沉重的脚步声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s6-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-exec",
+              "narrator_id": null,
+              "performer_id": "role-exec",
+              "text": "(冰冷) 不用去了。你们两个，现在就被解雇。",
+              "emotion": "serious",
+              "tone_instruction": "语气冰冷、不容置疑，带有上位者的压迫感，语速平稳但字字诛心。",
+              "emphasis": [
+                {
+                  "span_text": "现在",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 17,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "解雇",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "不需要太多起伏，保持冷酷的平直语调，尾音干脆。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s6-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "温暖昂扬的弦乐骤然起头。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s6-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-manager",
+              "narrator_id": null,
+              "performer_id": "role-manager",
+              "text": "(爽朗大笑) 解雇？正好。林晓，看看这份新公司的合伙协议。走，我们自己干！",
+              "emotion": "excited",
+              "tone_instruction": "从大笑的释然迅速转为坚定和充满激情，声音洪亮，带有破釜沉舟的豪气和对新人的鼓励。",
+              "emphasis": [
+                {
+                  "span_text": "正好",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "我们自己干",
+                  "occurrence": 1,
+                  "start_char": 31,
+                  "end_char": 36,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句带笑意，后半句语气上扬，充满力量感和号召力，最后一句掷地有声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s6-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "音乐在最高昂处瞬间切断。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "本集展现了林晓在裁员危机中坚守底线的勇气。通过发送揭露邮件引发办公室震荡，并在与主管的交锋中，成功唤醒了主管的初心。最终以主管抛出创业邀请的温暖反转收尾，将职场危机转化为新起点。",
+      "ending_hook": "主管递出合伙协议，邀请林晓共同创业，声音在最高昂处戛然而止，留下无限遐想。",
+      "fact_delta": [
+        {
+          "fact": "项目底层数据存在致命漏洞",
+          "status": "publicly_revealed"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "character_a": "role-1",
+          "character_b": "role-manager",
+          "change": "从上下级与潜在对立关系，转变为并肩作战的创业合伙人"
+        }
+      ],
+      "new_open_threads": [
+        "新公司的创业前景如何？",
+        "高层对两人的反击会采取什么行动？"
+      ],
+      "closed_threads": [
+        "是否要在裁员前揭露项目错误的内心挣扎"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "项目底层数据存在致命漏洞",
+        "status": "publicly_revealed"
+      }
+    ],
+    "relationships": [
+      {
+        "character_a": "role-1",
+        "character_b": "role-manager",
+        "change": "从上下级与潜在对立关系，转变为并肩作战的创业合伙人"
+      }
+    ],
+    "unresolved_threads": [
+      "新公司的创业前景如何？",
+      "高层对两人的反击会采取什么行动？"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 16,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": [
+      "剧本场景与获批大纲的起承转合、核心反转及结局完全一致，叙事结构精准对齐。",
+      "严格遵守角色无金手指设定，台词精简且充分留白给音效与情绪，人物关系与事实状态变更逻辑连贯。",
+      "内容聚焦职场伦理与职业抉择，基调成熟克制，无露骨或违规元素，符合mature_non_explicit分级及18-35岁受众定位。"
+    ]
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1796,
+      "output_tokens": 2852,
+      "latency_ms": 37276
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2883,
+      "output_tokens": 3825,
+      "latency_ms": 66230
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2918,
+      "output_tokens": 5984,
+      "latency_ms": 103035
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1757,
+      "output_tokens": 1565,
+      "latency_ms": 28036
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1828,
+      "output_tokens": 2608,
+      "latency_ms": 45500
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2012,
+      "output_tokens": 2258,
+      "latency_ms": 39140
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1927,
+      "output_tokens": 3879,
+      "latency_ms": 66930
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1750,
+      "output_tokens": 2943,
+      "latency_ms": 51001
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "attempt": 1,
+      "input_tokens": 6867,
+      "output_tokens": 1849,
+      "latency_ms": 14790
+    }
+  ],
+  "created_at": "2026-10-08T09:19:26.961395Z"
+}

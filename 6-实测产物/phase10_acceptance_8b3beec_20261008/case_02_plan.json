@@ -1,0 +1,164 @@
+{
+  "plan_id": "d7457acc61dc4a578b23b54bc0f8182a",
+  "plan_revision": 2,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "plan": {
+    "title": "第十三排书架的秘密",
+    "premise": "两名高中生为了解开校图书馆旧书每晚自动归位的轻悬疑谜团而熬夜探查，最终发现这是已故老馆长留下的温暖守护。",
+    "theme": "记忆、传承与温暖的守护",
+    "beginning": "林宇和苏然深夜潜伏在图书馆，伴随一声书本合上的脆响，目睹《星空》一书自动归位，决定查明真相。",
+    "development": "通过追踪便签和借阅记录，两人发现归位的书都在默默治愈学生的心结，线索指向已故的老馆长。",
+    "climax": "林宇在探究真相与尊重守护之间做出选择，将书放回书架，触发隐藏机关，掉下老馆长专门留给他们的日记本。",
+    "ending": "日记本提示真正的守护者就在身后，两人回头看到神秘影子，伴随开场同款的书本合上声，留下温暖而悬疑的余韵。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "自动归位的《星空》",
+        "core_goal": "揭开图书馆旧书自动归位的初步线索，展现角色的关键选择，并引出老馆长的温暖守护主题。",
+        "major_beats": [
+          "【0-3s 黄金钩子】深夜寂静的图书馆，突发一声清脆的“啪”（书本合上声），紧接着是一阵轻柔的沙沙脚步声远去。",
+          "【3-10s 矛盾三要素】林宇和苏然躲在书架后低语交代：我们在图书馆，那本《星空》又自己飞回去了，今晚必须抓住这个‘鬼’。",
+          "【10-30s 第一次反转】林宇冲动冲出抓人却扑空摔倒，苏然打开手电筒照向书架，发现书不仅归位，书页里还多了一张刚写好的治愈便签（配合音乐断点爆发）。",
+          "【30-120s 中段推进】两人快速翻阅便签和借阅记录，台词短碎交锋，发现每天归位的书都对应着当天某个学生的心结，且笔迹属于已故的老馆长。",
+          "【120-170s 升级/二次反转】林宇面临选择：是强行带走书去化验，还是尊重这份守护？他最终选择将《星空》轻轻放回书架。书归位瞬间触发隐藏机关，一本旧日记本弹出砸在林宇手中。",
+          "【170-180s 强钩子】日记本最后一页写着‘真正的守护者已经站在你们身后’。两人猛然回头，手电筒照亮一个熟悉的影子，此时开场那声清脆的“啪”再次响起，影子缓缓伸出手，音效戛然而止。"
+        ],
+        "ending": "两人回头看到神秘影子，伴随开场同款的书本合上声，故事在悬疑与温暖交织的最高点戛然而止。",
+        "target_duration_sec": 180
+      }
+    ],
+    "performance_plan": {
+      "voice-1": "林宇，声线清朗，语速较快，带有少年的冲动与好奇，在做出选择时语气转为温柔坚定。",
+      "voice-2": "苏然，声线沉稳，语速适中，带有理性的分析感。",
+      "sound_design": "强调环境音（深夜图书馆的静谧、脚步声、书架机关声），首尾呼应的清脆‘啪’声需做特殊混响处理，音乐以轻柔悬疑过渡到温暖治愈。"
+    },
+    "continuity_constraints": [
+      "场景必须始终保持在深夜的校图书馆内。",
+      "《星空》这本书和老馆长的便签是核心线索，不可偏离。",
+      "首尾必须呼应，开场和结尾的‘啪’声（书本合上声）需保持一致的听觉特征。",
+      "氛围必须保持轻悬疑与温暖的平衡，禁止出现真正的恐怖或血腥元素。"
+    ],
+    "change_summary": [
+      "根据反馈优化了S5阶段，让林宇在‘带走调查’与‘放回尊重’中做出了明确的选择，推动机关触发。",
+      "在S6结尾处加入了与S1开场完全一致的‘啪’书本合上声，实现听觉与情节的自然闭环呼应。",
+      "保留了原有的核心冲突与温暖悬疑基调，严格维持1集180秒的时长与Beat Sheet结构。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "轻悬疑",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1915,
+      "output_tokens": 2808,
+      "latency_ms": 34988
+    },
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 2770,
+      "output_tokens": 3102,
+      "latency_ms": 30764
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "bbd7fb2be73db798d191151296f369b849b8f88abeaec04f502528fd8f82354a",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-08T08:59:50.576063Z",
+  "updated_at": "2026-10-08T09:00:21.553620Z"
+}

@@ -11,7 +11,9 @@ from sqlalchemy.orm import Session
 from drama_engine.persistence.models import Base
 from drama_engine.config import RuleLibrary
 from drama_engine.workflow.performance import normalize_utterance, validate_story_delivery, validate_utterance
-from drama_engine.workflow.adapters import LLMPerformanceAnnotator
+from drama_engine.workflow.adapters import (
+    DraftEpisode, LLMPerformanceAnnotator, draft_episode_contract_errors,
+)
 from drama_engine.workflow.repository import (
     InMemoryWorkflowRepository,
     SqlAlchemyWorkflowRepository,
@@ -220,6 +222,27 @@ class TestPlanApprovalWorkflow:
 
 
 class TestGenerationAndPerformanceGate:
+    def test_episode_contract_rejects_short_300_second_draft(self):
+        draft = DraftEpisode.model_validate({
+            "title": "短稿", "synopsis": "短稿", "episode_summary": "结束",
+            "scenes": [{"title": "场景", "dramatic_goal": "推进", "lines": [
+                {"kind": "dialogue", "speaker_role_id": "role-1", "text": "你好。" * 240},
+            ]}],
+        })
+        estimated, errors = draft_episode_contract_errors(draft, 300, {"role-1"})
+        assert estimated < 255
+        assert any("duration estimate" in error for error in errors)
+
+    def test_episode_contract_rejects_unapproved_role(self):
+        draft = DraftEpisode.model_validate({
+            "title": "角色越界", "synopsis": "角色越界", "episode_summary": "结束",
+            "scenes": [{"title": "场景", "dramatic_goal": "推进", "lines": [
+                {"kind": "dialogue", "speaker_role_id": "role-5", "text": "你好。" * 350},
+            ]}],
+        })
+        _, errors = draft_episode_contract_errors(draft, 300, {"role-1", "role-2"})
+        assert any("role-5" in error for error in errors)
+
     def test_approved_plan_generates_ready_immutable_version(self):
         service = make_service()
         plan = service.prepare_story_plan(make_request(target_episodes=2, target_duration_sec=120))

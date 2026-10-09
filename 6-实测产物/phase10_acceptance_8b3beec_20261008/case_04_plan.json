@@ -1,0 +1,136 @@
+{
+  "plan_id": "4a65922ae9cc41cf8b2cb7f00a77d482",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "plan": {
+    "title": "铁疙瘩的才艺秀",
+    "premise": "社团新成员误将报废机器人报名才艺比赛，在无法退赛的情况下硬着头皮让其登台，却意外播放了社团温馨日常，引发善意误会与感动。",
+    "theme": "青春、包容、意外的温暖",
+    "beginning": "新成员角色1在整理社团物资时，误操作将展示用机器人报名了校园才艺大赛。",
+    "development": "发现无法退赛后，角色1与社长试图给机器人临时编程简单的动作，却频频出错，只能硬着头皮推上舞台。",
+    "climax": "舞台上机器人动作死机，却意外触发了隐藏音频，播放出社团成员互相鼓励的温馨录音，打动了全场。",
+    "ending": "机器人以独特的“情感表演”获得认可，社团成员在欢笑与感动中收获了更深的羁绊。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "铁疙瘩的才艺秀",
+        "core_goal": "展现角色1误报机器人参赛的慌乱，以及最终意外收获感动的反转过程。",
+        "major_beats": [
+          "0-2s: 刺耳的系统提示音突然响起，播报机器人报名成功。",
+          "2-7s: 角色1惊恐万分，交代自己误把社团报废机器人报上了即将海选的才艺比赛。",
+          "7-20s: 社长赶来要求退赛，角色1疯狂操作发现系统锁死，伴随警报声只能决定硬上。",
+          "20-80s: 两人疯狂给机器人写代码排练广播体操，台词短促，机器人频频卡顿冒烟。",
+          "80-113s: 海选现场机器人死机，却意外播放出社长鼓励新成员的温柔录音和社团欢笑声，全场感动鼓掌。",
+          "113-120s: 评委刚要点评，机器人头部突然弹出彩带炮炸了评委一脸，在惊呼声中戛然而止。"
+        ],
+        "ending": "评委被彩带炮袭击，悬念拉满，情绪在最高点的喜剧冲突中戛然而止。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_1": "角色1，声线年轻有活力，带有慌乱和青涩感，语速较快。",
+      "sfx": "大量使用电子提示音、键盘敲击声、机械卡顿声和彩带炮爆炸声，增强喜剧与现场感。",
+      "music": "前半段使用快节奏、滑稽的拨弦乐；高潮处切换为温馨轻柔的钢琴曲；结尾瞬间切断音乐。"
+    },
+    "continuity_constraints": [
+      "机器人全程不能说话，只能发出机械音效或播放录音。",
+      "角色1必须保持普通人的设定，不能展现超常的黑客或编程能力，操作必须显得笨拙。"
+    ],
+    "change_summary": [
+      "根据用户指令创建了单集120秒的喜剧广播剧大纲。",
+      "严格遵循了beat_sheet的时间节点和音频要求。",
+      "将唯一的角色设定为社团新成员，机器人作为核心道具推进剧情。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "viral_drama",
+    "content_form": "audio_drama",
+    "genre": "喜剧",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1797,
+      "output_tokens": 2802,
+      "latency_ms": 35792
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "564e7b9b795e3d19de813aa0185b8e4bf18786fe20244ab627e8a402aa958d44",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-08T09:05:17.588182Z",
+  "updated_at": "2026-10-08T09:05:17.588182Z"
+}

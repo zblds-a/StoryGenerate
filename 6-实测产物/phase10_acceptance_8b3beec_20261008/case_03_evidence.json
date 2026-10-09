@@ -1,0 +1,90 @@
+{
+  "index": 3,
+  "git_sha": "8b3beec",
+  "audience_band": "14-17",
+  "content_rating": "teen",
+  "duration": 300,
+  "mode": "serialized",
+  "characters": 4,
+  "plan_revision": 1,
+  "plan_id": "6e38068325434eb9a077bfcdf4c03961",
+  "job_id": "7dcd6ba08bdb447fb91ba28d509164a3",
+  "story_version_id": "561e7f35df934d7fad22437dc298a9c9",
+  "ready": true,
+  "spoken_lines": 31,
+  "emotion_coverage": 1.0,
+  "tone_coverage": 1.0,
+  "emphasis_coverage": 1.0,
+  "latency_sec": 767.94,
+  "llm_calls": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 2139,
+      "output_tokens": 2309,
+      "latency_ms": 32042
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 3190,
+      "output_tokens": 5665,
+      "latency_ms": 97552
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 3226,
+      "output_tokens": 6819,
+      "latency_ms": 117032
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 1998,
+      "output_tokens": 3846,
+      "latency_ms": 66249
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2782,
+      "output_tokens": 5367,
+      "latency_ms": 92434
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2422,
+      "output_tokens": 3496,
+      "latency_ms": 60536
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 1760,
+      "output_tokens": 2315,
+      "latency_ms": 40258
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 9798,
+      "output_tokens": 2321,
+      "latency_ms": 17746
+    }
+  ],
+  "rule_sha256": {
+    "drama-formula-library.json": "1734631061000cff649436ec41fb028e07a56855ea6659a7a4fd6197503a047b",
+    "人物与连续性规则.json": "9b1261702d3462a271e1cebffe48af0909536d00a2241ce4d7037a3cdb02a2df",
+    "穿越剧引擎规则.json": "d40e123c4ce3d87326921293e872c748f4e2c6007aabc8fb548d45e5386132c0"
+  }
+}

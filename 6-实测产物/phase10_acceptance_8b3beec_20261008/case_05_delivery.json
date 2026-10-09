@@ -1,0 +1,1107 @@
+{
+  "story_id": "9affac29b3f64b8e8c622f0ae673a624",
+  "story_version_id": "185b654e68b94d6ba9aea46023bd8922",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "bca9c246fa6149beb56d94a727a84376",
+  "approved_plan_revision": 2,
+  "title": "便签上的同居法则",
+  "summary": "两位性格迥异的合租室友，因一场关于‘扔盒子’的乌龙事件，通过解读彼此留下的生活便签，层层剥开日常误会，最终发现对方深藏的心意。",
+  "tags": [
+    "都市",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "outline": {
+    "title": "便签上的同居法则",
+    "premise": "两位性格迥异的合租室友，因一场关于‘扔盒子’的乌龙事件，通过解读彼此留下的生活便签，层层剥开日常误会，最终发现对方深藏的心意。",
+    "theme": "沟通与理解是化解都市孤独与合租摩擦的最佳良药。",
+    "beginning": "林晓因发现陈默扔了她的‘秘密盒子’而大发雷霆，在客厅拦住刚下班的陈默对峙。",
+    "development": "两人在寻找盒子和解读日常便签的过程中，发现那些看似冷漠的便签背后，其实都藏着对彼此的笨拙关心，误会逐渐消融。",
+    "climax": "一张写着‘明天就搬走’的便签让刚升温的气氛降至冰点，林晓赌气放手，陈默却选择坦白真相并挽留。",
+    "ending": "快递员送来陈默准备的惊喜，陈默将箱子轻放在桌上呼应开场的巨响，‘搬走’便签的背面真相大白，两人在错愕与甜蜜中迎来关系的新阶段。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "便签背后的秘密",
+        "core_goal": "通过一场由‘扔盒子’引发的冲突，展现两人从误解到理解的情感转变，明确双方在危机前的选择，并留下悬念。",
+        "major_beats": [
+          "【0-3s 黄金钩子】‘砰’的一声巨响（突发听觉事件），林晓将一沓便签纸重重拍在桌上，怒喊：‘陈默，你耍我是不是？！’（极限冲突，零铺垫）。",
+          "【3-10s 矛盾三要素】合租客厅内，林晓拿着便签质问刚进门的陈默，为什么把她最珍贵的‘秘密盒子’扔了，她今天必须问个清楚（交代人物、地点、麻烦与目的）。",
+          "【10-30s 第一次反转】陈默无奈解释那是个空盒子，林晓爆发大喊‘那是装我准备给你的周年礼物的！’背景音效骤停（音乐断点），陈默愣住，气氛从愤怒瞬间转为尴尬与意外的温情。",
+          "【30-120s 中段推进】两人开始逐张解读便签。台词短促交锋：林晓以为陈默写‘别碰我的锅’是嫌弃，陈默解释是怕她烫到；陈默以为林晓写‘不想吃你做的饭’是讨厌，林晓解释是想让他多休息。误会层层剥开，感情升温。",
+          "【120-170s 升级/二次反转】找到最后一张被揉皱的便签，上面写着‘我受够了，明天就搬走’。林晓面临选择，她红着眼眶把盒子推过去赌气说‘你走吧’；陈默面临选择，他一把按住盒子选择坦白：‘这不是我写的，是你上次梦游写的！’两人刚建立的温馨瞬间冻结又迅速反转。",
+          "【170-180s 强钩子】门铃突然急促响起，陈默开门接过快递员的大箱子，将其‘砰’地放在桌上（动作轻柔，呼应开场拍桌子的巨响）。箱子打开，陈默拿出那张‘搬走’便签翻到背面露出半行字：‘搬进同一个房间……’声音戛然而止。"
+        ],
+        "ending": "快递员送来惊喜，陈默放箱子的声音呼应开场，‘搬走’便签的背面真相大白，两人在错愕与甜蜜中迎来关系的新阶段，故事在最高潮处悬念收尾。",
+        "target_duration_sec": 180
+      }
+    ],
+    "performance_plan": {
+      "voice_1": "林晓，声线清脆，情绪起伏大，从愤怒到委屈再到震惊，语速较快。",
+      "voice_2": "陈默，声线温和沉稳，带有无奈和包容感，语速中等，情绪内敛但在关键时刻有爆发。",
+      "sound_design": "注重生活化音效（拍桌子、翻纸张、门铃），开场与结尾的‘砰’声需做对比处理（开场暴躁，结尾轻柔），音乐在反转点需有明显的断点和情绪切换。"
+    },
+    "continuity_constraints": [
+      "便签的内容必须与两人的性格和日常行为逻辑相符。",
+      "场景始终限制在合租客厅及玄关，保持空间封闭感以增强戏剧张力。",
+      "开场与结尾的‘砰’声必须形成动作与情绪上的呼应。"
+    ],
+    "change_summary": [
+      "在120-170s的二次反转中，明确了林晓‘赌气放手’与陈默‘主动坦白挽留’的角色选择，使人物动机更清晰。",
+      "在170-180s的结尾处，让陈默放箱子的‘砰’声与开场林晓拍桌子的巨响形成呼应，完成情绪从冲突到甜蜜的闭环。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-cd4b72a6",
+      "index": 1,
+      "title": "便签上的同居法则",
+      "synopsis": "两位性格迥异的合租室友，因一场关于‘扔盒子’的乌龙事件，通过解读彼此留下的生活便签，层层剥开日常误会，最终发现对方深藏的心意。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 135,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "极限冲突与周年礼物",
+          "location": "合租客厅",
+          "dramatic_goal": "通过扔盒子事件爆发激烈冲突，随后反转为周年礼物的温情，奠定情感基调。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】‘砰’的一声巨响，一沓便签纸被重重拍在玻璃茶几上。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "陈默，你耍我是不是？！",
+              "emotion": "angry",
+              "tone_instruction": "极度愤怒，声音拔高，带有强烈的质问感，语速较快，咬牙切齿。",
+              "emphasis": [
+                {
+                  "span_text": "耍我",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 6,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "是不是",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 9,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "配合拍桌子的动作，爆发力要强，瞬间抓住听众耳朵。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】开门声，脚步声走近。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "晓晓，我刚下班……你这是怎么了？",
+              "emotion": "worried",
+              "tone_instruction": "刚下班的疲惫感，突然看到女友发火时的错愕与小心翼翼，语速放缓，带有试探性。",
+              "emphasis": [
+                {
+                  "span_text": "刚下班",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "怎么了",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音可以稍微低沉一点体现疲惫，后半句语气上扬，表现出疑惑和安抚的意味。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "怎么了？你把我放在阳台的那个秘密盒子扔了！我今天必须问个清楚！",
+              "emotion": "angry",
+              "tone_instruction": "情绪进一步升级，连珠炮似的质问，重音落在核心名词和动词上，语气坚决不退让。",
+              "emphasis": [
+                {
+                  "span_text": "秘密盒子",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 18,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "扔了",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "必须",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速加快，气息要足，展现出毫不退让的愤怒和急切。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "那个盒子？我以为是个空纸箱，就顺手拿去扔了。里面什么都没有啊。",
+              "emotion": "neutral",
+              "tone_instruction": "试图解释，语气中带着无奈和一丝委屈，语速平稳，试图平息对方的怒火。",
+              "emphasis": [
+                {
+                  "span_text": "空纸箱",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "顺手",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 17,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "什么都没有",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "叹气后接话，表现出“我真的很冤枉”的无奈感，最后一句稍微弱下来。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】背景音乐骤然停止，形成明显断点。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（爆发，带点委屈的哭腔）那是装我准备给你的周年礼物的！你这个笨蛋！",
+              "emotion": "sad",
+              "tone_instruction": "情绪从愤怒转为委屈，声音带哭腔，尾音微颤，“笨蛋”二字是娇嗔与委屈的交织。",
+              "emphasis": [
+                {
+                  "span_text": "周年礼物",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 25,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "笨蛋",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 32,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句爆发后迅速转为哽咽，可加入吸鼻子的细节，“笨蛋”要骂得软，体现出其实是在乎对方。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（愣住，语气瞬间变得温柔无奈）……周年礼物？",
+              "emotion": "tender",
+              "tone_instruction": "从错愕到恍然大悟，语气瞬间软化，充满温柔、心疼和无奈，尾音轻轻上扬。",
+              "emphasis": [
+                {
+                  "span_text": "周年礼物",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "停顿要留足，表现出大脑宕机后的恍然大悟，声音要轻、柔，带有宠溺感。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "便签背后的秘密",
+          "location": "合租客厅",
+          "dramatic_goal": "通过解读日常便签，剥开双方冷漠外表下的笨拙关心，实现感情升温。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】翻找纸张的沙沙声，温馨轻快的背景音乐渐入。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（吸鼻子，嘟囔）礼物没了就算了。还有这些便签，你写的吧？‘别碰我的锅’，你是不是嫌弃我笨手笨脚？",
+              "emotion": "sad",
+              "tone_instruction": "带着明显的鼻音，语气委屈且带有轻微的赌气，后半句逐渐转为理直气壮的质问，表现出缺乏安全感的小情绪。",
+              "emphasis": [
+                {
+                  "span_text": "算了",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 15,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "嫌弃",
+                  "occurrence": 1,
+                  "start_char": 40,
+                  "end_char": 42,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "笨手笨脚",
+                  "occurrence": 1,
+                  "start_char": 43,
+                  "end_char": 47,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "吸鼻子的动作要自然，嘟囔时声音可以稍微闷一点，说到“嫌弃”时音量稍微拔高，尾音带点委屈的颤音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（轻笑）那是我刚熬完汤，锅底烫得能煎鸡蛋，怕你直接用手端烫着。",
+              "emotion": "tender",
+              "tone_instruction": "语气宠溺、温和，带着一点无奈的笑意，语速舒缓，像是在哄小孩，耐心解释误会。",
+              "emphasis": [
+                {
+                  "span_text": "刚熬完汤",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "烫得能煎鸡蛋",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "怕你",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 23,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "轻笑要自然真诚，不要油腻。说到“烫着”时语气要有关切感，眼神（声音里）要专注地看着对方。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（愣住）那……这张呢？‘不想吃你做的饭’。你什么意思？",
+              "emotion": "surprised",
+              "tone_instruction": "从刚才的委屈中抽离，表现出意外和错愕。前半句结巴、迟疑，后半句带着不解和一丝试探，气势明显减弱。",
+              "emphasis": [
+                {
+                  "span_text": "这张",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "不想吃你做的饭",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 19,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "什么意思",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“那……”要有明显的停顿和气息变化，表现出大脑正在重新处理信息，念便签内容时语速放慢。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（叹气）你上次加班到凌晨两点，我看着心疼，想让你第二天多睡会儿，不用早起给我做早饭。",
+              "emotion": "tender",
+              "tone_instruction": "语气深沉、充满心疼与包容。叹气要真实，语速放慢，字里行间流露出对对方的关爱和深情。",
+              "emphasis": [
+                {
+                  "span_text": "凌晨两点",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "心疼",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "多睡会儿",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 31,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "叹气后稍微停顿再开口，声音要沉稳有磁性，传达出深深的心疼，不要有说教感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（声音变软，有些不好意思）你……你怎么不早说。",
+              "emotion": "tender",
+              "tone_instruction": "声音明显变软，带着害羞和娇嗔，尾音微微上扬，表现出误会解开后的甜蜜与不好意思。",
+              "emphasis": [
+                {
+                  "span_text": "怎么",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 19,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "不早说",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“你……”可以带一点轻微的气声，表现出害羞。整体语调要轻柔，有恋爱中特有的甜蜜和娇嗔感。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "梦游便签与神秘快递",
+          "location": "合租客厅及玄关",
+          "dramatic_goal": "利用‘搬走’便签制造二次反转危机，随后通过神秘快递箱揭示最终悬念，将情绪推向最高潮。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】纸张展开的声音，音乐突然变调，带点悬疑感。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（念出声）‘我受够了，明天就搬走’……陈默，这也是你写的？！",
+              "emotion": "sad",
+              "tone_instruction": "声音发颤，带着委屈与难以置信，念便签时强忍泪水，质问时处于情绪崩溃边缘。",
+              "emphasis": [
+                {
+                  "span_text": "受够了",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "搬走",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 16,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "你",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "念便签内容时语速放慢，声音颤抖；后半句质问时音量微提但气息不稳。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】林晓红着眼眶，把盒子重重推过桌面。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（赌气，声音发颤）行，你走吧！盒子还你！",
+              "emotion": "angry",
+              "tone_instruction": "故作决绝的赌气，但声音发颤暴露了内心的委屈和不舍，强撑着放狠话。",
+              "emphasis": [
+                {
+                  "span_text": "走",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "还",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 18,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "‘行’字带点哭腔的停顿，‘走吧’和‘还你’咬字稍重，但尾音发颤。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】陈默一把按住盒子，手掌与桌面摩擦。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（急切，认真）这不是我写的！是你上周连轴转加班，半夜梦游在厨房写的！",
+              "emotion": "worried",
+              "tone_instruction": "急切解释，生怕对方误会，语气认真且带着对女友的心疼。",
+              "emphasis": [
+                {
+                  "span_text": "不是",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "梦游",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速较快，气息连贯，‘不是’要斩钉截铁，‘梦游’二字加重语气以强调真相。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（错愕）啊？梦游？",
+              "emotion": "surprised",
+              "tone_instruction": "极度错愕，愣住，大脑短暂空白后的难以置信。",
+              "emphasis": [
+                {
+                  "span_text": "梦游",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "‘啊’字短促上扬，‘梦游’二字语速放慢，带着疑惑和不可思议。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】急促的门铃声突然响起。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "等一下，有快递。",
+              "emotion": "calm",
+              "tone_instruction": "情绪从刚才的紧张中抽离，注意到门铃或快递，语气平稳。",
+              "emphasis": [
+                {
+                  "span_text": "快递",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语气自然过渡，打断刚才的沉重氛围，声音恢复平静。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l10",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】开门，接过重物。陈默将大箱子‘砰’地轻放在桌上（动作轻柔，与开场拍桌子的巨响形成温柔呼应）。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】拆开纸箱的声音。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l12",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（轻笑，带着宠溺）晓晓，你看。",
+              "emotion": "tender",
+              "tone_instruction": "温柔宠溺，带着轻笑，安抚对方情绪，引导她看快递里的东西。",
+              "emphasis": [
+                {
+                  "span_text": "晓晓",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "看",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "‘晓晓’叫得轻柔，‘轻笑’要自然融入气息中，‘看’字带点引导的期待感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l13",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】纸张翻面声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l14",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "这张‘搬走’的便签背面，其实还有半行字……",
+              "emotion": "mysterious",
+              "tone_instruction": "故作神秘，语速放慢，带着温柔的笑意，制造悬念。",
+              "emphasis": [
+                {
+                  "span_text": "背面",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "半行字",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "‘背面’和‘半行字’稍微拖长尾音，省略号处留白，眼神和语气充满期待。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l15",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（震惊，轻声念）‘搬进同一个房间……’？",
+              "emotion": "surprised",
+              "tone_instruction": "震惊，不敢置信，轻声念出，尾音微微上扬，带着甜蜜与错愕。",
+              "emphasis": [
+                {
+                  "span_text": "同一个房间",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 16,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音放轻，仿佛怕惊扰了这个惊喜，‘同一个房间’咬字清晰但气息微颤，问号尾音上扬。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l16",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "【音效】心跳声放大，音乐推向高潮后戛然而止。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "第一集通过‘扔盒子’引发的冲突，展现林晓与陈默从误解到理解的情感转变。两人在解读便签中化解日常摩擦，却在发现‘搬走’便签时迎来二次反转，最终以一个神秘的快递箱悬念收尾。",
+      "ending_hook": "快递箱里的周年礼物究竟是什么？面对‘搬进同一个房间’的提议，林晓会作何反应？",
+      "fact_delta": [
+        {
+          "fact": "秘密盒子被扔掉",
+          "status": "resolved"
+        },
+        {
+          "fact": "便签上的冷漠话语背后的真实含义",
+          "status": "revealed"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "character_1": "role-1",
+          "character_2": "role-2",
+          "change": "从因误会引发的激烈争吵，转变为理解彼此心意，关系大幅升温并面临同居新阶段"
+        }
+      ],
+      "new_open_threads": [
+        "快递箱里装的周年礼物到底是什么？",
+        "林晓对‘搬进同一个房间’的提议会如何回应？"
+      ],
+      "closed_threads": [
+        "秘密盒子去哪了？",
+        "便签上那些看似冷漠的话语究竟是何含义？"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "秘密盒子被扔掉",
+        "status": "resolved"
+      },
+      {
+        "fact": "便签上的冷漠话语背后的真实含义",
+        "status": "revealed"
+      }
+    ],
+    "relationships": [
+      {
+        "character_1": "role-1",
+        "character_2": "role-2",
+        "change": "从因误会引发的激烈争吵，转变为理解彼此心意，关系大幅升温并面临同居新阶段"
+      }
+    ],
+    "unresolved_threads": [
+      "快递箱里装的周年礼物到底是什么？",
+      "林晓对‘搬进同一个房间’的提议会如何回应？"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 19,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": [
+      "剧情结构（冲突爆发-便签化解-二次反转-悬念收尾）与获批大纲的起承转合完全一致，所有核心情节点（扔盒子对峙、便签误会消融、梦游真相揭露、快递箱呼应）均准确落地。",
+      "场景严格限制在合租客厅及玄关，便签内容符合人物性格与生活逻辑，开场拍桌巨响与结尾放箱子轻响形成明确的情绪与动作闭环，无逻辑断裂或越界。",
+      "内容聚焦都市合租情感与日常误会，台词温和无敏感或违规元素，浪漫张力与互动尺度完全符合“teen”分级标准，未超出受众预期。"
+    ]
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1910,
+      "output_tokens": 4016,
+      "latency_ms": 53018
+    },
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 2926,
+      "output_tokens": 3381,
+      "latency_ms": 34098
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 3388,
+      "output_tokens": 5134,
+      "latency_ms": 88229
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2215,
+      "output_tokens": 3698,
+      "latency_ms": 63793
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2180,
+      "output_tokens": 3882,
+      "latency_ms": 67502
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2383,
+      "output_tokens": 3813,
+      "latency_ms": 66030
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "attempt": 1,
+      "input_tokens": 8103,
+      "output_tokens": 2018,
+      "latency_ms": 15281
+    }
+  ],
+  "created_at": "2026-10-08T09:12:30.120883Z"
+}

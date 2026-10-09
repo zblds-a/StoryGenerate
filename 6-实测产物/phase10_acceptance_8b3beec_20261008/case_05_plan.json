@@ -1,0 +1,162 @@
+{
+  "plan_id": "bca9c246fa6149beb56d94a727a84376",
+  "plan_revision": 2,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "plan": {
+    "title": "便签上的同居法则",
+    "premise": "两位性格迥异的合租室友，因一场关于‘扔盒子’的乌龙事件，通过解读彼此留下的生活便签，层层剥开日常误会，最终发现对方深藏的心意。",
+    "theme": "沟通与理解是化解都市孤独与合租摩擦的最佳良药。",
+    "beginning": "林晓因发现陈默扔了她的‘秘密盒子’而大发雷霆，在客厅拦住刚下班的陈默对峙。",
+    "development": "两人在寻找盒子和解读日常便签的过程中，发现那些看似冷漠的便签背后，其实都藏着对彼此的笨拙关心，误会逐渐消融。",
+    "climax": "一张写着‘明天就搬走’的便签让刚升温的气氛降至冰点，林晓赌气放手，陈默却选择坦白真相并挽留。",
+    "ending": "快递员送来陈默准备的惊喜，陈默将箱子轻放在桌上呼应开场的巨响，‘搬走’便签的背面真相大白，两人在错愕与甜蜜中迎来关系的新阶段。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "便签背后的秘密",
+        "core_goal": "通过一场由‘扔盒子’引发的冲突，展现两人从误解到理解的情感转变，明确双方在危机前的选择，并留下悬念。",
+        "major_beats": [
+          "【0-3s 黄金钩子】‘砰’的一声巨响（突发听觉事件），林晓将一沓便签纸重重拍在桌上，怒喊：‘陈默，你耍我是不是？！’（极限冲突，零铺垫）。",
+          "【3-10s 矛盾三要素】合租客厅内，林晓拿着便签质问刚进门的陈默，为什么把她最珍贵的‘秘密盒子’扔了，她今天必须问个清楚（交代人物、地点、麻烦与目的）。",
+          "【10-30s 第一次反转】陈默无奈解释那是个空盒子，林晓爆发大喊‘那是装我准备给你的周年礼物的！’背景音效骤停（音乐断点），陈默愣住，气氛从愤怒瞬间转为尴尬与意外的温情。",
+          "【30-120s 中段推进】两人开始逐张解读便签。台词短促交锋：林晓以为陈默写‘别碰我的锅’是嫌弃，陈默解释是怕她烫到；陈默以为林晓写‘不想吃你做的饭’是讨厌，林晓解释是想让他多休息。误会层层剥开，感情升温。",
+          "【120-170s 升级/二次反转】找到最后一张被揉皱的便签，上面写着‘我受够了，明天就搬走’。林晓面临选择，她红着眼眶把盒子推过去赌气说‘你走吧’；陈默面临选择，他一把按住盒子选择坦白：‘这不是我写的，是你上次梦游写的！’两人刚建立的温馨瞬间冻结又迅速反转。",
+          "【170-180s 强钩子】门铃突然急促响起，陈默开门接过快递员的大箱子，将其‘砰’地放在桌上（动作轻柔，呼应开场拍桌子的巨响）。箱子打开，陈默拿出那张‘搬走’便签翻到背面露出半行字：‘搬进同一个房间……’声音戛然而止。"
+        ],
+        "ending": "快递员送来惊喜，陈默放箱子的声音呼应开场，‘搬走’便签的背面真相大白，两人在错愕与甜蜜中迎来关系的新阶段，故事在最高潮处悬念收尾。",
+        "target_duration_sec": 180
+      }
+    ],
+    "performance_plan": {
+      "voice_1": "林晓，声线清脆，情绪起伏大，从愤怒到委屈再到震惊，语速较快。",
+      "voice_2": "陈默，声线温和沉稳，带有无奈和包容感，语速中等，情绪内敛但在关键时刻有爆发。",
+      "sound_design": "注重生活化音效（拍桌子、翻纸张、门铃），开场与结尾的‘砰’声需做对比处理（开场暴躁，结尾轻柔），音乐在反转点需有明显的断点和情绪切换。"
+    },
+    "continuity_constraints": [
+      "便签的内容必须与两人的性格和日常行为逻辑相符。",
+      "场景始终限制在合租客厅及玄关，保持空间封闭感以增强戏剧张力。",
+      "开场与结尾的‘砰’声必须形成动作与情绪上的呼应。"
+    ],
+    "change_summary": [
+      "在120-170s的二次反转中，明确了林晓‘赌气放手’与陈默‘主动坦白挽留’的角色选择，使人物动机更清晰。",
+      "在170-180s的结尾处，让陈默放箱子的‘砰’声与开场林晓拍桌子的巨响形成呼应，完成情绪从冲突到甜蜜的闭环。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "都市",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1910,
+      "output_tokens": 4016,
+      "latency_ms": 53018
+    },
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 2926,
+      "output_tokens": 3381,
+      "latency_ms": 34098
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "de6d618a2e331af35a8d6c88fcd2b0e9c22bcd54931472b8f1095308bf4f454f",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-08T09:07:09.729211Z",
+  "updated_at": "2026-10-08T09:07:43.976869Z"
+}

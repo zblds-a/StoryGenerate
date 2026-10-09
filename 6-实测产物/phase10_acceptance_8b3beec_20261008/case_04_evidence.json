@@ -1,0 +1,66 @@
+{
+  "index": 4,
+  "git_sha": "8b3beec",
+  "audience_band": "14-17",
+  "content_rating": "teen",
+  "duration": 120,
+  "mode": "viral_drama",
+  "characters": 1,
+  "plan_revision": 1,
+  "plan_id": "4a65922ae9cc41cf8b2cb7f00a77d482",
+  "job_id": "6d18d8f97e924fa4b816e5c20acccd4b",
+  "story_version_id": "00e0ac898172458da44811c2954af008",
+  "ready": true,
+  "spoken_lines": 17,
+  "emotion_coverage": 1.0,
+  "tone_coverage": 1.0,
+  "emphasis_coverage": 1.0,
+  "latency_sec": 273.34,
+  "llm_calls": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 1797,
+      "output_tokens": 2802,
+      "latency_ms": 35792
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2638,
+      "output_tokens": 5258,
+      "latency_ms": 90513
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 2376,
+      "output_tokens": 4898,
+      "latency_ms": 84292
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 1947,
+      "output_tokens": 2715,
+      "latency_ms": 47699
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7496,
+      "output_tokens": 1925,
+      "latency_ms": 13951
+    }
+  ],
+  "rule_sha256": {
+    "drama-formula-library.json": "1734631061000cff649436ec41fb028e07a56855ea6659a7a4fd6197503a047b",
+    "人物与连续性规则.json": "9b1261702d3462a271e1cebffe48af0909536d00a2241ce4d7037a3cdb02a2df",
+    "穿越剧引擎规则.json": "d40e123c4ce3d87326921293e872c748f4e2c6007aabc8fb548d45e5386132c0"
+  }
+}

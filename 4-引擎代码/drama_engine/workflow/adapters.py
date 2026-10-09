@@ -201,6 +201,34 @@ class DraftEpisode(BaseModel):
     closed_threads: list[str] = Field(default_factory=list)
 
 
+def draft_episode_contract_errors(
+    draft: DraftEpisode, target_duration_sec: int, approved_role_ids: set[str],
+) -> tuple[int, list[str]]:
+    """Check duration and dialogue cast before performance annotation begins."""
+    spoken_chars = sum(
+        len(line.text) for scene in draft.scenes for line in scene.lines
+        if line.kind in ("dialogue", "narration")
+    )
+    estimated = round(spoken_chars / 3.5)
+    errors = []
+    if not 0.85 * target_duration_sec <= estimated <= 1.15 * target_duration_sec:
+        errors.append(
+            f"duration estimate {estimated}s outside 85%-115% of {target_duration_sec}s"
+        )
+    invalid_roles = sorted({
+        line.speaker_role_id or "<missing>"
+        for scene in draft.scenes for line in scene.lines
+        if line.kind == "dialogue" and (
+            not line.speaker_role_id or (
+                approved_role_ids and line.speaker_role_id not in approved_role_ids
+            )
+        )
+    })
+    if invalid_roles:
+        errors.append(f"unapproved dialogue roles: {invalid_roles}")
+    return estimated, errors
+
+
 class QualityDecision(BaseModel):
     outline_alignment_passed: bool
     continuity_passed: bool
@@ -245,26 +273,27 @@ class ApprovedPlanLLMExecutor:
             }, ensure_ascii=False)
             draft = None
             estimated = 0
+            contract_errors: list[str] = []
+            approved_role_ids = {item.role_id for item in preview.character_snapshots}
             for attempt in range(3):
                 draft = self.provider.complete_structured(
                     resolve_spec("episode_writer", tier_map=tier_map), system,
                     user if attempt == 0 else user + (
-                        f"\n上次输出估算{estimated}秒，不满足目标{prefs.target_duration_sec}秒。"
-                        "请重写完整本集并调整有效对白与旁白量，保留大纲所有节拍。"
+                        f"\n上次输出未通过：{'；'.join(contract_errors)}。"
+                        "请重写完整本集，调整有效对白与旁白量；对白只能使用审批角色的 role_id，"
+                        "不能增加新发声角色。保留大纲所有节拍。"
                     ),
                     DraftEpisode,
                 )
-                spoken_chars = sum(
-                    len(line.text) for scene in draft.scenes for line in scene.lines
-                    if line.kind in ("dialogue", "narration")
+                estimated, contract_errors = draft_episode_contract_errors(
+                    draft, prefs.target_duration_sec, approved_role_ids,
                 )
-                estimated = round(spoken_chars / 3.5)
-                if 0.65 * prefs.target_duration_sec <= estimated <= 1.4 * prefs.target_duration_sec:
+                if not contract_errors:
                     break
-            if not 0.65 * prefs.target_duration_sec <= estimated <= 1.4 * prefs.target_duration_sec:
+            if contract_errors:
                 raise ValueError(
-                    f"DURATION_VALIDATION_FAILED: episode {outline.index} estimated {estimated}s "
-                    f"for target {prefs.target_duration_sec}s"
+                    f"EPISODE_CONTRACT_FAILED: episode {outline.index}: "
+                    + "; ".join(contract_errors)
                 )
             scenes: list[SceneDelivery] = []
             for scene_index, scene in enumerate(draft.scenes, 1):

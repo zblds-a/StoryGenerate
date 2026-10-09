@@ -1,0 +1,1123 @@
+{
+  "story_id": "81e50f4ae96e49598424d666426e1df0",
+  "story_version_id": "00e0ac898172458da44811c2954af008",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "4a65922ae9cc41cf8b2cb7f00a77d482",
+  "approved_plan_revision": 1,
+  "title": "铁疙瘩的才艺秀",
+  "summary": "社团新成员误将报废机器人报名才艺比赛，在无法退赛的情况下硬着头皮让其登台，却意外播放了社团温馨日常，引发善意误会与感动。",
+  "tags": [
+    "喜剧",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "viral_drama",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "铁疙瘩的才艺秀",
+    "premise": "社团新成员误将报废机器人报名才艺比赛，在无法退赛的情况下硬着头皮让其登台，却意外播放了社团温馨日常，引发善意误会与感动。",
+    "theme": "青春、包容、意外的温暖",
+    "beginning": "新成员角色1在整理社团物资时，误操作将展示用机器人报名了校园才艺大赛。",
+    "development": "发现无法退赛后，角色1与社长试图给机器人临时编程简单的动作，却频频出错，只能硬着头皮推上舞台。",
+    "climax": "舞台上机器人动作死机，却意外触发了隐藏音频，播放出社团成员互相鼓励的温馨录音，打动了全场。",
+    "ending": "机器人以独特的“情感表演”获得认可，社团成员在欢笑与感动中收获了更深的羁绊。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "铁疙瘩的才艺秀",
+        "core_goal": "展现角色1误报机器人参赛的慌乱，以及最终意外收获感动的反转过程。",
+        "major_beats": [
+          "0-2s: 刺耳的系统提示音突然响起，播报机器人报名成功。",
+          "2-7s: 角色1惊恐万分，交代自己误把社团报废机器人报上了即将海选的才艺比赛。",
+          "7-20s: 社长赶来要求退赛，角色1疯狂操作发现系统锁死，伴随警报声只能决定硬上。",
+          "20-80s: 两人疯狂给机器人写代码排练广播体操，台词短促，机器人频频卡顿冒烟。",
+          "80-113s: 海选现场机器人死机，却意外播放出社长鼓励新成员的温柔录音和社团欢笑声，全场感动鼓掌。",
+          "113-120s: 评委刚要点评，机器人头部突然弹出彩带炮炸了评委一脸，在惊呼声中戛然而止。"
+        ],
+        "ending": "评委被彩带炮袭击，悬念拉满，情绪在最高点的喜剧冲突中戛然而止。",
+        "target_duration_sec": 120
+      }
+    ],
+    "performance_plan": {
+      "voice_1": "角色1，声线年轻有活力，带有慌乱和青涩感，语速较快。",
+      "sfx": "大量使用电子提示音、键盘敲击声、机械卡顿声和彩带炮爆炸声，增强喜剧与现场感。",
+      "music": "前半段使用快节奏、滑稽的拨弦乐；高潮处切换为温馨轻柔的钢琴曲；结尾瞬间切断音乐。"
+    },
+    "continuity_constraints": [
+      "机器人全程不能说话，只能发出机械音效或播放录音。",
+      "角色1必须保持普通人的设定，不能展现超常的黑客或编程能力，操作必须显得笨拙。"
+    ],
+    "change_summary": [
+      "根据用户指令创建了单集120秒的喜剧广播剧大纲。",
+      "严格遵循了beat_sheet的时间节点和音频要求。",
+      "将唯一的角色设定为社团新成员，机器人作为核心道具推进剧情。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-4a26fe25",
+      "index": 1,
+      "title": "铁疙瘩的才艺秀",
+      "synopsis": "社团新成员误将报废机器人报名才艺比赛，在无法退赛的情况下硬着头皮让其登台，却意外播放了社团温馨日常，引发善意误会与感动。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 132,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "误报与挣扎",
+          "location": "社团活动室",
+          "dramatic_goal": "展现角色1误报机器人参赛的慌乱，以及退赛失败后被迫硬着头皮排练的喜剧冲突。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "刺耳的电子系统提示音突然响起，伴随红灯闪烁的急促警报声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_alarm_start"
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "system",
+              "narrator_id": null,
+              "performer_id": "system",
+              "text": "滴——校园才艺大赛报名成功，编号04，参赛项目：机器人表演。",
+              "emotion": "neutral",
+              "tone_instruction": "机械、平稳、毫无感情的系统合成音。",
+              "emphasis": [
+                {
+                  "span_text": "报名成功",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "机器人表演",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "无情绪起伏，字正腔圆。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "啊？！等等！我刚才点错键了！谁把这台报废的铁疙瘩推上来的？！",
+              "emotion": "surprised",
+              "tone_instruction": "极度惊恐、慌乱，语速极快，声音发颤。",
+              "emphasis": [
+                {
+                  "span_text": "点错键",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 12,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "报废的铁疙瘩",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.5,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "倒吸一口凉气后爆发，带着不可置信的破音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "完了完了，下个月就海选，我居然把社团的废品报上才艺大赛了！",
+              "emotion": "worried",
+              "tone_instruction": "绝望、懊恼，语速快，带着哭腔。",
+              "emphasis": [
+                {
+                  "span_text": "完了完了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "废品",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.4,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "双手抱头，语气中充满对未来的恐惧。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "急促的脚步声，活动室门被猛地推开。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_door_open"
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "角色1！我听到系统提示了，赶紧把退赛申请提交了！",
+              "emotion": "serious",
+              "tone_instruction": "焦急、严厉，带有强烈的命令口吻。",
+              "emphasis": [
+                {
+                  "span_text": "系统提示",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "赶紧",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 15,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "退赛申请",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 20,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "边跑边喊，气息微喘。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "社长！我点了，但是系统提示‘报名锁定，无法撤回’！还在一直响警报！",
+              "emotion": "fearful",
+              "tone_instruction": "极度慌乱、无助，声音发抖，快要急哭。",
+              "emphasis": [
+                {
+                  "span_text": "报名锁定",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 18,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "无法撤回",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "一直响警报",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 32,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.4,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "手忙脚乱地敲击键盘，语气中透着绝望。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "连续的急促警报声，随后音乐断点，声音骤停。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_alarm_lock"
+            },
+            {
+              "line_id": "ep1-s1-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "锁死了？！这下丢人丢到全校了……算了，死马当活马医，硬上吧！",
+              "emotion": "serious",
+              "tone_instruction": "从震惊到无奈，最后破罐子破摔的果断。",
+              "emphasis": [
+                {
+                  "span_text": "锁死了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "丢人",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "死马当活马医",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 25,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "硬上",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句咬牙切齿，后半句深吸一口气，做出艰难决定。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l10",
+              "kind": "music",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "快节奏、滑稽的拨弦乐起，营造手忙脚乱的氛围。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "music_comedic"
+            },
+            {
+              "line_id": "ep1-s1-l11",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "快，给它写个简单的代码，就让它做个广播体操，能走两步就行。",
+              "emotion": "serious",
+              "tone_instruction": "急促、降低标准、快速指挥。",
+              "emphasis": [
+                {
+                  "span_text": "简单的代码",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "广播体操",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "走两步",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速快，不假思索地提出最低要求。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l12",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "疯狂敲击键盘的声音。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_keyboard"
+            },
+            {
+              "line_id": "ep1-s1-l13",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "左臂抬起……右腿……哎？它怎么在原地转圈？",
+              "emotion": "surprised",
+              "tone_instruction": "边操作边念，从专注到疑惑，最后转为惊讶。",
+              "emphasis": [
+                {
+                  "span_text": "左臂",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "右腿",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "原地转圈",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 20,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前两句是机械的指令确认，'哎'之后语调上扬，充满疑惑。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l14",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "机械齿轮严重卡顿声，接着是滋滋冒烟的声音。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_robot_smoke"
+            },
+            {
+              "line_id": "ep1-s1-l15",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "哎呀你别乱敲！它冒烟了！重启重启！",
+              "emotion": "angry",
+              "tone_instruction": "急躁、大喊、气急败坏。",
+              "emphasis": [
+                {
+                  "span_text": "别乱敲",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "冒烟了",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "重启",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.5,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "一把推开对方，声音拔高，充满焦躁。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l16",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "不行啊社长，它的核心主板老化了，动作频频死机，这怎么上台啊！",
+              "emotion": "worried",
+              "tone_instruction": "崩溃、绝望、语速极快，带着抱怨。",
+              "emphasis": [
+                {
+                  "span_text": "核心主板老化",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "频频死机",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "怎么上台",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.4,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "双手离开键盘，无奈地向社长摊手抱怨。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l17",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "没时间了，直接推上去，见机行事！",
+              "emotion": "serious",
+              "tone_instruction": "果断、不容置疑、急促。",
+              "emphasis": [
+                {
+                  "span_text": "没时间了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "直接推上去",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "见机行事",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "打断对方的抱怨，语气坚决，下达最终指令。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "意外与反转",
+          "location": "海选现场舞台",
+          "dramatic_goal": "展现机器人死机后的意外反转，通过温馨录音打动全场，并在情绪最高点以喜剧冲突戛然而止。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "现场嘈杂声，聚光灯打开的电流声，沉重的机械脚步声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_stage"
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "机器人突然发出巨大的死机报错声，全场瞬间安静。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_robot_crash"
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（小声颤抖）完了，彻底死机了……",
+              "emotion": "fearful",
+              "tone_instruction": "声音发抖，气息不稳，表现出极度的慌乱和绝望，仿佛天塌下来了一样。",
+              "emphasis": [
+                {
+                  "span_text": "完了",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "彻底",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "带一点哭腔，尾音渐弱，表现出无力回天的崩溃感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "机器人胸口发出柔和的蓝光音效，温馨轻柔的钢琴曲渐入。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_light_music_warm"
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "role-2",
+              "text": "（录音播放，温柔地）角色1，刚加入社团没关系，大家都是从零开始的，只要一起努力，废铁也能发光哦！",
+              "emotion": "tender",
+              "tone_instruction": "声音温柔、包容，带有明显的录音设备质感，充满鼓励与安抚的力量。",
+              "emphasis": [
+                {
+                  "span_text": "没关系",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 22,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "废铁",
+                  "occurrence": 1,
+                  "start_char": 40,
+                  "end_char": 42,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "发光",
+                  "occurrence": 1,
+                  "start_char": 44,
+                  "end_char": 46,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速舒缓，像是在对小朋友说话，带着温暖的笑意。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "背景音叠加社团成员们欢快的笑声和互相鼓励的嘈杂声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_laughter_overlay"
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "意想不到的温馨录音在礼堂回荡，台下的评委和观众从错愕转为会心的微笑，随后爆发出热烈的掌声。",
+              "emotion": "calm",
+              "tone_instruction": "旁白语气温暖、从容，带有一丝感动和欣慰，节奏由平缓逐渐推向高昂。",
+              "emphasis": [
+                {
+                  "span_text": "温馨",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "会心的微笑",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 33,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "热烈",
+                  "occurrence": 1,
+                  "start_char": 39,
+                  "end_char": 41,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "画面感强，最后一句掌声爆发时语气要扬起来，烘托全场气氛。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l8",
+              "kind": "music",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "钢琴曲在掌声中推向高潮，情绪饱满。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "music_climax"
+            },
+            {
+              "line_id": "ep1-s2-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-judge",
+              "narrator_id": null,
+              "performer_id": "role-judge",
+              "text": "（感动地）太感人了，这种独特的‘情感表演’，体现了青春最真实的……",
+              "emotion": "tender",
+              "tone_instruction": "深受感动，语气真诚、赞赏，语速放慢，沉浸在自我感动中，话未说完被打断。",
+              "emphasis": [
+                {
+                  "span_text": "太感人",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "独特",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "最真实",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 30,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "尾音拖长，表现出意犹未尽的感觉，随后突然被咳嗽打断。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l10",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "机械弹簧声突然响起，音乐瞬间切断。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_spring_music_stop"
+            },
+            {
+              "line_id": "ep1-s2-l11",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "震耳欲聋的彩带炮爆炸声，“砰”！",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_confetti_blast"
+            },
+            {
+              "line_id": "ep1-s2-l12",
+              "kind": "dialogue",
+              "speaker_role_id": "role-judge",
+              "narrator_id": null,
+              "performer_id": "role-judge",
+              "text": "噗——咳咳！我的眼睛！我的头发！",
+              "emotion": "surprised",
+              "tone_instruction": "极度惊恐、狼狈，声音破音，伴随着真实的咳嗽和呛到感，语无伦次。",
+              "emphasis": [
+                {
+                  "span_text": "眼睛",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "头发",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.3,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前段是呛到彩带的咳嗽声，后段是尖叫和哀嚎，情绪瞬间从感动跌入狼狈。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l13",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（惊呼）啊！对不起评委老师！",
+              "emotion": "fearful",
+              "tone_instruction": "极度惊吓，倒吸一口凉气后大声惊呼，充满闯祸后的恐慌和急切道歉。",
+              "emphasis": [
+                {
+                  "span_text": "啊",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "对不起",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 9,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音拔高，带着颤音，语速极快，表现出闯大祸的崩溃与慌乱。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l14",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "全场倒吸一口凉气，随后所有声音戛然而止。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "sfx_silence_end"
+            }
+          ]
+        }
+      ],
+      "episode_summary": "本集讲述了社团新成员角色1误将报废机器人报名校园才艺大赛，在与社长尝试退赛失败后，只能硬着头皮给机器人编程排练。海选现场机器人意外死机，却播放出社团温馨录音感动全场，最后以彩带炮袭击评委的喜剧冲突戛然而止。",
+      "ending_hook": "评委被彩带炮袭击，悬念拉满，情绪在最高点的喜剧冲突中戛然而止。",
+      "fact_delta": [
+        {
+          "fact": "报废机器人被意外报名校园才艺大赛",
+          "status": "confirmed"
+        },
+        {
+          "fact": "报名系统锁定无法退赛",
+          "status": "confirmed"
+        },
+        {
+          "fact": "机器人内部隐藏了社长鼓励新成员的温馨录音",
+          "status": "revealed"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "characters": [
+            "role-1",
+            "role-2"
+          ],
+          "change": "共同经历危机与尴尬，社长对角色1展现出包容，两人羁绊加深。"
+        },
+        {
+          "characters": [
+            "role-1",
+            "role-judge"
+          ],
+          "change": "评委原本准备给予常规评价，却被机器人的‘情感表演’感动，随后又遭遇物理袭击，关系变得极具戏剧性。"
+        }
+      ],
+      "new_open_threads": [
+        "评委被彩带炮袭击后的反应与后续处理",
+        "机器人内部隐藏温馨音频的真实来源与触发机制"
+      ],
+      "closed_threads": [
+        "报名无法退赛的危机（以意外的喜剧和感动方式化解）"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "报废机器人被意外报名校园才艺大赛",
+        "status": "confirmed"
+      },
+      {
+        "fact": "报名系统锁定无法退赛",
+        "status": "confirmed"
+      },
+      {
+        "fact": "机器人内部隐藏了社长鼓励新成员的温馨录音",
+        "status": "revealed"
+      }
+    ],
+    "relationships": [
+      {
+        "characters": [
+          "role-1",
+          "role-2"
+        ],
+        "change": "共同经历危机与尴尬，社长对角色1展现出包容，两人羁绊加深。"
+      },
+      {
+        "characters": [
+          "role-1",
+          "role-judge"
+        ],
+        "change": "评委原本准备给予常规评价，却被机器人的‘情感表演’感动，随后又遭遇物理袭击，关系变得极具戏剧性。"
+      }
+    ],
+    "unresolved_threads": [
+      "评委被彩带炮袭击后的反应与后续处理",
+      "机器人内部隐藏温馨音频的真实来源与触发机制"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 17,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": [
+      "剧情严格遵循获批大纲的起承转合，从误报、退赛失败、笨拙排练到舞台意外触发温馨录音及喜剧结尾，核心情节与时间节点完全一致。",
+      "严格遵守‘机器人全程禁言仅发机械音/录音’及‘角色1操作笨拙普通’的连续性约束，人物行为逻辑自洽，无设定冲突。",
+      "内容聚焦校园青春与社团羁绊，包含轻度喜剧元素与温情主题，无任何暴力、色情或成人向内容，完全符合Teen级分级标准。"
+    ]
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.1.0"
+  },
+  "model_trace": [
+    {
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "actual_model": "qwen3.7-max",
+      "attempt": 1,
+      "input_tokens": 1797,
+      "output_tokens": 2802,
+      "latency_ms": 35792
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2638,
+      "output_tokens": 5258,
+      "latency_ms": 90513
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 2376,
+      "output_tokens": 4898,
+      "latency_ms": 84292
+    },
+    {
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "actual_model": "qwen3.7-plus",
+      "attempt": 1,
+      "input_tokens": 1947,
+      "output_tokens": 2715,
+      "latency_ms": 47699
+    },
+    {
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "actual_model": "qwen3.6-flash",
+      "attempt": 1,
+      "input_tokens": 7496,
+      "output_tokens": 1925,
+      "latency_ms": 13951
+    }
+  ],
+  "created_at": "2026-10-08T09:09:00.719615Z"
+}
