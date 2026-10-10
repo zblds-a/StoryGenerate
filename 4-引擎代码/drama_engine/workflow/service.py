@@ -28,7 +28,7 @@ from .schemas import (
     plan_fingerprint,
     utcnow,
 )
-from .strategy import StoryStrategyResolver
+from .strategy import StoryStrategyResolver, ResolvedStoryStrategy
 from ..config import RuleLibrary
 
 _REQUEST_ADAPTER = TypeAdapter(StoryOperationRequest)
@@ -130,6 +130,7 @@ class StoryWorkflowService:
             "characters": [item.model_dump(mode="json") for item in characters],
             "source": source.model_dump(mode="json") if source else None,
             "template": template_snapshot,
+            "strategy": strategy_snapshot,
             "impact_analysis": impact_analysis,
             "rule_versions": rule_versions,
         }
@@ -169,6 +170,10 @@ class StoryWorkflowService:
             raise WorkflowConflictError("STALE_PLAN")
         request = _REQUEST_ADAPTER.validate_python(raw_request)
         trace_start = len(getattr(getattr(self.plan_generator, "provider", None), "call_history", []))
+        # Reconstruct strategy from frozen snapshot so revision doesn't lose it
+        revision_strategy = None
+        if current.strategy_snapshot:
+            revision_strategy = ResolvedStoryStrategy.model_validate(current.strategy_snapshot)
         with usage_scope(
             request_id=request.request_id,
             plan_id=plan_id,
@@ -179,7 +184,7 @@ class StoryWorkflowService:
             content = self.plan_generator.generate(
                 request, current.source_reference, current.character_snapshots,
                 previous=current.plan, feedback=feedback, template=current.template_snapshot,
-                strategy=None,
+                strategy=revision_strategy,
             )
         model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
         if not content.change_summary:
@@ -191,6 +196,7 @@ class StoryWorkflowService:
             "characters": [item.model_dump(mode="json") for item in current.character_snapshots],
             "source": current.source_reference.model_dump(mode="json") if current.source_reference else None,
             "template": current.template_snapshot,
+            "strategy": current.strategy_snapshot,
             "impact_analysis": current.impact_analysis,
             "rule_versions": current.rule_versions,
         }
