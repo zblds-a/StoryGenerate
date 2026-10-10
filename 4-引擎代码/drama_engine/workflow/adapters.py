@@ -11,7 +11,9 @@ from pydantic import BaseModel, Field
 from ..config import RuleLibrary
 from ..llm.usage_context import usage_scope
 from ..llm.router import ModelTierMap, resolve_spec
-from .creative_context import build_episode_creative_packet
+from .creative_context import (
+    build_episode_creative_packet, ending_contract_for, is_closed_short_story,
+)
 from .performance import normalize_utterance, validate_story_delivery
 from .storycraft_prompts import (
     PLAN_SYSTEM_V2,
@@ -65,6 +67,7 @@ class LLMPlanGenerator:
             "intent": request.intent,
             "user_instruction": request.user_instruction,
             "preferences": preferences,
+            "ending_contract": ending_contract_for(request.creation_preferences),
             "beat_sheet": self.lib.beat_sheet_for(request.creation_preferences.target_duration_sec),
             "characters": [item.model_dump(mode="json") for item in characters],
             "source": source.model_dump(mode="json") if source else None,
@@ -83,6 +86,7 @@ class LLMPlanGenerator:
         )
         content = self.provider.complete_structured(resolve_spec("outline"), system, user, PlanContent)
         validate_generated_plan_cast(content, characters)
+        validate_generated_plan_ending(content, request.creation_preferences)
         return content
 
 
@@ -114,6 +118,23 @@ def validate_generated_plan_cast(content: PlanContent, characters: list[Characte
         raise ValueError("PLAN_PLACEHOLDER_VOICE_NAME")
     if any(not item.performer_id.strip() for item in fiction):
         raise ValueError("PLAN_VOICE_PERFORMER_MISSING")
+
+
+_TAIL_REVEAL = re.compile(
+    r"隐藏留言|新留言|新的留言|新人物|新危机|第二个秘密|另一[封段条位].{0,12}留言|"
+    r"突然.{0,12}(?:留言|秘密|危机)|戛然而止"
+)
+
+
+def validate_generated_plan_ending(content: PlanContent, preferences) -> None:
+    """Reject explicit late reveal devices in a promised closed short story."""
+    if not is_closed_short_story(preferences):
+        return
+    for episode in content.episode_outlines:
+        if _TAIL_REVEAL.search(episode.major_beats[-1]):
+            raise ValueError(f"PLAN_CLOSED_ENDING_TAIL_REVEAL: episode {episode.index}")
+    if re.search(r"Closed\s*/\s*Open|闭合.{0,8}开放|开放.{0,8}闭合", content.ending, re.I):
+        raise ValueError("PLAN_AMBIGUOUS_ENDING_TYPE")
 
 
 class PerformanceAnnotation(BaseModel):

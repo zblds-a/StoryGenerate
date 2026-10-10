@@ -17,7 +17,7 @@ from drama_engine.workflow.performance import normalize_utterance, validate_stor
 from drama_engine.workflow.adapters import (
     DraftEpisode, DraftLine, LLMPerformanceAnnotator, draft_episode_contract_errors,
     spoken_character_budget, validate_generated_plan_cast,
-    resolve_line_cast,
+    resolve_line_cast, validate_generated_plan_ending,
 )
 from drama_engine.workflow.creative_context import build_episode_creative_packet
 from drama_engine.workflow.repository import (
@@ -223,7 +223,26 @@ class TestPlanApprovalWorkflow:
         plan = service.prepare_story_plan(make_request(target_duration_sec=120))
         job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "closure")
         packet = build_episode_creative_packet(job.input_snapshot, plan.plan.episode_outlines[0], 357, 420, 483)
-        assert "不在最后一场新增留言" in packet.ending_contract
+        assert "最后约15%" in packet.ending_contract
+        assert "隐藏留言" in packet.ending_contract
+
+    def test_closed_plan_rejects_old_convenience_tail_reveals(self):
+        prefs = CreationPreferences(target_duration_sec=120, story_mode="general")
+        content = FixedPlanGenerator().generate(make_request(target_duration_sec=120), None, [])
+        episode = content.episode_outlines[0]
+        for last_beat in (
+            "母亲突然留下一段新的留言，戛然而止",
+            "陈宇翻到背面，发现隐藏留言，随后结束",
+        ):
+            bad = content.model_copy(update={
+                "episode_outlines": [episode.model_copy(update={
+                    "major_beats": [*episode.major_beats[:-1], last_beat],
+                })],
+            })
+            with pytest.raises(ValueError, match="PLAN_CLOSED_ENDING_TAIL_REVEAL"):
+                validate_generated_plan_ending(bad, prefs)
+        validate_generated_plan_ending(content, prefs)
+        validate_generated_plan_ending(bad, CreationPreferences(story_mode="serialized"))
 
     def test_recorded_voice_keeps_person_and_medium(self):
         service = make_service()

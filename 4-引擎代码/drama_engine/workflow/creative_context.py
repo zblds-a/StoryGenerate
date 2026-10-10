@@ -66,6 +66,27 @@ _MODE_STRATEGIES = {
 }
 
 
+def is_closed_short_story(preferences) -> bool:
+    """A one-shot auto ending resolves its own promise unless explicitly serialized."""
+    serialized = str(preferences.story_mode) == "serialized" or preferences.target_episodes > 1
+    return preferences.ending_preference in ("closed", "happy") or (
+        preferences.ending_preference == "auto" and not serialized
+    )
+
+
+def ending_contract_for(preferences) -> str:
+    if is_closed_short_story(preferences):
+        return (
+            "完整短篇：在最后一场之前交代核心真相或情感信息；最后约15%只演人物选择、"
+            "可听见的后果和前文物件/声音的回响。不得首次揭示隐藏留言、新人物、"
+            "新危机或第二个秘密，不得以戛然而止代替收束。"
+        )
+    return (
+        "连载或明确开放结局：先完成本集局部目标与人物选择；长线悬念必须从本集"
+        "已经听到的证据自然延伸，最后一场不得突然引入新人物或无前因危机。"
+    )
+
+
 def build_episode_creative_packet(
     snapshot: ApprovedPlanSnapshot,
     outline: EpisodeOutline,
@@ -120,24 +141,13 @@ def build_episode_creative_packet(
         })
 
     transition_sec = max(12, round(prefs.target_duration_sec * 0.12))
-    serialized = str(prefs.story_mode) == "serialized" or prefs.target_episodes > 1
-    closed = prefs.ending_preference in ("closed", "happy") or (
-        prefs.ending_preference == "auto" and not serialized
-    )
-    ending_contract = (
-        "本集完成主要行动与情感选择；不在最后一场新增留言、人物、危机或未解谜题。"
-        "结尾用前文已有的物件、动作或关系形成回响。"
-        if closed else
-        "先完成本集局部目标与人物选择，再保留一个由前文证据引出的长期问题；"
-        "不得用突然断音或新人物代替本集结局。"
-    )
     return EpisodeCreativePacket(
         episode_index=outline.index,
         story_promise=preview.plan.premise,
         theme=preview.plan.theme,
         episode_goal=outline.core_goal,
         ending_condition=outline.ending,
-        ending_contract=ending_contract,
+        ending_contract=ending_contract_for(prefs),
         mode_strategy=_MODE_STRATEGIES.get(str(prefs.story_mode), _MODE_STRATEGIES["general"]),
         character_logic=character_logic,
         voice_cast=[
