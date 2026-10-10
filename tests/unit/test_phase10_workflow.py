@@ -17,7 +17,7 @@ from drama_engine.workflow.performance import normalize_utterance, validate_stor
 from drama_engine.workflow.adapters import (
     DraftEpisode, DraftLine, LLMPerformanceAnnotator, draft_episode_contract_errors,
     spoken_character_budget, validate_generated_plan_cast,
-    resolve_line_cast, validate_generated_plan_ending,
+    resolve_line_cast, validate_generated_plan_ending, normalize_draft_stage_directions,
 )
 from drama_engine.workflow.creative_context import build_episode_creative_packet
 from drama_engine.workflow.repository import (
@@ -388,6 +388,21 @@ class TestGenerationAndPerformanceGate:
         })
         _, errors = draft_episode_contract_errors(draft, 120, {"hero", "recorded-grandfather"})
         assert any("recorded speech miscast" in error for error in errors)
+
+    def test_stage_direction_is_not_part_of_spoken_text(self):
+        draft = DraftEpisode.model_validate({
+            "title": "夜查", "synopsis": "夜查", "episode_summary": "结束",
+            "scenes": [{"title": "图书馆", "dramatic_goal": "查线索", "lines": [
+                {"kind": "dialogue", "speaker_role_id": "hero", "text": "（压低声音）你听见了吗？"},
+                {"kind": "sfx", "text": "（脚步声）"},
+            ]}],
+        })
+        normalized = normalize_draft_stage_directions(draft)
+        spoken, effect = normalized.scenes[0].lines
+        assert spoken.text == "你听见了吗？"
+        assert spoken.performance_hint == "压低声音"
+        assert effect.text == "（脚步声）"
+        assert normalize_draft_stage_directions(normalized) == normalized
 
     def test_approved_plan_generates_ready_immutable_version(self):
         service = make_service()

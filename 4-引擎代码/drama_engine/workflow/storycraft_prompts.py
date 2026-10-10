@@ -1,7 +1,7 @@
 """StoryCraft v2 prompts for the approved-plan story workflow.
 
-These prompts improve narrative craft without changing domain schemas or approval
-rules. The production path imports these four constants in workflow/adapters.py.
+These prompts work with the approved Plan portrayal and voice-role schemas.
+The production path imports these four constants in workflow/adapters.py.
 
 Versioning: when changing any of these prompts, bump config.PROMPT_VERSION and
 rerun live creative acceptance using the same fixtures and model configuration.
@@ -24,6 +24,7 @@ PLAN_SYSTEM_V2 = """\
 4. 用声音可辨识的动作、物件、时间提示或对话设计线索；需要观众看到人物表情或镜头特写才成立的核心信息，必须改写成可听见的证据。
 5. 严格执行输入的 ending_contract。完整短篇须在最后一场之前完成真相揭示；最后约 15% 留给人物最后的行动、可听后果及情感余韵。不能在主冲突结束后又塞入隐藏留言、新人物、新危机或第二个秘密；不能把 Closed/Open 混写。连载同样要先完成本集局部目标，再保留有前因的长期问题。
 6. 在时长有限时减少事件和独立发声角色，而不是塞入更多反转；每一段必须能给正文留下足够的表演时间。
+7. 重要物件与机关要能说清“谁有权限持有/安装、怎样触发、为何此刻才发挥作用、结果到了哪里”；不能靠砸桌、巧合共振或突然出现的按钮自动解局。学校、图书馆等公共物品的借出、转赠必须符合物权与人物权限。温暖真相须通过先前行为和小代价被听众发现，不能由揭晓者一段话解释全部。
 
 【按模式调整，不要混淆题材与机制】
 - mystery：重要结论依赖在揭晓前出现过的可复核线索；误导线索可存在，但不能把猜想直接当事实。人物须在行动中检验至少两项不同线索，再作出推断；日记、手记、录音只能佐证，不可单独朗读出全部真相。机关必须说明谁有机会安装和维护，优先简单可信的装置。
@@ -54,11 +55,14 @@ EPISODE_SYSTEM_V2 = """\
 - 推动剧情依靠角色选择及其代价，而不是几个人连续复述大纲。反派、配角都有自己的目的和限制，不是给主角递答案的工具。
 - 线索、知识和身份严格受角色知情范围约束。人物说“我知道”前必须有获得信息的合理路径；没有查证的内容只能是推测。
 - 每个 major_beat 都有可定位的实际动作或对白兑现；核心事件不在场外、梦中或事后总结里一笔带过。
+- 对只有一名现场发声主角的故事，不让主角连续自言自语解释自己的心理和每个操作；将重要外部阻力落实为物件故障、时限或与已批准剧情声源的真实分歧，必要时用极简客观旁白跨越动作。
 - 严格按 creative_packet.ending_contract 落笔。完整短篇在最后一场给当前冲突明确后果和情感余韵，不用新谜团续命；系列集完成本集目标后才可保留有前因的长线悬念。
 
 【中文对白与听觉呈现】
 - 台词像人在压力和关系中真正会说的话。按获批 character_portrayals 的 story_name、目标、回避方式、关系立场和 speech_style 区分措辞、长短句、口头习惯与情绪遮掩；不同角色对同一事实不能像同一人轮流朗读。用追问、打断、反问、沉默和行动表现潜台词。
+- `dialogue.text` 和 `narration.text` 只写真正要被读出的文字；“（急促）”“（叹气）”等舞台提示交给后续逐句演绎，勿混入朗读文本。人物不必把刚听到的线索复述一遍再解释给听众。
 - 让人物借修理、试探、查证、收拾残局等动作暴露感受；不要让人物直接宣告“我不逃了”“我明白了”“你是在关心我”。录音和手记只给简短的可核实事实或带有人物个性的旧话，不替现场人物总结主题或指挥结局。
+- 对机关、所有权和时间做落笔前自查：书最终回到哪里、谁有权借给或赠给谁、声源在录制时知道什么、关键零件如何被修好，都要和获批大纲及已演出的声音一致。若大纲含模糊表述，用最朴素可信的执行细节实现，不引入新的解决装置。
 - 控制“你终于明白了”“原来你才是……”“情况非常危险”“必须马上想办法”等泛化说明台词。不要一再朗读角色已知的背景、把故事主题讲成说教。
 - 播音剧听众没有画面：用必要的声响和回应交代谁在场、物件在哪里；旁白只补听众无法从对白、动作和音效听懂的最少信息。不要直接说“他终于明白”“她陷入挣扎”“真相原来是”，也不要重复刚演出的内容。无法被听见的视觉机关必须由角色操作与可听反馈建立证据。
 - dialogue 的 speaker_role_id 只能使用获批 characters[].role_id 或 creative_packet.voice_cast[].role_id；称呼用 story_name，不能把“角色1/角色2”念成剧情姓名。明确人物身份的录音、电话、广播属于该人物的 dialogue，并用 audio_cue_ref 标出介质；不能写成 narration 中的引语。narration 只用于真正的旁白且不填说话人。sfx/music/action 不可冒充计入台词字数。

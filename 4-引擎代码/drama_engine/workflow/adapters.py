@@ -225,7 +225,9 @@ class LLMPerformanceAnnotator:
                 tone_instruction=annotation.tone_instruction if annotation else None,
                 emphasis=annotation.emphasis if annotation else [],
                 speech_rate=annotation.speech_rate if annotation else 1.0,
-                delivery_note=annotation.delivery_note if annotation else None,
+                delivery_note="；".join(filter(None, (
+                    raw.get("performance_hint"), annotation.delivery_note if annotation else None,
+                ))) or None,
                 audio_cue_ref=raw.get("sfx_category"),
             )
             output.append(normalize_utterance(utterance))
@@ -237,6 +239,7 @@ class DraftLine(BaseModel):
     speaker_role_id: str | None = None
     text: str
     audio_cue_ref: str | None = None
+    performance_hint: str | None = None
 
 
 class DraftScene(BaseModel):
@@ -268,6 +271,30 @@ class DraftScenePatch(BaseModel):
 
 class DraftScenePatchBatch(BaseModel):
     patches: list[DraftScenePatch] = Field(min_length=1, max_length=1)
+
+
+_LEADING_STAGE_DIRECTION = re.compile(r"^\s*[（(]([^（）()。！？]{1,16})[）)]\s*")
+
+
+def normalize_draft_stage_directions(draft: DraftEpisode) -> DraftEpisode:
+    """Keep unspoken parenthetical cues out of TTS text without rewriting prose."""
+    scenes = []
+    for scene in draft.scenes:
+        lines = []
+        for line in scene.lines:
+            if line.kind not in ("dialogue", "narration"):
+                lines.append(line)
+                continue
+            match = _LEADING_STAGE_DIRECTION.match(line.text)
+            if match and line.text[match.end():].strip():
+                lines.append(line.model_copy(update={
+                    "text": line.text[match.end():].lstrip(),
+                    "performance_hint": "；".join(filter(None, (line.performance_hint, match.group(1)))),
+                }))
+            else:
+                lines.append(line)
+        scenes.append(scene.model_copy(update={"lines": lines}))
+    return draft.model_copy(update={"scenes": scenes})
 
 
 def draft_episode_contract_errors(
@@ -387,6 +414,7 @@ class ApprovedPlanLLMExecutor:
                     resolve_spec("episode_writer", tier_map=tier_map), system, user,
                     DraftEpisode,
                 )
+            draft = normalize_draft_stage_directions(draft)
             estimated, contract_errors = draft_episode_contract_errors(
                 draft, prefs.target_duration_sec, approved_role_ids,
             )
@@ -404,6 +432,7 @@ class ApprovedPlanLLMExecutor:
                     approved_role_ids=approved_role_ids,
                     tier_map=tier_map,
                 )
+                draft = normalize_draft_stage_directions(draft)
                 estimated, contract_errors = draft_episode_contract_errors(
                     draft, prefs.target_duration_sec, approved_role_ids,
                 )
@@ -421,6 +450,7 @@ class ApprovedPlanLLMExecutor:
                     "kind": line.kind,
                     "speaker": line.speaker_role_id,
                     "text": line.text,
+                    "performance_hint": line.performance_hint,
                     "sfx_category": resolve_line_cast(line, preview)[1],
                     "performer_id": resolve_line_cast(line, preview)[0],
                 } for line_index, line in enumerate(scene.lines, 1)]
@@ -580,6 +610,7 @@ class DeterministicPerformanceAnnotator:
                 emotion=Emotion.NEUTRAL if spoken else None,
                 tone_instruction="自然清晰，突出关键信息" if spoken else None,
                 emphasis=[EmphasisSpan(span_text=anchor, strength="medium")] if spoken and anchor else [],
+                delivery_note=raw.get("performance_hint"),
                 audio_cue_ref=raw.get("sfx_category"),
             )
             output.append(normalize_utterance(utterance))
