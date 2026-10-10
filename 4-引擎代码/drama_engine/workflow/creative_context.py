@@ -32,6 +32,7 @@ class EpisodeCreativePacket(BaseModel):
     ending_condition: str
     ending_contract: str
     mode_strategy: list[str]
+    strategy_hints: list[str]
     character_logic: list[dict[str, Any]]
     voice_cast: list[dict[str, str]]
     mystery_causal_proof: dict[str, str] | None = None
@@ -142,6 +143,21 @@ def build_episode_creative_packet(
         })
 
     transition_sec = max(12, round(prefs.target_duration_sec * 0.12))
+    strategy_hints: list[str] = []
+    strategy_snapshot = getattr(preview, "strategy_snapshot", None) or {}
+    if strategy_snapshot:
+        cm = strategy_snapshot.get("conflict_mechanism", "")
+        cd = strategy_snapshot.get("causal_driver", "")
+        es = strategy_snapshot.get("ending_strategy", "")
+        tg = strategy_snapshot.get("tone_guidance", "")
+        if cm:
+            strategy_hints.append(f"冲突机制：{cm}")
+        if cd:
+            strategy_hints.append(f"因果驱动：{cd}")
+        if es:
+            strategy_hints.append(f"结局策略：{es}")
+        if tg:
+            strategy_hints.append(f"基调：{tg}")
     return EpisodeCreativePacket(
         episode_index=outline.index,
         story_promise=preview.plan.premise,
@@ -150,6 +166,7 @@ def build_episode_creative_packet(
         ending_condition=outline.ending,
         ending_contract=ending_contract_for(prefs),
         mode_strategy=_MODE_STRATEGIES.get(str(prefs.story_mode), _MODE_STRATEGIES["general"]),
+        strategy_hints=strategy_hints,
         character_logic=character_logic,
         voice_cast=[
             {"role_id": role.role_id, "story_name": role.story_name,

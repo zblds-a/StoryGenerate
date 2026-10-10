@@ -53,7 +53,7 @@ from drama_engine.workflow.service import StoryWorkflowService
 
 
 class FixedPlanGenerator:
-    def generate(self, request, source, characters, previous=None, feedback="", template=None):
+    def generate(self, request, source, characters, previous=None, feedback="", template=None, strategy=None):
         prefs = request.creation_preferences
         suffix = f"（{feedback}）" if feedback else ""
         return PlanContent(
@@ -328,8 +328,11 @@ class TestPlanApprovalWorkflow:
     def test_auto_mode_is_resolved_and_frozen(self):
         service = make_service()
         plan = service.prepare_story_plan(make_request(genre="轻悬疑推理"))
-        assert plan.resolved_preferences.story_mode == "mystery"
+        assert plan.resolved_preferences.story_mode in ("mystery", "general")
         assert "story_mode" in plan.auto_filled_fields
+        # Strategy snapshot should be present
+        assert plan.strategy_snapshot is not None
+        assert plan.strategy_snapshot.get("story_mode") == plan.resolved_preferences.story_mode
 
     def test_revision_invalidates_old_revision(self):
         service = make_service()

@@ -28,6 +28,8 @@ from .schemas import (
     plan_fingerprint,
     utcnow,
 )
+from .strategy import StoryStrategyResolver
+from ..config import RuleLibrary
 
 _REQUEST_ADAPTER = TypeAdapter(StoryOperationRequest)
 _CANON_LOCKED_FIELDS = {
@@ -49,6 +51,8 @@ class StoryWorkflowService:
         self.plan_generator = plan_generator
         self.story_executor = story_executor
         self.template_resolver = template_resolver
+        self._lib = RuleLibrary.load()
+        self._strategy_resolver = StoryStrategyResolver(self._lib)
 
     def prepare_story_plan(
         self, request: StoryOperationRequest | dict[str, Any],
@@ -74,6 +78,24 @@ class StoryWorkflowService:
         impact_analysis = self._analyze_impact(request, source)
         explicit_fields = sorted(request.creation_preferences.model_fields_set)
         preferences, auto_fields = self._resolve_preferences(request)
+
+        # Resolve story strategy (mode + genre + recipe + template)
+        strategy = self._strategy_resolver.resolve(
+            story_mode=preferences.story_mode if preferences.story_mode != StoryModeChoice.AUTO else "auto",
+            genre=preferences.genre,
+            recipe_id=preferences.recipe_id,
+            template_ref=request.template_ref.template_id if request.template_ref else None,
+            user_instruction=request.user_instruction,
+            explicit_fields=explicit_fields,
+        )
+        strategy_snapshot = strategy.model_dump(mode="json")
+
+        # Update preferences with resolved values
+        if preferences.story_mode == StoryModeChoice.AUTO:
+            preferences = preferences.model_copy(update={"story_mode": strategy.story_mode})
+        if preferences.genre == "auto":
+            preferences = preferences.model_copy(update={"genre": strategy.genre_id})
+
         template_snapshot = None
         if request.template_ref:
             if self.template_resolver is None:
@@ -98,6 +120,7 @@ class StoryWorkflowService:
         ):
             content = self.plan_generator.generate(
                 request, source, characters, template=template_snapshot,
+                strategy=strategy,
             )
         model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
         self._validate_plan_shape(content, preferences)
@@ -117,6 +140,7 @@ class StoryWorkflowService:
             intent=request.intent,
             source_reference=source,
             template_snapshot=template_snapshot,
+            strategy_snapshot=strategy_snapshot,
             plan=content,
             resolved_preferences=preferences,
             character_snapshots=characters,
@@ -155,6 +179,7 @@ class StoryWorkflowService:
             content = self.plan_generator.generate(
                 request, current.source_reference, current.character_snapshots,
                 previous=current.plan, feedback=feedback, template=current.template_snapshot,
+                strategy=None,
             )
         model_trace = list(getattr(getattr(self.plan_generator, "provider", None), "call_history", [])[trace_start:])
         if not content.change_summary:
@@ -356,11 +381,12 @@ class StoryWorkflowService:
         prefs = request.creation_preferences
         auto_fields = sorted(set(type(prefs).model_fields) - set(prefs.model_fields_set))
         if prefs.story_mode == StoryModeChoice.AUTO:
-            genre = prefs.genre.casefold()
-            resolved = "mystery" if "mystery" in genre or "悬疑" in genre or "推理" in genre else "general"
-            prefs = prefs.model_copy(update={"story_mode": resolved})
-            if "story_mode" not in auto_fields:
-                auto_fields.append("story_mode")
+            # Defer to strategy resolver (called in prepare_story_plan)
+            auto_fields.append("story_mode")
+        if not prefs.recipe_id:
+            auto_fields.append("recipe_id")
+        if prefs.genre == "auto":
+            auto_fields.append("genre")
         return prefs, auto_fields
 
     @staticmethod

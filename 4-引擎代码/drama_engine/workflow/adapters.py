@@ -46,6 +46,7 @@ class PlanGenerator(Protocol):
         previous: PlanContent | None = None,
         feedback: str = "",
         template: dict[str, Any] | None = None,
+        strategy: Any | None = None,
     ) -> PlanContent: ...
 
 
@@ -60,7 +61,7 @@ class LLMPlanGenerator:
         self.provider = provider
         self.lib = RuleLibrary.load()
 
-    def generate(self, request, source, characters, previous=None, feedback="", template=None) -> PlanContent:
+    def generate(self, request, source, characters, previous=None, feedback="", template=None, strategy=None) -> PlanContent:
         preferences = request.creation_preferences.model_dump(mode="json")
         system = PLAN_SYSTEM_V2
         payload = {
@@ -79,6 +80,12 @@ class LLMPlanGenerator:
             "previous_plan": previous.model_dump(mode="json") if previous else None,
             "revision_feedback": feedback or None,
         }
+
+        # Inject strategy context into system prompt if available
+        strategy_context = ""
+        if strategy is not None:
+            strategy_context = "\n\n【故事创作策略 — 必须遵守以下创作机制】\n" + strategy.plan_context()
+            system = PLAN_SYSTEM_V2 + strategy_context
         user = (
             "根据以下冻结参数生成完整结构化大纲。episode_outlines 数量必须等于 target_episodes，"
             "每集 target_duration_sec 必须等于请求值。\n"
@@ -393,6 +400,13 @@ class ApprovedPlanLLMExecutor:
                 snapshot, outline, min_chars, ideal_chars, max_chars,
             )
             system = EPISODE_SYSTEM_V2
+            strategy_hint_text = ""
+            if creative_packet.strategy_hints:
+                strategy_hint_text = (
+                    "\n\n【故事套路策略 — 本集的创作机制约束】\n"
+                    + "\n".join(f"- {h}" for h in creative_packet.strategy_hints)
+                )
+            system = system + strategy_hint_text if strategy_hint_text else system
             user = json.dumps({
                 "approved_plan_fingerprint": snapshot.plan_fingerprint,
                 "story_plan": preview.plan.model_dump(mode="json"),

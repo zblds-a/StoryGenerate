@@ -102,6 +102,7 @@ class CreationPreferences(WorkflowModel):
     story_mode: StoryModeChoice = StoryModeChoice.AUTO
     content_form: Literal["audio_drama"] = "audio_drama"
     genre: str = "auto"
+    recipe_id: str | None = None
     tone_style: str = "warm"
     audience_band: AudienceBand = AudienceBand.ADULT_18_35
     content_rating: ContentRating = ContentRating.TEEN
@@ -296,6 +297,7 @@ class PlanPreview(WorkflowModel):
     requires_confirmation: bool = True
     source_reference: ResolvedSourceReference | None = None
     template_snapshot: dict[str, Any] | None = None
+    strategy_snapshot: dict[str, Any] | None = None
     plan: PlanContent
     resolved_preferences: CreationPreferences
     character_snapshots: list[CharacterSnapshot] = Field(default_factory=list)

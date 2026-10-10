@@ -7,9 +7,13 @@ layers should depend on these schemas and services rather than LangGraph state.
 from .schemas import *  # noqa: F401,F403
 from .service import StoryWorkflowService
 from .repository import InMemoryWorkflowRepository, SqlAlchemyWorkflowRepository
+from .strategy import ResolvedStoryStrategy, StoryStrategyResolver, StrategyConflictError
 
 __all__ = [
     "StoryWorkflowService",
     "InMemoryWorkflowRepository",
     "SqlAlchemyWorkflowRepository",
+    "ResolvedStoryStrategy",
+    "StoryStrategyResolver",
+    "StrategyConflictError",
 ]
