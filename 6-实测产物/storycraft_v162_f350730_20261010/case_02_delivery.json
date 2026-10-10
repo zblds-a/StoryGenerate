@@ -1,0 +1,1306 @@
+{
+  "story_id": "8d88cc8e3fd54ebcb138cfa98538a81d",
+  "story_version_id": "de630e04c95a4c498d9df5fbffd0b5a6",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+  "approved_plan_revision": 2,
+  "title": "寻星指南",
+  "summary": "高三学生林夏和好友陈宇在闭馆后的图书馆蹲守一本每晚自动归位的《寻星指南》，试图抓住“幽灵”，却意外发现了好友为她制造的温暖奇迹。",
+  "preview_blurb": "闭馆后的图书馆里，一本神秘的书每晚都会自动归位。为了证明生活还在掌控之中，林夏决定设下陷阱抓住这个“幽灵”，却没想到真相远比超自然现象更出人意料。",
+  "tags": [
+    "轻悬疑",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "outline": {
+    "title": "寻星指南",
+    "premise": "高三学生林夏和好友陈宇在闭馆后的图书馆蹲守一本每晚自动归位的《寻星指南》，试图抓住“幽灵”，却意外发现了好友为她制造的温暖奇迹。",
+    "theme": "真正的奇迹不是超自然现象，而是朋友为了守护你的信念而付出的笨拙努力。",
+    "beginning": "林夏和陈宇在闭馆后的图书馆发现《寻星指南》再次自动归位，林夏决定设下陷阱抓住这个“幽灵”，以证明自己对生活仍有掌控力。",
+    "development": "陷阱失败后，林夏借机发泄考试失利的焦虑。陈宇引导她发现书中每次归位都会多出的折角和左手铅笔留言，线索逐渐指向陈宇自己。",
+    "climax": "林夏通过陈宇手腕的膏药识破真相，陈宇坦白自己每天偷偷藏书又放回，只为兑现林夏“看到奇迹就能考好”的玩笑话。林夏面临逃避与面对的选择。",
+    "ending": "林夏选择接受奇迹并面对现实，写下回复后将书轻轻推回书架。两人在温暖的余韵中离开，书本静静立在原处。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "第三排书架的奇迹",
+        "core_goal": "揭开《寻星指南》自动归位的真相，完成林夏从焦虑自我怀疑到被友情治愈、主动选择面对现实的心理转变。",
+        "major_beats": [
+          "【0-3s】沉重的《寻星指南》砸在桌面上（突发音效），林夏急促喘息：“它又自己回来了！”",
+          "【3-10s】陈宇打开手电筒（咔哒声），光束扫过第三排书架。林夏咬牙发誓今晚必须抓住这个“幽灵”，证明自己的生活还没完全失控。",
+          "【10-30s】林夏在书页涂抹荧光粉并躲入暗处。书架后传来摩擦声，林夏猛地拉开挡板（音效断点），却发现只是流浪猫碰落了书，荧光粉沾了一手，紧张感瞬间泄气。",
+          "【30-120s】两人继续蹲守，林夏借机发泄模拟考失利的焦虑，觉得连书都在嘲弄她。陈宇引导她检查书本，林夏发现每次归位第42页都有折角，且多了一句左手铅笔写的“星星不怕黑夜”。陈宇提醒她注意纸面上深深的左手握笔压痕和淡淡的薄荷膏药味。",
+          "【120-170s】林夏闻到陈宇身上的薄荷味，注意到他左手腕的膏药，猛然醒悟。陈宇坦白自己每天偷偷藏书又放回，只为兑现她“看到奇迹就能考好”的玩笑话。林夏面临选择：是继续用“抓幽灵”逃避考试压力，还是接受这份人为的奇迹。",
+          "【170-180s】林夏选择面对现实，拿笔写下“奇迹已收到，接下来换我自己走”。她将书轻轻推入书架（书脊摩擦声呼应开场的砸桌声），两人并肩离开，微风吹动书页，温暖收束。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林夏",
+        "external_goal": "找出《寻星指南》自动归位的真相，以此证明自己还能掌控生活。",
+        "emotional_avoidance": "回避自己模拟考失利带来的自我怀疑和深层焦虑。",
+        "speech_style": "语速较快，喜欢用反问句掩饰不安，紧张时会反复确认细节（如“你确定吗？”“真的没有别人？”）。",
+        "relationship_stance": "依赖陈宇的陪伴，但在他面前强撑面子，不愿暴露脆弱。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陈宇",
+        "external_goal": "陪林夏寻找真相，并暗中引导她发现书里的留言，帮她重建自信。",
+        "emotional_avoidance": "回避直接说教或表达同情，怕伤害林夏的自尊心。",
+        "speech_style": "语调平稳，多用陈述句和引导性提问（如“你有没有注意过……”“如果换个角度想……”），受压时习惯用动作转移话题。",
+        "relationship_stance": "默默守护并支持林夏，愿意为了她的感受制造笨拙的“奇迹”。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "performance_plan": {
+      "sound_design": "突出图书馆闭馆后的空旷感。开场沉重的砸书声与结尾轻柔的推书声形成听觉与心理的对比呼应；使用手电筒开关声、流浪猫碰倒物品的声音、以及最后微风吹动书页的沙沙声来构建空间与情绪。",
+      "voice_direction": "林夏的情绪从紧绷、焦躁逐渐过渡到释怀和坚定；陈宇始终保持沉稳，但在坦白时带有一丝不好意思的温柔。"
+    },
+    "continuity_constraints": [
+      "《寻星指南》必须始终在第三排书架。",
+      "陈宇的左手腕膏药必须在前期有微小的音效或台词铺垫（如淡淡的薄荷膏药味）。",
+      "铅笔留言必须是左手书写，以匹配陈宇的左撇子设定。",
+      "开场沉重的砸书声必须在结尾有轻柔的推书声作为听觉呼应。"
+    ],
+    "change_summary": [
+      "林夏从相信“超自然奇迹”转变为相信“人为的温暖奇迹”。",
+      "林夏对模拟考失利的焦虑被陈宇的友情治愈，选择主动面对现实考试。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-7bab612f",
+      "index": 1,
+      "title": "第三排书架的奇迹",
+      "synopsis": "高三学生林夏和好友陈宇在闭馆后的图书馆蹲守一本每晚自动归位的《寻星指南》，试图抓住“幽灵”，却意外发现了好友为她制造的温暖奇迹。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 180,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "幽灵再现",
+          "location": "图书馆第三排书架",
+          "dramatic_goal": "林夏发现书再次归位，决定设下陷阱抓住“幽灵”，以证明自己还能掌控生活。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "沉重的《寻星指南》砸在桌面上",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "它又自己回来了！陈宇，你确定刚才没人经过第三排书架？真的没有别人？",
+              "emotion": "worried",
+              "tone_instruction": "语速偏快，前半句带出惊愕与急切，后半句连续追问时压低嗓音，强调求证感。",
+              "emphasis": [
+                {
+                  "span_text": "它又自己回来了！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "真的没有别人？",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 33,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "回来了！后微顿半秒换气，接陈宇时气息略紧。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "手电筒咔哒声，光束扫过书架",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "闭馆半小时了，连保安都巡过两轮。你还要抓这个‘幽灵’到几点？",
+              "emotion": "calm",
+              "tone_instruction": "语气平稳克制，陈述事实时咬字清晰，反问句尾音下沉，透出无奈与安抚。",
+              "emphasis": [
+                {
+                  "span_text": "闭馆半小时了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "到几点？",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 30,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "闭馆前留0.5秒空白，模拟刚放下物品后的开口。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "抓到底！连一本书都跟我作对，模拟考砸了，现在连个超自然现象都不给我个痛快。今晚我必须证明，我的生活还没完全失控！",
+              "emotion": "angry",
+              "tone_instruction": "前半句爆发式短促，中间叙述失利时气息发颤、语速加快，结尾誓言部分收紧喉头，字字用力。",
+              "emphasis": [
+                {
+                  "span_text": "抓到底！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "模拟考砸了",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 19,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "没完全失控！",
+                  "occurrence": 1,
+                  "start_char": 50,
+                  "end_char": 56,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "作对与砸了之间无停顿直接衔接，体现情绪堆叠；失控！后留1秒长气口。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "行，我陪你。不过你先把呼吸放平，手抖得连手电筒都拿不稳了。",
+              "emotion": "reassuring",
+              "tone_instruction": "语气柔和坚定，前半句干脆应允，后半句放缓节奏，用气声包裹建议，避免说教感。",
+              "emphasis": [
+                {
+                  "span_text": "我陪你",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "呼吸放平",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "行字轻吐即收，不过前微吸一口气，配合递物或轻拍节奏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "谁手抖了？我这是兴奋！你站远点，别挡住我的视线。",
+              "emotion": "calm",
+              "tone_instruction": "反问句略带急促与掩饰，自称兴奋时刻意拔高音调却气息虚浮，后半句恢复冷硬指令口吻。",
+              "emphasis": [
+                {
+                  "span_text": "谁手抖了？",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "别挡住我的视线。",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "兴奋！后快速换气一次，接你站远点时咬字加重，气息向前推。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "落空的陷阱",
+          "location": "图书馆第三排书架暗处",
+          "dramatic_goal": "林夏布置陷阱却扑空，紧张感泄气，但为了面子坚持继续蹲守。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "涂抹荧光粉的沙沙声，脚步声躲入暗处。书架后传来摩擦声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "有动静！来了！",
+              "emotion": "serious",
+              "tone_instruction": "气声贴近麦克风，咬字收紧，尾音收短不拖沓",
+              "emphasis": [
+                {
+                  "span_text": "有动静",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "来了",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 6,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "压低声音，紧张；前半句微顿半秒后接后半句，模拟屏息捕捉声响的状态",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "猛地拉开挡板声。猫叫声，书掉落声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "……一只猫？我满手都是荧光粉，就抓了个这？",
+              "emotion": "sad",
+              "tone_instruction": "叹口气开头，语气从错愕转为无奈自嘲，音量随情绪泄气逐渐降低",
+              "emphasis": [
+                {
+                  "span_text": "一只猫？",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "就抓了个这？",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 21,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首留0.5秒空白呼吸声，后半句尾音下沉不拖长",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "看来‘幽灵’有毛茸茸的尾巴。还要继续等吗？",
+              "emotion": "playful",
+              "tone_instruction": "语调微微上扬带笑意，后半句转为平稳询问，保持轻声陪伴感",
+              "emphasis": [
+                {
+                  "span_text": "毛茸茸的尾巴",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "继续等吗？",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "尾巴后微顿0.3秒，语气自然过渡到提问",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "等！它敢耍我，我就敢耗到底。去，把书捡起来，拍拍灰。",
+              "emotion": "serious",
+              "tone_instruction": "第一句干脆利落掷出，中间句压低嗓音强调决心，指令部分语气转硬但不失条理",
+              "emphasis": [
+                {
+                  "span_text": "等！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "耗到底",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "拍拍灰",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 25,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "等！后无停顿直接接下一分句，去字前换气一次，指令咬字加重",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "好。不过你涂荧光粉这招，真不怕把‘幽灵’毒死？",
+              "emotion": "playful",
+              "tone_instruction": "应答干脆，转折处语调微挑带调侃意味，尾音轻扬不显尖锐",
+              "emphasis": [
+                {
+                  "span_text": "荧光粉这招",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "毒死？",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 23,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "好。后留0.2秒间隙，后半句语速均匀，重音落在毒死上",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l8",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "荧光粉在暗处泛着幽绿的光，林夏的陷阱再次落空，紧绷的神经却迟迟无法放松。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳偏慢，音色放虚营造空间感，句末气息拉长不急于收尾",
+              "emphasis": [
+                {
+                  "span_text": "幽绿的光",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "迟迟无法放松",
+                  "occurrence": 1,
+                  "start_char": 29,
+                  "end_char": 35,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "全句采用中近麦距离录制，句间自然换气，避免机械断句",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "左手写下的奇迹",
+          "location": "图书馆第三排书架",
+          "dramatic_goal": "林夏发泄焦虑，陈宇引导她发现书中的线索，林夏识破陈宇就是制造奇迹的“幽灵”。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "是不是老天都在嘲笑我？数学大题抄错数，现在连这本书都每晚归位，故意看我笑话！",
+              "emotion": "angry",
+              "tone_instruction": "语速偏快，带着委屈与焦躁，后半句语气加重并带出质问感",
+              "emphasis": [
+                {
+                  "span_text": "老天都在嘲笑我",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "故意看我笑话",
+                  "occurrence": 1,
+                  "start_char": 31,
+                  "end_char": 37,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿半秒后急促开口，问句尾音上扬，感叹句尾音下沉收住",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "书不会嘲笑你。你注意过没，它每次归位，第42页都有个折角？",
+              "emotion": "calm",
+              "tone_instruction": "压低嗓音，语气平稳引导，后半句放缓并带上探究的停顿",
+              "emphasis": [
+                {
+                  "span_text": "第42页",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "折角",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 28,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "你注意过没后留白约0.5秒，引导对方视线聚焦书页",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "‘星星不怕黑夜’？这铅笔字怎么歪歪扭扭的，像左手写的？",
+              "emotion": "serious",
+              "tone_instruction": "念出引文时气息放轻，后半句转为疑惑，尾音微微拖长",
+              "emphasis": [
+                {
+                  "span_text": "星星不怕黑夜",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "左手写的",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "读引文时轻微吸气，疑问句前停顿0.3秒",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "摸摸纸面压痕。再闻闻，有没有淡淡的薄荷膏药味？",
+              "emotion": "serious",
+              "tone_instruction": "语气笃定简短，指令清晰，后半句放缓并带出试探性期待",
+              "emphasis": [
+                {
+                  "span_text": "纸面压痕",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "薄荷膏药味",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "第一句结尾干脆利落，第二句再闻闻后微顿，留出动作空间",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林夏凑近闻，倒吸一口凉气",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "薄荷味……陈宇，你左手腕贴的不就是这膏药吗？藏书的‘幽灵’是你？！",
+              "emotion": "surprised",
+              "tone_instruction": "前半句气息发颤、语速骤降，后半句猛然拔高音量，带着难以置信的质问",
+              "emphasis": [
+                {
+                  "span_text": "陈宇",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "幽灵",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "薄荷味后拉长停顿约1秒，模拟大脑飞速联想的过程，随后语流加快",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "嗯。你说看到奇迹就能考好。我变不出真奇迹，只能每天闭馆后把书推倒，再偷偷放回原处。",
+              "emotion": "tender",
+              "tone_instruction": "声音放柔，语速平缓，承认事实时语气诚恳，不带辩解色彩",
+              "emphasis": [
+                {
+                  "span_text": "真奇迹",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 20,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "偷偷放回原处",
+                  "occurrence": 1,
+                  "start_char": 34,
+                  "end_char": 40,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "嗯后短促换气，叙述过程保持平稳呼吸，句末自然收尾不拖音",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林夏看着陈宇沾着荧光粉的左手，眼眶红了，焦虑在这一刻找到了出口。",
+              "emotion": "calm",
+              "tone_instruction": "旁白音色平稳柔和，节奏舒缓，在找到了出口处略微加重以点明情绪转折",
+              "emphasis": [
+                {
+                  "span_text": "眼眶红了",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 19,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "找到了出口",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首正常起幅，眼眶红了后微顿0.5秒，为后续音乐或音效留出情感沉淀空间",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "并肩走向明天",
+          "location": "图书馆第三排书架",
+          "dramatic_goal": "林夏接受奇迹，写下回复并轻轻将书推回书架，两人温暖收束。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "你是个笨蛋吗？不过……谢谢你。奇迹我收到了，接下来，换我自己走。",
+              "emotion": "tender",
+              "tone_instruction": "前半句带点嗔怪与释然，停顿后语气转柔；后半句咬字清晰，语速放缓，传递坚定感",
+              "emphasis": [
+                {
+                  "span_text": "笨蛋",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "换我自己走",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 31,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "不过……处留0.5秒呼吸停顿，随后气息下沉接后半句",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "笔尖划过纸面声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "书脊轻轻摩擦书架的轻柔声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "走吧，回家。明天还要考试呢。",
+              "emotion": "reassuring",
+              "tone_instruction": "语气平稳温和，尾音微微上扬带出鼓励意味，不显催促",
+              "emphasis": [
+                {
+                  "span_text": "回家",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "考试",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 12,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "走吧后轻吸一口气，衔接自然，无多余停顿",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "嗯。这次，我绝不会抄错数了。",
+              "emotion": "serious",
+              "tone_instruction": "应答干脆，后半句压低嗓音加重咬字，体现破釜沉舟的笃定",
+              "emphasis": [
+                {
+                  "span_text": "这次",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "绝不会",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 9,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "嗯字短促收住，换气后直接切入正题，不拖泥带水",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "微风吹动书页的沙沙声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l7",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "书本静静立在第三排书架。微风吹过，书页沙沙作响，仿佛在轻声回应着两个并肩离开的少年。",
+              "emotion": "calm",
+              "tone_instruction": "语速舒缓，音色放轻，句末少年二字气息托住，营造余韵",
+              "emphasis": [
+                {
+                  "span_text": "静静",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "轻声回应",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 31,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "两句之间留1秒环境音空白，叙述时保持口型距离麦克风约15厘米以控制近讲效应",
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林夏在闭馆后的图书馆试图抓住《寻星指南》自动归位的“幽灵”，却意外发现这是好友陈宇为了缓解她考试焦虑而制造的笨拙奇迹。林夏最终放下逃避，选择直面现实。",
+      "ending_hook": "书本静静立在第三排书架，等待着下一次被翻开。",
+      "fact_delta": [
+        {
+          "fact": "《寻星指南》自动归位的真相",
+          "change": "从林夏认为的超自然现象，揭晓为陈宇每天闭馆后偷偷藏书又放回的举动。"
+        },
+        {
+          "fact": "书中的隐藏留言",
+          "change": "林夏发现第42页有陈宇用左手写的铅笔字‘星星不怕黑夜’及深深的压痕。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "character_1": "林夏",
+          "character_2": "陈宇",
+          "change": "林夏从强撑面子、回避脆弱，转变为接纳陈宇的默默守护，两人关系更加坦诚与紧密。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "《寻星指南》自动归位的真相",
+        "林夏对模拟考失利的焦虑与自我怀疑"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "《寻星指南》自动归位的真相",
+        "change": "从林夏认为的超自然现象，揭晓为陈宇每天闭馆后偷偷藏书又放回的举动。"
+      },
+      {
+        "fact": "书中的隐藏留言",
+        "change": "林夏发现第42页有陈宇用左手写的铅笔字‘星星不怕黑夜’及深深的压痕。"
+      }
+    ],
+    "relationships": [
+      {
+        "character_1": "林夏",
+        "character_2": "陈宇",
+        "change": "林夏从强撑面子、回避脆弱，转变为接纳陈宇的默默守护，两人关系更加坦诚与紧密。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 22,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.2"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "d40414a23a9c4c6b91258a0b8f07e9d9",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:30:13.604368+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3913,
+      "output_tokens": 4066,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2827,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "28ef2c90-7c77-44b6-812f-20f2c689e87e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 73955,
+      "completed_at": "2026-10-10T01:31:27.559941+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "c1dd727f165f4e06852b1b2b6a095b2e",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:31:27.848406+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5165,
+      "output_tokens": 3675,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2354,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "db664525-441b-4cbd-a34e-74f75b406250",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 42246,
+      "completed_at": "2026-10-10T01:32:10.095023+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "94f948589b9247f7a05e25cb83eb696c",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "ae7b5b3bf284427fbbcc3483b9a2110f",
+      "provider": "openai_compat",
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:32:11.594341+00:00",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 6475,
+      "output_tokens": 6811,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4593,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "7cb6c7b2-1073-495b-ae0c-e7e7148881bb",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 118309,
+      "completed_at": "2026-10-10T01:34:09.904396+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "94f948589b9247f7a05e25cb83eb696c",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "f49c85f1985f4c4d88e3bb0c833648d4",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:34:09.928981+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2291,
+      "output_tokens": 4579,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3619,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "d09bc03e-46b5-4350-aab0-3610d2a9810e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 30494,
+      "completed_at": "2026-10-10T01:34:40.423292+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "94f948589b9247f7a05e25cb83eb696c",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "efa34230b5014c318517ece2862a546f",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:34:40.435337+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2355,
+      "output_tokens": 4260,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3184,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "fb3223c3-fa21-43e4-9301-6b91ec04f7a0",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 28848,
+      "completed_at": "2026-10-10T01:35:09.284256+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "94f948589b9247f7a05e25cb83eb696c",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "c7cdafa7822c438a8ecf332c3d2c3ffa",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:35:09.296232+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2482,
+      "output_tokens": 5574,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4356,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "d1444d8a-5c59-46d5-bd46-91b18566cdaa",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 34907,
+      "completed_at": "2026-10-10T01:35:44.204803+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "94f948589b9247f7a05e25cb83eb696c",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "2236293764ad417885161fa8d57969fd",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:35:44.216337+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2160,
+      "output_tokens": 3960,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3336,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "0dffa86c-1b22-481e-880f-e2f5179ed247",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 29085,
+      "completed_at": "2026-10-10T01:36:13.302285+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "94f948589b9247f7a05e25cb83eb696c",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "884d60d0f1ab4276926414bde8636824",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:36:13.309442+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 8681,
+      "output_tokens": 1855,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1813,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "0d75a0c7-a03a-4144-a97f-50d3af674d52",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 14431,
+      "completed_at": "2026-10-10T01:36:27.741417+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T01:36:13.304986Z"
+}

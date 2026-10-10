@@ -1,0 +1,219 @@
+{
+  "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+  "plan_revision": 2,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "归位的《百年孤独》",
+    "premise": "校图书馆每晚有一本书自动归位，两位朋友在深夜蹲守抓鬼，却意外揭开了一个关于默默守护的温暖真相。",
+    "theme": "真正的关心往往藏在笨拙的掩饰与微小的行动之中，而最好的回应是看见并珍惜这份心意。",
+    "beginning": "深夜的图书馆，林晓布置的鱼线铃铛突然狂响，她坚信那本《百年孤独》又“自动归位”了，而陈宇只想赶紧结束这场无聊的抓鬼游戏。",
+    "development": "林晓在书架下发现了一本同样厚度的旧杂志，并通过杂志上的美工刀划痕和掉落的赔偿单，步步紧逼质问陈宇，陈宇试图掩饰却破绽百出。",
+    "climax": "陈宇坦白真相：林晓每天拿这本书垫话剧道具导致书脊开裂，他为了不让林晓被罚款，每天闭馆前用旧杂志替换下真书，拿回家修补后再偷偷换回。",
+    "ending": "林晓做出明确选择，放弃用真书垫道具并妥善归位，随后主动拆除抓鬼机关。两人在铃铛的余音中达成默契，温暖收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "归位的《百年孤独》",
+        "core_goal": "揭开书本自动归位的真相，完成两人关系的温情和解与明确的行动选择。",
+        "major_beats": [
+          "[0-10s] 突发钩子与困境交代：深夜图书馆极度安静中，绑在书架上的鱼线铃铛突然狂响，伴随书本砸桌的闷响。林晓惊呼《百年孤独》又“自己飞回去了”，陈宇无奈抱怨凌晨一点还要陪她抓鬼。",
+          "[10-30s] 发现异常与第一次反转：林晓打开手电筒照向书架，发现书完好无损，但地上掉了一本同样厚度的旧杂志。林晓捡起杂志，发现边缘有熟悉的美工刀划痕，立刻怀疑是陈宇捣鬼，悬疑感转为人为谜团。",
+          "[30-120s] 质问与拉扯：林晓翻开杂志，掉出陈宇的道具设计图和一张“书籍损坏赔偿单”。陈宇试图用“别人垫桌角”掩饰，林晓步步紧逼，指出赔偿单上的签名和书脊的透明胶带痕迹，陈宇结巴清嗓子，陷入沉默。",
+          "[120-170s] 真相揭示与明确选择：陈宇坦白，林晓每天拿书垫话剧道具导致书脊开裂，他怕她被罚款，每天用旧杂志替换真书拿回家修补。林晓意识到自己的粗心，做出明确选择：她郑重地将真书推回书架深处发出沙沙声，并决定明天带真木头当道具。",
+          "[170-180s] 结尾呼应与情感收束：林晓伸手扯下书架上的鱼线，铃铛发出最后一声清脆的“叮当”响，呼应开场的突发铃声，象征“抓鬼”结束。陈宇轻笑答应帮忙给木头刷漆。两人收拾背包，脚步声伴随关灯声，温暖平稳收尾。"
+        ],
+        "ending": "温暖收束。林晓理解了陈宇的付出并做出改变，主动拆除机关呼应开场，两人带着轻松默契的心情离开图书馆，不留悬念。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林晓",
+        "external_goal": "查明图书馆“自动归位”的灵异真相，确保话剧道具不出错。",
+        "emotional_avoidance": "害怕自己的粗心大意给别人添麻烦，所以用“抓鬼”的夸张行为来掩饰内心的不安与焦虑。",
+        "speech_style": "语速快，喜欢用反问句和夸张的比喻，紧张时会反复确认细节（如“你确定？真的？没看错？”），情绪激动时声音会微微发颤。",
+        "relationship_stance": "依赖陈宇的包容，表面上喜欢指挥他、嫌弃他怕麻烦，但内心其实非常在意他的看法，一旦意识到对方在为自己付出会立刻软化并做出实质性改变。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陈宇",
+        "external_goal": "阻止林晓继续熬夜“抓鬼”，并掩盖自己偷偷换书修补的事实。",
+        "emotional_avoidance": "避免正面冲突和煽情，害怕被林晓觉得“多管闲事”或“太刻意”，习惯用敷衍来掩饰关心。",
+        "speech_style": "语调慵懒，常用短句和叹气，习惯用“行行行”“大姐”来妥协，被拆穿时会结巴、清嗓子或生硬地转移话题。",
+        "relationship_stance": "默默兜底，表面上嫌麻烦、吐槽林晓神经质，实际上比林晓自己更上心她的话剧，愿意做那些不讨好的琐碎工作，并在对方改变时给予支持。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "performance_plan": {
+      "sound_design": "强调环境音的对比与呼应：深夜图书馆的极度安静与鱼线铃铛的清脆声、书本砸桌的闷响、纸张摩擦的沙沙声形成听觉焦点。结尾拆除鱼线的铃声需与开场铃声形成音色上的呼应。",
+      "voice_direction": "林晓的语速从急促紧张逐渐转为轻柔释然，最后拆除机关时动作干脆；陈宇从慵懒敷衍转为被拆穿时的局促，最后是放松的轻笑与笃定。"
+    },
+    "continuity_constraints": [
+      "《百年孤独》和旧杂志的厚度必须一致，这是替换成立的前提。",
+      "鱼线和铃铛是林晓布置的机关，必须在开场时发出声音，并在结尾被主动拆除发出声音以呼应开场。",
+      "赔偿单和美工刀划痕是锁定陈宇的关键物证，必须在台词中明确提及并作为推理依据。",
+      "林晓最终必须做出明确的物理选择（推书归位、决定换木头道具），不能仅停留在口头感动。"
+    ],
+    "change_summary": [
+      "根据修订反馈，强化了林晓在得知真相后的最后一次角色选择，增加了她郑重推书归位和决定更换木头道具的具体动作与台词。",
+      "在结尾处增加了林晓主动拆除鱼线机关的动作，让铃铛声自然呼应开场的突发听觉事件，使结构更完整。",
+      "严格遵循 ending_contract，将原 beat_sheet 中 S6 的“戛然而止”调整为情感高潮后的平稳收束，确保不留悬念且余韵完整。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "轻悬疑",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "b76b8192b6104e52aea97e212dd765a9",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:49:56.079367+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4087,
+      "output_tokens": 4764,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3380,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "95a13498-2cee-44f2-ad62-31b11775721b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 82132,
+      "completed_at": "2026-10-10T01:51:18.212560+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "dc27b6a262fa4c17bca408a750fc1673",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:51:18.538142+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5485,
+      "output_tokens": 3016,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1467,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ff1040cb-80c1-4ce6-80a2-322da9ff9257",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 34982,
+      "completed_at": "2026-10-10T01:51:53.520336+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.4"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "502c5a034eed89e9446bbe5768c2b8f81a6300de38222f14bd79c70126f12d26",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:51:18.213125Z",
+  "updated_at": "2026-10-10T01:51:53.520855Z"
+}

@@ -1,0 +1,236 @@
+{
+  "plan_id": "47cda30c79e24b27859416471d65cbf7",
+  "plan_revision": 2,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "归位的《小王子》",
+    "premise": "高三学生林晓和好友陈宇在闭馆后的图书馆调查一本书自动归位的“灵异”事件，最终发现这是已故爷爷留下的温暖守护，并勇敢做出告别与前行的选择。",
+    "theme": "爱与记忆的延续，面对压力与失去的勇气，以及朋友间默默的守护。",
+    "beginning": "闭馆后的图书馆，林晓和陈宇目睹《小王子》自动归位，决定查明真相。",
+    "development": "两人发现机关和定时器，线索指向林晓已故的爷爷，揭开爷爷生前拜托老馆长设置的秘密。",
+    "climax": "录音笔播放出爷爷的遗言，揭示书本归位是为了提醒林晓早点回家，林晓面临是否关闭机关的内心抉择。",
+    "ending": "林晓选择按下停止键并亲手将书归位，呼应开场；老馆长通过广播送上关怀，陈宇发现爷爷留给自己的隐藏留言，故事在温暖的情感高潮中结束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "归位的《小王子》",
+        "core_goal": "查明书本自动归位的真相，完成情感治愈与人物成长选择。",
+        "major_beats": [
+          "【0-3s 黄金钩子】寂静的图书馆内，突发清晰的“咔哒”一声脆响，紧接着是书本滑入书架的沉闷摩擦声，打破平静。",
+          "【3-10s 矛盾三要素】林晓颤抖着指出《小王子》又自己回去了，陈宇打开手电筒照亮C区，表示今晚非要查出是谁在装神弄鬼，确立调查目标。",
+          "【10-30s 第一次反转】陈宇猛地拉开书架旁的杂物柜，里面没人，却掉出一个运转的蓝牙音箱和定时器。林晓刚松口气，陈宇捡起定时器，发现上面刻着林晓已故爷爷的名字，伴随音效重音断点，悬疑转向情感。",
+          "【30-120s 中段推进】陈宇检查定时器发现它连着微型滑轨，两人顺着电线找到旧工作台和日记。陈宇念出日记揭示爷爷拜托老馆长装机关陪伴林晓，林晓哭诉爷爷不懂机械，加深情感矛盾与事实拼图。",
+          "【120-170s 升级/二次反转】工作台暗格弹开掉出录音笔，陈宇按下播放，爷爷录音指示“若不再需要躲避，就亲手把书放回并按下停止键”。林晓面临保留机关自欺欺人或接受现实的选择，最终深吸一口气按下停止键，完成人物成长。",
+          "【170-180s 强钩子】林晓拿起《小王子》亲手推入书架，清脆的“咔哒”声呼应开场。老馆长广播响起，陈宇翻看定时器背面念出隐藏留言“致陈宇，谢谢你替我保护她”，情感反转将情绪推向最高潮后戛然而止。"
+        ],
+        "ending": "林晓解开心结并做出勇敢的选择，感受到爷爷跨越生死的爱与朋友的守护，在老馆长的温暖广播中结束。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林晓",
+        "external_goal": "查明图书馆书本自动归位的真相，缓解高三的焦虑与迷茫。",
+        "emotional_avoidance": "逃避对已故爷爷的深切思念，以及面对高考压力的脆弱。",
+        "speech_style": "敏感、容易紧张，语速较快，带有轻微的颤音。",
+        "relationship_stance": "在恐惧时依赖陈宇的勇敢，内心深处对爷爷充满怀念与愧疚。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陈宇",
+        "external_goal": "保护林晓免受惊吓，用科学手段查明“闹鬼”真相。",
+        "emotional_avoidance": "害怕面对朋友的悲伤情绪，习惯用果断的行动和玩笑来掩饰关心。",
+        "speech_style": "果断、干脆，语速平稳，喜欢用轻松的语气化解紧张气氛。",
+        "relationship_stance": "默默守护林晓，是她探索真相时坚实的后盾和情感支撑。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-3",
+        "story_name": "爷爷",
+        "performer_id": "voice-3",
+        "medium": "recording",
+        "dramatic_purpose": "通过录音笔播放遗言，揭示书本归位的真正目的，并引导林晓做出最终选择，完成情感高潮与治愈。"
+      },
+      {
+        "role_id": "role-4",
+        "story_name": "老馆长",
+        "performer_id": "voice-4",
+        "medium": "broadcast",
+        "dramatic_purpose": "在结尾通过闭馆广播传递关怀，强化温暖基调，为故事画上圆满句号。"
+      }
+    ],
+    "performance_plan": {
+      "sound_design": "重点突出图书馆闭馆后的空旷环境音（如空调底噪、远处微弱的虫鸣）。书本归位的摩擦声需清晰且有质感。录音笔播放时需加入轻微的电流底噪和磁带感。",
+      "music_cue": "前半段使用带有轻微悬疑感的拨弦乐，120秒后转为温暖、舒缓的钢琴与大提琴合奏，结尾处音乐推向饱满的高潮后迅速收束。"
+    },
+    "continuity_constraints": [
+      "《小王子》是唯一自动归位的书，且始终在C区书架。",
+      "爷爷已故一年，生前不懂机械，机关是由老馆长协助安装的。",
+      "林晓和陈宇是高三学生，面临高考压力。",
+      "定时器背面有爷爷留给陈宇的隐藏留言，作为最后的情感反转钩。"
+    ],
+    "change_summary": [
+      "将占位符角色1和角色2具体化为高三学生林晓和陈宇。",
+      "设计了书本自动归位的物理机关（滑轨与定时器）以符合轻悬疑和现实逻辑。",
+      "将悬疑真相落地为爷爷生前留下的温暖守护，契合warm基调与teen受众。",
+      "根据修订反馈，在S5明确了林晓“按下停止键”的主动选择，并在S6通过“咔哒”声呼应开场，同时增加定时器背面的情感反转钩，将情绪推向最高潮。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "轻悬疑",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "47cda30c79e24b27859416471d65cbf7",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "fde3933b01b44bcebb1440c1ab4c00d5",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:05:34.003245+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3623,
+      "output_tokens": 5138,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3778,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "8e0fa624-fdff-460c-9412-d10472e5b514",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 73528,
+      "completed_at": "2026-10-10T01:06:47.531563+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "47cda30c79e24b27859416471d65cbf7",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "9bc4175955394d67a68e68a3ec205aba",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:06:47.798625+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4997,
+      "output_tokens": 4404,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2902,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "f14374b4-33d4-4f53-a486-c4295c114d49",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 49809,
+      "completed_at": "2026-10-10T01:07:37.608263+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "26ce52dd0c1c384bb030ac20f12621510a75642acddad19d930e931b1a284fea",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:06:47.533976Z",
+  "updated_at": "2026-10-10T01:07:37.610119Z"
+}

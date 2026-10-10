@@ -1,0 +1,968 @@
+{
+  "story_id": "6851d4fffa7e4d1a8fe9f77006084caf",
+  "story_version_id": "93934b88c4a8485b9c3e613222f0247f",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+  "approved_plan_revision": 2,
+  "title": "归位的《百年孤独》",
+  "summary": "校图书馆每晚有一本书自动归位，两位朋友在深夜蹲守抓鬼，却意外揭开了一个关于默默守护的温暖真相。",
+  "preview_blurb": "深夜图书馆的铃铛再次狂响，那本总会自动归位的《百年孤独》背后，究竟藏着怎样的秘密？",
+  "tags": [
+    "轻悬疑",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "outline": {
+    "title": "归位的《百年孤独》",
+    "premise": "校图书馆每晚有一本书自动归位，两位朋友在深夜蹲守抓鬼，却意外揭开了一个关于默默守护的温暖真相。",
+    "theme": "真正的关心往往藏在笨拙的掩饰与微小的行动之中，而最好的回应是看见并珍惜这份心意。",
+    "beginning": "深夜的图书馆，林晓布置的鱼线铃铛突然狂响，她坚信那本《百年孤独》又“自动归位”了，而陈宇只想赶紧结束这场无聊的抓鬼游戏。",
+    "development": "林晓在书架下发现了一本同样厚度的旧杂志，并通过杂志上的美工刀划痕和掉落的赔偿单，步步紧逼质问陈宇，陈宇试图掩饰却破绽百出。",
+    "climax": "陈宇坦白真相：林晓每天拿这本书垫话剧道具导致书脊开裂，他为了不让林晓被罚款，每天闭馆前用旧杂志替换下真书，拿回家修补后再偷偷换回。",
+    "ending": "林晓做出明确选择，放弃用真书垫道具并妥善归位，随后主动拆除抓鬼机关。两人在铃铛的余音中达成默契，温暖收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "归位的《百年孤独》",
+        "core_goal": "揭开书本自动归位的真相，完成两人关系的温情和解与明确的行动选择。",
+        "major_beats": [
+          "[0-10s] 突发钩子与困境交代：深夜图书馆极度安静中，绑在书架上的鱼线铃铛突然狂响，伴随书本砸桌的闷响。林晓惊呼《百年孤独》又“自己飞回去了”，陈宇无奈抱怨凌晨一点还要陪她抓鬼。",
+          "[10-30s] 发现异常与第一次反转：林晓打开手电筒照向书架，发现书完好无损，但地上掉了一本同样厚度的旧杂志。林晓捡起杂志，发现边缘有熟悉的美工刀划痕，立刻怀疑是陈宇捣鬼，悬疑感转为人为谜团。",
+          "[30-120s] 质问与拉扯：林晓翻开杂志，掉出陈宇的道具设计图和一张“书籍损坏赔偿单”。陈宇试图用“别人垫桌角”掩饰，林晓步步紧逼，指出赔偿单上的签名和书脊的透明胶带痕迹，陈宇结巴清嗓子，陷入沉默。",
+          "[120-170s] 真相揭示与明确选择：陈宇坦白，林晓每天拿书垫话剧道具导致书脊开裂，他怕她被罚款，每天用旧杂志替换真书拿回家修补。林晓意识到自己的粗心，做出明确选择：她郑重地将真书推回书架深处发出沙沙声，并决定明天带真木头当道具。",
+          "[170-180s] 结尾呼应与情感收束：林晓伸手扯下书架上的鱼线，铃铛发出最后一声清脆的“叮当”响，呼应开场的突发铃声，象征“抓鬼”结束。陈宇轻笑答应帮忙给木头刷漆。两人收拾背包，脚步声伴随关灯声，温暖平稳收尾。"
+        ],
+        "ending": "温暖收束。林晓理解了陈宇的付出并做出改变，主动拆除机关呼应开场，两人带着轻松默契的心情离开图书馆，不留悬念。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林晓",
+        "external_goal": "查明图书馆“自动归位”的灵异真相，确保话剧道具不出错。",
+        "emotional_avoidance": "害怕自己的粗心大意给别人添麻烦，所以用“抓鬼”的夸张行为来掩饰内心的不安与焦虑。",
+        "speech_style": "语速快，喜欢用反问句和夸张的比喻，紧张时会反复确认细节（如“你确定？真的？没看错？”），情绪激动时声音会微微发颤。",
+        "relationship_stance": "依赖陈宇的包容，表面上喜欢指挥他、嫌弃他怕麻烦，但内心其实非常在意他的看法，一旦意识到对方在为自己付出会立刻软化并做出实质性改变。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陈宇",
+        "external_goal": "阻止林晓继续熬夜“抓鬼”，并掩盖自己偷偷换书修补的事实。",
+        "emotional_avoidance": "避免正面冲突和煽情，害怕被林晓觉得“多管闲事”或“太刻意”，习惯用敷衍来掩饰关心。",
+        "speech_style": "语调慵懒，常用短句和叹气，习惯用“行行行”“大姐”来妥协，被拆穿时会结巴、清嗓子或生硬地转移话题。",
+        "relationship_stance": "默默兜底，表面上嫌麻烦、吐槽林晓神经质，实际上比林晓自己更上心她的话剧，愿意做那些不讨好的琐碎工作，并在对方改变时给予支持。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "performance_plan": {
+      "sound_design": "强调环境音的对比与呼应：深夜图书馆的极度安静与鱼线铃铛的清脆声、书本砸桌的闷响、纸张摩擦的沙沙声形成听觉焦点。结尾拆除鱼线的铃声需与开场铃声形成音色上的呼应。",
+      "voice_direction": "林晓的语速从急促紧张逐渐转为轻柔释然，最后拆除机关时动作干脆；陈宇从慵懒敷衍转为被拆穿时的局促，最后是放松的轻笑与笃定。"
+    },
+    "continuity_constraints": [
+      "《百年孤独》和旧杂志的厚度必须一致，这是替换成立的前提。",
+      "鱼线和铃铛是林晓布置的机关，必须在开场时发出声音，并在结尾被主动拆除发出声音以呼应开场。",
+      "赔偿单和美工刀划痕是锁定陈宇的关键物证，必须在台词中明确提及并作为推理依据。",
+      "林晓最终必须做出明确的物理选择（推书归位、决定换木头道具），不能仅停留在口头感动。"
+    ],
+    "change_summary": [
+      "根据修订反馈，强化了林晓在得知真相后的最后一次角色选择，增加了她郑重推书归位和决定更换木头道具的具体动作与台词。",
+      "在结尾处增加了林晓主动拆除鱼线机关的动作，让铃铛声自然呼应开场的突发听觉事件，使结构更完整。",
+      "严格遵循 ending_contract，将原 beat_sheet 中 S6 的“戛然而止”调整为情感高潮后的平稳收束，确保不留悬念且余韵完整。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-a5ba1e35",
+      "index": 1,
+      "title": "归位的《百年孤独》",
+      "synopsis": "深夜的图书馆里，林晓为了抓住让《百年孤独》自动归位的“鬼”，布下铃铛机关，却意外通过一本旧杂志和赔偿单，揭开了陈宇默默替她修补损坏书籍的温暖真相。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 161,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "突发钩子与发现异常",
+          "location": "深夜的校图书馆",
+          "dramatic_goal": "通过铃铛响动引出抓鬼困境，并让林晓发现旧杂志这一关键线索，将悬疑转向人为谜团。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "深夜极度安静，鱼线铃铛突然狂响，伴随书本砸桌的闷响。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "叮当！你听见没？《百年孤独》又自己飞回去了！我就说这书架有问题，绝对有东西在动！",
+              "emotion": "excited",
+              "tone_instruction": "语速加快，前半句带惊呼感，后半句压低声音强调绝对，营造悬疑氛围。",
+              "emphasis": [
+                {
+                  "span_text": "《百年孤独》又自己飞回去了",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 21,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "绝对有东西在动",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 39,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速快，情绪激动，带着紧张与兴奋；开头叮当后留0.2秒气口，随后连贯吐出，句尾动字气息上扬不拖音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "大姐，凌晨一点了，这破铃铛响了一晚上，我困得眼睛都睁不开了，哪来的鬼啊，赶紧收拾回宿舍吧。",
+              "emotion": "calm",
+              "tone_instruction": "咬字松散，句首大姐带无奈叹息，中间困得拉长音节表现疲惫，结尾语气放缓收束。",
+              "emphasis": [
+                {
+                  "span_text": "困得眼睛都睁不开了",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 29,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "赶紧收拾回宿舍吧",
+                  "occurrence": 1,
+                  "start_char": 36,
+                  "end_char": 44,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语调慵懒，带着无奈的叹气；大姐后微顿半拍，睁不开了处气息下沉，吧字轻声收尾不加重。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "手电筒开关声，翻找声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "不对！手电筒拿来！书完好无损，但地上怎么掉了一本旧杂志？厚度跟那本一模一样！边缘还有美工刀划痕……陈宇，这刀口怎么跟你平时削铅笔的习惯一模一样？你确定？真的？没看错吧？",
+              "emotion": "serious",
+              "tone_instruction": "前半句急促短促，划痕后停顿吸气，后半句逐层加压，连问时咬字清晰且逐渐收紧。",
+              "emphasis": [
+                {
+                  "span_text": "厚度跟那本一模一样！",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 38,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "你确定？真的？没看错吧？",
+                  "occurrence": 1,
+                  "start_char": 72,
+                  "end_char": 84,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "从疑惑转为步步紧逼，最后几句语速加快，反复确认；不对后急停接拿来，划痕处做短暂抽气停顿，三连问之间不留空白，直接推进。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "质问与拉扯",
+          "location": "深夜的校图书馆",
+          "dramatic_goal": "林晓通过杂志内的物证逼问陈宇，陈宇试图掩饰但破绽百出，最终陷入沉默。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "翻开杂志，纸张摩擦，掉落纸张声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "这杂志里夹着什么？道具设计图？还有一张……书籍损坏赔偿单？陈宇，上面怎么是你的签名！",
+              "emotion": "surprised",
+              "tone_instruction": "气息微促，读到“赔偿单”时停顿半拍，尾音带出难以置信的微颤。",
+              "emphasis": [
+                {
+                  "span_text": "道具设计图",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "你的签名",
+                  "occurrence": 1,
+                  "start_char": 37,
+                  "end_char": 41,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "震惊，声音微微发颤；吸气后语速放缓，“赔偿单”后留0.5秒空白再念人名。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "咳……那、那是别人垫桌角弄坏的，我顺手捡的，行行行，你别盯着我看了，赶紧把东西收起来。",
+              "emotion": "worried",
+              "tone_instruction": "开头清嗓压低喉位，“那、那是”处刻意卡顿，后半句语速加快试图掩盖心虚。",
+              "emphasis": [
+                {
+                  "span_text": "别人垫桌角弄坏的",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 15,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "赶紧把东西收起来",
+                  "occurrence": 1,
+                  "start_char": 34,
+                  "end_char": 42,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "结巴，清嗓子，生硬地转移话题；首字前加轻微清嗓动作，“行行行”连读时气息上浮，尾音收短。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "你撒谎！《百年孤独》书脊上贴的透明胶带，跟你这赔偿单上的批次完全一样！你每天闭馆前到底在干嘛？快说！",
+              "emotion": "angry",
+              "tone_instruction": "咬字加重，“你撒谎”三字短促爆发，中间长句保持压迫感平稳推进，结尾反问压低音量逼问。",
+              "emphasis": [
+                {
+                  "span_text": "透明胶带",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 19,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "到底在干嘛",
+                  "occurrence": 1,
+                  "start_char": 41,
+                  "end_char": 46,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语气锋利，不容置疑；“你撒谎”后不换气直接切入证据链，“快说”二字干脆利落切断余音。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "真相揭示与明确选择",
+          "location": "深夜的校图书馆",
+          "dramatic_goal": "陈宇坦白换书修补的真相，林晓意识到自己的粗心，做出推书归位和更换道具的明确物理选择。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "行行行，我说。你每天拿真书垫话剧道具，书脊都开裂了。我怕你被图书馆罚款，就用旧杂志替换下来，拿回家用胶水一点点粘好，第二天再偷偷换回去。",
+              "emotion": "calm",
+              "tone_instruction": "放弃防备，语速平稳，后半句语气转为温和笃定",
+              "emphasis": [
+                {
+                  "span_text": "书脊都开裂了",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 25,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "一点点粘好",
+                  "occurrence": 1,
+                  "start_char": 52,
+                  "end_char": 57,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "放弃掩饰，语气放松且笃定；句首“行行行”快速带过，后接短暂停顿换气，转入平稳叙述",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "你……你怎么不早说？我还以为闹鬼，天天拉着你熬夜蹲守，原来你一直在替我收拾烂摊子。",
+              "emotion": "sad",
+              "tone_instruction": "前半句迟疑微颤，后半句气息下沉，尾音放轻显出懊悔",
+              "emphasis": [
+                {
+                  "span_text": "怎么不早说",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "收拾烂摊子",
+                  "occurrence": 1,
+                  "start_char": 35,
+                  "end_char": 40,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "内疚，声音软化；“你……”处留0.5秒气口，后续句子连贯但音量渐弱",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "怕你觉得我多管闲事，又嫌我啰嗦呗。",
+              "emotion": "calm",
+              "tone_instruction": "语气随意带过，尾音微微上扬装作不在意，实则压低嗓音",
+              "emphasis": [
+                {
+                  "span_text": "多管闲事",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "啰嗦呗",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "轻描淡写，掩饰关心；句末“呗”字轻声收尾，不留明显停顿，直接衔接下一句情绪",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "书本推入书架深处的沙沙声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "对不起。我把书推回深处了，听见沙沙声没？明天我带真木头当道具，绝对不拿书垫了。",
+              "emotion": "serious",
+              "tone_instruction": "开篇道歉清晰沉稳，问句转为期待确认，结尾咬字加重显坚定",
+              "emphasis": [
+                {
+                  "span_text": "对不起",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "绝对不拿书垫了",
+                  "occurrence": 1,
+                  "start_char": 31,
+                  "end_char": 38,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "郑重，带着释然与决心；“对不起。”后停0.3秒，呼吸平稳后继续；问句后微顿，最后一句字字清晰",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "结尾呼应与情感收束",
+          "location": "深夜的校图书馆",
+          "dramatic_goal": "林晓主动拆除机关呼应开场，两人达成默契，温暖平稳地离开图书馆。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "扯下鱼线，铃铛发出最后一声清脆的叮当响。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "这抓鬼游戏彻底结束了。鱼线我拆了，铃铛也收起来，以后再也不瞎折腾了。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳干脆，前半句果断收尾，后半句语气放缓带出释然",
+              "emphasis": [
+                {
+                  "span_text": "彻底结束了",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "再也不瞎折腾了",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 33,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "动作干脆，语气轻松；句首微顿后直接起音，句尾自然收声不留余韵",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "木头记得买厚点的，明天我带砂纸，帮你把道具刷得平平整整的，保证不出错。",
+              "emotion": "reassuring",
+              "tone_instruction": "带着轻微笑意，语气温和笃定，重点词咬字清晰不拖沓",
+              "emphasis": [
+                {
+                  "span_text": "厚点的",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "保证不出错",
+                  "occurrence": 1,
+                  "start_char": 29,
+                  "end_char": 34,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "轻笑，给予支持；句间保持呼吸连贯，读到“保证”时气息微提加重",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "好，一言为定。谢谢你，陈宇。走吧，关灯，我们回家。",
+              "emotion": "tender",
+              "tone_instruction": "声音放柔，语气诚恳平和，“谢谢你”处稍作停顿以示郑重",
+              "emphasis": [
+                {
+                  "span_text": "谢谢你",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "回家",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 24,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "真诚，温暖；“好”字短促应答后接气口，“走吧”前留半秒静默再启齿",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "脚步声，关灯声，门关上。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林晓在深夜图书馆通过铃铛机关和旧杂志上的物证，揭开了《百年孤独》自动归位的真相：陈宇为了替她掩盖损坏书籍的过失，每天偷偷换书修补。林晓深受触动，郑重将书归位并决定更换道具，最终拆除机关，两人在默契与温暖中结束了一场乌龙“抓鬼”。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "《百年孤独》自动归位的真相",
+          "change": "从灵异事件确认为陈宇用旧杂志替换并拿回家修补的人为行为。"
+        },
+        {
+          "fact": "话剧道具材质",
+          "change": "林晓决定放弃使用真书垫道具，改为使用真木头。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林晓与陈宇",
+          "change": "林晓从怀疑、质问转为理解与感激；陈宇的默默付出被看见，两人从单方面的包容升级为双向的默契与支持。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "图书馆《百年孤独》自动归位的灵异谜团。",
+        "林晓对陈宇半夜行为的怀疑与抓鬼执念。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "《百年孤独》自动归位的真相",
+        "change": "从灵异事件确认为陈宇用旧杂志替换并拿回家修补的人为行为。"
+      },
+      {
+        "fact": "话剧道具材质",
+        "change": "林晓决定放弃使用真书垫道具，改为使用真木头。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林晓与陈宇",
+        "change": "林晓从怀疑、质问转为理解与感激；陈宇的默默付出被看见，两人从单方面的包容升级为双向的默契与支持。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 13,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": false,
+  "status": "CANDIDATE",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.4"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "b76b8192b6104e52aea97e212dd765a9",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:49:56.079367+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4087,
+      "output_tokens": 4764,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3380,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "95a13498-2cee-44f2-ad62-31b11775721b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 82132,
+      "completed_at": "2026-10-10T01:51:18.212560+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "dc27b6a262fa4c17bca408a750fc1673",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:51:18.538142+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5485,
+      "output_tokens": 3016,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1467,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ff1040cb-80c1-4ce6-80a2-322da9ff9257",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 34982,
+      "completed_at": "2026-10-10T01:51:53.520336+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "2352e36ae88844d687968800e47c3cbb",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "2e4daf9e567d41b4a61d5838b6daa26f",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:51:55.043536+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 7131,
+      "output_tokens": 7376,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5377,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "4d79b74d-0f8b-4eca-9196-3aa42440d05c",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 72439,
+      "completed_at": "2026-10-10T01:53:07.482710+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "2352e36ae88844d687968800e47c3cbb",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "973fb09dfb1a4b0eb865b18b6fd15cf2",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:53:07.503087+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2203,
+      "output_tokens": 5290,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4706,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "cc8497c0-5136-4d6e-be3c-c132b8511ca4",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 38186,
+      "completed_at": "2026-10-10T01:53:45.689073+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "2352e36ae88844d687968800e47c3cbb",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "d3e7df24650541d8a1da2848e03066a3",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:53:45.700993+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2169,
+      "output_tokens": 3861,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3297,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "df4d30bd-c4b7-4972-bcc6-446f037e9df9",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 26562,
+      "completed_at": "2026-10-10T01:54:12.263876+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "2352e36ae88844d687968800e47c3cbb",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "c2b8f28cfdf54d62a8f41e7710173056",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:54:12.273164+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2277,
+      "output_tokens": 3800,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3097,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "23397816-bbb1-4410-8753-0d1a6234e598",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 22748,
+      "completed_at": "2026-10-10T01:54:35.021353+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "2352e36ae88844d687968800e47c3cbb",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "a6fa46539ee74847b248466e180158be",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:54:35.040945+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2139,
+      "output_tokens": 4037,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3516,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "9e8246c5-15d1-4857-836b-d7f8467ae22a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 25713,
+      "completed_at": "2026-10-10T01:55:00.754849+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "2352e36ae88844d687968800e47c3cbb",
+      "plan_id": "9af94115ed9f4ee9b1a8d1ed75604016",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "4aaa2bb84a2e410ab39eece295bf9e5b",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:55:00.760947+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 6770,
+      "output_tokens": 2008,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1966,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "70d2f520-0e79-4285-871a-c62bf585b1b5",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 16769,
+      "completed_at": "2026-10-10T01:55:17.530000+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T01:55:00.757553Z"
+}

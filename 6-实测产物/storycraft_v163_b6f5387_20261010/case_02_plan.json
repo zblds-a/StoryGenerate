@@ -1,0 +1,218 @@
+{
+  "plan_id": "63691fd9286b45618e9ff854662726c5",
+  "plan_revision": 2,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "归位的星空",
+    "premise": "校图书馆一本厚重的书每晚自动归位，两个学生在闭馆后的蹲守中，发现了已故老馆长留下的温暖物理机关，并在去留之间完成了真正的告别。",
+    "theme": "爱与习惯的延续，面对失去的释然与放手。",
+    "beginning": "深夜图书馆，书本自动滑入书架的异响打破宁静，林晓坚持调查，陈宇急于离开。",
+    "development": "两人通过手电筒和触觉检查，发现书脊与书架间的磁铁相斥原理及倾斜层板，排除了灵异可能。",
+    "climax": "林晓拆开书脊护封发现老馆长的留言，得知这是特制的‘书本滑梯’，她因不舍而想把书带走，陷入情感挣扎。",
+    "ending": "林晓选择放手让书归位，‘啪嗒’声呼应开场，两人在闭馆音乐中相伴离开，情感温暖收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "归位的星空",
+        "core_goal": "查明书本自动归位的真相，完成对老馆长的情感告别与自我释怀。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：深夜图书馆极度安静，突然‘啪嗒’一声脆响，一本厚重的《星空观测》从桌面自动滑入书架深处。",
+          "[3-10s] 矛盾三要素：林晓惊呼‘它又自己回去了’，陈宇焦急看表催促‘闭馆铃都响了，别管这邪门书了’。林晓坚持要查明老馆长留下的这本书为何连续三晚自动归位。",
+          "[10-30s] 第一次反转：林晓赌气把书再次抽出放在桌边，书竟再次‘嗖’地滑入书架。陈宇吓得后退撞倒椅子（音效断点）。林晓却冷静下来，冲过去摸书架层板，断言不是闹鬼。",
+          "[30-120s] 中段推进：林晓让陈宇打手电。陈宇抱怨着凑近。林晓发现书架层板被打磨得异常光滑且带有微小倾角，书脊和层板深处各有一块磁铁。陈宇质疑吸力不够，林晓演示：两块磁铁同极相斥，书放在特定位置时，斥力刚好把书推上倾斜层板，顺势滑入卡槽。",
+          "[120-170s] 升级/二次反转：林晓拆开书脊的加厚护封，掉出一张泛黄的旧借书卡和星空书签。林晓读出老馆长的字迹：‘晓晓，你总把这本重书忘在桌上，我帮你做了个自动回家的滑梯。书归位了，看完也早点回宿舍。’陈宇愣住。林晓紧紧抱住书，哽咽着提出想把书带回宿舍永远留着，这是她面对失去的逃避。",
+          "[170-180s] 情感收束与回响：陈宇轻声提醒‘老馆长是希望书回家，不是被你锁在柜子里’。林晓经过挣扎选择放手，将书轻轻推回书架。熟悉的‘啪嗒’声清脆响起，完美呼应开场。闭馆钢琴曲切入，陈宇拉起她‘走吧，我们也该归位了’，两人脚步声伴随轻笑渐远，温暖定格。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林晓",
+        "external_goal": "查明《星空观测》每晚自动归位的物理真相，解开对已故老馆长的思念。",
+        "emotional_avoidance": "逃避老馆长已经去世、再也没人督促自己按时休息的现实，试图把书带走据为己有以保留羁绊。",
+        "speech_style": "语速快，喜欢用反问句，遇到不解时会连续抛出‘为什么’‘怎么可能’，紧张或不舍时咬嘴唇不说话。",
+        "relationship_stance": "依赖陈宇的陪伴，但嫌弃他胆小怕事，经常用激将法让他帮忙；在情感脆弱时听从他的温和劝导。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陈宇",
+        "external_goal": "劝林晓放弃调查，赶紧回宿舍睡觉，避免被锁在图书馆。",
+        "emotional_avoidance": "害怕面对图书馆的黑暗和‘灵异’事件，也害怕看到林晓因为老馆长的事再次崩溃。",
+        "speech_style": "常用祈使句和感叹词如‘大姐’‘快走’‘别闹了’，害怕时声音发颤，但在安慰林晓时语速会放慢、声音变轻。",
+        "relationship_stance": "嘴上抱怨林晓固执，但行动上始终护着她，是她的安全底线和情感锚点。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "performance_plan": {
+      "sound_design": "核心音效为书本滑入书架的‘啪嗒’声，需做出厚重感与顺滑感，开场与结尾的‘啪嗒’声需保持一致以形成呼应；中段加入手电筒开关声、手指摩擦木质层板的细节音；结尾切入柔和的闭馆钢琴曲。",
+      "acting_notes": "林晓的情绪从执拗、震惊转为感动，最后经历不舍到释然的挣扎；陈宇从烦躁、恐惧转为心疼与温柔。两人对话需保持近距离的空间感，体现深夜图书馆的静谧。"
+    },
+    "continuity_constraints": [
+      "磁铁相斥推动书本滑入倾斜层板的物理机关必须在30-120s明确解释，不能靠超自然或巧合。",
+      "老馆长的借书卡必须在120-170s由林晓亲自读出，不得使用录音或旁白代替。",
+      "林晓在170-180s必须做出‘将书留在图书馆’的明确选择，且结尾必须用‘啪嗒’声呼应开场，完成情感收束，不得悬疑断头。"
+    ],
+    "change_summary": [
+      "根据反馈，在结尾前增加林晓‘想带走书’与‘让书留下’的内心冲突与明确选择，使人物成长更清晰。",
+      "结尾使用‘啪嗒’归位声呼应开场，强化情感余韵，避免生硬断点，严格符合完整短篇的收束要求。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "轻悬疑",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "d087b2062fb14466a1eaad711f28f925",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:39:47.390583+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3998,
+      "output_tokens": 4999,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3663,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "d1563ab8-5625-4ab8-9270-3b4c0e527475",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 72410,
+      "completed_at": "2026-10-10T01:40:59.801072+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "c1f490599fd44c0e9c66789aec6a9e2d",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:41:00.072130+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5349,
+      "output_tokens": 3744,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2245,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "08f134fc-5933-4874-9aed-8d5284734ad6",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 40299,
+      "completed_at": "2026-10-10T01:41:40.371065+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.3"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "864b375748652329e8d86bec96e7cf95446d9818e84f1b36e9e63eff791a5eff",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:40:59.802512Z",
+  "updated_at": "2026-10-10T01:41:40.372190Z"
+}

@@ -1,0 +1,175 @@
+{
+  "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "时光钟摆",
+    "premise": "小镇少年林星在奶奶去世后，试图修好她留下的旧座钟以留住回忆，却意外发现座钟里藏着奶奶预录的告别留言。",
+    "theme": "告别不是遗忘，而是带着爱继续前行；陪伴可以跨越时间的物理形态。",
+    "beginning": "林星在老屋清空前夜，不慎将奶奶的旧座钟摔散，面临失去最后念想的危机。",
+    "development": "林星在拼凑座钟时意外触发录音模块，通过寻找钥匙和替换齿轮，逐步解锁奶奶留下的声音线索。",
+    "climax": "林星牺牲了奶奶送的怀表，补全座钟齿轮，听到了奶奶关于“时间停摆是为了陪你休息”的完整留言。",
+    "ending": "林星在座钟平稳的滴答声与悠长钟鸣中，完成了与奶奶的情感告别，接受了独自前行的现实。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "时光钟摆",
+        "core_goal": "修复奶奶的旧座钟，解锁其中的秘密留言，完成心理上的告别。",
+        "major_beats": [
+          "【0-2s 黄金钩子】巨大的木头撞击地板声，紧接着是金属齿轮崩裂、散落一地的清脆连环声，瞬间抓住听众注意力。",
+          "【2-7s 矛盾三要素】林星急促喘息，带着哭腔说：‘就差一点……明天收废品的就要来了，奶奶的钟我绝不能让它当垃圾扔掉！’交代人物、地点、麻烦与目标。",
+          "【7-20s 第一次反转】林星焦急地徒手拼凑齿轮，手指被划破发出痛呼，发条彻底卡死。他崩溃低吼，一拳砸在地板上。寂静中，座钟内部突然传出‘咔哒’一声脆响，紧接着是老式磁带转动的微弱电流声，音乐在此断点转入悬疑温情。",
+          "【20-80s 中段推进】林星发现钟表底座藏着录音模块，按下播放只有杂音。他翻找纸箱找到奶奶留下的黄铜上弦钥匙，插入旋转三圈，杂音褪去，奶奶苍老的声音传出：‘星星，如果钟停了……’声音戛然而止，发条再次卡死，林星发现是主齿轮缺了一齿。",
+          "【80-113s 升级/二次反转】林星找不到替换件，目光落在他脖子上挂着的奶奶送的怀表上。他咬牙用螺丝刀撬开怀表，拆下主齿轮装入座钟（伴随金属摩擦声）。再次上弦，录音完整播放。奶奶温柔的声音响起：‘星星，如果钟停了，别急着修。奶奶脑子坏了，记不住事，但时间会替你记住。钟停的时候，就是奶奶在陪你休息，别怕往前走。’",
+          "【113-120s 强钩子与收束】林星泣不成声，双手紧紧环抱住座钟。座钟发出沉稳、响亮的‘滴答、滴答’声，逐渐与林星平稳下来的心跳声重合。最后一声悠长的钟鸣‘当——’在空气中回荡，音乐温柔收束，完成情感闭环，不留悬念。"
+        ],
+        "ending": "林星在座钟平稳的滴答声与悠长钟鸣中，完成了与奶奶的情感告别，接受了独自前行的现实，声音温柔收束。",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林星",
+        "external_goal": "在老屋被清空前修好奶奶留下的旧座钟，留住她的痕迹。",
+        "emotional_avoidance": "逃避奶奶已经去世且自己必须独自面对未来生活的事实，试图通过修复旧物来维持过去的连接。",
+        "speech_style": "语速快，急躁时容易结巴，习惯用‘绝不能’‘就差一点’等绝对化词汇掩饰内心的慌乱与无助，受压时会用愤怒掩盖悲伤。",
+        "relationship_stance": "对奶奶充满依赖与不舍，对收废品的人等外部压力充满敌意与抗拒，在奶奶的录音面前会卸下防备展现出脆弱。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-2",
+        "story_name": "奶奶",
+        "performer_id": "voice-2",
+        "medium": "recording",
+        "dramatic_purpose": "通过旧座钟里的预录声音，揭示她生前对林星的告别与期许，推动林星完成心理上的告别，是故事的核心情感锚点。"
+      }
+    ],
+    "performance_plan": {
+      "sound_design": "强调机械齿轮的金属碰撞声、木头摩擦声与老式磁带的电流底噪。心跳声与钟表滴答声的混音是结尾的情感高潮。",
+      "voice_direction": "林星的声音需要展现出从极度焦躁、崩溃到最终释然、平静的层次感；奶奶的录音需带有轻微的磁带失真感，语速缓慢、温柔且带有记忆衰退者的停顿。"
+    },
+    "continuity_constraints": [
+      "座钟的录音模块必须由特定的黄铜钥匙上弦才能触发，不能通过普通按钮播放。",
+      "怀表齿轮必须与座钟主齿轮尺寸匹配，且拆卸怀表是不可逆的物理代价，体现林星的选择。",
+      "奶奶的录音内容必须与她患有记忆衰退的设定相符，逻辑上解释了她为何提前录音。"
+    ],
+    "change_summary": [
+      "林星从试图强行修复座钟以逃避失去，转变为接受座钟停摆的意义并勇敢面对未来。",
+      "座钟从损坏的遗物，转变为传递奶奶爱与告别的情感载体。",
+      "林星对‘时间’的认知从‘流逝与剥夺’转变为‘陪伴与铭记’。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "7d0c1c6c08cb4185b640bb7aa1dba55b",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:39:47.377510+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3878,
+      "output_tokens": 4125,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2756,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "b5c64596-5cce-900c-972d-171cd816bef8",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 61496,
+      "completed_at": "2026-10-10T01:40:48.874871+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.3"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "91ed0daf9605b521ef52b98fa1c987946472253fbe2d85ff4800b391aaf19ee0",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:40:48.879461Z",
+  "updated_at": "2026-10-10T01:40:48.879461Z"
+}

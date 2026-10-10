@@ -1,0 +1,833 @@
+{
+  "story_id": "ae3ab238c6dd49d1a547f8a09b0fc7c9",
+  "story_version_id": "044cd634405241698a90bab3c1d7120b",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+  "approved_plan_revision": 1,
+  "title": "慢半拍的座钟",
+  "summary": "小镇少年在离开家乡前夜试图修好爷爷留下的旧座钟，却意外触发了爷爷预录的日常叮嘱，从而学会了放下执念与好好告别。",
+  "preview_blurb": "明天就要去城里报到，爷爷留下的旧座钟却偏偏在这时卡壳。林星赌气拧动发条，却意外听到了一个隐藏多年的声音。",
+  "tags": [
+    "温情",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "慢半拍的座钟",
+    "premise": "小镇少年在离开家乡前夜试图修好爷爷留下的旧座钟，却意外触发了爷爷预录的日常叮嘱，从而学会了放下执念与好好告别。",
+    "theme": "告别不是遗忘，而是带着爱与日常的习惯继续前行。",
+    "beginning": "林星在老屋烦躁地修理卡壳的座钟，面临明天离乡与修不好遗物的双重焦虑。",
+    "development": "林星用力过猛弄断发条，崩溃自责后意外发现隐藏的录音模块，紧张期待爷爷的临终嘱托。",
+    "climax": "录音播放，爷爷没有沉重挽留，只有一句关于吃包子的日常叮嘱，让林星瞬间破防并理解了爷爷的放手。",
+    "ending": "林星释怀，妥善收好座钟，推门迎接清晨的小镇烟火气，带着爷爷的陪伴踏上新旅程。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "慢半拍的座钟",
+        "core_goal": "修好爷爷的座钟并找到面对离别的勇气。",
+        "major_beats": [
+          "【0-2s】突发听觉事件：老座钟发出刺耳的“咔哒咔哒”齿轮卡死声，紧接着是林星烦躁拍打木桌的闷响和一句“又卡住了！”",
+          "【2-7s】林星在爷爷老屋整理行李，抱怨明天就要去城里高中报到，这破钟却怎么也修不好，他不想把爷爷的遗物丢在空房子里。",
+          "【7-20s】林星赌气用力猛拧发条，伴随“崩”的一声金属断裂音，发条断了。林星呼吸急促，随后压抑地哽咽，自责连爷爷最后留下的东西都弄坏了。",
+          "【20-80s】林星吸鼻子，摸索断裂的发条盒，发现里面卡着一个旧式微型录音模块。他找来电池装上，按下播放键，先传出爷爷调试麦克风的咳嗽声和电流麦噪。林星紧张地屏住呼吸，以为会听到沉重的临终嘱托。",
+          "【80-113s】录音里爷爷的声音传出：“星子，这老钟走得慢，跟不上你去城里的步子啦。明天早上记得吃巷口的肉包子，别迟到。”林星愣住，眼泪掉下来，但嘴角上扬，明白了爷爷早就在为他送行，用日常的叮嘱代替沉重的挽留。",
+          "【113-120s】林星深吸一口气，用布把座钟仔细包好放进背包。他拉开老屋木门，清晨清脆的鸟鸣和远处巷口“热包子出炉”的叫卖声涌入。林星轻声说“知道了，爷爷”，关门声与脚步声渐远，温暖收束。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林星",
+        "external_goal": "在明早离开小镇前，修好爷爷留下的旧座钟并带走。",
+        "emotional_avoidance": "害怕面对爷爷已经离世的事实，用修钟来逃避离乡的孤独感。",
+        "speech_style": "烦躁时语速快、带点少年人的倔强和鼻音；受挫时声音发紧、习惯用深呼吸掩饰哽咽。",
+        "relationship_stance": "对爷爷充满依恋，试图通过保留遗物来维持连接，但在理解爷爷的放手后选择独立前行。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "fictional-grandpa",
+        "story_name": "爷爷",
+        "performer_id": "voice-grandpa",
+        "medium": "recording",
+        "dramatic_purpose": "通过预录的日常叮嘱，打破主角对沉重临终遗言的预期，传递温暖与放手的主题。"
+      }
+    ],
+    "performance_plan": {
+      "soundscape": "老屋空旷的回音、座钟机械齿轮声、清晨小镇的鸟鸣与市井叫卖声。",
+      "pacing_notes": "前20秒节奏紧凑、情绪焦躁；中段摸索录音模块时节奏放缓、充满悬念；后段录音播放后情绪释放，结尾环境音渐强，留白收束。"
+    },
+    "continuity_constraints": [
+      "座钟的发条必须在S3断裂，才能在S4合理露出内部的录音模块。",
+      "录音内容必须是生前预录的日常话语，不能包含对林星当前修钟行为的实时反应。"
+    ],
+    "change_summary": [
+      "林星从执着于修好遗物、逃避离别，转变为接受遗物不完美、带着爷爷的日常叮嘱坦然踏上旅程。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-865068eb",
+      "index": 1,
+      "title": "慢半拍的座钟",
+      "synopsis": "小镇少年林星在离乡前夜试图修好爷爷留下的旧座钟，却意外触发了爷爷预录的日常叮嘱，从而学会了放下执念，带着爱与习惯踏上新旅程。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 108,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "卡壳的旧座钟",
+          "location": "爷爷的老屋",
+          "dramatic_goal": "展现林星修钟受挫的焦躁以及不想把遗物丢在老屋的执念。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "又卡住了！",
+              "emotion": "angry",
+              "tone_instruction": "烦躁地短促吐出，尾音随砸桌动作干脆切断",
+              "emphasis": [
+                {
+                  "span_text": "又卡住了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前留0.5秒环境齿轮卡顿声，台词紧接砸桌动作后抛出",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "明天就要去城里高中报到了，这破钟怎么偏偏这时候罢工。",
+              "emotion": "worried",
+              "tone_instruction": "语速稍快，前半句交代行程时语气紧绷，后半句压低嗓音带出埋怨",
+              "emphasis": [
+                {
+                  "span_text": "这破钟",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿半拍，模拟整理行李时的呼吸节奏",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我总不能把爷爷留下的最后一样东西，就这么丢在空荡荡的老屋里吧。",
+              "emotion": "sad",
+              "tone_instruction": "气息下沉，咬字放缓，‘最后一样东西’处声音微颤，尾音拖长带出不舍",
+              "emphasis": [
+                {
+                  "span_text": "最后一样东西",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 16,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "‘老屋里吧’之后留1秒静默，为后续发条断裂的音效留出空间",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "夜色深沉，老屋的灯光下，林星死死盯着桌上那座停摆的旧座钟，满眼焦躁与不舍。",
+              "emotion": "serious",
+              "tone_instruction": "旁白标准叙事腔，语流平稳，‘死死盯着’加重咬字以突出人物状态",
+              "emphasis": [
+                {
+                  "span_text": "死死盯着",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 18,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末自然收声，不拖音，保持客观叙述距离",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "断裂的发条与隐藏的录音",
+          "location": "爷爷的老屋",
+          "dramatic_goal": "通过弄断发条将情绪推向自责的低谷，随后发现录音模块并建立悬念。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "给我动啊！",
+              "emotion": "angry",
+              "tone_instruction": "压低嗓音带急躁，尾音上扬加重力度",
+              "emphasis": [
+                {
+                  "span_text": "动啊",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 4,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留0.3秒急促呼吸停顿，接拍打木桌音效",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "断了……",
+              "emotion": "surprised",
+              "tone_instruction": "气息骤停，音量骤降，尾音拖长带虚浮感",
+              "emphasis": [
+                {
+                  "span_text": "断",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 1,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半字咬实，后半字气声处理，句末留1秒空白",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我连您最后留下的东西都弄坏了……爷爷，对不起……",
+              "emotion": "sad",
+              "tone_instruction": "压住哽咽，语速放缓，后半句转为恳求与自责",
+              "emphasis": [
+                {
+                  "span_text": "弄坏了",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "对不起",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "东西后微顿吸鼻，爷爷前换气一次，避免哭腔破音",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林星用力吸了吸鼻子，手指在断裂的发条盒里摸索，突然碰到了一个硬块。",
+              "emotion": "calm",
+              "tone_instruction": "平稳叙述节奏，动作词加重咬字，营造空间感",
+              "emphasis": [
+                {
+                  "span_text": "摸索",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 22,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "硬块",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 32,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "摸索与硬块处微作手势配合口型，保持中景麦克风距离",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "这是什么？微型录音模块？怎么会卡在发条盒里？",
+              "emotion": "surprised",
+              "tone_instruction": "语气由疑惑转惊讶，三问递进，尾音上扬但克制",
+              "emphasis": [
+                {
+                  "span_text": "微型录音模块",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "卡",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "每句问话间留0.2秒思考停顿，模拟翻阅查看的动作节奏",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "他翻出两节旧电池装上，颤抖着按下了播放键。",
+              "emotion": "serious",
+              "tone_instruction": "语速渐缓，重音落在颤抖与按下，铺垫紧张氛围",
+              "emphasis": [
+                {
+                  "span_text": "颤抖",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "按下",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "按下后留0.5秒静默，为电流麦噪预留空间",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "爷爷……您到底要跟我说什么？",
+              "emotion": "worried",
+              "tone_instruction": "气息收紧压低音量，前半句呢喃，后半句急切探问",
+              "emphasis": [
+                {
+                  "span_text": "到底",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "说什么",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "爷爷后长吸气一次，到底咬字加重但不喊叫，句末收声留悬念",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "巷口的肉包子",
+          "location": "爷爷的老屋及门外",
+          "dramatic_goal": "揭晓录音内容，完成情感释放与和解，林星带着爷爷的叮嘱坦然离开。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "fictional-grandpa",
+              "narrator_id": null,
+              "performer_id": "voice-grandpa",
+              "text": "星子，这老钟走得慢，跟不上你去城里的步子啦。明天早上记得吃巷口的肉包子，别迟到啊。",
+              "emotion": "tender",
+              "tone_instruction": "语气平和带笑，像日常闲聊般自然，后半句稍作停顿后轻快收尾。",
+              "emphasis": [
+                {
+                  "span_text": "巷口的肉包子",
+                  "occurrence": 1,
+                  "start_char": 29,
+                  "end_char": 35,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "别迟到啊",
+                  "occurrence": 1,
+                  "start_char": 36,
+                  "end_char": 40,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "模拟老式录音模块音质，略带电流底噪，句尾气息微收。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "没有沉重的临终嘱托，只有一句再寻常不过的叮咛。林星愣在原地，眼泪砸在手背上，嘴角却忍不住上扬。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳叙述，前半句压低音量营造释然感，后半句语气渐暖，‘上扬’二字轻读。",
+              "emphasis": [
+                {
+                  "span_text": "寻常不过的叮咛",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 22,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "嘴角却忍不住上扬",
+                  "occurrence": 1,
+                  "start_char": 38,
+                  "end_char": 46,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "保持客观叙述距离，‘上扬’处气息微提，留半秒空白接下一句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "知道了，爷爷。您的叮嘱，我都记在心里了。",
+              "emotion": "tender",
+              "tone_instruction": "嗓音微颤带哭腔，但刻意放轻稳住情绪，‘心里了’三字气声加重，尾音拖长。",
+              "emphasis": [
+                {
+                  "span_text": "知道了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "记在心里了",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "吸气后轻声开口，句末伴随极轻的鼻音，停顿两秒后再进下一句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林星用软布将座钟仔细包好，妥帖地放进背包。他拉开老屋的木门，迎接清晨。",
+              "emotion": "calm",
+              "tone_instruction": "语速舒缓平稳，动作描写清晰咬字，‘迎接清晨’语气微微开阔。",
+              "emphasis": [
+                {
+                  "span_text": "仔细包好",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "迎接清晨",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 34,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "保持中景叙述节奏，句间自然换气，无额外音效干扰人声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我去吃包子了，您放心吧。",
+              "emotion": "calm",
+              "tone_instruction": "声音明朗放松，带着如释重负的轻松感，‘放心吧’三字干脆利落，尾音上扬。",
+              "emphasis": [
+                {
+                  "span_text": "吃包子了",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "放心吧",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 11,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "配合推门动作同步发声，句末留三秒环境音（鸟鸣与叫卖）淡出。",
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林星在离乡前夜因修不好爷爷的座钟而焦躁自责，意外弄断发条后发现了隐藏的录音模块。爷爷在录音中没有沉重挽留，只叮嘱他吃巷口的肉包子。林星因此释怀，妥善收好座钟，迎着清晨的烟火气踏上新旅程。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "林星发现了座钟内隐藏的爷爷预录的录音模块。"
+        },
+        {
+          "fact": "座钟的发条被林星拧断，无法再修复走时。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林星与爷爷",
+          "change": "林星从试图通过修好遗物来维持连接，转变为理解爷爷的放手，带着爷爷的日常叮嘱独立前行。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "林星修好座钟并找到面对离别勇气的核心冲突已解决。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "林星发现了座钟内隐藏的爷爷预录的录音模块。"
+      },
+      {
+        "fact": "座钟的发条被林星拧断，无法再修复走时。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林星与爷爷",
+        "change": "林星从试图通过修好遗物来维持连接，转变为理解爷爷的放手，带着爷爷的日常叮嘱独立前行。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 16,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.4"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "35f8f3a670e54b5b83e51b967d5b39c5",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:49:56.074350+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3967,
+      "output_tokens": 4598,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3474,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "4f80b232-5b42-424e-8f95-6e728f5ef04f",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 62004,
+      "completed_at": "2026-10-10T01:50:58.079975+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "1158eacb2398427c9823f4374e096829",
+      "plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "c9b6e1e3a3d446ecac84981a7a31686c",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:50:59.227291+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 6018,
+      "output_tokens": 5275,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3947,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "4feb4057-7974-4d34-a687-a5d82011cffc",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 49812,
+      "completed_at": "2026-10-10T01:51:49.040396+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "1158eacb2398427c9823f4374e096829",
+      "plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "bade4e1fecf54ca893ee2ae03cead172",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:51:49.058028+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2146,
+      "output_tokens": 4256,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3696,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "40b75d05-256d-41a1-98c6-d9771fcdb429",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 27424,
+      "completed_at": "2026-10-10T01:52:16.481888+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "1158eacb2398427c9823f4374e096829",
+      "plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "65f621f7083f4db0b8aca408f502fba5",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:52:16.796097+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2383,
+      "output_tokens": 5211,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4230,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ca8c39ba-45ff-483a-a5af-88f8697c62f8",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 31844,
+      "completed_at": "2026-10-10T01:52:48.640781+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "1158eacb2398427c9823f4374e096829",
+      "plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "47385caf729c4244bd30a6f22548fb5a",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:52:48.646706+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2263,
+      "output_tokens": 6903,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5803,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "e7bf4fca-37b7-40f9-8e0d-fedd5f376815",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 41913,
+      "completed_at": "2026-10-10T01:53:30.559558+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "1158eacb2398427c9823f4374e096829",
+      "plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "790e5bddc4fe4496b2500b20fa7e42fc",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:53:30.565080+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 5605,
+      "output_tokens": 1826,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1784,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "6c765193-02aa-4f16-8bc6-dd8bd5b31208",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 17762,
+      "completed_at": "2026-10-10T01:53:48.327222+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T01:53:30.561355Z"
+}

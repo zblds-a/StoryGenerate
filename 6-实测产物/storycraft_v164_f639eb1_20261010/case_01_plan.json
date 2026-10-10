@@ -1,0 +1,172 @@
+{
+  "plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "慢半拍的座钟",
+    "premise": "小镇少年在离开家乡前夜试图修好爷爷留下的旧座钟，却意外触发了爷爷预录的日常叮嘱，从而学会了放下执念与好好告别。",
+    "theme": "告别不是遗忘，而是带着爱与日常的习惯继续前行。",
+    "beginning": "林星在老屋烦躁地修理卡壳的座钟，面临明天离乡与修不好遗物的双重焦虑。",
+    "development": "林星用力过猛弄断发条，崩溃自责后意外发现隐藏的录音模块，紧张期待爷爷的临终嘱托。",
+    "climax": "录音播放，爷爷没有沉重挽留，只有一句关于吃包子的日常叮嘱，让林星瞬间破防并理解了爷爷的放手。",
+    "ending": "林星释怀，妥善收好座钟，推门迎接清晨的小镇烟火气，带着爷爷的陪伴踏上新旅程。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "慢半拍的座钟",
+        "core_goal": "修好爷爷的座钟并找到面对离别的勇气。",
+        "major_beats": [
+          "【0-2s】突发听觉事件：老座钟发出刺耳的“咔哒咔哒”齿轮卡死声，紧接着是林星烦躁拍打木桌的闷响和一句“又卡住了！”",
+          "【2-7s】林星在爷爷老屋整理行李，抱怨明天就要去城里高中报到，这破钟却怎么也修不好，他不想把爷爷的遗物丢在空房子里。",
+          "【7-20s】林星赌气用力猛拧发条，伴随“崩”的一声金属断裂音，发条断了。林星呼吸急促，随后压抑地哽咽，自责连爷爷最后留下的东西都弄坏了。",
+          "【20-80s】林星吸鼻子，摸索断裂的发条盒，发现里面卡着一个旧式微型录音模块。他找来电池装上，按下播放键，先传出爷爷调试麦克风的咳嗽声和电流麦噪。林星紧张地屏住呼吸，以为会听到沉重的临终嘱托。",
+          "【80-113s】录音里爷爷的声音传出：“星子，这老钟走得慢，跟不上你去城里的步子啦。明天早上记得吃巷口的肉包子，别迟到。”林星愣住，眼泪掉下来，但嘴角上扬，明白了爷爷早就在为他送行，用日常的叮嘱代替沉重的挽留。",
+          "【113-120s】林星深吸一口气，用布把座钟仔细包好放进背包。他拉开老屋木门，清晨清脆的鸟鸣和远处巷口“热包子出炉”的叫卖声涌入。林星轻声说“知道了，爷爷”，关门声与脚步声渐远，温暖收束。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林星",
+        "external_goal": "在明早离开小镇前，修好爷爷留下的旧座钟并带走。",
+        "emotional_avoidance": "害怕面对爷爷已经离世的事实，用修钟来逃避离乡的孤独感。",
+        "speech_style": "烦躁时语速快、带点少年人的倔强和鼻音；受挫时声音发紧、习惯用深呼吸掩饰哽咽。",
+        "relationship_stance": "对爷爷充满依恋，试图通过保留遗物来维持连接，但在理解爷爷的放手后选择独立前行。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "fictional-grandpa",
+        "story_name": "爷爷",
+        "performer_id": "voice-grandpa",
+        "medium": "recording",
+        "dramatic_purpose": "通过预录的日常叮嘱，打破主角对沉重临终遗言的预期，传递温暖与放手的主题。"
+      }
+    ],
+    "performance_plan": {
+      "soundscape": "老屋空旷的回音、座钟机械齿轮声、清晨小镇的鸟鸣与市井叫卖声。",
+      "pacing_notes": "前20秒节奏紧凑、情绪焦躁；中段摸索录音模块时节奏放缓、充满悬念；后段录音播放后情绪释放，结尾环境音渐强，留白收束。"
+    },
+    "continuity_constraints": [
+      "座钟的发条必须在S3断裂，才能在S4合理露出内部的录音模块。",
+      "录音内容必须是生前预录的日常话语，不能包含对林星当前修钟行为的实时反应。"
+    ],
+    "change_summary": [
+      "林星从执着于修好遗物、逃避离别，转变为接受遗物不完美、带着爷爷的日常叮嘱坦然踏上旅程。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "2bc73ab2e3f94c0bb35b91e2145c0b35",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "35f8f3a670e54b5b83e51b967d5b39c5",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.4",
+      "started_at": "2026-10-10T01:49:56.074350+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3967,
+      "output_tokens": 4598,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3474,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "4f80b232-5b42-424e-8f95-6e728f5ef04f",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 62004,
+      "completed_at": "2026-10-10T01:50:58.079975+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.4"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "f13fd38d7d7d185422cc4daec55cec961090b794e26b3cd84a1b5867f0b39c66",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:50:58.084006Z",
+  "updated_at": "2026-10-10T01:50:58.084006Z"
+}

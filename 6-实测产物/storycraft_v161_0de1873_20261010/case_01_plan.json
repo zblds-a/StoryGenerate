@@ -1,0 +1,174 @@
+{
+  "plan_id": "d322548a1b484fa58431acc1a46bf670",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "停摆的滴答声",
+    "premise": "小镇少年林远试图修好母亲留下的旧钟表以听完所有留言，却在钟楼的共振中领悟了告别与向前的意义。",
+    "theme": "学会告别，接受时间的流逝与生命的延续。",
+    "beginning": "旧钟表突然发出杂音和母亲的半句留言，林远在老屋中焦躁地试图修好它。",
+    "development": "修表失败后的意外震动让钟表播放出母亲的日常唠叨，录音中提到的‘去钟楼对时’促使林远带着钟表奔向钟楼。",
+    "climax": "在钟楼顶层，大钟敲响的声波共振让旧钟表播放出母亲最后的留言，揭示了‘时间要往前走’的核心情感信息。",
+    "ending": "林远放下修表工具，接受母亲离世的现实，在钟声与滴答声的和谐共鸣中，带着向前的勇气重新出发。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "停摆的滴答声",
+        "core_goal": "林远试图修好母亲留下的旧钟表以听完留言，最终在钟楼的共振中领悟告别与向前的意义。",
+        "major_beats": [
+          "[0-2s] 突发听觉事件：寂静的老屋里，旧钟表突然发出刺耳的齿轮卡壳声，紧接着传出一句带着电流麦杂音的女声‘小远，吃饭了’，随后戛然而止。",
+          "[2-7s] 矛盾交代：林远烦躁地翻找螺丝刀，抱怨游丝又卡住了。他身处堆满杂物的老屋，试图修好这块停摆的旧钟表，只为听完母亲生前录在里面的所有留言。",
+          "[7-20s] 第一次反转：林远反复调试失败，气馁地用扳手砸向桌面（重音效）。震动让钟表意外恢复走动，传出母亲温柔的唠叨：‘别总低着头修东西，多看看天。’林远愣住，眼眶泛红，紧握着扳手的手松开。",
+          "[20-80s] 中段推进：录音中，母亲提到‘如果表彻底停了，就带去镇钟楼对时’。林远立刻将钟表揣进怀里，推开门跑向镇钟楼。沿途风声和脚步声交织，林远气喘吁吁地自言自语，回忆母亲生前总爱在钟楼等他。",
+          "[80-102s] 升级/二次反转：林远爬上钟楼顶层，将旧钟表放在巨大的铜钟旁。正午的大钟准时敲响（宏大音效），声波共振让旧钟表发出清脆的滴答声，并播放出最后一段留言：‘小远，表停了没关系，你的时间还得往前走。’林远彻底释怀，泪水滑落。",
+          "[102-120s] 情感收束：林远没有再试图去修表，而是将螺丝刀扔进工具箱（清脆金属声）。他听着大钟与旧钟表和谐的共鸣声，轻声回应‘妈，我出门了’，伴随轻快坚定的下楼梯脚步声，故事在温暖的余韵中平稳收束。"
+        ],
+        "ending": "林远放弃了对旧钟表的执念，接受了母亲离世的现实，带着母亲‘时间要往前走’的期许，重新面对生活。",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林远",
+        "external_goal": "修好母亲留下的旧钟表，听完里面所有的录音留言。",
+        "emotional_avoidance": "逃避母亲已经去世的事实，拒绝接受时间无法倒流的现实，用修表的技术动作掩饰内心的慌乱。",
+        "speech_style": "语速较快，带着小镇少年的执拗；紧张或烦躁时会重复短句（如‘就差一点，就差一点了’）；回避情感话题时习惯用技术术语掩饰（如‘游丝卡住了，不是我的问题’）。",
+        "relationship_stance": "对母亲充满依恋与愧疚，对现实世界中催促他放下过去的人表现出抗拒和自我封闭。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-mother-rec",
+        "story_name": "母亲(录音)",
+        "performer_id": "voice-2",
+        "medium": "recording",
+        "dramatic_purpose": "作为旧钟表中的预录声音，提供母亲生前的叮嘱与最后的心愿，引导林远完成情感上的告别与成长。"
+      }
+    ],
+    "performance_plan": {
+      "soundscape": "以老屋的寂静、修表的金属摩擦声为起点，过渡到户外的风声、脚步声，最后在钟楼宏大的钟声与清脆的滴答声共鸣中结束。",
+      "voice_direction": "林远的声音需体现出从焦躁、执拗到破防、最终释怀的层次变化；母亲录音需带有老式录音设备的底噪和电流声，语气温柔且坚定。"
+    },
+    "continuity_constraints": [
+      "旧钟表只能播放母亲生前预录的声音，不能实时对话或知晓林远当前的行为。",
+      "林远的修表动作和工具（螺丝刀、扳手）需贯穿始终，作为他逃避现实的物理依托。",
+      "钟楼的大钟敲响必须是物理声波共振，不能是超自然魔法。"
+    ],
+    "change_summary": [
+      "林远从执着于修好旧钟表、逃避现实，转变为接受钟表停摆、勇敢走向未来的心理成长。",
+      "旧钟表从‘承载过去执念的故障物品’变为‘传递母亲期许的情感信物’。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "d322548a1b484fa58431acc1a46bf670",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "31f5dccdb83e4198a8294b1d21d1838b",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:17:54.567627+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3708,
+      "output_tokens": 4301,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2999,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "e0998bf4-a825-4baa-8ad8-eb35772a0c54",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 60601,
+      "completed_at": "2026-10-10T01:18:55.169688+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.1"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "0789cbdfba4ba2a5cc74beb8ccde317ec01d3d054ef38d6132cb40aec404c319",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:18:55.263906Z",
+  "updated_at": "2026-10-10T01:18:55.263906Z"
+}

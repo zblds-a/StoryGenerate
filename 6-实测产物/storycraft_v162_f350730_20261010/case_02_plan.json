@@ -1,0 +1,219 @@
+{
+  "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+  "plan_revision": 2,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "寻星指南",
+    "premise": "高三学生林夏和好友陈宇在闭馆后的图书馆蹲守一本每晚自动归位的《寻星指南》，试图抓住“幽灵”，却意外发现了好友为她制造的温暖奇迹。",
+    "theme": "真正的奇迹不是超自然现象，而是朋友为了守护你的信念而付出的笨拙努力。",
+    "beginning": "林夏和陈宇在闭馆后的图书馆发现《寻星指南》再次自动归位，林夏决定设下陷阱抓住这个“幽灵”，以证明自己对生活仍有掌控力。",
+    "development": "陷阱失败后，林夏借机发泄考试失利的焦虑。陈宇引导她发现书中每次归位都会多出的折角和左手铅笔留言，线索逐渐指向陈宇自己。",
+    "climax": "林夏通过陈宇手腕的膏药识破真相，陈宇坦白自己每天偷偷藏书又放回，只为兑现林夏“看到奇迹就能考好”的玩笑话。林夏面临逃避与面对的选择。",
+    "ending": "林夏选择接受奇迹并面对现实，写下回复后将书轻轻推回书架。两人在温暖的余韵中离开，书本静静立在原处。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "第三排书架的奇迹",
+        "core_goal": "揭开《寻星指南》自动归位的真相，完成林夏从焦虑自我怀疑到被友情治愈、主动选择面对现实的心理转变。",
+        "major_beats": [
+          "【0-3s】沉重的《寻星指南》砸在桌面上（突发音效），林夏急促喘息：“它又自己回来了！”",
+          "【3-10s】陈宇打开手电筒（咔哒声），光束扫过第三排书架。林夏咬牙发誓今晚必须抓住这个“幽灵”，证明自己的生活还没完全失控。",
+          "【10-30s】林夏在书页涂抹荧光粉并躲入暗处。书架后传来摩擦声，林夏猛地拉开挡板（音效断点），却发现只是流浪猫碰落了书，荧光粉沾了一手，紧张感瞬间泄气。",
+          "【30-120s】两人继续蹲守，林夏借机发泄模拟考失利的焦虑，觉得连书都在嘲弄她。陈宇引导她检查书本，林夏发现每次归位第42页都有折角，且多了一句左手铅笔写的“星星不怕黑夜”。陈宇提醒她注意纸面上深深的左手握笔压痕和淡淡的薄荷膏药味。",
+          "【120-170s】林夏闻到陈宇身上的薄荷味，注意到他左手腕的膏药，猛然醒悟。陈宇坦白自己每天偷偷藏书又放回，只为兑现她“看到奇迹就能考好”的玩笑话。林夏面临选择：是继续用“抓幽灵”逃避考试压力，还是接受这份人为的奇迹。",
+          "【170-180s】林夏选择面对现实，拿笔写下“奇迹已收到，接下来换我自己走”。她将书轻轻推入书架（书脊摩擦声呼应开场的砸桌声），两人并肩离开，微风吹动书页，温暖收束。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林夏",
+        "external_goal": "找出《寻星指南》自动归位的真相，以此证明自己还能掌控生活。",
+        "emotional_avoidance": "回避自己模拟考失利带来的自我怀疑和深层焦虑。",
+        "speech_style": "语速较快，喜欢用反问句掩饰不安，紧张时会反复确认细节（如“你确定吗？”“真的没有别人？”）。",
+        "relationship_stance": "依赖陈宇的陪伴，但在他面前强撑面子，不愿暴露脆弱。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陈宇",
+        "external_goal": "陪林夏寻找真相，并暗中引导她发现书里的留言，帮她重建自信。",
+        "emotional_avoidance": "回避直接说教或表达同情，怕伤害林夏的自尊心。",
+        "speech_style": "语调平稳，多用陈述句和引导性提问（如“你有没有注意过……”“如果换个角度想……”），受压时习惯用动作转移话题。",
+        "relationship_stance": "默默守护并支持林夏，愿意为了她的感受制造笨拙的“奇迹”。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "performance_plan": {
+      "sound_design": "突出图书馆闭馆后的空旷感。开场沉重的砸书声与结尾轻柔的推书声形成听觉与心理的对比呼应；使用手电筒开关声、流浪猫碰倒物品的声音、以及最后微风吹动书页的沙沙声来构建空间与情绪。",
+      "voice_direction": "林夏的情绪从紧绷、焦躁逐渐过渡到释怀和坚定；陈宇始终保持沉稳，但在坦白时带有一丝不好意思的温柔。"
+    },
+    "continuity_constraints": [
+      "《寻星指南》必须始终在第三排书架。",
+      "陈宇的左手腕膏药必须在前期有微小的音效或台词铺垫（如淡淡的薄荷膏药味）。",
+      "铅笔留言必须是左手书写，以匹配陈宇的左撇子设定。",
+      "开场沉重的砸书声必须在结尾有轻柔的推书声作为听觉呼应。"
+    ],
+    "change_summary": [
+      "林夏从相信“超自然奇迹”转变为相信“人为的温暖奇迹”。",
+      "林夏对模拟考失利的焦虑被陈宇的友情治愈，选择主动面对现实考试。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "轻悬疑",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "d40414a23a9c4c6b91258a0b8f07e9d9",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:30:13.604368+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3913,
+      "output_tokens": 4066,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2827,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "28ef2c90-7c77-44b6-812f-20f2c689e87e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 73955,
+      "completed_at": "2026-10-10T01:31:27.559941+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "b3b8f92274d84e34b7e546c05d7c4ec4",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "c1dd727f165f4e06852b1b2b6a095b2e",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:31:27.848406+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5165,
+      "output_tokens": 3675,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2354,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "db664525-441b-4cbd-a34e-74f75b406250",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 42246,
+      "completed_at": "2026-10-10T01:32:10.095023+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.2"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "0c4a014d01d3d608da84e99d05065c34a2ad06ebb65877030bd2b1d22115393a",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:31:27.561215Z",
+  "updated_at": "2026-10-10T01:32:10.095953Z"
+}

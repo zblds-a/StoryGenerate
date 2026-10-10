@@ -1,0 +1,228 @@
+{
+  "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+  "plan_revision": 2,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "小王子归位之谜",
+    "premise": "校图书馆每晚有一本《小王子》自动归位，即将转学的夏桐与好友陆明深夜蹲守，却意外揭开了严厉管理员隐藏在机关背后的温柔秘密。",
+    "theme": "严厉外表下的温柔与青春期的告别",
+    "beginning": "夏桐和陆明在闭馆后的图书馆监控死角蹲守，等待《小王子》自动归位的灵异现象。",
+    "development": "两人发现书本是通过鱼线和通风口滑轮被拉走的，决定追踪机关源头。",
+    "climax": "在旧设备间抓到“作案者”，发现是平时最严厉的图书管理员王老师，他正为借书的学生手绘插图。",
+    "ending": "夏桐放弃拍摄灵异视频，选择记录温暖，王老师将书借给夏桐作为告别礼物，首尾声音呼应，温暖收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "飞翔的小王子",
+        "core_goal": "解开《小王子》自动归位的谜团，完成夏桐转学前的心愿。",
+        "major_beats": [
+          "【0-3s】突发听觉事件：深夜图书馆，清脆的“啪”声伴随书页快速翻动的沙沙声，夏桐压低声音惊呼“它又自己动了”。",
+          "【3-10s】陆明拉着夏桐蹲在书架后，指出闭馆且处于监控死角；夏桐举着手机，表明必须拍下《小王子》自动归位的视频，作为转学前最酷的告别。",
+          "【10-30s】等待无果，陆明劝她放弃。突然书架传来摩擦声，夏桐猛地打开手电筒和手机录像，光束下《小王子》正从半空“飞”回书架，陆明倒吸凉气，夏桐激动地喊“拍到了”。",
+          "【30-120s】陆明检查书架发现极细的透明鱼线，夏桐顺线找到通风口；陆明推断是物理机关。两人顺着鱼线溜到旧设备间，听到里面的咳嗽声与画笔摩擦纸张的声音。夏桐手机还在录像，准备拍下“幕后黑手”。",
+          "【120-155s】夏桐推开门，手机镜头对准桌面，发现是平时最严厉的王老师。桌上放着《小王子》和一叠手绘插图。王老师局促地挡住镜头，承认自己太凶吓跑学生，想用鱼线机关和手绘插图给借书同学惊喜。",
+          "【155-170s】夏桐面临选择：手机还在录像，王老师尴尬地请求她删掉，怕被当成怪人。夏桐看着王老师粗糙的手和精美的插图，深吸一口气，清晰地按下手机“停止录像”的“滴”声，说“不拍灵异了，拍这个”。",
+          "【170-180s】夏桐帮王老师把书挂回鱼线，两人一起拉动。开场那声清脆的“啪”声和翻书声再次响起，伴随着夏桐和陆明的轻笑。王老师将书递给夏桐作为告别礼物，温暖收束。"
+        ],
+        "ending": "夏桐选择分享温暖而非猎奇，亲手重现机关声音呼应开场，王老师赠书作为告别，情感余韵收束。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "夏桐",
+        "external_goal": "拍下图书馆“幽灵归位”的视频证据，作为转学前的完美告别。",
+        "emotional_avoidance": "用寻找刺激和打破规则来掩饰对离开朋友和熟悉环境的不舍与焦虑。",
+        "speech_style": "语速快，喜欢用反问和夸张词汇（如“你信不信”“绝对有鬼”），紧张或掩饰情绪时会不自觉地深呼吸并加快语速。",
+        "relationship_stance": "依赖陆明的理性兜底，但表面嫌弃他死板，试图用冒险拉他一起打破规则。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陆明",
+        "external_goal": "确保夏桐不因违规滞留图书馆而被处分，安全送她回家。",
+        "emotional_avoidance": "用“校规”和“逻辑分析”来压抑自己对夏桐即将离开的失落，不敢直接表达关心。",
+        "speech_style": "句式简短，偏好陈述句和逻辑连接词（如“首先”“根据监控”），被打断或无奈时会停顿并叹气。",
+        "relationship_stance": "嘴上用校规反对，行动上却总是挡在夏桐前面保护她，用逻辑掩饰不舍。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-3",
+        "story_name": "王老师",
+        "performer_id": "voice-3",
+        "medium": "live",
+        "dramatic_purpose": "揭示温暖真相，展现严厉外表下的笨拙与温柔，与主角形成反差，推动情感高潮。"
+      }
+    ],
+    "performance_plan": {
+      "sound_design": "重点突出深夜图书馆的空旷混响、手电筒开关的清脆咔哒声、鱼线摩擦的细微声响、手机停止录像的明确“滴”声，以及结尾处翻书声与温暖弦乐的融合。",
+      "acting_notes": "夏桐前期情绪高昂、带点神经质，后期转为感动与柔和，按下停止键时要有释然的语气；陆明全程保持克制与理性，但在推开门看到王老师时要有明显的语气软化；王老师需表现出被抓包时的局促、尴尬，以及谈及学生时的真诚与温柔。"
+    },
+    "continuity_constraints": [
+      "图书馆闭馆后监控存在死角，为两人蹲守提供合理空间。",
+      "《小王子》是触发机关的唯一书籍，因为其特定的重量和尺寸恰好匹配鱼线拉力。",
+      "王老师腿脚不便，因此必须使用旧通风口的滑轮和鱼线机关来收回书本。"
+    ],
+    "change_summary": [
+      "根据修订反馈，在155-170s增加了夏桐主动按下“停止录像”提示音的细节，使她放弃猎奇、选择温暖的最后一次角色选择在听觉上更加清晰明确。",
+      "调整了结尾（170-180s），让夏桐亲手拉动鱼线，重现开场0-3s的“啪”声与翻书声，实现首尾声音与情感的自然呼应。",
+      "严格遵循 ending_contract，将原 S6 的“戛然而止”彻底改为情感收束与余韵，确保故事完整闭环，无新增悬念。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "轻悬疑",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1,
+    "char-2": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "e05198d281054fe5a1011688f9069c1e",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:17:54.570608+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3828,
+      "output_tokens": 5462,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4076,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ca4eb4a6-60eb-4d09-aa7d-4535b46ee65b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 87221,
+      "completed_at": "2026-10-10T01:19:21.792619+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "1590b4636e614b0488bd8fcb2b9fad22",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:19:22.298160+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5228,
+      "output_tokens": 3404,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1855,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "fe7c6057-fae9-40e4-ade4-98e56b4d654c",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 34181,
+      "completed_at": "2026-10-10T01:19:56.479824+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.1"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "5f36daf52eba742dd5e94423888892578bc7cd21fc3513bba56ad6e6b2853a45",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:19:21.793199Z",
+  "updated_at": "2026-10-10T01:19:56.481658Z"
+}

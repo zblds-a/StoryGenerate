@@ -1,0 +1,873 @@
+{
+  "story_id": "721d02b19e474bfdab03805ea7d9aaaa",
+  "story_version_id": "e1459b54941941d88e2a5aef2a31c599",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "f50962e73ef242ee88bb0da1f393afce",
+  "approved_plan_revision": 1,
+  "title": "时间的回音",
+  "summary": "小镇少年在修理爷爷遗留的旧怀表时，意外触发了表内隐藏的家人留言，最终在声音的陪伴下学会面对失去，完成告别。",
+  "preview_blurb": "林宇在昏暗的钟表铺里，试图修好爷爷留下的最后一块旧怀表。当发条崩断、希望落空时，怀表里却传出了意想不到的声音……",
+  "tags": [
+    "温情",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "时间的回音",
+    "premise": "小镇少年在修理爷爷遗留的旧怀表时，意外触发了表内隐藏的家人留言，最终在声音的陪伴下学会面对失去，完成告别。",
+    "theme": "告别、陪伴与时间的意义",
+    "beginning": "林宇在钟表铺试图修好爷爷的遗物怀表，却因发条崩断而陷入崩溃与自我怀疑。",
+    "development": "怀表意外播放出爷爷的录音，揭示了怀表记录陪伴的秘密，引导林宇直面内心对爷爷离世的逃避。",
+    "climax": "林宇按下隐藏按钮，听到爷爷最后的宽慰留言，泪流满面地开口回应，彻底放下逃避，完成心理上的告别。",
+    "ending": "林宇将修好的怀表贴近胸口，在平稳的滴答声与爷爷最后的祝福中，带着希望重新面对生活，情感在温暖中圆满收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "秒针里的告别",
+        "core_goal": "林宇修好怀表并听懂爷爷的留言，完成内心的告别。",
+        "major_beats": [
+          "【0-2s】刺耳的齿轮卡壳声与发条崩断的“啪”声，林宇发出懊恼的急促喘息。",
+          "【2-7s】林宇在昏暗的钟表铺翻找工具箱，抱怨自己连爷爷留下的最后一块怀表都修不好，急躁地拨弄零件。",
+          "【7-20s】林宇绝望地捶打桌面，怀表震落。落地瞬间，怀表传出电流声与爷爷的录音：“小宇，别急着上发条，听听秒针的声音。”音乐骤停后温情切入。",
+          "【20-80s】林宇震惊地捡起怀表，爷爷的录音讲述怀表记录陪伴的秘密。林宇边听边颤抖着抚摸表盘，喃喃自语承认自己一直不敢面对爷爷离世的事实，并按下隐藏按钮。",
+          "【80-113s】怀表播放出爷爷最后的长留言，宽慰林宇不要害怕时间的流逝。林宇泪流满面，哽咽着对着怀表回应“我不逃了”，完成内心的告别与和解。",
+          "【113-120s】林宇将怀表贴在胸口，秒针发出平稳有力的滴答声。爷爷录音轻声说“去吧，你的时间才刚开始”，滴答声与呼吸声交织，在温暖充满希望的情绪顶点利落收尾。"
+        ],
+        "ending": "closed",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林宇",
+        "external_goal": "修好爷爷留下的旧怀表，听到里面可能存在的最后留言。",
+        "emotional_avoidance": "害怕面对爷爷已经去世的事实，用修表来逃避整理遗物和接受失去。",
+        "speech_style": "前期急躁、带着掩饰脆弱的抱怨；后期颤抖、哽咽，充满释怀的真诚。",
+        "relationship_stance": "对爷爷充满深深的依恋与愧疚，对父母的安慰表现出抗拒和封闭。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-2",
+        "story_name": "爷爷",
+        "performer_id": "voice-2",
+        "medium": "recording",
+        "dramatic_purpose": "通过旧钟表里的录音留言，引导主角直面内心恐惧，完成情感上的告别与成长。"
+      }
+    ],
+    "performance_plan": {
+      "audio_focus": "重点突出钟表的机械音效（齿轮、发条、滴答声）与录音电流声的质感对比，以及林宇呼吸和哽咽的细腻人声。",
+      "pacing_note": "前20秒节奏紧凑、充满焦躁感；20秒后随着录音播放，节奏逐渐放缓，留足气口给情感发酵。"
+    },
+    "continuity_constraints": [
+      "怀表是爷爷留下的唯一遗物，且具备录音功能，此设定贯穿全剧不可更改。",
+      "林宇的情感转变必须基于听到录音和自身反思，不能依赖外部人物的突然介入。"
+    ],
+    "change_summary": [
+      "根据单集 closed 结局要求，将 S6 的强钩子转化为情感高潮的余音回响，避免引入新危机或悬念断音。",
+      "为占位符角色1赋予了具体的剧情名“林宇”及详细的性格与动机设定。",
+      "新增了 fictional_voice_roles 以支持钟表录音中爷爷的声音，确保声音来源符合剧情逻辑。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-4caa6d26",
+      "index": 1,
+      "title": "秒针里的告别",
+      "synopsis": "林宇在钟表铺修理爷爷遗物怀表时遭遇挫折，意外触发表内隐藏的录音。在爷爷声音的引导下，他直面内心的逃避与愧疚，最终在录音的宽慰中完成心理告别，带着希望重新面对生活。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 109,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "崩断的发条",
+          "location": "钟表铺",
+          "dramatic_goal": "展现林宇修表失败的崩溃与对爷爷离世的逃避，为后续的情感反转做铺垫。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "刺耳的齿轮卡壳声与发条崩断的“啪”声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林宇发出懊恼的急促喘息，在昏暗的铺子里翻找工具箱。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "又断了！发条怎么这么脆……连爷爷留下的最后一块怀表都修不好，我到底能干什么？",
+              "emotion": "angry",
+              "tone_instruction": "语气急躁带火气，前半句短促爆发，后半句语速放缓转为自我怀疑",
+              "emphasis": [
+                {
+                  "span_text": "又断了！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "修不好",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“又断了！”后留0.5秒喘息停顿，接后半句时气息下沉",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "急躁地拨弄零件，金属碰撞声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "工具箱呢？明明就放在这儿的……该死，螺丝又滑丝了！爸妈让我把铺子收拾了，可我怎么收拾？",
+              "emotion": "worried",
+              "tone_instruction": "语速加快显慌乱，念到“该死”时咬字加重，最后半句声音压低透出无力感",
+              "emphasis": [
+                {
+                  "span_text": "该死",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 17,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "怎么收拾？",
+                  "occurrence": 1,
+                  "start_char": 38,
+                  "end_char": 43,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“明明就放在这儿的……”处做短暂翻找呼吸声铺垫，“该死”后急吸一口气再接问句",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "爷爷，您教了我那么多手艺，怎么偏偏没教我怎么修这块表啊……",
+              "emotion": "sad",
+              "tone_instruction": "语气转为低沉哽咽，前半句带着依赖与委屈，后半句尾音拖长并逐渐气声化",
+              "emphasis": [
+                {
+                  "span_text": "那么多手艺",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "没教我",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 20,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“爷爷，”后微顿0.3秒带入呼唤感；“啊……”处自然换气保留轻微颤音",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "秒针的秘密",
+          "location": "钟表铺",
+          "dramatic_goal": "通过怀表掉落的意外触发录音，揭示爷爷的用心，促使林宇从崩溃转向震惊与反思。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "绝望地捶打桌面，怀表震落掉在地上的声音。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "电流声，温情音乐切入。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "小宇，别急着上发条，听听秒针的声音。",
+              "emotion": "tender",
+              "tone_instruction": "语速放缓，气息下沉，前半句轻柔提醒，后半句带出温和的引导感。",
+              "emphasis": [
+                {
+                  "span_text": "听听秒针的声音",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 17,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "开头微顿半拍，模拟老式录音机启动后的第一句清晰播报，句末自然收气。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林宇震惊地捡起怀表，颤抖着抚摸表盘。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "爷爷？这是……表里的录音？怎么可能……",
+              "emotion": "surprised",
+              "tone_instruction": "气息发颤，尾音虚浮上扬，句间留白表现难以置信的停顿。",
+              "emphasis": [
+                {
+                  "span_text": "表里的录音",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "爷爷？后吸气微顿，表里的录音咬字加重且略带破音，怎么可能……以气声拖尾保持喉部紧张。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "这块表啊，藏着爷爷陪你长大的时间。你总觉得修不好它，就是没留住我。傻孩子，时间不是用来留住的，是用来听的。",
+              "emotion": "tender",
+              "tone_instruction": "中速平稳叙述，第二句语气加重以示点破心结，最后一句放慢并拉长核心词。",
+              "emphasis": [
+                {
+                  "span_text": "是用来听的",
+                  "occurrence": 1,
+                  "start_char": 47,
+                  "end_char": 52,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "长句中间在我。后自然换气，避免录音卡顿感，保持连贯诉说节奏。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我一直不敢碰您的遗物……我怕修好了，您就真的不在了。我每天都在骗自己，只要表没修好，您就还没走……",
+              "emotion": "sad",
+              "tone_instruction": "声音压抑带哽咽，前半句咬字紧，后半句逐渐失控但克制音量，体现强忍泪水。",
+              "emphasis": [
+                {
+                  "span_text": "真的不在了",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 25,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "遗物……后喉头微哽停顿两秒，真的不在了处胸腔共鸣加重，还没走……以气声收尾。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "孩子，别哭。摸摸表冠下面的那个小按钮，按下它。",
+              "emotion": "reassuring",
+              "tone_instruction": "语气转稳，前半句轻声安抚，后半句指令清晰干脆，不带犹豫。",
+              "emphasis": [
+                {
+                  "span_text": "按下它",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 22,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "别哭。后短促停顿接指令，咬字力度集中在按下它，模拟录音设备最后一段清晰指引。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s2-l9",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林宇深吸一口气，按下隐藏按钮。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "时间的回音",
+          "location": "钟表铺",
+          "dramatic_goal": "完成情感高潮，林宇在爷爷的最后留言中彻底放下逃避，达成内心的和解与告别。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "小宇，别害怕时间往前走。爷爷虽然不在了，但每一秒的滴答声，都是我在对你说，往前走，别回头。把铺子开下去，替爷爷多听听这世上的声音。",
+              "emotion": "tender",
+              "tone_instruction": "语速平稳温和，前半段带着回忆的轻柔，后半段逐渐坚定有力，传递嘱托感。",
+              "emphasis": [
+                {
+                  "span_text": "别害怕时间往前走",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "往前走，别回头",
+                  "occurrence": 1,
+                  "start_char": 37,
+                  "end_char": 44,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首“小宇”后微顿，模拟老式录音机播放的轻微底噪质感；“别回头”后气息稍收，为下一句留白。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林宇泪流满面，哽咽着将怀表贴在胸口。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "爷爷……我不逃了。我会好好走下去，把铺子守好，再也不骗自己了。",
+              "emotion": "sad",
+              "tone_instruction": "嗓音微颤带哭腔，前半句压抑哽咽，后半句咬字加重，语气由脆弱转为坚定。",
+              "emphasis": [
+                {
+                  "span_text": "我不逃了",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "再也不骗自己了",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 30,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“爷爷……”后留0.5秒抽泣气口；“我不逃了”后深呼吸一次，再连贯说出后续台词。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "秒针发出平稳有力的滴答声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "去吧，小宇。你的时间才刚开始。",
+              "emotion": "tender",
+              "tone_instruction": "声音放轻上扬，带着释然与欣慰的笑意，尾音自然渐弱融入环境音。",
+              "emphasis": [
+                {
+                  "span_text": "你的时间才刚开始",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“去吧”后短促停顿，模拟录音结束前的自然换气；“刚开始”三字吐字清晰，随后气息缓缓吐出，不留刻意收尾。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "滴答声与呼吸声交织，音乐温暖推高后利落收尾。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林宇在钟表铺修理爷爷遗物怀表时遭遇挫折，意外触发表内隐藏的录音。在爷爷声音的引导下，他直面内心的逃避与愧疚，最终在录音的宽慰中完成心理告别，带着希望重新面对生活。",
+      "ending_hook": "怀表的滴答声平稳而有力，林宇终于放下了执念，走向了属于自己的时间。",
+      "fact_delta": [
+        {
+          "fact": "怀表具备录音功能",
+          "status": "confirmed"
+        },
+        {
+          "fact": "爷爷在怀表中留下了最后的语音宽慰",
+          "status": "discovered"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "character": "林宇",
+          "target": "爷爷",
+          "change": "从逃避失去、充满愧疚，转变为接受现实、完成内心告别与和解"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "林宇对爷爷离世的逃避与自我怀疑",
+        "怀表录音的秘密"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "怀表具备录音功能",
+        "status": "confirmed"
+      },
+      {
+        "fact": "爷爷在怀表中留下了最后的语音宽慰",
+        "status": "discovered"
+      }
+    ],
+    "relationships": [
+      {
+        "character": "林宇",
+        "target": "爷爷",
+        "change": "从逃避失去、充满愧疚，转变为接受现实、完成内心告别与和解"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 11,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.0"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "7c34dc09edd94d8c90ef3e82ee08c00b",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:05:33.943327+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3503,
+      "output_tokens": 4100,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3003,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "607c83b0-8c70-4443-868a-c04001cbd945",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 50749,
+      "completed_at": "2026-10-10T01:06:24.692447+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "08d03526f088484da36751d565318386",
+      "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "67f1ee1e45d3419aa5aa62379273c6b6",
+      "provider": "openai_compat",
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:06:25.510682+00:00",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 5266,
+      "output_tokens": 5465,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3768,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "fff32310-1f0e-4765-a1f1-4995384e93c3",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 94717,
+      "completed_at": "2026-10-10T01:08:00.228970+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "08d03526f088484da36751d565318386",
+      "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "5f2d7bf9014c4aff86ac958f038a46a7",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:08:00.243027+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 1990,
+      "output_tokens": 4216,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3663,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "90500bfc-344d-4464-8bd6-b073a78dfde1",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 28117,
+      "completed_at": "2026-10-10T01:08:28.361214+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "08d03526f088484da36751d565318386",
+      "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "10e906632b4444f6b0494affec2ed7ec",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:08:28.483010+00:00",
+      "status": "timeout",
+      "error": "timeout",
+      "error_code": "MODEL_TIMEOUT",
+      "usage_source": "unavailable",
+      "latency_ms": 300249,
+      "completed_at": "2026-10-10T01:13:28.732529+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "08d03526f088484da36751d565318386",
+      "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "3bc192577f094012b5f80f7eeaf0fd85",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 2,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:13:30.238244+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2161,
+      "output_tokens": 4411,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3663,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "fb2a458c-5327-43cb-ab5a-6cb5af2528e3",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 28957,
+      "completed_at": "2026-10-10T01:13:59.196745+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "08d03526f088484da36751d565318386",
+      "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "3cf4c6db03b24283857ead587c678003",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:13:59.210511+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 1996,
+      "output_tokens": 3953,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3398,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "925d6597-7683-4cc1-ad3c-ee0ed1503c17",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 25042,
+      "completed_at": "2026-10-10T01:14:24.252805+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "08d03526f088484da36751d565318386",
+      "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "b096b7c300864959949f3e7612f65a53",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:14:24.258469+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 5780,
+      "output_tokens": 2445,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2403,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "0b63c264-46b7-48a8-a45a-d8746fd222a9",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 17354,
+      "completed_at": "2026-10-10T01:14:41.613096+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T01:14:24.254953Z"
+}

@@ -1,0 +1,1061 @@
+{
+  "story_id": "692609c5f6974d118d7366bfbc617dfa",
+  "story_version_id": "906a59d1abd24900844afcd5eddd3667",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "d322548a1b484fa58431acc1a46bf670",
+  "approved_plan_revision": 1,
+  "title": "停摆的滴答声",
+  "summary": "小镇少年林远试图修好母亲留下的旧钟表以听完所有留言，却在钟楼的共振中领悟了告别与向前的意义。",
+  "preview_blurb": "旧钟表突然传出母亲半句带着杂音的呼唤，焦躁的少年能否在钟楼的轰鸣中，拼凑出那些未曾听完的告别？",
+  "tags": [
+    "温情",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "停摆的滴答声",
+    "premise": "小镇少年林远试图修好母亲留下的旧钟表以听完所有留言，却在钟楼的共振中领悟了告别与向前的意义。",
+    "theme": "学会告别，接受时间的流逝与生命的延续。",
+    "beginning": "旧钟表突然发出杂音和母亲的半句留言，林远在老屋中焦躁地试图修好它。",
+    "development": "修表失败后的意外震动让钟表播放出母亲的日常唠叨，录音中提到的‘去钟楼对时’促使林远带着钟表奔向钟楼。",
+    "climax": "在钟楼顶层，大钟敲响的声波共振让旧钟表播放出母亲最后的留言，揭示了‘时间要往前走’的核心情感信息。",
+    "ending": "林远放下修表工具，接受母亲离世的现实，在钟声与滴答声的和谐共鸣中，带着向前的勇气重新出发。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "停摆的滴答声",
+        "core_goal": "林远试图修好母亲留下的旧钟表以听完留言，最终在钟楼的共振中领悟告别与向前的意义。",
+        "major_beats": [
+          "[0-2s] 突发听觉事件：寂静的老屋里，旧钟表突然发出刺耳的齿轮卡壳声，紧接着传出一句带着电流麦杂音的女声‘小远，吃饭了’，随后戛然而止。",
+          "[2-7s] 矛盾交代：林远烦躁地翻找螺丝刀，抱怨游丝又卡住了。他身处堆满杂物的老屋，试图修好这块停摆的旧钟表，只为听完母亲生前录在里面的所有留言。",
+          "[7-20s] 第一次反转：林远反复调试失败，气馁地用扳手砸向桌面（重音效）。震动让钟表意外恢复走动，传出母亲温柔的唠叨：‘别总低着头修东西，多看看天。’林远愣住，眼眶泛红，紧握着扳手的手松开。",
+          "[20-80s] 中段推进：录音中，母亲提到‘如果表彻底停了，就带去镇钟楼对时’。林远立刻将钟表揣进怀里，推开门跑向镇钟楼。沿途风声和脚步声交织，林远气喘吁吁地自言自语，回忆母亲生前总爱在钟楼等他。",
+          "[80-102s] 升级/二次反转：林远爬上钟楼顶层，将旧钟表放在巨大的铜钟旁。正午的大钟准时敲响（宏大音效），声波共振让旧钟表发出清脆的滴答声，并播放出最后一段留言：‘小远，表停了没关系，你的时间还得往前走。’林远彻底释怀，泪水滑落。",
+          "[102-120s] 情感收束：林远没有再试图去修表，而是将螺丝刀扔进工具箱（清脆金属声）。他听着大钟与旧钟表和谐的共鸣声，轻声回应‘妈，我出门了’，伴随轻快坚定的下楼梯脚步声，故事在温暖的余韵中平稳收束。"
+        ],
+        "ending": "林远放弃了对旧钟表的执念，接受了母亲离世的现实，带着母亲‘时间要往前走’的期许，重新面对生活。",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林远",
+        "external_goal": "修好母亲留下的旧钟表，听完里面所有的录音留言。",
+        "emotional_avoidance": "逃避母亲已经去世的事实，拒绝接受时间无法倒流的现实，用修表的技术动作掩饰内心的慌乱。",
+        "speech_style": "语速较快，带着小镇少年的执拗；紧张或烦躁时会重复短句（如‘就差一点，就差一点了’）；回避情感话题时习惯用技术术语掩饰（如‘游丝卡住了，不是我的问题’）。",
+        "relationship_stance": "对母亲充满依恋与愧疚，对现实世界中催促他放下过去的人表现出抗拒和自我封闭。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-mother-rec",
+        "story_name": "母亲(录音)",
+        "performer_id": "voice-2",
+        "medium": "recording",
+        "dramatic_purpose": "作为旧钟表中的预录声音，提供母亲生前的叮嘱与最后的心愿，引导林远完成情感上的告别与成长。"
+      }
+    ],
+    "performance_plan": {
+      "soundscape": "以老屋的寂静、修表的金属摩擦声为起点，过渡到户外的风声、脚步声，最后在钟楼宏大的钟声与清脆的滴答声共鸣中结束。",
+      "voice_direction": "林远的声音需体现出从焦躁、执拗到破防、最终释怀的层次变化；母亲录音需带有老式录音设备的底噪和电流声，语气温柔且坚定。"
+    },
+    "continuity_constraints": [
+      "旧钟表只能播放母亲生前预录的声音，不能实时对话或知晓林远当前的行为。",
+      "林远的修表动作和工具（螺丝刀、扳手）需贯穿始终，作为他逃避现实的物理依托。",
+      "钟楼的大钟敲响必须是物理声波共振，不能是超自然魔法。"
+    ],
+    "change_summary": [
+      "林远从执着于修好旧钟表、逃避现实，转变为接受钟表停摆、勇敢走向未来的心理成长。",
+      "旧钟表从‘承载过去执念的故障物品’变为‘传递母亲期许的情感信物’。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-5344c80f",
+      "index": 1,
+      "title": "停摆的滴答声",
+      "synopsis": "少年林远执着于修好母亲留下的旧钟表以听完所有留言，却在一次次失败与钟楼的共振中，终于听懂了母亲‘时间要往前走’的最后期许，学会告别并重新出发。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 112,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "卡壳的游丝",
+          "location": "堆满杂物的老屋",
+          "dramatic_goal": "林远试图修好旧钟表，但突发故障让他陷入焦躁，揭示他逃避现实的内心状态。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "寂静中，刺耳的齿轮卡壳声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-mother-rec",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "小远，别忙了，快出来吃饭了……",
+              "emotion": "tender",
+              "tone_instruction": "气声包裹，语速平缓，尾音自然拖长模拟老式录音质感",
+              "emphasis": [
+                {
+                  "span_text": "别忙了",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "吃饭了",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "保持平稳呼吸，句末留0.5秒空白后接环境音",
+              "audio_cue_ref": "老式录音底噪与电流声"
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "声音戛然而止。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "就差一点！游丝又卡住了，真不是我的问题！这发条怎么就是上不满呢？",
+              "emotion": "angry",
+              "tone_instruction": "语气急促带烦躁，前半句咬牙发力，后半句转为无奈抱怨",
+              "emphasis": [
+                {
+                  "span_text": "就差一点",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "又卡住了",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 11,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "配合翻找工具的细微摩擦声，句间不留长停顿，保持气息不稳",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "烦躁翻找工具，金属碰撞声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "妈，这破表到底怎么修的？我只想听完你留在里面的话，怎么就这么难……",
+              "emotion": "sad",
+              "tone_instruction": "声音压低带沙哑，问句处微颤，后半句气息下沉转为喃喃自语",
+              "emphasis": [
+                {
+                  "span_text": "留在里面的话",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 24,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "怎么就这么难",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 31,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首“妈”字轻唤后微顿，整体保持胸腔共鸣，避免哭腔过度",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "别急，林远，稳住。擒纵叉没问题，肯定是主发条老化了，换个零件就行。就差最后一点了，马上就好！",
+              "emotion": "reassuring",
+              "tone_instruction": "语气由紧转松，自我安抚时咬字清晰，后半句逐渐带上期待感",
+              "emphasis": [
+                {
+                  "span_text": "稳住",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "就差最后一点了",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 40,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "第一句与第二句之间加入0.3秒深呼吸动作，句尾上扬但不突兀",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "钟楼的对时",
+          "location": "老屋至镇钟楼沿途",
+          "dramatic_goal": "意外的震动让钟表短暂恢复，母亲的留言指引林远带着表前往钟楼，推动他离开封闭的老屋。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "反复调试，金属摩擦。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "还是不行……",
+              "emotion": "angry",
+              "tone_instruction": "气息下沉，尾音拖长带出无力感，前半句咬字稍重表现挫败。",
+              "emphasis": [
+                {
+                  "span_text": "还是不行",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留0.5秒气口，伴随轻微叹息声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "气馁，扳手重重砸向桌面。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "钟表意外恢复走动，清脆滴答声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-mother-rec",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "别总低着头修东西，多看看天。如果表彻底停了，就带去镇钟楼对时吧。",
+              "emotion": "tender",
+              "tone_instruction": "语速放缓，音色加柔，前半句像日常叮嘱般自然，后半句语气转轻但清晰。",
+              "emphasis": [
+                {
+                  "span_text": "多看看天",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "镇钟楼对时",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 30,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句间停顿0.8秒，模拟老式录音介质播放的底噪起伏。",
+              "audio_cue_ref": "录音介质"
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "钟楼对时？",
+              "emotion": "serious",
+              "tone_instruction": "音量压低，尾音微扬带出思索，咬字清晰放慢以承接线索。",
+              "emphasis": [
+                {
+                  "span_text": "钟楼对时",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "问句结束后留1秒静默，呼吸微促。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "妈，你以前总爱在钟楼顶层等我放学。对，只要去那儿，就能把剩下的留言全听完！",
+              "emotion": "excited",
+              "tone_instruction": "前半句回忆语气柔和，后半句语速加快、音量渐强，透出豁然开朗的笃定。",
+              "emphasis": [
+                {
+                  "span_text": "钟楼顶层",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "全听完",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 36,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "对字前微顿0.3秒作思维转折，后半句气息推高不破音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "揣起钟表，推开门，奔跑声，风声交织。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "让开让开！我得赶在十二点前去钟楼！千万别停啊！",
+              "emotion": "worried",
+              "tone_instruction": "气息急促，字头加重，连续短句保持推进感，尾音带喘。",
+              "emphasis": [
+                {
+                  "span_text": "十二点前",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "千万别停",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首让开连读压缩至0.4秒内，句末留半拍喘息气口。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l10",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "妈，你录在里面的声音，我一句都不想漏掉。等我，我马上就来！",
+              "emotion": "serious",
+              "tone_instruction": "咬字紧实，前半句语气沉缓表决心，后半句提速并提高音调传递急切。",
+              "emphasis": [
+                {
+                  "span_text": "一句都不想漏掉",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 19,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "马上就来",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "等我后微顿0.2秒蓄力，爆发马上来时胸腔共鸣加强。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "向前的滴答声",
+          "location": "镇钟楼顶层",
+          "dramatic_goal": "大钟敲响的声波共振让旧表播放出最后的留言，林远彻底释怀，放弃修表，接受现实并重新出发。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "爬上顶层，喘息。将表放在巨大的铜钟旁。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "到了……钟楼顶层。",
+              "emotion": "calm",
+              "tone_instruction": "气息微喘但语气平稳，前半句留白换气，后半句清晰落地。",
+              "emphasis": [
+                {
+                  "span_text": "钟楼顶层",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 8,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首加半秒喘息停顿，模拟刚爬上楼梯的生理状态。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "表放这儿，大钟一响，声波就能带动游丝了。马上就能听到最后一段了。",
+              "emotion": "excited",
+              "tone_instruction": "语速稍快，带着笃定与期待，重音落在动作与结果上。",
+              "emphasis": [
+                {
+                  "span_text": "大钟一响",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "最后一段",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 30,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "两句之间无长停顿，保持连贯的推演语气。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "正午大钟准时敲响，宏大钟声回荡。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "声波共振，旧钟表发出清脆滴答声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-mother-rec",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "小远，表停了没关系，你的时间还得往前走。妈在天上，也会看着你长大的。",
+              "emotion": "tender",
+              "tone_instruction": "声音带轻微电流质感，语调柔和舒缓，像日常叮嘱般自然。",
+              "emphasis": [
+                {
+                  "span_text": "往前走",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 19,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "看着你长大",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 32,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句尾长大二字渐弱收尾，保留老式录音介质特有的底噪感。",
+              "audio_cue_ref": "录音介质"
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "往前走……好，我不修了。这表，就让它停在这儿吧。",
+              "emotion": "calm",
+              "tone_instruction": "语气从迟疑转为释然，咬字轻柔，不刻意煽情。",
+              "emphasis": [
+                {
+                  "span_text": "不修了",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "停在这儿",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "往前走……后接一秒静默，模拟情绪沉淀后的轻声回应。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "螺丝刀清脆地扔进工具箱。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "妈，我不困在昨天了。我出门了！",
+              "emotion": "calm",
+              "tone_instruction": "语气明朗上扬，告别时干脆利落，不带拖沓。",
+              "emphasis": [
+                {
+                  "span_text": "昨天",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "出门了",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "妈，后微顿，随后一口气说完后半句，尾音干脆收住。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l10",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "以后每一天，我都会带着你的份，好好往前走。",
+              "emotion": "tender",
+              "tone_instruction": "声音压低但饱满，字字清晰，传递坚定的承诺感。",
+              "emphasis": [
+                {
+                  "span_text": "带着你的份",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "好好往前走",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 20,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末往前走三字逐渐放缓，伴随呼吸声自然结束录制。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "大钟声与旧表滴答声和谐共鸣，伴随轻快坚定的下楼梯脚步声，渐弱。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林远为听完母亲留在旧钟表里的录音，执着于修好故障的游丝。在意外听到母亲‘去钟楼对时’的留言后，他带着表奔向钟楼。正午大钟的声波共振触发了最后一段留言，让林远领悟到‘时间要往前走’的真谛。他最终放下修表工具，接受母亲离世的现实，带着向前的勇气重新出发。",
+      "ending_hook": "钟楼的滴答声仍在继续，而林远的脚步已不再犹豫，属于他的新时间，才刚刚开始。",
+      "fact_delta": [
+        {
+          "fact": "旧钟表从‘承载过去执念的故障物品’变为‘传递母亲期许的情感信物’，被林远留在了钟楼。"
+        },
+        {
+          "fact": "林远听完了母亲所有的录音留言，确认了母亲‘时间要往前走’的最终心愿。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林远与母亲的羁绊",
+          "change": "从通过修表逃避现实的单方面依恋与愧疚，升华为接受母亲离世、带着期许独立前行的成熟和解。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "林远试图修好旧钟表以听完留言的执念。",
+        "林远逃避母亲去世现实、拒绝接受时间流逝的心理困境。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "旧钟表从‘承载过去执念的故障物品’变为‘传递母亲期许的情感信物’，被林远留在了钟楼。"
+      },
+      {
+        "fact": "林远听完了母亲所有的录音留言，确认了母亲‘时间要往前走’的最终心愿。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林远与母亲的羁绊",
+        "change": "从通过修表逃避现实的单方面依恋与愧疚，升华为接受母亲离世、带着期许独立前行的成熟和解。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 16,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.1"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "d322548a1b484fa58431acc1a46bf670",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "31f5dccdb83e4198a8294b1d21d1838b",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:17:54.567627+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3708,
+      "output_tokens": 4301,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2999,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "e0998bf4-a825-4baa-8ad8-eb35772a0c54",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 60601,
+      "completed_at": "2026-10-10T01:18:55.169688+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "fe157c3b9eec48559e15b9650d9afab5",
+      "plan_id": "d322548a1b484fa58431acc1a46bf670",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "ca9725cda34143d5b4dc82fcc1df3053",
+      "provider": "openai_compat",
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:18:56.236652+00:00",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 5999,
+      "output_tokens": 5922,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4009,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "330a88f9-5a27-4a0b-8d1f-9181c26b877e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 101531,
+      "completed_at": "2026-10-10T01:20:37.769017+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "fe157c3b9eec48559e15b9650d9afab5",
+      "plan_id": "d322548a1b484fa58431acc1a46bf670",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "093f4a3cb338443bba72e45f9a3bc16b",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:20:37.772198+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2237,
+      "output_tokens": 4470,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3776,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "0c6e91de-43f5-434c-afe2-a717393fbbfa",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 29687,
+      "completed_at": "2026-10-10T01:21:07.459765+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "fe157c3b9eec48559e15b9650d9afab5",
+      "plan_id": "d322548a1b484fa58431acc1a46bf670",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "982d746cb61c4fa2b28209ed53ba72ba",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:21:07.476455+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2367,
+      "output_tokens": 5319,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4333,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "8f9b21de-97c4-48a6-97b5-134a9895d695",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 31056,
+      "completed_at": "2026-10-10T01:21:38.533520+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "fe157c3b9eec48559e15b9650d9afab5",
+      "plan_id": "d322548a1b484fa58431acc1a46bf670",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "9a70d18c4f0545ea9c81702207e29130",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:21:38.547784+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2368,
+      "output_tokens": 4340,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3470,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "03b7c254-71c2-475b-a211-73fb4bd21b67",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 28202,
+      "completed_at": "2026-10-10T01:22:06.749857+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "fe157c3b9eec48559e15b9650d9afab5",
+      "plan_id": "d322548a1b484fa58431acc1a46bf670",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "66205c11b4e24be28c3f295d636338fe",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:22:06.757202+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7345,
+      "output_tokens": 2137,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2095,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "39eb6407-9cdd-4d4e-9a03-10ca2a348abb",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 16079,
+      "completed_at": "2026-10-10T01:22:22.836829+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T01:22:06.752617Z"
+}

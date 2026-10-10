@@ -1,0 +1,175 @@
+{
+  "plan_id": "29978b4ac88240a18b4b5c6881405e4e",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "齿轮里的回音",
+    "premise": "叛逆少年在修理父亲留下的旧座钟时，意外触发了父亲离家前隐藏的录音留言，在齿轮的转动中学会了理解与和解。",
+    "theme": "告别童年的依赖，在时间的流逝中理解家人的爱与陪伴。",
+    "beginning": "林远试图修好父亲留下的停摆座钟，却因技术不精和内心的怨气陷入烦躁。",
+    "development": "意外触发录音后，林远跟随着父亲的声音一步步修复钟表，内心的坚冰逐渐融化。",
+    "climax": "录音道出父亲离家的苦衷与期盼，座钟重新报时，林远的情感防线彻底崩溃。",
+    "ending": "林远主动拨通父亲的电话，在钟表的滴答声中完成和解，故事在温暖的余韵中落幕。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "齿轮里的回音",
+        "core_goal": "修好旧座钟并解开对父亲离家的心结。",
+        "major_beats": [
+          "[0-2s] 刺耳的金属齿轮卡死声，紧接着螺丝刀重重砸在木桌上，林远烦躁地喘息。",
+          "[2-7s] 林远对着停摆的旧座钟抱怨：‘这破钟根本修不好！他走的时候就没想过留个能用的东西给我。’交代修钟困境与对父亲离家的怨气。",
+          "[7-20s] 林远赌气用力拍打钟壳，钟表突然发出‘咔哒’一声，传出父亲带电流声的录音：‘小远，发条别上太紧……’林远惊愕，螺丝刀掉落。",
+          "[20-80s] 林远凑近钟表，听着录音里父亲解释去外地打工的苦衷及保养钟表的方法。林远嘴上嫌弃，手却跟着录音指示颤抖着上发条，穿插他回忆父亲离家时争吵的碎语。",
+          "[80-113s] 录音结尾父亲温柔叮嘱‘时间不等人，别生爸的气，往前走’。旧钟恢复清脆的整点报时声。林远彻底破防，意识到父亲的陪伴，抓起手机拨号。",
+          "[113-120s] 电话接通，传来父亲惊喜的‘喂？小远？’。伴随钟表平稳的滴答声，林远哽咽回应：‘爸，钟修好了，你早点回来。’故事在温情余韵中收束。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林远",
+        "external_goal": "修好家里停摆的旧座钟，证明自己能行，同时掩盖对父亲的思念。",
+        "emotional_avoidance": "避免承认自己其实很渴望父亲的关注和陪伴，用带刺的叛逆掩饰脆弱。",
+        "speech_style": "语速快，喜欢用反问句，紧张时会摆弄手里的零件发出金属碰撞声，被戳中心事时会生硬地转移话题说‘烦死了’。",
+        "relationship_stance": "对父亲表面抗拒、抱怨他只顾工作，内心却保留着父亲送的钟表并试图修好它。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-dad-rec",
+        "story_name": "林父",
+        "performer_id": "voice-dad",
+        "medium": "recording",
+        "dramatic_purpose": "通过旧钟表里的预录留言，传递父亲笨拙但深沉的爱，解开林远的心结，推动他做出最后的和解选择。"
+      }
+    ],
+    "performance_plan": {
+      "soundscape": "以旧钟表的机械声（齿轮摩擦、发条声、滴答声、报时声）为核心环境音，贯穿全剧，隐喻时间的流逝与人物内心的节奏。",
+      "music": "前半段无音乐或极简的环境底噪，突出机械声与人物烦躁情绪；S5报时后切入温暖、舒缓的木吉他或钢琴轻音乐，烘托和解氛围。"
+    },
+    "continuity_constraints": [
+      "旧座钟的录音模块必须在S3被合理触发（如拍打或上发条到特定位置），不能凭空出现。",
+      "林远的态度转变必须有层次，从S2的抱怨到S4的嘴硬心软，再到S5的破防，不能瞬间突变。",
+      "父亲的录音内容必须是离家前录制的，不能包含录制后发生的事件。"
+    ],
+    "change_summary": [
+      "将通用占位符'角色1'具体化为小镇少年'林远'，并赋予其修理钟表的具体行动线。",
+      "根据ending_contract要求，将S6的'戛然而止'调整为情感高潮的温情收束，确保故事完整落幕而不留悬念。",
+      "新增虚构声音角色'林父'的录音，作为推动主角内心转变的关键线索，符合不自动套用亡者留言的原则（父亲在世，只是离家）。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "29978b4ac88240a18b4b5c6881405e4e",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "6495a1a5600b48218afa580e39f2bf83",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.2",
+      "started_at": "2026-10-10T01:30:13.489692+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3793,
+      "output_tokens": 4372,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3172,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "b141cfd5-abda-4944-8b68-d03d6e4f855c",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 66574,
+      "completed_at": "2026-10-10T01:31:20.063718+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.2"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "273340ad09c41cad035daf684b3b07ac5499199dbf5ed36bb7ef8136f33dc113",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:31:20.066748Z",
+  "updated_at": "2026-10-10T01:31:20.066748Z"
+}

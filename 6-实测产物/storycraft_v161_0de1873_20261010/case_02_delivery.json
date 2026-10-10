@@ -1,0 +1,1097 @@
+{
+  "story_id": "7f3b1709d6354e49a1c5bcf121c1980c",
+  "story_version_id": "40929d1967634e4e96d58e6f62113d8f",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+  "approved_plan_revision": 2,
+  "title": "小王子归位之谜",
+  "summary": "校图书馆每晚有一本《小王子》自动归位，即将转学的夏桐与好友陆明深夜蹲守，却意外揭开了严厉管理员隐藏在机关背后的温柔秘密。",
+  "preview_blurb": "深夜图书馆里，《小王子》每晚都会自动飞回书架。即将转学的夏桐决定拍下这灵异一幕，作为最酷的告别。但当她和好友陆明顺着神秘鱼线追踪时，发现的却不是幽灵。",
+  "tags": [
+    "轻悬疑",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "outline": {
+    "title": "小王子归位之谜",
+    "premise": "校图书馆每晚有一本《小王子》自动归位，即将转学的夏桐与好友陆明深夜蹲守，却意外揭开了严厉管理员隐藏在机关背后的温柔秘密。",
+    "theme": "严厉外表下的温柔与青春期的告别",
+    "beginning": "夏桐和陆明在闭馆后的图书馆监控死角蹲守，等待《小王子》自动归位的灵异现象。",
+    "development": "两人发现书本是通过鱼线和通风口滑轮被拉走的，决定追踪机关源头。",
+    "climax": "在旧设备间抓到“作案者”，发现是平时最严厉的图书管理员王老师，他正为借书的学生手绘插图。",
+    "ending": "夏桐放弃拍摄灵异视频，选择记录温暖，王老师将书借给夏桐作为告别礼物，首尾声音呼应，温暖收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "飞翔的小王子",
+        "core_goal": "解开《小王子》自动归位的谜团，完成夏桐转学前的心愿。",
+        "major_beats": [
+          "【0-3s】突发听觉事件：深夜图书馆，清脆的“啪”声伴随书页快速翻动的沙沙声，夏桐压低声音惊呼“它又自己动了”。",
+          "【3-10s】陆明拉着夏桐蹲在书架后，指出闭馆且处于监控死角；夏桐举着手机，表明必须拍下《小王子》自动归位的视频，作为转学前最酷的告别。",
+          "【10-30s】等待无果，陆明劝她放弃。突然书架传来摩擦声，夏桐猛地打开手电筒和手机录像，光束下《小王子》正从半空“飞”回书架，陆明倒吸凉气，夏桐激动地喊“拍到了”。",
+          "【30-120s】陆明检查书架发现极细的透明鱼线，夏桐顺线找到通风口；陆明推断是物理机关。两人顺着鱼线溜到旧设备间，听到里面的咳嗽声与画笔摩擦纸张的声音。夏桐手机还在录像，准备拍下“幕后黑手”。",
+          "【120-155s】夏桐推开门，手机镜头对准桌面，发现是平时最严厉的王老师。桌上放着《小王子》和一叠手绘插图。王老师局促地挡住镜头，承认自己太凶吓跑学生，想用鱼线机关和手绘插图给借书同学惊喜。",
+          "【155-170s】夏桐面临选择：手机还在录像，王老师尴尬地请求她删掉，怕被当成怪人。夏桐看着王老师粗糙的手和精美的插图，深吸一口气，清晰地按下手机“停止录像”的“滴”声，说“不拍灵异了，拍这个”。",
+          "【170-180s】夏桐帮王老师把书挂回鱼线，两人一起拉动。开场那声清脆的“啪”声和翻书声再次响起，伴随着夏桐和陆明的轻笑。王老师将书递给夏桐作为告别礼物，温暖收束。"
+        ],
+        "ending": "夏桐选择分享温暖而非猎奇，亲手重现机关声音呼应开场，王老师赠书作为告别，情感余韵收束。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "夏桐",
+        "external_goal": "拍下图书馆“幽灵归位”的视频证据，作为转学前的完美告别。",
+        "emotional_avoidance": "用寻找刺激和打破规则来掩饰对离开朋友和熟悉环境的不舍与焦虑。",
+        "speech_style": "语速快，喜欢用反问和夸张词汇（如“你信不信”“绝对有鬼”），紧张或掩饰情绪时会不自觉地深呼吸并加快语速。",
+        "relationship_stance": "依赖陆明的理性兜底，但表面嫌弃他死板，试图用冒险拉他一起打破规则。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陆明",
+        "external_goal": "确保夏桐不因违规滞留图书馆而被处分，安全送她回家。",
+        "emotional_avoidance": "用“校规”和“逻辑分析”来压抑自己对夏桐即将离开的失落，不敢直接表达关心。",
+        "speech_style": "句式简短，偏好陈述句和逻辑连接词（如“首先”“根据监控”），被打断或无奈时会停顿并叹气。",
+        "relationship_stance": "嘴上用校规反对，行动上却总是挡在夏桐前面保护她，用逻辑掩饰不舍。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-3",
+        "story_name": "王老师",
+        "performer_id": "voice-3",
+        "medium": "live",
+        "dramatic_purpose": "揭示温暖真相，展现严厉外表下的笨拙与温柔，与主角形成反差，推动情感高潮。"
+      }
+    ],
+    "performance_plan": {
+      "sound_design": "重点突出深夜图书馆的空旷混响、手电筒开关的清脆咔哒声、鱼线摩擦的细微声响、手机停止录像的明确“滴”声，以及结尾处翻书声与温暖弦乐的融合。",
+      "acting_notes": "夏桐前期情绪高昂、带点神经质，后期转为感动与柔和，按下停止键时要有释然的语气；陆明全程保持克制与理性，但在推开门看到王老师时要有明显的语气软化；王老师需表现出被抓包时的局促、尴尬，以及谈及学生时的真诚与温柔。"
+    },
+    "continuity_constraints": [
+      "图书馆闭馆后监控存在死角，为两人蹲守提供合理空间。",
+      "《小王子》是触发机关的唯一书籍，因为其特定的重量和尺寸恰好匹配鱼线拉力。",
+      "王老师腿脚不便，因此必须使用旧通风口的滑轮和鱼线机关来收回书本。"
+    ],
+    "change_summary": [
+      "根据修订反馈，在155-170s增加了夏桐主动按下“停止录像”提示音的细节，使她放弃猎奇、选择温暖的最后一次角色选择在听觉上更加清晰明确。",
+      "调整了结尾（170-180s），让夏桐亲手拉动鱼线，重现开场0-3s的“啪”声与翻书声，实现首尾声音与情感的自然呼应。",
+      "严格遵循 ending_contract，将原 S6 的“戛然而止”彻底改为情感收束与余韵，确保故事完整闭环，无新增悬念。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-5d4c998a",
+      "index": 1,
+      "title": "飞翔的小王子",
+      "synopsis": "深夜的校图书馆，《小王子》屡屡自动归位。即将转学的夏桐拉着好友陆明蹲守监控死角，誓要拍下这灵异一幕作为最酷的告别。然而，手电筒的光束和顺着鱼线追踪的脚步，却将他们引向了旧设备间里一个笨拙而温柔的秘密。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 163,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "深夜蹲守",
+          "location": "校图书馆书架区",
+          "dramatic_goal": "交代两人深夜滞留图书馆的目的，建立夏桐对灵异事件的期待与陆明的理性阻拦之间的初步冲突。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "深夜空旷混响，清脆的啪声伴随书页快速翻动的沙沙声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（急促）陆明！你信不信，它又自己动了！绝对有鬼！",
+              "emotion": "fearful",
+              "tone_instruction": "气息急促，前半句压低音量带轻微颤音，后半句咬字加快但保持清晰",
+              "emphasis": [
+                {
+                  "span_text": "它又自己动了",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 18,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "绝对有鬼",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首“陆明”后微顿0.3秒，迅速吸气接下一句，句末不留余音",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（低声）嘘！别乱动。闭馆了，这儿是监控死角。你大半夜举着手机干嘛？",
+              "emotion": "serious",
+              "tone_instruction": "气声包裹，语速放缓，重音落在警告性词汇上，尾音自然下沉",
+              "emphasis": [
+                {
+                  "span_text": "别乱动",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "监控死角",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“嘘”字后留0.5秒空白，模拟伸手拉人的动作节奏，后续语句连贯不出破音",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（深呼吸）拍《小王子》自动归位啊！下周我就转学了，这必须是我留在这儿最酷的告别！",
+              "emotion": "excited",
+              "tone_instruction": "深吸一口气后语气上扬，情绪从平复转为热切，强调个人动机与时间节点",
+              "emphasis": [
+                {
+                  "span_text": "自动归位",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "最酷的告别",
+                  "occurrence": 1,
+                  "start_char": 34,
+                  "end_char": 39,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首加入明显的吸气声，随后连贯吐出，句末“告别”二字不拖音，保持向前推进感",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（无奈）首先，根据校规，滞留图书馆要受处分。其次，这世上根本没有鬼。你快把手机收了。",
+              "emotion": "calm",
+              "tone_instruction": "语气平稳带点疲惫感，逻辑词“首先”“其次”清晰断开，最后一句转为温和劝止",
+              "emphasis": [
+                {
+                  "span_text": "滞留图书馆要受处分",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 21,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "根本没有鬼",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 33,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“首先”前微顿，“其次”后换气一次，句末“收了”二字轻读并渐弱，留出对方反应空间",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "追踪鱼线",
+          "location": "校图书馆书架至旧设备间",
+          "dramatic_goal": "展现书本归位的物理证据，推动两人从被动等待转为主动追踪，将悬疑感过渡到现实探秘。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（激动）动了！它真飞起来了！拍到了拍到了！",
+              "emotion": "excited",
+              "tone_instruction": "语速加快，尾音上扬，带出发现奇迹的惊喜感。",
+              "emphasis": [
+                {
+                  "span_text": "动了！",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "拍到了",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 17,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首“动了”后留0.2秒气口，模拟举手机对焦的瞬间停顿。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（倒吸凉气）等等，别慌。这书架顶端有根极细的透明鱼线，顺着线看，连到通风口的滑轮了。",
+              "emotion": "calm",
+              "tone_instruction": "压低嗓音，语气平稳引导，后半句指尖跟随视线移动的节奏放缓。",
+              "emphasis": [
+                {
+                  "span_text": "极细的透明鱼线",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 26,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "通风口的滑轮",
+                  "occurrence": 1,
+                  "start_char": 34,
+                  "end_char": 40,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“等等”后微顿，吸气声自然融入句首，不刻意加重。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（惊讶）物理机关？不是幽灵？那这书怎么自己飞回去的？",
+              "emotion": "surprised",
+              "tone_instruction": "疑问语调逐句递进，重音落在否定词与动作上，体现思维转折。",
+              "emphasis": [
+                {
+                  "span_text": "不是幽灵？",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "自己飞回去的？",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "两个问号之间保持0.3秒思考停顿，第三句尾音微微下沉表示困惑。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（叹气）根据受力分析，就是鱼线拉力。别拍了，顺着线去旧设备间看看，抓现行。我走前面。",
+              "emotion": "serious",
+              "tone_instruction": "气息下沉，语气果断干脆，指令部分咬字清晰有力。",
+              "emphasis": [
+                {
+                  "span_text": "鱼线拉力",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 17,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "抓现行",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 36,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "叹气后接0.5秒换气，指令句之间不留明显停顿，保持推进感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "两人轻手轻脚走路，停在门外，听到里面咳嗽声与画笔摩擦纸张声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（压低声音）里面有人！还在画画！手机继续录，我要拍下幕后黑手！",
+              "emotion": "excited",
+              "tone_instruction": "气声包裹实音，音量控制在耳语级别，但语意充满猎奇的兴奋感。",
+              "emphasis": [
+                {
+                  "span_text": "里面有人！",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "幕后黑手！",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "全程保持唇齿贴近麦克风的贴麦感，“里面有人”后急停半秒再续接下一句。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "温柔真相",
+          "location": "旧设备间",
+          "dramatic_goal": "揭晓机关制造者身份，展现王老师严厉外表下的温柔，并让夏桐做出放弃猎奇、选择保护秘密的关键抉择。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "推门声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（愣住）王老师？",
+              "emotion": "surprised",
+              "tone_instruction": "气息微顿，尾音上扬带出难以置信的疑问感",
+              "emphasis": [
+                {
+                  "span_text": "王老师",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前留0.5秒呼吸停顿，模拟推门撞见后的瞬间失语",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "（局促）夏桐？陆明？你们怎么在这儿……别拿手机对着我。",
+              "emotion": "worried",
+              "tone_instruction": "语速加快，前半句连珠炮般试探，后半句压低音量转为急促劝阻",
+              "emphasis": [
+                {
+                  "span_text": "别拿手机对着我",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "这儿后接0.8秒气声停顿，模拟慌乱中伸手挡镜头的动作节奏",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（结巴）您、您平时不是最讨厌我们看课外书吗？桌上这些精美的手绘插图是……",
+              "emotion": "surprised",
+              "tone_instruction": "咬字轻微打结，问句语气从质疑逐渐转为好奇探寻",
+              "emphasis": [
+                {
+                  "span_text": "最讨厌",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "精美的手绘插图",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 33,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "您、您之间插入0.3秒迟疑停顿，句末是……气息渐弱留白",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "（挡住镜头，叹气）我平时太严厉，吓跑了借书的同学。我想着，用鱼线把书拉回通风口，再夹上我亲手画的插图，给你们个惊喜。",
+              "emotion": "tender",
+              "tone_instruction": "语速放缓，语气由自责过渡到温和期待，重音落在付出细节上",
+              "emphasis": [
+                {
+                  "span_text": "亲手画",
+                  "occurrence": 1,
+                  "start_char": 44,
+                  "end_char": 47,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "惊喜",
+                  "occurrence": 1,
+                  "start_char": 55,
+                  "end_char": 57,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "叹气后接1秒真实呼吸声，随后以胸腔共鸣平稳叙述",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "（尴尬）把视频删了吧。被学校知道，我这怪老头子就该提前退休了。",
+              "emotion": "worried",
+              "tone_instruction": "前半句干脆请求，后半句自嘲式苦笑，音量逐字递减",
+              "emphasis": [
+                {
+                  "span_text": "删了吧",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "提前退休",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "删了吧后接0.4秒吞咽动作提示，模拟紧张心理",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "夏桐深吸一口气，清晰按下手机停止录像的滴声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "不拍灵异了，拍这个。",
+              "emotion": "calm",
+              "tone_instruction": "气息下沉，咬字清晰果断，后半句语气自然转柔",
+              "emphasis": [
+                {
+                  "span_text": "不拍灵异",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "拍这个",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 9,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首预留0.5秒深呼吸落定声，模拟按下停止键的瞬间决断",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "告别礼物",
+          "location": "旧设备间",
+          "dramatic_goal": "通过重现开场音效完成首尾呼应，王老师赠书作为情感收束，彻底化解悬疑并留下温暖余韵。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "（轻笑）王老师，我帮您把书挂回去。以后我们还会回来看您的。",
+              "emotion": "tender",
+              "tone_instruction": "语气放软，前半句带点轻松的笑意，后半句放缓语速传递承诺感",
+              "emphasis": [
+                {
+                  "span_text": "还会回来看您的",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首预留轻笑声的换气口，说完“挂回去”后微顿半秒再接后半句",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "两人一起拉动鱼线，清脆的啪声与翻书沙沙声再次响起，伴随温暖弦乐。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "（轻笑）原来机关是这样运作的，难怪每天都能听到啪的声音。王老师，您真用心。",
+              "emotion": "happy",
+              "tone_instruction": "语调上扬带出恍然大悟的轻快感，“啪的声音”处咬字稍重显生动，结尾语气转为真诚",
+              "emphasis": [
+                {
+                  "span_text": "您真用心",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 36,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首轻笑声自然衔接前文动作停顿，读到“啪的声音”时嘴角微扬带出笑意",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-3",
+              "narrator_id": null,
+              "performer_id": "voice-3",
+              "text": "（温和，递书声）这本《小王子》送给你，当做转学的告别礼物吧。路上小心。",
+              "emotion": "tender",
+              "tone_instruction": "气息下沉，语速放慢，前半句平稳叙述，后半句压低音量传递关切",
+              "emphasis": [
+                {
+                  "span_text": "当做转学的告别礼物吧",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首配合递书动作留出约0.5秒环境音空隙，说完“礼物吧”后气息微收再吐后半句",
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "夏桐与陆明深夜蹲守图书馆，试图拍下《小王子》自动归位的灵异视频。追踪鱼线机关后，他们发现幕后黑手竟是严厉的王老师。得知老师为给学生惊喜而笨拙布置机关后，夏桐放弃猎奇录像，选择记录温暖，并在重现机关声音中收到了珍贵的转学告别礼物。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "《小王子》自动归位的真相",
+          "details": "并非灵异事件，而是王老师利用鱼线和通风口滑轮制作的物理机关，目的是为了给借书的同学夹上亲手绘制的插图惊喜。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "characters": [
+            "夏桐",
+            "王老师"
+          ],
+          "change": "夏桐从畏惧严厉的管理员，转变为理解并保护他笨拙温柔的秘密，两人建立起跨越师生的温暖羁绊。"
+        },
+        {
+          "characters": [
+            "夏桐",
+            "陆明"
+          ],
+          "change": "陆明全程用理性掩护夏桐的冒险，在见证真相后也放下了刻板的校规说教，理解了夏桐转学前的不舍。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "《小王子》自动归位的灵异谜团",
+        "夏桐转学前寻找最酷告别的心愿"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "《小王子》自动归位的真相",
+        "details": "并非灵异事件，而是王老师利用鱼线和通风口滑轮制作的物理机关，目的是为了给借书的同学夹上亲手绘制的插图惊喜。"
+      }
+    ],
+    "relationships": [
+      {
+        "characters": [
+          "夏桐",
+          "王老师"
+        ],
+        "change": "夏桐从畏惧严厉的管理员，转变为理解并保护他笨拙温柔的秘密，两人建立起跨越师生的温暖羁绊。"
+      },
+      {
+        "characters": [
+          "夏桐",
+          "陆明"
+        ],
+        "change": "陆明全程用理性掩护夏桐的冒险，在见证真相后也放下了刻板的校规说教，理解了夏桐转学前的不舍。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 18,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.1"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "e05198d281054fe5a1011688f9069c1e",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:17:54.570608+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3828,
+      "output_tokens": 5462,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4076,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ca4eb4a6-60eb-4d09-aa7d-4535b46ee65b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 87221,
+      "completed_at": "2026-10-10T01:19:21.792619+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "1590b4636e614b0488bd8fcb2b9fad22",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:19:22.298160+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5228,
+      "output_tokens": 3404,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1855,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "fe7c6057-fae9-40e4-ade4-98e56b4d654c",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 34181,
+      "completed_at": "2026-10-10T01:19:56.479824+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "d0e54c4f4e4b4de3a5448da2894ed075",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "9ff331ffa48542cc983a61e0a5d63aec",
+      "provider": "openai_compat",
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:19:57.056024+00:00",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 6629,
+      "output_tokens": 8146,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 6133,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "7d667361-06be-412c-8ed4-34db1f7312d8",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 139731,
+      "completed_at": "2026-10-10T01:22:16.788517+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "d0e54c4f4e4b4de3a5448da2894ed075",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "5a9b78bb1712490fa24e626eca5fc736",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:22:16.801772+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2250,
+      "output_tokens": 4367,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3626,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "18e928f4-055b-4279-9a93-c74c45882a61",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 26976,
+      "completed_at": "2026-10-10T01:22:43.779091+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "d0e54c4f4e4b4de3a5448da2894ed075",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "51d79644a8eb4944a10b37b82b82dc41",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:22:43.792567+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2336,
+      "output_tokens": 4824,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3947,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "747df99a-3a49-4832-b01b-42f1fd559965",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 29416,
+      "completed_at": "2026-10-10T01:23:13.208643+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "d0e54c4f4e4b4de3a5448da2894ed075",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "7d0fd50416e9441db874adfe9d7094aa",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:23:13.215634+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2408,
+      "output_tokens": 4847,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4068,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ef96596a-9ef8-49e9-9b05-d07aae606f4a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 29584,
+      "completed_at": "2026-10-10T01:23:42.800287+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "d0e54c4f4e4b4de3a5448da2894ed075",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "a44e02de7ddd4faaaba7bd5d32e49d6c",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:23:42.808897+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2152,
+      "output_tokens": 5294,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4778,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "97893b2e-9f15-41fd-9859-e5887534f992",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 31286,
+      "completed_at": "2026-10-10T01:24:14.095191+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "d0e54c4f4e4b4de3a5448da2894ed075",
+      "plan_id": "b217f9d0c0a84e95a13f843c9b193a18",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "6a248b3704e7463eb1b27cb38da8b5ee",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.1",
+      "started_at": "2026-10-10T01:24:14.098152+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7446,
+      "output_tokens": 1607,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1565,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "dc30e2fc-28fa-43c9-a7d8-87655914ac1f",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 11667,
+      "completed_at": "2026-10-10T01:24:25.765175+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T01:24:14.095794Z"
+}

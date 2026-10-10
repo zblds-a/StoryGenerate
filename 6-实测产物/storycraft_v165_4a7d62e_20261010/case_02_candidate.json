@@ -1,0 +1,1269 @@
+{
+  "story_id": "1f9ec954810b41c8969206709a7c966d",
+  "story_version_id": "53dceda0f40f45ae95a64912ad393501",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+  "approved_plan_revision": 2,
+  "title": "星空归位",
+  "summary": "校图书馆每晚有一本《星空诗集》自动归位，失眠的女孩林晓与好友陈宇蹲守调查，最终发现温暖的真相。",
+  "preview_blurb": "闭馆后的图书馆，一本《星空诗集》每晚自动归位。失眠的林晓决定抓出这个“田螺姑娘”，却意外撞破了好友隐藏已久的秘密。",
+  "tags": [
+    "轻悬疑",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "outline": {
+    "title": "星空归位",
+    "premise": "校图书馆每晚有一本《星空诗集》自动归位，失眠的女孩林晓与好友陈宇蹲守调查，最终发现温暖的真相。",
+    "theme": "真正的陪伴不是讲道理，而是默默守护你的微小信念。",
+    "beginning": "闭馆广播响起，书本自动归位的闷响打破图书馆的宁静，林晓与陈宇决定抓出放书的人。",
+    "development": "两人排查线索，林晓怀疑是暗恋者所为，陈宇用理性反驳引发争执，林晓决定独自设下陷阱暗中观察。",
+    "climax": "林晓在暗处亲耳听到陈宇放书的声音，现身质问，陈宇坦白自己每天提前放书是为了治愈林晓的失眠。",
+    "ending": "林晓选择接受这份守护，亲手将书推回书架呼应开场，两人并肩离开，在闭馆音乐中完成情感收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "星空归位",
+        "core_goal": "揭开书本自动归位的真相，完成人物内心的治愈与和解。",
+        "major_beats": [
+          "【0-3s】闭馆预备铃突兀响起，紧接着书架深处传来书本被用力推入木架的“咔哒”闷响。",
+          "【3-10s】林晓压低声音对陈宇说“它又自己回去了”，两人从书架后探头，决定堵住过道抓出这个“田螺姑娘”。",
+          "【10-30s】两人冲出过道，却只撞见正在拖地的保洁阿姨；林晓失落叹气时，陈宇突然抽出那本《星空诗集》，伴随纸张摩擦声，从书页里抽出一张新便签。",
+          "【30-120s】林晓看着便签怀疑是暗恋者，陈宇用逻辑反驳，林晓烦躁指责他“只会泼冷水”。林晓低头翻书包时，听到陈宇口袋里硬卡纸的沙沙声，且看到他手指上的蓝墨水。林晓借口去洗手间，实则绕回C区暗处蹲守。",
+          "【120-170s】林晓在暗处听到陈宇特有的脚步声，接着是书本推入书架的“咔哒”声和夹纸轻响。林晓走出阴影质问，陈宇坦白自己每天利用盲区提前放书，是因为林晓失眠，只有看到书归位才能安心。",
+          "【170-180s】林晓面临选择：是继续追问“为什么不直接告诉我”，还是接受这份笨拙的守护。她选择后者，拿过笔在便签写下“今晚能睡个好觉”，亲手将书推回书架，发出一声清脆的“咔哒”声完美呼应开场。两人并肩离开，闭馆音乐轻柔响起。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林晓",
+        "external_goal": "找出让书自动归位的人，寻找心理慰藉。",
+        "emotional_avoidance": "回避奶奶去世带来的失眠与脆弱，用急躁掩饰不安。",
+        "speech_style": "语速快，喜欢用反问句（如“难道不是…”），受压时会转移话题或提高音量。",
+        "relationship_stance": "依赖陈宇的陪伴，但讨厌他过度理性的分析，渴望被感性理解。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陈宇",
+        "external_goal": "隐藏自己放书的事实，同时引导林晓走出阴霾。",
+        "emotional_avoidance": "回避直接表达关心，怕给林晓造成心理负担。",
+        "speech_style": "陈述句为主，喜欢用“逻辑上”“其实”等词，受压时会沉默或假装看手机。",
+        "relationship_stance": "默默守护，愿意承担被误解的风险，用行动代替说教。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": {
+      "actual_event_timeline": "闭馆前5分钟，陈宇利用林晓低头翻找书包的十几秒视线盲区，绕过U型书架，将《星空诗集》推入原位并夹入写有鼓励话语的便签。",
+      "witnessed_event": "林晓听到“咔哒”声后立刻绕到书架正面，发现书已归位且多了一张新便签。",
+      "actor_opportunity": "陈宇利用林晓低头找东西的十几秒，以及C区书架的U型物理盲区完成动作，并在之后借口去洗手间离开以制造不在场证明。",
+      "audible_trace_before_reveal": "林晓在翻找时，听到陈宇外套口袋里硬卡纸摩擦的沙沙声；且陈宇递书时，手指边缘沾有与便签相同的蓝色钢笔墨水。",
+      "onstage_verification": "林晓在暗处蹲守时，亲耳听到陈宇特有的脚步声（鞋底摩擦声），接着是推书和夹纸的声音，当场抓获。"
+    },
+    "performance_plan": {
+      "sound_design": "闭馆广播、书本推入木架的“咔哒”声、硬卡纸摩擦声、拖地水声、脚步声、闭馆音乐。",
+      "spatial_audio": "图书馆C区书架间的混响，从狭窄过道到开阔走廊的空间变化。",
+      "pacing": "前30秒紧凑悬疑，中段争执带点委屈，后段揭秘转为温暖治愈。"
+    },
+    "continuity_constraints": [
+      "书本必须是同一本《星空诗集》。",
+      "陈宇的蓝色钢笔墨水和口袋里的硬卡纸必须在揭秘前被提及或听到。",
+      "闭馆时间固定在5点50分，预备铃在5点45分。",
+      "结尾的“咔哒”声必须与开场音色一致，形成闭环。"
+    ],
+    "change_summary": [
+      "林晓从执着于寻找外部虚幻的“田螺姑娘”转变为接受朋友真实的默默守护，内心获得平静。",
+      "陈宇从隐藏秘密、用理性掩饰关心，转变为坦诚自己的初衷，两人关系更加深厚。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-d585026d",
+      "index": 1,
+      "title": "星空归位",
+      "synopsis": "校图书馆每晚有一本《星空诗集》自动归位，失眠的女孩林晓与好友陈宇蹲守调查，最终发现温暖的真相。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 175,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "第一幕：预备铃与闷响",
+          "location": "图书馆C区书架后",
+          "dramatic_goal": "建立悬疑氛围，确立两人抓出“田螺姑娘”的行动目标。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "闭馆预备铃突兀响起，书本推入木架的咔哒闷响。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "预备铃后紧接沉闷的推书声",
+              "audio_cue_ref": "sfx_bell_and_book"
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "陈宇，你听见没？它又自己回去了！",
+              "emotion": "excited",
+              "tone_instruction": "压低嗓音，前半句急促试探，后半句尾音微颤显紧张",
+              "emphasis": [
+                {
+                  "span_text": "又自己回去了",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "压低声音，带点兴奋与紧张；句首“陈宇”后留0.2秒气口，模拟探头张望的停顿",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "嘘，别出声，小心打草惊蛇。",
+              "emotion": "serious",
+              "tone_instruction": "全程贴麦克风用气声，咬字轻而短促，尾音收住不拖沓",
+              "emphasis": [
+                {
+                  "span_text": "打草惊蛇",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "气声，警惕；“嘘”字前加半秒吸气声，模拟瞬间噤声的动作",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "难道又是那个田螺姑娘？走，我们堵住过道，这次非得抓个现行，看看究竟是谁在装神弄鬼！",
+              "emotion": "excited",
+              "tone_instruction": "语速加快，语气由疑问转为笃定，后半句加重咬字显急切",
+              "emphasis": [
+                {
+                  "span_text": "非得抓个现行",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速快，急切；“走”字后接0.3秒急促换气，模拟起身推搡同伴的动作",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "第二幕：视觉盲区与新便签",
+          "location": "图书馆C区过道",
+          "dramatic_goal": "第一次反转落空，引出关键道具便签，加深林晓的执念。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "两人急促脚步声冲出过道，拖地的水声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "脚步声急停，伴随拖地水声",
+              "audio_cue_ref": "sfx_footsteps_and_mop"
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "又是保洁阿姨在拖地，人呢？跑哪去了？难道真的会隐身？",
+              "emotion": "worried",
+              "tone_instruction": "语气带着扑空的失落与不解，语速稍缓，疑问处气息微浮。",
+              "emphasis": [
+                {
+                  "span_text": "人呢？",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "隐身？",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "失落，疑惑；“又是保洁阿姨在拖地”后微顿半秒，接“人呢？”时音调上扬，“跑哪去了？”压低音量带气声，“难道真的会隐身？”尾音拖长并微微叹息。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "其实，逻辑上这里存在视觉盲区。你仔细看这个。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳清晰，咬字干脆，前半句客观陈述，后半句转为轻声引导。",
+              "emphasis": [
+                {
+                  "span_text": "视觉盲区",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "仔细看这个",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 21,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "冷静，引导；“其实”后轻吸气起调，“逻辑上这里存在视觉盲区”保持中低音区平稳推进，“你仔细看这个”前微停，声音略微靠近麦克风以突出提示感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "这本星空诗集里，多了一张新便签。",
+              "emotion": "calm",
+              "tone_instruction": "语气平淡但带有发现线索的专注，重音落在关键名词上，句末不拖沓。",
+              "emphasis": [
+                {
+                  "span_text": "星空诗集",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "新便签",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "陈述事实；“这本星空诗集里”后自然换气，“多了一张新便签”字头清晰，句尾收声干脆，配合手中翻书的动作节奏。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "第三幕：线索与对峙",
+          "location": "图书馆C区及暗处",
+          "dramatic_goal": "林晓发现线索并设局蹲守，当场抓获陈宇，揭开真相。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "愿星光伴你入眠，这绝对是暗恋者写的！难道不是专门写给我的？",
+              "emotion": "happy",
+              "tone_instruction": "语气上扬带笑意，前半句轻快，后半句转为试探性追问。",
+              "emphasis": [
+                {
+                  "span_text": "绝对是暗恋者写的",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 17,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "专门写给我的",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 28,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "自作多情，期待；句末留0.5秒气口，等待对方反应。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "从笔迹和用词来看，这更像是批量打印的鸡汤，其实你不必过度解读，逻辑上也不成立。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳，咬字清晰，用陈述语气逐步拆解对方的幻想。",
+              "emphasis": [
+                {
+                  "span_text": "批量打印的鸡汤",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "逻辑上也不成立",
+                  "occurrence": 1,
+                  "start_char": 31,
+                  "end_char": 38,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "理性分析，试图降温；“鸡汤”后微顿0.3秒，强调客观事实。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "陈宇，你是不是只会泼冷水？我失眠半年了，好不容易有个心理寄托，你非要用你那套破逻辑拆穿我！",
+              "emotion": "angry",
+              "tone_instruction": "前两句压低声音带刺，第三句音量陡然拔高，尾音略带哽咽。",
+              "emphasis": [
+                {
+                  "span_text": "只会泼冷水",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 12,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "破逻辑拆穿我",
+                  "occurrence": 1,
+                  "start_char": 38,
+                  "end_char": 44,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "烦躁，音量提高；“拆穿我”后急促换气，保持情绪未平复状态接下一句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林晓用力翻找书包，拉链声。陈宇靠近，口袋里传来硬卡纸摩擦的沙沙声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "拉链声后突出硬卡纸沙沙声",
+              "audio_cue_ref": "sfx_zipper_and_paper"
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "等等，你口袋里什么声音？沙沙响的。还有，你右手食指上怎么有蓝墨水？和便签上的颜色一模一样！",
+              "emotion": "surprised",
+              "tone_instruction": "突然打断节奏，语速加快，重音落在细节对比上，语气由疑惑转为笃定。",
+              "emphasis": [
+                {
+                  "span_text": "沙沙响的",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 16,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "一模一样",
+                  "occurrence": 1,
+                  "start_char": 40,
+                  "end_char": 44,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "敏锐，质问；“沙沙响的”后停顿0.4秒，配合视线移动的微表情音效（仅录音提示）。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "刚做笔记不小心蹭到的，其实没什么大不了的，你别多想。",
+              "emotion": "calm",
+              "tone_instruction": "语气故作轻松，但“别多想”三字刻意放轻，尾音收短避免拖沓。",
+              "emphasis": [
+                {
+                  "span_text": "不小心蹭到的",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "别多想",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 25,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "掩饰，微顿；“蹭到的”后轻微清嗓或衣物摩擦声暗示紧张。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我去趟洗手间，你在这等我，千万别乱跑。",
+              "emotion": "calm",
+              "tone_instruction": "呼吸平稳，指令式口吻，但“千万别乱跑”加重语气以掩饰心虚。",
+              "emphasis": [
+                {
+                  "span_text": "千万别乱跑",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 18,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "故作镇定；说完后脚步声渐远，留白2秒环境音过渡。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林晓脚步声离开，极轻的绕行脚步声。环境音变暗。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "空间混响改变，表现潜入暗处",
+              "audio_cue_ref": "sfx_stealth_footsteps"
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "硬卡纸的沙沙声，蓝墨水。陈宇，你到底在隐瞒什么？",
+              "emotion": "serious",
+              "tone_instruction": "气声主导，贴近麦克风低语，每个词之间拉长间隔，营造屏息感。",
+              "emphasis": [
+                {
+                  "span_text": "蓝墨水",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "隐瞒什么",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "极低语，内心独白；全程无换气声，句末自然消散于环境底噪中。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l10",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "陈宇特有的鞋底摩擦声靠近，书本推入书架的咔哒声，夹纸轻响。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "脚步声清晰，推书声干脆",
+              "audio_cue_ref": "sfx_shoes_and_book_click"
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "终于抓到了。",
+              "emotion": "excited",
+              "tone_instruction": "压低嗓音但气息不稳，尾音微微上扬带出如释重负的颤抖。",
+              "emphasis": [
+                {
+                  "span_text": "终于抓到了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 5,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "走出阴影，声音发颤；伴随轻微脚步踩到木地板的吱呀声提示位置变化。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l12",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "晓晓？你怎么没去洗手间？",
+              "emotion": "surprised",
+              "tone_instruction": "第一声呼唤短促上扬，第二句语速加快，带着明显的错愕与慌乱。",
+              "emphasis": [
+                {
+                  "span_text": "怎么没去",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 8,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": " startled，意外；“晓晓？”后急停0.5秒，模拟大脑空白反应。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l13",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "每天利用我低头找东西的十几秒视线盲区，绕过U型书架提前放书。陈宇，你为什么要骗我？",
+              "emotion": "sad",
+              "tone_instruction": "前半段逐字复述细节，语气逐渐低沉；后半句反问时声音发涩，尾音带哭腔但不落泪。",
+              "emphasis": [
+                {
+                  "span_text": "视线盲区",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 18,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "为什么要骗我",
+                  "occurrence": 1,
+                  "start_char": 34,
+                  "end_char": 40,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "委屈，不解；“提前放书”后深吸一口气，强行压制情绪再抛出质问。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l14",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "逻辑上，直接告诉你，你会觉得这是同情，反而会有心理负担。你奶奶走后，你只有看到这本书归位才能安心睡着。我只是想让你觉得，星空还在，还有人默默陪着你。",
+              "emotion": "tender",
+              "tone_instruction": "开场伴随一声极轻的叹息，随后语速放缓，音色转暖，最后一句如耳语般轻柔收尾。",
+              "emphasis": [
+                {
+                  "span_text": "心理负担",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 27,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "安心睡着",
+                  "occurrence": 1,
+                  "start_char": 46,
+                  "end_char": 50,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "默默陪着你",
+                  "occurrence": 1,
+                  "start_char": 68,
+                  "end_char": 73,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "叹气，坦诚，温柔；“心理负担”后微顿0.3秒，“安心睡着”后换气一次，保持连贯情感流。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "第四幕：星空归位",
+          "location": "图书馆C区书架前",
+          "dramatic_goal": "林晓接受守护，亲手推书完成情感闭环，伴随闭馆音乐收束。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "那你为什么不直接告诉我，非要每天一个人装神弄鬼，让我天天在这蹲点？",
+              "emotion": "tender",
+              "tone_instruction": "压低嗓音，尾音微扬带笑意，前半句责备语气软化",
+              "emphasis": [
+                {
+                  "span_text": "不直接告诉我",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "装神弄鬼",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音放轻，带点娇嗔；句首微顿半秒，吸气后轻声吐出",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "因为真正的陪伴从来不是讲道理，而是默默守护你的微小信念，直到你自己走出来。",
+              "emotion": "reassuring",
+              "tone_instruction": "语速平稳，胸腔共鸣加重，‘默默守护’处气息下沉，‘走出来’字音拉长并渐弱",
+              "emphasis": [
+                {
+                  "span_text": "默默守护",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "走出来",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 36,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "温和，坚定；句间自然换气，无刻意停顿，保持叙述感",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "大笨蛋。把笔给我。",
+              "emotion": "tender",
+              "tone_instruction": "先带轻微鼻音哽咽，随即松开喉部肌肉转为轻快命令语气",
+              "emphasis": [
+                {
+                  "span_text": "大笨蛋",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "把笔给我",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 8,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "吸鼻子，释然；句首带轻微抽气声，‘大笨蛋’后留0.5秒空白，随后喉部放松转轻快",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "纸张书写声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "钢笔在硬卡纸上书写",
+              "audio_cue_ref": "sfx_writing"
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "今晚，一定能睡个好觉。谢谢你，陈宇。",
+              "emotion": "calm",
+              "tone_instruction": "咬字清晰但音量减半，重音落在‘好觉’与‘谢谢’，尾音收束干净",
+              "emphasis": [
+                {
+                  "span_text": "好觉",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "谢谢",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 13,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "边写边念，真诚；模拟低头书写时抬头发声状态，句末留白两秒",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林晓亲手将书推回书架，发出一声清脆完美的咔哒声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "音色与开场完全一致，形成闭环",
+              "audio_cue_ref": "sfx_final_book_click"
+            },
+            {
+              "line_id": "ep1-s4-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "走吧，我们回家，明天还要早起去图书馆呢。",
+              "emotion": "happy",
+              "tone_instruction": "语调上扬，气息饱满，‘回家’处带笑意，‘图书馆呢’尾音轻快拖长",
+              "emphasis": [
+                {
+                  "span_text": "回家",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "早起",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "轻松，明快；句首无停顿直接起音，句末气息自然消散，不做强硬收尾",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "闭馆音乐轻柔响起，两人并肩离开的脚步声渐渐远去。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "音乐温暖治愈，脚步声渐弱",
+              "audio_cue_ref": "sfx_closing_music_and_footsteps"
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林晓与陈宇在闭馆后的图书馆蹲守“自动归位”的《星空诗集》。在排查线索时，林晓发现陈宇口袋里的硬卡纸和手指上的蓝墨水，遂设局暗中观察，当场抓获利用视线盲区提前放书的陈宇。陈宇坦白此举是为了治愈林晓因奶奶去世导致的失眠。林晓最终接受这份笨拙的守护，亲手将书推回书架，两人在闭馆音乐中并肩回家。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "《星空诗集》自动归位的真相",
+          "before": "林晓认为是“田螺姑娘”或暗恋者所为。",
+          "after": "确认是陈宇利用视线盲区和时间差提前放书并夹入便签。"
+        },
+        {
+          "fact": "陈宇手指上的蓝墨水与口袋里的硬卡纸",
+          "before": "未察觉。",
+          "after": "被林晓发现并作为破案的关键物理证据。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林晓与陈宇",
+          "before": "林晓依赖陈宇但反感其过度理性的分析，认为他只会泼冷水。",
+          "after": "林晓理解了陈宇理性外表下默默守护的温柔，两人关系从表面的陪伴深化为内心的相互理解与治愈。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "《星空诗集》每晚自动归位的悬疑谜团。",
+        "林晓因奶奶去世导致的失眠与心理寄托问题。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "《星空诗集》自动归位的真相",
+        "before": "林晓认为是“田螺姑娘”或暗恋者所为。",
+        "after": "确认是陈宇利用视线盲区和时间差提前放书并夹入便签。"
+      },
+      {
+        "fact": "陈宇手指上的蓝墨水与口袋里的硬卡纸",
+        "before": "未察觉。",
+        "after": "被林晓发现并作为破案的关键物理证据。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林晓与陈宇",
+        "before": "林晓依赖陈宇但反感其过度理性的分析，认为他只会泼冷水。",
+        "after": "林晓理解了陈宇理性外表下默默守护的温柔，两人关系从表面的陪伴深化为内心的相互理解与治愈。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 22,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": false,
+  "status": "CANDIDATE",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "928b559a28024b219d5fae36deb3b35a",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T01:59:38.571560+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4572,
+      "output_tokens": 5573,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4128,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "7e22be99-444e-4e49-88f7-2de3c03b80c9",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 79844,
+      "completed_at": "2026-10-10T02:00:58.416244+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "51dfce5e9cbc46abadb3bb97ef678636",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T02:00:59.511449+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 6031,
+      "output_tokens": 4516,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3053,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "e37c9148-b404-48e6-8cdb-c17d59ae6e13",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 45896,
+      "completed_at": "2026-10-10T02:01:45.408009+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9eda1612ff164a18939f530247e78d3a",
+      "plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "4eaf3ccd1c564979b2980caeb4f4b2ce",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T02:01:45.971564+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 7013,
+      "output_tokens": 11293,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 8267,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "7e8648a9-9e06-4bad-8093-cdef4798ba28",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 123705,
+      "completed_at": "2026-10-10T02:03:49.677959+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9eda1612ff164a18939f530247e78d3a",
+      "plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "3afb9f108b4e4524a41b5b76cca99d19",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T02:03:49.688586+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2076,
+      "output_tokens": 5059,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4569,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ba477457-4b4f-4266-9d7e-94fb724e854b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 32112,
+      "completed_at": "2026-10-10T02:04:21.801582+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9eda1612ff164a18939f530247e78d3a",
+      "plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "f09664af768542b587fdda5d6713a1af",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T02:04:21.824819+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2061,
+      "output_tokens": 4564,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3851,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1622ec01-20d6-432d-8ced-30288a8dcd75",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 29791,
+      "completed_at": "2026-10-10T02:04:51.616879+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9eda1612ff164a18939f530247e78d3a",
+      "plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "887a20c37d6f42c5a61367efdb220fef",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T02:04:51.633429+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2885,
+      "output_tokens": 9128,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 6897,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ced39e25-ad1c-4ae6-86bc-66ca0a44ef20",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 53136,
+      "completed_at": "2026-10-10T02:05:44.770616+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9eda1612ff164a18939f530247e78d3a",
+      "plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "a38561459fde489284d2f599e61e1fee",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T02:05:44.802689+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2254,
+      "output_tokens": 6362,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5308,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "7c7154f2-0958-43f9-a34b-af24d3df8e60",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 39214,
+      "completed_at": "2026-10-10T02:06:24.018643+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9eda1612ff164a18939f530247e78d3a",
+      "plan_id": "421ab00cccae43b69b3f7b4abdc4ce9f",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "4650789617644f6a95465c0f769bbdfc",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T02:06:24.022861+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 8858,
+      "output_tokens": 2072,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2030,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "daf72843-0483-4af2-91a0-50770248f2c9",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 15880,
+      "completed_at": "2026-10-10T02:06:39.903321+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T02:06:24.019882Z"
+}

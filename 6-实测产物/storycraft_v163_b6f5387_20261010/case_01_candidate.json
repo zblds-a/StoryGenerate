@@ -1,0 +1,1030 @@
+{
+  "story_id": "3a4430dfdfea4abd8ce972cfaac71a00",
+  "story_version_id": "dffd55a43f484a6b934f98c06f07d781",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+  "approved_plan_revision": 1,
+  "title": "时光钟摆",
+  "summary": "小镇少年林星在奶奶去世后，试图修好她留下的旧座钟以留住回忆，却意外发现座钟里藏着奶奶预录的告别留言。",
+  "preview_blurb": "老屋清空前夜，摔散的旧座钟里传出微弱的磁带电流声。林星必须在天亮前拼凑齿轮，解锁奶奶留下的最后秘密。",
+  "tags": [
+    "温情",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "outline": {
+    "title": "时光钟摆",
+    "premise": "小镇少年林星在奶奶去世后，试图修好她留下的旧座钟以留住回忆，却意外发现座钟里藏着奶奶预录的告别留言。",
+    "theme": "告别不是遗忘，而是带着爱继续前行；陪伴可以跨越时间的物理形态。",
+    "beginning": "林星在老屋清空前夜，不慎将奶奶的旧座钟摔散，面临失去最后念想的危机。",
+    "development": "林星在拼凑座钟时意外触发录音模块，通过寻找钥匙和替换齿轮，逐步解锁奶奶留下的声音线索。",
+    "climax": "林星牺牲了奶奶送的怀表，补全座钟齿轮，听到了奶奶关于“时间停摆是为了陪你休息”的完整留言。",
+    "ending": "林星在座钟平稳的滴答声与悠长钟鸣中，完成了与奶奶的情感告别，接受了独自前行的现实。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "时光钟摆",
+        "core_goal": "修复奶奶的旧座钟，解锁其中的秘密留言，完成心理上的告别。",
+        "major_beats": [
+          "【0-2s 黄金钩子】巨大的木头撞击地板声，紧接着是金属齿轮崩裂、散落一地的清脆连环声，瞬间抓住听众注意力。",
+          "【2-7s 矛盾三要素】林星急促喘息，带着哭腔说：‘就差一点……明天收废品的就要来了，奶奶的钟我绝不能让它当垃圾扔掉！’交代人物、地点、麻烦与目标。",
+          "【7-20s 第一次反转】林星焦急地徒手拼凑齿轮，手指被划破发出痛呼，发条彻底卡死。他崩溃低吼，一拳砸在地板上。寂静中，座钟内部突然传出‘咔哒’一声脆响，紧接着是老式磁带转动的微弱电流声，音乐在此断点转入悬疑温情。",
+          "【20-80s 中段推进】林星发现钟表底座藏着录音模块，按下播放只有杂音。他翻找纸箱找到奶奶留下的黄铜上弦钥匙，插入旋转三圈，杂音褪去，奶奶苍老的声音传出：‘星星，如果钟停了……’声音戛然而止，发条再次卡死，林星发现是主齿轮缺了一齿。",
+          "【80-113s 升级/二次反转】林星找不到替换件，目光落在他脖子上挂着的奶奶送的怀表上。他咬牙用螺丝刀撬开怀表，拆下主齿轮装入座钟（伴随金属摩擦声）。再次上弦，录音完整播放。奶奶温柔的声音响起：‘星星，如果钟停了，别急着修。奶奶脑子坏了，记不住事，但时间会替你记住。钟停的时候，就是奶奶在陪你休息，别怕往前走。’",
+          "【113-120s 强钩子与收束】林星泣不成声，双手紧紧环抱住座钟。座钟发出沉稳、响亮的‘滴答、滴答’声，逐渐与林星平稳下来的心跳声重合。最后一声悠长的钟鸣‘当——’在空气中回荡，音乐温柔收束，完成情感闭环，不留悬念。"
+        ],
+        "ending": "林星在座钟平稳的滴答声与悠长钟鸣中，完成了与奶奶的情感告别，接受了独自前行的现实，声音温柔收束。",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林星",
+        "external_goal": "在老屋被清空前修好奶奶留下的旧座钟，留住她的痕迹。",
+        "emotional_avoidance": "逃避奶奶已经去世且自己必须独自面对未来生活的事实，试图通过修复旧物来维持过去的连接。",
+        "speech_style": "语速快，急躁时容易结巴，习惯用‘绝不能’‘就差一点’等绝对化词汇掩饰内心的慌乱与无助，受压时会用愤怒掩盖悲伤。",
+        "relationship_stance": "对奶奶充满依赖与不舍，对收废品的人等外部压力充满敌意与抗拒，在奶奶的录音面前会卸下防备展现出脆弱。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-2",
+        "story_name": "奶奶",
+        "performer_id": "voice-2",
+        "medium": "recording",
+        "dramatic_purpose": "通过旧座钟里的预录声音，揭示她生前对林星的告别与期许，推动林星完成心理上的告别，是故事的核心情感锚点。"
+      }
+    ],
+    "performance_plan": {
+      "sound_design": "强调机械齿轮的金属碰撞声、木头摩擦声与老式磁带的电流底噪。心跳声与钟表滴答声的混音是结尾的情感高潮。",
+      "voice_direction": "林星的声音需要展现出从极度焦躁、崩溃到最终释然、平静的层次感；奶奶的录音需带有轻微的磁带失真感，语速缓慢、温柔且带有记忆衰退者的停顿。"
+    },
+    "continuity_constraints": [
+      "座钟的录音模块必须由特定的黄铜钥匙上弦才能触发，不能通过普通按钮播放。",
+      "怀表齿轮必须与座钟主齿轮尺寸匹配，且拆卸怀表是不可逆的物理代价，体现林星的选择。",
+      "奶奶的录音内容必须与她患有记忆衰退的设定相符，逻辑上解释了她为何提前录音。"
+    ],
+    "change_summary": [
+      "林星从试图强行修复座钟以逃避失去，转变为接受座钟停摆的意义并勇敢面对未来。",
+      "座钟从损坏的遗物，转变为传递奶奶爱与告别的情感载体。",
+      "林星对‘时间’的认知从‘流逝与剥夺’转变为‘陪伴与铭记’。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-c3467ae1",
+      "index": 1,
+      "title": "时光钟摆",
+      "synopsis": "小镇少年林星在老屋清空前夜，试图修好奶奶留下的旧座钟以留住回忆，却意外发现座钟里藏着奶奶预录的告别留言，最终完成情感告别。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 104,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "摔散的座钟",
+          "location": "老屋地板",
+          "dramatic_goal": "交代林星面临的危机与修复座钟的急迫目标。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "巨大的木头撞击地板声，紧接着是金属齿轮崩裂、散落一地的清脆连环声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "就差一点……就差一点就拼好了！",
+              "emotion": "sad",
+              "tone_instruction": "气息急促微颤，前半句压低嗓音带哽咽，后半句突然拔高但尾音发虚。",
+              "emphasis": [
+                {
+                  "span_text": "拼好了",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "急促喘息，带着哭腔；句首留0.5秒抽气声，省略号处换气一次，避免破音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "明天早上收废品的就要来，奶奶的钟，我绝不能让它当垃圾扔掉！绝对不能！它还在走，它不能停！我还没修好它！",
+              "emotion": "worried",
+              "tone_instruction": "咬字加重，语速加快但保持清晰；“绝对不能”处喉音收紧，后半句语气逐渐转为近乎哀求的自我说服。",
+              "emphasis": [
+                {
+                  "span_text": "绝不能让它当垃圾扔掉",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 28,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "它不能停",
+                  "occurrence": 1,
+                  "start_char": 39,
+                  "end_char": 43,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速快，急躁，用绝对化词汇掩饰慌乱；每两个短句之间留0.2秒急促换气口，不拖长音，保持句子连贯推进感。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "底层的秘密",
+          "location": "老屋地板",
+          "dramatic_goal": "林星拼凑失败后意外触发录音模块，发现奶奶留下的线索。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林星焦急地徒手拼凑齿轮，手指被划破",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "嘶……划破了。",
+              "emotion": "sad",
+              "tone_instruction": "吸气倒抽冷气，尾音微颤带出生理性痛感，语速放缓",
+              "emphasis": [
+                {
+                  "span_text": "划破了",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "痛呼；“嘶”字后留0.5秒换气停顿，模拟手指被金属划伤后的自然反应",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "发条怎么彻底卡死了？！这破铜烂铁……不，不是破铜烂铁！奶奶说过，它会说话的！",
+              "emotion": "angry",
+              "tone_instruction": "前半句压低嗓音爆发焦躁，中间停顿半秒强行收住情绪，后半句语气转为急切与自我辩白",
+              "emphasis": [
+                {
+                  "span_text": "彻底卡死了",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "会说话的",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 37,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "崩溃低吼，转为自我否定；“不，”之后需有清晰的气口停顿，体现情绪转折与自我纠正",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "一拳砸在地板上。短暂的寂静后，座钟内部传出咔哒一声脆响，紧接着是老式磁带转动的微弱电流声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "什么声音？底座夹层里……是磁带？录音模块？奶奶，这是你留下的吗？",
+              "emotion": "serious",
+              "tone_instruction": "气息收敛压低音量，疑问句尾音上扬但保持克制，呈现屏息倾听的状态",
+              "emphasis": [
+                {
+                  "span_text": "什么声音",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "你留下的吗",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 31,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "愣住，呼吸放轻，试探；每两个短句之间保留0.3秒微停顿，模拟大脑快速处理信息时的迟疑与专注",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "缺失的齿轮",
+          "location": "老屋地板",
+          "dramatic_goal": "通过钥匙触发录音，但因机械故障中断，迫使林星寻找替代零件。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林星翻找纸箱，找到黄铜钥匙并插入底座旋转",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "钥匙……奶奶的黄铜钥匙在哪？找到了！转三圈……",
+              "emotion": "serious",
+              "tone_instruction": "翻找时气息微促，找到后语气果断收紧，后半句配合动作放缓。",
+              "emphasis": [
+                {
+                  "span_text": "奶奶的黄铜钥匙",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "转三圈",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“钥匙……”后留0.5秒翻找呼吸声，“找到了！”后接轻微金属摩擦音效提示。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "钥匙旋转三圈，杂音褪去",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "星星，如果钟停了……",
+              "emotion": "tender",
+              "tone_instruction": "模拟老式录音介质质感，咬字轻缓，尾音自然衰减不刻意收束。",
+              "emphasis": [
+                {
+                  "span_text": "星星",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "钟停了",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "带有轻微磁带失真感，语速缓慢，温柔；保持平稳气声，句末“……”处留1秒空白等待发条卡死音效切入。",
+              "audio_cue_ref": "tape_recording"
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "声音戛然而止，发条再次卡死的金属摩擦声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "怎么又没声了？别骗我……主齿轮，竟然缺了一齿！就差一个齿！我上哪去找一模一样的替换件？",
+              "emotion": "angry",
+              "tone_instruction": "前半句压低嗓音强压惊惶，发现缺口后气息骤紧，语速加快但咬字清晰。",
+              "emphasis": [
+                {
+                  "span_text": "缺了一齿",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "一模一样",
+                  "occurrence": 1,
+                  "start_char": 34,
+                  "end_char": 38,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "焦急，绝望；“别骗我……”后停顿0.8秒伴随金属敲击检查音效，“竟然”二字加重并略微破音。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "时间的代价",
+          "location": "老屋地板",
+          "dramatic_goal": "林星牺牲怀表补全齿轮，听到奶奶完整的告别留言。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林星目光落在胸口的怀表上，咬牙用螺丝刀撬开怀表后盖，拆下主齿轮装入座钟",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "明天……明天就要被收走了……怀表？奶奶，对不起，我得借用一下。",
+              "emotion": "serious",
+              "tone_instruction": "前半句气息发虚、断续犹豫，说到‘怀表’时微顿吸气，后半句压低嗓音、咬字加重，透出破釜沉舟的决断。",
+              "emphasis": [
+                {
+                  "span_text": "明天",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "我得借用一下",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 30,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "咬牙，下定决心；句首留0.5秒空白表现挣扎，‘怀表？’后换气一次再落音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "螺丝刀撬开金属壳，伴随金属摩擦声，齿轮咬合",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "尺寸刚好。上弦！奶奶，你听见了吗？",
+              "emotion": "excited",
+              "tone_instruction": "语速加快，‘尺寸刚好’短促肯定，‘上弦！’爆发力推高音量，后半句转为气声追问，尾音上扬带出期盼。",
+              "emphasis": [
+                {
+                  "span_text": "上弦！",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "你听见了吗？",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 17,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "‘上弦！’后紧接0.2秒机械转动音效位，台词不留停顿直接切入下一句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "录音完整播放，磁带底噪平稳",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "星星，如果钟停了，别急着修。奶奶脑子坏了，记不住事，但时间会替你记住。钟停的时候，就是奶奶在陪你休息，别怕往前走。",
+              "emotion": "tender",
+              "tone_instruction": "气息绵长且微颤，句间留出思考般的自然停顿，‘别急着修’放缓语速，‘别怕往前走’逐渐轻柔，尾音带笑意收尾。",
+              "emphasis": [
+                {
+                  "span_text": "别急着修",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "别怕往前走",
+                  "occurrence": 1,
+                  "start_char": 51,
+                  "end_char": 56,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "记忆衰退者的停顿，极度温柔与包容；全程保持老式磁带底噪质感，句末‘往前走’后留1秒空白再接环境音。",
+              "audio_cue_ref": "tape_recording"
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene5",
+          "title": "钟鸣与告别",
+          "location": "老屋地板",
+          "dramatic_goal": "林星完成情感告别，接受现实，故事温柔收束。",
+          "utterances": [
+            {
+              "line_id": "ep1-s5-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "座钟发出沉稳响亮的滴答声，逐渐与林星平稳下来的心跳声重合",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l2",
+              "kind": "action",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林星泣不成声，双手紧紧环抱住座钟",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "奶奶……我不逃了。我会带着你的时间，一个人勇敢地往前走。钟摆还在晃，我听见了。",
+              "emotion": "tender",
+              "tone_instruction": "初带哽咽与气息颤抖，随后喉头放松，语速放缓，尾音轻柔落地",
+              "emphasis": [
+                {
+                  "span_text": "我不逃了",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "我听见了",
+                  "occurrence": 1,
+                  "start_char": 34,
+                  "end_char": 38,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.92,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "泣不成声，情绪从崩溃转为释然；句首留0.5秒抽气停顿，‘我不逃了’后微顿换气，‘我听见了’后留2秒环境混响余韵",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "最后一声悠长的钟鸣在空气中回荡",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s5-l5",
+              "kind": "music",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "音乐温柔收束，不留悬念",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林星在老屋清空前夜摔散了奶奶的旧座钟，在抢修过程中意外触发底座录音模块。因主齿轮缺失导致录音中断，他毅然拆下自己佩戴的怀表齿轮补全座钟，最终听到了奶奶关于时间与陪伴的温柔留言，在钟鸣声中释然告别。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "林星拆下了奶奶送的怀表主齿轮补全座钟，怀表物理损坏不可逆。"
+        },
+        {
+          "fact": "座钟底座隐藏有老式磁带录音模块，需黄铜钥匙上弦触发。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林星与奶奶",
+          "change": "从试图通过修复旧物逃避失去，转变为接受奶奶的告别与期许，获得独自前行的力量。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "林星对奶奶去世的逃避与执念",
+        "旧座钟损坏无法发声的危机"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "林星拆下了奶奶送的怀表主齿轮补全座钟，怀表物理损坏不可逆。"
+      },
+      {
+        "fact": "座钟底座隐藏有老式磁带录音模块，需黄铜钥匙上弦触发。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林星与奶奶",
+        "change": "从试图通过修复旧物逃避失去，转变为接受奶奶的告别与期许，获得独自前行的力量。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 12,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": false,
+  "status": "CANDIDATE",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.3"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "7d0c1c6c08cb4185b640bb7aa1dba55b",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:39:47.377510+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3878,
+      "output_tokens": 4125,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2756,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "b5c64596-5cce-900c-972d-171cd816bef8",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 61496,
+      "completed_at": "2026-10-10T01:40:48.874871+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "b9ce291ad45341228f99c19657ef9a14",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "2fe6f80b5a114aa4bac30c7cb5a06461",
+      "provider": "openai_compat",
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:40:50.320685+00:00",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 6541,
+      "output_tokens": 10070,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 8094,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1babedf7-639d-497d-a151-c86b3ac9f584",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 172598,
+      "completed_at": "2026-10-10T01:43:42.919026+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "b9ce291ad45341228f99c19657ef9a14",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "3c870561170740dca488fc54cc122a71",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:43:42.933900+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2116,
+      "output_tokens": 4127,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3778,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "57a40fd9-a585-41db-b4e0-9ed9b1b05237",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 29751,
+      "completed_at": "2026-10-10T01:44:12.686267+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "b9ce291ad45341228f99c19657ef9a14",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "ee4e84f5b7c34319915da1072777d7dc",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:44:12.699100+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2199,
+      "output_tokens": 4440,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3936,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "31edddda-5e3a-435c-98b1-c2c94d26f1dd",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 27999,
+      "completed_at": "2026-10-10T01:44:40.699481+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "b9ce291ad45341228f99c19657ef9a14",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "382cee2cc43f488e8fb9316c25624216",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:44:40.705804+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2198,
+      "output_tokens": 5917,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5365,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "b5c4cf59-ce81-47a4-96a4-61345ea8bf6b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 43821,
+      "completed_at": "2026-10-10T01:45:24.527065+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "b9ce291ad45341228f99c19657ef9a14",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "df1165db09244b878024c889088b6c8d",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:45:24.536167+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2213,
+      "output_tokens": 6922,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 6208,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "def24f1c-bf5d-4027-a516-9dd864f79685",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 41798,
+      "completed_at": "2026-10-10T01:46:06.334504+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "b9ce291ad45341228f99c19657ef9a14",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "26e418c253464dd1b29a9dfac20a3e22",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:46:06.339608+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2015,
+      "output_tokens": 3502,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3296,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ee2a8453-a4e7-4d63-9d78-edb1256ccc24",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 23523,
+      "completed_at": "2026-10-10T01:46:29.863829+00:00"
+    },
+    {
+      "request_id": "live-create-01",
+      "job_id": "b9ce291ad45341228f99c19657ef9a14",
+      "plan_id": "73536a9e5ce44f70a4fbd0cd877df0fc",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "3d0d4a7e16c84f618e71adc50dacf76b",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:46:29.869528+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 6955,
+      "output_tokens": 1979,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1937,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "6a35a8b7-f151-4cd8-ae70-6680b68d6401",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 16210,
+      "completed_at": "2026-10-10T01:46:46.079749+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T01:46:29.865308Z"
+}

@@ -1,0 +1,174 @@
+{
+  "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "时间的回音",
+    "premise": "小镇少年在修理爷爷遗留的旧怀表时，意外触发了表内隐藏的家人留言，最终在声音的陪伴下学会面对失去，完成告别。",
+    "theme": "告别、陪伴与时间的意义",
+    "beginning": "林宇在钟表铺试图修好爷爷的遗物怀表，却因发条崩断而陷入崩溃与自我怀疑。",
+    "development": "怀表意外播放出爷爷的录音，揭示了怀表记录陪伴的秘密，引导林宇直面内心对爷爷离世的逃避。",
+    "climax": "林宇按下隐藏按钮，听到爷爷最后的宽慰留言，泪流满面地开口回应，彻底放下逃避，完成心理上的告别。",
+    "ending": "林宇将修好的怀表贴近胸口，在平稳的滴答声与爷爷最后的祝福中，带着希望重新面对生活，情感在温暖中圆满收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "秒针里的告别",
+        "core_goal": "林宇修好怀表并听懂爷爷的留言，完成内心的告别。",
+        "major_beats": [
+          "【0-2s】刺耳的齿轮卡壳声与发条崩断的“啪”声，林宇发出懊恼的急促喘息。",
+          "【2-7s】林宇在昏暗的钟表铺翻找工具箱，抱怨自己连爷爷留下的最后一块怀表都修不好，急躁地拨弄零件。",
+          "【7-20s】林宇绝望地捶打桌面，怀表震落。落地瞬间，怀表传出电流声与爷爷的录音：“小宇，别急着上发条，听听秒针的声音。”音乐骤停后温情切入。",
+          "【20-80s】林宇震惊地捡起怀表，爷爷的录音讲述怀表记录陪伴的秘密。林宇边听边颤抖着抚摸表盘，喃喃自语承认自己一直不敢面对爷爷离世的事实，并按下隐藏按钮。",
+          "【80-113s】怀表播放出爷爷最后的长留言，宽慰林宇不要害怕时间的流逝。林宇泪流满面，哽咽着对着怀表回应“我不逃了”，完成内心的告别与和解。",
+          "【113-120s】林宇将怀表贴在胸口，秒针发出平稳有力的滴答声。爷爷录音轻声说“去吧，你的时间才刚开始”，滴答声与呼吸声交织，在温暖充满希望的情绪顶点利落收尾。"
+        ],
+        "ending": "closed",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林宇",
+        "external_goal": "修好爷爷留下的旧怀表，听到里面可能存在的最后留言。",
+        "emotional_avoidance": "害怕面对爷爷已经去世的事实，用修表来逃避整理遗物和接受失去。",
+        "speech_style": "前期急躁、带着掩饰脆弱的抱怨；后期颤抖、哽咽，充满释怀的真诚。",
+        "relationship_stance": "对爷爷充满深深的依恋与愧疚，对父母的安慰表现出抗拒和封闭。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-2",
+        "story_name": "爷爷",
+        "performer_id": "voice-2",
+        "medium": "recording",
+        "dramatic_purpose": "通过旧钟表里的录音留言，引导主角直面内心恐惧，完成情感上的告别与成长。"
+      }
+    ],
+    "performance_plan": {
+      "audio_focus": "重点突出钟表的机械音效（齿轮、发条、滴答声）与录音电流声的质感对比，以及林宇呼吸和哽咽的细腻人声。",
+      "pacing_note": "前20秒节奏紧凑、充满焦躁感；20秒后随着录音播放，节奏逐渐放缓，留足气口给情感发酵。"
+    },
+    "continuity_constraints": [
+      "怀表是爷爷留下的唯一遗物，且具备录音功能，此设定贯穿全剧不可更改。",
+      "林宇的情感转变必须基于听到录音和自身反思，不能依赖外部人物的突然介入。"
+    ],
+    "change_summary": [
+      "根据单集 closed 结局要求，将 S6 的强钩子转化为情感高潮的余音回响，避免引入新危机或悬念断音。",
+      "为占位符角色1赋予了具体的剧情名“林宇”及详细的性格与动机设定。",
+      "新增了 fictional_voice_roles 以支持钟表录音中爷爷的声音，确保声音来源符合剧情逻辑。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "f50962e73ef242ee88bb0da1f393afce",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "7c34dc09edd94d8c90ef3e82ee08c00b",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.0",
+      "started_at": "2026-10-10T01:05:33.943327+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3503,
+      "output_tokens": 4100,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3003,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "607c83b0-8c70-4443-868a-c04001cbd945",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 50749,
+      "completed_at": "2026-10-10T01:06:24.692447+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.0"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "f6ff2cc821c7ac8f3e99c2ad87eee9eef71f01f88d7faad9a30c8c47007d1a76",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T01:06:24.697632Z",
+  "updated_at": "2026-10-10T01:06:24.697632Z"
+}

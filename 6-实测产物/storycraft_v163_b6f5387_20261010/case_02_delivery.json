@@ -1,0 +1,1145 @@
+{
+  "story_id": "0a0d2c938f8840049a565b90c144b5de",
+  "story_version_id": "c4c72818487d465891e9edccda3f131d",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "63691fd9286b45618e9ff854662726c5",
+  "approved_plan_revision": 2,
+  "title": "归位的星空",
+  "summary": "校图书馆一本厚重的书每晚自动归位，两个学生在闭馆后的蹲守中，发现了已故老馆长留下的温暖物理机关，并在去留之间完成了真正的告别。",
+  "preview_blurb": "深夜的图书馆里，一本厚重的书每晚都会自动滑回书架。当林晓决定查明真相时，她发现这并非灵异事件，而是一份跨越时空的温柔牵挂。",
+  "tags": [
+    "轻悬疑",
+    "warm",
+    "14-17",
+    "teen"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    },
+    {
+      "character_id": "char-2",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色2",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-2",
+      "performer_id": "voice-2"
+    }
+  ],
+  "outline": {
+    "title": "归位的星空",
+    "premise": "校图书馆一本厚重的书每晚自动归位，两个学生在闭馆后的蹲守中，发现了已故老馆长留下的温暖物理机关，并在去留之间完成了真正的告别。",
+    "theme": "爱与习惯的延续，面对失去的释然与放手。",
+    "beginning": "深夜图书馆，书本自动滑入书架的异响打破宁静，林晓坚持调查，陈宇急于离开。",
+    "development": "两人通过手电筒和触觉检查，发现书脊与书架间的磁铁相斥原理及倾斜层板，排除了灵异可能。",
+    "climax": "林晓拆开书脊护封发现老馆长的留言，得知这是特制的‘书本滑梯’，她因不舍而想把书带走，陷入情感挣扎。",
+    "ending": "林晓选择放手让书归位，‘啪嗒’声呼应开场，两人在闭馆音乐中相伴离开，情感温暖收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "归位的星空",
+        "core_goal": "查明书本自动归位的真相，完成对老馆长的情感告别与自我释怀。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：深夜图书馆极度安静，突然‘啪嗒’一声脆响，一本厚重的《星空观测》从桌面自动滑入书架深处。",
+          "[3-10s] 矛盾三要素：林晓惊呼‘它又自己回去了’，陈宇焦急看表催促‘闭馆铃都响了，别管这邪门书了’。林晓坚持要查明老馆长留下的这本书为何连续三晚自动归位。",
+          "[10-30s] 第一次反转：林晓赌气把书再次抽出放在桌边，书竟再次‘嗖’地滑入书架。陈宇吓得后退撞倒椅子（音效断点）。林晓却冷静下来，冲过去摸书架层板，断言不是闹鬼。",
+          "[30-120s] 中段推进：林晓让陈宇打手电。陈宇抱怨着凑近。林晓发现书架层板被打磨得异常光滑且带有微小倾角，书脊和层板深处各有一块磁铁。陈宇质疑吸力不够，林晓演示：两块磁铁同极相斥，书放在特定位置时，斥力刚好把书推上倾斜层板，顺势滑入卡槽。",
+          "[120-170s] 升级/二次反转：林晓拆开书脊的加厚护封，掉出一张泛黄的旧借书卡和星空书签。林晓读出老馆长的字迹：‘晓晓，你总把这本重书忘在桌上，我帮你做了个自动回家的滑梯。书归位了，看完也早点回宿舍。’陈宇愣住。林晓紧紧抱住书，哽咽着提出想把书带回宿舍永远留着，这是她面对失去的逃避。",
+          "[170-180s] 情感收束与回响：陈宇轻声提醒‘老馆长是希望书回家，不是被你锁在柜子里’。林晓经过挣扎选择放手，将书轻轻推回书架。熟悉的‘啪嗒’声清脆响起，完美呼应开场。闭馆钢琴曲切入，陈宇拉起她‘走吧，我们也该归位了’，两人脚步声伴随轻笑渐远，温暖定格。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林晓",
+        "external_goal": "查明《星空观测》每晚自动归位的物理真相，解开对已故老馆长的思念。",
+        "emotional_avoidance": "逃避老馆长已经去世、再也没人督促自己按时休息的现实，试图把书带走据为己有以保留羁绊。",
+        "speech_style": "语速快，喜欢用反问句，遇到不解时会连续抛出‘为什么’‘怎么可能’，紧张或不舍时咬嘴唇不说话。",
+        "relationship_stance": "依赖陈宇的陪伴，但嫌弃他胆小怕事，经常用激将法让他帮忙；在情感脆弱时听从他的温和劝导。"
+      },
+      {
+        "role_id": "role-2",
+        "story_name": "陈宇",
+        "external_goal": "劝林晓放弃调查，赶紧回宿舍睡觉，避免被锁在图书馆。",
+        "emotional_avoidance": "害怕面对图书馆的黑暗和‘灵异’事件，也害怕看到林晓因为老馆长的事再次崩溃。",
+        "speech_style": "常用祈使句和感叹词如‘大姐’‘快走’‘别闹了’，害怕时声音发颤，但在安慰林晓时语速会放慢、声音变轻。",
+        "relationship_stance": "嘴上抱怨林晓固执，但行动上始终护着她，是她的安全底线和情感锚点。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "performance_plan": {
+      "sound_design": "核心音效为书本滑入书架的‘啪嗒’声，需做出厚重感与顺滑感，开场与结尾的‘啪嗒’声需保持一致以形成呼应；中段加入手电筒开关声、手指摩擦木质层板的细节音；结尾切入柔和的闭馆钢琴曲。",
+      "acting_notes": "林晓的情绪从执拗、震惊转为感动，最后经历不舍到释然的挣扎；陈宇从烦躁、恐惧转为心疼与温柔。两人对话需保持近距离的空间感，体现深夜图书馆的静谧。"
+    },
+    "continuity_constraints": [
+      "磁铁相斥推动书本滑入倾斜层板的物理机关必须在30-120s明确解释，不能靠超自然或巧合。",
+      "老馆长的借书卡必须在120-170s由林晓亲自读出，不得使用录音或旁白代替。",
+      "林晓在170-180s必须做出‘将书留在图书馆’的明确选择，且结尾必须用‘啪嗒’声呼应开场，完成情感收束，不得悬疑断头。"
+    ],
+    "change_summary": [
+      "根据反馈，在结尾前增加林晓‘想带走书’与‘让书留下’的内心冲突与明确选择，使人物成长更清晰。",
+      "结尾使用‘啪嗒’归位声呼应开场，强化情感余韵，避免生硬断点，严格符合完整短篇的收束要求。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-a799d289",
+      "index": 1,
+      "title": "归位的星空",
+      "synopsis": "深夜图书馆，《星空观测》每晚自动归位。林晓与陈宇蹲守调查，揭开已故老馆长留下的温暖物理机关，在去留之间完成了真正的告别。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 171,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "title": "深夜异响",
+          "location": "校图书馆",
+          "dramatic_goal": "确立书本自动归位的异常现象，展现林晓的执念与陈宇的退缩，推动调查开始。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "它又自己回去了！陈宇你快看！",
+              "emotion": "surprised",
+              "tone_instruction": "语气上扬带出惊讶与急切，前半句短促爆发，后半句加快语速呼唤同伴。",
+              "emphasis": [
+                {
+                  "span_text": "它又自己回去了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "快看",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 13,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末“看”字后留0.2秒气口，配合转身动作的呼吸声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "大姐，闭馆铃都响了十分钟了，别管这邪门书了行不行？宿管大爷马上来锁门了。",
+              "emotion": "worried",
+              "tone_instruction": "压低嗓音带出焦躁，前半句用商量的口吻劝退，后半句加重“锁门”二字透出紧迫感。",
+              "emphasis": [
+                {
+                  "span_text": "别管这邪门书了行不行",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 24,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "马上来锁门了",
+                  "occurrence": 1,
+                  "start_char": 29,
+                  "end_char": 35,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“行不行？”后微顿半拍，气息略重，模拟边走边催促的节奏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "怎么可能？这已经是连续第三晚了。老馆长刚走不到一个月，这本《星空观测》凭什么每天晚上自己滑回书架？",
+              "emotion": "serious",
+              "tone_instruction": "语速放缓，咬字清晰坚定；“连续第三晚”处稍作停顿以示强调，“凭什么”三字压低声音透出执拗。",
+              "emphasis": [
+                {
+                  "span_text": "连续第三晚",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "凭什么",
+                  "occurrence": 1,
+                  "start_char": 35,
+                  "end_char": 38,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“不可能？”后吸气一次，随即转入平稳叙述，句尾不拖音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "谁知道呢？也许是风水不好。快走快走，别闹了，我可不想被锁在这黑灯瞎火的鬼地方。",
+              "emotion": "fearful",
+              "tone_instruction": "声音发虚带颤，前半句敷衍应付，后半句连读“快走快走”加快节奏，尾音略微发飘。",
+              "emphasis": [
+                {
+                  "span_text": "风水不好",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "黑灯瞎火的鬼地方",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 38,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.12,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“别闹了”后轻微吞咽口水，模拟紧张状态下的喉部动作。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "title": "第一次反转",
+          "location": "校图书馆书架前",
+          "dramatic_goal": "通过书本再次自动归位打破恐惧，林晓通过触觉发现物理线索，排除灵异可能。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我不信邪了，我把它放这儿，看它还能怎么自己回去！",
+              "emotion": "serious",
+              "tone_instruction": "首句咬字加重显出较劲意味，后半句压低音量但保持语速，体现执拗与求证的态度。",
+              "emphasis": [
+                {
+                  "span_text": "不信邪了",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "自己回去",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "[微顿] 在‘放这儿’后留出半拍空白，配合放置动作的呼吸节奏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "啊！鬼啊！救命！",
+              "emotion": "fearful",
+              "tone_instruction": "句首高音起调并伴随急促抽气，后续三字短语连读加快，尾音随跌倒动作自然泄气下沉。",
+              "emphasis": [
+                {
+                  "span_text": "鬼啊！",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "救命！",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.35,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "[急促吸气] 句首带入明显倒吸冷气声，‘救命’二字气息发虚，模拟受惊后退状态。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "别喊了！哪有什么鬼。你过来摸摸这层板。",
+              "emotion": "calm",
+              "tone_instruction": "第一句短促果断制止喧哗，第二句平铺直叙打消疑虑，第三句转为平稳的引导语气，重心前移。",
+              "emphasis": [
+                {
+                  "span_text": "别喊了！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "摸摸这层板",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 18,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "[留白] ‘哪有什么鬼’后停顿一秒，语气由紧转松，为对方靠近留出空间。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "摸……摸什么？滑溜溜的。",
+              "emotion": "neutral",
+              "tone_instruction": "开头拖长犹豫的元音，触到表面后语速放缓，咬字变轻，尾音略带试探性上扬。",
+              "emphasis": [
+                {
+                  "span_text": "摸什么？",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "滑溜溜的",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 11,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "[虚化气息] ‘摸……’处气息拉长且减弱，后半句唇齿音减轻，模拟指尖迟疑触碰的听感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "层板被打磨过，异常光滑，而且向里倾斜了大概两度。这绝对是人为的物理机关，不是闹鬼。",
+              "emotion": "serious",
+              "tone_instruction": "前半段按逻辑重音清晰拆解现象，读到‘两度’时语调微扬强调数据，末句语气收拢落地，斩钉截铁。",
+              "emphasis": [
+                {
+                  "span_text": "异常光滑",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "物理机关",
+                  "occurrence": 1,
+                  "start_char": 31,
+                  "end_char": 35,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "不是闹鬼",
+                  "occurrence": 1,
+                  "start_char": 36,
+                  "end_char": 40,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "[清晰断句] 在‘两度’后微作停顿以突出关键参数，末句不拖音，干脆收尾。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "title": "真相与留言",
+          "location": "校图书馆书架前",
+          "dramatic_goal": "查明磁铁相斥的物理机关，发现老馆长留言，林晓陷入想带走书的情感挣扎。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "把手电筒打开，照里面。",
+              "emotion": "calm",
+              "tone_instruction": "语气平稳下达指令，尾音干脆不拖沓",
+              "emphasis": [
+                {
+                  "span_text": "手电筒",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "里面",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿半秒后直接起音，无多余气息",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "来了。哎？这书脊底部，还有层板最深处，怎么各嵌着一块小磁铁？",
+              "emotion": "surprised",
+              "tone_instruction": "前半句应答干脆，后半句语调上扬带出疑惑，重读疑问词与核心名词",
+              "emphasis": [
+                {
+                  "span_text": "怎么",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 21,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "小磁铁",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "来了后换气一次，接哎？时喉部微紧模拟惊讶感",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "对，同极相斥。当书放在这个特定位置时，两块磁铁的斥力刚好把书推上倾斜层板，顺着坡度滑进卡槽。这就是老馆长做的自动滑梯。",
+              "emotion": "calm",
+              "tone_instruction": "语速均匀如讲解，逻辑重音落在物理过程描述上，结尾语气转为肯定",
+              "emphasis": [
+                {
+                  "span_text": "同极相斥",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "推上倾斜层板",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 36,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "自动滑梯",
+                  "occurrence": 1,
+                  "start_char": 54,
+                  "end_char": 58,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "长句中间在位置时与层板逗号处做微小停顿以区分逻辑层次",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "老馆长手真巧。哎，你拆书脊的加厚护封干嘛？",
+              "emotion": "neutral",
+              "tone_instruction": "前半句感叹轻快，后半句突然警觉，语气转为询问",
+              "emphasis": [
+                {
+                  "span_text": "手真巧",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "干嘛",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 20,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "干嘛前吸气微顿，声调略降表示关切",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "护封夹层里塞了东西。掉出来了……一张泛黄的旧借书卡，还有一枚星空书签。",
+              "emotion": "tender",
+              "tone_instruction": "声音放轻放缓，留白半秒后念物品名，语气柔和",
+              "emphasis": [
+                {
+                  "span_text": "旧借书卡",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 25,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "星空书签",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 34,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "掉出来了后闭气停顿，随后轻声吐出后续名词",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "‘晓晓，你总把这本重书忘在桌上，我帮你做了个自动回家的滑梯。书归位了，看完也早点回宿舍。’",
+              "emotion": "tender",
+              "tone_instruction": "模仿长辈口吻但保持本音，语速放慢字字清晰，尾音带轻微颤抖",
+              "emphasis": [
+                {
+                  "span_text": "自动回家的滑梯",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 29,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "早点回宿舍",
+                  "occurrence": 1,
+                  "start_char": 38,
+                  "end_char": 43,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "读引号内内容时略微压低喉位，句末宿舍后自然收声不拖音",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "老馆长……一直惦记着你熬夜看书的事。",
+              "emotion": "tender",
+              "tone_instruction": "声音压低，前半句迟疑停顿，后半句语气温和肯定",
+              "emphasis": [
+                {
+                  "span_text": "一直惦记着",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "熬夜看书",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "老馆长后留白一秒，再轻声接续，避免打断情绪流",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "我要把这本书带走。带回宿舍，放在我的床头，永远留着。",
+              "emotion": "sad",
+              "tone_instruction": "语气执拗且带哭腔，节奏紧凑，强调不舍之情",
+              "emphasis": [
+                {
+                  "span_text": "带走",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "永远留着",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 25,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首咬字稍重，每分句间不换大气，保持情绪连贯性",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "title": "情感收束",
+          "location": "校图书馆书架前",
+          "dramatic_goal": "陈宇劝导林晓放手，林晓选择让书归位，完成情感告别，温暖收尾。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "晓晓，你冷静点。老馆长做这个机关，是希望书回家，不是让你把它锁在自己的柜子里。",
+              "emotion": "reassuring",
+              "tone_instruction": "压低嗓音，前半句放缓语速安抚，后半句加重“回家”与“锁在柜子里”的对比咬字。",
+              "emphasis": [
+                {
+                  "span_text": "书回家",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 23,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "锁在自己的柜子里",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 38,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“晓晓”后微顿半秒，降低音量贴近麦克风，营造私下交谈感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "可是带走它，就像他还在督促我一样。我舍不得。",
+              "emotion": "sad",
+              "tone_instruction": "气息微沉，句首带轻微气声，尾音自然衰减不拖沓。",
+              "emphasis": [
+                {
+                  "span_text": "督促我一样",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 16,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "舍不得",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“可是”前吸气一次，尾音自然衰减，不刻意拖长。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "他把习惯留给了你，不是让你困在过去。书归位了，你也该回宿舍休息了。",
+              "emotion": "reassuring",
+              "tone_instruction": "保持平稳中低音区，逻辑重音落在“困在过去”与“休息了”，句末气息放松。",
+              "emphasis": [
+                {
+                  "span_text": "困在过去",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 17,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "回宿舍休息了",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 32,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“过去。”后停顿一秒，让情绪沉淀，再接后半句时气息更放松。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "role-1",
+              "narrator_id": null,
+              "performer_id": "voice-1",
+              "text": "好。我懂了。",
+              "emotion": "calm",
+              "tone_instruction": "深吸一口气后吐出，两短句间留白半拍，第二句音量减半但吐字清晰。",
+              "emphasis": [
+                {
+                  "span_text": "懂了",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 5,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“好。”后轻微呼气，模拟放下重物般的身体松弛感，紧接着接下一句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "role-2",
+              "narrator_id": null,
+              "performer_id": "voice-2",
+              "text": "走吧，我们也该归位了。",
+              "emotion": "calm",
+              "tone_instruction": "语调微扬带笑意，“走吧”后无缝衔接，尾音干脆收住。",
+              "emphasis": [
+                {
+                  "span_text": "归位了",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“走吧”后无停顿直接衔接，尾音自然收住，为后续脚步声留出空间。",
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "本集讲述了林晓和陈宇在闭馆后的图书馆调查《星空观测》自动归位的现象。通过物理探查，他们发现这是老馆长利用磁铁同极相斥和倾斜层板制作的机关。林晓在书脊中发现老馆长的留言，经历了想带走书以保留羁绊的挣扎后，最终选择放手让书归位，完成了情感的释怀与告别。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "《星空观测》每晚自动归位的原因",
+          "change": "从疑似灵异事件确认为老馆长设计的磁铁相斥物理机关"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林晓与老馆长",
+          "change": "从无法接受失去的逃避，转变为理解并接纳老馆长的温柔告别"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "《星空观测》每晚自动归位的悬疑",
+        "林晓对老馆长离世的心理羁绊"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "《星空观测》每晚自动归位的原因",
+        "change": "从疑似灵异事件确认为老馆长设计的磁铁相斥物理机关"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林晓与老馆长",
+        "change": "从无法接受失去的逃避，转变为理解并接纳老馆长的温柔告别"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 22,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.3"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-02",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "d087b2062fb14466a1eaad711f28f925",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:39:47.390583+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 3998,
+      "output_tokens": 4999,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3663,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "d1563ab8-5625-4ab8-9270-3b4c0e527475",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 72410,
+      "completed_at": "2026-10-10T01:40:59.801072+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "user_plan_revision",
+      "call_id": "c1f490599fd44c0e9c66789aec6a9e2d",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:41:00.072130+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5349,
+      "output_tokens": 3744,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2245,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "08f134fc-5933-4874-9aed-8d5284734ad6",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 40299,
+      "completed_at": "2026-10-10T01:41:40.371065+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9555baee0a9c45fcab6433067b32e2f6",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "44fe9009a7e248209c2f2aac708d0935",
+      "provider": "openai_compat",
+      "role": "episode_writer",
+      "requested_model": "qwen/qwen3.7-plus",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:41:42.038343+00:00",
+      "actual_model": "qwen3.7-plus",
+      "input_tokens": 7112,
+      "output_tokens": 6106,
+      "cache_read_tokens": 512,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4308,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "8a6d44b6-77a0-438a-8c69-2080af0f2b17",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 105242,
+      "completed_at": "2026-10-10T01:43:27.282220+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9555baee0a9c45fcab6433067b32e2f6",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "23699297ef514a00882aa1e931028224",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:43:27.298775+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2289,
+      "output_tokens": 4254,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3508,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "22bcbddd-b856-4b48-a135-a0edaec4fd53",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 27344,
+      "completed_at": "2026-10-10T01:43:54.643532+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9555baee0a9c45fcab6433067b32e2f6",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "6dbdde4bd1e742acaf9ca5eaf2812546",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:43:54.664615+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2347,
+      "output_tokens": 4728,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3739,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "b5917714-25c9-4365-b6c6-b4f93d3ce031",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 32010,
+      "completed_at": "2026-10-10T01:44:26.674956+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9555baee0a9c45fcab6433067b32e2f6",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "096ee1ca7a5f463fa7d7c0751753602c",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:44:26.687148+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2675,
+      "output_tokens": 5395,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4186,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "cdfff5af-d9c1-41ec-9d74-4ecc66fa784f",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 33839,
+      "completed_at": "2026-10-10T01:45:00.526225+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9555baee0a9c45fcab6433067b32e2f6",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "76fbc801dc1e49009ecd7c1ad10f2923",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:45:00.548044+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2350,
+      "output_tokens": 4745,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3792,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "54ac9fc9-fb09-406d-a56b-037ab1bbed01",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 31461,
+      "completed_at": "2026-10-10T01:45:32.009071+00:00"
+    },
+    {
+      "request_id": "live-create-02",
+      "job_id": "9555baee0a9c45fcab6433067b32e2f6",
+      "plan_id": "63691fd9286b45618e9ff854662726c5",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "26664433a3044fcd83c362fa2e013538",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.3",
+      "started_at": "2026-10-10T01:45:32.023985+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7854,
+      "output_tokens": 1966,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1924,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "e7a4c943-badb-478c-8abb-f5992c06f149",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 15021,
+      "completed_at": "2026-10-10T01:45:47.044967+00:00"
+    }
+  ],
+  "created_at": "2026-10-10T01:45:32.011134Z"
+}

@@ -1,0 +1,175 @@
+{
+  "plan_id": "ffc512beb2a44962bfe2d7ec461cd712",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "plan": {
+    "title": "停摆的告别",
+    "premise": "小镇少年在爷爷留下的旧钟表店里，试图修好一台藏有爷爷留言的旧钟表，最终在拼凑声音与纸条的过程中学会了真正的告别。",
+    "theme": "告别不是修复过去，而是带着记忆走向未来。",
+    "beginning": "林星在修表时弄断了发条，焦急中意外触发了钟表内隐藏的爷爷录音。",
+    "development": "林星顺着录音提示拆解钟表，听到爷爷关于修表与修心的碎片留言，并在发条盒里发现了一张写着“表停了，人就得往前走”的纸条。",
+    "climax": "林星领悟到爷爷并非要他执着于修好旧表，而是教他接受告别。他放弃强行修复，轻轻合上后盖，钟表奇迹般平稳走动并播放出最后的祝福。",
+    "ending": "林星放下执念，推开钟表店的门走向外面的世界，在平稳的滴答声中完成情感收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "停摆的告别",
+        "core_goal": "林星试图修好爷爷的旧钟表以获取最后留言，最终学会接受告别并走向新生活。",
+        "major_beats": [
+          "[0-2s] 林星用力拧动发条，触发齿轮卡壳的刺耳摩擦声与发条崩断声，导致修表行动被迫中断。",
+          "[2-7s] 林星焦急翻找镊子，抱怨钟表卡死，交代他身处爷爷的旧钟表店，目标是修好表听爷爷最后的留言。",
+          "[7-20s] 林星用镊子强行拨动擒纵轮，触发机关，钟表爆出巨大报时声并播放爷爷“别硬拧”的录音，林星惊愕停手，意识到表内藏有录音。",
+          "[20-80s] 林星顺着录音提示轻柔拆解，听到爷爷“修表如修心”的碎片留言；他在发条盒发现纸条并念出“表停了，人就得往前走”，心态从急躁转为困惑与反思。",
+          "[80-113s] 林星领悟爷爷用意，放弃强行修复，轻轻合上后盖；钟表恢复平稳走动并播放最终留言“去外头看看吧”，林星彻底释怀，完成告别。",
+          "[113-120s] 林星做出选择，推开钟表店大门，门铃响起，他轻声回应“我出门了”，在平稳滴答声中完成情感收束。"
+        ],
+        "ending": "林星放下对修好旧表的执念，接受了爷爷的告别，带着钟表平稳的滴答声推门走向外面的世界。",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "role-1",
+        "story_name": "林星",
+        "external_goal": "修好爷爷留下的旧钟表，听到他最后的留言。",
+        "emotional_avoidance": "害怕听到爷爷对自己“毛躁、不成熟”的失望评价，逃避真正的告别。",
+        "speech_style": "语速快，带点小镇口音的碎碎念，紧张时喜欢用反问句掩饰不安（如“这怎么又卡了？”“难道不是这么修的吗？”）。",
+        "relationship_stance": "对爷爷既敬爱又带有未被认可的委屈，渴望通过修好表来证明自己的成长。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "role-grandpa",
+        "story_name": "爷爷",
+        "performer_id": "voice-grandpa",
+        "medium": "recording",
+        "dramatic_purpose": "作为旧钟表内预录的机械触发声音，提供情感线索与最终的告别信息，推动林星的心理转变。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "重点突出钟表机械音的质感变化：从开篇的刺耳摩擦、崩断，到中段的断续卡顿，再到结尾的平稳滴答。门铃声需清脆明亮，象征新生活的开始。",
+      "voice_direction": "林星的情绪从急躁、焦虑，逐渐过渡到困惑、释然。爷爷的录音需带有老式磁带或机械留声机的底噪与失真感，体现岁月痕迹。"
+    },
+    "continuity_constraints": [
+      "旧钟表内的录音必须是爷爷生前预先录制并通过机械结构触发的，不能是实时对话。",
+      "林星的情绪转变必须基于他听到的录音内容和发现的纸条，不能凭空顿悟。"
+    ],
+    "change_summary": [
+      "根据 ending_contract 调整了 S6 节拍，将原定的“戛然而止”改为情感收束与人物选择的余韵展示。",
+      "为单一角色“角色1”赋予了具体的剧情名“林星”及详细的性格与声音设定。",
+      "新增了 fictional_voice_roles 以支持旧钟表内爷爷录音的合理发声。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "tone_style": "warm",
+    "audience_band": "14-17",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "char-1",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "角色1",
+        "immutable_facts": [
+          "普通人"
+        ]
+      },
+      "profile": {
+        "goal": "推动故事中的选择"
+      },
+      "role_id": "role-1",
+      "performer_id": "voice-1"
+    }
+  ],
+  "character_profile_revision_map": {
+    "char-1": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "content_form",
+    "dialogue_density",
+    "ending_preference",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "live-create-01",
+      "plan_id": "ffc512beb2a44962bfe2d7ec461cd712",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "1efaa3785db249c8affcc4624cba7677",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-10T01:59:38.583720+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4452,
+      "output_tokens": 3358,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2181,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1ea87a87-c517-4ab9-b038-a8d92e3bf8de",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 51127,
+      "completed_at": "2026-10-10T02:00:29.711627+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "audience_band",
+    "content_rating",
+    "genre",
+    "language",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "194c4cabc900b6eade47b01bed8c8b94a7ed0e395ead7420267f27fa4a3bbfa5",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-10T02:00:29.712703Z",
+  "updated_at": "2026-10-10T02:00:29.712703Z"
+}
