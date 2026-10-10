@@ -1,0 +1,142 @@
+[
+  {
+    "label": "B1_R4_family",
+    "recipe_id": "R4",
+    "timestamp": "20261010_083533",
+    "idea": "结婚八年的妻子林敏，在打扫时发现了丈夫锁在抽屉里的一个信封。里面的内容让她感到被欺骗和背叛。她开始思考：这段婚姻是否值得继续，自己这些年到底是谁，以及未来该怎么走。",
+    "genre": "G01",
+    "error": "ModelTimeoutError: The read operation timed out",
+    "traceback": "Traceback (most recent call last):\n  File \"H:\\Projects\\StoryGenerate\\scripts\\experiment_b_stories.py\", line 115, in generate_full_story\n    plan_preview = service.prepare_story_plan(request, context)\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\workflow\\service.py\", line 125, in prepare_story_plan\n    content = self.plan_generator.generate(\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\workflow\\adapters.py\", line 94, in generate\n    content = self.provider.complete_structured(resolve_spec(\"outline\"), system, user, PlanContent)\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\llm\\base.py\", line 65, in complete_structured\n    result = self.complete(spec, full_system, user)\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\llm\\openai_compat.py\", line 249, in complete\n    raise (last_error or ModelUnavailableError(\"LLM 调用失败\"))\ndrama_engine.core.errors.ModelTimeoutError: The read operation timed out\n"
+  },
+  {
+    "label": "B2_R5_healing",
+    "recipe_id": "R5",
+    "timestamp": "20261010_083835",
+    "idea": "结婚八年的妻子林敏，在打扫时发现了丈夫锁在抽屉里的一个信封。里面的内容让她感到被欺骗和背叛。她开始思考：这段婚姻是否值得继续，自己这些年到底是谁，以及未来该怎么走。",
+    "genre": "G01",
+    "plan": {
+      "title": "被锁住的三年",
+      "premise": "结婚八年的林敏发现丈夫长期给陌生女人转账，在愤怒质问中却揭开了自己因创伤而遗忘的心理治疗真相，最终选择与丈夫共同直面伤痕。",
+      "theme": "婚姻中的过度保护与平等沟通；直面创伤才能真正愈合。",
+      "beginning": "林敏撬开丈夫锁着的抽屉，发现一沓给陌生女人“苏雅”的转账单，在丈夫回家时当面质问。",
+      "development": "林敏情绪爆发砸碎水杯提出离婚，丈夫没有反驳，而是引导她查看名片背面，唤醒她关于医院的记忆。",
+      "climax": "丈夫坦白苏雅是心理医生，转账是林敏流产后重度抑郁的治疗费，揭开他独自扛下债务与照顾压力的隐情。",
+      "ending": "林敏的愤怒瓦解，她蹲下捡起名片，主动提出让丈夫陪她一起去见心理医生，两人在泪水中达成和解。",
+      "episode_outlines": [
+        {
+          "index": 1,
+          "title": "被锁住的三年",
+          "core_goal": "查清丈夫转账给“苏雅”的真相，并在真相揭开后做出是否继续婚姻的选择。",
+          "major_beats": [
+            "[0-3s] 黄金钩子：林敏用力扯开抽屉锁（金属断裂音效），信封撕裂，纸张散落一地，伴随她急促而愤怒的喘息声。",
+            "[3-10s] 矛盾三要素：周宇推门而入，林敏举起转账单和名片质问：“苏雅是谁？三年，每个月八千，你拿我们的房贷去养她？！”",
+            "[10-30s] 第一次反转/爽点：周宇上前想夺走纸张，林敏猛地将桌上的玻璃水杯砸碎在地（爆裂音效），尖叫“别碰我！明天就离婚！”周宇被迫后退，双手垂下。",
+            "[30-120s] 中段推进：周宇疲惫地靠在门框上，声音沙哑：“你看看那张名片的背面。”林敏狐疑地翻过名片，听到周宇说：“你忘了三年前在市三院，是谁整夜抱着你，求你活下去的吗？”林敏愣住，脑海中闪过医院仪器的滴答声（闪回音效）。",
+            "[120-170s] 升级/二次反转：周宇坦白苏雅是心理医生，转账是林敏的心理咨询费。他哽咽道出真相：三年前流产后林敏重度抑郁，他怕她受刺激才隐瞒至今，独自扛下债务。林敏的愤怒瞬间瓦解，转为对自身脆弱的恐惧和对丈夫的心疼。",
+            "[170-180s] 强钩子/结局收束：林敏慢慢蹲下，避开玻璃渣，捡起那张名片（纸张摩擦与碎玻璃声）。她深吸一口气，声音微颤但坚定：“明天……陪我一起去见苏医生吧。”周宇滑坐在地，捂住脸泣不成声。"
+          ],
+          "ending": "林敏选择直面创伤，提出和丈夫一起面对心理医生，两人在泪水中达成和解，带着伤痕重新开始。",
+          "target_duration_sec": 180
+        }
+      ],
+      "character_portrayals": [
+        {
+          "role_id": "protagonist",
+          "story_name": "林敏",
+          "external_goal": "查清丈夫转账给“苏雅”的真相，决定是否离婚。",
+          "emotional_avoidance": "逃避自己三年前的心理创伤和流产记忆，用愤怒掩盖内心的脆弱。",
+          "speech_style": "语速快，质问时喜欢用反问句，情绪激动时声音发颤但强撑强硬，后期转为微颤但坚定。",
+          "relationship_stance": "觉得丈夫冷漠、背叛，渴望被爱但习惯用推开对方来保护自己。"
+        },
+        {
+          "role_id": "husband",
+          "story_name": "周宇",
+          "external_goal": "隐瞒妻子过去的心理创伤，维持婚姻表面的平静。",
+          "emotional_avoidance": "害怕妻子回忆起流产的痛苦，害怕面对自己“没能保护好家庭”的内疚。",
+          "speech_style": "语速慢，低沉，习惯用短句，被逼问时习惯沉默，坦白时声音沙哑、哽咽。",
+          "relationship_stance": "默默承受，过度保护妻子，认为隐瞒是对她好，缺乏平等的沟通。"
+        }
+      ],
+      "fictional_voice_roles": [],
+      "mystery_causal_proof": null,
+      "performance_plan": {
+        "sound_effects": "抽屉锁断裂声、纸张散落声、玻璃水杯碎裂声、医院仪器滴答声（闪回混响）、碎玻璃摩擦声。",
+        "emotional_arc": "林敏：极度愤怒 -> 震惊/疑惑 -> 脆弱/心疼 -> 坚定。周宇：隐忍/疲惫 -> 痛苦/坦白 -> 崩溃释放。",
+        "pacing_notes": "前30秒节奏极快，台词紧凑；中段周宇说话时节奏放缓，留白给音效和情绪；最后10秒完全靠动作音效和简短台词收束。"
+      },
+      "continuity_constraints": [
+        "林敏35岁，结婚八年，三年前经历过流产。",
+        "转账对象苏雅是心理医生，不是第三者。",
+        "故事发生在单一场景（家中书房），时间连续，无场景跳转。"
+      ],
+      "change_summary": [
+        "补充了丈夫“周宇”作为现场对手戏角色，以构建核心冲突。",
+        "将“被欺骗和背叛”的错觉具体化为“丈夫给心理医生转账”，以符合破镜重圆与治愈的基调，避免真正的出轨导致无法在3分钟内合理和解。",
+        "将结局调整为林敏主动提出共同面对心理治疗，体现人物成长与“带着伤痕继续前行”的真实感，严格符合完整短篇的收束要求。"
+      ]
+    },
+    "plan_strategy": {
+      "story_mode": "general",
+      "mode_label": "通用故事",
+      "genre_id": "G01",
+      "genre_name": "现实家庭冲突",
+      "genre_mechanism": "憋屈积累→反击打脸",
+      "genre_emotion": "怒→爽→暖",
+      "recipe_id": "R5",
+      "recipe_name": "破镜重圆治愈",
+      "recipe_slots": {
+        "A": "受过伤的成年人",
+        "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+        "C": "新的生活共同体（邻居、家中孩童）",
+        "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+        "E": "曾经的选择"
+      },
+      "recipe_landing_note": "首选赛道。戏剧张力天然存在于台词",
+      "template_ref": "",
+      "template_version": 1,
+      "explicit_fields": [
+        "genre",
+        "recipe_id",
+        "story_mode",
+        "target_duration_sec",
+        "target_episodes"
+      ],
+      "auto_filled_fields": [],
+      "conflict_mechanism": "内心拉扯式冲突：冲突主要来自人物的内心障碍和过去创伤，外部冲突为辅助。以'拉扯'代替'对抗'——两个人互相靠近又推开的过程。旧误会是障碍，但解决方案不是一次性真相大白，而是渐进理解。",
+      "causal_driver": "一次偶然重逢/交集 → 旧伤被触发 → 被迫面对 → 渐进理解。关系变化来自双方的主动选择，不是命运安排。金手指（重生记忆）只提供'提前知道'，不改变人物需要做的选择。",
+      "ending_strategy": "和解与重新开始。不一定是复合，但双方都在过程中成长了。结局展示新的关系状态，可以是'带着伤痕继续前行'。不建议强行圆满——'不完美但真实'的结局更有力量。",
+      "tone_guidance": "细腻、酸涩、温暖。情感张力来自台词中的未尽之言，不靠激烈冲突。",
+      "genre_data": {
+        "genre_id": "G01",
+        "name": "现实家庭冲突",
+        "works": "亲家换锁 / 虎妈驾到 / 老公的工资婆婆的账",
+        "emotion": "怒→爽→暖",
+        "mechanism": "憋屈积累→反击打脸",
+        "audio_fit": "very_high",
+        "audio_fit_score": 95,
+        "driver": "纯对白驱动"
+      },
+      "recipe_data": {
+        "id": "R5",
+        "name": "破镜重圆治愈",
+        "audio_fit": "very_high",
+        "A": "受过伤的成年人",
+        "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+        "C": "新的生活共同体（邻居、家中孩童）",
+        "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+        "E": "曾经的选择",
+        "reference": "渐染 / 好雨知时节 / 破茧 / 他深情侵入",
+        "landing_note": "首选赛道。戏剧张力天然存在于台词"
+      }
+    },
+    "plan_elapsed": 77.6,
+    "plan_tokens": {
+      "input": 4796,
+      "output": 4880
+    },
+    "approved_at": 1,
+    "job_id": "aa3310f37ba440f8bdb3464c6c8b00a2",
+    "error": "NotImplementedError: ",
+    "traceback": "Traceback (most recent call last):\n  File \"H:\\Projects\\StoryGenerate\\scripts\\experiment_b_stories.py\", line 149, in generate_full_story\n    delivery = service.generate_from_approved_plan(job.job_id)\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\workflow\\service.py\", line 252, in generate_from_approved_plan\n    delivery = self.story_executor.execute(job.input_snapshot)\n  File \"H:\\Projects\\StoryGenerate\\scripts\\experiment_b_stories.py\", line 210, in execute\n    raise NotImplementedError\nNotImplementedError\n"
+  }
+]

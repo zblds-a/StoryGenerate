@@ -1,0 +1,255 @@
+[
+  {
+    "label": "B1_R4_family",
+    "recipe_id": "R4",
+    "timestamp": "20261010_082902",
+    "idea": "结婚八年的妻子林敏，在打扫时发现了丈夫锁在抽屉里的一个信封。里面的内容让她感到被欺骗和背叛。她开始思考：这段婚姻是否值得继续，自己这些年到底是谁，以及未来该怎么走。",
+    "genre": "G01",
+    "plan": {
+      "title": "一百二十万的底线",
+      "premise": "结婚八年的妻子在打扫时发现丈夫偷偷将120万嫁妆赠与弟弟的协议，她决定不再隐忍，用确凿证据和果断行动夺回财产并结束婚姻。",
+      "theme": "亲密关系中的界限觉醒与自我救赎。",
+      "beginning": "林敏在卧室发现丈夫转移财产的赠与协议，面临婚姻背叛的冲击。",
+      "development": "丈夫回家试图用道德绑架掩盖事实，林敏通过银行转账记录揭穿其谎言，步步紧逼。",
+      "climax": "林敏亮出底牌，告知已申请财产保全，并拿出离婚协议和房产证要求丈夫搬离。",
+      "ending": "林敏拉着行李箱果断离开，留下丈夫在空荡的房间里面对自己造成的后果，完成自我救赎。",
+      "episode_outlines": [
+        {
+          "index": 1,
+          "title": "第一百二十万的底线",
+          "core_goal": "揭穿丈夫转移财产的真相，拿回属于自己的嫁妆，并果断结束婚姻。",
+          "major_beats": [
+            "【0-3s】林敏在卧室撕开丈夫锁在抽屉里的信封，急促呼吸中将一张纸拍在桌上，触发突发听觉事件。",
+            "【3-10s】林敏颤抖念出纸上内容“自愿将一百二十万学区房首付赠与弟弟”，交代她发现丈夫转移财产的麻烦与震惊。",
+            "【10-30s】陈建宇推门进入，看到信封后大声斥责林敏侵犯隐私；林敏没有退缩，直接砸碎脚边的玻璃水杯，用碎裂声和冷厉的“这是我的钱”打断他的指责，完成第一次情绪爆发。",
+            "【30-120s】陈建宇试图用“弟弟结婚急需”和“母亲逼迫”道德绑架；林敏指出120万是父母给的嫁妆，并点开手机播放银行APP转账回单的机械语音，证明收款方是弟弟且附言为“借款”，揭穿其谎言。",
+            "【120-153s】陈建宇慌乱中试图抢手机并软化态度；林敏后退避开，拍出离婚协议书和房产证，告知已申请诉前财产保全冻结弟弟账户，并要求他明天搬出这套她婚前全款买的房子，完成核心真相揭示与反击。",
+            "【153-180s】陈建宇愣在原地试图辩解；林敏没有回头，拉起行李箱走向大门，平静说出“今天我只带走我自己”，随后滚轮声渐远、防盗门重重关上，以可听见的后果和余韵收束全剧。"
+          ],
+          "ending": "林敏拉着行李箱离开，关门声与屋内寂静形成对比，完成关系重新定义与自我觉醒的收束。",
+          "target_duration_sec": 180
+        }
+      ],
+      "character_portrayals": [
+        {
+          "role_id": "protagonist",
+          "story_name": "林敏",
+          "external_goal": "拿回属于自己的120万嫁妆，结束充满欺骗的婚姻，搬离当前住所。",
+          "emotional_avoidance": "避免承认自己过去八年的付出是自我感动，害怕面对独立生活的未知，但此刻用愤怒掩盖恐惧。",
+          "speech_style": "前期声音微颤、语速快；反击时语速放慢、咬字极重，喜欢用短句和反问，拒绝被对方的情绪带偏。",
+          "relationship_stance": "对丈夫从隐忍包容转变为彻底的界限划分，不再接受任何情感勒索，视其为需要清算的债务人。"
+        },
+        {
+          "role_id": "husband",
+          "story_name": "陈建宇",
+          "external_goal": "掩盖转移妻子财产给弟弟的事实，维持婚姻现状以继续享受妻子的经济支持和照顾。",
+          "emotional_avoidance": "避免承认自己的无能和自私，用“家庭责任”和“丈夫权威”来掩饰心虚。",
+          "speech_style": "习惯性提高音量压制对方，常用“你总是”“一家人”“至于吗”等词汇，被揭穿时会结巴或转移话题。",
+          "relationship_stance": "视妻子为家庭的附属品和提款机，认为妻子的付出理所当然，在面临失去时才试图用旧情挽回。"
+        }
+      ],
+      "fictional_voice_roles": [],
+      "mystery_causal_proof": null,
+      "performance_plan": {
+        "sound_design": "信封撕裂、玻璃碎裂、手机机械语音播报、行李箱滚轮、防盗门关门。",
+        "emotion_guide": "林敏从颤抖压抑到冷静锋利；陈建宇从理直气壮到心虚慌乱。"
+      },
+      "continuity_constraints": [
+        "120万是林敏父母给的嫁妆，非夫妻共同财产。",
+        "房子是林敏婚前全款购买，陈建宇无产权。",
+        "转账附言为“借款”，非“赠与”，为财产保全提供法律依据。"
+      ],
+      "change_summary": [
+        "林敏从隐忍付出的妻子转变为掌握主动权、划定界限的独立女性。",
+        "陈建宇从掌控家庭话语权的丈夫沦为面临净身出户和债务追讨的过错方。"
+      ]
+    },
+    "plan_strategy": {
+      "story_mode": "general",
+      "mode_label": "通用故事",
+      "genre_id": "G01",
+      "genre_name": "现实家庭冲突",
+      "genre_mechanism": "憋屈积累→反击打脸",
+      "genre_emotion": "怒→爽→暖",
+      "recipe_id": "R4",
+      "recipe_name": "家庭反击",
+      "recipe_slots": {
+        "A": "被压榨的妻子 / 儿媳",
+        "B": "觉醒 + 实证（账目、证据、外部身份）",
+        "C": "醒悟的丈夫 / 站队的子女",
+        "D": "婆婆、丈夫、小姑——纯身边人，情绪浓度最高",
+        "E": "被偏袒的一方"
+      },
+      "recipe_landing_note": "首选赛道。全对白驱动，零视觉依赖",
+      "template_ref": "",
+      "template_version": 1,
+      "explicit_fields": [
+        "genre",
+        "recipe_id",
+        "story_mode",
+        "target_duration_sec",
+        "target_episodes"
+      ],
+      "auto_filled_fields": [],
+      "conflict_mechanism": "亲密关系中的权力反转：冲突来自家庭内部的压迫与反抗。反派必须是私人化的（婆婆、丈夫、小姑），冲突发生在日常场景中。每一次反击都是界限的重新划定，不是暴力宣泄。",
+      "causal_driver": "憋屈积累 → 觉醒时刻 → 用事实反击。主角的觉醒是因果链的起点，实证（账目、证据、外部身份）是反击的武器。冲突升级来自反派的不甘与反扑。",
+      "ending_strategy": "关系重新定义，而非简单的'赢'。结局展示新的家庭平衡状态，可以和解也可以分离，但主角获得了尊重和自主权。不建议强制大团圆。",
+      "tone_guidance": "真实、情绪浓度高、渐进式爽感。核心是'终于等到这一天'的释放感。",
+      "genre_data": {
+        "genre_id": "G01",
+        "name": "现实家庭冲突",
+        "works": "亲家换锁 / 虎妈驾到 / 老公的工资婆婆的账",
+        "emotion": "怒→爽→暖",
+        "mechanism": "憋屈积累→反击打脸",
+        "audio_fit": "very_high",
+        "audio_fit_score": 95,
+        "driver": "纯对白驱动"
+      },
+      "recipe_data": {
+        "id": "R4",
+        "name": "家庭反击",
+        "audio_fit": "very_high",
+        "A": "被压榨的妻子 / 儿媳",
+        "B": "觉醒 + 实证（账目、证据、外部身份）",
+        "C": "醒悟的丈夫 / 站队的子女",
+        "D": "婆婆、丈夫、小姑——纯身边人，情绪浓度最高",
+        "E": "被偏袒的一方",
+        "reference": "亲家换锁我收回婚房 / 虎妈驾到，全家反骨仔乖乖立正 / 老公的工资，婆婆的账",
+        "landing_note": "首选赛道。全对白驱动，零视觉依赖"
+      }
+    },
+    "plan_elapsed": 180.0,
+    "plan_tokens": {
+      "input": 4775,
+      "output": 5772
+    },
+    "error": "TypeError: StoryWorkflowService.approve_story_plan() missing 3 required positional arguments: 'expected_revision', 'fingerprint', and 'idempotency_key'",
+    "traceback": "Traceback (most recent call last):\n  File \"H:\\Projects\\StoryGenerate\\scripts\\experiment_b_stories.py\", line 135, in generate_full_story\n    approval = service.approve_story_plan(plan_preview.plan_id)\nTypeError: StoryWorkflowService.approve_story_plan() missing 3 required positional arguments: 'expected_revision', 'fingerprint', and 'idempotency_key'\n"
+  },
+  {
+    "label": "B2_R5_healing",
+    "recipe_id": "R5",
+    "timestamp": "20261010_083202",
+    "idea": "结婚八年的妻子林敏，在打扫时发现了丈夫锁在抽屉里的一个信封。里面的内容让她感到被欺骗和背叛。她开始思考：这段婚姻是否值得继续，自己这些年到底是谁，以及未来该怎么走。",
+    "genre": "G01",
+    "plan": {
+      "title": "抽屉里的离婚协议",
+      "premise": "结婚八年的林敏意外发现丈夫偷偷转移财产的协议，在愤怒质问与激烈拉扯后，才发现这竟是丈夫为她追回父亲遗产的隐忍苦衷。",
+      "theme": "婚姻中的沟通错位与默默守护，真正的爱是共同承担而非独自隐瞒。",
+      "beginning": "林敏撬开抽屉发现信封，误以为丈夫陈宇在转移婚内财产，婚姻信任瞬间崩塌。",
+      "development": "陈宇回家，林敏爆发质问并收拾行李准备离婚，陈宇百般阻拦却百口莫辩，两人陷入激烈的拉扯与控诉。",
+      "climax": "陈宇情绪崩溃吼出真相，散落的纸张中露出法院判决书，证明他是在帮林敏追回被亲戚霸占的父亲遗产。",
+      "ending": "林敏看到汇款单上的日期正是父亲忌日，放下防备与行李，两人在理解与心疼中相拥，婚姻迎来真实的重新开始。",
+      "episode_outlines": [
+        {
+          "index": 1,
+          "title": "信封里的秘密",
+          "core_goal": "揭开信封真相，完成从误会爆发到理解和解的情感闭环。",
+          "major_beats": [
+            "[0-3s] 黄金钩子：抽屉锁被撬开的“咔哒”声，紧接着是急促撕开牛皮纸信封的声音，林敏倒吸一口凉气，一叠纸掉在木地板上。",
+            "[3-10s] 矛盾三要素：林敏颤抖着念出信件关键词：“婚内财产转移协议……绝不能让林敏察觉……”她苦笑，确认了丈夫陈宇在偷偷转移财产。",
+            "[10-30s] 第一次反转/爽点：门锁转动，陈宇回家。林敏直接将信封砸在陈宇胸口，爆发质问：“八年婚姻，你就是这么算计我的？”陈宇慌乱试图捡起纸张，林敏一把推开他，宣告要离婚。",
+            "[30-120s] 中段推进：林敏一边流泪一边快速收拾行李箱，拉链声刺耳。她控诉自己为了家庭放弃事业，换来的却是背叛。陈宇反复试图插话“敏敏你听我说”，但被林敏更激烈的指责打断。陈宇突然死死按住行李箱，两人陷入僵持的拉扯，呼吸声沉重。",
+            "[120-153s] 升级/二次反转：陈宇情绪崩溃，声音嘶哑地吼出真相：“那是你爸留下的老宅补偿款！你大伯霸占了八年，我瞒着你找了三年律师才追回来！”林敏愣住，陈宇从散落的纸张中翻出法院判决书和银行汇款单，塞到林敏手里。",
+            "[153-180s] 强钩子/收束：林敏摸到汇款单，听到陈宇哽咽说“收款日期是你爸的忌日，我想给你个惊喜”。林敏的手颤抖着抚过纸张，行李箱倒在地上。她主动上前抱住陈宇，衣物摩擦声中，林敏轻声说“我们回家”，温暖的钢琴曲渐强并平稳收尾。"
+          ],
+          "ending": "林敏选择留下，两人在泪水与拥抱中达成和解，带着对彼此更深的理解重新开始生活。",
+          "target_duration_sec": 180
+        }
+      ],
+      "character_portrayals": [
+        {
+          "role_id": "protagonist",
+          "story_name": "林敏",
+          "external_goal": "查清丈夫转移财产的真相，决定是否离婚。",
+          "emotional_avoidance": "害怕自己八年的付出毫无价值，回避自己在这段婚姻中失去自我的恐惧。",
+          "speech_style": "语速快，受压时喜欢用反问句和短促的排比句，愤怒时声音发颤但咬字极重。",
+          "relationship_stance": "对丈夫有深厚的感情基础，但因长期的家庭琐事积累了对他不沟通的不满，处于想靠近又害怕受伤的防备状态。"
+        },
+        {
+          "role_id": "husband",
+          "story_name": "陈宇",
+          "external_goal": "隐瞒追回遗产的艰难过程，在结婚纪念日给妻子一个完美的惊喜。",
+          "emotional_avoidance": "害怕妻子知道自己为了打官司承受的巨大压力和风险，回避表达自己内心的脆弱。",
+          "speech_style": "平时温和包容，习惯用“没事”“有我呢”来安抚；极度焦急时会结巴，情绪崩溃时声音嘶哑、语无伦次。",
+          "relationship_stance": "深爱妻子，认为男人的责任是默默扛下一切，但忽略了妻子需要的是平等的知情权和共同承担。"
+        }
+      ],
+      "fictional_voice_roles": [],
+      "mystery_causal_proof": null,
+      "performance_plan": {
+        "sound_design": "强调纸张散落、行李箱拉链、脚步声等生活化音效，增强现实感与沉浸感。",
+        "emotion_direction": "林敏的愤怒要带有委屈的底色，陈宇的隐忍要透出疲惫。最后相拥时的呼吸声和衣物摩擦声要细腻，传达释然与温暖。"
+      },
+      "continuity_constraints": [
+        "信封内的物品（协议草稿、判决书、汇款单）必须在开场掉落时就有纸张散落的声音铺垫。",
+        "林敏父亲的忌日必须在最后点明，作为情感收束的锚点，且前文不可提前剧透。"
+      ],
+      "change_summary": [
+        "根据 ending_contract 调整了 S6 的收尾方式，将“戛然而止的悬念钩”改为“情感最高点的完整收束”，确保符合“不完美但真实”的治愈基调。",
+        "将“背叛”的误会设定为“丈夫暗中追回妻子父亲遗产”，以契合“破镜重圆治愈”和“温暖真相”的配方要求。"
+      ]
+    },
+    "plan_strategy": {
+      "story_mode": "general",
+      "mode_label": "通用故事",
+      "genre_id": "G01",
+      "genre_name": "现实家庭冲突",
+      "genre_mechanism": "憋屈积累→反击打脸",
+      "genre_emotion": "怒→爽→暖",
+      "recipe_id": "R5",
+      "recipe_name": "破镜重圆治愈",
+      "recipe_slots": {
+        "A": "受过伤的成年人",
+        "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+        "C": "新的生活共同体（邻居、家中孩童）",
+        "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+        "E": "曾经的选择"
+      },
+      "recipe_landing_note": "首选赛道。戏剧张力天然存在于台词",
+      "template_ref": "",
+      "template_version": 1,
+      "explicit_fields": [
+        "genre",
+        "recipe_id",
+        "story_mode",
+        "target_duration_sec",
+        "target_episodes"
+      ],
+      "auto_filled_fields": [],
+      "conflict_mechanism": "内心拉扯式冲突：冲突主要来自人物的内心障碍和过去创伤，外部冲突为辅助。以'拉扯'代替'对抗'——两个人互相靠近又推开的过程。旧误会是障碍，但解决方案不是一次性真相大白，而是渐进理解。",
+      "causal_driver": "一次偶然重逢/交集 → 旧伤被触发 → 被迫面对 → 渐进理解。关系变化来自双方的主动选择，不是命运安排。金手指（重生记忆）只提供'提前知道'，不改变人物需要做的选择。",
+      "ending_strategy": "和解与重新开始。不一定是复合，但双方都在过程中成长了。结局展示新的关系状态，可以是'带着伤痕继续前行'。不建议强行圆满——'不完美但真实'的结局更有力量。",
+      "tone_guidance": "细腻、酸涩、温暖。情感张力来自台词中的未尽之言，不靠激烈冲突。",
+      "genre_data": {
+        "genre_id": "G01",
+        "name": "现实家庭冲突",
+        "works": "亲家换锁 / 虎妈驾到 / 老公的工资婆婆的账",
+        "emotion": "怒→爽→暖",
+        "mechanism": "憋屈积累→反击打脸",
+        "audio_fit": "very_high",
+        "audio_fit_score": 95,
+        "driver": "纯对白驱动"
+      },
+      "recipe_data": {
+        "id": "R5",
+        "name": "破镜重圆治愈",
+        "audio_fit": "very_high",
+        "A": "受过伤的成年人",
+        "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+        "C": "新的生活共同体（邻居、家中孩童）",
+        "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+        "E": "曾经的选择",
+        "reference": "渐染 / 好雨知时节 / 破茧 / 他深情侵入",
+        "landing_note": "首选赛道。戏剧张力天然存在于台词"
+      }
+    },
+    "plan_elapsed": 166.9,
+    "plan_tokens": {
+      "input": 9571,
+      "output": 10370
+    },
+    "error": "TypeError: StoryWorkflowService.approve_story_plan() missing 3 required positional arguments: 'expected_revision', 'fingerprint', and 'idempotency_key'",
+    "traceback": "Traceback (most recent call last):\n  File \"H:\\Projects\\StoryGenerate\\scripts\\experiment_b_stories.py\", line 135, in generate_full_story\n    approval = service.approve_story_plan(plan_preview.plan_id)\nTypeError: StoryWorkflowService.approve_story_plan() missing 3 required positional arguments: 'expected_revision', 'fingerprint', and 'idempotency_key'\n"
+  }
+]

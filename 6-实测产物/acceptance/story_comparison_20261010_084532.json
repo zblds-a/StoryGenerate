@@ -1,0 +1,265 @@
+[
+  {
+    "label": "B1_R4_family",
+    "recipe_id": "R4",
+    "timestamp": "20261010_084250",
+    "idea": "结婚八年的妻子林敏，在打扫时发现了丈夫锁在抽屉里的一个信封。里面的内容让她感到被欺骗和背叛。她开始思考：这段婚姻是否值得继续，自己这些年到底是谁，以及未来该怎么走。",
+    "genre": "G01",
+    "plan": {
+      "title": "信封里的抵押合同",
+      "premise": "结婚八年的全职太太林敏在打扫时发现了丈夫藏在抽屉里的信封，里面竟是丈夫伪造签名抵押她婚前房产的合同。面对丈夫的PUA与威胁，林敏不再隐忍，通过录音取证当场反击，最终带着属于自己的权益和尊严离开。",
+      "theme": "亲密关系中的权力反转与自我觉醒",
+      "beginning": "林敏在卧室撕开丈夫上锁抽屉里的信封，发现婚前房产被抵押的真相，恰逢丈夫回家，冲突瞬间爆发。",
+      "development": "丈夫试图用谎言和道德绑架掩盖自私本质，林敏在拉扯中保持冷静，暗中录音并历数八年婚姻的付出与委屈，戳破对方的伪装。",
+      "climax": "丈夫见软的不行便威胁让林敏净身出户，林敏播放录音证据并宣告已冻结共同账户，彻底粉碎丈夫的底牌，完成权力反转。",
+      "ending": "林敏拍下离婚协议书，拉着行李箱决绝离开。防盗门关上切断过往，走廊里的脚步声宣告她重获新生。",
+      "episode_outlines": [
+        {
+          "index": 1,
+          "title": "信封里的抵押合同",
+          "core_goal": "林敏发现丈夫伪造签名抵押其婚前房产，通过录音取证当场反击，决定结束婚姻并带走属于自己的权益。",
+          "major_beats": [
+            "[0-3s] 黄金钩子：林敏在卧室撕开从带锁抽屉里找到的信封，纸张滑落，她倒吸一口凉气，发出颤抖的呼吸声。",
+            "[3-10s] 矛盾三要素：林敏念出文件关键信息『房屋抵押合同...抵押物：林敏名下婚前房产』，此时大门指纹锁提示音响起，丈夫周宇推门进屋。",
+            "[10-30s] 第一次反转：周宇见状试图用『公司周转』掩饰，林敏没有哭闹，冷静指出合同缺少她的亲笔签名属无效抵押，并悄悄按下手机录音键。",
+            "[30-120s] 中段推进：周宇心虚上前抢夺文件，林敏退后避开。周宇改用『八年夫妻』道德绑架，林敏厉声反驳自己八年的丧偶式付出，戳破他拿妻子财产填坑的自私本质。",
+            "[120-170s] 升级/二次反转：周宇气急败坏威胁让林敏净身出户，林敏直接播放刚才的录音，并平静告知律师已介入冻结了共同账户，彻底粉碎他的底牌。",
+            "[170-180s] 强钩子与收束：林敏将离婚协议书拍在桌上宣告终结，拉着行李箱出门。防盗门重重关上切断对话，走廊留下坚定远去的脚步声与滚轮声作为情感余韵。"
+          ],
+          "ending": "Closed",
+          "target_duration_sec": 180
+        }
+      ],
+      "character_portrayals": [
+        {
+          "role_id": "protagonist",
+          "story_name": "林敏",
+          "external_goal": "查清丈夫隐瞒的财务真相，保护自己的婚前房产并重新掌握人生主动权。",
+          "emotional_avoidance": "曾害怕承认八年婚姻彻底失败，习惯性回避正面冲突以维持表面和平。",
+          "speech_style": "前期隐忍克制，后期语速平稳、咬字清晰，多用反问句和陈述句直击要害，不带哭腔，展现觉醒后的冷静。",
+          "relationship_stance": "从依附、妥协的『贤妻』转变为彻底切割、平视对方的独立女性。"
+        },
+        {
+          "role_id": "husband",
+          "story_name": "周宇",
+          "external_goal": "掩盖自己投资失败并抵押妻子房产的事实，逼迫妻子卖房替自己还债。",
+          "emotional_avoidance": "极度逃避自己的无能和失败，习惯用『为了这个家』的宏大借口来掩饰自私。",
+          "speech_style": "习惯用大词（如『大局』『夫妻情分』），心虚时音量拔高、语速加快，被拆穿后转为气急败坏的威胁与贬低。",
+          "relationship_stance": "视妻子为兜底的资源和附属品，习惯性地居高临下进行道德绑架。"
+        }
+      ],
+      "fictional_voice_roles": [],
+      "mystery_causal_proof": null,
+      "performance_plan": {
+        "sound_design": "核心音效包括：信封撕裂声、纸张摩擦声、指纹锁提示音、手机录音播放声、行李箱滚轮声、防盗门重重关上的回音。",
+        "spatial_audio": "前半段在卧室（近场，安静，呼吸声清晰），后半段转移至客厅/玄关（中景，有空间回音，体现拉扯感）。",
+        "pacing_and_emotion": "前30秒紧凑压抑，中段爆发拉扯（语速加快，音量提高），后段冷静决绝（语速放缓，动作音效干脆利落）。"
+      },
+      "continuity_constraints": [
+        "林敏的婚前房产是核心冲突点，不可更改为婚后共同财产。",
+        "周宇伪造签名抵押房产的事实必须在揭晓前通过林敏的台词点出。",
+        "录音证据必须在冲突中段（10-30s）开始录制，不能在结尾突然凭空出现。",
+        "最后10秒必须用物理动作（关门、脚步声）收束，严禁台词说到一半切断。"
+      ],
+      "change_summary": [
+        "将用户指令中模糊的『信封内容』具体化为『伪造签名的房屋抵押合同』，增强现实感与背叛感。",
+        "将『思考未来』转化为具体的行动：收集证据、反击并带着行李箱离开，实现关系重新定义与爽感释放。",
+        "调整了S6的收束方式，以符合ending_contract中『不得以戛然而止代替收束』的要求，用关门和脚步声留下情感余韵。"
+      ]
+    },
+    "plan_strategy": {
+      "story_mode": "general",
+      "mode_label": "通用故事",
+      "genre_id": "G01",
+      "genre_name": "现实家庭冲突",
+      "genre_mechanism": "憋屈积累→反击打脸",
+      "genre_emotion": "怒→爽→暖",
+      "recipe_id": "R4",
+      "recipe_name": "家庭反击",
+      "recipe_slots": {
+        "A": "被压榨的妻子 / 儿媳",
+        "B": "觉醒 + 实证（账目、证据、外部身份）",
+        "C": "醒悟的丈夫 / 站队的子女",
+        "D": "婆婆、丈夫、小姑——纯身边人，情绪浓度最高",
+        "E": "被偏袒的一方"
+      },
+      "recipe_landing_note": "首选赛道。全对白驱动，零视觉依赖",
+      "template_ref": "",
+      "template_version": 1,
+      "explicit_fields": [
+        "genre",
+        "recipe_id",
+        "story_mode",
+        "target_duration_sec",
+        "target_episodes"
+      ],
+      "auto_filled_fields": [],
+      "conflict_mechanism": "亲密关系中的权力反转：冲突来自家庭内部的压迫与反抗。反派必须是私人化的（婆婆、丈夫、小姑），冲突发生在日常场景中。每一次反击都是界限的重新划定，不是暴力宣泄。",
+      "causal_driver": "憋屈积累 → 觉醒时刻 → 用事实反击。主角的觉醒是因果链的起点，实证（账目、证据、外部身份）是反击的武器。冲突升级来自反派的不甘与反扑。",
+      "ending_strategy": "关系重新定义，而非简单的'赢'。结局展示新的家庭平衡状态，可以和解也可以分离，但主角获得了尊重和自主权。不建议强制大团圆。",
+      "tone_guidance": "真实、情绪浓度高、渐进式爽感。核心是'终于等到这一天'的释放感。",
+      "genre_data": {
+        "genre_id": "G01",
+        "name": "现实家庭冲突",
+        "works": "亲家换锁 / 虎妈驾到 / 老公的工资婆婆的账",
+        "emotion": "怒→爽→暖",
+        "mechanism": "憋屈积累→反击打脸",
+        "audio_fit": "very_high",
+        "audio_fit_score": 95,
+        "driver": "纯对白驱动"
+      },
+      "recipe_data": {
+        "id": "R4",
+        "name": "家庭反击",
+        "audio_fit": "very_high",
+        "A": "被压榨的妻子 / 儿媳",
+        "B": "觉醒 + 实证（账目、证据、外部身份）",
+        "C": "醒悟的丈夫 / 站队的子女",
+        "D": "婆婆、丈夫、小姑——纯身边人，情绪浓度最高",
+        "E": "被偏袒的一方",
+        "reference": "亲家换锁我收回婚房 / 虎妈驾到，全家反骨仔乖乖立正 / 老公的工资，婆婆的账",
+        "landing_note": "首选赛道。全对白驱动，零视觉依赖"
+      }
+    },
+    "plan_elapsed": 89.9,
+    "plan_tokens": {
+      "input": 4775,
+      "output": 5432
+    },
+    "approved_at": 1,
+    "job_id": "cf692b7ecc6a4077abf0c5cd8ce052b2",
+    "error": "UnboundLocalError: local variable 'approved_role_ids' referenced before assignment",
+    "traceback": "Traceback (most recent call last):\n  File \"H:\\Projects\\StoryGenerate\\scripts\\experiment_b_stories.py\", line 149, in generate_full_story\n    delivery = service.generate_from_approved_plan(job.job_id)\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\workflow\\service.py\", line 252, in generate_from_approved_plan\n    delivery = self.story_executor.execute(job.input_snapshot)\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\workflow\\adapters.py\", line 430, in execute\n    f\"dialogue 的 speaker_role_id 只能使用以下获批角色ID之一：{sorted(approved_role_ids)}。\"\nUnboundLocalError: local variable 'approved_role_ids' referenced before assignment\n"
+  },
+  {
+    "label": "B2_R5_healing",
+    "recipe_id": "R5",
+    "timestamp": "20261010_084420",
+    "idea": "结婚八年的妻子林敏，在打扫时发现了丈夫锁在抽屉里的一个信封。里面的内容让她感到被欺骗和背叛。她开始思考：这段婚姻是否值得继续，自己这些年到底是谁，以及未来该怎么走。",
+    "genre": "G01",
+    "plan": {
+      "title": "抽屉里的告别信",
+      "premise": "结婚八年的林敏在打扫时撬开了丈夫锁着的抽屉，发现了他隐瞒半年的重度抑郁诊断书和净身出户的房产赠与协议。面对丈夫自我牺牲式的欺骗，林敏决定用一场激烈的对峙撕碎他的伪装，把丈夫从孤独的深渊里拽回来。",
+      "theme": "真正的爱不是独自扛下所有苦难，而是允许对方与你共担风雨；打破自我感动的牺牲，重建平等的亲密关系。",
+      "beginning": "林敏暴力撬开抽屉，发现丈夫陈宇隐藏的重度抑郁诊断书和房产赠与协议，震惊与愤怒瞬间点燃。",
+      "development": "陈宇下班回家，林敏当面揭穿他失业半年、假装上班的谎言。陈宇试图用‘不想拖累你’来辩护，林敏则用短促锋利的质问步步紧逼，戳破他大男子主义式的自我牺牲。",
+      "climax": "陈宇情绪崩溃试图抢回协议掩盖，林敏当着他的面将协议撕得粉碎，宣告‘房子是我的，你也是我的’，彻底击碎陈宇的心理防线。",
+      "ending": "陈宇双膝跪地痛哭释放，林敏紧紧拥抱他并承诺明天陪他去复诊，两人在碎纸片中达成真正的和解与重新开始。",
+      "episode_outlines": [
+        {
+          "index": 1,
+          "title": "撕碎的告别",
+          "core_goal": "林敏发现丈夫隐瞒失业与抑郁的真相，通过激烈拉扯打破丈夫的自我牺牲式伪装，重建平等的婚姻连接。",
+          "major_beats": [
+            "[0-3s] 黄金钩子：金属锁扣被暴力撬开的‘咔哒’声，紧接着是纸张被急促抽出的摩擦声，林敏颤抖且沉重的呼吸声直接切入。",
+            "[3-10s] 矛盾交代：林敏看着手里的文件，声音发抖地念出核心信息：‘重度抑郁症诊断书……房产自愿赠与协议……陈宇，你到底瞒了我什么？’",
+            "[10-30s] 第一次反转/爽点：大门指纹锁‘滴’声解开，陈宇进门。林敏猛地将一沓纸砸在茶几上（重音效），陈宇愣住。林敏压抑着怒火爆发：‘失业半年，每天假装上班，就是为了背着我准备净身出户？！’",
+            "[30-120s] 中段推进：陈宇慌乱试图捡起纸张，声音干涩地辩解自己病了、没用了，不想拖累林敏。林敏步步紧逼，台词短促锋利：‘八年夫妻，你把我当外人？你连跟我商量一句的勇气都没有，这就是你的爱？’陈宇被逼到墙角，痛苦地捂住头，承认自己每天在车里坐到天黑才敢回家的恐惧。",
+            "[120-170s] 升级/二次反转：陈宇情绪失控，伸手去抢林敏手里的赠与协议想撕毁以掩饰。林敏抢先一步，当着他的面将协议撕得粉碎（清晰的碎纸声）。林敏红着眼眶却语气坚定：‘房子是我的，你也是我的。病了一起治，你再敢推开我一次，我就真走。’",
+            "[170-180s] 情感收束：陈宇的心理防线彻底坍塌，双膝跪地捂住脸发出压抑的痛哭。林敏蹲下身，紧紧抱住他。碎纸片簌簌落地，林敏轻抚他的背：‘明天，我陪你去复诊。’（以温暖的余韵和明确的行动选择收束全剧）。"
+          ],
+          "ending": "Closed",
+          "target_duration_sec": 180
+        }
+      ],
+      "character_portrayals": [
+        {
+          "role_id": "protagonist",
+          "story_name": "林敏",
+          "external_goal": "查明丈夫隐瞒的真相，打破婚姻中的信息壁垒，阻止丈夫单方面抛弃家庭。",
+          "emotional_avoidance": "害怕面对丈夫真的不爱自己或婚姻彻底破裂的可能，但更恐惧被当作外人推开。",
+          "speech_style": "平时温和，受压时语速加快、咬字极重，喜欢用反问句逼问核心问题，绝不接受敷衍和借口。",
+          "relationship_stance": "渴望平等的伴侣关系，极度反感被单方面‘保护’或‘抛弃’，认为同甘共苦才是婚姻底线。"
+        },
+        {
+          "role_id": "husband",
+          "story_name": "陈宇",
+          "external_goal": "隐瞒自己的失业和重度抑郁，通过净身出户让妻子免受拖累，独自离开。",
+          "emotional_avoidance": "极度恐惧自己成为妻子的负担，害怕看到妻子失望的眼神，回避一切深度沟通。",
+          "speech_style": "习惯性回避视线，说话时常带停顿和干咽声，被逼问时会用‘我这是为你好’等防御性句式，崩溃时声音会发颤破音。",
+          "relationship_stance": "深爱妻子但陷入自我贬低，认为爱就是独自扛下所有苦难，把妻子推向更好的生活，带有自我感动式的牺牲倾向。"
+        }
+      ],
+      "fictional_voice_roles": [],
+      "mystery_causal_proof": null,
+      "performance_plan": {
+        "sound_design": "音效重点：抽屉锁撬开声、纸张摩擦、指纹锁开门、砸纸张的重音、撕碎纸张的清脆声。环境音需从开头的死寂过渡到结尾的温暖白噪音。",
+        "voice_direction": "林敏的怒火要带有委屈的颤音，体现‘怒其不争’；陈宇的掩饰要透出极度的疲惫与心虚，最后陈宇的痛哭需有从压抑到彻底释放的层次，避免干嚎。"
+      },
+      "continuity_constraints": [
+        "林敏与陈宇结婚八年，此事实不可更改。",
+        "信封内的诊断书和协议必须在开场即被林敏发现并念出关键信息。",
+        "陈宇的抑郁和失业是既定事实，不可在结尾反转为误诊或假失业。",
+        "结局必须展示两人共同面对疾病的行动选择，不得留悬念。"
+      ],
+      "change_summary": [
+        "将传统的‘出轨背叛’反转为‘自我牺牲式的隐瞒’，以契合破镜重圆与温暖治愈的基调。",
+        "将‘打脸’机制内化为妻子对丈夫‘大男子主义式保护’的反击，通过撕毁协议打破沟通壁垒。",
+        "覆盖 beat_sheet 中 S6 的‘戛然而止’要求，严格执行 ending_contract，以情感余韵和明确选择完成收束。"
+      ]
+    },
+    "plan_strategy": {
+      "story_mode": "general",
+      "mode_label": "通用故事",
+      "genre_id": "G01",
+      "genre_name": "现实家庭冲突",
+      "genre_mechanism": "憋屈积累→反击打脸",
+      "genre_emotion": "怒→爽→暖",
+      "recipe_id": "R5",
+      "recipe_name": "破镜重圆治愈",
+      "recipe_slots": {
+        "A": "受过伤的成年人",
+        "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+        "C": "新的生活共同体（邻居、家中孩童）",
+        "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+        "E": "曾经的选择"
+      },
+      "recipe_landing_note": "首选赛道。戏剧张力天然存在于台词",
+      "template_ref": "",
+      "template_version": 1,
+      "explicit_fields": [
+        "genre",
+        "recipe_id",
+        "story_mode",
+        "target_duration_sec",
+        "target_episodes"
+      ],
+      "auto_filled_fields": [],
+      "conflict_mechanism": "内心拉扯式冲突：冲突主要来自人物的内心障碍和过去创伤，外部冲突为辅助。以'拉扯'代替'对抗'——两个人互相靠近又推开的过程。旧误会是障碍，但解决方案不是一次性真相大白，而是渐进理解。",
+      "causal_driver": "一次偶然重逢/交集 → 旧伤被触发 → 被迫面对 → 渐进理解。关系变化来自双方的主动选择，不是命运安排。金手指（重生记忆）只提供'提前知道'，不改变人物需要做的选择。",
+      "ending_strategy": "和解与重新开始。不一定是复合，但双方都在过程中成长了。结局展示新的关系状态，可以是'带着伤痕继续前行'。不建议强行圆满——'不完美但真实'的结局更有力量。",
+      "tone_guidance": "细腻、酸涩、温暖。情感张力来自台词中的未尽之言，不靠激烈冲突。",
+      "genre_data": {
+        "genre_id": "G01",
+        "name": "现实家庭冲突",
+        "works": "亲家换锁 / 虎妈驾到 / 老公的工资婆婆的账",
+        "emotion": "怒→爽→暖",
+        "mechanism": "憋屈积累→反击打脸",
+        "audio_fit": "very_high",
+        "audio_fit_score": 95,
+        "driver": "纯对白驱动"
+      },
+      "recipe_data": {
+        "id": "R5",
+        "name": "破镜重圆治愈",
+        "audio_fit": "very_high",
+        "A": "受过伤的成年人",
+        "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+        "C": "新的生活共同体（邻居、家中孩童）",
+        "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+        "E": "曾经的选择",
+        "reference": "渐染 / 好雨知时节 / 破茧 / 他深情侵入",
+        "landing_note": "首选赛道。戏剧张力天然存在于台词"
+      }
+    },
+    "plan_elapsed": 72.5,
+    "plan_tokens": {
+      "input": 9571,
+      "output": 10404
+    },
+    "approved_at": 1,
+    "job_id": "ebb6f88b2d494ee5bc9c6b53d6ff0c80",
+    "error": "UnboundLocalError: local variable 'approved_role_ids' referenced before assignment",
+    "traceback": "Traceback (most recent call last):\n  File \"H:\\Projects\\StoryGenerate\\scripts\\experiment_b_stories.py\", line 149, in generate_full_story\n    delivery = service.generate_from_approved_plan(job.job_id)\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\workflow\\service.py\", line 252, in generate_from_approved_plan\n    delivery = self.story_executor.execute(job.input_snapshot)\n  File \"H:\\Projects\\StoryGenerate\\4-引擎代码\\drama_engine\\workflow\\adapters.py\", line 430, in execute\n    f\"dialogue 的 speaker_role_id 只能使用以下获批角色ID之一：{sorted(approved_role_ids)}。\"\nUnboundLocalError: local variable 'approved_role_ids' referenced before assignment\n"
+  }
+]

@@ -373,6 +373,10 @@ def resolve_line_cast(line: DraftLine, preview) -> tuple[str, str | None]:
             return role.performer_id, line.audio_cue_ref or (
                 role.medium if role.medium != "live" else None
             )
+    # Plan-generated character portrayals (e.g., when no pre-existing characters)
+    for portrayal in preview.plan.character_portrayals:
+        if portrayal.role_id == line.speaker_role_id:
+            return portrayal.role_id, line.audio_cue_ref
     raise ValueError(f"UNAPPROVED_SPEAKER: {line.speaker_role_id}")
 
 
@@ -412,6 +416,14 @@ class ApprovedPlanLLMExecutor:
                     + "\n".join(f"- {h}" for h in creative_packet.strategy_hints)
                 )
             system = system + strategy_hint_text if strategy_hint_text else system
+            draft = None
+            estimated = 0
+            contract_errors: list[str] = []
+            approved_role_ids = {item.role_id for item in preview.character_snapshots}
+            approved_role_ids.update(role.role_id for role in preview.plan.fictional_voice_roles)
+            # Plan-generated portrayals are also approved (when no pre-existing characters)
+            approved_role_ids.update(p.role_id for p in preview.plan.character_portrayals)
+            portrayal_map = {p.role_id: p.story_name for p in preview.plan.character_portrayals}
             user = json.dumps({
                 "approved_plan_fingerprint": snapshot.plan_fingerprint,
                 "story_plan": preview.plan.model_dump(mode="json"),
@@ -431,14 +443,6 @@ class ApprovedPlanLLMExecutor:
                     "不能使用未列出的ID；narration 行无需填写 speaker_role_id。"
                 ),
             }, ensure_ascii=False)
-            draft = None
-            estimated = 0
-            contract_errors: list[str] = []
-            approved_role_ids = {item.role_id for item in preview.character_snapshots}
-            approved_role_ids.update(role.role_id for role in preview.plan.fictional_voice_roles)
-            # Plan-generated portrayals are also approved (when no pre-existing characters)
-            approved_role_ids.update(p.role_id for p in preview.plan.character_portrayals)
-            portrayal_map = {p.role_id: p.story_name for p in preview.plan.character_portrayals}
             with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="first_draft"):
                 draft = self.provider.complete_structured(
                     resolve_spec("storycraft_episode_writer", tier_map=tier_map), system, user,
