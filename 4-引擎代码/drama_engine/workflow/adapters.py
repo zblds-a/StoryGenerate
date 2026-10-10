@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import uuid
 from typing import Any, Protocol
 
@@ -80,7 +81,39 @@ class LLMPlanGenerator:
             "每集 target_duration_sec 必须等于请求值。\n"
             + json.dumps(payload, ensure_ascii=False, indent=2)
         )
-        return self.provider.complete_structured(resolve_spec("outline"), system, user, PlanContent)
+        content = self.provider.complete_structured(resolve_spec("outline"), system, user, PlanContent)
+        validate_generated_plan_cast(content, characters)
+        return content
+
+
+_PLACEHOLDER_NAME = re.compile(r"^(?:角色|人物|主角|配角|role|character)[\s_\-]*[0-9一二三四五六七八九十]+$", re.I)
+
+
+def validate_generated_plan_cast(content: PlanContent, characters: list[CharacterSnapshot]) -> None:
+    """Keep approved story names and non-toy voices explicit in a model plan."""
+    selected = {item.role_id for item in characters if item.role_id}
+    portrayed = [item.role_id for item in content.character_portrayals]
+    if set(portrayed) != selected or len(portrayed) != len(selected):
+        raise ValueError("PLAN_CHARACTER_PORTRAYALS_MISMATCH")
+    if any(_PLACEHOLDER_NAME.fullmatch(item.story_name.strip()) for item in content.character_portrayals):
+        raise ValueError("PLAN_PLACEHOLDER_STORY_NAME")
+    plan_prose = [
+        content.title, content.premise, content.beginning, content.development,
+        content.climax, content.ending,
+        *(text for episode in content.episode_outlines for text in (
+            episode.title, episode.core_goal, *episode.major_beats, episode.ending,
+        )),
+    ]
+    if any(re.search(r"(?:角色|人物)[\s_\-]*[0-9一二三四五六七八九十]+", text) for text in plan_prose):
+        raise ValueError("PLAN_PLACEHOLDER_IN_STORY")
+    fiction = content.fictional_voice_roles
+    fiction_ids = [item.role_id for item in fiction]
+    if len(fiction_ids) != len(set(fiction_ids)) or selected.intersection(fiction_ids):
+        raise ValueError("PLAN_VOICE_ROLE_CONFLICT")
+    if any(_PLACEHOLDER_NAME.fullmatch(item.story_name.strip()) for item in fiction):
+        raise ValueError("PLAN_PLACEHOLDER_VOICE_NAME")
+    if any(not item.performer_id.strip() for item in fiction):
+        raise ValueError("PLAN_VOICE_PERFORMER_MISSING")
 
 
 class PerformanceAnnotation(BaseModel):
@@ -235,12 +268,23 @@ def draft_episode_contract_errors(
         for scene in draft.scenes for line in scene.lines
         if line.kind == "dialogue" and (
             not line.speaker_role_id or (
-                approved_role_ids and line.speaker_role_id not in approved_role_ids
+                line.speaker_role_id not in approved_role_ids
             )
         )
     })
     if invalid_roles:
         errors.append(f"unapproved dialogue roles: {invalid_roles}")
+    # A quoted recording or call has an identifiable character speaker.  It
+    # cannot be smuggled into the narrator track to bypass approved casting.
+    attributed_narration = [
+        line.text[:48] for scene in draft.scenes for line in scene.lines
+        if line.kind == "narration" and (
+            re.search(r"[（(][^）)]{0,24}(?:录音|留言|广播|电话)[）)]", line.text)
+            or re.search(r"(?:录音|留言|广播|电话|预录语音)[^。！？]{0,24}[：:]\s*[“‘\"']", line.text)
+        )
+    ]
+    if attributed_narration:
+        errors.append(f"identified recorded speech miscast as narration: {attributed_narration}")
     return estimated, errors
 
 
@@ -248,6 +292,21 @@ def spoken_character_budget(target_duration_sec: int) -> tuple[int, int, int]:
     """Return the exact count window used by the duration quality gate."""
     ideal = round(target_duration_sec * 3.5)
     return (ideal * 17 + 19) // 20, ideal, ideal * 23 // 20
+
+
+def resolve_line_cast(line: DraftLine, preview) -> tuple[str, str | None]:
+    """Resolve an approved speaker and its recording medium without renaming Canon."""
+    if line.kind != "dialogue":
+        return "narrator", line.audio_cue_ref
+    for character in preview.character_snapshots:
+        if character.role_id == line.speaker_role_id:
+            return character.performer_id or character.role_id, line.audio_cue_ref
+    for role in preview.plan.fictional_voice_roles:
+        if role.role_id == line.speaker_role_id:
+            return role.performer_id, line.audio_cue_ref or (
+                role.medium if role.medium != "live" else None
+            )
+    raise ValueError(f"UNAPPROVED_SPEAKER: {line.speaker_role_id}")
 
 
 class QualityDecision(BaseModel):
@@ -301,6 +360,7 @@ class ApprovedPlanLLMExecutor:
             estimated = 0
             contract_errors: list[str] = []
             approved_role_ids = {item.role_id for item in preview.character_snapshots}
+            approved_role_ids.update(role.role_id for role in preview.plan.fictional_voice_roles)
             with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="first_draft"):
                 draft = self.provider.complete_structured(
                     resolve_spec("episode_writer", tier_map=tier_map), system, user,
@@ -340,11 +400,8 @@ class ApprovedPlanLLMExecutor:
                     "kind": line.kind,
                     "speaker": line.speaker_role_id,
                     "text": line.text,
-                    "sfx_category": line.audio_cue_ref,
-                    "performer_id": next((
-                        c.performer_id for c in preview.character_snapshots
-                        if c.role_id == line.speaker_role_id and c.performer_id
-                    ), None) or (line.speaker_role_id if line.kind == "dialogue" else "narrator"),
+                    "sfx_category": resolve_line_cast(line, preview)[1],
+                    "performer_id": resolve_line_cast(line, preview)[0],
                 } for line_index, line in enumerate(scene.lines, 1)]
                 utterances = self.annotator.annotate(lines, {
                     "approved_outline": outline.model_dump(mode="json"),

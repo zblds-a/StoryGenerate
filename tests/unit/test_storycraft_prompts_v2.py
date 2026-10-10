@@ -15,7 +15,7 @@ from drama_engine.workflow.storycraft_prompts import (
 
 
 def test_version_is_bumped_for_new_prompt_snapshot():
-    assert PROMPT_VERSION == "p1.5.0"
+    assert PROMPT_VERSION == "p1.6.0"
 
 
 def test_planner_prompt_has_causality_and_confirmation_boundaries():

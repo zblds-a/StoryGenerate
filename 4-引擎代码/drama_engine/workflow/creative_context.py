@@ -30,8 +30,10 @@ class EpisodeCreativePacket(BaseModel):
     theme: str
     episode_goal: str
     ending_condition: str
+    ending_contract: str
     mode_strategy: list[str]
     character_logic: list[dict[str, Any]]
+    voice_cast: list[dict[str, str]]
     known_facts: list[Any]
     unresolved_threads: list[Any]
     immutable_constraints: list[str]
@@ -97,31 +99,52 @@ def build_episode_creative_packet(
 
     source = preview.source_reference
     continuity = source.continuity_snapshot if source else {}
+    portrayals = {item.role_id: item for item in preview.plan.character_portrayals}
     character_logic = []
     for item in preview.character_snapshots:
         canon, profile = item.canon, item.profile
+        portrayal = portrayals.get(item.role_id)
         character_logic.append({
             "role_id": item.role_id,
             "performer_id": item.performer_id,
-            "name": canon.get("name") or profile.get("name") or item.character_id,
+            "canon_name": canon.get("name") or item.character_id,
+            "story_name": portrayal.story_name if portrayal else (canon.get("name") or profile.get("name") or item.character_id),
             "immutable_facts": canon.get("immutable_facts", []),
-            "current_goal": profile.get("goal") or profile.get("current_goal") or "由获批大纲限定",
-            "motivation": profile.get("motivation") or profile.get("desire") or "不得擅自补成便利动机",
-            "fear_or_avoidance": profile.get("fear") or profile.get("avoidance") or "未知",
-            "speech_style": profile.get("speech_style") or profile.get("voice") or "根据人物关系保持稳定且可区分",
+            "current_goal": portrayal.external_goal if portrayal else (profile.get("goal") or profile.get("current_goal") or "由获批大纲限定"),
+            "motivation": profile.get("motivation") or profile.get("desire") or "仅按获批剧情推断",
+            "fear_or_avoidance": portrayal.emotional_avoidance if portrayal else (profile.get("fear") or profile.get("avoidance") or "未知"),
+            "speech_style": portrayal.speech_style if portrayal else (profile.get("speech_style") or profile.get("voice") or "根据人物关系保持稳定且可区分"),
+            "relationship_stance": portrayal.relationship_stance if portrayal else "以获批大纲为准",
             "known_facts": profile.get("known_facts", []),
             "behavior_boundaries": profile.get("behavior_boundaries", []),
         })
 
     transition_sec = max(12, round(prefs.target_duration_sec * 0.12))
+    serialized = str(prefs.story_mode) == "serialized" or prefs.target_episodes > 1
+    closed = prefs.ending_preference in ("closed", "happy") or (
+        prefs.ending_preference == "auto" and not serialized
+    )
+    ending_contract = (
+        "本集完成主要行动与情感选择；不在最后一场新增留言、人物、危机或未解谜题。"
+        "结尾用前文已有的物件、动作或关系形成回响。"
+        if closed else
+        "先完成本集局部目标与人物选择，再保留一个由前文证据引出的长期问题；"
+        "不得用突然断音或新人物代替本集结局。"
+    )
     return EpisodeCreativePacket(
         episode_index=outline.index,
         story_promise=preview.plan.premise,
         theme=preview.plan.theme,
         episode_goal=outline.core_goal,
         ending_condition=outline.ending,
+        ending_contract=ending_contract,
         mode_strategy=_MODE_STRATEGIES.get(str(prefs.story_mode), _MODE_STRATEGIES["general"]),
         character_logic=character_logic,
+        voice_cast=[
+            {"role_id": role.role_id, "story_name": role.story_name,
+             "performer_id": role.performer_id, "medium": role.medium}
+            for role in preview.plan.fictional_voice_roles
+        ],
         known_facts=list(continuity.get("facts") or []),
         unresolved_threads=list(continuity.get("unresolved_threads") or []),
         immutable_constraints=[

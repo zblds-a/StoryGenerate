@@ -240,6 +240,27 @@ class CharacterSnapshot(WorkflowModel):
     performer_id: str | None = None
 
 
+class CharacterPortrayal(WorkflowModel):
+    """An approved, story-local portrayal; it never edits a toy's Canon."""
+
+    role_id: str = Field(min_length=1)
+    story_name: str = Field(min_length=1)
+    external_goal: str = Field(min_length=1)
+    emotional_avoidance: str = Field(min_length=1)
+    speech_style: str = Field(min_length=1)
+    relationship_stance: str = Field(min_length=1)
+
+
+class FictionalVoiceRole(WorkflowModel):
+    """A non-toy voice proposed in the Plan, then frozen at approval."""
+
+    role_id: str = Field(min_length=1)
+    story_name: str = Field(min_length=1)
+    performer_id: str = Field(min_length=1)
+    medium: Literal["live", "recording", "telephone", "broadcast"]
+    dramatic_purpose: str = Field(min_length=1)
+
+
 class PlanContent(WorkflowModel):
     title: str
     premise: str
@@ -249,6 +270,8 @@ class PlanContent(WorkflowModel):
     climax: str
     ending: str
     episode_outlines: list[EpisodeOutline] = Field(min_length=1)
+    character_portrayals: list[CharacterPortrayal] = Field(default_factory=list)
+    fictional_voice_roles: list[FictionalVoiceRole] = Field(default_factory=list)
     performance_plan: dict[str, Any] = Field(default_factory=dict)
     continuity_constraints: list[str] = Field(default_factory=list)
     change_summary: list[str] = Field(default_factory=list)

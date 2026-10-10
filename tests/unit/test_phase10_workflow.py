@@ -15,8 +15,9 @@ from drama_engine.templates.repository import MemoryStoryTemplateRepository
 from drama_engine.templates.resolver import StoryTemplateResolver
 from drama_engine.workflow.performance import normalize_utterance, validate_story_delivery, validate_utterance
 from drama_engine.workflow.adapters import (
-    DraftEpisode, LLMPerformanceAnnotator, draft_episode_contract_errors,
-    spoken_character_budget,
+    DraftEpisode, DraftLine, LLMPerformanceAnnotator, draft_episode_contract_errors,
+    spoken_character_budget, validate_generated_plan_cast,
+    resolve_line_cast,
 )
 from drama_engine.workflow.creative_context import build_episode_creative_packet
 from drama_engine.workflow.repository import (
@@ -26,12 +27,15 @@ from drama_engine.workflow.repository import (
 )
 from drama_engine.workflow.schemas import (
     CharacterSelection,
+    CharacterPortrayal,
+    CharacterSnapshot,
     ContentRating,
     CreateStoryRequest,
     CreationPreferences,
     EmphasisSpan,
     EpisodeDelivery,
     EpisodeOutline,
+    FictionalVoiceRole,
     OperationContext,
     PlanContent,
     PlanStatus,
@@ -171,6 +175,70 @@ class TestRequestContract:
 
 
 class TestPlanApprovalWorkflow:
+    def test_story_portrayal_is_approved_without_changing_canon(self):
+        service = make_service()
+        context = OperationContext(character_snapshots={
+            "toy": {"canon": {"name": "角色1", "immutable_facts": ["小狐狸玩具"]},
+                    "profile": {}, "profile_revision": 1},
+        })
+        request = make_request().model_copy(update={
+            "characters": CharacterSelection(
+                selected_character_ids=["toy"],
+                role_bindings=[{"character_id": "toy", "story_role_id": "hero", "performer_id": "voice-toy"}],
+            ),
+        })
+        plan = service.prepare_story_plan(request, context)
+        assert plan.character_snapshots[0].canon["name"] == "角色1"
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "portrayal")
+        assert job.input_snapshot.preview.character_snapshots[0].canon["name"] == "角色1"
+
+    def test_generated_plan_requires_named_approved_portrayals(self):
+        content = FixedPlanGenerator().generate(make_request(), None, [])
+        character = CharacterSnapshot(character_id="toy", role_id="hero", canon={"name": "角色1"})
+        with pytest.raises(ValueError, match="PLAN_CHARACTER_PORTRAYALS_MISMATCH"):
+            validate_generated_plan_cast(content, [character])
+        portrayal = CharacterPortrayal(
+            role_id="hero", story_name="角色1", external_goal="找回旧表",
+            emotional_avoidance="不愿提起离别", speech_style="短句，喜欢反问",
+            relationship_stance="对爷爷的叮嘱既依赖又反抗",
+        )
+        with pytest.raises(ValueError, match="PLAN_PLACEHOLDER_STORY_NAME"):
+            validate_generated_plan_cast(content.model_copy(update={"character_portrayals": [portrayal]}), [character])
+        named = portrayal.model_copy(update={"story_name": "林星"})
+        voice = FictionalVoiceRole(
+            role_id="recorded-grandfather", story_name="爷爷", performer_id="voice-grandfather",
+            medium="recording", dramatic_purpose="已铺垫的旧表留言",
+        )
+        valid = content.model_copy(update={
+            "character_portrayals": [named], "fictional_voice_roles": [voice],
+        })
+        validate_generated_plan_cast(valid, [character])
+        with pytest.raises(ValueError, match="PLAN_VOICE_ROLE_CONFLICT"):
+            validate_generated_plan_cast(valid.model_copy(update={
+                "fictional_voice_roles": [voice.model_copy(update={"role_id": "hero"})],
+            }), [character])
+
+    def test_one_shot_packet_prioritizes_closure(self):
+        service = make_service()
+        plan = service.prepare_story_plan(make_request(target_duration_sec=120))
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "closure")
+        packet = build_episode_creative_packet(job.input_snapshot, plan.plan.episode_outlines[0], 357, 420, 483)
+        assert "不在最后一场新增留言" in packet.ending_contract
+
+    def test_recorded_voice_keeps_person_and_medium(self):
+        service = make_service()
+        plan = service.prepare_story_plan(make_request())
+        voice = FictionalVoiceRole(
+            role_id="grandfather-recording", story_name="爷爷", performer_id="voice-grandfather",
+            medium="recording", dramatic_purpose="旧表留言",
+        )
+        preview = plan.model_copy(update={
+            "plan": plan.plan.model_copy(update={"fictional_voice_roles": [voice]}),
+        })
+        line = DraftLine(kind="dialogue", speaker_role_id="grandfather-recording", text="星子，别修了。")
+        assert resolve_line_cast(line, preview) == ("voice-grandfather", "recording")
+        assert resolve_line_cast(DraftLine(kind="narration", text="钟表停了。"), preview) == ("narrator", None)
+
     def test_approved_plan_builds_deterministic_scene_level_creation_packet(self):
         service = make_service()
         plan = service.prepare_story_plan(make_request(target_duration_sec=180, dialogue_density="high"))
@@ -290,6 +358,17 @@ class TestGenerationAndPerformanceGate:
         })
         _, errors = draft_episode_contract_errors(draft, 300, {"role-1", "role-2"})
         assert any("role-5" in error for error in errors)
+
+    def test_recorded_character_quote_cannot_be_narration(self):
+        draft = DraftEpisode.model_validate({
+            "title": "旧表", "synopsis": "旧表", "episode_summary": "结束",
+            "scenes": [{"title": "告别", "dramatic_goal": "听完留言", "lines": [
+                {"kind": "narration", "text": "（爷爷留言）星子，别修了。"},
+                {"kind": "dialogue", "speaker_role_id": "hero", "text": "我听见了。" * 60},
+            ]}],
+        })
+        _, errors = draft_episode_contract_errors(draft, 120, {"hero", "recorded-grandfather"})
+        assert any("recorded speech miscast" in error for error in errors)
 
     def test_approved_plan_generates_ready_immutable_version(self):
         service = make_service()
