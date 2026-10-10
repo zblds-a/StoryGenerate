@@ -45,6 +45,25 @@ REVISED = {2, 5, 8, 11}
 _ATTEMPT_EVIDENCE: dict[int, list[dict]] = {}
 
 
+class EvidenceCapturingExecutor:
+    """Preserve a failed candidate for diagnosis without marking it READY."""
+
+    def __init__(self, delegate, output_dir: str | None, index: int):
+        self.delegate = delegate
+        self.output_dir = output_dir
+        self.index = index
+
+    def execute(self, snapshot):
+        delivery = self.delegate.execute(snapshot)
+        if self.output_dir:
+            target = Path(self.output_dir)
+            target.mkdir(parents=True, exist_ok=True)
+            (target / f"case_{self.index:02d}_candidate.json").write_text(
+                delivery.model_dump_json(indent=2), encoding="utf-8"
+            )
+        return delivery
+
+
 def run_case(index: int) -> dict:
     band, rating, duration, mode, character_count, genre, idea = CASES[index - 1]
     context = OperationContext(character_snapshots={
@@ -81,7 +100,10 @@ def run_case(index: int) -> dict:
         with Session(engine) as session:
             service = StoryWorkflowService(
                 SqlAlchemyWorkflowRepository(session),
-                LLMPlanGenerator(provider), ApprovedPlanLLMExecutor(provider),
+                LLMPlanGenerator(provider), EvidenceCapturingExecutor(
+                    ApprovedPlanLLMExecutor(provider),
+                    os.environ.get("STORY_ACCEPTANCE_OUTPUT_DIR"), index,
+                ),
             )
             start = time.monotonic()
             plan = service.prepare_story_plan(request, context)

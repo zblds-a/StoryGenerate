@@ -432,7 +432,7 @@ class TestGenerationAndPerformanceGate:
         service = make_service(valid=False)
         plan = service.prepare_story_plan(make_request())
         job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "invalid")
-        with pytest.raises(ValueError, match="VALIDATION_FAILED"):
+        with pytest.raises(ValueError, match="VALIDATION_FAILED: delivery_validation"):
             service.generate_from_approved_plan(job.job_id)
         assert service.get_generation_job(job.job_id).status == WorkflowJobStatus.FAILED
 

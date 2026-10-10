@@ -35,7 +35,7 @@
 `StoryDelivery`。改它们不会改变正式工作流的节点提示词。
 
 
-## StoryCraft v2 创作优先提示词（p1.6.2）
+## StoryCraft v2 创作优先提示词（p1.6.3）
 
 p1.5.0 在 p1.4.1 基础上加入确定性的 `EpisodeCreativePacket`：角色行动逻辑、知情范围、
 连续性事实、逐场任务与字数预算会在正文调用前由应用代码整理，不新增模型调用。正文首次
@@ -51,6 +51,6 @@ p1.5.0 在 p1.4.1 基础上加入确定性的 `EpisodeCreativePacket`：角色�
 
 正式调用位置仍在 `workflow/adapters.py`，但不再直接在该文件维护以上四份长提示词。开发新业务规则请优先改结构化契约和确定性校验，不要通过 Prompt 绕过发布硬门。更改候选提示词后仍应提升 `PROMPT_VERSION`，避免已审批 Plan 的规则版本发生静默漂移。
 
-p1.6.2 的 Plan 新增获批剧情名与人物说话方式、非玩具声源、完整短篇结局契约和机关/物件因果；Writer 用获批人物设定及创作包执行，开头的括号演绎提示会在逐句演绎前从朗读文本转到 `delivery_note`。对应实现见 `workflow/schemas.py`、`workflow/creative_context.py` 和 `workflow/adapters.py`。旧 Plan JSON 可读取；新真实 Plan 必须为已绑定角色提供画像。
+p1.6.3 的 Plan 新增获批剧情名与人物说话方式、非玩具声源、完整短篇结局契约，以及时间/在场人/物件去向核查；Writer 用获批人物设定及创作包执行，开头的括号演绎提示会在逐句演绎前从朗读文本转到 `delivery_note`。对应实现见 `workflow/schemas.py`、`workflow/creative_context.py` 和 `workflow/adapters.py`。旧 Plan JSON 可读取；新真实 Plan 必须为已绑定角色提供画像。
 
 此分支属于待 A/B 验收的候选：`docs/STORYCRAFT_PROMPT_V2_REVIEW.md`。当前不应宣称新提示词已使实际故事质量提升；必须运行真实模型对照并盲评。

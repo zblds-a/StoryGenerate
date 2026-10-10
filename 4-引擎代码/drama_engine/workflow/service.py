@@ -263,7 +263,21 @@ class StoryWorkflowService:
                 "status": StoryVersionStatus.READY if ready else StoryVersionStatus.CANDIDATE,
             })
             if not ready:
-                raise ValueError("PERFORMANCE_OR_STORY_VALIDATION_FAILED")
+                failed_checks = [
+                    name for name, passed in {
+                        "delivery_validation": report.validation_status == "PASSED",
+                        "executor_validation": executor_report.validation_status == "PASSED",
+                        "outline_alignment": report.outline_alignment_passed,
+                        "continuity": report.continuity_passed,
+                        "content_rating": report.content_rating_passed,
+                        "episode_ready": episode_ready,
+                        "approved_snapshot": snapshot_match,
+                    }.items() if not passed
+                ]
+                raise ValueError(
+                    "PERFORMANCE_OR_STORY_VALIDATION_FAILED: " + ", ".join(failed_checks)
+                    + ("; " + "; ".join(report.warnings[:3]) if report.warnings else "")
+                )
             self.repository.save_story_version(delivery)
             succeeded = validating.model_copy(update={
                 "status": WorkflowJobStatus.SUCCEEDED,
