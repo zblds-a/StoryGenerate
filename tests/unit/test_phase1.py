@@ -187,7 +187,7 @@ class TestModelTierMap:
     def test_default_tier_map(self):
         from drama_engine.llm.router import ModelTierMap, TIER_FAST, TIER_STRONG, TIER_LONG
         tm = ModelTierMap()
-        assert tm.resolve(TIER_FAST) == "deepseek-v4-flash"
+        assert tm.resolve(TIER_FAST) == "qwen/qwen3.6-flash"
         assert tm.resolve(TIER_STRONG) == "qwen/qwen3.7-max"
         assert tm.resolve(TIER_LONG) == "zhipu/glm-5.3"
 

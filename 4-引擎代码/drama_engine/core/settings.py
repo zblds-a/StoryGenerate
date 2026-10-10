@@ -24,7 +24,7 @@ class Settings:
     app_env: AppEnv = AppEnv.DEV
 
     # ---- 模型 Tier 配置 ----
-    llm_fast_model: str = "deepseek-v4-flash"
+    llm_fast_model: str = "qwen/qwen3.6-flash"
     llm_balanced_model: str = "qwen/qwen3.7-plus"
     llm_strong_model: str = "qwen/qwen3.7-max"
     llm_long_model: str = "zhipu/glm-5.3"

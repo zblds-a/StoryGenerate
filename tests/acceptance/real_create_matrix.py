@@ -92,6 +92,13 @@ def run_case(index: int) -> dict:
                     "保留核心冲突，让最后一次角色选择更清晰，并在结尾自然呼应开场。",
                 )
                 session.commit()
+            output_dir = os.environ.get("STORY_ACCEPTANCE_OUTPUT_DIR")
+            if output_dir:
+                target = Path(output_dir)
+                target.mkdir(parents=True, exist_ok=True)
+                (target / f"case_{index:02d}_plan.json").write_text(
+                    plan.model_dump_json(indent=2), encoding="utf-8"
+                )
             job = service.approve_story_plan(
                 plan.plan_id, plan.plan_revision, plan.plan_fingerprint,
                 f"live-approval-{index:02d}",
@@ -142,13 +149,8 @@ def run_case(index: int) -> dict:
                     for path in (Path(__file__).resolve().parents[2] / "3-规则库").glob("*.json")
                 },
             }
-            output_dir = os.environ.get("STORY_ACCEPTANCE_OUTPUT_DIR")
             if output_dir:
                 target = Path(output_dir)
-                target.mkdir(parents=True, exist_ok=True)
-                (target / f"case_{index:02d}_plan.json").write_text(
-                    plan.model_dump_json(indent=2), encoding="utf-8"
-                )
                 (target / f"case_{index:02d}_delivery.json").write_text(
                     delivery.model_dump_json(indent=2), encoding="utf-8"
                 )
