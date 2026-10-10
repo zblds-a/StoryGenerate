@@ -87,6 +87,7 @@ class LLMPlanGenerator:
         content = self.provider.complete_structured(resolve_spec("outline"), system, user, PlanContent)
         validate_generated_plan_cast(content, characters)
         validate_generated_plan_ending(content, request.creation_preferences)
+        validate_generated_plan_causality(content, request.creation_preferences)
         return content
 
 
@@ -135,6 +136,12 @@ def validate_generated_plan_ending(content: PlanContent, preferences) -> None:
             raise ValueError(f"PLAN_CLOSED_ENDING_TAIL_REVEAL: episode {episode.index}")
     if re.search(r"Closed\s*/\s*Open|闭合.{0,8}开放|开放.{0,8}闭合", content.ending, re.I):
         raise ValueError("PLAN_AMBIGUOUS_ENDING_TYPE")
+
+
+def validate_generated_plan_causality(content: PlanContent, preferences) -> None:
+    """A newly generated mystery must expose its causal account for approval."""
+    if str(preferences.story_mode) == "mystery" and content.mystery_causal_proof is None:
+        raise ValueError("PLAN_MYSTERY_CAUSAL_PROOF_MISSING")
 
 
 class PerformanceAnnotation(BaseModel):

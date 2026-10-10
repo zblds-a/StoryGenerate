@@ -34,6 +34,7 @@ class EpisodeCreativePacket(BaseModel):
     mode_strategy: list[str]
     character_logic: list[dict[str, Any]]
     voice_cast: list[dict[str, str]]
+    mystery_causal_proof: dict[str, str] | None = None
     known_facts: list[Any]
     unresolved_threads: list[Any]
     immutable_constraints: list[str]
@@ -155,6 +156,10 @@ def build_episode_creative_packet(
              "performer_id": role.performer_id, "medium": role.medium}
             for role in preview.plan.fictional_voice_roles
         ],
+        mystery_causal_proof=(
+            preview.plan.mystery_causal_proof.model_dump(mode="json")
+            if preview.plan.mystery_causal_proof else None
+        ),
         known_facts=list(continuity.get("facts") or []),
         unresolved_threads=list(continuity.get("unresolved_threads") or []),
         immutable_constraints=[

@@ -17,7 +17,8 @@ from drama_engine.workflow.performance import normalize_utterance, validate_stor
 from drama_engine.workflow.adapters import (
     DraftEpisode, DraftLine, LLMPerformanceAnnotator, draft_episode_contract_errors,
     spoken_character_budget, validate_generated_plan_cast,
-    resolve_line_cast, validate_generated_plan_ending, normalize_draft_stage_directions,
+    resolve_line_cast, validate_generated_plan_ending, validate_generated_plan_causality,
+    normalize_draft_stage_directions,
 )
 from drama_engine.workflow.creative_context import build_episode_creative_packet
 from drama_engine.workflow.repository import (
@@ -36,6 +37,7 @@ from drama_engine.workflow.schemas import (
     EpisodeDelivery,
     EpisodeOutline,
     FictionalVoiceRole,
+    MysteryCausalProof,
     OperationContext,
     PlanContent,
     PlanStatus,
@@ -243,6 +245,28 @@ class TestPlanApprovalWorkflow:
                 validate_generated_plan_ending(bad, prefs)
         validate_generated_plan_ending(content, prefs)
         validate_generated_plan_ending(bad, CreationPreferences(story_mode="serialized"))
+
+    def test_mystery_proof_is_approved_and_forwarded_to_writer(self):
+        prefs = CreationPreferences(story_mode="mystery")
+        content = FixedPlanGenerator().generate(make_request(story_mode="mystery"), None, [])
+        with pytest.raises(ValueError, match="PLAN_MYSTERY_CAUSAL_PROOF_MISSING"):
+            validate_generated_plan_causality(content, prefs)
+        proof = MysteryCausalProof(
+            actual_event_timeline="闭馆前陈宇先把书放回原架，铃铛在闭馆后被猫碰响",
+            witnessed_event="林晓只听见铃响，随后才看到书在架上，没有目睹移动",
+            actor_opportunity="陈宇在林晓到馆前独自整理书架，之后一直和她在一起",
+            audible_trace_before_reveal="两人先听见猫爪抓挠的声音和铃铛绳子拖动声",
+            onstage_verification="林晓把铃铛重新架好，猫再次碰响而书没有移动",
+        )
+        content = content.model_copy(update={"mystery_causal_proof": proof})
+        validate_generated_plan_causality(content, prefs)
+        service = make_service()
+        plan = service.prepare_story_plan(make_request(story_mode="mystery"))
+        approved_plan = plan.model_copy(update={"plan": content})
+        job = service.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, "mystery-proof")
+        snapshot = job.input_snapshot.model_copy(update={"preview": approved_plan})
+        packet = build_episode_creative_packet(snapshot, content.episode_outlines[0], 357, 420, 483)
+        assert packet.mystery_causal_proof == proof.model_dump(mode="json")
 
     def test_recorded_voice_keeps_person_and_medium(self):
         service = make_service()

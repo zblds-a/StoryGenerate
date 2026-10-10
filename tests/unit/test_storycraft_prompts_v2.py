@@ -16,7 +16,7 @@ from drama_engine.workflow.storycraft_prompts import (
 
 
 def test_version_is_bumped_for_new_prompt_snapshot():
-    assert PROMPT_VERSION == "p1.6.4"
+    assert PROMPT_VERSION == "p1.6.5"
 
 
 def test_approved_story_writer_uses_strong_tier_without_changing_legacy_writer():

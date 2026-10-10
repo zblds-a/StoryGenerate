@@ -261,6 +261,16 @@ class FictionalVoiceRole(WorkflowModel):
     dramatic_purpose: str = Field(min_length=1)
 
 
+class MysteryCausalProof(WorkflowModel):
+    """Approved explanation of an apparent impossibility, not a literary score."""
+
+    actual_event_timeline: str = Field(min_length=8)
+    witnessed_event: str = Field(min_length=8)
+    actor_opportunity: str = Field(min_length=8)
+    audible_trace_before_reveal: str = Field(min_length=8)
+    onstage_verification: str = Field(min_length=8)
+
+
 class PlanContent(WorkflowModel):
     title: str
     premise: str
@@ -272,6 +282,7 @@ class PlanContent(WorkflowModel):
     episode_outlines: list[EpisodeOutline] = Field(min_length=1)
     character_portrayals: list[CharacterPortrayal] = Field(default_factory=list)
     fictional_voice_roles: list[FictionalVoiceRole] = Field(default_factory=list)
+    mystery_causal_proof: MysteryCausalProof | None = None
     performance_plan: dict[str, Any] = Field(default_factory=dict)
     continuity_constraints: list[str] = Field(default_factory=list)
     change_summary: list[str] = Field(default_factory=list)
