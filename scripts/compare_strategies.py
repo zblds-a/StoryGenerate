@@ -28,6 +28,9 @@ from drama_engine.workflow.schemas import (
     PlanContent,
     StoryModeChoice,
     StoryTemplateRef,
+    CharacterSelection,
+    OperationContext,
+    CharacterSnapshot,
 )
 from drama_engine.workflow.adapters import LLMPlanGenerator, LLMPerformanceAnnotator, ApprovedPlanLLMExecutor
 from drama_engine.workflow.service import StoryWorkflowService
@@ -106,11 +109,28 @@ def run_case(label: str, prefs: CreationPreferences) -> dict:
             idempotency_key=uuid.uuid4().hex,
             user_instruction=CREATIVE_IDEA,
             creation_preferences=prefs,
+            characters=CharacterSelection(
+                selected_character_ids=["protagonist"],
+                role_bindings=[{"character_id": "protagonist", "story_role_id": "protagonist", "performer_id": "protagonist"}],
+            ),
         )
+
+        context = OperationContext(character_snapshots={
+            "protagonist": {
+                "canon": {"name": "林敏", "immutable_facts": ["三十五岁", "全职主妇", "手工皮具手艺"]},
+                "profile": {
+                    "goal": "重新掌控自己的人生",
+                    "motivation": "不再忍让",
+                    "fear": "失去孩子的抚养权",
+                    "personality": ["隐忍", "细致", "果断"],
+                },
+                "profile_revision": 1,
+            },
+        })
 
         # Stage 1: Plan
         print("  [1/3] Generating Plan...")
-        plan = service.prepare_story_plan(request)
+        plan = service.prepare_story_plan(request, context)
         result["plan_id"] = plan.plan_id
         result["plan_fingerprint"] = plan.plan_fingerprint
         result["plan"] = plan.plan.model_dump(mode="json")

@@ -107,9 +107,11 @@ def validate_generated_plan_cast(content: PlanContent, characters: list[Characte
     if not characters:
         return
     selected = {item.role_id for item in characters if item.role_id}
-    portrayed = [item.role_id for item in content.character_portrayals]
-    if set(portrayed) != selected or len(portrayed) != len(selected):
-        raise ValueError("PLAN_CHARACTER_PORTRAYALS_MISMATCH")
+    portrayed = set(item.role_id for item in content.character_portrayals)
+    # Every selected character must have a portrayal; additional portrayals are allowed
+    if not selected.issubset(portrayed):
+        missing = selected - portrayed
+        raise ValueError(f"PLAN_CHARACTER_PORTRAYALS_MISMATCH: missing portrayals for {missing}")
     if any(_PLACEHOLDER_NAME.fullmatch(item.story_name.strip()) for item in content.character_portrayals):
         raise ValueError("PLAN_PLACEHOLDER_STORY_NAME")
     plan_prose = [

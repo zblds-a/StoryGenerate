@@ -197,6 +197,7 @@ class TestPlanApprovalWorkflow:
     def test_generated_plan_requires_named_approved_portrayals(self):
         content = FixedPlanGenerator().generate(make_request(), None, [])
         character = CharacterSnapshot(character_id="toy", role_id="hero", canon={"name": "角色1"})
+        # Empty portrayals, provided character → missing
         with pytest.raises(ValueError, match="PLAN_CHARACTER_PORTRAYALS_MISMATCH"):
             validate_generated_plan_cast(content, [character])
         portrayal = CharacterPortrayal(
