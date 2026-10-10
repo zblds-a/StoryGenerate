@@ -103,6 +103,9 @@ _PLACEHOLDER_NAME = re.compile(r"^(?:角色|人物|主角|配角|role|character)
 
 def validate_generated_plan_cast(content: PlanContent, characters: list[CharacterSnapshot]) -> None:
     """Keep approved story names and non-toy voices explicit in a model plan."""
+    # When no characters are selected, the model is free to invent portrayals
+    if not characters:
+        return
     selected = {item.role_id for item in characters if item.role_id}
     portrayed = [item.role_id for item in content.character_portrayals]
     if set(portrayed) != selected or len(portrayed) != len(selected):
@@ -430,6 +433,8 @@ class ApprovedPlanLLMExecutor:
             contract_errors: list[str] = []
             approved_role_ids = {item.role_id for item in preview.character_snapshots}
             approved_role_ids.update(role.role_id for role in preview.plan.fictional_voice_roles)
+            # Plan-generated portrayals are also approved (when no pre-existing characters)
+            approved_role_ids.update(p.role_id for p in preview.plan.character_portrayals)
             with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="first_draft"):
                 draft = self.provider.complete_structured(
                     resolve_spec("storycraft_episode_writer", tier_map=tier_map), system, user,
