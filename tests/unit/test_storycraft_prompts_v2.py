@@ -8,6 +8,7 @@ from __future__ import annotations
 import inspect
 
 from drama_engine.config import PROMPT_VERSION
+from drama_engine.llm.router import MODEL_ROUTING, TIER_BALANCED, TIER_STRONG
 from drama_engine.workflow import adapters
 from drama_engine.workflow.storycraft_prompts import (
     PLAN_SYSTEM_V2, EPISODE_SYSTEM_V2, PERFORMANCE_SYSTEM_V2, JUDGE_SYSTEM_V2
@@ -15,7 +16,12 @@ from drama_engine.workflow.storycraft_prompts import (
 
 
 def test_version_is_bumped_for_new_prompt_snapshot():
-    assert PROMPT_VERSION == "p1.6.3"
+    assert PROMPT_VERSION == "p1.6.4"
+
+
+def test_approved_story_writer_uses_strong_tier_without_changing_legacy_writer():
+    assert MODEL_ROUTING["storycraft_episode_writer"]["tier"] == TIER_STRONG
+    assert MODEL_ROUTING["episode_writer"]["tier"] == TIER_BALANCED
 
 
 def test_planner_prompt_has_causality_and_confirmation_boundaries():
@@ -44,5 +50,6 @@ def test_judge_cannot_claim_success_with_vague_praise():
 def test_official_workflow_uses_v2_prompts():
     assert "system = PLAN_SYSTEM_V2" in inspect.getsource(adapters.LLMPlanGenerator.generate)
     assert "system = EPISODE_SYSTEM_V2" in inspect.getsource(adapters.ApprovedPlanLLMExecutor.execute)
+    assert 'resolve_spec("storycraft_episode_writer"' in inspect.getsource(adapters.ApprovedPlanLLMExecutor.execute)
     assert "system = PERFORMANCE_SYSTEM_V2" in inspect.getsource(adapters.LLMPerformanceAnnotator.annotate)
     assert "JUDGE_SYSTEM_V2" in inspect.getsource(adapters.ApprovedPlanLLMExecutor.execute)

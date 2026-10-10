@@ -411,7 +411,7 @@ class ApprovedPlanLLMExecutor:
             approved_role_ids.update(role.role_id for role in preview.plan.fictional_voice_roles)
             with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="first_draft"):
                 draft = self.provider.complete_structured(
-                    resolve_spec("episode_writer", tier_map=tier_map), system, user,
+                    resolve_spec("storycraft_episode_writer", tier_map=tier_map), system, user,
                     DraftEpisode,
                 )
             draft = normalize_draft_stage_directions(draft)
@@ -575,7 +575,7 @@ class ApprovedPlanLLMExecutor:
         }, ensure_ascii=False)
         with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="targeted_duration_repair"):
             result = self.provider.complete_structured(
-                resolve_spec("episode_writer", tier_map=tier_map, temperature=0.45),
+                resolve_spec("storycraft_episode_writer", tier_map=tier_map, temperature=0.45),
                 EPISODE_SYSTEM_V2,
                 repair_user,
                 DraftScenePatchBatch,

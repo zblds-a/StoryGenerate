@@ -59,6 +59,9 @@ MODEL_ROUTING: dict[str, dict] = {
     "gadget_design":       {"tier": TIER_STRONG,   "temperature": 0.5, "max_tokens": 16384},
     "behavior_design":     {"tier": TIER_STRONG,   "temperature": 0.7, "max_tokens": 32768},
     "outline":             {"tier": TIER_STRONG,   "temperature": 0.5, "max_tokens": 32768},
+    # Approved StoryCraft deliveries prioritize first-draft quality. Legacy
+    # episode_writer calls retain their original BALANCED cost profile.
+    "storycraft_episode_writer": {"tier": TIER_STRONG, "temperature": 0.7, "max_tokens": 16384},
     # Phase 1.5: 只规划不写正文
     "episode_plan":        {"tier": TIER_STRONG,   "temperature": 0.7, "max_tokens": 8192},
     "hook_open":           {"tier": TIER_STRONG,   "temperature": 0.9, "max_tokens": 4096},
