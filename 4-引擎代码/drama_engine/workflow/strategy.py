@@ -162,6 +162,25 @@ _GENRE_DEFAULT_RECIPE: dict[str, str] = {
     "G10": "R1",  # 国风玄幻升级流 → 大女主升级流
 }
 
+# Free-text genre → formula library genre ID
+# Users can pass natural language like "温情", "悬疑", "职场"
+_FREETEXT_GENRE_MAP: dict[str, str] = {
+    "温情": "G05", "温暖": "G05", "治愈": "G05", "救赎": "G05",
+    "悬疑": "G05", "推理": "G05", "破案": "G05",
+    "家庭": "G01", "家庭冲突": "G01", "家庭伦理": "G01", "婆媳": "G01",
+    "爱情": "G02", "恋爱": "G02", "治愈爱情": "G02", "成年人爱情": "G02",
+    "虐恋": "G03", "重生": "G03", "虐": "G03",
+    "宫斗": "G04", "复仇": "G04", "宅斗": "G04",
+    "霸总": "G06", "总裁": "G06", "反差": "G06",
+    "萌宝": "G07", "团宠": "G07", "萌娃": "G07",
+    "穿越": "G08", "搞事业": "G08", "经商": "G08", "种田": "G08",
+    "修仙": "G09", "仙侠": "G09", "喜剧": "G09",
+    "玄幻": "G10", "升级": "G10", "打怪": "G10",
+    "职场": "G05", "都市": "G05", "现实": "G05",
+    "青春": "G05", "校园": "G05",
+    "轻悬疑": "G05",  # 轻悬疑映射到现实治愈/悬疑推理
+}
+
 # Genre → default mode
 _GENRE_DEFAULT_MODE: dict[str, str] = {
     "G01": "general",
@@ -404,6 +423,25 @@ class StoryStrategyResolver:
             return None
         return best_genre
 
+    @staticmethod
+    def _resolve_free_text_genre(genre_text: str) -> str | None:
+        """Map free-text genre labels like '温情','职场' to formula library IDs.
+
+        Returns None if no mapping found — caller should treat as explicit
+        but unmapped genre and raise an appropriate error.
+        """
+        # Direct formula-library ID check
+        if genre_text.startswith("G") and genre_text[1:].isdigit():
+            return genre_text
+        # Exact free-text match
+        if genre_text in _FREETEXT_GENRE_MAP:
+            return _FREETEXT_GENRE_MAP[genre_text]
+        # Substring match (longest first for specificity)
+        for kw in sorted(_FREETEXT_GENRE_MAP, key=len, reverse=True):
+            if kw in genre_text:
+                return _FREETEXT_GENRE_MAP[kw]
+        return None
+
     def _mode_from_genre(self, genre_id: str) -> str:
         return _GENRE_DEFAULT_MODE.get(genre_id, "general")
 
@@ -435,7 +473,23 @@ class StoryStrategyResolver:
         # --- Step 1: resolve genre ---
         resolved_genre_id: str | None = None
         if genre and genre != "auto":
-            resolved_genre_id = genre
+            # Support both formula-library IDs (G01) and free-text ("温情", "职场")
+            if genre.startswith("G") and genre[1:].isdigit():
+                resolved_genre_id = genre
+            else:
+                resolved_genre_id = self._resolve_free_text_genre(genre)
+                if resolved_genre_id is None:
+                    # Free-text genre not recognized — fall back to keyword match
+                    # from the genre text itself combined with user instruction
+                    matched = self._match_genre_from_idea(genre + " " + user_instruction)
+                    if matched:
+                        resolved_genre_id = matched
+                    else:
+                        # Still not found: use best audio-fit as safe default
+                        resolved_genre_id = max(
+                            self.lib.genres, key=lambda g: g.get("audio_fit_score", 0),
+                        ).get("genre_id", "G01")
+                    auto_filled.append("genre")
         else:
             # Auto-match from user instruction
             matched = self._match_genre_from_idea(user_instruction)
@@ -462,6 +516,13 @@ class StoryStrategyResolver:
         # --- Step 3: resolve recipe ---
         resolved_recipe_id: str | None = None
         if recipe_id:
+            # Verify the recipe exists
+            recipe_check = self.lib.recipe(recipe_id)
+            if not recipe_check:
+                available = [r.get("id", "?") for r in self.lib.recipes]
+                raise StrategyConflictError(
+                    f"配方 '{recipe_id}' 不存在。可用配方：{', '.join(available)}"
+                )
             resolved_recipe_id = recipe_id
         else:
             resolved_recipe_id = self._recipe_from_genre(resolved_genre_id)

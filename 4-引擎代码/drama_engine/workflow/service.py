@@ -106,6 +106,10 @@ class StoryWorkflowService:
                 mode_key=preferences.story_mode,
             )
             template_snapshot = resolved.model_dump(mode="json")
+            # Update strategy with actual template version
+            strategy.template_version = resolved.version
+            strategy.template_ref = resolved.template_id
+            strategy_snapshot = strategy.model_dump(mode="json")
         rule_versions = _rule_versions()
         request = request.model_copy(update={"creation_preferences": preferences})
         plan_id = uuid.uuid4().hex
