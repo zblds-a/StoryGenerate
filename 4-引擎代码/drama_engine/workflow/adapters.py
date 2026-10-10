@@ -427,7 +427,8 @@ class ApprovedPlanLLMExecutor:
                     f"对白与旁白的文字总量（含标点，按 Unicode 字符计）必须在{min_chars}至{max_chars}字，"
                     f"尽量接近{ideal_chars}字；音效、音乐、动作说明不计入这个字数。"
                     "每个 major_beat 都要在场景中可辨认地实现；请写足适配时长的对白与旁白。"
-                    "dialogue 行必须填写 speaker_role_id；narration 行无需填写。"
+                    f"dialogue 的 speaker_role_id 只能使用以下获批角色ID之一：{sorted(approved_role_ids)}。"
+                    "不能使用未列出的ID；narration 行无需填写 speaker_role_id。"
                 ),
             }, ensure_ascii=False)
             draft = None
@@ -437,6 +438,7 @@ class ApprovedPlanLLMExecutor:
             approved_role_ids.update(role.role_id for role in preview.plan.fictional_voice_roles)
             # Plan-generated portrayals are also approved (when no pre-existing characters)
             approved_role_ids.update(p.role_id for p in preview.plan.character_portrayals)
+            portrayal_map = {p.role_id: p.story_name for p in preview.plan.character_portrayals}
             with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="first_draft"):
                 draft = self.provider.complete_structured(
                     resolve_spec("storycraft_episode_writer", tier_map=tier_map), system, user,

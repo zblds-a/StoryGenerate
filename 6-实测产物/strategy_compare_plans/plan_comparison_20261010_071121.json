@@ -1,0 +1,98 @@
+[
+  {
+    "label": "Case1_AUTO",
+    "preferences": {
+      "story_mode": "auto",
+      "content_form": "audio_drama",
+      "genre": "auto",
+      "recipe_id": null,
+      "tone_style": "warm",
+      "audience_band": "18-35",
+      "content_rating": "teen",
+      "target_duration_sec": 180,
+      "target_episodes": 1,
+      "language": "zh-CN",
+      "narration_pov": "auto",
+      "dialogue_density": "medium",
+      "pacing": "normal",
+      "ending_preference": "auto",
+      "theme_keywords": [],
+      "must_include": [],
+      "must_avoid": [],
+      "additional_instructions": ""
+    },
+    "error": "ModelTimeoutError: _ssl.c:990: The handshake operation timed out"
+  },
+  {
+    "label": "Case2_BASELINE_no_recipe",
+    "preferences": {
+      "story_mode": "general",
+      "content_form": "audio_drama",
+      "genre": "auto",
+      "recipe_id": null,
+      "tone_style": "warm",
+      "audience_band": "18-35",
+      "content_rating": "teen",
+      "target_duration_sec": 180,
+      "target_episodes": 1,
+      "language": "zh-CN",
+      "narration_pov": "auto",
+      "dialogue_density": "medium",
+      "pacing": "normal",
+      "ending_preference": "auto",
+      "theme_keywords": [],
+      "must_include": [],
+      "must_avoid": [],
+      "additional_instructions": ""
+    },
+    "error": "ModelTimeoutError: timed out"
+  },
+  {
+    "label": "Case3_R4_family_revenge",
+    "preferences": {
+      "story_mode": "general",
+      "content_form": "audio_drama",
+      "genre": "G01",
+      "recipe_id": "R4",
+      "tone_style": "warm",
+      "audience_band": "18-35",
+      "content_rating": "teen",
+      "target_duration_sec": 180,
+      "target_episodes": 1,
+      "language": "zh-CN",
+      "narration_pov": "auto",
+      "dialogue_density": "medium",
+      "pacing": "normal",
+      "ending_preference": "auto",
+      "theme_keywords": [],
+      "must_include": [],
+      "must_avoid": [],
+      "additional_instructions": ""
+    },
+    "error": "ModelUnavailableError: [Errno 11001] getaddrinfo failed"
+  },
+  {
+    "label": "Case4_R5_healing_romance",
+    "preferences": {
+      "story_mode": "general",
+      "content_form": "audio_drama",
+      "genre": "G02",
+      "recipe_id": "R5",
+      "tone_style": "warm",
+      "audience_band": "18-35",
+      "content_rating": "teen",
+      "target_duration_sec": 180,
+      "target_episodes": 1,
+      "language": "zh-CN",
+      "narration_pov": "auto",
+      "dialogue_density": "medium",
+      "pacing": "normal",
+      "ending_preference": "auto",
+      "theme_keywords": [],
+      "must_include": [],
+      "must_avoid": [],
+      "additional_instructions": ""
+    },
+    "error": "ModelUnavailableError: [Errno 11001] getaddrinfo failed"
+  }
+]

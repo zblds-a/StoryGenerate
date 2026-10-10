@@ -1,0 +1,18 @@
+[
+  {
+    "label": "AUTO",
+    "error": "HTTP 401"
+  },
+  {
+    "label": "R4_family",
+    "error": "HTTP 401"
+  },
+  {
+    "label": "R5_healing",
+    "error": "HTTP 401"
+  },
+  {
+    "label": "R3_business",
+    "error": "HTTP 401"
+  }
+]
