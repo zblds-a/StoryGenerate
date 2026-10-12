@@ -531,6 +531,7 @@ class ApprovedPlanLLMExecutor:
             story_mode=prefs.story_mode,
             character_snapshot=preview.character_snapshots,
             character_portrayals=[p.model_dump(mode="json") for p in preview.plan.character_portrayals],
+            fictional_voice_roles=[v.model_dump(mode="json") for v in preview.plan.fictional_voice_roles],
             outline=preview.plan, episodes=episodes,
             rule_versions=preview.rule_versions,
             continuity_state={

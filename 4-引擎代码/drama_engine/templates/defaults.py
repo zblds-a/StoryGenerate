@@ -54,7 +54,7 @@ GENERAL_THREE_ACT = StoryTemplateSpec(
     recommended_characters=4,
     tone_hints=["自然", "真实", "克制"],
     ending_guidance="closed",
-    defaults={"target_duration_sec": 180, "default_recipe": "R4"},
+    defaults={"target_duration_sec": 180},
 )
 
 

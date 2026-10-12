@@ -67,7 +67,11 @@ def _load_json_templates() -> list[StoryTemplateSpec]:
 
 
 def _token_stats(call_history: list) -> dict:
-    """Extract token stats from call history (flat structure)."""
+    """Extract token stats from call history (flat structure).
+    
+    NOTE: completion_tokens already includes reasoning_tokens per OpenAI API spec.
+    We report them separately for visibility but do NOT add them to total_tokens.
+    """
     total_in = 0
     total_out = 0
     total_reason = 0
@@ -80,9 +84,9 @@ def _token_stats(call_history: list) -> dict:
     return {
         "prompt_tokens": total_in,
         "completion_tokens": total_out,
-        "reasoning_tokens": total_reason,
+        "reasoning_tokens": total_reason,  # already in completion_tokens
         "cache_read_tokens": total_cache,
-        "total_tokens": total_in + total_out + total_reason,
+        "total_tokens": total_in + total_out,  # NOT +reasoning (already included)
         "llm_calls": len(call_history),
     }
 

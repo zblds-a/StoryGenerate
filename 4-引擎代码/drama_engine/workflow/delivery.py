@@ -73,6 +73,28 @@ def build_character_role_map(delivery: StoryDelivery) -> dict[str, dict[str, Any
             role_map[rid]["speech_style"] = p.get("speech_style") or role_map[rid].get("speech_style", "")
             role_map[rid]["relationship_stance"] = p.get("relationship_stance", "")
 
+    # From fictional voice roles (recording / broadcast / telephone voices)
+    for v in getattr(delivery, "fictional_voice_roles", []) or []:
+        rid = v.get("role_id", "")
+        if not rid:
+            continue
+        medium = v.get("medium", "")
+        cue = medium if medium != "live" else None
+        role_map[rid] = {
+            "role_id": rid,
+            "character_id": rid,
+            "performer_id": v.get("performer_id", rid),
+            "story_name": v.get("story_name", rid),
+            "canon_name": v.get("story_name", rid),
+            "immutable_facts": [],
+            "goal": v.get("dramatic_purpose", ""),
+            "motivation": "",
+            "fear": "",
+            "speech_style": f"[{medium}]" if medium else "",
+            "source": "fictional_voice_role",
+            "audio_cue": cue,
+        }
+
     # Ensure narrator is always present for narration lines
     if "narrator" not in role_map:
         role_map["narrator"] = {

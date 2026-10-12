@@ -449,6 +449,10 @@ class StoryDelivery(WorkflowModel):
         default_factory=list,
         description="Plan-generated character portrayals: role_id→story_name, goal, avoidance, speech_style, relationship_stance",
     )
+    fictional_voice_roles: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="Non-toy voice roles from Plan: recording, broadcast, telephone voices with role_id, story_name, performer_id, medium, dramatic_purpose",
+    )
     outline: PlanContent
     episodes: list[EpisodeDelivery] = Field(default_factory=list)
     continuity_state: dict[str, Any] = Field(default_factory=dict)
