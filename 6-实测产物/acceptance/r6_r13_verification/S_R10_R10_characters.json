@@ -1,0 +1,56 @@
+{
+  "lin_mo": {
+    "role_id": "lin_mo",
+    "character_id": "lin_mo",
+    "performer_id": "lin_mo",
+    "story_name": "林默",
+    "canon_name": "林默",
+    "immutable_facts": [],
+    "goal": "查明同事们隐瞒的关于自己人生的秘密，弄清自己是否面临绝症或被贪污赔偿。",
+    "motivation": "",
+    "fear": "害怕成为别人的负担，抗拒接受他人巨大的牺牲。",
+    "speech_style": "语速较快，带着打工人的疲惫与防备；受压时声音发紧，习惯用反问句掩饰慌乱。",
+    "relationship_stance": "对主管老赵表面敬畏实则防备，对小雅等同事保持距离，但在得知真相后转为深深的感激与羁绊。",
+    "source": "character_portrayal"
+  },
+  "lao_zhao": {
+    "role_id": "lao_zhao",
+    "character_id": "lao_zhao",
+    "performer_id": "lao_zhao",
+    "story_name": "老赵",
+    "canon_name": "老赵",
+    "immutable_facts": [],
+    "goal": "隐瞒筹集手术费的真相，逼迫林默接受“公司赔偿”并安心去做脊椎手术。",
+    "motivation": "",
+    "fear": "害怕林默因为内疚而放弃治疗，刻意用冷酷的职场面具掩饰关心。",
+    "speech_style": "简短、生硬、不带感情色彩的祈使句；内心独白时则充满焦急与无奈。",
+    "relationship_stance": "表面是严厉苛刻的主管，实则是如父兄般默默扛下责任的保护者。",
+    "source": "character_portrayal"
+  },
+  "xiao_ya": {
+    "role_id": "xiao_ya",
+    "character_id": "xiao_ya",
+    "performer_id": "xiao_ya",
+    "story_name": "小雅",
+    "canon_name": "小雅",
+    "immutable_facts": [],
+    "goal": "配合老赵演戏，在林默面前维持日常氛围，不让他察觉大家为他抵押房产凑钱的秘密。",
+    "motivation": "",
+    "fear": "害怕林默发现真相后产生心理负担，极力掩饰自己的愧疚与担忧。",
+    "speech_style": "表面语气轻快、活泼，带着职场新人的元气；内心独白时则带着明显的哭腔和颤抖。",
+    "relationship_stance": "被林默在事故中救下的幸存者，对林默充满感激与愧疚，视他为恩人。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

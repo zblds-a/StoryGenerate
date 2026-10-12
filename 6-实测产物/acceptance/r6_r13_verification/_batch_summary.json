@@ -1,0 +1,120 @@
+[
+  {
+    "case": "C1_R6_vs_R11",
+    "recipe": "R6",
+    "status": "ok",
+    "plan_sec": 171,
+    "plan_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\C1_R6_vs_R11_R6_plan.json",
+    "total_sec": 372,
+    "round_trip": "OK",
+    "script_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\C1_R6_vs_R11_R6_story.txt",
+    "utterances": 20,
+    "episodes": 1,
+    "token_in": 0,
+    "token_out": 0,
+    "llm_calls": 8
+  },
+  {
+    "case": "C1_R6_vs_R11",
+    "recipe": "R11",
+    "status": "error",
+    "error": "配方 'R11'（先婚后爱）不支持模式 'mystery'。支持的公式模式：general, viral_drama",
+    "total_sec": 0
+  },
+  {
+    "case": "C2_R7_vs_R13",
+    "recipe": "R7",
+    "status": "ok",
+    "plan_sec": 70,
+    "plan_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\C2_R7_vs_R13_R7_plan.json",
+    "total_sec": 299,
+    "round_trip": "OK",
+    "script_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\C2_R7_vs_R13_R7_story.txt",
+    "utterances": 20,
+    "episodes": 1,
+    "token_in": 0,
+    "token_out": 0,
+    "llm_calls": 8
+  },
+  {
+    "case": "C2_R7_vs_R13",
+    "recipe": "R13",
+    "status": "ok",
+    "plan_sec": 77,
+    "plan_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\C2_R7_vs_R13_R13_plan.json",
+    "total_sec": 366,
+    "round_trip": "OK",
+    "script_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\C2_R7_vs_R13_R13_story.txt",
+    "utterances": 21,
+    "episodes": 1,
+    "token_in": 0,
+    "token_out": 0,
+    "llm_calls": 8
+  },
+  {
+    "case": "C3_R8_vs_R6",
+    "recipe": "R8",
+    "status": "error",
+    "error": "The read operation timed out",
+    "total_sec": 182
+  },
+  {
+    "case": "C3_R8_vs_R6",
+    "recipe": "R6",
+    "status": "error",
+    "error": "The read operation timed out",
+    "total_sec": 182
+  },
+  {
+    "case": "C4_R4_vs_R12",
+    "recipe": "R4",
+    "status": "ok",
+    "plan_sec": 172,
+    "plan_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\C4_R4_vs_R12_R4_plan.json",
+    "total_sec": 435,
+    "round_trip": "OK",
+    "script_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\C4_R4_vs_R12_R4_story.txt",
+    "utterances": 26,
+    "episodes": 1,
+    "token_in": 0,
+    "token_out": 0,
+    "llm_calls": 8
+  },
+  {
+    "case": "C4_R4_vs_R12",
+    "recipe": "R12",
+    "status": "error",
+    "error": "The read operation timed out",
+    "total_sec": 182
+  },
+  {
+    "case": "S_R9",
+    "recipe": "R9",
+    "status": "ok",
+    "plan_sec": 74,
+    "plan_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\S_R9_R9_plan.json",
+    "total_sec": 369,
+    "round_trip": "OK",
+    "script_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\S_R9_R9_story.txt",
+    "utterances": 23,
+    "episodes": 1,
+    "token_in": 0,
+    "token_out": 0,
+    "llm_calls": 7
+  },
+  {
+    "case": "S_R10",
+    "recipe": "R10",
+    "status": "ok",
+    "plan_sec": 161,
+    "plan_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\S_R10_R10_plan.json",
+    "total_sec": 420,
+    "round_trip": "OK",
+    "script_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\acceptance\\r6_r13_verification\\S_R10_R10_story.txt",
+    "utterances": 39,
+    "episodes": 1,
+    "token_in": 0,
+    "token_out": 0,
+    "llm_calls": 8
+  }
+]

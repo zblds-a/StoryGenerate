@@ -1,0 +1,234 @@
+{
+  "plan_id": "b02f38ee73754309b13d6f67bc0c5e52",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "general",
+    "mode_label": "通用故事",
+    "genre_id": "G01",
+    "genre_name": "现实家庭冲突",
+    "genre_mechanism": "憋屈积累→反击打脸",
+    "genre_emotion": "怒→爽→暖",
+    "recipe_id": "R4",
+    "recipe_name": "家庭反击",
+    "recipe_slots": {
+      "A": "被压榨的妻子 / 儿媳",
+      "B": "觉醒 + 实证（账目、证据、外部身份）",
+      "C": "醒悟的丈夫 / 站队的子女",
+      "D": "婆婆、丈夫、小姑——纯身边人，情绪浓度最高",
+      "E": "被偏袒的一方"
+    },
+    "recipe_landing_note": "首选赛道。全对白驱动，零视觉依赖",
+    "recipe_version": "",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "亲密关系中的权力反转：冲突来自家庭内部的压迫与反抗。反派必须是私人化的（婆婆、丈夫、小姑），冲突发生在日常场景中。每一次反击都是界限的重新划定，不是暴力宣泄。",
+    "causal_driver": "憋屈积累 → 觉醒时刻 → 用事实反击。主角的觉醒是因果链的起点，实证（账目、证据、外部身份）是反击的武器。冲突升级来自反派的不甘与反扑。",
+    "ending_strategy": "关系重新定义，而非简单的'赢'。结局展示新的家庭平衡状态，可以和解也可以分离，但主角获得了尊重和自主权。不建议强制大团圆。",
+    "tone_guidance": "真实、情绪浓度高、渐进式爽感。核心是'终于等到这一天'的释放感。",
+    "genre_data": {
+      "genre_id": "G01",
+      "name": "现实家庭冲突",
+      "works": "亲家换锁 / 虎妈驾到 / 老公的工资婆婆的账",
+      "emotion": "怒→爽→暖",
+      "mechanism": "憋屈积累→反击打脸",
+      "audio_fit": "very_high",
+      "audio_fit_score": 95,
+      "driver": "纯对白驱动"
+    },
+    "recipe_data": {
+      "id": "R4",
+      "name": "家庭反击",
+      "audio_fit": "very_high",
+      "A": "被压榨的妻子 / 儿媳",
+      "B": "觉醒 + 实证（账目、证据、外部身份）",
+      "C": "醒悟的丈夫 / 站队的子女",
+      "D": "婆婆、丈夫、小姑——纯身边人，情绪浓度最高",
+      "E": "被偏袒的一方",
+      "reference": "亲家换锁我收回婚房 / 虎妈驾到，全家反骨仔乖乖立正 / 老公的工资，婆婆的账",
+      "landing_note": "首选赛道。全对白驱动，零视觉依赖"
+    }
+  },
+  "plan": {
+    "title": "夹层里的配型单",
+    "premise": "离婚冷静期最后一天，妻子在收拾行李时发现了丈夫隐藏的器官捐献卡，揭开了他伪装冷漠逼离婚的残酷真相。",
+    "theme": "亲密关系中的自我牺牲与边界重塑；真正的爱不是替对方做决定，而是共同面对。",
+    "beginning": "林夏收拾行李准备离婚，对周明宇的冷漠感到绝望，决心让他为“出轨”付出代价。",
+    "development": "林夏意外发现器官捐献卡，将之前收集的“出轨”证据与卡片联系起来，逼问周明宇。",
+    "climax": "周明宇坦白自己配型成功，为了绕过伦理审查和妻子的心理负担，故意制造感情破裂假象逼她离婚。",
+    "ending": "林夏拒绝了丈夫单方面的“伟大牺牲”，划掉离婚协议，要求以配偶身份共同面对，重新定义了两人的婚姻边界。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "最后一件行李",
+        "core_goal": "揭示丈夫逼离婚的真实目的，妻子做出拒绝单方面牺牲的选择。",
+        "major_beats": [
+          "[0-3s] 行李箱重重砸在木地板上，拉链刺耳地拉合。林夏冷冷宣告：“字我签了，明天民政局见。”",
+          "[3-10s] 客厅传来游戏音效，周明宇敷衍“放桌上”。林夏在衣柜夹层翻找护照，摸到一个硬纸壳。",
+          "[10-30s] 林夏以为是他转移财产的流水，愤怒撕开信封，掉出的却是“活体器官捐献志愿书”和“配型成功报告”，接收人是林夏。",
+          "[30-120s] 周明宇冲进卧室抢夺卡片。林夏躲开，拿出他“深夜去医院、给陌生账户打钱”的记录，原本以为是出轨铁证，此刻全对上了术前检查和手术押金。",
+          "[120-150s] 周明宇崩溃大吼：“你说过不要家人的肾！我不跟你离婚，伦理委员会怎么批！我不装作嫌弃你，你怎么肯接受陌生人的肾！”",
+          "[150-180s] 林夏拿笔在协议上重重划掉“离婚”二字，拍在他胸口：“想捐肾？以丈夫的身份捐。这婚离不了。”周明宇捂脸泣不成声，行李箱被推倒，衣物散落。"
+        ],
+        "ending": "林夏拒绝了丈夫自以为是的情感绑架，用划掉离婚协议的行动夺回了关系的主导权，两人在泪水中达成了真正的共同面对。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_xia",
+        "story_name": "林夏",
+        "external_goal": "顺利离婚并让“出轨”的丈夫净身出户，摆脱冷漠的婚姻。",
+        "emotional_avoidance": "害怕自己生病成为丈夫的拖累，曾坚决拒绝亲属活体捐献。",
+        "speech_style": "冷静带刺，语速快，受委屈时习惯用反问句和短句掩饰脆弱。",
+        "relationship_stance": "对丈夫的冷漠充满失望与恨意，但潜意识里仍渴望被坚定选择。"
+      },
+      {
+        "role_id": "zhou_mingyu",
+        "story_name": "周明宇",
+        "external_goal": "成功离婚，让妻子以接受“陌生人捐献”的名义接受自己的肾脏。",
+        "emotional_avoidance": "害怕妻子因内疚拒绝手术，害怕面对妻子透析的痛苦，选择用冷漠逃避。",
+        "speech_style": "简短生硬，习惯用不耐烦掩饰关心，被戳穿时会提高音量、语无伦次。",
+        "relationship_stance": "深爱妻子，但采取了极端、自以为是且剥夺对方知情权的方式保护她。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "行李箱砸地、拉链声、纸张撕裂声、笔尖划纸声需清晰放大，作为情绪转折的听觉锚点。",
+      "pacing": "前30秒节奏快、压抑；中段对质时台词短促交锋；150秒后动作放缓，留白给哭泣声和物件倒塌声。"
+    },
+    "continuity_constraints": [
+      "林夏的肾病背景需在台词中自然带出，不可用旁白解释。",
+      "周明宇的“出轨”证据必须在揭晓前作为误导线索出现，且能完美对应术前检查。"
+    ],
+    "change_summary": [
+      "林夏从认定丈夫背叛的愤怒，转变为看透他自我牺牲后的坚定拒绝。",
+      "周明宇从伪装冷漠的掌控者，变回脆弱、被妻子重新接纳的丈夫。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "G01",
+    "recipe_id": "R4",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "54d57221e6d34e68b0ef5c66dd79e3cd",
+      "plan_id": "b02f38ee73754309b13d6f67bc0c5e52",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "0cdb0ebb28f2486680921e3554890ef4",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:48:30.201844+00:00",
+      "status": "timeout",
+      "error": "timeout",
+      "error_code": "MODEL_TIMEOUT",
+      "usage_source": "unavailable",
+      "latency_ms": 90105,
+      "completed_at": "2026-10-12T02:50:00.308061+00:00"
+    },
+    {
+      "principal_id": "local",
+      "request_id": "54d57221e6d34e68b0ef5c66dd79e3cd",
+      "plan_id": "b02f38ee73754309b13d6f67bc0c5e52",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "6e31e288fe7e47a48162b135c401f075",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 2,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:50:01.824510+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4605,
+      "output_tokens": 4775,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3636,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "d3af0e68-e8b6-4f47-b79f-13f7e6737fff",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 80666,
+      "completed_at": "2026-10-12T02:51:22.491058+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "0d00bf14e14f2be6a64ae7a60f7ce9e9ddd49042c2db5c5b4552456d77dd8518",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T02:51:22.491058Z",
+  "updated_at": "2026-10-12T02:51:22.491058Z"
+}

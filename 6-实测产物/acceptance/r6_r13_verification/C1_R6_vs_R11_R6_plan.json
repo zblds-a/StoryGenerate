@@ -1,0 +1,275 @@
+{
+  "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "mystery",
+    "mode_label": "悬疑",
+    "genre_id": "G11",
+    "genre_name": "悬疑推理",
+    "genre_mechanism": "线索层层揭示、认知不断翻转",
+    "genre_emotion": "疑→惊→悟",
+    "recipe_id": "R6",
+    "recipe_name": "悬疑反转",
+    "recipe_slots": {
+      "A": "被卷入事件的普通人/调查者",
+      "B": "一个被忽略的关键物证/证词",
+      "C": "可靠的搭档/技术支援者",
+      "D": "表面和善、实为真凶的身边人",
+      "E": "被误判的无辜者/替罪羊"
+    },
+    "recipe_landing_note": "信息差是核心。关键线索必须以可听形式至少呈现两次。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "信息不对称式冲突：真相被层层掩盖，每一次揭示都推翻前一层认知。冲突来自假象与真相之间的落差，而非武力对抗。反派必须是主角信任的身边人。关键证据必须可听（录音、证词、环境音反差），不依赖视觉。",
+    "causal_driver": "一次意外发现 → 怀疑 → 初查被误导 → 关键证据浮现 → 认知重构 → 全部线索串联。每一步发现都改变主角对局势的判断。观众必须能在最终反转时回听所有伏笔。",
+    "ending_strategy": "真相大白但不一定正义伸张。允许开放式结局（凶手逃脱但主角获得证据），允许反转式结局（你以为的好人不是好人）。禁止机械的'凶手认罪'式收尾。如有系列续集，预留未解线索。",
+    "tone_guidance": "紧张、智性、层层递进。用『已知』的积累推翻『以为』的真相。情感来自认知颠覆，不是煽情对白。",
+    "genre_data": {
+      "genre_id": "G11",
+      "name": "悬疑推理",
+      "works": "消失的她 / 隐秘的角落",
+      "emotion": "疑→惊→悟",
+      "mechanism": "线索层层揭示、认知不断翻转",
+      "audio_fit": "high",
+      "audio_fit_score": 82,
+      "driver": "信息差由台词与声音承载",
+      "default_recipe": "R6",
+      "keywords": [
+        "悬疑",
+        "推理",
+        "破案",
+        "侦探",
+        "线索",
+        "反转",
+        "秘密",
+        "真相",
+        "目击",
+        "失踪"
+      ]
+    },
+    "recipe_data": {
+      "id": "R6",
+      "name": "悬疑反转",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "high",
+      "audio_fit_score": 82,
+      "default_mode": "mystery",
+      "supported_modes": [
+        "mystery",
+        "general",
+        "viral_drama"
+      ],
+      "A": "被卷入事件的普通人/调查者",
+      "B": "一个被忽略的关键物证/证词",
+      "C": "可靠的搭档/技术支援者",
+      "D": "表面和善、实为真凶的身边人",
+      "E": "被误判的无辜者/替罪羊",
+      "reference": "消失的她 / 隐秘的角落",
+      "landing_note": "信息差是核心。关键线索必须以可听形式至少呈现两次。",
+      "conflict_mechanism": "信息不对称式冲突：真相被层层掩盖，每一次揭示都推翻前一层认知。冲突来自假象与真相之间的落差，而非武力对抗。反派必须是主角信任的身边人。关键证据必须可听（录音、证词、环境音反差），不依赖视觉。",
+      "causal_driver": "一次意外发现 → 怀疑 → 初查被误导 → 关键证据浮现 → 认知重构 → 全部线索串联。每一步发现都改变主角对局势的判断。观众必须能在最终反转时回听所有伏笔。",
+      "ending_strategy": "真相大白但不一定正义伸张。允许开放式结局（凶手逃脱但主角获得证据），允许反转式结局（你以为的好人不是好人）。禁止机械的'凶手认罪'式收尾。如有系列续集，预留未解线索。",
+      "tone_guidance": "紧张、智性、层层递进。用『已知』的积累推翻『以为』的真相。情感来自认知颠覆，不是煽情对白。"
+    }
+  },
+  "plan": {
+    "title": "南方的回音",
+    "premise": "退休刑警在整理旧物时，通过一盘二十年前的磁带录音，发现被定性为“畏罪潜逃”的搭档其实是为了救自己的女儿而牺牲，并默默背负了黑锅。",
+    "theme": "真相的重量与守护的温情",
+    "beginning": "老林和小赵在整理旧案卷宗时，意外播放了一盘属于“黑警”老陈的磁带，录音中老陈承认拿钱放人，小赵认为铁证如山。",
+    "development": "老林通过录音背景音的破绽和一张当票，推翻了老陈潜逃的假象，发现老陈当年去了废弃的旧火车站，且当掉了老林遗失的警号。",
+    "climax": "老林拼凑出真相：当年被绑架的人质是老林的女儿，老陈为换人质同归于尽。录音最后老陈嘱托老林不要告诉女儿真相，就说他去了南方。",
+    "ending": "面对是否翻案的选择，老林决定保全老陈的牺牲与女儿的平静，用一句“老陈在南方”为二十年的悬案画上温暖的句号。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "南方的回音",
+        "core_goal": "揭开搭档失踪的真相，完成情感与认知的双重反转。",
+        "major_beats": [
+          "[0-3s] 突发听觉事件：老式磁带机“咔哒”按下，紧接着是一声沉闷的枪响和重物砸在铁轨上的声音。",
+          "[3-10s] 矛盾三要素：小赵惊呼这盘带子为何在“黑警”陈叔的遗物箱底，老林命令小赵把音量调大，继续播放。",
+          "[10-30s] 第一次反转：录音中老陈喘息着说“钱我拿了，人我放了”，小赵叹息铁证如山，老林暴怒拍桌，指出老陈戒烟多年根本不可能有钱买偷渡船票，反驳潜逃定论。",
+          "[30-120s] 中段推进：老林让小赵戴上耳机细听背景音，小赵误以为是码头海浪声，老林指出那是旧火车站排风扇的低频轰鸣；小赵翻出磁带盒底部的半张当票，念出当物是“警号0842”，老林震惊，那是他当年在追捕中遗失的警号。",
+          "[120-150s] 二次反转与真相揭示：老林颤抖着拼凑出真相：当年被绑架的人质是老林的女儿，老陈为了换出女孩，穿上嫌犯外套引开歹徒，在火车站同归于尽；录音最后老陈留下遗言：“林哥，丫头明天高考，别告诉她我死了，就说我去了南方。”",
+          "[150-180s] 人物选择与余韵：小赵哽咽问是否要上报翻案，老林拿出老陈留下的旧打火机“咔哒”点燃，平静地说“案子结了，老陈在南方，活得挺好”，磁带机自动弹起“咔哒”收尾。"
+        ],
+        "ending": "老林选择隐瞒翻案，用打火机点燃香烟，以一句温暖的谎言告慰亡友，磁带机弹起的声音留下悠长余韵。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_jianguo",
+        "story_name": "老林",
+        "external_goal": "查清搭档老陈二十年前“潜逃”的真相，还他清白。",
+        "emotional_avoidance": "回避当年自己办案失误导致女儿被绑架的内疚感。",
+        "speech_style": "简短、威严、受压时习惯用反问句和拍桌子掩饰情绪，语速偏快，结尾常带不容置疑的断句。",
+        "relationship_stance": "对徒弟小赵严厉但护短，对老陈充满愧疚与绝对的信任，不允许任何人诋毁老陈。"
+      },
+      {
+        "role_id": "zhao_ming",
+        "story_name": "小赵",
+        "external_goal": "协助师傅整理旧案卷宗，尽快结案让师傅安心退休。",
+        "emotional_avoidance": "害怕面对警队内部“黑警”丑闻带来的信仰动摇。",
+        "speech_style": "习惯用“师傅”开头，语气带有年轻人的直率，遇到疑点会直接抛出疑问，紧张时语速加快。",
+        "relationship_stance": "敬重老林，但在证据面前会坚持程序正义，与老林产生认知摩擦，最终被老林的情感选择折服。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "chen_yu",
+        "story_name": "老陈",
+        "performer_id": "voice_actor_chen",
+        "medium": "recording",
+        "dramatic_purpose": "通过二十年前的临终录音，揭示替主角顶罪并牺牲的温暖真相，完成情感高潮与认知颠覆。"
+      }
+    ],
+    "mystery_causal_proof": {
+      "actual_event_timeline": "二十年前，老陈在旧火车站与歹徒搏斗同归于尽，牺牲前用随身录音机录下遗言，并将老林遗失的警号当掉作为信物，磁带由线人暗中寄给老林，被老林妻子误作杂物收起，直到今日老林退休整理旧物才修复播放。",
+      "witnessed_event": "老林和小赵现在听到录音，发现背景音不是海浪而是火车站排风扇，且当票当物是老林的警号，从而推翻老陈潜逃的假象。",
+      "actor_opportunity": "老陈在牺牲前几分钟，利用火车站废弃值班室的录音机录下遗言，并在追捕途中将老林掉落的警号当入沿途当铺，换取歹徒线索。",
+      "audible_trace_before_reveal": "录音背景里的“海浪声”其实是排风扇的低频轰鸣，且老陈提到“钱我拿了”时声音带有火车站特有的空旷回音。",
+      "onstage_verification": "小赵用手机调出旧火车站排风扇的音频资料进行比对，频率完全一致；当票上的编号对应老林当年挂失的警号0842。"
+    },
+    "performance_plan": {
+      "sound_design": "磁带机的机械声（咔哒、沙沙声）作为时间转场的锚点；打火机点燃的清脆声作为情感落点；录音部分需做旧处理，加入底噪和空旷回音。",
+      "voice_direction": "老林的台词从最初的威严暴怒，逐渐过渡到颤抖、压抑，最后归于极度平静的沧桑；小赵的情绪从疑惑到震惊再到哽咽；老陈的录音需表现出濒死的虚弱与对搭档的温情。"
+    },
+    "continuity_constraints": [
+      "老陈的警号与老林的警号必须在台词中明确区分，当票上必须是老林的警号0842。",
+      "录音带必须是物理介质（磁带），不能是数字文件，以符合二十年前的时代背景。",
+      "老林的女儿在故事中不直接出场，仅通过台词提及，保持180秒的紧凑感。"
+    ],
+    "change_summary": [
+      "初始状态：老林和小赵认为老陈是畏罪潜逃的黑警，老林试图寻找证据反驳但缺乏实质线索。",
+      "最终状态：老林确认老陈是为救自己女儿而牺牲的英雄，选择隐瞒真相以保全老陈的“南方”谎言和女儿的平静生活。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "G11",
+    "recipe_id": "R6",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "061a18f9008b487da3292e5628f24df7",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:25:08.596369+00:00",
+      "status": "timeout",
+      "error": "timeout",
+      "error_code": "MODEL_TIMEOUT",
+      "usage_source": "unavailable",
+      "latency_ms": 90347,
+      "completed_at": "2026-10-12T02:26:38.944088+00:00"
+    },
+    {
+      "principal_id": "local",
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "3d104815ac38418eafabaf88a4095df9",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 2,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:26:40.452310+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4647,
+      "output_tokens": 5816,
+      "cache_read_tokens": 4608,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4049,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1c829c31-9064-4e19-bbbc-eb574cb65dd9",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 78760,
+      "completed_at": "2026-10-12T02:27:59.213368+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "2db489b5743857bb23fb28bf9fad2d5a85cdd9b83f2d0e3aad6048208fc52cec",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T02:27:59.214380Z",
+  "updated_at": "2026-10-12T02:27:59.214380Z"
+}

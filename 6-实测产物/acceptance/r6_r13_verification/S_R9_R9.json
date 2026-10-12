@@ -1,0 +1,1138 @@
+{
+  "story_id": "9743fa6436d64aa3b46552f837d5b290",
+  "story_version_id": "ac2ecf1824b34e0795970bd8e2376778",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "1ef095fd39544b58b678ae083b55b721",
+  "approved_plan_revision": 1,
+  "title": "蝴蝶牌缝纫机",
+  "summary": "九十年代下岗潮中，女工林素珍拒绝接受抵工资的旧棉被，借走厂里的老缝纫机，用碎布头在夜市拼出一条生路，最终在时代洪流中完成手艺与精神的传承。",
+  "preview_blurb": "厂办的一纸下岗通知和几床旧棉被，逼得女工林素珍在深夜踩响了淘汰的蝴蝶牌缝纫机。当夜市的泥水打湿了拼接童装，一笔突如其来的南方大单，让她决定向命运发起反击。",
+  "tags": [
+    "G13",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [],
+  "character_portrayals": [
+    {
+      "role_id": "lin_suzhen",
+      "story_name": "林素珍",
+      "external_goal": "凑齐女儿的借读费，在市场经济中找到活路。",
+      "emotional_avoidance": "害怕别人看出她的窘迫，拒绝别人的施舍和同情。",
+      "speech_style": "语速快，咬字重，习惯用动作（如剪线头、拍布料）代替犹豫，受压时只说‘我能行’‘别废话’。",
+      "relationship_stance": "对女儿是倾尽所有的保护，对代表体制的王主任是不卑不亢的倔强。"
+    },
+    {
+      "role_id": "wang_zhuren",
+      "story_name": "王主任",
+      "external_goal": "完成厂里的下岗分流指标，安抚工人情绪。",
+      "emotional_avoidance": "避免面对工人们绝望的眼神，用官腔和规定来掩饰内心的无奈。",
+      "speech_style": "习惯用‘大环境’‘政策’‘厂里也有困难’等宏观词汇，语速慢，带着叹息和咳嗽。",
+      "relationship_stance": "对林素珍有愧疚但必须执行规定，是时代政策的传声筒而非个人恶人。"
+    },
+    {
+      "role_id": "xiaoya",
+      "story_name": "小雅",
+      "external_goal": "减轻母亲的负担，想要一件新衣服但不敢开口。",
+      "emotional_avoidance": "避免让母亲觉得自己是个累赘，隐藏学校的收费通知。",
+      "speech_style": "声音轻，懂事得让人心疼，常用‘妈，我不急’‘其实旧衣服也能穿’来安慰母亲。",
+      "relationship_stance": "对母亲是深深的依恋与心疼，是母亲奋斗的核心动力。"
+    }
+  ],
+  "outline": {
+    "title": "蝴蝶牌缝纫机",
+    "premise": "九十年代下岗潮中，女工林素珍拒绝接受抵工资的旧棉被，借走厂里的老缝纫机，用碎布头在夜市拼出一条生路，最终在时代洪流中完成手艺与精神的传承。",
+    "theme": "时代洪流中小人物的坚韧抗争与手艺传承。",
+    "beginning": "林素珍在厂办接到下岗通知，面临女儿借读费和工厂用旧棉被抵薪的双重困境。",
+    "development": "林素珍借走缝纫机，熬夜用废料改制童装，在夜市摆摊遭遇驱赶，却意外被南方批发商看中设计并下达大单。",
+    "climax": "面对大单带来的机器与布料短缺，林素珍重返工厂，决定买下所有废料并正式承包车间机器，向命运发起反击。",
+    "ending": "缝纫机的轰鸣声跨越时空，与现代高定秀场的掌声交织，成年后的女儿道出母亲的手艺与精神已得到传承。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "哒哒作响的时代",
+        "core_goal": "林素珍在下岗绝境中通过缝纫手艺找到生存出路，并接下改变命运的第一笔大单。",
+        "major_beats": [
+          "【0-3s】铁桌被重重拍响，伴随收音机‘国企改革’的电流声，王主任将解除劳动合同书推到林素珍面前。",
+          "【3-10s】王主任表示厂里没钱，只能用库存旧棉被抵工资。林素珍攥着通知书，焦急表示女儿明天必须交借读费。",
+          "【10-30s】王主任劝她认命，林素珍爆发推开棉被，要求借走厂里淘汰的蝴蝶牌缝纫机三个月。伴随音乐断点，转场至深夜急促的缝纫机踏板声。",
+          "【30-120s】林素珍熬夜将旧棉被和碎布头裁剪拼接成流行童装，让小雅试穿。次日夜市，素珍摆摊遭遇管理员驱赶，衣服散落泥地。",
+          "【120-170s】素珍蹲地捡衣服时，南方批发商看中拼接设计，拍下定金要求明早交50件。素珍面临绝境，决定回厂找王主任买下所有废料并长租机器。",
+          "【170-180s】素珍推开车间大门推上电闸，缝纫机马达轰鸣达到情绪顶点。机器声平滑渐变为现代秀场快门声，成年小雅画外音点出传承，平稳收束。"
+        ],
+        "ending": "情感回响式收束。缝纫机声跨越时代，落在现代高定工作室的传承上，不留悬念，余韵悠长。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_suzhen",
+        "story_name": "林素珍",
+        "external_goal": "凑齐女儿的借读费，在市场经济中找到活路。",
+        "emotional_avoidance": "害怕别人看出她的窘迫，拒绝别人的施舍和同情。",
+        "speech_style": "语速快，咬字重，习惯用动作（如剪线头、拍布料）代替犹豫，受压时只说‘我能行’‘别废话’。",
+        "relationship_stance": "对女儿是倾尽所有的保护，对代表体制的王主任是不卑不亢的倔强。"
+      },
+      {
+        "role_id": "wang_zhuren",
+        "story_name": "王主任",
+        "external_goal": "完成厂里的下岗分流指标，安抚工人情绪。",
+        "emotional_avoidance": "避免面对工人们绝望的眼神，用官腔和规定来掩饰内心的无奈。",
+        "speech_style": "习惯用‘大环境’‘政策’‘厂里也有困难’等宏观词汇，语速慢，带着叹息和咳嗽。",
+        "relationship_stance": "对林素珍有愧疚但必须执行规定，是时代政策的传声筒而非个人恶人。"
+      },
+      {
+        "role_id": "xiaoya",
+        "story_name": "小雅",
+        "external_goal": "减轻母亲的负担，想要一件新衣服但不敢开口。",
+        "emotional_avoidance": "避免让母亲觉得自己是个累赘，隐藏学校的收费通知。",
+        "speech_style": "声音轻，懂事得让人心疼，常用‘妈，我不急’‘其实旧衣服也能穿’来安慰母亲。",
+        "relationship_stance": "对母亲是深深的依恋与心疼，是母亲奋斗的核心动力。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "adult_xiaoya",
+        "story_name": "成年小雅",
+        "performer_id": "xiaoya_adult",
+        "medium": "recording",
+        "dramatic_purpose": "在结尾提供时代更迭后的回望，点出传承的主题，形成情感余韵。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "soundscape": "九十年代工厂环境音、老式收音机电流声、蝴蝶牌缝纫机机械踏板与马达声、九十年代夜市嘈杂声、现代时装秀快门与掌声。",
+      "pacing_notes": "前30秒压抑且紧凑，中段夜市戏节奏加快、台词短碎，最后10秒声音蒙太奇需平滑过渡，留足情感呼吸空间。"
+    },
+    "continuity_constraints": [
+      "蝴蝶牌缝纫机作为核心物件，必须贯穿从厂办借出、深夜使用到最终传承的全过程。",
+      "王主任的态度必须保持时代局限下的无奈，不能转变为个人反派。",
+      "小雅的借读费是初始动力，后续大单是生存升级，动机链条不可断裂。"
+    ],
+    "change_summary": [
+      "林素珍从被动接受下岗命运，转变为主动利用手艺在市场中搏杀。",
+      "缝纫机从厂里淘汰的废铁，变成了林素珍养家糊口的武器和最终传承的艺术工具。",
+      "时代背景从九十年代的阵痛期，平滑过渡到现代的文化自信与高定传承。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-dea9f8b1",
+      "index": 1,
+      "title": "哒哒作响的时代",
+      "synopsis": "九十年代下岗潮中，女工林素珍拒绝接受抵工资的旧棉被，借走厂里的老缝纫机，用碎布头在夜市拼出一条生路，最终在时代洪流中完成手艺与精神的传承。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 159,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "scene_index": 1,
+          "title": "厂办：下岗与拒收",
+          "location": "九十年代国营厂办公室",
+          "dramatic_goal": "王主任下达下岗通知并用旧棉被抵薪，林素珍为女儿借读费焦急拒绝，展现时代冲击下的初始困境。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "wang_zhuren",
+              "narrator_id": null,
+              "performer_id": "wang_zhuren",
+              "text": "素珍，解除合同书签了吧。厂里账上真没钱，这几床库存旧棉被，抵你最后三个月工资。",
+              "emotion": "sad",
+              "tone_instruction": "语速放缓，句首带轻微叹息，后半段语气压低显无奈。",
+              "emphasis": [
+                {
+                  "span_text": "旧棉被",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 28,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "三个月工资",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 38,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速慢，带着叹息和无奈；句末‘工资’后留半秒气口，配合桌面拍击余音。",
+              "audio_cue_ref": "sfx_desk_slap_radio_static"
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "王主任，小雅明天必须交借读费，学校不认棉被啊！您再想想办法。",
+              "emotion": "worried",
+              "tone_instruction": "咬字加重，语速加快，前半句急促陈述，后半句尾音上扬转恳求。",
+              "emphasis": [
+                {
+                  "span_text": "明天必须交",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "不认棉被",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "语速快，咬字重，焦急；‘办法’二字气息微颤，句尾不拖音，保持急切停顿。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "wang_zhuren",
+              "narrator_id": null,
+              "performer_id": "wang_zhuren",
+              "text": "大环境就这样，政策摆在这，厂里也有困难，你认命吧。",
+              "emotion": "serious",
+              "tone_instruction": "语气平稳偏冷，前三分句节奏均匀如念稿，最后一句压低嗓音放缓。",
+              "emphasis": [
+                {
+                  "span_text": "政策摆在这",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "认命吧",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "官腔掩饰内心的无奈；逗号处微顿，‘困难’后换气一次，避免情绪外露。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "认命？我一家老小喝西北风吗？这字我不签！",
+              "emotion": "angry",
+              "tone_instruction": "起句短促反问，中段音量推高显愤慨，末句斩钉截铁不留余地。",
+              "emphasis": [
+                {
+                  "span_text": "喝西北风",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "不签",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "爆发，倔强；‘吗’字后急吸一口气，‘签’字咬实后立刻收声，留两秒空白。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "厂办：借走缝纫机",
+          "location": "九十年代国营厂办公室",
+          "dramatic_goal": "林素珍拒绝妥协，主动要求借走淘汰的蝴蝶牌缝纫机，完成从被动接受到主动抗争的转变。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "我不认！棉被我搬走，但车间那台淘汰的蝴蝶牌缝纫机，借我用三个月。我自己找活路。",
+              "emotion": "serious",
+              "tone_instruction": "咬字清晰有力，前半句压低嗓音表决绝，后半句语速稍缓但语气更稳。",
+              "emphasis": [
+                {
+                  "span_text": "我不认",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "借我用三个月",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "坚定，不容置疑；句首“我不认”后留0.2秒气口，接下一句时气息下沉。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "wang_zhuren",
+              "narrator_id": null,
+              "performer_id": "wang_zhuren",
+              "text": "那破机器都快散架了，你借它干嘛？",
+              "emotion": "neutral",
+              "tone_instruction": "语调上扬带疑问，尾音拖长显不解，避免说教感。",
+              "emphasis": [
+                {
+                  "span_text": "快散架了",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "干嘛",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 15,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "疑惑，不解；“干嘛”前微顿半拍，配合轻微摇头的气声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "我能行。别废话，钥匙给我。",
+              "emotion": "serious",
+              "tone_instruction": "语速加快，断句短促，每句结尾干脆收住不留余音。",
+              "emphasis": [
+                {
+                  "span_text": "我能行",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "钥匙给我",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "干脆利落；“别废话”与“钥匙给我”之间无停顿，气息连贯推进。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "wang_zhuren",
+              "narrator_id": null,
+              "performer_id": "wang_zhuren",
+              "text": "唉，你这脾气。钥匙在抽屉，弄坏了算你的。",
+              "emotion": "calm",
+              "tone_instruction": "开头叹气放松喉部肌肉，后半句语气转平，交代事实不带情绪起伏。",
+              "emphasis": [
+                {
+                  "span_text": "钥匙在抽屉",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "算你的",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 19,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "妥协，带点叹息；“唉”字拉长0.3秒后自然换气，接正事时音量降低两度。",
+              "audio_cue_ref": "sfx_drawer_open"
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "谢谢主任，我肯定还您。",
+              "emotion": "calm",
+              "tone_instruction": "咬字饱满，语气平稳落地，重音落在承诺处以显诚意。",
+              "emphasis": [
+                {
+                  "span_text": "谢谢主任",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "肯定还您",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "拿到钥匙后的笃定；“主任”后微顿，吸气后平稳送出后半句，句尾气息收住不飘。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "scene_index": 3,
+          "title": "家中与夜市：熬夜与转机",
+          "location": "林素珍家中 / 九十年代夜市",
+          "dramatic_goal": "林素珍熬夜改制童装，夜市摆摊遭驱赶却意外获得南方大单，面临机器与布料短缺的新挑战。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "深夜的灯光下，剪刀与碎布摩擦，缝纫机踏板踩出急促的节奏。",
+              "emotion": "calm",
+              "tone_instruction": "语速平缓，咬字清晰，尾音微拖营造年代氛围。",
+              "emphasis": [
+                {
+                  "span_text": "缝纫机踏板踩出急促的节奏",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 27,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "平稳，带出年代感；句首留白两秒后起音，句末气息渐弱。",
+              "audio_cue_ref": "sfx_sewing_machine_night"
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "小雅，转个圈。妈把旧棉被和碎布头拼了拼，这新裙子好看不？",
+              "emotion": "tender",
+              "tone_instruction": "前半句轻声呼唤，后半句语气上扬带笑意，尾音稍缓。",
+              "emphasis": [
+                {
+                  "span_text": "这新裙子好看不？",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "疲惫但欣慰；“小雅”后微顿半拍，呼吸略重体现疲惫。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "xiaoya",
+              "narrator_id": null,
+              "performer_id": "xiaoya",
+              "text": "好看。妈，其实旧衣服也能穿，您别熬夜了，我不急的。",
+              "emotion": "sad",
+              "tone_instruction": "音量压低，咬字轻柔，“别熬夜了”处气息微颤。",
+              "emphasis": [
+                {
+                  "span_text": "您别熬夜了",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 19,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音轻，懂事得让人心疼；句首“好看”后自然停顿，整体保持气声包裹。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "xiaoya",
+              "narrator_id": null,
+              "performer_id": "xiaoya",
+              "text": "妈，您手都破了，快贴个创可贴吧。",
+              "emotion": "worried",
+              "tone_instruction": "语气急促上扬，强调动作指令，尾音收短。",
+              "emphasis": [
+                {
+                  "span_text": "快贴个创可贴吧",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 15,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "关切；“妈”字后换气一次，语流连贯不拖沓。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "妈不累。这拼色洋气着呢，明天妈去夜市卖了，给你交学费。",
+              "emotion": "reassuring",
+              "tone_instruction": "前两句刻意拔高音调掩饰虚弱，后半句语气笃定下沉。",
+              "emphasis": [
+                {
+                  "span_text": "给你交学费",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "掩饰疲惫，安慰女儿；“妈不累”后微顿，吸气声极轻，避免破功。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "哎！别踩！我的衣服！别踢摊子，我这就收！",
+              "emotion": "fearful",
+              "tone_instruction": "连珠炮式短句，字头咬死，气息急促上提。",
+              "emphasis": [
+                {
+                  "span_text": "别踩！",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "我的衣服！",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 10,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "惊慌，护住衣服；句间不留换气口，直接喷麦式爆发后迅速收声接下一句。",
+              "audio_cue_ref": "sfx_night_market_chaos"
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "老板，您别走啊！您说这碎布拼接南方正流行？还要拍定金，明早交五十件？",
+              "emotion": "surprised",
+              "tone_instruction": "前半句挽留语气拉长，后半句语速骤降，逐字确认数字。",
+              "emphasis": [
+                {
+                  "span_text": "明早交五十件？",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 34,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "从焦急转为震惊与确认；“您别走啊”后明显换气，问句尾音上扬但不飘。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "五十件？我家里没那么多料子……行！我接！我回厂里弄！",
+              "emotion": "serious",
+              "tone_instruction": "疑问句尾音微颤，转折处深吸一口气，后续三句一字一顿砸实。",
+              "emphasis": [
+                {
+                  "span_text": "我接！",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "我回厂里弄！",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "咬牙决定，破釜沉舟；“料子……”后闭嘴深吸气两秒，再开口时胸腔共鸣加重。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "scene_index": 4,
+          "title": "车间与秀场：跨越时代的传承",
+          "location": "国营厂车间 / 现代高定秀场",
+          "dramatic_goal": "林素珍重返车间推上电闸，缝纫机声跨越时空，成年小雅点出手艺与精神的传承，平稳收束。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林素珍推开车间大门，一把推上电闸。",
+              "emotion": "serious",
+              "tone_instruction": "语速加快，咬字干脆，突出“推开”与“推上”的连贯动作感。",
+              "emphasis": [
+                {
+                  "span_text": "一把推上电闸",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 16,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "动作感强；句末留0.3秒空白，衔接沉重开关声。",
+              "audio_cue_ref": "sfx_heavy_door_switch"
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_suzhen",
+              "narrator_id": null,
+              "performer_id": "lin_suzhen",
+              "text": "王主任，废料我全买了，机器我长租！这单我拼了！",
+              "emotion": "serious",
+              "tone_instruction": "前半句压低嗓音陈述事实，后两句逐渐拔高音量，尾音收短显决绝。",
+              "emphasis": [
+                {
+                  "span_text": "全买了",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "拼了",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "情绪顶点，充满力量；“王主任”后微顿0.2秒，深吸气后连续抛出后三短句。",
+              "audio_cue_ref": "sfx_machine_roar"
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "缝纫机马达的轰鸣声震耳欲聋，随后平滑渐变为现代秀场的快门与掌声。",
+              "emotion": "neutral",
+              "tone_instruction": "语气平稳客观，“震耳欲聋”处略微加重拖长音节，“平滑渐变”处语流放缓。",
+              "emphasis": [
+                {
+                  "span_text": "震耳欲聋",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "平滑渐变",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 20,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音蒙太奇过渡；句中“随后”前停顿0.5秒，配合音效淡入淡出节奏。",
+              "audio_cue_ref": "sfx_transition_to_runway"
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "adult_xiaoya",
+              "narrator_id": null,
+              "performer_id": "xiaoya_adult",
+              "text": "那台蝴蝶牌缝纫机，后来成了我工作室的镇店之宝。",
+              "emotion": "tender",
+              "tone_instruction": "音色放柔，语速舒缓，像在对老友轻声讲述往事。",
+              "emphasis": [
+                {
+                  "span_text": "蝴蝶牌缝纫机",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "镇店之宝",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "成熟，温暖，回忆；“那台”后轻吸一口气，句尾自然降调不刻意收尾。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "adult_xiaoya",
+              "narrator_id": null,
+              "performer_id": "xiaoya_adult",
+              "text": "时代淘汰了旧机器，但妈妈踩出的每一道线，都缝进了我的高定秀场。",
+              "emotion": "tender",
+              "tone_instruction": "“但”字转折处气息上扬带出自豪，后半句咬字清晰坚定，传递传承感。",
+              "emphasis": [
+                {
+                  "span_text": "妈妈踩出的每一道线",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 19,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "高定秀场",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 30,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "自豪，深情；“但”字前微顿0.3秒，换气后以胸腔共鸣支撑后半句。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "adult_xiaoya",
+              "narrator_id": null,
+              "performer_id": "xiaoya_adult",
+              "text": "那是她留给我的，最珍贵的底气。",
+              "emotion": "calm",
+              "tone_instruction": "音量渐弱，字距拉宽，尾音自然消散不拖沓。",
+              "emphasis": [
+                {
+                  "span_text": "最珍贵",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "底气",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "余韵悠长，平稳收束；“留给我的”后停顿0.8秒，句末留白2秒供音乐铺底。",
+              "audio_cue_ref": "music_warm_outro"
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林素珍在下岗绝境中拒绝妥协，借走废旧缝纫机熬夜改制童装。夜市摆摊虽遭驱赶，却意外凭借拼接设计获得南方批发商的五十件大单。为完成订单，她重返工厂买下废料并长租机器，在缝纫机的轰鸣中开启了跨越时代的手艺传承。",
+      "ending_hook": "缝纫机的轰鸣声平滑渐变为现代高定秀场的快门与掌声，成年后的女儿道出母亲的手艺与精神已化作最珍贵的底气。",
+      "fact_delta": [
+        {
+          "fact": "林素珍正式下岗，拒绝旧棉被抵薪，借走蝴蝶牌缝纫机。"
+        },
+        {
+          "fact": "林素珍用废料拼接的童装在夜市获得南方批发商五十件的大单及定金。"
+        },
+        {
+          "fact": "林素珍决定买下工厂所有废料并长租机器。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林素珍与王主任",
+          "change": "从被动接受安排的上下级，转变为主动承包废料与机器的合作与租赁关系。"
+        },
+        {
+          "relationship": "林素珍与小雅",
+          "change": "母女羁绊加深，小雅的懂事成为林素珍拼搏的核心动力，林素珍的手艺成为女儿未来的底气。"
+        }
+      ],
+      "new_open_threads": [
+        "五十件大单的交付：林素珍如何在一夜之间用废料和旧机器赶制出五十件童装。"
+      ],
+      "closed_threads": [
+        "借读费危机：通过夜市摆摊和接下大单，小雅的借读费问题得到解决。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "林素珍正式下岗，拒绝旧棉被抵薪，借走蝴蝶牌缝纫机。"
+      },
+      {
+        "fact": "林素珍用废料拼接的童装在夜市获得南方批发商五十件的大单及定金。"
+      },
+      {
+        "fact": "林素珍决定买下工厂所有废料并长租机器。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林素珍与王主任",
+        "change": "从被动接受安排的上下级，转变为主动承包废料与机器的合作与租赁关系。"
+      },
+      {
+        "relationship": "林素珍与小雅",
+        "change": "母女羁绊加深，小雅的懂事成为林素珍拼搏的核心动力，林素珍的手艺成为女儿未来的底气。"
+      }
+    ],
+    "unresolved_threads": [
+      "五十件大单的交付：林素珍如何在一夜之间用废料和旧机器赶制出五十件童装。"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 23,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "delivery_format_version": "1.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "15d9e0cdc6ed46d7be504af821cd9bd5",
+      "plan_id": "1ef095fd39544b58b678ae083b55b721",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "97614be0a865469eaf3821dcad2296ba",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:58:47.830200+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4638,
+      "output_tokens": 4718,
+      "cache_read_tokens": 1152,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3254,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "0231e1c3-6d16-47c8-9011-78671ab8bddd",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 74449,
+      "completed_at": "2026-10-12T03:00:02.280575+00:00"
+    },
+    {
+      "request_id": "15d9e0cdc6ed46d7be504af821cd9bd5",
+      "job_id": "76f86e4a8221430e8dbd1ed450f44316",
+      "plan_id": "1ef095fd39544b58b678ae083b55b721",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "0c528326f95f4178a03ed4838ababfd8",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:00:02.303400+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 6683,
+      "output_tokens": 9450,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 6799,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "e65ab185-b0b3-41ae-9537-17bc39e92921",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 106775,
+      "completed_at": "2026-10-12T03:01:49.080446+00:00"
+    },
+    {
+      "request_id": "15d9e0cdc6ed46d7be504af821cd9bd5",
+      "job_id": "76f86e4a8221430e8dbd1ed450f44316",
+      "plan_id": "1ef095fd39544b58b678ae083b55b721",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "c32c6f047ff64247955a2b6fc64a91ff",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:01:49.085638+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2179,
+      "output_tokens": 6877,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 6012,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "f4116aad-aebb-4710-8b13-8b95c01557bd",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 44241,
+      "completed_at": "2026-10-12T03:02:33.326844+00:00"
+    },
+    {
+      "request_id": "15d9e0cdc6ed46d7be504af821cd9bd5",
+      "job_id": "76f86e4a8221430e8dbd1ed450f44316",
+      "plan_id": "1ef095fd39544b58b678ae083b55b721",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "7974a7e7da5844d7bc47f1801bfbc7ca",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:02:33.330843+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2235,
+      "output_tokens": 6330,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5271,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "b56cf259-151f-4c90-b25c-267e673e6f3b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 42724,
+      "completed_at": "2026-10-12T03:03:16.055286+00:00"
+    },
+    {
+      "request_id": "15d9e0cdc6ed46d7be504af821cd9bd5",
+      "job_id": "76f86e4a8221430e8dbd1ed450f44316",
+      "plan_id": "1ef095fd39544b58b678ae083b55b721",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "a950e60537bc423ebcd4554e4d208aaa",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:03:16.061285+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2574,
+      "output_tokens": 5213,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4048,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "889d4e04-19d1-437b-b2bb-df7fb1dcf949",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 34843,
+      "completed_at": "2026-10-12T03:03:50.904883+00:00"
+    },
+    {
+      "request_id": "15d9e0cdc6ed46d7be504af821cd9bd5",
+      "job_id": "76f86e4a8221430e8dbd1ed450f44316",
+      "plan_id": "1ef095fd39544b58b678ae083b55b721",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "7e01e6a43ca04978877c9034ef0f0ca2",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:03:50.909880+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2366,
+      "output_tokens": 7544,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 6304,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "4ac15ccc-dba6-431a-bfe1-74c9efbc42c8",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 47960,
+      "completed_at": "2026-10-12T03:04:38.870182+00:00"
+    },
+    {
+      "request_id": "15d9e0cdc6ed46d7be504af821cd9bd5",
+      "job_id": "76f86e4a8221430e8dbd1ed450f44316",
+      "plan_id": "1ef095fd39544b58b678ae083b55b721",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "c9498f4b13804b76b402ae6bb507ecf4",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:04:38.875696+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 8091,
+      "output_tokens": 2408,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2366,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "4bbd0107-68ba-4fa7-afb8-8c1c81282d5e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 18195,
+      "completed_at": "2026-10-12T03:04:57.070472+00:00"
+    }
+  ],
+  "created_at": "2026-10-12T03:04:38.871184Z"
+}

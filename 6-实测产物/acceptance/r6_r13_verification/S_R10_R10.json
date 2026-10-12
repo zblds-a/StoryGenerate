@@ -1,0 +1,1427 @@
+{
+  "story_id": "89c28888b954454babfefaeb10ee4408",
+  "story_version_id": "786adbd676be42b9a7afc03c4bd9f4c9",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "c194b99df15c41509cc8f489579b2e10",
+  "approved_plan_revision": 1,
+  "title": "心跳回声",
+  "summary": "普通上班族在地铁事故后获得读心能力，却因能力代价和同事们隐瞒的“秘密”陷入猜忌，最终发现残酷表象下温暖的真相。",
+  "preview_blurb": "地铁事故后，林默意外获得了听见他人心声的能力。当他听到主管要开除自己并私吞赔偿金时，一场关于猜忌与隐瞒的职场风暴悄然降临。",
+  "tags": [
+    "G12",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "viral_drama",
+  "content_form": "audio_drama",
+  "character_snapshot": [],
+  "character_portrayals": [
+    {
+      "role_id": "lin_mo",
+      "story_name": "林默",
+      "external_goal": "查明同事们隐瞒的关于自己人生的秘密，弄清自己是否面临绝症或被贪污赔偿。",
+      "emotional_avoidance": "害怕成为别人的负担，抗拒接受他人巨大的牺牲。",
+      "speech_style": "语速较快，带着打工人的疲惫与防备；受压时声音发紧，习惯用反问句掩饰慌乱。",
+      "relationship_stance": "对主管老赵表面敬畏实则防备，对小雅等同事保持距离，但在得知真相后转为深深的感激与羁绊。"
+    },
+    {
+      "role_id": "lao_zhao",
+      "story_name": "老赵",
+      "external_goal": "隐瞒筹集手术费的真相，逼迫林默接受“公司赔偿”并安心去做脊椎手术。",
+      "emotional_avoidance": "害怕林默因为内疚而放弃治疗，刻意用冷酷的职场面具掩饰关心。",
+      "speech_style": "简短、生硬、不带感情色彩的祈使句；内心独白时则充满焦急与无奈。",
+      "relationship_stance": "表面是严厉苛刻的主管，实则是如父兄般默默扛下责任的保护者。"
+    },
+    {
+      "role_id": "xiao_ya",
+      "story_name": "小雅",
+      "external_goal": "配合老赵演戏，在林默面前维持日常氛围，不让他察觉大家为他抵押房产凑钱的秘密。",
+      "emotional_avoidance": "害怕林默发现真相后产生心理负担，极力掩饰自己的愧疚与担忧。",
+      "speech_style": "表面语气轻快、活泼，带着职场新人的元气；内心独白时则带着明显的哭腔和颤抖。",
+      "relationship_stance": "被林默在事故中救下的幸存者，对林默充满感激与愧疚，视他为恩人。"
+    }
+  ],
+  "outline": {
+    "title": "心跳回声",
+    "premise": "普通上班族在地铁事故后获得读心能力，却因能力代价和同事们隐瞒的“秘密”陷入猜忌，最终发现残酷表象下温暖的真相。",
+    "theme": "能力的代价与人性的温度；真正的救赎不是超能力，而是人与人之间的羁绊。",
+    "beginning": "地铁事故后，林默带着读心能力回到公司，却听到主管老赵要开除他，并隐瞒了一笔钱。",
+    "development": "林默不顾流鼻血和头痛的代价，强行读取同事小雅等人的内心，拼凑出大家隐瞒他“绝症”的错觉，陷入绝望与猜忌。",
+    "climax": "林默拼着彻底失聪的风险，最后一次读取老赵的内心，发现大家隐瞒的秘密其实是他为救人受重伤，大家凑钱骗他是保险理赔，只为让他安心手术。",
+    "ending": "林默选择接受手术和大家的好意，没有揭穿秘密。在平稳的地铁声中，他接纳了能力的代价与平凡人生的温暖。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "心跳回声",
+        "core_goal": "揭示同事们隐瞒的秘密，完成林默从猜忌到接受的情感转变。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：地铁急刹车的刺耳金属摩擦声突变为主角剧烈的心跳与高频耳鸣（能力触发音效），老赵冷酷的声音切入：‘林默，你明天不用来了。’",
+          "[3-15s] 矛盾展开：林默在工位上捂着剧痛的头，伴随沉重的喘息。他发动读心能力（环境音瞬间抽空，只剩混响），听到老赵内心：‘那笔钱绝对不能让他知道来源，不然他死也不会要。’",
+          "[15-30s] 第一次反转：林默以为老赵贪污了他的事故赔偿金，愤怒拍桌质问。老赵否认并赶他走。林默强行读取旁边小雅的心，听到小雅内心哭诉：‘赵哥把房子都抵押了，林默要是知道真相，肯定不肯做手术。’林默鼻腔一热，滴血声响起（代价显现）。",
+          "[30-120s] 中段推进：林默躲进洗手间，洗掉鼻血，耳鸣声持续。他陷入恐慌，以为同事们隐瞒的是自己得了绝症。他试图再次读心门外经过的同事，但头痛让他几乎晕厥（心跳声杂乱、视线模糊的音效）。他听到碎片化的内心声音：‘瞒住他’‘手术成功率’‘不能让他有负担’。",
+          "[120-155s] 升级与真相揭示：林默冲出洗手间，抓住正准备离开的老赵，不顾耳朵流血的风险，最后一次深度读心。老赵完整的内心声音浮现：‘林默在地铁里为了救小雅被砸伤了脊椎，医生说手术成功率只有30%。我们凑了这笔钱，骗他是公司保险赔的，就是怕他内疚不敢上手术台。’",
+          "[155-180s] 结局收束：能力解除，环境音恢复。林默没有揭穿，而是用纸巾擦去鼻血，笑着对老赵说：‘赵哥，我同意做手术了。’老赵愣住，声音哽咽。林默轻声说‘谢谢你们’。伴随温暖的钢琴声和地铁平稳运行的音效（呼应开头），故事温暖收束。"
+        ],
+        "ending": "林默选择接受手术，没有揭穿同事们的善意谎言。在平稳的地铁运行声中，他接纳了能力的代价与平凡人生的温暖。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_mo",
+        "story_name": "林默",
+        "external_goal": "查明同事们隐瞒的关于自己人生的秘密，弄清自己是否面临绝症或被贪污赔偿。",
+        "emotional_avoidance": "害怕成为别人的负担，抗拒接受他人巨大的牺牲。",
+        "speech_style": "语速较快，带着打工人的疲惫与防备；受压时声音发紧，习惯用反问句掩饰慌乱。",
+        "relationship_stance": "对主管老赵表面敬畏实则防备，对小雅等同事保持距离，但在得知真相后转为深深的感激与羁绊。"
+      },
+      {
+        "role_id": "lao_zhao",
+        "story_name": "老赵",
+        "external_goal": "隐瞒筹集手术费的真相，逼迫林默接受“公司赔偿”并安心去做脊椎手术。",
+        "emotional_avoidance": "害怕林默因为内疚而放弃治疗，刻意用冷酷的职场面具掩饰关心。",
+        "speech_style": "简短、生硬、不带感情色彩的祈使句；内心独白时则充满焦急与无奈。",
+        "relationship_stance": "表面是严厉苛刻的主管，实则是如父兄般默默扛下责任的保护者。"
+      },
+      {
+        "role_id": "xiao_ya",
+        "story_name": "小雅",
+        "external_goal": "配合老赵演戏，在林默面前维持日常氛围，不让他察觉大家为他抵押房产凑钱的秘密。",
+        "emotional_avoidance": "害怕林默发现真相后产生心理负担，极力掩饰自己的愧疚与担忧。",
+        "speech_style": "表面语气轻快、活泼，带着职场新人的元气；内心独白时则带着明显的哭腔和颤抖。",
+        "relationship_stance": "被林默在事故中救下的幸存者，对林默充满感激与愧疚，视他为恩人。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "核心听觉资产是‘读心触发音效’：高频耳鸣+心跳重音，随后环境音瞬间抽空，内心声音加混响。‘代价音效’包括：沉重的喘息、纸巾擦拭鼻血的摩擦声、持续的耳鸣底噪。开头地铁事故用刺耳金属摩擦声，结尾用平稳柔和的地铁运行声形成对比。",
+      "acting_notes": "林默的配音需要体现从疲惫、猜忌、崩溃到最终释怀的层次，读心时的痛苦要通过气息和咬牙声表现。老赵表面冷酷，内心独白时要透出疲惫和深情。小雅表面活泼，内心独白要带哭腔。"
+    },
+    "continuity_constraints": [
+      "读心能力的触发和解除必须严格伴随环境音的抽空与恢复，不能靠旁白解释。",
+      "每次使用读心能力后，必须出现流鼻血或头痛的代价音效，且代价随使用次数加重。",
+      "最后15%（153-180秒）必须完成情感收束，不得出现新危机或戛然而止。"
+    ],
+    "change_summary": [
+      "将用户指令中的‘改变他人生的秘密’从悬疑/暗黑向调整为温暖治愈向，以符合tone_style(warm)和ending_contract的要求。",
+      "将beat_sheet中S6的‘戛然而止’规则覆盖为ending_contract要求的‘情感收束’，确保故事完整闭环。",
+      "将视觉化的读心能力转化为‘环境音抽空+混响+耳鸣’的听觉设计，符合广播剧媒介特性。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-b8efa6df",
+      "index": 1,
+      "title": "心跳回声",
+      "synopsis": "普通上班族林默在地铁事故后获得读心能力，却因能力代价和同事们隐瞒的“秘密”陷入猜忌。在拼着失聪风险最后一次读心后，他发现残酷表象下温暖的真相，最终选择接纳平凡人生的羁绊。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 170,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "scene_index": 1,
+          "title": "第一幕：刺耳的辞退",
+          "location": "公司办公区",
+          "dramatic_goal": "建立读心能力与代价的听觉规则，抛出老赵开除林默及隐瞒资金的悬念。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "地铁急刹车刺耳金属摩擦声，突变为主角剧烈心跳与高频耳鸣。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "地铁事故后，我总能听到别人的心声，代价是头痛欲裂。",
+              "emotion": "serious",
+              "tone_instruction": "语速平稳偏沉，交代设定保持客观叙述感，“代价”处气息微沉。",
+              "emphasis": [
+                {
+                  "span_text": "代价是头痛欲裂",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 24,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首留0.5秒环境底噪过渡，尾音自然收束不拖沓。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "林默，交接一下手头的工作，你明天不用来了。",
+              "emotion": "serious",
+              "tone_instruction": "语气冷硬干脆，“林默”后微顿，后半句断句明确不留商量余地。",
+              "emphasis": [
+                {
+                  "span_text": "明天不用来了",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 20,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“林默”后停顿0.3秒，重读“不用”二字，句末气息切断。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "赵哥，我地铁事故刚出院，连赔偿金都没发，为什么开除我？",
+              "emotion": "angry",
+              "tone_instruction": "语速加快带出质问感，“赵哥”称呼略带颤抖与不甘，尾音上扬加重怀疑。",
+              "emphasis": [
+                {
+                  "span_text": "为什么开除我",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "吸气后直接开口，句末“我”字咬字加重并伴随轻微气声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "公司不养闲人，你的岗位已经有人顶了。",
+              "emotion": "serious",
+              "tone_instruction": "语气平淡但强硬，陈述事实不带情绪起伏，切断对方辩驳空间。",
+              "emphasis": [
+                {
+                  "span_text": "已经有人顶了",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 17,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“闲人”后微顿，后半句语流连贯不换气，尾音果断落下。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "你！",
+              "emotion": "angry",
+              "tone_instruction": "短促爆发，仅用单字表达难以置信与愤怒，气息上提。",
+              "emphasis": [
+                {
+                  "span_text": "你",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 1,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "无前置停顿，直接喷口而出，尾音迅速截断。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "环境音瞬间抽空，只剩混响。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "那笔钱绝对不能让他知道来源，不然他死也不会要。",
+              "emotion": "worried",
+              "tone_instruction": "压低嗓音模拟内心独白，语速放缓，重读“绝对”与“死也不会要”。",
+              "emphasis": [
+                {
+                  "span_text": "绝对不能让他知道来源",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 13,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "内心混响；句首加轻微胸腔共鸣混响处理，每分句间留0.2秒呼吸间隙。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l9",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "环境音恢复。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l10",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "钱？你动了我的事故赔偿金？",
+              "emotion": "surprised",
+              "tone_instruction": "先以疑问语气试探确认，第二句语速骤升带出被背叛的怒意，咬字清晰用力。",
+              "emphasis": [
+                {
+                  "span_text": "动了我的事故赔偿金",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 12,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“钱？”字拉长并上扬，间隔0.4秒后接第二句，句末“金”字重咬后急停。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "第二幕：滴血的猜忌",
+          "location": "公司办公区",
+          "dramatic_goal": "林默质问老赵并读取小雅内心，发现抵押房产与手术的线索，代价显现。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "赵哥，那是我的救命钱，你凭什么贪污！",
+              "emotion": "angry",
+              "tone_instruction": "前半句压低声音带质问感，后半句“凭什么”突然拔高音量，尾音急促收住。",
+              "emphasis": [
+                {
+                  "span_text": "救命钱",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "贪污",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 17,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿半秒，制造对峙张力；“贪污”后不留气口，直接切入下一句情绪。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "闭嘴！拿着离职单赶紧走，别在这丢人现眼！",
+              "emotion": "angry",
+              "tone_instruction": "“闭嘴”短促爆发，随后语速加快，语气强硬但尾音略带不易察觉的颤抖。",
+              "emphasis": [
+                {
+                  "span_text": "闭嘴",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "赶紧走",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 11,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“闭嘴！”后接0.2秒硬切停顿；“赶紧走”咬字加重，气息推向前方。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "环境音抽空。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "xiao_ya",
+              "narrator_id": null,
+              "performer_id": "xiao_ya",
+              "text": "赵哥把房子都抵押了，林默要是知道真相，肯定不肯做手术。",
+              "emotion": "sad",
+              "tone_instruction": "声音虚化带混响质感，语速放缓，句尾“做手术”气息发颤，压抑哭声。",
+              "emphasis": [
+                {
+                  "span_text": "房子都抵押了",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "肯定不肯",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "内心混响带哭腔；全程保持胸腔共鸣减弱，模拟脑内回声音效；“抵押了”后微吸气一次，表现哽咽前兆。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "环境音恢复，滴血声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "抵押房子……做手术？小雅，你们到底在瞒我什么？",
+              "emotion": "worried",
+              "tone_instruction": "前半句断断续续、气息不稳，后半句转为急切追问，音调逐渐上扬。",
+              "emphasis": [
+                {
+                  "span_text": "抵押房子",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "到底在瞒我什么",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“抵押房子……”后留0.5秒空白表现大脑宕机；“做手术？”尾音上挑带疑问与惊疑；后半句气息转急。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "小雅，你哭什么？赵哥到底逼你们做什么了？",
+              "emotion": "worried",
+              "tone_instruction": "语气从疑惑转为心疼与焦灼，“逼你们”三字咬字加重，尾音拖长带喘息感。",
+              "emphasis": [
+                {
+                  "span_text": "哭什么",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "逼你们做什么了",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首轻唤“小雅”时气息微颤；“做什么了”后不急于换气，保持追问的压迫感。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "scene_index": 3,
+          "title": "第三幕：碎裂的真相",
+          "location": "洗手间至走廊",
+          "dramatic_goal": "林默在恐慌中误以为自己患绝症，拼着彻底失聪的风险深度读心，揭开善意谎言的全貌。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "洗手间水声，持续耳鸣。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "每一次读心，都像有人拿针扎我的脑髓。但我必须知道真相。",
+              "emotion": "serious",
+              "tone_instruction": "语速平稳但咬字加重，前半句带生理性压抑感，后半句语气转为坚定。",
+              "emphasis": [
+                {
+                  "span_text": "必须知道真相",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "在“脑髓”后微作半秒停顿，换气时保持气息下沉，避免颤抖。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "洗不掉……这血怎么越流越多。到底瞒着我什么？绝症？我得了绝症？！不行，我得问清楚。",
+              "emotion": "fearful",
+              "tone_instruction": "声音发颤且气促，从自我怀疑逐渐升级为恐慌质问，最后强行压低声音给自己打气。",
+              "emphasis": [
+                {
+                  "span_text": "绝症？！",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 32,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“洗不掉”后留长停顿伴随吸气声，“绝症”重复时音调逐次拔高，尾音做轻微破音处理。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "门外脚步声。环境音抽空，心跳杂乱。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "xiao_ya",
+              "narrator_id": null,
+              "performer_id": "xiao_ya",
+              "text": "一定要瞒住他，千万别露馅。",
+              "emotion": "worried",
+              "tone_instruction": "压低声线，语气紧绷且带有明显的心理暗示感，强调保密意图。",
+              "emphasis": [
+                {
+                  "span_text": "千万别露馅",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "内心混响；全程保持贴麦近讲感，句末“馅”字迅速收声，模拟内心话被切断的效果。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "手术成功率太低了，只能走这步险棋。",
+              "emotion": "serious",
+              "tone_instruction": "嗓音低沉沙哑，语气沉重且带着无奈的决定感，节奏缓慢。",
+              "emphasis": [
+                {
+                  "span_text": "只能走这步险棋",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "内心混响；“太低了”后微顿，叹息式起音，尾音自然衰减不拖沓。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "xiao_ya",
+              "narrator_id": null,
+              "performer_id": "xiao_ya",
+              "text": "不能让他有心理负担。",
+              "emotion": "tender",
+              "tone_instruction": "语气轻柔克制，带着保护欲，咬字清晰但音量压低。",
+              "emphasis": [
+                {
+                  "span_text": "心理负担",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "内心混响；气息均匀送出，句首不加多余吸气，保持内心话的连贯性。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "环境音恢复，林默痛苦闷哼，撞开门。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "赵哥！你站住！",
+              "emotion": "angry",
+              "tone_instruction": "爆发式呼喊，气息上提，随后立刻转为急促的追赶感。",
+              "emphasis": [
+                {
+                  "span_text": "你站住",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“赵哥”后不留间隙直接接“你站住”，尾音拉长并伴随明显的气口转换。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l10",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "林默，你别再纠缠了，算我求你，赶紧回家休息！",
+              "emotion": "worried",
+              "tone_instruction": "语气急切且带着恳求，前半句强硬劝阻，后半句瞬间软化哀求。",
+              "emphasis": [
+                {
+                  "span_text": "算我求你",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“纠缠了”后微顿改换语气，“求你”二字加重咬字并略微破音，体现情绪失控边缘。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "今天必须把话说清楚！",
+              "emotion": "serious",
+              "tone_instruction": "咬字极重，语气斩钉截铁，不带任何商量余地。",
+              "emphasis": [
+                {
+                  "span_text": "必须把话说清楚",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 9,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首深吸一口气稳住声带，全句保持胸腔共鸣，尾音干脆切断不拖泥带水。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l12",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "我不走！我的身体我自己清楚，你们凭什么替我做决定！",
+              "emotion": "angry",
+              "tone_instruction": "情绪激动，语速加快，反问句带有强烈的委屈与抗拒感。",
+              "emphasis": [
+                {
+                  "span_text": "凭什么替我做决定",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“我不走”短促爆发，“清楚”后微喘接反问，尾音上扬但不嘶吼，保留角色理智底线。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l13",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "环境音深度抽空，强烈耳鸣。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l14",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "林默在地铁里为了救小雅被砸伤了脊椎，医生说手术成功率只有百分之三十。我们大家凑了这笔钱，骗他是公司保险赔的，就是怕他内疚不敢上手术台。",
+              "emotion": "sad",
+              "tone_instruction": "嗓音极度疲惫且沙哑，语速缓慢沉重，情感层层递进至崩溃边缘后强行克制。",
+              "emphasis": [
+                {
+                  "span_text": "怕他内疚不敢上手术台",
+                  "occurrence": 1,
+                  "start_char": 56,
+                  "end_char": 66,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "内心混响，深情疲惫；每句逗号处做短暂气口调整，“百分之三十”后微顿带吸泣感，“不敢上手术台”尾音渐弱并轻微颤抖。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l15",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "耳鸣达到顶峰，环境音猛然恢复。林默脱力靠在墙上。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "scene_index": 4,
+          "title": "第四幕：平稳的回声",
+          "location": "走廊",
+          "dramatic_goal": "林默放弃揭穿，接受手术与同事的善意，能力代价与人性温度达成和解。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "超能力救不了我的脊椎，但他们的谎言可以。",
+              "emotion": "calm",
+              "tone_instruction": "语速平缓，尾音微扬带释然感，不加重悲情色彩",
+              "emphasis": [
+                {
+                  "span_text": "救不了我的脊椎",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "谎言可以",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首留白0.5秒，句末气息平稳收住",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "你……你耳朵怎么也流血了？快坐下，我带你去医院！",
+              "emotion": "worried",
+              "tone_instruction": "前半句气口短促带颤音，后半句语气急促转为坚定命令式",
+              "emphasis": [
+                {
+                  "span_text": "耳朵怎么也流血了",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 12,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "快坐下",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "你之后停顿0.3秒吸气，第二句咬字加重，避免破音",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "赵哥，不用去医院，我同意做手术了。",
+              "emotion": "calm",
+              "tone_instruction": "嗓音压低带轻微鼻音，语气平稳笃定，切断对方的慌乱节奏",
+              "emphasis": [
+                {
+                  "span_text": "不用去医院",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "同意做手术了",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 16,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "赵哥后微顿，后半句气息下沉，尾音不拖沓",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "你……你想通了？不怪我赶你走了？",
+              "emotion": "surprised",
+              "tone_instruction": "声线发虚，疑问句尾音上扬带试探，第二句语气放轻显愧疚",
+              "emphasis": [
+                {
+                  "span_text": "想通了",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "赶你走了",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "两个问句之间留0.4秒呼吸间隙，避免连读",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_mo",
+              "narrator_id": null,
+              "performer_id": "lin_mo",
+              "text": "嗯。谢谢你们，等我好起来，继续回来给你打工，把抵押的房子赎回来。",
+              "emotion": "happy",
+              "tone_instruction": "语气明亮转柔和，承诺部分咬字清晰有力，传递决心",
+              "emphasis": [
+                {
+                  "span_text": "谢谢你们",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "把抵押的房子赎回来",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "嗯后停顿0.5秒，后半句逐层递进，句末气息饱满收束",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "lao_zhao",
+              "narrator_id": null,
+              "performer_id": "lao_zhao",
+              "text": "好，好！我们等你回来。",
+              "emotion": "happy",
+              "tone_instruction": "连说两声好时声音微颤带哽咽感，后半句放缓语气显郑重",
+              "emphasis": [
+                {
+                  "span_text": "好，好！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "等你回来",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "第一声好后换气，第二声压低，句末留白2秒配合环境音渐入",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "温暖的钢琴声起，地铁平稳运行声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林默利用读心能力试图揭开同事隐瞒的真相，在承受流鼻血与失聪风险的代价后，发现大家是为了给他凑脊椎手术费而编造谎言。他最终放弃揭穿，选择接受手术与同事们的善意。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "林默得知自己脊椎受重伤且手术成功率仅30%",
+          "status": "revealed"
+        },
+        {
+          "fact": "同事们抵押房产凑钱并谎称是保险理赔",
+          "status": "revealed"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "from": "lin_mo",
+          "to": "lao_zhao",
+          "change": "从防备、猜忌转变为深深的感激与信任"
+        },
+        {
+          "from": "lin_mo",
+          "to": "xiao_ya",
+          "change": "从保持距离转变为理解其愧疚并接纳其善意"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "同事们隐瞒的秘密真相",
+        "林默是否面临绝症或被贪污赔偿的猜忌"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "林默得知自己脊椎受重伤且手术成功率仅30%",
+        "status": "revealed"
+      },
+      {
+        "fact": "同事们抵押房产凑钱并谎称是保险理赔",
+        "status": "revealed"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "lin_mo",
+        "to": "lao_zhao",
+        "change": "从防备、猜忌转变为深深的感激与信任"
+      },
+      {
+        "from": "lin_mo",
+        "to": "xiao_ya",
+        "change": "从保持距离转变为理解其愧疚并接纳其善意"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 28,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "delivery_format_version": "1.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "bcc66a1479f64d6787bbfea9663aae6d",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:04:57.148345+00:00",
+      "status": "error",
+      "error": "RemoteProtocolError",
+      "error_code": "RemoteProtocolError",
+      "usage_source": "unavailable",
+      "latency_ms": 75224,
+      "completed_at": "2026-10-12T03:06:12.373000+00:00"
+    },
+    {
+      "principal_id": "local",
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "fdfa0753eaf3454cb1ff916db9c0717d",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 2,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:06:13.883323+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4639,
+      "output_tokens": 5512,
+      "cache_read_tokens": 4608,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3826,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "2dc4bc28-1486-43c1-80b6-27ffea033d4e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 83959,
+      "completed_at": "2026-10-12T03:07:37.842637+00:00"
+    },
+    {
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "job_id": "4219cfbfe5764f52b836c8168ee922f7",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "9f6f9229bbda438db0174483045f299f",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:07:37.863151+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 7361,
+      "output_tokens": 9002,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 6561,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "7a6cf658-dff1-46de-bb0f-fabceb5ae546",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 94263,
+      "completed_at": "2026-10-12T03:09:12.127169+00:00"
+    },
+    {
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "job_id": "4219cfbfe5764f52b836c8168ee922f7",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "595684a88f17436a96f1cdb306e1126f",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:09:12.133460+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2536,
+      "output_tokens": 4622,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3669,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "e11d236f-3803-4338-8d95-49d0968521a5",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 33060,
+      "completed_at": "2026-10-12T03:09:45.193728+00:00"
+    },
+    {
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "job_id": "4219cfbfe5764f52b836c8168ee922f7",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "8b74a81aca504aff8b4fcb7d6b4c93b1",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:09:45.198401+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2382,
+      "output_tokens": 5367,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4426,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "946fd7c2-f500-4de5-8125-e3ea773dbfba",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 36174,
+      "completed_at": "2026-10-12T03:10:21.373059+00:00"
+    },
+    {
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "job_id": "4219cfbfe5764f52b836c8168ee922f7",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "72cdced141754e669843d831275a708e",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:10:21.379939+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2855,
+      "output_tokens": 6209,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4745,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "9957f740-f80d-4477-b5d3-e9d22a144ab2",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 42440,
+      "completed_at": "2026-10-12T03:11:03.820265+00:00"
+    },
+    {
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "job_id": "4219cfbfe5764f52b836c8168ee922f7",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "c55ee19402184272aacdc9b41a77653b",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:11:03.825139+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2453,
+      "output_tokens": 4437,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3408,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "8be75d39-e93c-4b55-ab79-da41d43bd8c7",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 32943,
+      "completed_at": "2026-10-12T03:11:36.769024+00:00"
+    },
+    {
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "job_id": "4219cfbfe5764f52b836c8168ee922f7",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "a8a9fbe599a64d589ff2f6d3ad193d18",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:11:36.773740+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 10081,
+      "output_tokens": 2314,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2272,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "8727ea2e-dbbf-9f6c-bb7a-b9c2030b4444",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 20710,
+      "completed_at": "2026-10-12T03:11:57.484138+00:00"
+    }
+  ],
+  "created_at": "2026-10-12T03:11:36.771666Z"
+}

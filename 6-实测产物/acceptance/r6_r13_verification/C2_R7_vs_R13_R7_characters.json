@@ -1,0 +1,42 @@
+{
+  "lin_yuan": {
+    "role_id": "lin_yuan",
+    "character_id": "lin_yuan",
+    "performer_id": "lin_yuan",
+    "story_name": "林远",
+    "canon_name": "林远",
+    "immutable_facts": [],
+    "goal": "利用遗留源码开发出颠覆原公司的AI引擎，证明自己的技术价值。",
+    "motivation": "",
+    "fear": "回避谈论年龄焦虑和职场PUA，拒绝情绪内耗，只用代码和运行结果说话。",
+    "speech_style": "简短、冷静、语速平稳。喜欢用精确的技术术语和数据降维打击对手，受压时不辩解，直接抛出致命Bug。",
+    "relationship_stance": "对赵总冷漠蔑视，视其为技术外行；对小陈充满怀念与责任感，将其视为技术理想的传承者。",
+    "source": "character_portrayal"
+  },
+  "zhao_zong": {
+    "role_id": "zhao_zong",
+    "character_id": "zhao_zong",
+    "performer_id": "zhao_zong",
+    "story_name": "赵总",
+    "canon_name": "赵总",
+    "immutable_facts": [],
+    "goal": "压榨员工剩余价值，维持公司技术领先的假象以获取融资。",
+    "motivation": "",
+    "fear": "极力回避自身技术无能的事实，习惯用职级、年龄和宏大词汇掩饰空洞。",
+    "speech_style": "爹味说教，喜欢用‘赋能、闭环、底层逻辑’等互联网黑话。气急败坏时语无伦次，声音尖锐。",
+    "relationship_stance": "前期视林远为可随意替换的底层工具，后期转为对林远技术实力的恐惧、嫉妒与卑微求和。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

@@ -1,0 +1,1087 @@
+{
+  "story_id": "32b9c65e438d4d7b8c61212704081e3d",
+  "story_version_id": "6eb8b52d5ccc43f5bcfe8ac6589b7466",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+  "approved_plan_revision": 1,
+  "title": "重构底线",
+  "summary": "35岁被辞退的程序员林远，利用前同事留下的干净源码和遣散费，在共享办公室开发出碾压原公司的AI引擎，最终在发布会上完成降维打击并实现阶层跃升。",
+  "preview_blurb": "35岁被扫地出门的程序员，带着一个加密U盘和满腔不甘，在嘈杂的共享工位上敲下了颠覆整个行业的底层代码。",
+  "tags": [
+    "G14",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "viral_drama",
+  "content_form": "audio_drama",
+  "character_snapshot": [],
+  "character_portrayals": [
+    {
+      "role_id": "lin_yuan",
+      "story_name": "林远",
+      "external_goal": "利用遗留源码开发出颠覆原公司的AI引擎，证明自己的技术价值。",
+      "emotional_avoidance": "回避谈论年龄焦虑和职场PUA，拒绝情绪内耗，只用代码和运行结果说话。",
+      "speech_style": "简短、冷静、语速平稳。喜欢用精确的技术术语和数据降维打击对手，受压时不辩解，直接抛出致命Bug。",
+      "relationship_stance": "对赵总冷漠蔑视，视其为技术外行；对小陈充满怀念与责任感，将其视为技术理想的传承者。"
+    },
+    {
+      "role_id": "zhao_zong",
+      "story_name": "赵总",
+      "external_goal": "压榨员工剩余价值，维持公司技术领先的假象以获取融资。",
+      "emotional_avoidance": "极力回避自身技术无能的事实，习惯用职级、年龄和宏大词汇掩饰空洞。",
+      "speech_style": "爹味说教，喜欢用‘赋能、闭环、底层逻辑’等互联网黑话。气急败坏时语无伦次，声音尖锐。",
+      "relationship_stance": "前期视林远为可随意替换的底层工具，后期转为对林远技术实力的恐惧、嫉妒与卑微求和。"
+    }
+  ],
+  "outline": {
+    "title": "重构底线",
+    "premise": "35岁被辞退的程序员林远，利用前同事留下的干净源码和遣散费，在共享办公室开发出碾压原公司的AI引擎，最终在发布会上完成降维打击并实现阶层跃升。",
+    "theme": "真正的技术尊严不来源于职级，而来源于对代码的纯粹与坚守。",
+    "beginning": "林远被前老板赵总以年龄和能力为由羞辱辞退，带着赔偿金和装有前同事小陈遗留源码的U盘来到嘈杂的共享办公室，决心重写底层架构。",
+    "development": "赵总找上门嘲讽并逼迫签竞业协议，林远当场指出赵总新产品的致命Bug完成首次打脸。随后林远进入心流状态，在小陈源码的温暖注释辅助下攻克技术难关，完成“星火”引擎。",
+    "climax": "赵总在新品发布会上吹嘘自主研发，林远将“星火”引擎一键提交至全球开源社区。发布会大屏被“星火”的跑分数据强行切入，性能碾压十倍，赵总看着架构师署名彻底崩溃。",
+    "ending": "林远拒绝赵总的求和电话，选择全面开源。在顶级科技巨头CEO的震撼邀约电话中，林远按下接听，以行业地位的巨大跃升戛然而止。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "星火燎原",
+        "core_goal": "林远开发出颠覆性AI引擎，在发布会上击溃前老板的虚假产品，确立自己的行业地位。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：重重拍桌声伴随纸张撕裂，赵总冷笑：‘35岁，代码写得再好也是废人，拿着N+1滚吧。’",
+          "[3-10s] 矛盾三要素：场景切至嘈杂共享办公室。林远清点遣散费，插入U盘，听到小陈留下的加密音频：‘远哥，核心架构的冗余我清理了，这是干净的源码，别让它烂在赵总手里。’林远确立目标：重构引擎。",
+          "[10-30s] 第一次反转：赵总带助理来共享办公室找林远签竞业协议，嘲讽他还在敲破烂代码。林远停下键盘，冷静报出赵总即将发布的新系统三个致命内存泄漏点。助理查证后确认，赵总从不屑转为震惊，狼狈离开。",
+          "[30-120s] 中段推进：林远进入心流状态，键盘声如暴雨。穿插小陈源码中温暖的注释语音（‘远哥，这行代码我熬了三个通宵，给你留了后门’）。林远解决最后一个并发冲突，完成‘星火’引擎。背景音播放赵总公司新品发布会直播，赵总正在吹嘘‘完全自主研发’。",
+          "[120-153s] 升级/二次反转：林远将‘星火’一键提交至全球开源社区。发布会直播中，赵总背后的演示大屏突然弹出‘星火’的实时跑分对比，性能碾压十倍。现场哗然，赵总看着屏幕上‘架构师：林远、小陈’的署名，彻底崩溃。",
+          "[153-170s] 结局收束：林远看着手机上瞬间涌入的几十家顶级VC未接来电。赵总的电话疯狂震动，林远平静地按下‘拒绝’并点击‘全面开源’。小陈的声音回响：‘远哥，让技术属于所有人。’",
+          "[170-180s] 强钩子：手机再次震动，来电显示‘全球最大AI开源基金会主席’。林远嘴角上扬，滑下接听键，对方激动地说：‘林神，整个行业都在等您……’话音未落，全剧终。"
+        ],
+        "ending": "主角拒绝前老板，选择开源，并在顶级巨头的邀约中实现地位跃升，以强钩子收束。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_yuan",
+        "story_name": "林远",
+        "external_goal": "利用遗留源码开发出颠覆原公司的AI引擎，证明自己的技术价值。",
+        "emotional_avoidance": "回避谈论年龄焦虑和职场PUA，拒绝情绪内耗，只用代码和运行结果说话。",
+        "speech_style": "简短、冷静、语速平稳。喜欢用精确的技术术语和数据降维打击对手，受压时不辩解，直接抛出致命Bug。",
+        "relationship_stance": "对赵总冷漠蔑视，视其为技术外行；对小陈充满怀念与责任感，将其视为技术理想的传承者。"
+      },
+      {
+        "role_id": "zhao_zong",
+        "story_name": "赵总",
+        "external_goal": "压榨员工剩余价值，维持公司技术领先的假象以获取融资。",
+        "emotional_avoidance": "极力回避自身技术无能的事实，习惯用职级、年龄和宏大词汇掩饰空洞。",
+        "speech_style": "爹味说教，喜欢用‘赋能、闭环、底层逻辑’等互联网黑话。气急败坏时语无伦次，声音尖锐。",
+        "relationship_stance": "前期视林远为可随意替换的底层工具，后期转为对林远技术实力的恐惧、嫉妒与卑微求和。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "xiao_chen",
+        "story_name": "小陈",
+        "performer_id": "voice_actor_xiao_chen",
+        "medium": "recording",
+        "dramatic_purpose": "提供温暖底色与源码线索，证明林远不是孤军奋战，强化‘技术属于所有人’的主题，并在结尾形成情感回响。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "键盘敲击声的节奏变化代表主角的心流与情绪起伏；环境音从嘈杂的共享办公室到极度安静的心流状态形成对比。",
+      "music_cues": "前段使用压抑的低频电子音，中段切入快节奏燃向鼓点配合代码编写，结尾使用宏大交响乐推向高潮后在接听电话瞬间骤停。",
+      "vocal_direction": "林远的台词需贴近麦克风，营造冷静克制的ASMR感；赵总的台词需带有空间混响，凸显其虚张声势。"
+    },
+    "continuity_constraints": [
+      "小陈的录音必须在3-10s首次出现，严禁在结尾才首次揭示隐藏留言。",
+      "赵总新产品的内存泄漏Bug必须在10-30s被林远指出，并在120-153s的发布会上被跑分数据证实。",
+      "林远的赔偿金和U盘是核心道具，需有明确的音效提示（如硬币声、USB插入声）。",
+      "最后15%（153-180s）严禁引入法院传票等新危机，必须聚焦于人物选择与地位跃升。"
+    ],
+    "change_summary": [
+      "初始构思中结尾引入了原公司发起商业机密诉讼的法院传票作为强钩子，为严格遵守‘不得在主冲突结束后塞入新危机’的结尾契约，修改为全球最大AI开源基金会主席的邀约电话，以身份跃升的爽点延续作为强钩子收尾。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-b7561b9b",
+      "index": 1,
+      "title": "星火燎原",
+      "synopsis": "35岁被辞退的程序员林远，利用前同事留下的干净源码在共享办公室重构底层架构。面对前老板的打压与嘲讽，他冷静指出系统致命漏洞，并最终在发布会上以碾压级的开源引擎完成降维打击，实现技术与地位的双重跃升。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 173,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "scene_index": 1,
+          "title": "黄金钩子与矛盾确立",
+          "location": "前公司办公室 / 共享办公室",
+          "dramatic_goal": "展现林远被辞退的屈辱，并通过小陈的录音确立重构引擎的目标。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_zong",
+              "narrator_id": null,
+              "performer_id": "zhao_zong",
+              "text": "三十五岁，代码写得再好也是废人！拿着N加一，赶紧滚吧。",
+              "emotion": "calm",
+              "tone_instruction": "前半句压低嗓音带讥讽，后半句语速加快，尾音上扬显轻蔑",
+              "emphasis": [
+                {
+                  "span_text": "三十五岁",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "滚吧",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首配合拍桌音效后起音，第二分句前微顿半秒",
+              "audio_cue_ref": "sfx_slam_tear"
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林远没有辩解。他坐在嘈杂的共享工位上，点清遣散费，插上了前同事小陈留下的加密U盘。",
+              "emotion": "neutral",
+              "tone_instruction": "保持客观叙述基调，语流平稳，在“没有辩解”后作短暂气口停顿",
+              "emphasis": [
+                {
+                  "span_text": "没有辩解",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "加密U盘",
+                  "occurrence": 1,
+                  "start_char": 36,
+                  "end_char": 40,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留白约0.5秒，衔接下一句录音播放音效",
+              "audio_cue_ref": "sfx_coins_usb"
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "xiao_chen",
+              "narrator_id": null,
+              "performer_id": "voice_actor_xiao_chen",
+              "text": "远哥，核心架构的冗余我清理了，这是干净的源码，别让它烂在赵总手里。",
+              "emotion": "serious",
+              "tone_instruction": "气息略紧，咬字清晰有力，后半句语气转为恳切叮嘱",
+              "emphasis": [
+                {
+                  "span_text": "核心架构",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "干净的源码",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 22,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "模拟老式录音机底噪质感，句首“远哥”二字稍作气声处理，句尾自然衰减",
+              "audio_cue_ref": "recording_play"
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yuan",
+              "narrator_id": null,
+              "performer_id": "lin_yuan",
+              "text": "放心，我会重构底层引擎，让它重见天日。",
+              "emotion": "calm",
+              "tone_instruction": "嗓音沉实稳定，不疾不徐，“重见天日”四字加重咬字并微微拖长",
+              "emphasis": [
+                {
+                  "span_text": "重构底层引擎",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "重见天日",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 18,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首接录音尾音直接起音，无多余换气，句末收声干脆",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "第一次反转与心流推进",
+          "location": "共享办公室",
+          "dramatic_goal": "林远用技术实力打脸赵总的竞业协议逼迫，并进入心流完成星火引擎。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_zong",
+              "narrator_id": null,
+              "performer_id": "zhao_zong",
+              "text": "林远，签了这份竞业协议。就凭你这破烂键盘，还想单干？",
+              "emotion": "angry",
+              "tone_instruction": "语气居高临下，前半句命令式压低嗓音，后半句带出明显讥讽。",
+              "emphasis": [
+                {
+                  "span_text": "签了这份竞业协议",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "破烂键盘",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 20,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿，强调“签了”；“单干？”尾音上扬并拉长半拍。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yuan",
+              "narrator_id": null,
+              "performer_id": "lin_yuan",
+              "text": "赵总，你即将发布的新系统，在并发处理时有三个致命的内存泄漏点。",
+              "emotion": "serious",
+              "tone_instruction": "语速平稳克制，咬字清晰，用汇报技术参数的冷静口吻陈述事实。",
+              "emphasis": [
+                {
+                  "span_text": "三个致命",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 24,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "内存泄漏点",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 30,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "赵总后微停换气；三个致命加重停顿；句末不拖音，干脆收住。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_zong",
+              "narrator_id": null,
+              "performer_id": "zhao_zong",
+              "text": "你少在这胡说八道！助理，查！",
+              "emotion": "angry",
+              "tone_instruction": "音量陡然拔高打断对方，语气急促强硬，助理后立刻转为短促指令。",
+              "emphasis": [
+                {
+                  "span_text": "胡说八道",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "查",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 13,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "胡说八道后急停吸气；助理二字加重咬字；查果断截断无余音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yuan",
+              "narrator_id": null,
+              "performer_id": "lin_yuan",
+              "text": "第一，线程池未释放；第二，缓存击穿；第三，垃圾回收死锁。不用查了，看他的脸色就知道。",
+              "emotion": "serious",
+              "tone_instruction": "列举时节奏均匀如报数，不带情绪；后半句语气放缓，透出笃定与轻蔑。",
+              "emphasis": [
+                {
+                  "span_text": "不用查了",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 32,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "脸色就知道",
+                  "occurrence": 1,
+                  "start_char": 36,
+                  "end_char": 41,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "数字间保持固定间隔停顿；不用查了前微顿；知道尾音下沉收束。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "助理查证后脸色惨白，赵总从不屑转为震惊，狼狈离开。林远戴上耳机，进入心流状态。",
+              "emotion": "neutral",
+              "tone_instruction": "旁白叙述口吻，前半段语速稍快营造紧张感，后半段逐渐放缓并压低音量，突出氛围转换。",
+              "emphasis": [
+                {
+                  "span_text": "脸色惨白",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "进入心流状态",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 38,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "狼狈离开后留白两秒；林远戴上耳机起声线转稳；心流状态轻声收尾。",
+              "audio_cue_ref": "sfx_keyboard_rain"
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_zong",
+              "narrator_id": null,
+              "performer_id": "zhao_zong",
+              "text": "我们的新系统，完全是自主研发，行业领先……",
+              "emotion": "calm",
+              "tone_instruction": "平稳起音，‘完全’加重咬字凸显自信，后半句气息下沉收尾。",
+              "emphasis": [
+                {
+                  "span_text": "完全",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "自主研发",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "逗号处微顿换气，保持麦克风距离恒定，避免喷麦。",
+              "audio_cue_ref": "broadcast_bg"
+            },
+            {
+              "line_id": "ep1-s2-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "xiao_chen",
+              "narrator_id": null,
+              "performer_id": "voice_actor_xiao_chen",
+              "text": "远哥，这行代码我熬了三个通宵，给你留了后门。",
+              "emotion": "tender",
+              "tone_instruction": "录音质感略带沙哑疲惫，语气亲切温和，远哥后微喘，后半句带着完成任务后的欣慰。",
+              "emphasis": [
+                {
+                  "span_text": "熬了三个通宵",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "留了后门",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首带轻微呼吸声；通宵后气口略长；后门一字一顿，尾音轻柔落下。",
+              "audio_cue_ref": "recording_play"
+            },
+            {
+              "line_id": "ep1-s2-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yuan",
+              "narrator_id": null,
+              "performer_id": "lin_yuan",
+              "text": "最后一个并发冲突，解决。“星火”引擎，编译完成。",
+              "emotion": "calm",
+              "tone_instruction": "语速极快后骤然放慢，气息下沉，用近乎自语的平静语调确认成果。",
+              "emphasis": [
+                {
+                  "span_text": "解决",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "编译完成",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 23,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "解决后长吸一口气；星火引擎微顿；编译完成字字清晰，无声调起伏，干净利落结束。",
+              "audio_cue_ref": "sfx_compile_success"
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "scene_index": 3,
+          "title": "二次反转与结局收束",
+          "location": "发布会现场 / 共享办公室",
+          "dramatic_goal": "星火引擎开源碾压发布会，林远拒绝前老板求和，选择全面开源。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yuan",
+              "narrator_id": null,
+              "performer_id": "lin_yuan",
+              "text": "一键提交全球开源社区，让真相说话。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳坚定，前半句清晰下达指令，后半句语气微扬带出释然。",
+              "emphasis": [
+                {
+                  "span_text": "一键提交",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "真相说话",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 16,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "说完后留0.5秒停顿，配合按键音效录入。",
+              "audio_cue_ref": "sfx_upload"
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "发布会现场，赵总背后的大屏突然被强行切入，弹出“星火”引擎的实时跑分对比，性能足足碾压十倍。全场记者哗然，闪光灯亮成一片。",
+              "emotion": "neutral",
+              "tone_instruction": "叙述节奏由缓转急，突然被强行切入处提速加重，足足碾压十倍拉长咬字强调反差，后半句恢复平稳铺陈画面。",
+              "emphasis": [
+                {
+                  "span_text": "突然被强行切入",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 20,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "足足碾压十倍",
+                  "occurrence": 1,
+                  "start_char": 39,
+                  "end_char": 45,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首吸气准备，在对比后微顿0.3秒以配合大屏弹出音效。",
+              "audio_cue_ref": "sfx_crowd_gasp"
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_zong",
+              "narrator_id": null,
+              "performer_id": "zhao_zong",
+              "text": "这不可能！这跑分数据怎么会有十倍差距？等等，架构师署名……林远、小陈？！你们到底干了什么！",
+              "emotion": "surprised",
+              "tone_instruction": "前两句声音发紧语速加快显慌乱，破折号处气息骤停，念到名字时音调拔高带颤音，最后一句压低嗓音强作镇定却掩不住焦躁。",
+              "emphasis": [
+                {
+                  "span_text": "这不可能！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "林远、小陈？！",
+                  "occurrence": 1,
+                  "start_char": 29,
+                  "end_char": 36,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "等等后刻意停顿0.4秒模拟大脑空白，后续台词连贯输出不换气。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "共享办公室里，林远看着手机上瞬间涌入的几十家顶级风投未接来电。赵总的求和电话疯狂震动。",
+              "emotion": "neutral",
+              "tone_instruction": "语气平稳客观，前半句轻读营造静谧感，后半句疯狂震动略微加重并加快半拍，形成动静对比。",
+              "emphasis": [
+                {
+                  "span_text": "瞬间涌入",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 18,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "疯狂震动",
+                  "occurrence": 1,
+                  "start_char": 38,
+                  "end_char": 42,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留白0.8秒，为下一句林远的动作留出呼吸空间。",
+              "audio_cue_ref": "sfx_phone_vibrate"
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yuan",
+              "narrator_id": null,
+              "performer_id": "lin_yuan",
+              "text": "拒接。点击，全面开源。",
+              "emotion": "calm",
+              "tone_instruction": "发音干脆利落无拖音，拒接短促果断，点击后微顿执行操作，全面开源一字一顿语气沉稳落地。",
+              "emphasis": [
+                {
+                  "span_text": "拒接",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "全面开源",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "每两个词组间插入0.3秒静音，严格对齐手机触屏操作音效。",
+              "audio_cue_ref": "sfx_click"
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "xiao_chen",
+              "narrator_id": null,
+              "performer_id": "voice_actor_xiao_chen",
+              "text": "远哥，让技术属于所有人。",
+              "emotion": "tender",
+              "tone_instruction": "采用录音混响质感，音色柔和温暖，远哥二字轻声呼唤带笑意，后半句放缓语速尾音自然衰减不留硬截断。",
+              "emphasis": [
+                {
+                  "span_text": "技术属于所有人",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 11,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句尾不做切断处理，保留0.5秒环境底噪渐弱，营造回声余韵。",
+              "audio_cue_ref": "recording_echo"
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "scene_index": 4,
+          "title": "强钩子",
+          "location": "共享办公室",
+          "dramatic_goal": "以顶级巨头的邀约电话作为身份跃升的强钩子收尾。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "手机再次震动，屏幕亮起，来电显示全球最大AI开源基金会主席。林远嘴角上扬，滑下接听键。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳推进，在‘主席’处稍作停顿以制造悬念，随后语气微扬带出释然感。",
+              "emphasis": [
+                {
+                  "span_text": "全球最大AI开源基金会主席",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首留0.3秒环境音空白，‘主席’后吸气微顿，接下一句时气息下沉配合动作描述。",
+              "audio_cue_ref": "sfx_special_ringtone"
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "电话那头传来激动的声音，呼唤着林神，整个行业都在等他。话音未落，全剧终。",
+              "emotion": "calm",
+              "tone_instruction": "前半句模仿电话电流质感压低嗓音，后半句‘全剧终’放缓咬字，收尾干脆。",
+              "emphasis": [
+                {
+                  "span_text": "整个行业都在等他",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "‘等他’后自然换气，‘全剧终’三字逐字加重并拉长尾音，最后留1秒静默。",
+              "audio_cue_ref": "music_cutoff"
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林远在被前老板赵总羞辱辞退后，利用前同事小陈遗留的干净源码，在共享办公室重构出性能碾压原公司的“星火”AI引擎。面对赵总的竞业协议逼迫，林远当场指出其新系统的致命Bug。最终，林远在赵总的新品发布会上将星火引擎一键开源，以十倍的跑分差距彻底击溃前老板的虚假宣传，并拒绝了求和，在顶级开源基金会主席的邀约中实现了技术与地位的跃升。",
+      "ending_hook": "全球最大AI开源基金会主席的激动来电，预示着林远正式踏入行业顶层。",
+      "fact_delta": [
+        {
+          "fact": "林远完成了“星火”AI引擎的开发并全面开源。",
+          "status": "established"
+        },
+        {
+          "fact": "赵总的新系统存在三个致命内存泄漏点，且发布会跑分被星火引擎碾压十倍。",
+          "status": "established"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "from": "zhao_zong",
+          "to": "lin_yuan",
+          "change": "从傲慢轻视转为震惊、恐惧与卑微求和。"
+        },
+        {
+          "from": "lin_yuan",
+          "to": "xiao_chen",
+          "change": "通过完成源码重构与开源，实现了技术理想的传承与情感共鸣。"
+        }
+      ],
+      "new_open_threads": [
+        "林远接受全球最大AI开源基金会主席邀约后，将在更大的行业舞台上展开怎样的技术布局。"
+      ],
+      "closed_threads": [
+        "林远被辞退后的职场反击与自证。",
+        "赵总试图用竞业协议打压林远的企图。",
+        "小陈遗留源码的最终归宿与价值实现。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "林远完成了“星火”AI引擎的开发并全面开源。",
+        "status": "established"
+      },
+      {
+        "fact": "赵总的新系统存在三个致命内存泄漏点，且发布会跑分被星火引擎碾压十倍。",
+        "status": "established"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "zhao_zong",
+        "to": "lin_yuan",
+        "change": "从傲慢轻视转为震惊、恐惧与卑微求和。"
+      },
+      {
+        "from": "lin_yuan",
+        "to": "xiao_chen",
+        "change": "通过完成源码重构与开源，实现了技术理想的传承与情感共鸣。"
+      }
+    ],
+    "unresolved_threads": [
+      "林远接受全球最大AI开源基金会主席邀约后，将在更大的行业舞台上展开怎样的技术布局。"
+    ]
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 20,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "delivery_format_version": "1.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "7a5efdcf7bb9471b989c37377536a05f",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:31:20.982596+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4635,
+      "output_tokens": 4590,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2889,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "a8cd3735-9b87-423f-b801-c02815ece7d3",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 70280,
+      "completed_at": "2026-10-12T02:32:31.263681+00:00"
+    },
+    {
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "job_id": "eff489393dca4a83a03399b1323b7653",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "0c7b0f05d37c40a3b5fb6cc0f92bff56",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:32:31.290692+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 7417,
+      "output_tokens": 7309,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5266,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ddf4943a-2aa9-450b-a208-f1014349584c",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 80734,
+      "completed_at": "2026-10-12T02:33:52.024732+00:00"
+    },
+    {
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "job_id": "eff489393dca4a83a03399b1323b7653",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "9f37d560a98d40b199d1565e58761d2a",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:33:52.031248+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2344,
+      "output_tokens": 4166,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3462,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "86df93d1-dc69-4f5e-a409-5ecddebb5a85",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 26542,
+      "completed_at": "2026-10-12T02:34:18.573495+00:00"
+    },
+    {
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "job_id": "eff489393dca4a83a03399b1323b7653",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "2cfc4cf6ac804990a843396a32222347",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:34:18.578503+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2706,
+      "output_tokens": 5541,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4109,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ae0e2848-6132-40aa-ac7a-df4b4fc22894",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 35021,
+      "completed_at": "2026-10-12T02:34:53.600210+00:00"
+    },
+    {
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "job_id": "eff489393dca4a83a03399b1323b7653",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "1dde794fdbea45c4b02cb9cc90ad2bbc",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:34:53.606215+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 1309,
+      "output_tokens": 2854,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2674,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "57c88b11-7611-4263-89d2-46a9a5e0660d",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 19925,
+      "completed_at": "2026-10-12T02:35:13.532694+00:00"
+    },
+    {
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "job_id": "eff489393dca4a83a03399b1323b7653",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "46af9d36368c4753a246df70355e2526",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:35:13.536692+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2534,
+      "output_tokens": 4864,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3787,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "e687a8cb-41e7-4c4f-be32-ee94bb639724",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 31043,
+      "completed_at": "2026-10-12T02:35:44.580409+00:00"
+    },
+    {
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "job_id": "eff489393dca4a83a03399b1323b7653",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "a38d8dea264c44a5957c2966645cbd11",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:35:44.587409+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2140,
+      "output_tokens": 2904,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2577,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "03440e02-063c-42b3-9f6e-22eb8037c2f9",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 19284,
+      "completed_at": "2026-10-12T02:36:03.872786+00:00"
+    },
+    {
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "job_id": "eff489393dca4a83a03399b1323b7653",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "38294861d31f445f93a57bb336032040",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:36:03.874788+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7796,
+      "output_tokens": 2061,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2019,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "18f8420c-b5bf-4978-a11f-b038107ff394",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 16480,
+      "completed_at": "2026-10-12T02:36:20.355490+00:00"
+    }
+  ],
+  "created_at": "2026-10-12T02:36:03.872786Z"
+}

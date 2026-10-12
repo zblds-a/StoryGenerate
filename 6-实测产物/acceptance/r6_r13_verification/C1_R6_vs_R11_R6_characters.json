@@ -1,0 +1,42 @@
+{
+  "lin_jianguo": {
+    "role_id": "lin_jianguo",
+    "character_id": "lin_jianguo",
+    "performer_id": "lin_jianguo",
+    "story_name": "老林",
+    "canon_name": "老林",
+    "immutable_facts": [],
+    "goal": "查清搭档老陈二十年前“潜逃”的真相，还他清白。",
+    "motivation": "",
+    "fear": "回避当年自己办案失误导致女儿被绑架的内疚感。",
+    "speech_style": "简短、威严、受压时习惯用反问句和拍桌子掩饰情绪，语速偏快，结尾常带不容置疑的断句。",
+    "relationship_stance": "对徒弟小赵严厉但护短，对老陈充满愧疚与绝对的信任，不允许任何人诋毁老陈。",
+    "source": "character_portrayal"
+  },
+  "zhao_ming": {
+    "role_id": "zhao_ming",
+    "character_id": "zhao_ming",
+    "performer_id": "zhao_ming",
+    "story_name": "小赵",
+    "canon_name": "小赵",
+    "immutable_facts": [],
+    "goal": "协助师傅整理旧案卷宗，尽快结案让师傅安心退休。",
+    "motivation": "",
+    "fear": "害怕面对警队内部“黑警”丑闻带来的信仰动摇。",
+    "speech_style": "习惯用“师傅”开头，语气带有年轻人的直率，遇到疑点会直接抛出疑问，紧张时语速加快。",
+    "relationship_stance": "敬重老林，但在证据面前会坚持程序正义，与老林产生认知摩擦，最终被老林的情感选择折服。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

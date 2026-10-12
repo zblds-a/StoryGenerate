@@ -1,0 +1,1036 @@
+{
+  "story_id": "0846492061864f168e7b301b972051a3",
+  "story_version_id": "fe47e9d5eda94a3b9e35b69394963e2e",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "5909b59790674372a0cc93210c8aa2f7",
+  "approved_plan_revision": 1,
+  "title": "南方的回音",
+  "summary": "退休刑警在整理旧物时，通过一盘二十年前的磁带录音，发现被定性为“畏罪潜逃”的搭档其实是为了救自己的女儿而牺牲，并默默背负了黑锅。",
+  "preview_blurb": "一盘尘封二十年的磁带，一句“钱我拿了，人我放了”，让退休刑警老林重新审视搭档的“潜逃”悬案。当背景音里的海浪变成火车站的轰鸣，真相的重量远超想象。",
+  "tags": [
+    "G11",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "mystery",
+  "content_form": "audio_drama",
+  "character_snapshot": [],
+  "character_portrayals": [
+    {
+      "role_id": "lin_jianguo",
+      "story_name": "老林",
+      "external_goal": "查清搭档老陈二十年前“潜逃”的真相，还他清白。",
+      "emotional_avoidance": "回避当年自己办案失误导致女儿被绑架的内疚感。",
+      "speech_style": "简短、威严、受压时习惯用反问句和拍桌子掩饰情绪，语速偏快，结尾常带不容置疑的断句。",
+      "relationship_stance": "对徒弟小赵严厉但护短，对老陈充满愧疚与绝对的信任，不允许任何人诋毁老陈。"
+    },
+    {
+      "role_id": "zhao_ming",
+      "story_name": "小赵",
+      "external_goal": "协助师傅整理旧案卷宗，尽快结案让师傅安心退休。",
+      "emotional_avoidance": "害怕面对警队内部“黑警”丑闻带来的信仰动摇。",
+      "speech_style": "习惯用“师傅”开头，语气带有年轻人的直率，遇到疑点会直接抛出疑问，紧张时语速加快。",
+      "relationship_stance": "敬重老林，但在证据面前会坚持程序正义，与老林产生认知摩擦，最终被老林的情感选择折服。"
+    }
+  ],
+  "outline": {
+    "title": "南方的回音",
+    "premise": "退休刑警在整理旧物时，通过一盘二十年前的磁带录音，发现被定性为“畏罪潜逃”的搭档其实是为了救自己的女儿而牺牲，并默默背负了黑锅。",
+    "theme": "真相的重量与守护的温情",
+    "beginning": "老林和小赵在整理旧案卷宗时，意外播放了一盘属于“黑警”老陈的磁带，录音中老陈承认拿钱放人，小赵认为铁证如山。",
+    "development": "老林通过录音背景音的破绽和一张当票，推翻了老陈潜逃的假象，发现老陈当年去了废弃的旧火车站，且当掉了老林遗失的警号。",
+    "climax": "老林拼凑出真相：当年被绑架的人质是老林的女儿，老陈为换人质同归于尽。录音最后老陈嘱托老林不要告诉女儿真相，就说他去了南方。",
+    "ending": "面对是否翻案的选择，老林决定保全老陈的牺牲与女儿的平静，用一句“老陈在南方”为二十年的悬案画上温暖的句号。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "南方的回音",
+        "core_goal": "揭开搭档失踪的真相，完成情感与认知的双重反转。",
+        "major_beats": [
+          "[0-3s] 突发听觉事件：老式磁带机“咔哒”按下，紧接着是一声沉闷的枪响和重物砸在铁轨上的声音。",
+          "[3-10s] 矛盾三要素：小赵惊呼这盘带子为何在“黑警”陈叔的遗物箱底，老林命令小赵把音量调大，继续播放。",
+          "[10-30s] 第一次反转：录音中老陈喘息着说“钱我拿了，人我放了”，小赵叹息铁证如山，老林暴怒拍桌，指出老陈戒烟多年根本不可能有钱买偷渡船票，反驳潜逃定论。",
+          "[30-120s] 中段推进：老林让小赵戴上耳机细听背景音，小赵误以为是码头海浪声，老林指出那是旧火车站排风扇的低频轰鸣；小赵翻出磁带盒底部的半张当票，念出当物是“警号0842”，老林震惊，那是他当年在追捕中遗失的警号。",
+          "[120-150s] 二次反转与真相揭示：老林颤抖着拼凑出真相：当年被绑架的人质是老林的女儿，老陈为了换出女孩，穿上嫌犯外套引开歹徒，在火车站同归于尽；录音最后老陈留下遗言：“林哥，丫头明天高考，别告诉她我死了，就说我去了南方。”",
+          "[150-180s] 人物选择与余韵：小赵哽咽问是否要上报翻案，老林拿出老陈留下的旧打火机“咔哒”点燃，平静地说“案子结了，老陈在南方，活得挺好”，磁带机自动弹起“咔哒”收尾。"
+        ],
+        "ending": "老林选择隐瞒翻案，用打火机点燃香烟，以一句温暖的谎言告慰亡友，磁带机弹起的声音留下悠长余韵。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_jianguo",
+        "story_name": "老林",
+        "external_goal": "查清搭档老陈二十年前“潜逃”的真相，还他清白。",
+        "emotional_avoidance": "回避当年自己办案失误导致女儿被绑架的内疚感。",
+        "speech_style": "简短、威严、受压时习惯用反问句和拍桌子掩饰情绪，语速偏快，结尾常带不容置疑的断句。",
+        "relationship_stance": "对徒弟小赵严厉但护短，对老陈充满愧疚与绝对的信任，不允许任何人诋毁老陈。"
+      },
+      {
+        "role_id": "zhao_ming",
+        "story_name": "小赵",
+        "external_goal": "协助师傅整理旧案卷宗，尽快结案让师傅安心退休。",
+        "emotional_avoidance": "害怕面对警队内部“黑警”丑闻带来的信仰动摇。",
+        "speech_style": "习惯用“师傅”开头，语气带有年轻人的直率，遇到疑点会直接抛出疑问，紧张时语速加快。",
+        "relationship_stance": "敬重老林，但在证据面前会坚持程序正义，与老林产生认知摩擦，最终被老林的情感选择折服。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "chen_yu",
+        "story_name": "老陈",
+        "performer_id": "voice_actor_chen",
+        "medium": "recording",
+        "dramatic_purpose": "通过二十年前的临终录音，揭示替主角顶罪并牺牲的温暖真相，完成情感高潮与认知颠覆。"
+      }
+    ],
+    "mystery_causal_proof": {
+      "actual_event_timeline": "二十年前，老陈在旧火车站与歹徒搏斗同归于尽，牺牲前用随身录音机录下遗言，并将老林遗失的警号当掉作为信物，磁带由线人暗中寄给老林，被老林妻子误作杂物收起，直到今日老林退休整理旧物才修复播放。",
+      "witnessed_event": "老林和小赵现在听到录音，发现背景音不是海浪而是火车站排风扇，且当票当物是老林的警号，从而推翻老陈潜逃的假象。",
+      "actor_opportunity": "老陈在牺牲前几分钟，利用火车站废弃值班室的录音机录下遗言，并在追捕途中将老林掉落的警号当入沿途当铺，换取歹徒线索。",
+      "audible_trace_before_reveal": "录音背景里的“海浪声”其实是排风扇的低频轰鸣，且老陈提到“钱我拿了”时声音带有火车站特有的空旷回音。",
+      "onstage_verification": "小赵用手机调出旧火车站排风扇的音频资料进行比对，频率完全一致；当票上的编号对应老林当年挂失的警号0842。"
+    },
+    "performance_plan": {
+      "sound_design": "磁带机的机械声（咔哒、沙沙声）作为时间转场的锚点；打火机点燃的清脆声作为情感落点；录音部分需做旧处理，加入底噪和空旷回音。",
+      "voice_direction": "老林的台词从最初的威严暴怒，逐渐过渡到颤抖、压抑，最后归于极度平静的沧桑；小赵的情绪从疑惑到震惊再到哽咽；老陈的录音需表现出濒死的虚弱与对搭档的温情。"
+    },
+    "continuity_constraints": [
+      "老陈的警号与老林的警号必须在台词中明确区分，当票上必须是老林的警号0842。",
+      "录音带必须是物理介质（磁带），不能是数字文件，以符合二十年前的时代背景。",
+      "老林的女儿在故事中不直接出场，仅通过台词提及，保持180秒的紧凑感。"
+    ],
+    "change_summary": [
+      "初始状态：老林和小赵认为老陈是畏罪潜逃的黑警，老林试图寻找证据反驳但缺乏实质线索。",
+      "最终状态：老林确认老陈是为救自己女儿而牺牲的英雄，选择隐瞒真相以保全老陈的“南方”谎言和女儿的平静生活。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-bb18a8fc",
+      "index": 1,
+      "title": "南方的回音",
+      "synopsis": "退休刑警老林在整理旧物时，通过一盘二十年前的磁带录音，发现被定性为“畏罪潜逃”的搭档老陈其实是为了救自己的女儿而牺牲，并默默背负了黑锅。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 173,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "scene_index": 1,
+          "title": "磁带里的枪声",
+          "location": "老林家书房",
+          "dramatic_goal": "引出悬念，确立老陈“黑警”的初始假象与老林的维护态度。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "老式磁带机咔哒按下，紧接着是一声沉闷的枪响和重物砸在铁轨上的声音。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "tape_start_and_gunshot"
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_ming",
+              "narrator_id": null,
+              "performer_id": "zhao_ming",
+              "text": "师傅，这盘旧磁带怎么会在陈叔的遗物箱底？他当年可是畏罪潜逃的黑警啊，这破带子里能有什么线索？",
+              "emotion": "neutral",
+              "tone_instruction": "语气带着不解与直率，前半句语调上扬提问，后半句气息微沉透出质疑。",
+              "emphasis": [
+                {
+                  "span_text": "陈叔的遗物箱底",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 19,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "什么线索",
+                  "occurrence": 1,
+                  "start_char": 41,
+                  "end_char": 45,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "疑惑，带着年轻人的直率；句末“线索”二字气息微收，留出半秒空白等待回应。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_jianguo",
+              "narrator_id": null,
+              "performer_id": "lin_jianguo",
+              "text": "别废话，把音量调大，继续放。",
+              "emotion": "serious",
+              "tone_instruction": "压低嗓音下达指令，咬字干脆利落，重音落在动作词上。",
+              "emphasis": [
+                {
+                  "span_text": "音量调大",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "继续放",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "威严，语速偏快；“别废话”后微顿0.3秒切入命令，尾音干脆切断，不留余地。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "铁证与反驳",
+          "location": "老林家书房",
+          "dramatic_goal": "通过录音内容制造第一次反转，老林用生活细节反驳潜逃定论。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "chen_yu",
+              "narrator_id": null,
+              "performer_id": "voice_actor_chen",
+              "text": "钱我拿了，人我放了。",
+              "emotion": "serious",
+              "tone_instruction": "气息微弱断续，带轻微气声，语速放缓，模拟磁带底噪与空旷回音中的临终陈述。",
+              "emphasis": [
+                {
+                  "span_text": "人我放了",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.75,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "濒死虚弱，带有空旷回音和底噪；保持麦克风距离固定，句末自然衰减不拖尾，配合后期磁带底噪处理。",
+              "audio_cue_ref": "tape_recording"
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_ming",
+              "narrator_id": null,
+              "performer_id": "zhao_ming",
+              "text": "师傅，铁证如山啊，他自己都承认拿钱放人了，这案子还有什么好查的？",
+              "emotion": "calm",
+              "tone_instruction": "语气平缓带叹息感，前半句陈述事实，后半句反问时音量微收，体现心照不宣的结案态度。",
+              "emphasis": [
+                {
+                  "span_text": "铁证如山啊",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "什么好查的",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 31,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "叹息，认为案件已无悬念；句首“师傅”后留0.3秒换气停顿，后半句尾音自然下沉，不刻意上扬。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_jianguo",
+              "narrator_id": null,
+              "performer_id": "lin_jianguo",
+              "text": "放屁！老陈戒烟十年，平时连买包烟的钱都抠抠搜搜，他哪来的巨款去买偷渡船票？这畏罪潜逃的定论根本站不住脚！",
+              "emotion": "angry",
+              "tone_instruction": "开篇爆破音重咬字，中段语速加快且字头清晰，末句压低喉位加重语气，体现不容置疑的反驳。",
+              "emphasis": [
+                {
+                  "span_text": "放屁！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "站不住脚！",
+                  "occurrence": 1,
+                  "start_char": 47,
+                  "end_char": 52,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "暴怒拍桌，语速快，不容置疑；“放屁！”后接0.2秒拍桌音效同步切入，后续句子保持紧凑节奏，句末不留额外空白直接切断。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "scene_index": 3,
+          "title": "排风扇与当票",
+          "location": "老林家书房",
+          "dramatic_goal": "通过听觉线索和物证推翻假象，揭示老陈牺牲救人的核心真相。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_jianguo",
+              "narrator_id": null,
+              "performer_id": "lin_jianguo",
+              "text": "把耳机戴上，闭上眼睛，仔细听他说话时的背景音。",
+              "emotion": "serious",
+              "tone_instruction": "压低嗓音，语速放缓，用指令性口吻引导对方集中注意力。",
+              "emphasis": [
+                {
+                  "span_text": "把耳机戴上",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "仔细听",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "压抑情绪，引导徒弟；句末“背景音”后留0.5秒停顿，等待对方动作反馈。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_ming",
+              "narrator_id": null,
+              "performer_id": "zhao_ming",
+              "text": "这轰隆隆的声音……像是码头的海浪声？难道他真去海边坐船了？这背景音骗不了人吧？",
+              "emotion": "worried",
+              "tone_instruction": "前半段带着迟疑的推测语气，后半句转为自我怀疑与求证。",
+              "emphasis": [
+                {
+                  "span_text": "码头的海浪声",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 17,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "骗不了人吧",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 38,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "仔细辨认后产生误解；“声音……”处加入轻微吸气与磁带底噪摩擦感，模拟专注倾听后的反应。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_jianguo",
+              "narrator_id": null,
+              "performer_id": "lin_jianguo",
+              "text": "你听清楚，那是旧火车站排风扇的低频轰鸣，带着铁皮震动的回音！他根本没去码头，他去了废弃的旧火车站！",
+              "emotion": "serious",
+              "tone_instruction": "咬字加重，语气果断斩截，后半句提高音量以打破徒弟的误判。",
+              "emphasis": [
+                {
+                  "span_text": "旧火车站排风扇",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "废弃的旧火车站",
+                  "occurrence": 1,
+                  "start_char": 41,
+                  "end_char": 48,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "笃定，指出破绽；“回音！”后短促换气，紧接着以不容置疑的断句抛出结论。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_ming",
+              "narrator_id": null,
+              "performer_id": "zhao_ming",
+              "text": "师傅，您看！磁带盒底部粘着半张当票，当物写着……警号0842？这不是您当年在追捕中弄丢的警号吗？陈叔怎么会拿着您的警号去当铺？",
+              "emotion": "surprised",
+              "tone_instruction": "发现线索时语调陡然上扬，念出警号时气息发紧，连珠炮式追问带出慌乱。",
+              "emphasis": [
+                {
+                  "span_text": "警号0842",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 30,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "弄丢的警号",
+                  "occurrence": 1,
+                  "start_char": 41,
+                  "end_char": 46,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "震惊，语速加快；“写着……”处刻意拉长并伴随纸张翻动音效的想象空间，制造悬念停顿。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_jianguo",
+              "narrator_id": null,
+              "performer_id": "lin_jianguo",
+              "text": "0842……我想起来了。当年被绑架的人质，是我女儿。老陈为了换出丫头，穿上了嫌犯的外套引开歹徒。这盘录音，是他牺牲前在火车站值班室留下的遗言！他当掉我的警号，是为了给我留个念想啊！",
+              "emotion": "sad",
+              "tone_instruction": "起头气若游丝且微颤，叙述真相时逐渐哽咽，最后一句压低嗓音，带着浓重的自责与不舍。",
+              "emphasis": [
+                {
+                  "span_text": "是我女儿",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 25,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "留个念想啊",
+                  "occurrence": 1,
+                  "start_char": 84,
+                  "end_char": 89,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "声音颤抖，从震惊转为极度的愧疚与悲痛；“我想起来了。”后留2秒空白，模拟记忆冲击带来的生理性失语，随后气息下沉接续回忆。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "chen_yu",
+              "narrator_id": null,
+              "performer_id": "voice_actor_chen",
+              "text": "林哥，丫头明天高考，别告诉她我死了，就说我去了南方。",
+              "emotion": "tender",
+              "tone_instruction": "气息平稳柔和，语速舒缓，尾音微微上扬传递托付与释怀。",
+              "emphasis": [
+                {
+                  "span_text": "明天高考",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "去了南方",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 25,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "温情，释然，伴随磁带沙沙声；整体叠加轻度磁带底噪处理，句末“南方”二字渐弱，自然过渡至环境余韵。",
+              "audio_cue_ref": "tape_recording"
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "scene_index": 4,
+          "title": "南方的回音",
+          "location": "老林家书房",
+          "dramatic_goal": "完成情感抉择，老林选择隐瞒真相以守护女儿的平静，留下温暖余韵。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_ming",
+              "narrator_id": null,
+              "performer_id": "zhao_ming",
+              "text": "师傅……陈叔他是英雄啊！我们马上把证据交上去，上报翻案，绝不能让他背着黑警的骂名！",
+              "emotion": "sad",
+              "tone_instruction": "声音微颤带哭腔，前半句压抑，后半句加快语速表达急切。",
+              "emphasis": [
+                {
+                  "span_text": "英雄",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "上报翻案",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 27,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "哽咽，激动；‘师傅……’后留0.5秒吸气停顿，随后语气上扬。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_jianguo",
+              "narrator_id": null,
+              "performer_id": "lin_jianguo",
+              "text": "翻案？然后让丫头知道，她高考那天，是她陈叔用命换了她？让她这辈子都背着还不清的债？",
+              "emotion": "serious",
+              "tone_instruction": "起音低沉反问，每问一句语速放缓，尾音下沉收住情绪。",
+              "emphasis": [
+                {
+                  "span_text": "翻案",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "用命换了她",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "反问，情绪逐渐收敛；三句反问间各留0.3秒气口，最后一句咬字加重但音量压低。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_ming",
+              "narrator_id": null,
+              "performer_id": "zhao_ming",
+              "text": "可是真相……",
+              "emotion": "worried",
+              "tone_instruction": "语气犹豫，后半句自然中断，气息微浮。",
+              "emphasis": [
+                {
+                  "span_text": "真相",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 4,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "迟疑；说完后留1秒空白，等待对方接话。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_jianguo",
+              "narrator_id": null,
+              "performer_id": "lin_jianguo",
+              "text": "真相就是，他不想让丫头有负担。",
+              "emotion": "calm",
+              "tone_instruction": "吐字清晰平稳，‘负担’二字微微顿挫以示郑重。",
+              "emphasis": [
+                {
+                  "span_text": "负担",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "平静，坚定；句首平稳起音，保持胸腔共鸣。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "zhao_ming",
+              "narrator_id": null,
+              "performer_id": "zhao_ming",
+              "text": "那这案子……",
+              "emotion": "serious",
+              "tone_instruction": "音调微升表示询问，尾音拖长留出思考空间。",
+              "emphasis": [
+                {
+                  "span_text": "案子",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 4,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "不解；‘那这案子……’后留0.8秒停顿，呼吸声轻不可闻。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "老林摸出老陈留下的旧打火机，咔哒一声，点燃了香烟。",
+              "emotion": "neutral",
+              "tone_instruction": "语速平稳客观，不掺杂主观情绪，重音落在动作词上。",
+              "emphasis": [
+                {
+                  "span_text": "旧打火机",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "点燃了香烟",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 24,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "客观旁白，配合清脆的打火机音效；念到‘咔哒一声’时实际停顿0.5秒，待SFX播放完毕再接读后续。",
+              "audio_cue_ref": "lighter_click"
+            },
+            {
+              "line_id": "ep1-s4-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_jianguo",
+              "narrator_id": null,
+              "performer_id": "lin_jianguo",
+              "text": "老陈在南方，活得挺好。把带子收起来吧，别让丫头听见。",
+              "emotion": "calm",
+              "tone_instruction": "嗓音沙哑但语调平缓，后半句转为低声嘱咐。",
+              "emphasis": [
+                {
+                  "span_text": "活得挺好",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "别让丫头听见",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 25,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.88,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "极度平静的沧桑，释然；第一句结束后换气一次，第二句音量渐弱，收尾干净。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l8",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "磁带机自动弹起，咔哒一声，余音渐弱。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": "tape_eject"
+            }
+          ]
+        }
+      ],
+      "episode_summary": "老林与小赵在整理旧案卷宗时意外播放了老陈的遗物磁带。通过录音背景音的破绽和一张当票，老林推翻了老陈潜逃的假象，拼凑出老陈为救自己女儿而牺牲的真相。最终，老林选择隐瞒翻案，用一句温暖的谎言告慰亡友。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "老陈并非畏罪潜逃的黑警，而是为救老林女儿牺牲的英雄。"
+        },
+        {
+          "fact": "录音背景音是旧火车站排风扇的轰鸣，而非码头海浪声。"
+        },
+        {
+          "fact": "当票上的警号0842属于老林，是老陈牺牲前留下的信物。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "老林对老陈的认知从“怀疑与维护”转变为“彻底的愧疚与敬仰”。"
+        },
+        {
+          "relationship": "小赵对老陈的认知从“黑警”转变为“英雄”，并对老林的选择产生理解。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "老陈二十年前“畏罪潜逃”的悬案真相。",
+        "老林女儿当年被绑架获救的真实内情。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "老陈并非畏罪潜逃的黑警，而是为救老林女儿牺牲的英雄。"
+      },
+      {
+        "fact": "录音背景音是旧火车站排风扇的轰鸣，而非码头海浪声。"
+      },
+      {
+        "fact": "当票上的警号0842属于老林，是老陈牺牲前留下的信物。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "老林对老陈的认知从“怀疑与维护”转变为“彻底的愧疚与敬仰”。"
+      },
+      {
+        "relationship": "小赵对老陈的认知从“黑警”转变为“英雄”，并对老林的选择产生理解。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 18,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "delivery_format_version": "1.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "061a18f9008b487da3292e5628f24df7",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:25:08.596369+00:00",
+      "status": "timeout",
+      "error": "timeout",
+      "error_code": "MODEL_TIMEOUT",
+      "usage_source": "unavailable",
+      "latency_ms": 90347,
+      "completed_at": "2026-10-12T02:26:38.944088+00:00"
+    },
+    {
+      "principal_id": "local",
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "3d104815ac38418eafabaf88a4095df9",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 2,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:26:40.452310+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4647,
+      "output_tokens": 5816,
+      "cache_read_tokens": 4608,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4049,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1c829c31-9064-4e19-bbbc-eb574cb65dd9",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 78760,
+      "completed_at": "2026-10-12T02:27:59.213368+00:00"
+    },
+    {
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "job_id": "2b50d475a79a4fe0a76f173d69927d86",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "4dbc96d6631f496ea05575e533c364cc",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:27:59.240368+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 7503,
+      "output_tokens": 7650,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5278,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "05ae9086-6c22-449e-8a3b-b6cf3b1db146",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 74371,
+      "completed_at": "2026-10-12T02:29:13.611905+00:00"
+    },
+    {
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "job_id": "2b50d475a79a4fe0a76f173d69927d86",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "4fb8aabf08d94652b8c9f03158cb59fb",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:29:13.619699+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2049,
+      "output_tokens": 4014,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3652,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "023a69ca-3e29-4256-b2cf-20d4315b7a57",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 27203,
+      "completed_at": "2026-10-12T02:29:40.823169+00:00"
+    },
+    {
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "job_id": "2b50d475a79a4fe0a76f173d69927d86",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "5f859f9a34b24533a9faf6e0c30fe915",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:29:40.830708+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2172,
+      "output_tokens": 4414,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3871,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "43ae0543-4aa1-4b30-8312-3ccd330d2438",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 29033,
+      "completed_at": "2026-10-12T02:30:09.864776+00:00"
+    },
+    {
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "job_id": "2b50d475a79a4fe0a76f173d69927d86",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "14d52e55080644498323f77b66405a06",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:30:09.870776+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2548,
+      "output_tokens": 4745,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3666,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "a77ab5ea-cc2f-4b6f-b164-8848f40acacf",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 30379,
+      "completed_at": "2026-10-12T02:30:40.250433+00:00"
+    },
+    {
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "job_id": "2b50d475a79a4fe0a76f173d69927d86",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "a040efac1cad486285e22699a0897816",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:30:40.254437+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2515,
+      "output_tokens": 4415,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3348,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "61e576cf-b48a-4826-b465-95a07995339a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 27662,
+      "completed_at": "2026-10-12T02:31:07.916199+00:00"
+    },
+    {
+      "request_id": "499f5b5c09734645b4919040bebd714e",
+      "job_id": "2b50d475a79a4fe0a76f173d69927d86",
+      "plan_id": "5909b59790674372a0cc93210c8aa2f7",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "452c954dd59b484aae187ef6e1efc79f",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:31:07.921202+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7545,
+      "output_tokens": 1519,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1477,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "fc13f414-5fff-424e-9eac-dce0ffa71156",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 12926,
+      "completed_at": "2026-10-12T02:31:20.848343+00:00"
+    }
+  ],
+  "created_at": "2026-10-12T02:31:07.918204Z"
+}

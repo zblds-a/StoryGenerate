@@ -1,0 +1,250 @@
+{
+  "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "viral_drama",
+    "mode_label": "爆款广播剧",
+    "genre_id": "G14",
+    "genre_name": "职场生存",
+    "genre_mechanism": "专业能力对抗职场困境",
+    "genre_emotion": "思→燃→成",
+    "recipe_id": "R7",
+    "recipe_name": "逆袭打脸",
+    "recipe_slots": {
+      "A": "被轻视/被抛弃的底层主角",
+      "B": "隐藏的才华/财富/身份（观众已知但对手不知）",
+      "C": "死忠伙伴/慧眼识珠的伯乐",
+      "D": "傲慢的昔日施害者/看低者",
+      "E": "平行命运、不同选择的对照"
+    },
+    "recipe_landing_note": "节奏至上。每3-5分钟一次身份揭示或打脸事件。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "认知差碾压式冲突：主角的实力远超对手预期，冲突来自对手的傲慢误判与主角的逐步揭示。每次打脸后对手升级，形成螺旋上升的对抗节奏。禁止让主角长期处于劣势压抑状态。",
+    "causal_driver": "被轻视 → 隐忍/准备 → 关键场合亮剑 → 对手震惊 → 对手升级对抗 → 主角再次碾压 → 终局大胜。每次升级都来自主角的真实积累（技能/资源/人脉），不是运气。",
+    "ending_strategy": "主角获得与其实际能力相匹配的认可和地位。对手可以悔悟但不强制和解。可以继续向上探索更大世界。结局必须有明确的身份/地位提升。",
+    "tone_guidance": "爽快、节奏明快、渐进式满足。观众代入的是'你们终于知道我是谁了'的释放感。禁止虐主情节超过全篇15%。",
+    "genre_data": {
+      "genre_id": "G14",
+      "name": "职场生存",
+      "works": "理想之城 / 无所畏惧",
+      "emotion": "思→燃→成",
+      "mechanism": "专业能力对抗职场困境",
+      "audio_fit": "mid",
+      "audio_fit_score": 60,
+      "driver": "电话、会议、键盘声是主战场",
+      "default_recipe": "R13",
+      "keywords": [
+        "职场",
+        "商战",
+        "办公室",
+        "跳槽",
+        "竞争",
+        "项目",
+        "升职",
+        "行业",
+        "公司",
+        "谈判",
+        "企业"
+      ]
+    },
+    "recipe_data": {
+      "id": "R7",
+      "name": "逆袭打脸",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "high",
+      "audio_fit_score": 88,
+      "default_mode": "viral_drama",
+      "supported_modes": [
+        "viral_drama",
+        "general"
+      ],
+      "A": "被轻视/被抛弃的底层主角",
+      "B": "隐藏的才华/财富/身份（观众已知但对手不知）",
+      "C": "死忠伙伴/慧眼识珠的伯乐",
+      "D": "傲慢的昔日施害者/看低者",
+      "E": "平行命运、不同选择的对照",
+      "reference": "赘婿 / 虎妈驾到",
+      "landing_note": "节奏至上。每3-5分钟一次身份揭示或打脸事件。",
+      "conflict_mechanism": "认知差碾压式冲突：主角的实力远超对手预期，冲突来自对手的傲慢误判与主角的逐步揭示。每次打脸后对手升级，形成螺旋上升的对抗节奏。禁止让主角长期处于劣势压抑状态。",
+      "causal_driver": "被轻视 → 隐忍/准备 → 关键场合亮剑 → 对手震惊 → 对手升级对抗 → 主角再次碾压 → 终局大胜。每次升级都来自主角的真实积累（技能/资源/人脉），不是运气。",
+      "ending_strategy": "主角获得与其实际能力相匹配的认可和地位。对手可以悔悟但不强制和解。可以继续向上探索更大世界。结局必须有明确的身份/地位提升。",
+      "tone_guidance": "爽快、节奏明快、渐进式满足。观众代入的是'你们终于知道我是谁了'的释放感。禁止虐主情节超过全篇15%。"
+    }
+  },
+  "plan": {
+    "title": "重构底线",
+    "premise": "35岁被辞退的程序员林远，利用前同事留下的干净源码和遣散费，在共享办公室开发出碾压原公司的AI引擎，最终在发布会上完成降维打击并实现阶层跃升。",
+    "theme": "真正的技术尊严不来源于职级，而来源于对代码的纯粹与坚守。",
+    "beginning": "林远被前老板赵总以年龄和能力为由羞辱辞退，带着赔偿金和装有前同事小陈遗留源码的U盘来到嘈杂的共享办公室，决心重写底层架构。",
+    "development": "赵总找上门嘲讽并逼迫签竞业协议，林远当场指出赵总新产品的致命Bug完成首次打脸。随后林远进入心流状态，在小陈源码的温暖注释辅助下攻克技术难关，完成“星火”引擎。",
+    "climax": "赵总在新品发布会上吹嘘自主研发，林远将“星火”引擎一键提交至全球开源社区。发布会大屏被“星火”的跑分数据强行切入，性能碾压十倍，赵总看着架构师署名彻底崩溃。",
+    "ending": "林远拒绝赵总的求和电话，选择全面开源。在顶级科技巨头CEO的震撼邀约电话中，林远按下接听，以行业地位的巨大跃升戛然而止。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "星火燎原",
+        "core_goal": "林远开发出颠覆性AI引擎，在发布会上击溃前老板的虚假产品，确立自己的行业地位。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：重重拍桌声伴随纸张撕裂，赵总冷笑：‘35岁，代码写得再好也是废人，拿着N+1滚吧。’",
+          "[3-10s] 矛盾三要素：场景切至嘈杂共享办公室。林远清点遣散费，插入U盘，听到小陈留下的加密音频：‘远哥，核心架构的冗余我清理了，这是干净的源码，别让它烂在赵总手里。’林远确立目标：重构引擎。",
+          "[10-30s] 第一次反转：赵总带助理来共享办公室找林远签竞业协议，嘲讽他还在敲破烂代码。林远停下键盘，冷静报出赵总即将发布的新系统三个致命内存泄漏点。助理查证后确认，赵总从不屑转为震惊，狼狈离开。",
+          "[30-120s] 中段推进：林远进入心流状态，键盘声如暴雨。穿插小陈源码中温暖的注释语音（‘远哥，这行代码我熬了三个通宵，给你留了后门’）。林远解决最后一个并发冲突，完成‘星火’引擎。背景音播放赵总公司新品发布会直播，赵总正在吹嘘‘完全自主研发’。",
+          "[120-153s] 升级/二次反转：林远将‘星火’一键提交至全球开源社区。发布会直播中，赵总背后的演示大屏突然弹出‘星火’的实时跑分对比，性能碾压十倍。现场哗然，赵总看着屏幕上‘架构师：林远、小陈’的署名，彻底崩溃。",
+          "[153-170s] 结局收束：林远看着手机上瞬间涌入的几十家顶级VC未接来电。赵总的电话疯狂震动，林远平静地按下‘拒绝’并点击‘全面开源’。小陈的声音回响：‘远哥，让技术属于所有人。’",
+          "[170-180s] 强钩子：手机再次震动，来电显示‘全球最大AI开源基金会主席’。林远嘴角上扬，滑下接听键，对方激动地说：‘林神，整个行业都在等您……’话音未落，全剧终。"
+        ],
+        "ending": "主角拒绝前老板，选择开源，并在顶级巨头的邀约中实现地位跃升，以强钩子收束。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_yuan",
+        "story_name": "林远",
+        "external_goal": "利用遗留源码开发出颠覆原公司的AI引擎，证明自己的技术价值。",
+        "emotional_avoidance": "回避谈论年龄焦虑和职场PUA，拒绝情绪内耗，只用代码和运行结果说话。",
+        "speech_style": "简短、冷静、语速平稳。喜欢用精确的技术术语和数据降维打击对手，受压时不辩解，直接抛出致命Bug。",
+        "relationship_stance": "对赵总冷漠蔑视，视其为技术外行；对小陈充满怀念与责任感，将其视为技术理想的传承者。"
+      },
+      {
+        "role_id": "zhao_zong",
+        "story_name": "赵总",
+        "external_goal": "压榨员工剩余价值，维持公司技术领先的假象以获取融资。",
+        "emotional_avoidance": "极力回避自身技术无能的事实，习惯用职级、年龄和宏大词汇掩饰空洞。",
+        "speech_style": "爹味说教，喜欢用‘赋能、闭环、底层逻辑’等互联网黑话。气急败坏时语无伦次，声音尖锐。",
+        "relationship_stance": "前期视林远为可随意替换的底层工具，后期转为对林远技术实力的恐惧、嫉妒与卑微求和。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "xiao_chen",
+        "story_name": "小陈",
+        "performer_id": "voice_actor_xiao_chen",
+        "medium": "recording",
+        "dramatic_purpose": "提供温暖底色与源码线索，证明林远不是孤军奋战，强化‘技术属于所有人’的主题，并在结尾形成情感回响。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "键盘敲击声的节奏变化代表主角的心流与情绪起伏；环境音从嘈杂的共享办公室到极度安静的心流状态形成对比。",
+      "music_cues": "前段使用压抑的低频电子音，中段切入快节奏燃向鼓点配合代码编写，结尾使用宏大交响乐推向高潮后在接听电话瞬间骤停。",
+      "vocal_direction": "林远的台词需贴近麦克风，营造冷静克制的ASMR感；赵总的台词需带有空间混响，凸显其虚张声势。"
+    },
+    "continuity_constraints": [
+      "小陈的录音必须在3-10s首次出现，严禁在结尾才首次揭示隐藏留言。",
+      "赵总新产品的内存泄漏Bug必须在10-30s被林远指出，并在120-153s的发布会上被跑分数据证实。",
+      "林远的赔偿金和U盘是核心道具，需有明确的音效提示（如硬币声、USB插入声）。",
+      "最后15%（153-180s）严禁引入法院传票等新危机，必须聚焦于人物选择与地位跃升。"
+    ],
+    "change_summary": [
+      "初始构思中结尾引入了原公司发起商业机密诉讼的法院传票作为强钩子，为严格遵守‘不得在主冲突结束后塞入新危机’的结尾契约，修改为全球最大AI开源基金会主席的邀约电话，以身份跃升的爽点延续作为强钩子收尾。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "viral_drama",
+    "content_form": "audio_drama",
+    "genre": "G14",
+    "recipe_id": "R7",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "db541b4a82784ec1bb684661f3330bf0",
+      "plan_id": "e8cc53d8e4fc4184816754f8cc68516d",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "7a5efdcf7bb9471b989c37377536a05f",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:31:20.982596+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4635,
+      "output_tokens": 4590,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2889,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "a8cd3735-9b87-423f-b801-c02815ece7d3",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 70280,
+      "completed_at": "2026-10-12T02:32:31.263681+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "32db49f6b8e5476044e144e06bf4582a759811611f33168857b6d6cafa0976cd",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T02:32:31.263681Z",
+  "updated_at": "2026-10-12T02:32:31.263681Z"
+}

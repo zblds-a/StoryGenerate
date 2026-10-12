@@ -1,0 +1,268 @@
+{
+  "plan_id": "c194b99df15c41509cc8f489579b2e10",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "viral_drama",
+    "mode_label": "爆款广播剧",
+    "genre_id": "G12",
+    "genre_name": "都市异能",
+    "genre_mechanism": "能力与代价的双重成长",
+    "genre_emotion": "惊→燃→思",
+    "recipe_id": "R10",
+    "recipe_name": "异能觉醒",
+    "recipe_slots": {
+      "A": "偶然获得特殊能力的普通人",
+      "B": "能力本身（需规则明确、有代价）",
+      "C": "同能力者联盟/导师",
+      "D": "觊觎能力的组织/势力",
+      "E": "失去能力/滥用能力的警示对照"
+    },
+    "recipe_landing_note": "能力触发必须有专属音效。视觉化能力需改写为听觉可感知的效果。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "能力代价式冲突：能力的每一次使用都付出相应代价（身体损耗、暴露风险、道德困境），冲突来自'使用'与'克制'之间的抉择。外部反派存在的意义是迫使主角使用能力。核心矛盾不是打不过而是用不起。",
+    "causal_driver": "意外获得能力 → 试错与失控 → 被组织盯上 → 被迫使用能力自保 → 代价显现 → 面临终极选择（舍弃能力 or 接受代价）。每一步都加深能力与代价的绑定。",
+    "ending_strategy": "接受能力的代价或主动放弃能力。不可以'突然觉醒更高能力'轻松解决。结局落在'普通人加上能力还是普通人'——能力不改变人性本质。",
+    "tone_guidance": "紧张、代价感。能力触发音效是核心听觉资产。用环境音的改变体现能力效果（而非旁白解释）。能力使用后的虚弱/痛苦必须可听见。",
+    "genre_data": {
+      "genre_id": "G12",
+      "name": "都市异能",
+      "works": "超能失控 / 异能家庭",
+      "emotion": "惊→燃→思",
+      "mechanism": "能力与代价的双重成长",
+      "audio_fit": "mid",
+      "audio_fit_score": 55,
+      "driver": "能力触发需专属音效",
+      "default_recipe": "R10",
+      "keywords": [
+        "异能",
+        "超能力",
+        "觉醒",
+        "变异",
+        "特殊能力",
+        "天赋",
+        "能力者",
+        "超自然",
+        "力量"
+      ]
+    },
+    "recipe_data": {
+      "id": "R10",
+      "name": "异能觉醒",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "mid",
+      "audio_fit_score": 55,
+      "default_mode": "viral_drama",
+      "supported_modes": [
+        "viral_drama",
+        "mystery"
+      ],
+      "A": "偶然获得特殊能力的普通人",
+      "B": "能力本身（需规则明确、有代价）",
+      "C": "同能力者联盟/导师",
+      "D": "觊觎能力的组织/势力",
+      "E": "失去能力/滥用能力的警示对照",
+      "reference": "超能失控 / 异能家庭",
+      "landing_note": "能力触发必须有专属音效。视觉化能力需改写为听觉可感知的效果。",
+      "conflict_mechanism": "能力代价式冲突：能力的每一次使用都付出相应代价（身体损耗、暴露风险、道德困境），冲突来自'使用'与'克制'之间的抉择。外部反派存在的意义是迫使主角使用能力。核心矛盾不是打不过而是用不起。",
+      "causal_driver": "意外获得能力 → 试错与失控 → 被组织盯上 → 被迫使用能力自保 → 代价显现 → 面临终极选择（舍弃能力 or 接受代价）。每一步都加深能力与代价的绑定。",
+      "ending_strategy": "接受能力的代价或主动放弃能力。不可以'突然觉醒更高能力'轻松解决。结局落在'普通人加上能力还是普通人'——能力不改变人性本质。",
+      "tone_guidance": "紧张、代价感。能力触发音效是核心听觉资产。用环境音的改变体现能力效果（而非旁白解释）。能力使用后的虚弱/痛苦必须可听见。"
+    }
+  },
+  "plan": {
+    "title": "心跳回声",
+    "premise": "普通上班族在地铁事故后获得读心能力，却因能力代价和同事们隐瞒的“秘密”陷入猜忌，最终发现残酷表象下温暖的真相。",
+    "theme": "能力的代价与人性的温度；真正的救赎不是超能力，而是人与人之间的羁绊。",
+    "beginning": "地铁事故后，林默带着读心能力回到公司，却听到主管老赵要开除他，并隐瞒了一笔钱。",
+    "development": "林默不顾流鼻血和头痛的代价，强行读取同事小雅等人的内心，拼凑出大家隐瞒他“绝症”的错觉，陷入绝望与猜忌。",
+    "climax": "林默拼着彻底失聪的风险，最后一次读取老赵的内心，发现大家隐瞒的秘密其实是他为救人受重伤，大家凑钱骗他是保险理赔，只为让他安心手术。",
+    "ending": "林默选择接受手术和大家的好意，没有揭穿秘密。在平稳的地铁声中，他接纳了能力的代价与平凡人生的温暖。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "心跳回声",
+        "core_goal": "揭示同事们隐瞒的秘密，完成林默从猜忌到接受的情感转变。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：地铁急刹车的刺耳金属摩擦声突变为主角剧烈的心跳与高频耳鸣（能力触发音效），老赵冷酷的声音切入：‘林默，你明天不用来了。’",
+          "[3-15s] 矛盾展开：林默在工位上捂着剧痛的头，伴随沉重的喘息。他发动读心能力（环境音瞬间抽空，只剩混响），听到老赵内心：‘那笔钱绝对不能让他知道来源，不然他死也不会要。’",
+          "[15-30s] 第一次反转：林默以为老赵贪污了他的事故赔偿金，愤怒拍桌质问。老赵否认并赶他走。林默强行读取旁边小雅的心，听到小雅内心哭诉：‘赵哥把房子都抵押了，林默要是知道真相，肯定不肯做手术。’林默鼻腔一热，滴血声响起（代价显现）。",
+          "[30-120s] 中段推进：林默躲进洗手间，洗掉鼻血，耳鸣声持续。他陷入恐慌，以为同事们隐瞒的是自己得了绝症。他试图再次读心门外经过的同事，但头痛让他几乎晕厥（心跳声杂乱、视线模糊的音效）。他听到碎片化的内心声音：‘瞒住他’‘手术成功率’‘不能让他有负担’。",
+          "[120-155s] 升级与真相揭示：林默冲出洗手间，抓住正准备离开的老赵，不顾耳朵流血的风险，最后一次深度读心。老赵完整的内心声音浮现：‘林默在地铁里为了救小雅被砸伤了脊椎，医生说手术成功率只有30%。我们凑了这笔钱，骗他是公司保险赔的，就是怕他内疚不敢上手术台。’",
+          "[155-180s] 结局收束：能力解除，环境音恢复。林默没有揭穿，而是用纸巾擦去鼻血，笑着对老赵说：‘赵哥，我同意做手术了。’老赵愣住，声音哽咽。林默轻声说‘谢谢你们’。伴随温暖的钢琴声和地铁平稳运行的音效（呼应开头），故事温暖收束。"
+        ],
+        "ending": "林默选择接受手术，没有揭穿同事们的善意谎言。在平稳的地铁运行声中，他接纳了能力的代价与平凡人生的温暖。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_mo",
+        "story_name": "林默",
+        "external_goal": "查明同事们隐瞒的关于自己人生的秘密，弄清自己是否面临绝症或被贪污赔偿。",
+        "emotional_avoidance": "害怕成为别人的负担，抗拒接受他人巨大的牺牲。",
+        "speech_style": "语速较快，带着打工人的疲惫与防备；受压时声音发紧，习惯用反问句掩饰慌乱。",
+        "relationship_stance": "对主管老赵表面敬畏实则防备，对小雅等同事保持距离，但在得知真相后转为深深的感激与羁绊。"
+      },
+      {
+        "role_id": "lao_zhao",
+        "story_name": "老赵",
+        "external_goal": "隐瞒筹集手术费的真相，逼迫林默接受“公司赔偿”并安心去做脊椎手术。",
+        "emotional_avoidance": "害怕林默因为内疚而放弃治疗，刻意用冷酷的职场面具掩饰关心。",
+        "speech_style": "简短、生硬、不带感情色彩的祈使句；内心独白时则充满焦急与无奈。",
+        "relationship_stance": "表面是严厉苛刻的主管，实则是如父兄般默默扛下责任的保护者。"
+      },
+      {
+        "role_id": "xiao_ya",
+        "story_name": "小雅",
+        "external_goal": "配合老赵演戏，在林默面前维持日常氛围，不让他察觉大家为他抵押房产凑钱的秘密。",
+        "emotional_avoidance": "害怕林默发现真相后产生心理负担，极力掩饰自己的愧疚与担忧。",
+        "speech_style": "表面语气轻快、活泼，带着职场新人的元气；内心独白时则带着明显的哭腔和颤抖。",
+        "relationship_stance": "被林默在事故中救下的幸存者，对林默充满感激与愧疚，视他为恩人。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "核心听觉资产是‘读心触发音效’：高频耳鸣+心跳重音，随后环境音瞬间抽空，内心声音加混响。‘代价音效’包括：沉重的喘息、纸巾擦拭鼻血的摩擦声、持续的耳鸣底噪。开头地铁事故用刺耳金属摩擦声，结尾用平稳柔和的地铁运行声形成对比。",
+      "acting_notes": "林默的配音需要体现从疲惫、猜忌、崩溃到最终释怀的层次，读心时的痛苦要通过气息和咬牙声表现。老赵表面冷酷，内心独白时要透出疲惫和深情。小雅表面活泼，内心独白要带哭腔。"
+    },
+    "continuity_constraints": [
+      "读心能力的触发和解除必须严格伴随环境音的抽空与恢复，不能靠旁白解释。",
+      "每次使用读心能力后，必须出现流鼻血或头痛的代价音效，且代价随使用次数加重。",
+      "最后15%（153-180秒）必须完成情感收束，不得出现新危机或戛然而止。"
+    ],
+    "change_summary": [
+      "将用户指令中的‘改变他人生的秘密’从悬疑/暗黑向调整为温暖治愈向，以符合tone_style(warm)和ending_contract的要求。",
+      "将beat_sheet中S6的‘戛然而止’规则覆盖为ending_contract要求的‘情感收束’，确保故事完整闭环。",
+      "将视觉化的读心能力转化为‘环境音抽空+混响+耳鸣’的听觉设计，符合广播剧媒介特性。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "viral_drama",
+    "content_form": "audio_drama",
+    "genre": "G12",
+    "recipe_id": "R10",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "bcc66a1479f64d6787bbfea9663aae6d",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:04:57.148345+00:00",
+      "status": "error",
+      "error": "RemoteProtocolError",
+      "error_code": "RemoteProtocolError",
+      "usage_source": "unavailable",
+      "latency_ms": 75224,
+      "completed_at": "2026-10-12T03:06:12.373000+00:00"
+    },
+    {
+      "principal_id": "local",
+      "request_id": "cbabb6c3a49b4f758d0be2fe7f733f9e",
+      "plan_id": "c194b99df15c41509cc8f489579b2e10",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "fdfa0753eaf3454cb1ff916db9c0717d",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 2,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:06:13.883323+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4639,
+      "output_tokens": 5512,
+      "cache_read_tokens": 4608,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3826,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "2dc4bc28-1486-43c1-80b6-27ffea033d4e",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 83959,
+      "completed_at": "2026-10-12T03:07:37.842637+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "c81da38be49f0a8e6eb6aea80e61f8457e5b38fbedc0c116fa53e6a65fd0dd65",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T03:07:37.843637Z",
+  "updated_at": "2026-10-12T03:07:37.843637Z"
+}

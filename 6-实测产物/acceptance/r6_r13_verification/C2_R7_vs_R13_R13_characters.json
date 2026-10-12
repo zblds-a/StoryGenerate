@@ -1,0 +1,42 @@
+{
+  "lin_xiu": {
+    "role_id": "lin_xiu",
+    "character_id": "lin_xiu",
+    "performer_id": "lin_xiu",
+    "story_name": "林修",
+    "canon_name": "林修",
+    "immutable_facts": [],
+    "goal": "在共享办公室用前同事给的废弃源码重构出颠覆性的轻量级引擎，并在今天完成上线。",
+    "motivation": "",
+    "fear": "避免谈论自己被辞退时的屈辱，用极度理性的代码逻辑和客观数据掩盖内心的不甘。",
+    "speech_style": "语速平稳，多用技术术语和短句，面对挑衅时不提高音量，而是用数据反驳。",
+    "relationship_stance": "对前公司主管赵凯保持冷漠的专业态度，不卑不亢；对暗中帮忙的陈默抱有默契的信任。",
+    "source": "character_portrayal"
+  },
+  "zhao_kai": {
+    "role_id": "zhao_kai",
+    "character_id": "zhao_kai",
+    "performer_id": "zhao_kai",
+    "story_name": "赵凯",
+    "canon_name": "赵凯",
+    "immutable_facts": [],
+    "goal": "阻止林修的产品上线，或以极低价格收购其代码，以掩盖自己当初误判废弃该项目的失误。",
+    "motivation": "",
+    "fear": "拒绝承认自己技术眼光短浅，将林修的成功归结为‘偷窃公司资产’或‘运气’。",
+    "speech_style": "习惯用上位者的施压口吻，喜欢用‘行业封杀’‘法务警告’等词汇，受挫时情绪容易失控、音量拔高。",
+    "relationship_stance": "视林修为必须碾碎的威胁，试图用职场权力和资源壁垒压制对方的专业能力。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

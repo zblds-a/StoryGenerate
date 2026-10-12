@@ -1,0 +1,257 @@
+{
+  "plan_id": "1ef095fd39544b58b678ae083b55b721",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "general",
+    "mode_label": "通用故事",
+    "genre_id": "G13",
+    "genre_name": "年代传奇",
+    "genre_mechanism": "时代洪流中的个人坚守与成长",
+    "genre_emotion": "暖→思→忆",
+    "recipe_id": "R9",
+    "recipe_name": "年代奋斗",
+    "recipe_slots": {
+      "A": "特殊年代的小人物/家庭支柱",
+      "B": "韧性和手艺/时代的机遇",
+      "C": "互相扶持的家人/邻里",
+      "D": "时代困境（政策、偏见、经济冲击），非个人反派",
+      "E": "同代不同命者/离散的亲人"
+    },
+    "recipe_landing_note": "年代感通过声音符号建立：收音机播报、街头叫卖、特定年代音乐。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "时代洪流式冲突：冲突主要来自时代变迁对小人物的冲击（政策变化、经济危机、社会偏见），而非个人恩怨。每一次困境都是时代的缩影。禁止将反派个人化——反派是时代、观念和环境的产物。",
+    "causal_driver": "平稳生活被时代事件打破 → 适应/抗争 → 阶段性成果 → 新的时代冲击 → 坚守或转型 → 时代更迭后的回望。每一步都体现人物在时代中的主动选择。",
+    "ending_strategy": "不是个人胜利，而是时代洪流中小人物的一份答卷。可以是有遗憾的圆满。主题落在传承（手艺、家风、精神）而非财富积累。结尾应有时代更迭的声音标志（如从广播到电视到手机）。",
+    "tone_guidance": "厚重、生活化、带着时代的粉尘感。情感来自日常细节与时代回响的交织。用具体的物（粮票、搪瓷缸、的确良衬衫）承载抽象的时代记忆。",
+    "genre_data": {
+      "genre_id": "G13",
+      "name": "年代传奇",
+      "works": "人世间 / 大江大河",
+      "emotion": "暖→思→忆",
+      "mechanism": "时代洪流中的个人坚守与成长",
+      "audio_fit": "mid_high",
+      "audio_fit_score": 68,
+      "driver": "年代声景（广播、叫卖、时代曲）",
+      "default_recipe": "R9",
+      "keywords": [
+        "年代",
+        "时代",
+        "改革",
+        "岁月",
+        "往事",
+        "知青",
+        "下海",
+        "创业",
+        "粮票",
+        "恢复高考",
+        "改革开放"
+      ]
+    },
+    "recipe_data": {
+      "id": "R9",
+      "name": "年代奋斗",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "mid_high",
+      "audio_fit_score": 68,
+      "default_mode": "general",
+      "supported_modes": [
+        "general",
+        "serialized"
+      ],
+      "A": "特殊年代的小人物/家庭支柱",
+      "B": "韧性和手艺/时代的机遇",
+      "C": "互相扶持的家人/邻里",
+      "D": "时代困境（政策、偏见、经济冲击），非个人反派",
+      "E": "同代不同命者/离散的亲人",
+      "reference": "人世间 / 大江大河",
+      "landing_note": "年代感通过声音符号建立：收音机播报、街头叫卖、特定年代音乐。",
+      "conflict_mechanism": "时代洪流式冲突：冲突主要来自时代变迁对小人物的冲击（政策变化、经济危机、社会偏见），而非个人恩怨。每一次困境都是时代的缩影。禁止将反派个人化——反派是时代、观念和环境的产物。",
+      "causal_driver": "平稳生活被时代事件打破 → 适应/抗争 → 阶段性成果 → 新的时代冲击 → 坚守或转型 → 时代更迭后的回望。每一步都体现人物在时代中的主动选择。",
+      "ending_strategy": "不是个人胜利，而是时代洪流中小人物的一份答卷。可以是有遗憾的圆满。主题落在传承（手艺、家风、精神）而非财富积累。结尾应有时代更迭的声音标志（如从广播到电视到手机）。",
+      "tone_guidance": "厚重、生活化、带着时代的粉尘感。情感来自日常细节与时代回响的交织。用具体的物（粮票、搪瓷缸、的确良衬衫）承载抽象的时代记忆。"
+    }
+  },
+  "plan": {
+    "title": "蝴蝶牌缝纫机",
+    "premise": "九十年代下岗潮中，女工林素珍拒绝接受抵工资的旧棉被，借走厂里的老缝纫机，用碎布头在夜市拼出一条生路，最终在时代洪流中完成手艺与精神的传承。",
+    "theme": "时代洪流中小人物的坚韧抗争与手艺传承。",
+    "beginning": "林素珍在厂办接到下岗通知，面临女儿借读费和工厂用旧棉被抵薪的双重困境。",
+    "development": "林素珍借走缝纫机，熬夜用废料改制童装，在夜市摆摊遭遇驱赶，却意外被南方批发商看中设计并下达大单。",
+    "climax": "面对大单带来的机器与布料短缺，林素珍重返工厂，决定买下所有废料并正式承包车间机器，向命运发起反击。",
+    "ending": "缝纫机的轰鸣声跨越时空，与现代高定秀场的掌声交织，成年后的女儿道出母亲的手艺与精神已得到传承。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "哒哒作响的时代",
+        "core_goal": "林素珍在下岗绝境中通过缝纫手艺找到生存出路，并接下改变命运的第一笔大单。",
+        "major_beats": [
+          "【0-3s】铁桌被重重拍响，伴随收音机‘国企改革’的电流声，王主任将解除劳动合同书推到林素珍面前。",
+          "【3-10s】王主任表示厂里没钱，只能用库存旧棉被抵工资。林素珍攥着通知书，焦急表示女儿明天必须交借读费。",
+          "【10-30s】王主任劝她认命，林素珍爆发推开棉被，要求借走厂里淘汰的蝴蝶牌缝纫机三个月。伴随音乐断点，转场至深夜急促的缝纫机踏板声。",
+          "【30-120s】林素珍熬夜将旧棉被和碎布头裁剪拼接成流行童装，让小雅试穿。次日夜市，素珍摆摊遭遇管理员驱赶，衣服散落泥地。",
+          "【120-170s】素珍蹲地捡衣服时，南方批发商看中拼接设计，拍下定金要求明早交50件。素珍面临绝境，决定回厂找王主任买下所有废料并长租机器。",
+          "【170-180s】素珍推开车间大门推上电闸，缝纫机马达轰鸣达到情绪顶点。机器声平滑渐变为现代秀场快门声，成年小雅画外音点出传承，平稳收束。"
+        ],
+        "ending": "情感回响式收束。缝纫机声跨越时代，落在现代高定工作室的传承上，不留悬念，余韵悠长。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_suzhen",
+        "story_name": "林素珍",
+        "external_goal": "凑齐女儿的借读费，在市场经济中找到活路。",
+        "emotional_avoidance": "害怕别人看出她的窘迫，拒绝别人的施舍和同情。",
+        "speech_style": "语速快，咬字重，习惯用动作（如剪线头、拍布料）代替犹豫，受压时只说‘我能行’‘别废话’。",
+        "relationship_stance": "对女儿是倾尽所有的保护，对代表体制的王主任是不卑不亢的倔强。"
+      },
+      {
+        "role_id": "wang_zhuren",
+        "story_name": "王主任",
+        "external_goal": "完成厂里的下岗分流指标，安抚工人情绪。",
+        "emotional_avoidance": "避免面对工人们绝望的眼神，用官腔和规定来掩饰内心的无奈。",
+        "speech_style": "习惯用‘大环境’‘政策’‘厂里也有困难’等宏观词汇，语速慢，带着叹息和咳嗽。",
+        "relationship_stance": "对林素珍有愧疚但必须执行规定，是时代政策的传声筒而非个人恶人。"
+      },
+      {
+        "role_id": "xiaoya",
+        "story_name": "小雅",
+        "external_goal": "减轻母亲的负担，想要一件新衣服但不敢开口。",
+        "emotional_avoidance": "避免让母亲觉得自己是个累赘，隐藏学校的收费通知。",
+        "speech_style": "声音轻，懂事得让人心疼，常用‘妈，我不急’‘其实旧衣服也能穿’来安慰母亲。",
+        "relationship_stance": "对母亲是深深的依恋与心疼，是母亲奋斗的核心动力。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "adult_xiaoya",
+        "story_name": "成年小雅",
+        "performer_id": "xiaoya_adult",
+        "medium": "recording",
+        "dramatic_purpose": "在结尾提供时代更迭后的回望，点出传承的主题，形成情感余韵。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "soundscape": "九十年代工厂环境音、老式收音机电流声、蝴蝶牌缝纫机机械踏板与马达声、九十年代夜市嘈杂声、现代时装秀快门与掌声。",
+      "pacing_notes": "前30秒压抑且紧凑，中段夜市戏节奏加快、台词短碎，最后10秒声音蒙太奇需平滑过渡，留足情感呼吸空间。"
+    },
+    "continuity_constraints": [
+      "蝴蝶牌缝纫机作为核心物件，必须贯穿从厂办借出、深夜使用到最终传承的全过程。",
+      "王主任的态度必须保持时代局限下的无奈，不能转变为个人反派。",
+      "小雅的借读费是初始动力，后续大单是生存升级，动机链条不可断裂。"
+    ],
+    "change_summary": [
+      "林素珍从被动接受下岗命运，转变为主动利用手艺在市场中搏杀。",
+      "缝纫机从厂里淘汰的废铁，变成了林素珍养家糊口的武器和最终传承的艺术工具。",
+      "时代背景从九十年代的阵痛期，平滑过渡到现代的文化自信与高定传承。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "G13",
+    "recipe_id": "R9",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "15d9e0cdc6ed46d7be504af821cd9bd5",
+      "plan_id": "1ef095fd39544b58b678ae083b55b721",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "97614be0a865469eaf3821dcad2296ba",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:58:47.830200+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4638,
+      "output_tokens": 4718,
+      "cache_read_tokens": 1152,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3254,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "0231e1c3-6d16-47c8-9011-78671ab8bddd",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 74449,
+      "completed_at": "2026-10-12T03:00:02.280575+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "bb955e80a7bd51ed292bd91fc7de520600b7ae71459c652a8afcd3f34f3d47dc",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T03:00:02.280575Z",
+  "updated_at": "2026-10-12T03:00:02.280575Z"
+}

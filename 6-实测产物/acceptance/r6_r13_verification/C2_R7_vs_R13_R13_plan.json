@@ -1,0 +1,250 @@
+{
+  "plan_id": "188cd9ffd7d94af6ad0cc4a5643f4bba",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "viral_drama",
+    "mode_label": "爆款广播剧",
+    "genre_id": "G14",
+    "genre_name": "职场生存",
+    "genre_mechanism": "专业能力对抗职场困境",
+    "genre_emotion": "思→燃→成",
+    "recipe_id": "R13",
+    "recipe_name": "职场商战",
+    "recipe_slots": {
+      "A": "职场中处于弱势但有核心能力的主角",
+      "B": "专业能力或行业信息差（真实、可复用的知识）",
+      "C": "团队/可靠的同事/行业内线",
+      "D": "职场既得利益者/竞争对手（具体、可理解）",
+      "E": "其他公司的对标人物/上一代职场人"
+    },
+    "recipe_landing_note": "专业术语需简短且上下文明晰。电话会议、键盘敲击、打印机声是场景音主力。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "能力验证式冲突：冲突来自专业能力与职场潜规则的碰撞。每一次冲突都是主角专业价值的验证，不是人际关系的内耗。敌对关系基于利益冲突而非个人恩怨。禁止将职场写成宫斗——对手的行动必须有商业逻辑支撑。",
+    "causal_driver": "发现职场问题/机会 → 提出专业方案 → 遭遇阻挠 → 迂回/积累证据 → 关键时刻亮出成果 → 获得行业认可。每一回合都是专业能力的展现和升级。",
+    "ending_strategy": "用专业成果证明自身价值。可以是打赢关键战役但战争继续（开放），可以是被认可后跳槽到更好的平台，可以是创业自立。结局展示职业阶梯上了一个台阶，不要求大获全胜。",
+    "tone_guidance": "理性、专业、克制。情感来自专业成就的满足感，不是撕逼。用数字、证据和逻辑交锋代替情绪宣泄。电话和会议场景是主要舞台。",
+    "genre_data": {
+      "genre_id": "G14",
+      "name": "职场生存",
+      "works": "理想之城 / 无所畏惧",
+      "emotion": "思→燃→成",
+      "mechanism": "专业能力对抗职场困境",
+      "audio_fit": "mid",
+      "audio_fit_score": 60,
+      "driver": "电话、会议、键盘声是主战场",
+      "default_recipe": "R13",
+      "keywords": [
+        "职场",
+        "商战",
+        "办公室",
+        "跳槽",
+        "竞争",
+        "项目",
+        "升职",
+        "行业",
+        "公司",
+        "谈判",
+        "企业"
+      ]
+    },
+    "recipe_data": {
+      "id": "R13",
+      "name": "职场商战",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "mid",
+      "audio_fit_score": 60,
+      "default_mode": "viral_drama",
+      "supported_modes": [
+        "viral_drama",
+        "general",
+        "serialized"
+      ],
+      "A": "职场中处于弱势但有核心能力的主角",
+      "B": "专业能力或行业信息差（真实、可复用的知识）",
+      "C": "团队/可靠的同事/行业内线",
+      "D": "职场既得利益者/竞争对手（具体、可理解）",
+      "E": "其他公司的对标人物/上一代职场人",
+      "reference": "理想之城 / 无所畏惧",
+      "landing_note": "专业术语需简短且上下文明晰。电话会议、键盘敲击、打印机声是场景音主力。",
+      "conflict_mechanism": "能力验证式冲突：冲突来自专业能力与职场潜规则的碰撞。每一次冲突都是主角专业价值的验证，不是人际关系的内耗。敌对关系基于利益冲突而非个人恩怨。禁止将职场写成宫斗——对手的行动必须有商业逻辑支撑。",
+      "causal_driver": "发现职场问题/机会 → 提出专业方案 → 遭遇阻挠 → 迂回/积累证据 → 关键时刻亮出成果 → 获得行业认可。每一回合都是专业能力的展现和升级。",
+      "ending_strategy": "用专业成果证明自身价值。可以是打赢关键战役但战争继续（开放），可以是被认可后跳槽到更好的平台，可以是创业自立。结局展示职业阶梯上了一个台阶，不要求大获全胜。",
+      "tone_guidance": "理性、专业、克制。情感来自专业成就的满足感，不是撕逼。用数字、证据和逻辑交锋代替情绪宣泄。电话和会议场景是主要舞台。"
+    }
+  },
+  "plan": {
+    "title": "星火重启",
+    "premise": "被诬陷能力不足而辞退的中年程序员，在共享办公室利用被前公司废弃的源码，重构出颠覆性引擎并成功上线，用专业能力击碎前上司的打压。",
+    "theme": "真正的专业价值不会被职场权力抹杀，代码与逻辑是打破偏见的最强武器。",
+    "beginning": "林修在共享办公室遭遇前上司赵凯的电话嘲讽与权限封锁，宣告将上线被废弃的“星火”项目。",
+    "development": "赵凯以算力不足和法务威胁施压，林修通过展示优化后的底层逻辑和陈默的授权录音逐一化解，并拒绝被低价收购。",
+    "climax": "赵凯恶意发动流量攻击试图冲垮林修的服务器，林修临场改写规则，将攻击流量转化为分布式计算节点，实现算力反超。",
+    "ending": "产品成功上线并登顶开源社区，赵凯在气急败坏中挂断电话，林修在平静的键盘声中享受专业胜利的回响。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "星火重启",
+        "core_goal": "突破前上司的算力封锁与恶意攻击，完成“星火”引擎的上线与开源。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：刺耳的系统注销警报声响起，赵凯在电话中冷笑宣告林修的公司服务器权限已被彻底清零。",
+          "[3-10s] 矛盾三要素：林修在嘈杂的共享办公室平静回应，表明自己已搭建独立环境，并宣告今天将上线当年被赵凯以‘无商业价值’砍掉的‘星火’架构。",
+          "[10-30s] 第一次反转：赵凯嘲讽林修单枪匹马无法完成并威胁发律师函；林修播放前同事陈默的语音留言证明废弃代码的合法使用权，随后敲击回车，音箱播报‘节点连接成功’，打脸赵凯。",
+          "[30-120s] 中段推进：赵凯改用商业逻辑施压，指出林修缺乏算力资源；林修伴随咖啡机与环境白噪音，冷静报出内存调度优化数据，证明算力需求已降低80%，并严词拒绝赵凯试图掩盖立项失误的低价收购。",
+          "[120-170s] 升级/二次反转：赵凯恶意发动流量攻击冲刷测试服务器，警报声大作；林修不退反进，现场敲击代码开放公网API，将恶意流量转化为分布式计算节点，警报声转为平稳的运行提示音‘算力池扩容完成’。",
+          "[170-180s] 强钩子与收束：林修按下回车正式开源，电话那头传来赵凯下属‘引擎登顶GitHub’的惊呼；赵凯气急败坏挂断电话，林修合上电脑，在共享办公室的键盘白噪音中喝下冷咖啡，故事在专业成就的满足感中定格收束。"
+        ],
+        "ending": "产品成功上线，前上司的打压彻底破产，主角在平静的环境音中享受专业胜利的情感余韵。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_xiu",
+        "story_name": "林修",
+        "external_goal": "在共享办公室用前同事给的废弃源码重构出颠覆性的轻量级引擎，并在今天完成上线。",
+        "emotional_avoidance": "避免谈论自己被辞退时的屈辱，用极度理性的代码逻辑和客观数据掩盖内心的不甘。",
+        "speech_style": "语速平稳，多用技术术语和短句，面对挑衅时不提高音量，而是用数据反驳。",
+        "relationship_stance": "对前公司主管赵凯保持冷漠的专业态度，不卑不亢；对暗中帮忙的陈默抱有默契的信任。"
+      },
+      {
+        "role_id": "zhao_kai",
+        "story_name": "赵凯",
+        "external_goal": "阻止林修的产品上线，或以极低价格收购其代码，以掩盖自己当初误判废弃该项目的失误。",
+        "emotional_avoidance": "拒绝承认自己技术眼光短浅，将林修的成功归结为‘偷窃公司资产’或‘运气’。",
+        "speech_style": "习惯用上位者的施压口吻，喜欢用‘行业封杀’‘法务警告’等词汇，受挫时情绪容易失控、音量拔高。",
+        "relationship_stance": "视林修为必须碾碎的威胁，试图用职场权力和资源壁垒压制对方的专业能力。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "chen_mo",
+        "story_name": "陈默",
+        "performer_id": "voice_actor_3",
+        "medium": "recording",
+        "dramatic_purpose": "提供关键语音留言，证明林修使用的底层代码是前公司废弃资产且已获得原作者授权，化解法务危机并体现同事间的温暖支持。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "scene_audio": "共享办公室的白噪音（咖啡机、远处低语、键盘声）贯穿始终，与电话里赵凯所在的高级办公室（安静、有回音）形成空间对比。",
+      "emotional_pacing": "林修的台词始终贴近麦克风，语速稳定，体现‘静’；赵凯的台词带电话音效，情绪起伏大，体现‘动’。以静制动，凸显专业能力带来的底气。",
+      "sound_effects": "S3的‘节点连接成功’和S5的‘算力池扩容完成’需使用清脆、科技感强的系统提示音，作为打脸和反转的听觉锚点。"
+    },
+    "continuity_constraints": [
+      "林修使用的代码必须是前公司已经废弃且无商业在用的资产，避免构成真实的商业窃密。",
+      "赵凯的攻击必须是基于网络流量的常规手段，林修的反击必须符合分布式计算的技术逻辑。",
+      "陈默的录音必须在S3完整播放，后续不再出现，避免干扰主线双人交锋。"
+    ],
+    "change_summary": [
+      "将用户指令中的‘拿着同事的源代码’具体化为‘前同事保留的、被前公司废弃的底层架构’，以符合职场合规逻辑，避免主角陷入道德瑕疵。",
+      "将‘颠覆原公司的产品’具象化为‘轻量级引擎开源’，通过GitHub登顶来体现颠覆性，使结局有可听见的客观后果。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "viral_drama",
+    "content_form": "audio_drama",
+    "genre": "G14",
+    "recipe_id": "R13",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "de210da5039b4bd98cffb8ae53f6d5d5",
+      "plan_id": "188cd9ffd7d94af6ad0cc4a5643f4bba",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "98d51da905694356a30b0f6f43b156b6",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T02:36:20.433152+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4653,
+      "output_tokens": 5265,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3758,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "50d7a82f-8a53-472b-a7ad-c23a02ce7f57",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 77423,
+      "completed_at": "2026-10-12T02:37:37.856743+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "4e1e1537771bc843a2a111c20770b6a01256d1ffc87210ff644caf2e89aa839c",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T02:37:37.856743Z",
+  "updated_at": "2026-10-12T02:37:37.856743Z"
+}

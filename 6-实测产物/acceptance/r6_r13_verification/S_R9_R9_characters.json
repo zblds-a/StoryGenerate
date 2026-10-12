@@ -1,0 +1,56 @@
+{
+  "lin_suzhen": {
+    "role_id": "lin_suzhen",
+    "character_id": "lin_suzhen",
+    "performer_id": "lin_suzhen",
+    "story_name": "林素珍",
+    "canon_name": "林素珍",
+    "immutable_facts": [],
+    "goal": "凑齐女儿的借读费，在市场经济中找到活路。",
+    "motivation": "",
+    "fear": "害怕别人看出她的窘迫，拒绝别人的施舍和同情。",
+    "speech_style": "语速快，咬字重，习惯用动作（如剪线头、拍布料）代替犹豫，受压时只说‘我能行’‘别废话’。",
+    "relationship_stance": "对女儿是倾尽所有的保护，对代表体制的王主任是不卑不亢的倔强。",
+    "source": "character_portrayal"
+  },
+  "wang_zhuren": {
+    "role_id": "wang_zhuren",
+    "character_id": "wang_zhuren",
+    "performer_id": "wang_zhuren",
+    "story_name": "王主任",
+    "canon_name": "王主任",
+    "immutable_facts": [],
+    "goal": "完成厂里的下岗分流指标，安抚工人情绪。",
+    "motivation": "",
+    "fear": "避免面对工人们绝望的眼神，用官腔和规定来掩饰内心的无奈。",
+    "speech_style": "习惯用‘大环境’‘政策’‘厂里也有困难’等宏观词汇，语速慢，带着叹息和咳嗽。",
+    "relationship_stance": "对林素珍有愧疚但必须执行规定，是时代政策的传声筒而非个人恶人。",
+    "source": "character_portrayal"
+  },
+  "xiaoya": {
+    "role_id": "xiaoya",
+    "character_id": "xiaoya",
+    "performer_id": "xiaoya",
+    "story_name": "小雅",
+    "canon_name": "小雅",
+    "immutable_facts": [],
+    "goal": "减轻母亲的负担，想要一件新衣服但不敢开口。",
+    "motivation": "",
+    "fear": "避免让母亲觉得自己是个累赘，隐藏学校的收费通知。",
+    "speech_style": "声音轻，懂事得让人心疼，常用‘妈，我不急’‘其实旧衣服也能穿’来安慰母亲。",
+    "relationship_stance": "对母亲是深深的依恋与心疼，是母亲奋斗的核心动力。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}
