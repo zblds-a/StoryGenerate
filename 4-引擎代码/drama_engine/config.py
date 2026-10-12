@@ -101,14 +101,19 @@ class RuleLibrary:
     def continuity_version(self) -> str:
         return self.continuity.get("meta", {}).get("version", "0.0.0")
 
-    def cache_fingerprint(self, node: str, payload: str) -> str:
-        """缓存键 = 节点 × 提示词版本 × 规则库版本（三库）× 输入。
+    @property
+    def formula_ext_version(self) -> str:
+        return self.formula_ext.get("meta", {}).get("version", "0.0.0")
 
-        规则一变，旧缓存自动失效 —— 这条设计避免了"改了规则但输出没变"的隐蔽 bug。
+    def cache_fingerprint(self, node: str, payload: str) -> str:
+        """缓存键 = 节点 × 提示词版本 × 规则库版本（基础库 + 扩展库 + 穿越 + 连续）× 输入。
+
+        规则一变，旧缓存自动失效 —— 包括扩展库。改了 R6-R13 的配方机制，
+        缓存必须跟着作废，否则旧的生成结果会被错误复用。
         """
         raw = "|".join(
-            [node, PROMPT_VERSION, self.formula_version, self.timetravel_version,
-             self.continuity_version, payload]
+            [node, PROMPT_VERSION, self.formula_version, self.formula_ext_version,
+             self.timetravel_version, self.continuity_version, payload]
         )
         return hashlib.blake2b(raw.encode("utf-8"), digest_size=12).hexdigest()
 

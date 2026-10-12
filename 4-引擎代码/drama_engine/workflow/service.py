@@ -89,11 +89,16 @@ class StoryWorkflowService:
         template_default_recipe = None
         if request.template_ref and self.template_resolver:
             try:
-                spec = self.template_resolver.repository.get(request.template_ref.template_id)
+                spec = self.template_resolver.repository.get(
+                    request.template_ref.template_id,
+                    version=request.template_ref.template_revision,
+                )
                 if spec and spec.defaults:
                     template_default_recipe = spec.defaults.get("default_recipe")
-            except Exception:
-                pass  # Template not found; graceful degradation
+            except LookupError:
+                pass  # Template not found: optional default missing, not an error
+            except AttributeError:
+                pass  # repository may not support version parameter; use latest
 
         effective_recipe = preferences.recipe_id or template_default_recipe
         strategy = self._strategy_resolver.resolve(

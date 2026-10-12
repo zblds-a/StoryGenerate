@@ -298,17 +298,21 @@ class StoryStrategyResolver:
 
         # Auto: derive from genre
         auto_filled.append("recipe_id")
+        affinity = self.lib.recipe_mode_affinity()
         default = self.lib.genre_default_recipe(genre_id)
         if default:
             r = self.lib.recipe(default)
             if r and r.get("enabled", True):
-                return default
+                # Validate mode compatibility for auto-picked recipe
+                allowed_modes = affinity.get(default, [])
+                if not allowed_modes or mode in allowed_modes:
+                    return default
+                # Mode mismatch: skip this recipe, fall through to generic
         # Generic fallback: first enabled recipe compatible with mode
         for r in self.lib.all_recipes:
             if not r.get("enabled", True):
                 continue
             rid = r.get("id", "")
-            affinity = self.lib.recipe_mode_affinity()
             if mode in affinity.get(rid, [mode]):
                 return rid
         return None
