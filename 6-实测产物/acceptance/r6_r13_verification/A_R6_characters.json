@@ -1,0 +1,42 @@
+{
+  "lin": {
+    "role_id": "lin",
+    "character_id": "lin",
+    "performer_id": "lin",
+    "story_name": "老林",
+    "canon_name": "老林",
+    "immutable_facts": [],
+    "goal": "查清20年前搭档阿飞失踪的真相，给旧案一个交代。",
+    "motivation": "",
+    "fear": "害怕面对自己当年因病缺席导致搭档“堕落”的愧疚感。",
+    "speech_style": "简短、沙哑、习惯用反问句逼问，激动时会伴随沉重的呼吸声。",
+    "relationship_stance": "对老陈曾绝对信任并心怀感激，发现真相后转为极度痛心与决绝。",
+    "source": "character_portrayal"
+  },
+  "chen": {
+    "role_id": "chen",
+    "character_id": "chen",
+    "performer_id": "chen",
+    "story_name": "老陈",
+    "canon_name": "老陈",
+    "immutable_facts": [],
+    "goal": "阻止老林翻旧案，维持自己即将安全退休的清白形象。",
+    "motivation": "",
+    "fear": "拒绝承认自己当年的贪婪，用“保护警队”来合理化杀人行为。",
+    "speech_style": "语速平缓、喜欢用长辈/老大哥的口吻说教，撒谎时会有轻微的吞咽声。",
+    "relationship_stance": "对老林有利用和掌控欲，试图用旧日恩情进行道德绑架。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

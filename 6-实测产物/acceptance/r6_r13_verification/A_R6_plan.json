@@ -1,0 +1,276 @@
+{
+  "plan_id": "0f59d8211bac47b4b5fdaa484efa9fe2",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "mystery",
+    "mode_label": "悬疑",
+    "genre_id": "G11",
+    "genre_name": "悬疑推理",
+    "genre_mechanism": "线索层层揭示、认知不断翻转",
+    "genre_emotion": "疑→惊→悟",
+    "recipe_id": "R6",
+    "recipe_name": "悬疑反转",
+    "recipe_slots": {
+      "A": "被卷入事件的普通人/调查者",
+      "B": "一个被忽略的关键物证/证词",
+      "C": "可靠的搭档/技术支援者",
+      "D": "表面和善、实为真凶的身边人",
+      "E": "被误判的无辜者/替罪羊"
+    },
+    "recipe_landing_note": "信息差是核心。关键线索必须以可听形式至少呈现两次。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "信息不对称式冲突：真相被层层掩盖，每一次揭示都推翻前一层认知。冲突来自假象与真相之间的落差，而非武力对抗。反派必须是主角信任的身边人。关键证据必须可听（录音、证词、环境音反差），不依赖视觉。",
+    "causal_driver": "一次意外发现 → 怀疑 → 初查被误导 → 关键证据浮现 → 认知重构 → 全部线索串联。每一步发现都改变主角对局势的判断。观众必须能在最终反转时回听所有伏笔。",
+    "ending_strategy": "真相大白但不一定正义伸张。允许开放式结局（凶手逃脱但主角获得证据），允许反转式结局（你以为的好人不是好人）。禁止机械的'凶手认罪'式收尾。如有系列续集，预留未解线索。",
+    "tone_guidance": "紧张、智性、层层递进。用『已知』的积累推翻『以为』的真相。情感来自认知颠覆，不是煽情对白。",
+    "genre_data": {
+      "genre_id": "G11",
+      "name": "悬疑推理",
+      "works": "消失的她 / 隐秘的角落",
+      "emotion": "疑→惊→悟",
+      "mechanism": "线索层层揭示、认知不断翻转",
+      "audio_fit": "high",
+      "audio_fit_score": 82,
+      "driver": "信息差由台词与声音承载",
+      "default_recipe": "R6",
+      "keywords": [
+        "悬疑",
+        "推理",
+        "破案",
+        "侦探",
+        "线索",
+        "反转",
+        "秘密",
+        "真相",
+        "目击",
+        "失踪"
+      ]
+    },
+    "recipe_data": {
+      "id": "R6",
+      "name": "悬疑反转",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "high",
+      "audio_fit_score": 82,
+      "default_mode": "mystery",
+      "supported_modes": [
+        "mystery",
+        "general",
+        "viral_drama"
+      ],
+      "A": "被卷入事件的普通人/调查者",
+      "B": "一个被忽略的关键物证/证词",
+      "C": "可靠的搭档/技术支援者",
+      "D": "表面和善、实为真凶的身边人",
+      "E": "被误判的无辜者/替罪羊",
+      "reference": "消失的她 / 隐秘的角落",
+      "landing_note": "信息差是核心。关键线索必须以可听形式至少呈现两次。",
+      "conflict_mechanism": "信息不对称式冲突：真相被层层掩盖，每一次揭示都推翻前一层认知。冲突来自假象与真相之间的落差，而非武力对抗。反派必须是主角信任的身边人。关键证据必须可听（录音、证词、环境音反差），不依赖视觉。",
+      "causal_driver": "一次意外发现 → 怀疑 → 初查被误导 → 关键证据浮现 → 认知重构 → 全部线索串联。每一步发现都改变主角对局势的判断。观众必须能在最终反转时回听所有伏笔。",
+      "ending_strategy": "真相大白但不一定正义伸张。允许开放式结局（凶手逃脱但主角获得证据），允许反转式结局（你以为的好人不是好人）。禁止机械的'凶手认罪'式收尾。如有系列续集，预留未解线索。",
+      "tone_guidance": "紧张、智性、层层递进。用『已知』的积累推翻『以为』的真相。情感来自认知颠覆，不是煽情对白。"
+    }
+  },
+  "plan": {
+    "title": "回声码头",
+    "premise": "退休刑警老林在整理旧案录音时，发现20年前搭档失踪案的真相直指坐在对面的老战友，他必须在包庇与正义间做出最后的选择。",
+    "theme": "真相的代价与警察的底线",
+    "beginning": "老林播放旧录音带，意外听到已失踪搭档阿飞遇害前的惊呼，直接质问在场的老陈。",
+    "development": "老陈用“保护卧底名单”和“替老林去码头”的恩情进行道德绑架，试图让老林放下枪并放弃追查。",
+    "climax": "老林通过卷宗日期与录音背景音的矛盾，戳穿老陈私吞黑钱杀人的谎言，老陈准备灭口。",
+    "ending": "老林选择将证据同步上传市局，在警笛声与旧录音的回响中，完成了对警察底线的坚守。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "回声码头",
+        "core_goal": "揭开20年前搭档失踪案的真相，并完成老林作为警察的最终抉择。",
+        "major_beats": [
+          "[0-3s] 老式录音机按键“咔哒”按下，刺耳电流声后，一声沉闷的消音器枪响，接着是阿飞惊恐的喘息：“陈哥，你拿枪指着我干嘛？”磁带卡壳发出“吱吱”声。",
+          "[3-10s] 老林猛地拍击木桌，震得茶杯作响：“老陈！这带子你当年说没录上！”老陈坐在对面，平稳地倒茶，水流声不断：“老林，退休了就别折腾了，阿飞当年就是黑吃黑跑了。”",
+          "[10-30s] 老林压抑着怒火，将磁带翻面“咔哒”按下。录音里传出老陈特有的Zippo打火机“叮”的开盖声，接着是老陈的声音：“阿飞，这钱你带不走。”音乐骤停，老林拔枪上膛“咔嚓”指向老陈。",
+          "[30-120s] 老陈不慌不忙放下茶杯，解释当年阿飞要出卖警队卧底名单，他为了保全大家才动手。老陈用老大哥口吻说：“你当年肺炎住院，是我替你去的码头。你以为阿飞为什么没供出你？”老林呼吸沉重，信念动摇，缓缓放下枪。",
+          "[120-150s] 老林目光扫过卷宗，突然抓起纸张摩擦声：“不对！阿飞失踪是11月4号，我肺炎住院是11月10号！卧底名单根本不存在，是你私吞了那批黑钱！”老陈吞咽了一下，冷笑：“你太聪明了，老林。”",
+          "[150-180s] 老林没有重新举枪，而是按下桌上的警用加密传输器，发出“滴”的发送成功提示音：“这带子，我已经同步传给市局了。警察不护短。”老陈猛地起身拔枪，但窗外立刻传来由远及近的密集警笛声。老林闭上眼，录音机里再次传出阿飞当年的回音：“陈哥，别开枪……”声音渐弱至无。"
+        ],
+        "ending": "老林按下发送键完成证据上传，老陈拔枪未果被警笛声包围，录音机里阿飞的求饶声作为情感余韵收尾，真相大白且正义得到伸张。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin",
+        "story_name": "老林",
+        "external_goal": "查清20年前搭档阿飞失踪的真相，给旧案一个交代。",
+        "emotional_avoidance": "害怕面对自己当年因病缺席导致搭档“堕落”的愧疚感。",
+        "speech_style": "简短、沙哑、习惯用反问句逼问，激动时会伴随沉重的呼吸声。",
+        "relationship_stance": "对老陈曾绝对信任并心怀感激，发现真相后转为极度痛心与决绝。"
+      },
+      {
+        "role_id": "chen",
+        "story_name": "老陈",
+        "external_goal": "阻止老林翻旧案，维持自己即将安全退休的清白形象。",
+        "emotional_avoidance": "拒绝承认自己当年的贪婪，用“保护警队”来合理化杀人行为。",
+        "speech_style": "语速平缓、喜欢用长辈/老大哥的口吻说教，撒谎时会有轻微的吞咽声。",
+        "relationship_stance": "对老林有利用和掌控欲，试图用旧日恩情进行道德绑架。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "afei",
+        "story_name": "阿飞",
+        "performer_id": "voice_actor_3",
+        "medium": "recording",
+        "dramatic_purpose": "作为20年前案发现场的唯一可听证据，其录音中的背景音和台词是推动反转的核心线索，并在结尾提供情感余韵。"
+      }
+    ],
+    "mystery_causal_proof": {
+      "actual_event_timeline": "20年前11月4日雨夜，老陈在码头私吞黑钱并枪杀阿飞。",
+      "witnessed_event": "老林当年因肺炎住院，听信老陈说阿飞黑吃黑潜逃，并在卷宗中只找到一段残缺录音。",
+      "actor_opportunity": "老陈当年作为老林的搭档，代替生病的老林去码头接头，有充足时间杀人并伪造现场，事后将录音带剪接掩盖。",
+      "audible_trace_before_reveal": "录音带中阿飞背景音有老陈独有的Zippo打火机开盖声，且老陈谎称老林住院时间（11月10日）与阿飞失踪时间（11月4日）不符。",
+      "onstage_verification": "老林在现场重听录音确认打火机声，并核对卷宗上的日期戳，当面戳穿老陈的时间线谎言。"
+    },
+    "performance_plan": {
+      "sound_design": "重点突出老式录音机的机械按键声、磁带转动声与电流底噪，以此作为连接过去与现在的听觉锚点。老陈的Zippo打火机声音需做特殊频段处理，使其在录音中和现实中具有高度辨识度。",
+      "acting_notes": "老林的台词需体现出从愤怒、动摇到最终决绝的层次变化，呼吸声是重要的情绪辅助；老陈需保持表面的从容，仅在谎言被戳穿时通过吞咽和冷笑暴露内心的慌乱。"
+    },
+    "continuity_constraints": [
+      "录音机与磁带作为核心道具必须贯穿全剧，不可中途消失或更换。",
+      "老陈的Zippo打火机声音特征必须在第10-30秒的录音中首次出现，并在后续对话中保持人设一致。",
+      "卷宗上的日期（11月4日与11月10日）必须与台词严格对应，不可出现逻辑漏洞。"
+    ],
+    "change_summary": [
+      "首次创建大纲，确立180秒单集悬疑反转结构。",
+      "设计基于听觉证据（打火机声、日期矛盾）的因果证明链。",
+      "确保最后15%时长用于人物选择与情感余韵，符合完整短篇结局契约。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "mystery",
+    "content_form": "audio_drama",
+    "genre": "G11",
+    "recipe_id": "R6",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "a2b3539638024cb085cb3f55922ce0da",
+      "plan_id": "0f59d8211bac47b4b5fdaa484efa9fe2",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "1244a37247ae414da6fbc7913df8f5f5",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T01:56:45.051419+00:00",
+      "status": "timeout",
+      "error": "timeout",
+      "error_code": "MODEL_TIMEOUT",
+      "usage_source": "unavailable",
+      "latency_ms": 90292,
+      "completed_at": "2026-10-12T01:58:15.344043+00:00"
+    },
+    {
+      "principal_id": "local",
+      "request_id": "a2b3539638024cb085cb3f55922ce0da",
+      "plan_id": "0f59d8211bac47b4b5fdaa484efa9fe2",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "eacabef2270e45eb8a56be021008b379",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 2,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T01:58:16.846691+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4647,
+      "output_tokens": 5107,
+      "cache_read_tokens": 4608,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3384,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "57d55f58-9c35-4ac4-b02b-9d24e22de9b0",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 79674,
+      "completed_at": "2026-10-12T01:59:36.521551+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "30e971eadcbc95a09bc2ffa197687022ac9d6239b9eac8ddd07ea9690ee2fbca",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T01:59:36.524559Z",
+  "updated_at": "2026-10-12T01:59:36.524559Z"
+}
