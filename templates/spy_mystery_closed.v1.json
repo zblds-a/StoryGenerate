@@ -17,7 +17,7 @@
   ],
   "recommended_characters": 3,
   "tone_hints": ["克制", "紧张", "悬疑"],
-  "defaults": {"target_duration_sec": 300, "target_episodes": 1, "content_form": "audio_drama"},
+  "defaults": {"target_duration_sec": 300, "target_episodes": 1, "content_form": "audio_drama", "default_recipe": "R6"},
   "ending_guidance": "closed",
   "metadata": {"genre": "谍战", "language": "zh-CN", "content_rating": "teen"}
 }

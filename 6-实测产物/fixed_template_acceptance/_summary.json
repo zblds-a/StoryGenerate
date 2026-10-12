@@ -1,0 +1,27 @@
+[
+  {
+    "case_id": "T01",
+    "template_id": "GENERAL_THREE_ACT",
+    "status": "ok",
+    "plan_sec": 54,
+    "template_resolved": "GENERAL_THREE_ACT",
+    "template_version": 1,
+    "strategy_recipe": "R4",
+    "strategy_mode": "general",
+    "strategy_has_mechanisms": true,
+    "plan_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\fixed_template_acceptance\\T01\\T01_plan.json",
+    "total_sec": 297,
+    "round_trip": "OK",
+    "integrity_valid": false,
+    "integrity_errors": 1,
+    "integrity_warnings": 0,
+    "script_file": "H:\\Projects\\StoryGenerate\\6-实测产物\\fixed_template_acceptance\\T01\\T01_story.txt",
+    "utterances": 24,
+    "episodes": 1,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "reasoning_tokens": 0,
+    "total_tokens": 0,
+    "llm_calls": 7
+  }
+]

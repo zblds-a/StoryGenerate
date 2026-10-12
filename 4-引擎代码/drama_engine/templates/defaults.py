@@ -54,6 +54,7 @@ GENERAL_THREE_ACT = StoryTemplateSpec(
     recommended_characters=4,
     tone_hints=["自然", "真实", "克制"],
     ending_guidance="closed",
+    defaults={"target_duration_sec": 180, "default_recipe": "R4"},
 )
 
 
@@ -104,6 +105,7 @@ GENERAL_RELATIONSHIP_TURN = StoryTemplateSpec(
     recommended_characters=3,
     tone_hints=["细腻", "情感", "真实"],
     ending_guidance="closed_with_hope",
+    defaults={"target_duration_sec": 180, "default_recipe": "R5"},
 )
 
 

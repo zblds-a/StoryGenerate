@@ -1,0 +1,284 @@
+{
+  "plan_id": "956194383db2474eb498c87d113aa2eb",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": {
+    "template_id": "GENERAL_THREE_ACT",
+    "version": 1,
+    "name": "三幕结构",
+    "source": "explicit",
+    "supported_modes": [
+      "general"
+    ],
+    "beats": [
+      {
+        "key": "opening",
+        "purpose": "建立场景、核心人物、日常状态和隐含的问题",
+        "guidance": "通过具体的动作或对话引入，不要叙述性旁白开场",
+        "required": true
+      },
+      {
+        "key": "complication",
+        "purpose": "引入打破日常的事件，呈现冲突的起点",
+        "guidance": "事件必须是人物可感知、可反应的，不是抽象概念",
+        "required": true
+      },
+      {
+        "key": "escalation",
+        "purpose": "冲突升级，角色必须做出一个艰难的选择",
+        "guidance": "选择的结果应直接改变局面，不能只是情绪波动",
+        "required": true
+      },
+      {
+        "key": "turning_point",
+        "purpose": "剧情转折点：新信息或行动让局势不可逆转",
+        "guidance": "转折应来自角色之前的行动结果，不是外部巧合",
+        "required": true
+      },
+      {
+        "key": "climax",
+        "purpose": "情感与行动的高潮：角色面对最大障碍",
+        "guidance": "高潮必须有明确的行动、对白和情感释放",
+        "required": true
+      },
+      {
+        "key": "resolution",
+        "purpose": "结局：展示改变后的状态，为故事收束",
+        "guidance": "不要过度解释，让听众自己感受变化",
+        "required": true
+      }
+    ],
+    "constraints": [
+      "剧情推进必须以人物行动为驱动，不能依赖旁白解释",
+      "每个节拍之间必须有因果链：前一个节拍的事件导致后一个节拍的发生"
+    ],
+    "recommended_characters": 4,
+    "tone_hints": [
+      "自然",
+      "真实",
+      "克制"
+    ],
+    "ending_guidance": "closed",
+    "defaults": {
+      "target_duration_sec": 180,
+      "default_recipe": "R4"
+    }
+  },
+  "strategy_snapshot": {
+    "story_mode": "general",
+    "mode_label": "通用故事",
+    "genre_id": "G01",
+    "genre_name": "现实家庭冲突",
+    "genre_mechanism": "憋屈积累→反击打脸",
+    "genre_emotion": "怒→爽→暖",
+    "recipe_id": "R4",
+    "recipe_name": "家庭反击",
+    "recipe_slots": {
+      "A": "被压榨的妻子 / 儿媳",
+      "B": "觉醒 + 实证（账目、证据、外部身份）",
+      "C": "醒悟的丈夫 / 站队的子女",
+      "D": "婆婆、丈夫、小姑——纯身边人，情绪浓度最高",
+      "E": "被偏袒的一方"
+    },
+    "recipe_landing_note": "首选赛道。全对白驱动，零视觉依赖",
+    "recipe_version": "",
+    "recipe_enabled": true,
+    "template_ref": "GENERAL_THREE_ACT",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "亲密关系中的权力反转：冲突来自家庭内部的压迫与反抗。反派必须是私人化的（婆婆、丈夫、小姑），冲突发生在日常场景中。每一次反击都是界限的重新划定，不是暴力宣泄。",
+    "causal_driver": "憋屈积累 → 觉醒时刻 → 用事实反击。主角的觉醒是因果链的起点，实证（账目、证据、外部身份）是反击的武器。冲突升级来自反派的不甘与反扑。",
+    "ending_strategy": "关系重新定义，而非简单的'赢'。结局展示新的家庭平衡状态，可以和解也可以分离，但主角获得了尊重和自主权。不建议强制大团圆。",
+    "tone_guidance": "真实、情绪浓度高、渐进式爽感。核心是'终于等到这一天'的释放感。",
+    "genre_data": {
+      "genre_id": "G01",
+      "name": "现实家庭冲突",
+      "works": "亲家换锁 / 虎妈驾到 / 老公的工资婆婆的账",
+      "emotion": "怒→爽→暖",
+      "mechanism": "憋屈积累→反击打脸",
+      "audio_fit": "very_high",
+      "audio_fit_score": 95,
+      "driver": "纯对白驱动"
+    },
+    "recipe_data": {
+      "id": "R4",
+      "name": "家庭反击",
+      "audio_fit": "very_high",
+      "A": "被压榨的妻子 / 儿媳",
+      "B": "觉醒 + 实证（账目、证据、外部身份）",
+      "C": "醒悟的丈夫 / 站队的子女",
+      "D": "婆婆、丈夫、小姑——纯身边人，情绪浓度最高",
+      "E": "被偏袒的一方",
+      "reference": "亲家换锁我收回婚房 / 虎妈驾到，全家反骨仔乖乖立正 / 老公的工资，婆婆的账",
+      "landing_note": "首选赛道。全对白驱动，零视觉依赖"
+    }
+  },
+  "plan": {
+    "title": "止损",
+    "premise": "丈夫偷偷将家中三十万存款借给赌博的弟弟，妻子发现后下达最后通牒，逼迫丈夫在原生家庭的无底洞和自己的小家之间做出彻底切割。",
+    "theme": "亲密关系中的界限重塑与自我觉醒",
+    "beginning": "妻子用银行流水和弟弟的语音留言戳破丈夫的谎言，下达一个月追回存款否则带娃离开的最后通牒。",
+    "development": "丈夫试图用亲情道德绑架，妻子不为所动，用实际行动（打包行李）和现实代价（学区房首付）逼迫丈夫直面问题，丈夫被迫当场打电话要钱。",
+    "climax": "弟弟在电话中不仅拒绝还钱，还威胁要去丈夫单位闹事，彻底击碎了丈夫对亲情的最后幻想。",
+    "ending": "丈夫觉醒，报警并拉黑弟弟，交出车钥匙和房产证作为补偿与承诺。妻子收回财政大权，家庭权力关系重新定义。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "止损",
+        "core_goal": "妻子用事实和底线逼迫丈夫在“无底洞弟弟”和“自己的小家”之间做出最终切割，夺回家庭主导权。",
+        "major_beats": [
+          "[0-3s] 连续三声刺耳的银行扣款短信提示音响起，林晓将一沓银行流水单重重拍在餐桌上，打破家中的安静。",
+          "[3-10s] 林晓平静陈述事实：‘三十万，转给你弟还赌债。一个月追不回来，我带豆豆走。’明确核心冲突与最后通牒。",
+          "[10-30s] 陈建明辩解‘只是临时借’，林晓按下手机播放陈建辉的语音留言（‘哥，三十万拿去翻本，赢了给你换车’），用铁证戳破谎言，陈建明语塞。",
+          "[30-120s] 陈建明用‘血浓于水’道德绑架，林晓不争吵，直接拉开行李箱拉链开始打包衣物。陈建明慌乱阻拦，林晓用‘豆豆的学区房首付’反击，逼迫其面对现实代价。",
+          "[120-150s] 陈建明被迫免提拨打陈建辉电话要钱，陈建辉在电话中耍无赖并威胁‘不给钱就去你单位闹’。陈建明听到威胁后呼吸加重，彻底认清弟弟的真面目。",
+          "[150-180s] 陈建明挂断电话并拉黑弟弟，将车钥匙和房产证推到林晓面前，承诺卖车补钱并过户房产。林晓收起钥匙，以‘看你表现’回应，确立新的家庭权力平衡，故事平稳收束。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "wife",
+        "story_name": "林晓",
+        "external_goal": "追回三十万存款，或带着孩子离开这个没有底线的家，保护孩子的未来。",
+        "emotional_avoidance": "避免陷入丈夫“亲情绑架”的情绪漩涡，拒绝歇斯底里的争吵，不流于情绪宣泄。",
+        "speech_style": "语速平稳，咬字清晰，习惯用短句和具体数字（如‘三十万’‘一个月’），受压时不提高音量，而是用具体动作（如收拾行李）回应。",
+        "relationship_stance": "对丈夫仍有感情，但底线分明；不再扮演‘包容的嫂子’，而是‘保护孩子的母亲’，要求丈夫必须做出选择。"
+      },
+      {
+        "role_id": "husband",
+        "story_name": "陈建明",
+        "external_goal": "掩盖借钱事实，拖延时间，阻止妻子带孩子离开，维持表面的家庭完整。",
+        "emotional_avoidance": "逃避自己‘无能且偏心’的事实，害怕面对妻子失望的眼神和失去小家的真实后果。",
+        "speech_style": "习惯用‘大局’‘亲情’‘他毕竟是我弟’等词汇和稀泥；心虚时语速加快、音量不自觉拔高；被戳穿后会结巴、叹气。",
+        "relationship_stance": "依赖妻子的家庭管理能力，但在原生家庭面前习惯性退让；直到面临失去妻儿的真实危机，且被弟弟威胁后，才被迫觉醒并站队小家。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "brother_voice",
+        "story_name": "陈建辉",
+        "performer_id": "actor_3",
+        "medium": "telephone",
+        "dramatic_purpose": "通过电话和语音留言展现弟弟的无赖与贪婪，打破丈夫对亲情的最后幻想，促使丈夫做出最终切割的选择。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "强调日常物件的声音放大情绪：银行短信提示音、纸张拍桌声、行李箱拉链声、钥匙和房产证摩擦桌面的声音。",
+      "pacing": "前30秒节奏紧凑，台词交锋快；中段打包行李时留白，用环境音制造压迫感；后段电话免提时情绪逐渐推高，最后30秒回归平静与坚定。"
+    },
+    "continuity_constraints": [
+      "三十万存款是学区房首付，这一设定必须在台词中明确提及，作为妻子反击的核心筹码。",
+      "丈夫的态度转变必须由弟弟的电话威胁直接触发，不能凭空觉醒。",
+      "最后交出的车钥匙和房产证必须是前文未提及但符合家庭资产逻辑的物件，作为丈夫妥协的实质性代价。"
+    ],
+    "change_summary": [
+      "妻子从被动发现真相转变为主动设定规则并掌握家庭财政大权。",
+      "丈夫从试图用亲情和稀泥、逃避责任，转变为彻底切割原生家庭吸血者，用实际行动保卫小家。",
+      "家庭权力结构从丈夫暗中转移资产，重塑为妻子主导、丈夫补偿并受监督的新平衡。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "G01",
+    "recipe_id": "R4",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "f5cbaddd76d64024b304c620727e27db",
+      "plan_id": "956194383db2474eb498c87d113aa2eb",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "4516e8d84a6a48ebb7566ba8659581eb",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:57:56.252110+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5156,
+      "output_tokens": 4160,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2748,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "d168f3c4-50e8-4b79-8252-1dfc21de7bea",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 61576,
+      "completed_at": "2026-10-12T03:58:57.828421+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "17ebb3380e872d81a82c30b31d4f83467af53c3520e651b1804e5b4e94cd4df1",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T03:58:57.829487Z",
+  "updated_at": "2026-10-12T03:58:57.829487Z"
+}

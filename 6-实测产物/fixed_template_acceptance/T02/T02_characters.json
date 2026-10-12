@@ -1,0 +1,42 @@
+{
+  "lin_yu": {
+    "role_id": "lin_yu",
+    "character_id": "lin_yu",
+    "performer_id": "lin_yu",
+    "story_name": "林宇",
+    "canon_name": "林宇",
+    "immutable_facts": [],
+    "goal": "在毕业典礼上体面地交接抚养权协议，不让女儿看出端倪。",
+    "motivation": "",
+    "fear": "回避自己这半年来的悔恨和对妻子的依赖，用‘净身出户’的物质让步来掩饰内心的不舍。",
+    "speech_style": "句子短，习惯用陈述句掩饰情绪，紧张时会不自觉地清嗓子或停顿，受压时声音会发紧发颤。",
+    "relationship_stance": "充满愧疚，试图用退让来弥补，但内心极度渴望被原谅却不敢直接开口，处于卑微试探的状态。",
+    "source": "character_portrayal"
+  },
+  "su_nan": {
+    "role_id": "su_nan",
+    "character_id": "su_nan",
+    "performer_id": "su_nan",
+    "story_name": "苏南",
+    "canon_name": "苏南",
+    "immutable_facts": [],
+    "goal": "顺利参加完女儿的毕业典礼，拿到抚养权，尽快结束这段关系。",
+    "motivation": "",
+    "fear": "回避自己其实并没有放下林宇的事实，用带刺的语言和冷漠来保护自己免受二次伤害。",
+    "speech_style": "语速快，喜欢用反问句，受压时会提高音量或转移话题（如‘跟你没关系’），掩饰脆弱时声音会发抖。",
+    "relationship_stance": "表面决绝，实则内心拉扯，对林宇的改变感到意外和动摇，处于防御与渴望被理解的矛盾中。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

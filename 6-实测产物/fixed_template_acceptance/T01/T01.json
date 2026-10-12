@@ -1,0 +1,1086 @@
+{
+  "story_id": "f7ab1eed88344d0199d24bd833784e97",
+  "story_version_id": "0b1890964cd343f8bab27c959e18d925",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "956194383db2474eb498c87d113aa2eb",
+  "approved_plan_revision": 1,
+  "title": "止损",
+  "summary": "丈夫偷偷将家中三十万存款借给赌博的弟弟，妻子发现后下达最后通牒，逼迫丈夫在原生家庭的无底洞和自己的小家之间做出彻底切割。",
+  "preview_blurb": "三十万学区房首付不翼而飞，面对丈夫的亲情绑架和赌徒弟弟的无赖威胁，她决定用最后通牒重塑家庭底线。",
+  "tags": [
+    "G01",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [],
+  "character_portrayals": [
+    {
+      "role_id": "wife",
+      "story_name": "林晓",
+      "external_goal": "追回三十万存款，或带着孩子离开这个没有底线的家，保护孩子的未来。",
+      "emotional_avoidance": "避免陷入丈夫“亲情绑架”的情绪漩涡，拒绝歇斯底里的争吵，不流于情绪宣泄。",
+      "speech_style": "语速平稳，咬字清晰，习惯用短句和具体数字（如‘三十万’‘一个月’），受压时不提高音量，而是用具体动作（如收拾行李）回应。",
+      "relationship_stance": "对丈夫仍有感情，但底线分明；不再扮演‘包容的嫂子’，而是‘保护孩子的母亲’，要求丈夫必须做出选择。"
+    },
+    {
+      "role_id": "husband",
+      "story_name": "陈建明",
+      "external_goal": "掩盖借钱事实，拖延时间，阻止妻子带孩子离开，维持表面的家庭完整。",
+      "emotional_avoidance": "逃避自己‘无能且偏心’的事实，害怕面对妻子失望的眼神和失去小家的真实后果。",
+      "speech_style": "习惯用‘大局’‘亲情’‘他毕竟是我弟’等词汇和稀泥；心虚时语速加快、音量不自觉拔高；被戳穿后会结巴、叹气。",
+      "relationship_stance": "依赖妻子的家庭管理能力，但在原生家庭面前习惯性退让；直到面临失去妻儿的真实危机，且被弟弟威胁后，才被迫觉醒并站队小家。"
+    }
+  ],
+  "outline": {
+    "title": "止损",
+    "premise": "丈夫偷偷将家中三十万存款借给赌博的弟弟，妻子发现后下达最后通牒，逼迫丈夫在原生家庭的无底洞和自己的小家之间做出彻底切割。",
+    "theme": "亲密关系中的界限重塑与自我觉醒",
+    "beginning": "妻子用银行流水和弟弟的语音留言戳破丈夫的谎言，下达一个月追回存款否则带娃离开的最后通牒。",
+    "development": "丈夫试图用亲情道德绑架，妻子不为所动，用实际行动（打包行李）和现实代价（学区房首付）逼迫丈夫直面问题，丈夫被迫当场打电话要钱。",
+    "climax": "弟弟在电话中不仅拒绝还钱，还威胁要去丈夫单位闹事，彻底击碎了丈夫对亲情的最后幻想。",
+    "ending": "丈夫觉醒，报警并拉黑弟弟，交出车钥匙和房产证作为补偿与承诺。妻子收回财政大权，家庭权力关系重新定义。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "止损",
+        "core_goal": "妻子用事实和底线逼迫丈夫在“无底洞弟弟”和“自己的小家”之间做出最终切割，夺回家庭主导权。",
+        "major_beats": [
+          "[0-3s] 连续三声刺耳的银行扣款短信提示音响起，林晓将一沓银行流水单重重拍在餐桌上，打破家中的安静。",
+          "[3-10s] 林晓平静陈述事实：‘三十万，转给你弟还赌债。一个月追不回来，我带豆豆走。’明确核心冲突与最后通牒。",
+          "[10-30s] 陈建明辩解‘只是临时借’，林晓按下手机播放陈建辉的语音留言（‘哥，三十万拿去翻本，赢了给你换车’），用铁证戳破谎言，陈建明语塞。",
+          "[30-120s] 陈建明用‘血浓于水’道德绑架，林晓不争吵，直接拉开行李箱拉链开始打包衣物。陈建明慌乱阻拦，林晓用‘豆豆的学区房首付’反击，逼迫其面对现实代价。",
+          "[120-150s] 陈建明被迫免提拨打陈建辉电话要钱，陈建辉在电话中耍无赖并威胁‘不给钱就去你单位闹’。陈建明听到威胁后呼吸加重，彻底认清弟弟的真面目。",
+          "[150-180s] 陈建明挂断电话并拉黑弟弟，将车钥匙和房产证推到林晓面前，承诺卖车补钱并过户房产。林晓收起钥匙，以‘看你表现’回应，确立新的家庭权力平衡，故事平稳收束。"
+        ],
+        "ending": "Closed",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "wife",
+        "story_name": "林晓",
+        "external_goal": "追回三十万存款，或带着孩子离开这个没有底线的家，保护孩子的未来。",
+        "emotional_avoidance": "避免陷入丈夫“亲情绑架”的情绪漩涡，拒绝歇斯底里的争吵，不流于情绪宣泄。",
+        "speech_style": "语速平稳，咬字清晰，习惯用短句和具体数字（如‘三十万’‘一个月’），受压时不提高音量，而是用具体动作（如收拾行李）回应。",
+        "relationship_stance": "对丈夫仍有感情，但底线分明；不再扮演‘包容的嫂子’，而是‘保护孩子的母亲’，要求丈夫必须做出选择。"
+      },
+      {
+        "role_id": "husband",
+        "story_name": "陈建明",
+        "external_goal": "掩盖借钱事实，拖延时间，阻止妻子带孩子离开，维持表面的家庭完整。",
+        "emotional_avoidance": "逃避自己‘无能且偏心’的事实，害怕面对妻子失望的眼神和失去小家的真实后果。",
+        "speech_style": "习惯用‘大局’‘亲情’‘他毕竟是我弟’等词汇和稀泥；心虚时语速加快、音量不自觉拔高；被戳穿后会结巴、叹气。",
+        "relationship_stance": "依赖妻子的家庭管理能力，但在原生家庭面前习惯性退让；直到面临失去妻儿的真实危机，且被弟弟威胁后，才被迫觉醒并站队小家。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "brother_voice",
+        "story_name": "陈建辉",
+        "performer_id": "actor_3",
+        "medium": "telephone",
+        "dramatic_purpose": "通过电话和语音留言展现弟弟的无赖与贪婪，打破丈夫对亲情的最后幻想，促使丈夫做出最终切割的选择。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "强调日常物件的声音放大情绪：银行短信提示音、纸张拍桌声、行李箱拉链声、钥匙和房产证摩擦桌面的声音。",
+      "pacing": "前30秒节奏紧凑，台词交锋快；中段打包行李时留白，用环境音制造压迫感；后段电话免提时情绪逐渐推高，最后30秒回归平静与坚定。"
+    },
+    "continuity_constraints": [
+      "三十万存款是学区房首付，这一设定必须在台词中明确提及，作为妻子反击的核心筹码。",
+      "丈夫的态度转变必须由弟弟的电话威胁直接触发，不能凭空觉醒。",
+      "最后交出的车钥匙和房产证必须是前文未提及但符合家庭资产逻辑的物件，作为丈夫妥协的实质性代价。"
+    ],
+    "change_summary": [
+      "妻子从被动发现真相转变为主动设定规则并掌握家庭财政大权。",
+      "丈夫从试图用亲情和稀泥、逃避责任，转变为彻底切割原生家庭吸血者，用实际行动保卫小家。",
+      "家庭权力结构从丈夫暗中转移资产，重塑为妻子主导、丈夫补偿并受监督的新平衡。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-880da3bd",
+      "index": 1,
+      "title": "止损",
+      "synopsis": "丈夫偷偷将家中三十万存款借给赌博的弟弟，妻子发现后下达最后通牒，逼迫丈夫在原生家庭的无底洞和自己的小家之间做出彻底切割。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 163,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "scene_index": 1,
+          "title": "流水与通牒",
+          "location": "家中餐厅",
+          "dramatic_goal": "林晓用银行流水戳破谎言，下达追回存款否则带娃离开的最后通牒。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "连续三声刺耳的银行扣款短信提示音，纸张重重拍在桌面上。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "wife",
+              "narrator_id": null,
+              "performer_id": "wife",
+              "text": "三十万。分三笔，转给你弟还赌债。一个月追不回来，我带豆豆走，这日子没法过了。",
+              "emotion": "serious",
+              "tone_instruction": "语气平稳但字字清晰，不带哭腔，用陈述事实的口吻下达最后通牒。",
+              "emphasis": [
+                {
+                  "span_text": "三十万",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "没法过了",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 37,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首“三十万”后微顿，模拟拍桌后的余韵。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "husband",
+              "narrator_id": null,
+              "performer_id": "husband",
+              "text": "晓晓，你先别激动，把刀放下。那只是临时借给他周转一下，他发了工资就还，过两天的事。",
+              "emotion": "worried",
+              "tone_instruction": "语速稍快，声音压低带安抚意味，强调“临时”以撇清长期恶意。",
+              "emphasis": [
+                {
+                  "span_text": "临时借给他周转一下",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 26,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "过两天的事",
+                  "occurrence": 1,
+                  "start_char": 35,
+                  "end_char": 40,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“晓晓”后气息微促，接“把刀放下”时尾音上扬试探。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "wife",
+              "narrator_id": null,
+              "performer_id": "wife",
+              "text": "过两天？银行流水上写得清清楚楚，这是你瞒着我转的第三笔了。你把我当什么了？提款机吗？",
+              "emotion": "angry",
+              "tone_instruction": "前半句反问带冷意，后半句逐渐加重质问力度，咬字干脆不留余地。",
+              "emphasis": [
+                {
+                  "span_text": "第三笔了",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 28,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "提款机吗？",
+                  "occurrence": 1,
+                  "start_char": 37,
+                  "end_char": 42,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“过两天？”后短促吸气，接“银行流水”时语速加快，句末留半秒空白等对方反应。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "语音铁证",
+          "location": "家中餐厅",
+          "dramatic_goal": "林晓播放弟弟的语音留言，用铁证彻底戳破丈夫“临时周转”的谎言。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "wife",
+              "narrator_id": null,
+              "performer_id": "wife",
+              "text": "临时借？你听听他是怎么谢你的。",
+              "emotion": "serious",
+              "tone_instruction": "语气冷硬，前半句带反问质疑，后半句平稳引导播放录音",
+              "emphasis": [
+                {
+                  "span_text": "临时借",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "谢你的",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 14,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留半秒停顿，配合按下手机播放键的动作音效衔接",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "手机播放语音留言。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "brother_voice",
+              "narrator_id": null,
+              "performer_id": "actor_3",
+              "text": "哥，三十万拿去翻本，赢了给你换车！谢了啊！",
+              "emotion": "excited",
+              "tone_instruction": "语速偏快，尾音上扬带笑意，模仿电话外放时的失真感与随意口吻",
+              "emphasis": [
+                {
+                  "span_text": "翻本",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "换车",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "模拟手机扬声器低通滤波效果，句尾“谢了啊”带轻微气声笑",
+              "audio_cue_ref": "telephone"
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "wife",
+              "narrator_id": null,
+              "performer_id": "wife",
+              "text": "换车？陈建明，这就是你说的周转？拿我们家的救命钱去赌场翻本？",
+              "emotion": "angry",
+              "tone_instruction": "咬字加重，前两句短促质问，第三句压低嗓音强调后果严重性",
+              "emphasis": [
+                {
+                  "span_text": "救命钱",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 24,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "赌场翻本",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“陈建明”后微顿，呼吸加重，第三句末尾气息下沉不拖音",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "husband",
+              "narrator_id": null,
+              "performer_id": "husband",
+              "text": "这……他平时说话没正形，喝多了瞎说的，我保证他不敢乱来，你别听风就是雨，行吗？",
+              "emotion": "worried",
+              "tone_instruction": "开头迟疑结巴，中间语速加快试图辩解，结尾转为低声恳求",
+              "emphasis": [
+                {
+                  "span_text": "不敢乱来",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 27,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "行吗？",
+                  "occurrence": 1,
+                  "start_char": 36,
+                  "end_char": 39,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“这……”后留0.5秒空白，后半句逐渐放轻音量，句末气息微颤",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "scene_index": 3,
+          "title": "底线与威胁",
+          "location": "家中卧室/餐厅",
+          "dramatic_goal": "丈夫试图道德绑架，妻子以学区房首付反击并打包行李；弟弟在电话中的威胁促使丈夫认清现实。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "husband",
+              "narrator_id": null,
+              "performer_id": "husband",
+              "text": "晓晓，血浓于水啊！他毕竟是我亲弟，外面那些人催债催得紧，我不能看着他被人砍死吧？你就当帮帮我，别闹了行不行？",
+              "emotion": "worried",
+              "tone_instruction": "压低嗓音强调道德绑架，后半句转为急促恳求，尾音微颤。",
+              "emphasis": [
+                {
+                  "span_text": "血浓于水啊",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "帮帮我",
+                  "occurrence": 1,
+                  "start_char": 43,
+                  "end_char": 46,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“晓晓”后微顿0.3秒，吸气后加快语速；“行不行？”尾音上扬并伴随轻微叹息。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "wife",
+              "narrator_id": null,
+              "performer_id": "wife",
+              "text": "帮？你拿什么帮？",
+              "emotion": "serious",
+              "tone_instruction": "语气冷硬，短促停顿后反问，重音落在质疑处，不带情绪起伏。",
+              "emphasis": [
+                {
+                  "span_text": "什么帮",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“帮？”字拉长半拍后急停，直接接下一句，无换气声。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "husband",
+              "narrator_id": null,
+              "performer_id": "husband",
+              "text": "我……我下个月奖金发了就补上。",
+              "emotion": "worried",
+              "tone_instruction": "结巴起头，声音发虚，后半句强行压低试图显得笃定，但气息不稳。",
+              "emphasis": [
+                {
+                  "span_text": "下个月",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "补上",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "开头“我……”留白约0.5秒模拟迟疑，句末气息渐弱。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "wife",
+              "narrator_id": null,
+              "performer_id": "wife",
+              "text": "豆豆下个月就要交学区房首付，三十万没了，拿什么交？拿你的血浓于水去交吗？你弟弟的命是命，你儿子的前途就不是命了？",
+              "emotion": "angry",
+              "tone_instruction": "语速逐步加快，前两句陈述事实平稳有力，后三句连珠炮式反问，咬字加重，不吼叫但压迫感强。",
+              "emphasis": [
+                {
+                  "span_text": "三十万没了",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 19,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "不是命了",
+                  "occurrence": 1,
+                  "start_char": 51,
+                  "end_char": 55,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“拿什么交？”后微顿0.3秒，随后语流不断推进至句末，最后一句尾音干脆截断。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "行李箱拉链拉开，衣物摩擦声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "husband",
+              "narrator_id": null,
+              "performer_id": "husband",
+              "text": "你干嘛？真要走？我……我现在打电话让他还！我让他马上吐出来！",
+              "emotion": "worried",
+              "tone_instruction": "呼吸急促，前两问连珠带过，第三句突然拔高音量试图镇场，尾音因用力过猛而干涩。",
+              "emphasis": [
+                {
+                  "span_text": "真要走",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "马上吐出来",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“你干嘛？”后伴随衣物摩擦音效预期停顿，“我……”处明显吞咽口水，随后语速骤升。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "拨号音，电话接通。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "husband",
+              "narrator_id": null,
+              "performer_id": "husband",
+              "text": "建辉，那三十万你赶紧转回来，晓晓要交首付，听见没？",
+              "emotion": "serious",
+              "tone_instruction": "对着手机说话，音量提高但刻意压住颤抖，语气强硬不容置疑，句末加重命令感。",
+              "emphasis": [
+                {
+                  "span_text": "赶紧转回来",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 13,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "听见没",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿模拟拨通电话瞬间，中间“晓晓要交首付”语速稍缓以强调理由，最后四字一字一顿。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "brother_voice",
+              "narrator_id": null,
+              "performer_id": "actor_3",
+              "text": "还什么还？钱早输光了！嫂子要闹是吧？行，你不给我弄钱，我明天就去你单位闹，让领导看看你怎么逼死亲弟弟的！",
+              "emotion": "angry",
+              "tone_instruction": "语气嚣张，前半句轻蔑冷笑，后半句逐渐逼近威胁，咬字狠厉，句尾拖长施压。",
+              "emphasis": [
+                {
+                  "span_text": "早输光了",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "去你单位闹",
+                  "occurrence": 1,
+                  "start_char": 31,
+                  "end_char": 36,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“还什么还？”带出气音表示不屑，句末“亲弟弟的！”尾音拖长并加重，模拟挂断前的最后施压。",
+              "audio_cue_ref": "telephone"
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "scene_index": 4,
+          "title": "切割与重塑",
+          "location": "家中餐厅",
+          "dramatic_goal": "丈夫彻底觉醒，拉黑弟弟并交出车钥匙和房产证，妻子收回财政大权，确立新的家庭平衡。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "电话挂断，手机屏幕点击声。车钥匙和房产证推过桌面。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "husband",
+              "narrator_id": null,
+              "performer_id": "husband",
+              "text": "我拉黑他了。这是车钥匙，还有房产证。明天我就把车卖了补窟窿，房子过户到你名下。以后工资卡也交给你，密码是你生日。",
+              "emotion": "serious",
+              "tone_instruction": "语气沉稳笃定，语速平稳，强调交接动作与承诺的实在感，避免声调过高。",
+              "emphasis": [
+                {
+                  "span_text": "拉黑他了",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 5,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "工资卡也交给你",
+                  "occurrence": 1,
+                  "start_char": 41,
+                  "end_char": 48,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "说完“房产证”后微顿半秒，呼吸稍缓，继续交代后续安排。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "wife",
+              "narrator_id": null,
+              "performer_id": "wife",
+              "text": "车卖了不够，剩下的从你零花钱里扣。豆豆的学区房，不能出一点差错。",
+              "emotion": "serious",
+              "tone_instruction": "语气冷静克制，不带情绪起伏，咬字清晰，突出底线要求，尾音干脆收住。",
+              "emphasis": [
+                {
+                  "span_text": "零花钱里扣",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 16,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "不能出一点差错",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句语速稍快带出决断感，“学区房”前吸气停顿，后半句加重尾音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "husband",
+              "narrator_id": null,
+              "performer_id": "husband",
+              "text": "好，都听你的。我绝不再犯。",
+              "emotion": "reassuring",
+              "tone_instruction": "语气放松且诚恳，气息下沉，尾音略微上扬以示安抚，避免显得敷衍或机械。",
+              "emphasis": [
+                {
+                  "span_text": "都听你的",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "绝不再犯",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“好”字出口后轻叹一声，停顿一秒，后半句放缓语速以示郑重。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "钥匙被收起，清脆的金属碰撞声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "wife",
+              "narrator_id": null,
+              "performer_id": "wife",
+              "text": "看你表现。",
+              "emotion": "calm",
+              "tone_instruction": "语气平淡但带有不容置疑的分量，不拖泥带水，收尾干脆利落。",
+              "emphasis": [
+                {
+                  "span_text": "表现",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 4,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "说完后保持两秒静默，不接话，留给对方消化空间。",
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林晓用银行流水和语音留言戳破丈夫陈建明借钱给弟弟还赌债的谎言。面对丈夫的道德绑架，林晓以打包行李和学区房首付为筹码逼迫其直面现实。弟弟在电话中的无赖威胁彻底击碎了陈建明的幻想，他最终选择拉黑弟弟，交出车钥匙和房产证，家庭权力关系得以重新定义。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "三十万存款被陈建明转给弟弟还赌债。"
+        },
+        {
+          "fact": "陈建明交出车钥匙和房产证，承诺卖车补钱并过户房产。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "relationship": "林晓与陈建明从丈夫隐瞒欺骗转变为妻子主导、丈夫受监督的新平衡。"
+        },
+        {
+          "relationship": "陈建明与弟弟陈建辉彻底切割，拉黑联系方式。"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "三十万存款去向及追回问题。",
+        "家庭财政大权归属问题。"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "三十万存款被陈建明转给弟弟还赌债。"
+      },
+      {
+        "fact": "陈建明交出车钥匙和房产证，承诺卖车补钱并过户房产。"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship": "林晓与陈建明从丈夫隐瞒欺骗转变为妻子主导、丈夫受监督的新平衡。"
+      },
+      {
+        "relationship": "陈建明与弟弟陈建辉彻底切割，拉黑联系方式。"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 18,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "delivery_format_version": "1.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "f5cbaddd76d64024b304c620727e27db",
+      "plan_id": "956194383db2474eb498c87d113aa2eb",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "4516e8d84a6a48ebb7566ba8659581eb",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:57:56.252110+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5156,
+      "output_tokens": 4160,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2748,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "d168f3c4-50e8-4b79-8252-1dfc21de7bea",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 61576,
+      "completed_at": "2026-10-12T03:58:57.828421+00:00"
+    },
+    {
+      "request_id": "f5cbaddd76d64024b304c620727e27db",
+      "job_id": "2837f39c2735404cae76cc2c66563e6a",
+      "plan_id": "956194383db2474eb498c87d113aa2eb",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "8b34d0718544479ebf156cc836203d02",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:58:57.854229+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 7021,
+      "output_tokens": 7672,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5357,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "5ce15d04-30a0-4ad9-a521-22adfffe4079",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 61089,
+      "completed_at": "2026-10-12T03:59:58.943773+00:00"
+    },
+    {
+      "request_id": "f5cbaddd76d64024b304c620727e27db",
+      "job_id": "2837f39c2735404cae76cc2c66563e6a",
+      "plan_id": "956194383db2474eb498c87d113aa2eb",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "44cf38f471fd41ec8425ee17ec72b2b9",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T03:59:58.948999+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2070,
+      "output_tokens": 3841,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3291,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ecacd00b-a869-46ec-b8d6-4946afa4d815",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 32218,
+      "completed_at": "2026-10-12T04:00:31.167633+00:00"
+    },
+    {
+      "request_id": "f5cbaddd76d64024b304c620727e27db",
+      "job_id": "2837f39c2735404cae76cc2c66563e6a",
+      "plan_id": "956194383db2474eb498c87d113aa2eb",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "b3a18e54980e4379813fa21eb8f8b3a8",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:00:31.171878+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2132,
+      "output_tokens": 6051,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5198,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "00ee52bf-55c5-4120-a6e3-49907bbfe414",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 44605,
+      "completed_at": "2026-10-12T04:01:15.777134+00:00"
+    },
+    {
+      "request_id": "f5cbaddd76d64024b304c620727e27db",
+      "job_id": "2837f39c2735404cae76cc2c66563e6a",
+      "plan_id": "956194383db2474eb498c87d113aa2eb",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "4af14e93065646f9bd97e137aeaa27b5",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:01:15.783376+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2449,
+      "output_tokens": 4961,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3680,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "a5c89fbe-7f7d-483e-9b1c-c69057ba9e7f",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 39165,
+      "completed_at": "2026-10-12T04:01:54.949368+00:00"
+    },
+    {
+      "request_id": "f5cbaddd76d64024b304c620727e27db",
+      "job_id": "2837f39c2735404cae76cc2c66563e6a",
+      "plan_id": "956194383db2474eb498c87d113aa2eb",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "df2f350a2aba47b5a07e1b38814cd791",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:01:54.954621+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2125,
+      "output_tokens": 6159,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5473,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "03b1d254-3183-4fce-96ef-ad972cce14e9",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 46114,
+      "completed_at": "2026-10-12T04:02:41.069277+00:00"
+    },
+    {
+      "request_id": "f5cbaddd76d64024b304c620727e27db",
+      "job_id": "2837f39c2735404cae76cc2c66563e6a",
+      "plan_id": "956194383db2474eb498c87d113aa2eb",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "b7dae29be5e34eeea05b5e7812d705e0",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:02:41.073451+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7497,
+      "output_tokens": 2040,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1998,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "c3cd5c02-bf36-4736-9b33-09e6f94eedba",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 18799,
+      "completed_at": "2026-10-12T04:02:59.872849+00:00"
+    }
+  ],
+  "created_at": "2026-10-12T04:02:41.069803Z"
+}

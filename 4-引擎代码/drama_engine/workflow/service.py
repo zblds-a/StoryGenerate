@@ -89,7 +89,7 @@ class StoryWorkflowService:
         template_default_recipe = None
         if request.template_ref and self.template_resolver:
             try:
-                spec = self.template_resolver.repository.get(
+                spec = self.template_resolver._repo.get(
                     request.template_ref.template_id,
                     version=request.template_ref.template_revision,
                 )

@@ -1,0 +1,42 @@
+{
+  "wife": {
+    "role_id": "wife",
+    "character_id": "wife",
+    "performer_id": "wife",
+    "story_name": "林晓",
+    "canon_name": "林晓",
+    "immutable_facts": [],
+    "goal": "追回三十万存款，或带着孩子离开这个没有底线的家，保护孩子的未来。",
+    "motivation": "",
+    "fear": "避免陷入丈夫“亲情绑架”的情绪漩涡，拒绝歇斯底里的争吵，不流于情绪宣泄。",
+    "speech_style": "语速平稳，咬字清晰，习惯用短句和具体数字（如‘三十万’‘一个月’），受压时不提高音量，而是用具体动作（如收拾行李）回应。",
+    "relationship_stance": "对丈夫仍有感情，但底线分明；不再扮演‘包容的嫂子’，而是‘保护孩子的母亲’，要求丈夫必须做出选择。",
+    "source": "character_portrayal"
+  },
+  "husband": {
+    "role_id": "husband",
+    "character_id": "husband",
+    "performer_id": "husband",
+    "story_name": "陈建明",
+    "canon_name": "陈建明",
+    "immutable_facts": [],
+    "goal": "掩盖借钱事实，拖延时间，阻止妻子带孩子离开，维持表面的家庭完整。",
+    "motivation": "",
+    "fear": "逃避自己‘无能且偏心’的事实，害怕面对妻子失望的眼神和失去小家的真实后果。",
+    "speech_style": "习惯用‘大局’‘亲情’‘他毕竟是我弟’等词汇和稀泥；心虚时语速加快、音量不自觉拔高；被戳穿后会结巴、叹气。",
+    "relationship_stance": "依赖妻子的家庭管理能力，但在原生家庭面前习惯性退让；直到面临失去妻儿的真实危机，且被弟弟威胁后，才被迫觉醒并站队小家。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

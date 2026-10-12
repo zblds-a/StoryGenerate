@@ -138,6 +138,11 @@ class ResolvedStoryTemplate(BaseModel):
             parts.append(f"结局方向: {self.ending_guidance}")
         return "\n".join(parts)
 
+    defaults: dict[str, Any] = Field(
+        default_factory=dict,
+        description="默认值快照 (e.g. default_recipe)"
+    )
+
     @classmethod
     def from_spec(cls, spec: StoryTemplateSpec, source: TemplateSource) -> "ResolvedStoryTemplate":
         return cls(
@@ -151,4 +156,5 @@ class ResolvedStoryTemplate(BaseModel):
             recommended_characters=spec.recommended_characters,
             tone_hints=spec.tone_hints,
             ending_guidance=spec.ending_guidance,
+            defaults=spec.defaults,
         )

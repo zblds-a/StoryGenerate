@@ -1,0 +1,283 @@
+{
+  "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": {
+    "template_id": "GENERAL_RELATIONSHIP_TURN",
+    "version": 1,
+    "name": "关系转折结构",
+    "source": "explicit",
+    "supported_modes": [
+      "general"
+    ],
+    "beats": [
+      {
+        "key": "setup",
+        "purpose": "展示两个人物的关系现状及其隐含矛盾",
+        "guidance": "通过互动细节展示关系，不只靠台词说明",
+        "required": true
+      },
+      {
+        "key": "trigger",
+        "purpose": "触发事件：迫使其中一方或双方重新审视关系",
+        "guidance": "触发事件应与之前的隐含矛盾直接相关",
+        "required": true
+      },
+      {
+        "key": "separation",
+        "purpose": "分离或冲突阶段：双方采取对立的行动",
+        "guidance": "双方各自的选择必须符合其行为规律",
+        "required": true
+      },
+      {
+        "key": "recognition",
+        "purpose": "认知转变：其中一方意识到新的真相",
+        "guidance": "转变应来自具体事件或他人的揭示，不是突然顿悟",
+        "required": true
+      },
+      {
+        "key": "reunion",
+        "purpose": "重逢或和解：双方在新理解的基础上重新接触",
+        "guidance": "和解不需要完美，保留真实的不完美感",
+        "required": true
+      },
+      {
+        "key": "new_normal",
+        "purpose": "新常态：展示关系的新平衡状态",
+        "guidance": "用具体细节暗示未来，不要书面总结",
+        "required": true
+      }
+    ],
+    "constraints": [
+      "关系变化必须来自角色的主动选择",
+      "不能使用'从此幸福地生活在一起'式收尾"
+    ],
+    "recommended_characters": 3,
+    "tone_hints": [
+      "细腻",
+      "情感",
+      "真实"
+    ],
+    "ending_guidance": "closed_with_hope",
+    "defaults": {
+      "target_duration_sec": 180,
+      "default_recipe": "R5"
+    }
+  },
+  "strategy_snapshot": {
+    "story_mode": "general",
+    "mode_label": "通用故事",
+    "genre_id": "G02",
+    "genre_name": "成年人治愈爱情",
+    "genre_mechanism": "细水长流、互相救赎",
+    "genre_emotion": "酸→暖",
+    "recipe_id": "R5",
+    "recipe_name": "破镜重圆治愈",
+    "recipe_slots": {
+      "A": "受过伤的成年人",
+      "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+      "C": "新的生活共同体（邻居、家中孩童）",
+      "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+      "E": "曾经的选择"
+    },
+    "recipe_landing_note": "首选赛道。戏剧张力天然存在于台词",
+    "recipe_version": "",
+    "recipe_enabled": true,
+    "template_ref": "GENERAL_RELATIONSHIP_TURN",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "内心拉扯式冲突：冲突主要来自人物的内心障碍和过去创伤，外部冲突为辅助。以'拉扯'代替'对抗'——两个人互相靠近又推开的过程。旧误会是障碍，但解决方案不是一次性真相大白，而是渐进理解。",
+    "causal_driver": "相遇/重逢 → 旧伤复发 → 拉扯与试探 → 关键事件打破僵局 → 逐步理解对方的真实处境 → 双向治愈。每一步都是情感层面的推进而非事件层面的推进。",
+    "ending_strategy": "双向治愈，不是单方面的拯救。结局展示双方各自成长后才走到一起，不是因为'对方改变了'。和解是过程的自然结果，不是强制的拥抱与原谅。",
+    "tone_guidance": "细腻、拉扯感、克制的温柔。情感张力的来源是'明明在意却不敢靠近'的微妙距离。",
+    "genre_data": {
+      "genre_id": "G02",
+      "name": "成年人治愈爱情",
+      "works": "渐染 / 好雨知时节",
+      "emotion": "酸→暖",
+      "mechanism": "细水长流、互相救赎",
+      "audio_fit": "very_high",
+      "audio_fit_score": 95,
+      "driver": "无需视觉"
+    },
+    "recipe_data": {
+      "id": "R5",
+      "name": "破镜重圆治愈",
+      "audio_fit": "very_high",
+      "A": "受过伤的成年人",
+      "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+      "C": "新的生活共同体（邻居、家中孩童）",
+      "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+      "E": "曾经的选择",
+      "reference": "渐染 / 好雨知时节 / 破茧 / 他深情侵入",
+      "landing_note": "首选赛道。戏剧张力天然存在于台词"
+    }
+  },
+  "plan": {
+    "title": "过界的椅子",
+    "premise": "分居半年的夫妻在女儿的小学毕业典礼上被迫挤在同一张椅子上，在互相试探与刺痛中，发现彼此都因分离而伤痕累累，最终在女儿的广播声中达成了无声的和解。",
+    "theme": "破镜重圆、互相救赎、克制的温柔",
+    "beginning": "毕业典礼开场前，苏南匆忙落座挤到林宇，两人因座位界限发生低烈度口角，苏南的包意外掉落，暴露出她分居期间服用抗焦虑药物的秘密。",
+    "development": "林宇发现药物后，两人开始用带刺的语言互相试探。苏南指出林宇衬衫扣错的细节，林宇意识到苏南的失眠与痛苦，两人陷入互相心疼却又互相推开的拉扯中。",
+    "climax": "典礼暗灯，林宇在黑暗中拧开水递给苏南，并交出净身出户的抚养权协议，坦白自己这半年的悔恨。苏南拒绝接受，认为两人已经回不到过去。",
+    "ending": "在女儿通过礼堂广播发表毕业感言的声音中，苏南没有拿走协议，而是在黑暗中主动握住了林宇递水的手，两人在掌声中达成了无需言语的双向治愈。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "过界的椅子",
+        "core_goal": "在女儿毕业典礼的短暂时间里，完成夫妻两人从互相防备到坦诚内心、最终和解的情感转变。",
+        "major_beats": [
+          "[0-3s] 突发听觉事件：椅子腿刺耳刮擦地面。林宇压低声音警告：‘你坐过界了。’",
+          "[3-10s] 苏南回应典礼快开始了别吵，要求林宇往里挪；林宇反驳是苏南挤了他，交代两人分居后在女儿毕业典礼上被迫同座的尴尬处境。",
+          "[10-30s] 两人暗中推挤，苏南的帆布包滑落，药瓶和纸张散落一地。环境音瞬间安静（音乐断点），林宇捡起药瓶，看清标签上的‘抗焦虑’字样，动作僵住。",
+          "[30-120s] 林宇把药递回，声音发紧询问她何时开始吃药；苏南一把夺过，用‘跟你没关系’掩饰慌乱。林宇自嘲以为她离开后很轻松，苏南反唇相讥指出他衬衫扣子扣错了一颗，点破他这半年同样过得一团糟。",
+          "[120-153s] 礼堂暗灯，典礼开始。林宇在黑暗中拧开矿泉水递给苏南，并递上签好字的净身出户协议，坦白自己每天都在悔恨当初的脾气。苏南声音颤抖地拒绝，说‘我们回不去了’。",
+          "[153-180s] 核心情感信息已交代。台上女儿淼淼的广播声响起：‘感谢爸爸妈妈教会我勇敢’。苏南没有接协议，而是在黑暗中轻轻覆上林宇递水的手。林宇反握。只有两人交错的呼吸声与全场掌声。"
+        ],
+        "ending": "closed_with_hope",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_yu",
+        "story_name": "林宇",
+        "external_goal": "在毕业典礼上体面地交接抚养权协议，不让女儿看出端倪。",
+        "emotional_avoidance": "回避自己这半年来的悔恨和对妻子的依赖，用‘净身出户’的物质让步来掩饰内心的不舍。",
+        "speech_style": "句子短，习惯用陈述句掩饰情绪，紧张时会不自觉地清嗓子或停顿，受压时声音会发紧发颤。",
+        "relationship_stance": "充满愧疚，试图用退让来弥补，但内心极度渴望被原谅却不敢直接开口，处于卑微试探的状态。"
+      },
+      {
+        "role_id": "su_nan",
+        "story_name": "苏南",
+        "external_goal": "顺利参加完女儿的毕业典礼，拿到抚养权，尽快结束这段关系。",
+        "emotional_avoidance": "回避自己其实并没有放下林宇的事实，用带刺的语言和冷漠来保护自己免受二次伤害。",
+        "speech_style": "语速快，喜欢用反问句，受压时会提高音量或转移话题（如‘跟你没关系’），掩饰脆弱时声音会发抖。",
+        "relationship_stance": "表面决绝，实则内心拉扯，对林宇的改变感到意外和动摇，处于防御与渴望被理解的矛盾中。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "lin_miao",
+        "story_name": "林淼",
+        "performer_id": "child_voice_actor",
+        "medium": "broadcast",
+        "dramatic_purpose": "在结尾通过礼堂广播发表毕业感言，作为情感催化剂和余韵回响，点破父母关系的核心，促成最终的肢体和解。"
+      }
+    ],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "audio_cues": "椅子刮擦声、药瓶滚落声、礼堂暗灯时的环境音变化、拧瓶盖声、纸张摩擦声、广播电流声与掌声。",
+      "voice_direction": "林宇前期压抑克制，后期声音发颤带出悔恨；苏南前期语速快、带刺，后期声音变轻、带出脆弱感。两人全程压低声音，营造公共场合下的私密拉扯感。"
+    },
+    "continuity_constraints": [
+      "苏南的抗焦虑药和修改过的协议必须在包掉落时一同散出，后续林宇递协议时需从自己口袋拿出，不能凭空出现。",
+      "林宇衬衫扣错扣子的细节必须在苏南指出前，通过林宇整理衣服或苏南的视线音效（如布料摩擦）做微小铺垫。",
+      "礼堂暗灯后，所有动作必须通过声音（如拧瓶盖、纸张摩擦、衣物摩擦）来体现，不能依赖视觉描述。"
+    ],
+    "change_summary": [
+      "苏南从试图用冷漠和带刺的语言推开林宇，转变为在黑暗中主动握手，接纳了林宇的歉意与改变。",
+      "林宇从试图用‘净身出户’的物质让步来掩饰内心的不舍与愧疚，转变为坦诚自己的悔恨，并最终获得了苏南的肢体回应。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "G02",
+    "recipe_id": "R5",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "b9882621ac7f427e93be2a725774d92c",
+      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "0a820f13774c40d0be5142a41245e91e",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:02:59.902972+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5137,
+      "output_tokens": 4626,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3150,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ba9bd9b2-eac9-4119-b64f-16c593faea2c",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 75049,
+      "completed_at": "2026-10-12T04:04:14.952656+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "1701ace1e6b9232cbacd27c1d40b914a386e7a47f6e62f8a3765363c297ff233",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T04:04:14.953172Z",
+  "updated_at": "2026-10-12T04:04:14.953172Z"
+}
