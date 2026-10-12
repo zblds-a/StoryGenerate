@@ -1,15 +1,15 @@
 {
-  "story_id": "4ac56868adad4a338b7d968ab9485182",
-  "story_version_id": "4098142e06ad4b7c9105ac919466a193",
+  "story_id": "171f17d2a95d4aebb910811ee3ca6787",
+  "story_version_id": "4fb4f2db7968401b91e7396ec1326d29",
   "version_no": 1,
   "parent_story_version_id": null,
   "lineage_type": "create",
   "series_id": null,
-  "approved_plan_id": "a239be2620694bc68bf66dea26ecfda2",
+  "approved_plan_id": "e584ab41341f4b9a8d19af738aa56909",
   "approved_plan_revision": 1,
-  "title": "过界的椅子",
-  "summary": "分居半年的夫妻在女儿的小学毕业典礼上被迫挤在同一张椅子上，在互相试探与刺痛中，发现彼此都因分离而伤痕累累，最终在女儿的广播声中达成了无声的和解。",
-  "preview_blurb": "毕业典礼上，分居半年的夫妻被迫挤在同一张窄椅上。散落的药瓶和错扣的衬衫，揭开了两人各自硬撑的狼狈真相。",
+  "title": "取景器里的余温",
+  "summary": "分居半年的夫妻在女儿的小学毕业典礼上被迫同座，在试探与拉扯中，妻子发现了丈夫笨拙却真实的改变，两人在快门声中迎来了新的开始。",
+  "preview_blurb": "毕业典礼上被迫同座，分居半年的他们连递水都显得尴尬。当旧相机再次举起，取景器里定格的不仅是女儿的笑脸，还有那些未曾说出口的改变。",
   "tags": [
     "G02",
     "warm",
@@ -23,40 +23,41 @@
     {
       "role_id": "lin_yu",
       "story_name": "林宇",
-      "external_goal": "在毕业典礼上体面地交接抚养权协议，不让女儿看出端倪。",
-      "emotional_avoidance": "回避自己这半年来的悔恨和对妻子的依赖，用‘净身出户’的物质让步来掩饰内心的不舍。",
-      "speech_style": "句子短，习惯用陈述句掩饰情绪，紧张时会不自觉地清嗓子或停顿，受压时声音会发紧发颤。",
-      "relationship_stance": "充满愧疚，试图用退让来弥补，但内心极度渴望被原谅却不敢直接开口，处于卑微试探的状态。"
+      "external_goal": "在女儿毕业典礼上表现得体，并试图通过行动修复与妻子的关系。",
+      "emotional_avoidance": "害怕被直接拒绝，回避表达‘我需要你’，习惯用笨拙的物质补偿或没话找话来掩饰内心的慌乱。",
+      "speech_style": "语速偏快，紧张时会清嗓子，常用‘其实我……’‘要不……’等试探性句式，受压时声音会变低。",
+      "relationship_stance": "充满愧疚，试图弥补，但依然带着过去‘我来解决问题’的惯性思维，正在努力学习平视和尊重对方的边界。"
     },
     {
       "role_id": "su_nan",
       "story_name": "苏南",
-      "external_goal": "顺利参加完女儿的毕业典礼，拿到抚养权，尽快结束这段关系。",
-      "emotional_avoidance": "回避自己其实并没有放下林宇的事实，用带刺的语言和冷漠来保护自己免受二次伤害。",
-      "speech_style": "语速快，喜欢用反问句，受压时会提高音量或转移话题（如‘跟你没关系’），掩饰脆弱时声音会发抖。",
-      "relationship_stance": "表面决绝，实则内心拉扯，对林宇的改变感到意外和动摇，处于防御与渴望被理解的矛盾中。"
+      "external_goal": "顺利完成女儿的毕业典礼，保持情绪稳定，不陷入过去的争吵与内耗。",
+      "emotional_avoidance": "害怕再次对婚姻失望，回避林宇的过度靠近，用礼貌、独立和‘我自己来’的句式伪装内心的波澜。",
+      "speech_style": "语速平稳，声音轻柔但坚定，多用短句。受压或想拉开距离时，会用‘没关系’‘不用了’等温和但封闭的词句。",
+      "relationship_stance": "在分居期间学会了自我疗愈，对林宇仍有感情但保持警惕，需要看到实质性的细节改变而非口头承诺。"
     }
   ],
+  "fictional_voice_roles": [],
   "outline": {
-    "title": "过界的椅子",
-    "premise": "分居半年的夫妻在女儿的小学毕业典礼上被迫挤在同一张椅子上，在互相试探与刺痛中，发现彼此都因分离而伤痕累累，最终在女儿的广播声中达成了无声的和解。",
-    "theme": "破镜重圆、互相救赎、克制的温柔",
-    "beginning": "毕业典礼开场前，苏南匆忙落座挤到林宇，两人因座位界限发生低烈度口角，苏南的包意外掉落，暴露出她分居期间服用抗焦虑药物的秘密。",
-    "development": "林宇发现药物后，两人开始用带刺的语言互相试探。苏南指出林宇衬衫扣错的细节，林宇意识到苏南的失眠与痛苦，两人陷入互相心疼却又互相推开的拉扯中。",
-    "climax": "典礼暗灯，林宇在黑暗中拧开水递给苏南，并交出净身出户的抚养权协议，坦白自己这半年的悔恨。苏南拒绝接受，认为两人已经回不到过去。",
-    "ending": "在女儿通过礼堂广播发表毕业感言的声音中，苏南没有拿走协议，而是在黑暗中主动握住了林宇递水的手，两人在掌声中达成了无需言语的双向治愈。",
+    "title": "取景器里的余温",
+    "premise": "分居半年的夫妻在女儿的小学毕业典礼上被迫同座，在试探与拉扯中，妻子发现了丈夫笨拙却真实的改变，两人在快门声中迎来了新的开始。",
+    "theme": "破镜重圆不是回到过去，而是两个成长后的成年人重新认识彼此。",
+    "beginning": "毕业典礼现场，分居半年的林宇和苏南尴尬同座，习惯性的照顾动作被苏南的独立拒绝，揭示两人关系的裂痕与现状。",
+    "development": "林宇试图用过去的模式挽回，却发现苏南已经建立了自己的生活边界；苏南在保持距离的同时，内心也在观察林宇的变化。",
+    "climax": "苏南忘带相机，林宇递上提前准备好电池和腕带的旧相机，用实际行动证明了他对过去忽视的反思和改变。",
+    "ending": "苏南透过相机镜头接纳了林宇的邀请，两人没有立刻复合，但达成了共同陪伴女儿的新默契，情感温暖收束。",
     "episode_outlines": [
       {
         "index": 1,
-        "title": "过界的椅子",
-        "core_goal": "在女儿毕业典礼的短暂时间里，完成夫妻两人从互相防备到坦诚内心、最终和解的情感转变。",
+        "title": "取景器里的余温",
+        "core_goal": "展示分居夫妻在毕业典礼上的拉扯，通过相机物件完成情感破冰与双向理解的初步建立。",
         "major_beats": [
-          "[0-3s] 突发听觉事件：椅子腿刺耳刮擦地面。林宇压低声音警告：‘你坐过界了。’",
-          "[3-10s] 苏南回应典礼快开始了别吵，要求林宇往里挪；林宇反驳是苏南挤了他，交代两人分居后在女儿毕业典礼上被迫同座的尴尬处境。",
-          "[10-30s] 两人暗中推挤，苏南的帆布包滑落，药瓶和纸张散落一地。环境音瞬间安静（音乐断点），林宇捡起药瓶，看清标签上的‘抗焦虑’字样，动作僵住。",
-          "[30-120s] 林宇把药递回，声音发紧询问她何时开始吃药；苏南一把夺过，用‘跟你没关系’掩饰慌乱。林宇自嘲以为她离开后很轻松，苏南反唇相讥指出他衬衫扣子扣错了一颗，点破他这半年同样过得一团糟。",
-          "[120-153s] 礼堂暗灯，典礼开始。林宇在黑暗中拧开矿泉水递给苏南，并递上签好字的净身出户协议，坦白自己每天都在悔恨当初的脾气。苏南声音颤抖地拒绝，说‘我们回不去了’。",
-          "[153-180s] 核心情感信息已交代。台上女儿淼淼的广播声响起：‘感谢爸爸妈妈教会我勇敢’。苏南没有接协议，而是在黑暗中轻轻覆上林宇递水的手。林宇反握。只有两人交错的呼吸声与全场掌声。"
+          "【0-3s 黄金钩子】毕业典礼现场嘈杂，突然一声尖锐的麦克风啸叫，接着是塑料椅腿摩擦地面的刺耳声。林宇和苏南同时伸手去扶差点滑落的家长胸牌，指尖相触，两人同时倒吸一口凉气，触电般缩回手。",
+          "【3-10s 矛盾三要素】林宇低声道歉并搓了搓手，苏南整理衣服轻声说没事。交代两人是分居半年的夫妻，在女儿小学毕业典礼上被迫同座，林宇想搭话打破尴尬，苏南则想保持安全距离。",
+          "【10-30s 第一次反转】林宇习惯性地拿过苏南面前的矿泉水想帮她拧开瓶盖，苏南却从帆布包里拿出一个自己的保温杯，熟练地拧开喝了一口。林宇拿着矿泉水愣在半空，背景音乐在此刻出现明显的停顿与断点。",
+          "【30-120s 中段推进】林宇没话找话，问苏南近况。苏南平静地回答在备考注册会计师并换了新工作。林宇感到失落，试探性地提出周末请她吃饭庆祝，苏南温和但坚定地拒绝，表示周末要去图书馆，并说‘现在这样挺好的’。两人台词短碎，林宇的笨拙讨好与苏南的独立边界形成强烈拉扯。",
+          "【120-170s 升级/二次反转】典礼广播通知毕业生上台，苏南下意识摸包找相机却发现忘带，神情慌乱。林宇默默从座位下拿出一个旧单反相机递过去。苏南愣住，林宇低声解释‘换了新电池，清了内存，还配了腕带，你以前说挂脖子疼’。苏南接过相机，感受到腕带的细节，意识到林宇真的在反思和改变。",
+          "【170-180s 情感收束】苏南举起相机，透过取景器看着台上的女儿，镜头边缘带入了一直注视着她的林宇。林宇轻声问晚上能否一起接女儿去吃火锅。苏南没有放下相机，伴随清脆的快门声，她轻声回答‘好’。情感在温暖与希望中自然收束。"
         ],
         "ending": "closed_with_hope",
         "target_duration_sec": 180
@@ -66,59 +67,53 @@
       {
         "role_id": "lin_yu",
         "story_name": "林宇",
-        "external_goal": "在毕业典礼上体面地交接抚养权协议，不让女儿看出端倪。",
-        "emotional_avoidance": "回避自己这半年来的悔恨和对妻子的依赖，用‘净身出户’的物质让步来掩饰内心的不舍。",
-        "speech_style": "句子短，习惯用陈述句掩饰情绪，紧张时会不自觉地清嗓子或停顿，受压时声音会发紧发颤。",
-        "relationship_stance": "充满愧疚，试图用退让来弥补，但内心极度渴望被原谅却不敢直接开口，处于卑微试探的状态。"
+        "external_goal": "在女儿毕业典礼上表现得体，并试图通过行动修复与妻子的关系。",
+        "emotional_avoidance": "害怕被直接拒绝，回避表达‘我需要你’，习惯用笨拙的物质补偿或没话找话来掩饰内心的慌乱。",
+        "speech_style": "语速偏快，紧张时会清嗓子，常用‘其实我……’‘要不……’等试探性句式，受压时声音会变低。",
+        "relationship_stance": "充满愧疚，试图弥补，但依然带着过去‘我来解决问题’的惯性思维，正在努力学习平视和尊重对方的边界。"
       },
       {
         "role_id": "su_nan",
         "story_name": "苏南",
-        "external_goal": "顺利参加完女儿的毕业典礼，拿到抚养权，尽快结束这段关系。",
-        "emotional_avoidance": "回避自己其实并没有放下林宇的事实，用带刺的语言和冷漠来保护自己免受二次伤害。",
-        "speech_style": "语速快，喜欢用反问句，受压时会提高音量或转移话题（如‘跟你没关系’），掩饰脆弱时声音会发抖。",
-        "relationship_stance": "表面决绝，实则内心拉扯，对林宇的改变感到意外和动摇，处于防御与渴望被理解的矛盾中。"
+        "external_goal": "顺利完成女儿的毕业典礼，保持情绪稳定，不陷入过去的争吵与内耗。",
+        "emotional_avoidance": "害怕再次对婚姻失望，回避林宇的过度靠近，用礼貌、独立和‘我自己来’的句式伪装内心的波澜。",
+        "speech_style": "语速平稳，声音轻柔但坚定，多用短句。受压或想拉开距离时，会用‘没关系’‘不用了’等温和但封闭的词句。",
+        "relationship_stance": "在分居期间学会了自我疗愈，对林宇仍有感情但保持警惕，需要看到实质性的细节改变而非口头承诺。"
       }
     ],
-    "fictional_voice_roles": [
-      {
-        "role_id": "lin_miao",
-        "story_name": "林淼",
-        "performer_id": "child_voice_actor",
-        "medium": "broadcast",
-        "dramatic_purpose": "在结尾通过礼堂广播发表毕业感言，作为情感催化剂和余韵回响，点破父母关系的核心，促成最终的肢体和解。"
-      }
-    ],
+    "fictional_voice_roles": [],
     "mystery_causal_proof": null,
     "performance_plan": {
-      "audio_cues": "椅子刮擦声、药瓶滚落声、礼堂暗灯时的环境音变化、拧瓶盖声、纸张摩擦声、广播电流声与掌声。",
-      "voice_direction": "林宇前期压抑克制，后期声音发颤带出悔恨；苏南前期语速快、带刺，后期声音变轻、带出脆弱感。两人全程压低声音，营造公共场合下的私密拉扯感。"
+      "sound_design": "开场麦克风啸叫和椅子摩擦声需突兀且真实，迅速建立现场感；保温杯拧开的金属摩擦声要清晰，与塑料矿泉水瓶形成对比。",
+      "music_cues": "10-30s 处音乐必须有明显的断点（Drop），突出林宇的错愕；120s 后逐渐推入温暖、克制的大提琴或钢琴底乐，在170s 快门声后音乐自然扬起并淡出。",
+      "voice_direction": "林宇的台词要体现出‘想靠近又怕越界’的呼吸感；苏南的台词前期要冷感、平稳，后期接过相机时声音要有微小的颤抖和释然。"
     },
     "continuity_constraints": [
-      "苏南的抗焦虑药和修改过的协议必须在包掉落时一同散出，后续林宇递协议时需从自己口袋拿出，不能凭空出现。",
-      "林宇衬衫扣错扣子的细节必须在苏南指出前，通过林宇整理衣服或苏南的视线音效（如布料摩擦）做微小铺垫。",
-      "礼堂暗灯后，所有动作必须通过声音（如拧瓶盖、纸张摩擦、衣物摩擦）来体现，不能依赖视觉描述。"
+      "两人分居半年的事实必须在对话中自然带出，不能通过旁白交代。",
+      "相机必须是两人过去共同使用的旧物，腕带和电池是林宇分居后单独准备的细节。",
+      "结局不能直接说‘我们复合吧’，必须通过‘一起吃火锅’和‘好’来暗示关系的破冰。"
     ],
     "change_summary": [
-      "苏南从试图用冷漠和带刺的语言推开林宇，转变为在黑暗中主动握手，接纳了林宇的歉意与改变。",
-      "林宇从试图用‘净身出户’的物质让步来掩饰内心的不舍与愧疚，转变为坦诚自己的悔恨，并最终获得了苏南的肢体回应。"
+      "林宇从习惯性的‘大男子主义照顾’（拧水瓶）转变为‘关注对方真实需求的细节’（准备相机腕带）。",
+      "苏南从‘防御性的独立’（自带水杯、拒绝吃饭）转变为‘接纳对方的改变’（接过相机、答应邀约）。",
+      "两人关系从‘分居的尴尬与拉扯’推进到‘重新建立信任的初步试探’。"
     ]
   },
   "episodes": [
     {
-      "episode_id": "ep-1-a46e5c4f",
+      "episode_id": "ep-1-fe766e75",
       "index": 1,
-      "title": "过界的椅子",
-      "synopsis": "分居半年的夫妻在女儿的小学毕业典礼上被迫挤在同一张椅子上，在互相试探与刺痛中，发现彼此都因分离而伤痕累累，最终在女儿的广播声中达成了无声的和解。",
+      "title": "取景器里的余温",
+      "synopsis": "分居半年的夫妻在女儿的小学毕业典礼上被迫同座，在试探与拉扯中，妻子发现了丈夫笨拙却真实的改变，两人在快门声中迎来了新的开始。",
       "duration_target_sec": 180,
-      "duration_estimate_sec": 175,
+      "duration_estimate_sec": 176,
       "scenes": [
         {
           "scene_id": "ep1-scene1",
           "scene_index": 1,
-          "title": "过界的椅子",
-          "location": "小学毕业典礼礼堂",
-          "dramatic_goal": "展示两人被迫同座的尴尬与互相防备，通过外套细节埋下在意对方的伏笔。",
+          "title": "尴尬的同座",
+          "location": "小学毕业典礼现场",
+          "dramatic_goal": "建立两人分居半年的尴尬现状与物理距离感",
           "utterances": [
             {
               "line_id": "ep1-s1-l1",
@@ -126,24 +121,24 @@
               "speaker_role_id": "lin_yu",
               "narrator_id": null,
               "performer_id": "lin_yu",
-              "text": "你坐过界了，胳膊肘压到我了。",
-              "emotion": "serious",
-              "tone_instruction": "压低嗓音，咬字清晰，前半句带警告意味，后半句语气稍缓但保持克制。",
+              "text": "嘶……抱歉，碰到你了。",
+              "emotion": "calm",
+              "tone_instruction": "吸气后迅速压低嗓音，语速放缓以掩饰尴尬。",
               "emphasis": [
                 {
-                  "span_text": "坐过界了",
+                  "span_text": "碰到你了",
                   "occurrence": 1,
-                  "start_char": 1,
-                  "end_char": 5,
-                  "strength": "strong"
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "medium"
                 }
               ],
-              "speech_rate": 0.95,
+              "speech_rate": 0.9,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "压低声音，带着隐忍的警告；贴近麦克风低语，句末留0.5秒停顿等待对方反应。",
-              "audio_cue_ref": "SFX: 椅子腿刺耳刮擦地面"
+              "delivery_note": "“嘶”字带轻微倒吸气的音效，停顿约0.3秒后接正词。",
+              "audio_cue_ref": null
             },
             {
               "line_id": "ep1-s1-l2",
@@ -151,23 +146,23 @@
               "speaker_role_id": "su_nan",
               "narrator_id": null,
               "performer_id": "su_nan",
-              "text": "典礼快开始了，别吵行不行？你往里挪挪。",
-              "emotion": "serious",
-              "tone_instruction": "语速加快，尾音上扬带催促感，第二句语气转硬。",
+              "text": "没事。",
+              "emotion": "calm",
+              "tone_instruction": "语气平淡干脆，尾音收短，不拖泥带水。",
               "emphasis": [
                 {
-                  "span_text": "别吵行不行",
+                  "span_text": "没事",
                   "occurrence": 1,
-                  "start_char": 7,
-                  "end_char": 12,
+                  "start_char": 0,
+                  "end_char": 2,
                   "strength": "medium"
                 }
               ],
-              "speech_rate": 1.1,
+              "speech_rate": 0.95,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "语速快，不耐烦地掩饰尴尬；气息微促，第一句说完换气一次，第二句加重“挪”字咬字。",
+              "delivery_note": "无额外停顿，直接接在上一句之后，气息平稳。",
               "audio_cue_ref": null
             },
             {
@@ -176,23 +171,30 @@
               "speaker_role_id": "lin_yu",
               "narrator_id": null,
               "performer_id": "lin_yu",
-              "text": "是你挤了我。这椅子本来就窄，非挤在一起。",
-              "emotion": "sad",
-              "tone_instruction": "喉部收紧，前半句短促反驳，后半句拖长音调流露无奈。",
+              "text": "那个……这椅子腿有点松。其实我没想到毕业典礼家长座位安排得这么紧，咱俩分居这半年，这还是头一回坐这么近。",
+              "emotion": "calm",
+              "tone_instruction": "前半句找借口般轻快，后半句提及“分居”时语气微沉，语速渐缓。",
               "emphasis": [
                 {
-                  "span_text": "是你挤了我",
+                  "span_text": "分居这半年",
                   "occurrence": 1,
-                  "start_char": 0,
-                  "end_char": 5,
+                  "start_char": 35,
+                  "end_char": 40,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "坐这么近",
+                  "occurrence": 1,
+                  "start_char": 47,
+                  "end_char": 51,
                   "strength": "strong"
                 }
               ],
-              "speech_rate": 0.9,
+              "speech_rate": 1.0,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "声音发紧，带着委屈；吸气声轻微，句尾气息下沉，不刻意加重但保持音量平稳。",
+              "delivery_note": "“那个”后留白0.5秒，模拟斟酌措辞；长句中间自然换气一次。",
               "audio_cue_ref": null
             },
             {
@@ -201,15 +203,22 @@
               "speaker_role_id": "su_nan",
               "narrator_id": null,
               "performer_id": "su_nan",
-              "text": "要不是淼淼非让家长坐一块，我宁愿去走廊站着。你以为我愿意挨着你？",
-              "emotion": "angry",
-              "tone_instruction": "语速加快，反问句尾音上扬带讥讽，前半句陈述时语气冷淡。",
+              "text": "学校按学号排的。快开始了，先别说话了，教导主任在看这边。",
+              "emotion": "serious",
+              "tone_instruction": "语气转为务实与提醒，语速加快，强调规则与现状。",
               "emphasis": [
                 {
-                  "span_text": "宁愿去走廊站着",
+                  "span_text": "先别说话",
                   "occurrence": 1,
-                  "start_char": 14,
-                  "end_char": 21,
+                  "start_char": 13,
+                  "end_char": 17,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "教导主任在看这边",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 27,
                   "strength": "medium"
                 }
               ],
@@ -217,7 +226,7 @@
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "反问，带刺；咬字干脆，反问前微顿半拍，突出挑衅态度。",
+              "delivery_note": "两句之间无缝衔接，最后一句末尾气息收紧，暗示警觉。",
               "audio_cue_ref": null
             },
             {
@@ -226,23 +235,23 @@
               "speaker_role_id": "lin_yu",
               "narrator_id": null,
               "performer_id": "lin_yu",
-              "text": "你不想挨着我，刚才为什么还特意换了件我买的外套？",
-              "emotion": "serious",
-              "tone_instruction": "语气放缓，尾音微微上扬带试探，重音落在衣物细节上。",
+              "text": "好，好，我不说了。那个，你衣服领子稍微有点歪，我帮你……",
+              "emotion": "calm",
+              "tone_instruction": "连声应和时语气顺从，提议帮忙时本能地带上熟络口吻，后半句突然顿住。",
               "emphasis": [
                 {
-                  "span_text": "特意换了件我买的外套",
+                  "span_text": "我帮你",
                   "occurrence": 1,
-                  "start_char": 13,
-                  "end_char": 23,
-                  "strength": "strong"
+                  "start_char": 23,
+                  "end_char": 26,
+                  "strength": "medium"
                 }
               ],
               "speech_rate": 0.95,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "试探，语气微扬；气息放轻，句末不加力，留出空间让对方接话。",
+              "delivery_note": "“好，好”快速带过，“那个”后微顿，说到“我帮你”时声音略扬，随即截断。",
               "audio_cue_ref": null
             },
             {
@@ -251,39 +260,176 @@
               "speaker_role_id": "su_nan",
               "narrator_id": null,
               "performer_id": "su_nan",
-              "text": "你少自作多情，那是随便抓的。",
-              "emotion": "worried",
-              "tone_instruction": "语速突快，打断对方句式，后半句语气虚浮且急于撇清。",
+              "text": "我自己来，不用你操心。",
+              "emotion": "serious",
+              "tone_instruction": "语气坚定冷硬，咬字清晰，不留商量余地。",
               "emphasis": [
                 {
-                  "span_text": "少自作多情",
+                  "span_text": "我自己来",
                   "occurrence": 1,
-                  "start_char": 1,
-                  "end_char": 6,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "不用你操心",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 10,
                   "strength": "medium"
                 }
               ],
-              "speech_rate": 1.15,
+              "speech_rate": 0.9,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "慌乱掩饰；呼吸微乱，第一句急促吐出，第二句气息不稳，避免拖长音。",
+              "delivery_note": "句首不拖沓，重音落在动词上，句末气息果断切断。",
               "audio_cue_ref": null
-            },
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "边界的试探",
+          "location": "小学毕业典礼现场",
+          "dramatic_goal": "通过递水被拒，展现林宇的惯性照顾与苏南的独立防御",
+          "utterances": [
             {
-              "line_id": "ep1-s1-l7",
+              "line_id": "ep1-s2-l1",
               "kind": "dialogue",
               "speaker_role_id": "lin_yu",
               "narrator_id": null,
               "performer_id": "lin_yu",
-              "text": "随便抓的？领口还有我上次弄上去的咖啡渍。",
-              "emotion": "playful",
-              "tone_instruction": "带一丝气音轻笑，反问句尾音上扬，陈述事实时语气笃定。",
+              "text": "你渴了吧？这瓶水我帮你拧……",
+              "emotion": "calm",
+              "tone_instruction": "语速放缓，尾音自然拖长带出试探感，避免显得过于殷勤",
               "emphasis": [
                 {
-                  "span_text": "上次弄上去的咖啡渍",
+                  "span_text": "帮你拧",
                   "occurrence": 1,
-                  "start_char": 10,
+                  "start_char": 9,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留半秒气口，模拟动作被突然打断前的停顿",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "su_nan",
+              "narrator_id": null,
+              "performer_id": "su_nan",
+              "text": "不用了。",
+              "emotion": "neutral",
+              "tone_instruction": "语气平稳干脆，不拖泥带水，字头清晰收住",
+              "emphasis": [
+                {
+                  "span_text": "不用了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "su_nan",
+              "narrator_id": null,
+              "performer_id": "su_nan",
+              "text": "我自己带了保温杯，里面泡了枸杞。",
+              "emotion": "calm",
+              "tone_instruction": "前半句陈述事实保持平淡，后半句“枸杞”二字微扬，带出生活化的疏离感",
+              "emphasis": [
+                {
+                  "span_text": "保温杯",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "枸杞",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 15,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“保温杯”后极轻换气，衔接自然",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yu",
+              "narrator_id": null,
+              "performer_id": "lin_yu",
+              "text": "哦……好。这矿泉水挺凉的，你喝温水对胃好。这半年你一个人，还是要多注意身体。",
+              "emotion": "serious",
+              "tone_instruction": "“哦……好”压低音量带过尴尬，后半段语速渐稳，关切语气但克制不越界",
+              "emphasis": [
+                {
+                  "span_text": "对胃好",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 20,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "多注意身体",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 37,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“哦……”后留0.5秒空白呼吸，模拟愣神反应",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "su_nan",
+              "narrator_id": null,
+              "performer_id": "su_nan",
+              "text": "我把自己照顾得挺好的，你放心去忙你的吧。",
+              "emotion": "calm",
+              "tone_instruction": "整体语调平稳上扬，结尾“忙你的吧”语气稍缓，传递明确的空间界限",
+              "emphasis": [
+                {
+                  "span_text": "挺好的",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 10,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "忙你的吧",
+                  "occurrence": 1,
+                  "start_char": 15,
                   "end_char": 19,
                   "strength": "strong"
                 }
@@ -292,170 +438,104 @@
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "轻笑，戳穿；句首微顿后带出笑意，后半句咬字清晰，不夸张不煽情。",
+              "delivery_note": "“挺好的”后微顿，强调态度转折",
               "audio_cue_ref": null
-            },
-            {
-              "line_id": "ep1-s1-l8",
-              "kind": "dialogue",
-              "speaker_role_id": "su_nan",
-              "narrator_id": null,
-              "performer_id": "su_nan",
-              "text": "闭嘴，看台上，校长出来了。",
-              "emotion": "serious",
-              "tone_instruction": "语气骤冷，命令式短句切断对话，后半句压低声音提示视线转移。",
-              "emphasis": [
-                {
-                  "span_text": "闭嘴",
-                  "occurrence": 1,
-                  "start_char": 0,
-                  "end_char": 2,
-                  "strength": "strong"
-                }
-              ],
-              "speech_rate": 0.9,
-              "pitch": null,
-              "volume": null,
-              "pauses": [],
-              "delivery_note": "强行转移话题；气息瞬间收住，第一句干脆利落，第二句语速放慢并降低音量。",
-              "audio_cue_ref": null
-            }
-          ]
-        },
-        {
-          "scene_id": "ep1-scene2",
-          "scene_index": 2,
-          "title": "散落的秘密",
-          "location": "小学毕业典礼礼堂",
-          "dramatic_goal": "通过包掉落暴露抗焦虑药，打破苏南的冷漠伪装，让林宇意识到她的痛苦。",
-          "utterances": [
-            {
-              "line_id": "ep1-s2-l1",
-              "kind": "dialogue",
-              "speaker_role_id": "lin_yu",
-              "narrator_id": null,
-              "performer_id": "lin_yu",
-              "text": "包怎么没拉好？你的东西掉了，我帮你捡。",
-              "emotion": "calm",
-              "tone_instruction": "压低嗓音，语速放缓，前半句带点迟疑，后半句转为平稳的关切。",
-              "emphasis": [
-                {
-                  "span_text": "东西掉了",
-                  "occurrence": 1,
-                  "start_char": 9,
-                  "end_char": 13,
-                  "strength": "medium"
-                },
-                {
-                  "span_text": "帮你捡",
-                  "occurrence": 1,
-                  "start_char": 15,
-                  "end_char": 18,
-                  "strength": "medium"
-                }
-              ],
-              "speech_rate": 0.9,
-              "pitch": null,
-              "volume": null,
-              "pauses": [],
-              "delivery_note": "动作僵住，声音放轻；整理散落纸张时停顿半秒，气息微沉后开口。",
-              "audio_cue_ref": "SFX: 衣服布料摩擦，林宇整理衬衫。帆布包滑落，药瓶和修改过的协议草稿散落一地。环境音瞬间安静"
-            },
-            {
-              "line_id": "ep1-s2-l2",
-              "kind": "dialogue",
-              "speaker_role_id": "lin_yu",
-              "narrator_id": null,
-              "performer_id": "lin_yu",
-              "text": "修改过的抚养权草稿？还有这个……盐酸舍曲林？抗焦虑药？苏南，你什么时候生病的？",
-              "emotion": "sad",
-              "tone_instruction": "气息微颤，读到药名时喉头微哽，尾音压低带出难以置信的痛惜。",
-              "emphasis": [
-                {
-                  "span_text": "盐酸舍曲林？",
-                  "occurrence": 1,
-                  "start_char": 16,
-                  "end_char": 22,
-                  "strength": "strong"
-                },
-                {
-                  "span_text": "生病的？",
-                  "occurrence": 1,
-                  "start_char": 35,
-                  "end_char": 39,
-                  "strength": "medium"
-                }
-              ],
-              "speech_rate": 0.85,
-              "pitch": null,
-              "volume": null,
-              "pauses": [],
-              "delivery_note": "声音发颤，震惊与心疼；念到药名前微顿吸气，‘苏南’二字咬字加重但音量骤降。",
-              "audio_cue_ref": "SFX: 捡起塑料药瓶和纸张"
             }
           ]
         },
         {
           "scene_id": "ep1-scene3",
           "scene_index": 3,
-          "title": "黑暗中的坦白",
-          "location": "小学毕业典礼礼堂",
-          "dramatic_goal": "两人互相刺痛后坦诚脆弱，林宇交出协议并忏悔，苏南拒绝物质让步但情绪动摇。",
+          "title": "旧相机的细节",
+          "location": "小学毕业典礼现场",
+          "dramatic_goal": "苏南忘带相机，林宇递上改装过的旧相机，打破苏南的心理防线",
           "utterances": [
             {
               "line_id": "ep1-s3-l1",
               "kind": "dialogue",
-              "speaker_role_id": "su_nan",
+              "speaker_role_id": "lin_yu",
               "narrator_id": null,
-              "performer_id": "su_nan",
-              "text": "给我！跟你没关系，别碰我的东西。",
-              "emotion": "fearful",
-              "tone_instruction": "抢夺动作伴随气息急促，前半句短促上扬，后半句压低嗓音掩饰颤抖。",
+              "performer_id": "lin_yu",
+              "text": "最近……工作还那么忙吗？还在原来那家公司？",
+              "emotion": "calm",
+              "tone_instruction": "语速放缓，前半句带试探性停顿，后半句语气放轻",
               "emphasis": [
                 {
-                  "span_text": "给我！",
+                  "span_text": "工作还那么忙吗",
                   "occurrence": 1,
-                  "start_char": 0,
-                  "end_char": 3,
+                  "start_char": 4,
+                  "end_char": 11,
                   "strength": "medium"
                 },
                 {
-                  "span_text": "别碰我的东西。",
+                  "span_text": "原来那家公司",
                   "occurrence": 1,
-                  "start_char": 9,
-                  "end_char": 16,
+                  "start_char": 14,
+                  "end_char": 20,
                   "strength": "medium"
                 }
               ],
-              "speech_rate": 1.15,
+              "speech_rate": 0.9,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "一把夺过药瓶，声音发抖；句首吸气后迅速吐出，句尾“东西”二字气声加重，模拟手指收紧的紧张感。",
+              "delivery_note": "“最近”后留0.5秒气口，模拟斟酌措辞",
               "audio_cue_ref": null
             },
             {
               "line_id": "ep1-s3-l2",
               "kind": "dialogue",
-              "speaker_role_id": "lin_yu",
+              "speaker_role_id": "su_nan",
               "narrator_id": null,
-              "performer_id": "lin_yu",
-              "text": "怎么会没关系？我是你丈夫！",
-              "emotion": "angry",
-              "tone_instruction": "压住音量但咬字加重，反问句尾音下沉，陈述句转为恳切。",
+              "performer_id": "su_nan",
+              "text": "换了新工作，在备考注册会计师，每天下班还要看书，挺充实的。",
+              "emotion": "calm",
+              "tone_instruction": "语气平稳客观，不拖泥带水，尾音保持克制",
               "emphasis": [
                 {
-                  "span_text": "怎么会没关系？",
+                  "span_text": "换了新工作",
                   "occurrence": 1,
                   "start_char": 0,
-                  "end_char": 7,
+                  "end_char": 5,
                   "strength": "medium"
                 },
                 {
-                  "span_text": "我是你丈夫！",
+                  "span_text": "备考注册会计师",
                   "occurrence": 1,
                   "start_char": 7,
-                  "end_char": 13,
+                  "end_char": 14,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "无特殊停顿，连贯陈述",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yu",
+              "narrator_id": null,
+              "performer_id": "lin_yu",
+              "text": "考注会？那挺辛苦的。要不……周末我请你吃个饭？就当庆祝你换工作，顺便看看你。",
+              "emotion": "tender",
+              "tone_instruction": "前半句带点心疼，中间“要不……”压低声音试探，后半句语气渐暖",
+              "emphasis": [
+                {
+                  "span_text": "挺辛苦的",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "周末我请你吃个饭",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 22,
                   "strength": "medium"
                 }
               ],
@@ -463,31 +543,56 @@
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "情绪激动，压低声音；句前微顿半秒，模仿喉结滚动后的发声状态，避免破音。",
+              "delivery_note": "“要不……”处微顿，伴随轻微吸气声",
               "audio_cue_ref": null
             },
             {
-              "line_id": "ep1-s3-l3",
+              "line_id": "ep1-s3-l4",
               "kind": "dialogue",
               "speaker_role_id": "su_nan",
               "narrator_id": null,
               "performer_id": "su_nan",
-              "text": "前夫。我们已经分居半年了，林宇，请你认清现实。",
+              "text": "周末要去图书馆看书。现在这样挺好的，不用麻烦了，你也多顾着点自己。",
               "emotion": "serious",
-              "tone_instruction": "语速放缓，每个词清晰切割，“前夫”二字停顿拉长，不带起伏。",
+              "tone_instruction": "语速均匀，拒绝时咬字清晰，后半句转为平和劝慰",
               "emphasis": [
                 {
-                  "span_text": "前夫。",
+                  "span_text": "要去图书馆看书",
                   "occurrence": 1,
-                  "start_char": 0,
-                  "end_char": 3,
+                  "start_char": 2,
+                  "end_char": 9,
                   "strength": "medium"
                 },
                 {
-                  "span_text": "认清现实。",
+                  "span_text": "现在这样挺好的",
                   "occurrence": 1,
-                  "start_char": 18,
-                  "end_char": 23,
+                  "start_char": 10,
+                  "end_char": 17,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“不用麻烦了”后微顿，气息收稳",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yu",
+              "narrator_id": null,
+              "performer_id": "lin_yu",
+              "text": "其实我就是想……",
+              "emotion": "serious",
+              "tone_instruction": "声音压低，尾音自然衰减，未说完即被打断",
+              "emphasis": [
+                {
+                  "span_text": "其实我就是想",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 6,
                   "strength": "medium"
                 }
               ],
@@ -495,103 +600,39 @@
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "冷漠，划清界限；“前夫”后留白一秒，呼吸平稳，模拟刻意拉开心理距离的状态。",
-              "audio_cue_ref": null
-            },
-            {
-              "line_id": "ep1-s3-l4",
-              "kind": "dialogue",
-              "speaker_role_id": "lin_yu",
-              "narrator_id": null,
-              "performer_id": "lin_yu",
-              "text": "你什么时候开始吃药的？我以为你搬出去后，一个人过得挺轻松，连个电话都不愿意接，原来你也在硬撑。",
-              "emotion": "sad",
-              "tone_instruction": "前半段疑问语气带试探，中段转为自嘲式低语，末句气息下沉显露心疼。",
-              "emphasis": [
-                {
-                  "span_text": "什么时候开始吃药的？",
-                  "occurrence": 1,
-                  "start_char": 1,
-                  "end_char": 11,
-                  "strength": "medium"
-                },
-                {
-                  "span_text": "原来你也在硬撑。",
-                  "occurrence": 1,
-                  "start_char": 39,
-                  "end_char": 47,
-                  "strength": "medium"
-                }
-              ],
-              "speech_rate": 0.9,
-              "pitch": null,
-              "volume": null,
-              "pauses": [],
-              "delivery_note": "自嘲，声音发紧；“吃药的”后微喘，模拟视线落在药瓶标签上的生理反应，语流不断但音量递减。",
-              "audio_cue_ref": null
-            },
-            {
-              "line_id": "ep1-s3-l5",
-              "kind": "dialogue",
-              "speaker_role_id": "su_nan",
-              "narrator_id": null,
-              "performer_id": "su_nan",
-              "text": "轻松？你低头看看你自己。衬衫扣子都扣错了一颗，领带也是歪的。这半年你过得有多一团糟，别装得只有我一个人睡不着觉。",
-              "emotion": "angry",
-              "tone_instruction": "反问句尖锐起调，描述细节时语速加快带刺，最后一句转为压抑的低音质问。",
-              "emphasis": [
-                {
-                  "span_text": "轻松？",
-                  "occurrence": 1,
-                  "start_char": 0,
-                  "end_char": 3,
-                  "strength": "medium"
-                },
-                {
-                  "span_text": "别装得只有我一个人睡不着觉。",
-                  "occurrence": 1,
-                  "start_char": 42,
-                  "end_char": 56,
-                  "strength": "medium"
-                }
-              ],
-              "speech_rate": 1.1,
-              "pitch": null,
-              "volume": null,
-              "pauses": [],
-              "delivery_note": "反唇相讥，带着心疼的刺痛；“扣错了一颗”与“领带也是歪的”之间无停顿，模拟目光快速扫视对方衣领的动作节奏。",
+              "delivery_note": "句末气息渐弱，留出被苏南打断的空间",
               "audio_cue_ref": null
             },
             {
               "line_id": "ep1-s3-l6",
               "kind": "dialogue",
-              "speaker_role_id": "lin_yu",
+              "speaker_role_id": "su_nan",
               "narrator_id": null,
-              "performer_id": "lin_yu",
-              "text": "是，我过得一团糟。我每天下班回到空荡荡的家里，连个说话的人都没有。",
-              "emotion": "sad",
-              "tone_instruction": "放弃对抗姿态，气息完全放松，句尾自然下坠，不追求音量饱满。",
+              "performer_id": "su_nan",
+              "text": "糟了，相机忘带了……",
+              "emotion": "worried",
+              "tone_instruction": "语速加快，音调微扬，带着明显的慌乱与自责",
               "emphasis": [
                 {
-                  "span_text": "是，我过得一团糟。",
+                  "span_text": "糟了",
                   "occurrence": 1,
                   "start_char": 0,
-                  "end_char": 9,
+                  "end_char": 2,
                   "strength": "medium"
                 },
                 {
-                  "span_text": "连个说话的人都没有。",
+                  "span_text": "忘带了",
                   "occurrence": 1,
-                  "start_char": 23,
-                  "end_char": 33,
+                  "start_char": 5,
+                  "end_char": 8,
                   "strength": "medium"
                 }
               ],
-              "speech_rate": 0.8,
+              "speech_rate": 1.15,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "卸下防备，坦诚脆弱；句首“是”字轻吐，句末“没有”二字逐渐收弱至气声，模拟肩膀垮下的松弛感。",
+              "delivery_note": "呼吸略急，模拟翻找包袋时的急促状态",
               "audio_cue_ref": null
             },
             {
@@ -600,22 +641,22 @@
               "speaker_role_id": "lin_yu",
               "narrator_id": null,
               "performer_id": "lin_yu",
-              "text": "先喝口水。还有这个……净身出户的抚养权协议，我一直揣在口袋里，签好字了。这半年我每天都在后悔当初冲你发脾气。房子车子都归你，只要你别躲着我。",
-              "emotion": "sad",
-              "tone_instruction": "递物动作配合句读停顿，中间省略号处气息微颤，后半段语速渐快但音量克制，突出祈求感。",
+              "text": "别急，我带了。",
+              "emotion": "calm",
+              "tone_instruction": "声音沉稳有力，语速平稳以安抚对方情绪",
               "emphasis": [
                 {
-                  "span_text": "先喝口水。",
+                  "span_text": "别急",
                   "occurrence": 1,
                   "start_char": 0,
-                  "end_char": 5,
+                  "end_char": 2,
                   "strength": "medium"
                 },
                 {
-                  "span_text": "只要你别躲着我。",
+                  "span_text": "我带了",
                   "occurrence": 1,
-                  "start_char": 62,
-                  "end_char": 70,
+                  "start_char": 3,
+                  "end_char": 6,
                   "strength": "medium"
                 }
               ],
@@ -623,104 +664,56 @@
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "递水和协议，声音颤抖，充满悔恨；“还有这个……”后留白两秒配合拧瓶盖动作，纸张摩擦音效进入时同步说出“签好字了”，气息随递出动作微微发虚。",
-              "audio_cue_ref": "SFX: 礼堂暗灯，环境音变暗。拧开矿泉水瓶盖，纸张摩擦"
+              "delivery_note": "语气干脆，无多余拖音",
+              "audio_cue_ref": null
             },
             {
               "line_id": "ep1-s3-l8",
               "kind": "dialogue",
-              "speaker_role_id": "su_nan",
+              "speaker_role_id": "lin_yu",
               "narrator_id": null,
-              "performer_id": "su_nan",
-              "text": "我们回不去了，林宇。你以为让出所有东西，就能当那些伤害没发生过吗？我不缺你的房子，我只要淼淼好好的。",
-              "emotion": "sad",
-              "tone_instruction": "首句决绝但尾音发飘，反问句加强力度却控制不住颤音，末句转为极轻的呢喃式陈述。",
+              "performer_id": "lin_yu",
+              "text": "用这个。",
+              "emotion": "calm",
+              "tone_instruction": "短促干脆，配合递物动作的语气下沉",
               "emphasis": [
                 {
-                  "span_text": "我们回不去了，林宇。",
+                  "span_text": "用这个",
                   "occurrence": 1,
                   "start_char": 0,
-                  "end_char": 10,
-                  "strength": "medium"
-                },
-                {
-                  "span_text": "我只要淼淼好好的。",
-                  "occurrence": 1,
-                  "start_char": 41,
-                  "end_char": 50,
+                  "end_char": 3,
                   "strength": "medium"
                 }
               ],
-              "speech_rate": 0.85,
+              "speech_rate": 1.0,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "声音颤抖，拒绝但情绪动摇；“林宇”后换气一次，模拟眼眶发热导致的喉部紧缩，句尾“好好的”三字逐字降调并延长韵脚。",
+              "delivery_note": "句末气息微收，模拟物品交接的瞬间",
               "audio_cue_ref": null
-            }
-          ]
-        },
-        {
-          "scene_id": "ep1-scene4",
-          "scene_index": 4,
-          "title": "无声的和解",
-          "location": "小学毕业典礼礼堂",
-          "dramatic_goal": "女儿的广播成为情感催化剂，苏南放下协议主动握手，完成双向治愈。",
-          "utterances": [
-            {
-              "line_id": "ep1-s4-l1",
-              "kind": "dialogue",
-              "speaker_role_id": "lin_miao",
-              "narrator_id": null,
-              "performer_id": "child_voice_actor",
-              "text": "今天小学毕业了，感谢爸爸妈妈教会我勇敢。就算大人偶尔吵架，只要还爱着彼此，就一定会和好的。",
-              "emotion": "calm",
-              "tone_instruction": "保持童声自然吐字，语速平稳；前半句清晰播报，后半句语气逐渐柔和，带出期盼感。",
-              "emphasis": [
-                {
-                  "span_text": "感谢爸爸妈妈",
-                  "occurrence": 1,
-                  "start_char": 8,
-                  "end_char": 14,
-                  "strength": "medium"
-                },
-                {
-                  "span_text": "一定会和好的",
-                  "occurrence": 1,
-                  "start_char": 38,
-                  "end_char": 44,
-                  "strength": "strong"
-                }
-              ],
-              "speech_rate": 0.95,
-              "pitch": null,
-              "volume": null,
-              "pauses": [],
-              "delivery_note": "童声，通过礼堂广播播出，温暖纯真；模拟礼堂广播效果，开头微作停顿后平稳起音，句尾自然收声不拖沓。",
-              "audio_cue_ref": "SFX: 广播电流声"
             },
             {
-              "line_id": "ep1-s4-l2",
+              "line_id": "ep1-s3-l9",
               "kind": "dialogue",
               "speaker_role_id": "su_nan",
               "narrator_id": null,
               "performer_id": "su_nan",
-              "text": "协议你收回去吧，淼淼需要的是完整的家，不是你的全部身家。",
-              "emotion": "reassuring",
-              "tone_instruction": "气息下沉，音量渐弱；前半句干脆拒绝，后半句转为温和坚定，强调家庭价值。",
+              "text": "这是……咱俩以前那台旧单反？你怎么带来了？",
+              "emotion": "surprised",
+              "tone_instruction": "前半句迟疑带出回忆感，后半句语气转柔并带询问",
               "emphasis": [
                 {
-                  "span_text": "完整的家",
+                  "span_text": "以前那台旧单反",
                   "occurrence": 1,
-                  "start_char": 14,
-                  "end_char": 18,
-                  "strength": "strong"
+                  "start_char": 6,
+                  "end_char": 13,
+                  "strength": "medium"
                 },
                 {
-                  "span_text": "全部身家",
+                  "span_text": "怎么带来了",
                   "occurrence": 1,
-                  "start_char": 23,
-                  "end_char": 27,
+                  "start_char": 15,
+                  "end_char": 20,
                   "strength": "medium"
                 }
               ],
@@ -728,69 +721,332 @@
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "声音变轻，释然；配合纸张轻放动作，句首微顿后轻声吐出，句末气息缓缓释放。",
-              "audio_cue_ref": "SFX: 纸张被轻轻放下，衣物摩擦"
+              "delivery_note": "“这是……”后留0.3秒停顿，模拟指尖触碰相机的触感反馈",
+              "audio_cue_ref": null
             },
             {
-              "line_id": "ep1-s4-l3",
+              "line_id": "ep1-s3-l10",
               "kind": "dialogue",
               "speaker_role_id": "lin_yu",
               "narrator_id": null,
               "performer_id": "lin_yu",
-              "text": "南南……你愿意再给我一次机会吗？",
-              "emotion": "serious",
-              "tone_instruction": "喉部微紧，声音带轻微颤音；省略号处换气拉长，问句末尾压低音量但咬字清晰，传递恳切。",
+              "text": "嗯。换了新电池，清了内存。我还配了条宽腕带，你以前总说挂脖子疼，这样勒着手腕会好点。",
+              "emotion": "tender",
+              "tone_instruction": "语气平和细致，说到细节时放慢语速，体现用心",
               "emphasis": [
                 {
-                  "span_text": "再给我一次机会",
+                  "span_text": "清了内存",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "配了条宽腕带",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 21,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "挂脖子疼",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 31,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "每句之间微顿，模拟一边整理相机一边轻声解释的状态",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "dialogue",
+              "speaker_role_id": "su_nan",
+              "narrator_id": null,
+              "performer_id": "su_nan",
+              "text": "这腕带……是你自己缝的？针脚有点歪。",
+              "emotion": "tender",
+              "tone_instruction": "语气轻柔，带着发现细节时的微讶与笑意",
+              "emphasis": [
+                {
+                  "span_text": "你自己缝的",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 11,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "针脚有点歪",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 17,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“这腕带……”后气息微颤，模拟指尖摩挲布料的动作",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l12",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yu",
+              "narrator_id": null,
+              "performer_id": "lin_yu",
+              "text": "嗯，手有点笨，拆了好几次才缝好。你试试，看长度合不合适。",
+              "emotion": "tender",
+              "tone_instruction": "自嘲式轻笑带过前半句，后半句转为关切询问",
+              "emphasis": [
+                {
+                  "span_text": "拆了好几次才缝好",
                   "occurrence": 1,
                   "start_char": 7,
-                  "end_char": 14,
-                  "strength": "strong"
+                  "end_char": 15,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "合不合适",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 27,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句气息微扬带笑意，后半句语气放软",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l13",
+              "kind": "dialogue",
+              "speaker_role_id": "su_nan",
+              "narrator_id": null,
+              "performer_id": "su_nan",
+              "text": "你……什么时候弄的？",
+              "emotion": "tender",
+              "tone_instruction": "声音极轻，尾音上扬带难以置信的动容",
+              "emphasis": [
+                {
+                  "span_text": "什么时候弄的",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 9,
+                  "strength": "medium"
                 }
               ],
               "speech_rate": 0.85,
               "pitch": null,
               "volume": null,
               "pauses": [],
-              "delivery_note": "哽咽，充满希冀；开口前留半秒呼吸停顿，‘南南’二字气声起头，问句尾音随握手动作自然收敛。",
-              "audio_cue_ref": "SFX: 苏南的手覆上林宇的手，林宇反握。两人交错的呼吸声，全场掌声雷动"
+              "delivery_note": "“你……”后长停0.5秒，呼吸放缓，模拟内心震动",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l14",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yu",
+              "narrator_id": null,
+              "performer_id": "lin_yu",
+              "text": "分居以后。我想了很久，以前我总忽略你的感受，以后……我想多注意些细节。",
+              "emotion": "serious",
+              "tone_instruction": "语气郑重诚恳，前半句低沉反思，后半句坚定展望",
+              "emphasis": [
+                {
+                  "span_text": "忽略你的感受",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 21,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "多注意些细节",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 34,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“以后……”处微顿，气息沉底，传递承诺感",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "scene_index": 4,
+          "title": "快门声中的新开始",
+          "location": "小学毕业典礼现场",
+          "dramatic_goal": "苏南接纳林宇的改变，两人达成共同陪伴女儿的新默契",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "su_nan",
+              "narrator_id": null,
+              "performer_id": "su_nan",
+              "text": "囡囡在看这边，笑得真开心。这相机手感还是这么好。",
+              "emotion": "tender",
+              "tone_instruction": "语气柔和放松，前半句带笑意，后半句放慢语速，将指尖摩挲相机的触感融入发声中。",
+              "emphasis": [
+                {
+                  "span_text": "囡囡",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "手感还是这么好",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 23,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句间微停0.5秒，模拟透过取景器观察与低头触碰相机的动作节奏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yu",
+              "narrator_id": null,
+              "performer_id": "lin_yu",
+              "text": "晚上……能一起接她去吃火锅吗？她念叨好久了，就我们三个，不叫别人。",
+              "emotion": "tender",
+              "tone_instruction": "压低声音试探，省略号处气口拉长；后半句语气渐稳，强调三人同行的纯粹性。",
+              "emphasis": [
+                {
+                  "span_text": "一起接她",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "不叫别人",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 32,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“晚上……”后留白停顿约1秒，配合轻微呼吸调整，体现小心翼翼的期待。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "su_nan",
+              "narrator_id": null,
+              "performer_id": "su_nan",
+              "text": "……好，听你的。",
+              "emotion": "tender",
+              "tone_instruction": "气息下沉嗓音放轻，尾音微拖，传递卸下防备后的顺从与安心。",
+              "emphasis": [
+                {
+                  "span_text": "好",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "听你的",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首省略号处保留半秒环境底噪，随后轻声吐出，句末自然收气。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_yu",
+              "narrator_id": null,
+              "performer_id": "lin_yu",
+              "text": "那我去订位子，还是以前那家，点你爱吃的毛肚。",
+              "emotion": "happy",
+              "tone_instruction": "语气轻快上扬，咬字利落，提及旧习惯时带出熟悉的亲昵感。",
+              "emphasis": [
+                {
+                  "span_text": "以前那家",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "毛肚",
+                  "occurrence": 1,
+                  "start_char": 19,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首“那”字干脆起音，中间逗号处微顿换气，保持平稳推进至句尾。",
+              "audio_cue_ref": null
             }
           ]
         }
       ],
-      "episode_summary": "本集讲述了林宇和苏南在女儿毕业典礼上从互相防备到坦诚内心的过程。通过药瓶和错扣的衬衫，两人意识到对方这半年的痛苦。最终在女儿的广播声中，苏南拒绝了净身出户的协议，选择握住林宇的手，达成了双向治愈。",
-      "ending_hook": "掌声中，两人紧紧交握的手预示着破镜重圆的开始，但分居的现实问题仍需在未来的日子里共同面对。",
+      "episode_summary": "在女儿的小学毕业典礼上，分居半年的林宇和苏南被迫同座。林宇试图用过去的习惯照顾苏南，却屡屡碰壁，感受到苏南建立的独立边界。直到苏南忘带相机，林宇递上提前换好电池、缝好腕带的旧单反，用实际行动证明了他对过去忽视的反思。苏南透过取景器看到了林宇的改变，在清脆的快门声中，两人以一顿火锅的邀约达成了重新开始的默契。",
+      "ending_hook": "火锅店的毛肚已经点好，但分居的两人能否在饭桌上真正解开过去的心结？",
       "fact_delta": [
         {
-          "fact": "苏南一直在服用抗焦虑药物",
-          "status": "revealed"
+          "fact": "苏南换了新工作并在备考注册会计师",
+          "status": "established"
         },
         {
-          "fact": "林宇准备了净身出户的抚养权协议",
-          "status": "revealed"
-        },
-        {
-          "fact": "林宇衬衫扣子扣错了一颗",
-          "status": "revealed"
+          "fact": "林宇为旧单反相机换了电池、清了内存，并亲手缝制了宽腕带",
+          "status": "established"
         }
       ],
       "relationship_delta": [
         {
-          "from": "互相防备与带刺试探",
-          "to": "坦诚脆弱并肢体和解",
-          "characters": [
-            "lin_yu",
-            "su_nan"
-          ]
+          "from": "分居状态下的尴尬与防御性独立",
+          "to": "苏南接纳了林宇的细节改变，同意共同陪伴女儿吃火锅，关系初步破冰"
         }
       ],
       "new_open_threads": [
-        "两人和解后，如何重新规划未来的同居生活与抚养权归属。"
+        "晚上的火锅聚餐中，两人将如何面对过去的婚姻问题？"
       ],
       "closed_threads": [
-        "毕业典礼上的座位尴尬与互相试探。",
-        "林宇试图用物质让步掩盖内心不舍的逃避行为。"
+        "毕业典礼上苏南忘带相机的突发状况被林宇妥善解决"
       ],
       "validation_status": "PASSED",
       "ready_for_playback": true
@@ -800,35 +1056,27 @@
     "source_version_id": null,
     "facts": [
       {
-        "fact": "苏南一直在服用抗焦虑药物",
-        "status": "revealed"
+        "fact": "苏南换了新工作并在备考注册会计师",
+        "status": "established"
       },
       {
-        "fact": "林宇准备了净身出户的抚养权协议",
-        "status": "revealed"
-      },
-      {
-        "fact": "林宇衬衫扣子扣错了一颗",
-        "status": "revealed"
+        "fact": "林宇为旧单反相机换了电池、清了内存，并亲手缝制了宽腕带",
+        "status": "established"
       }
     ],
     "relationships": [
       {
-        "from": "互相防备与带刺试探",
-        "to": "坦诚脆弱并肢体和解",
-        "characters": [
-          "lin_yu",
-          "su_nan"
-        ]
+        "from": "分居状态下的尴尬与防御性独立",
+        "to": "苏南接纳了林宇的细节改变，同意共同陪伴女儿吃火锅，关系初步破冰"
       }
     ],
     "unresolved_threads": [
-      "两人和解后，如何重新规划未来的同居生活与抚养权归属。"
+      "晚上的火锅聚餐中，两人将如何面对过去的婚姻问题？"
     ]
   },
   "quality_report": {
     "validation_status": "PASSED",
-    "spoken_line_count": 21,
+    "spoken_line_count": 29,
     "emotion_coverage": 1.0,
     "tone_coverage": 1.0,
     "emphasis_coverage": 1.0,
@@ -851,228 +1099,200 @@
   "model_trace": [
     {
       "principal_id": "local",
-      "request_id": "b9882621ac7f427e93be2a725774d92c",
-      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+      "request_id": "b4acf40147bd467a9c76bd3c23055168",
+      "plan_id": "e584ab41341f4b9a8d19af738aa56909",
       "stage": "planning",
       "node": "outline",
       "attempt_kind": "initial_plan",
-      "call_id": "0a820f13774c40d0be5142a41245e91e",
+      "call_id": "7179f94c0ab2416cb1fad7be4d972b26",
       "provider": "openai_compat",
       "role": "outline",
       "requested_model": "qwen/qwen3.7-max",
       "attempt": 1,
       "prompt_version": "p1.6.5",
-      "started_at": "2026-10-12T04:02:59.902972+00:00",
+      "started_at": "2026-10-12T07:20:22.918996+00:00",
       "actual_model": "qwen3.7-max",
       "input_tokens": 5137,
-      "output_tokens": 4626,
+      "output_tokens": 5509,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "reasoning_tokens": 3150,
+      "reasoning_tokens": 3972,
       "reasoning_included_in_output": true,
       "usage_source": "reported",
-      "provider_request_id": "ba9bd9b2-eac9-4119-b64f-16c593faea2c",
+      "provider_request_id": "9a9af309-d523-4cda-a871-a46fa4b76e58",
       "status": "success",
       "error_code": null,
-      "latency_ms": 75049,
-      "completed_at": "2026-10-12T04:04:14.952656+00:00"
+      "latency_ms": 82878,
+      "completed_at": "2026-10-12T07:21:45.797626+00:00"
     },
     {
-      "request_id": "b9882621ac7f427e93be2a725774d92c",
-      "job_id": "cb70b6486a1e440882d328fe09e26e9a",
-      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+      "request_id": "b4acf40147bd467a9c76bd3c23055168",
+      "job_id": "287b00095f1e44aeac465da5e4b97aa7",
+      "plan_id": "e584ab41341f4b9a8d19af738aa56909",
       "stage": "story_generation",
       "attempt_kind": "first_draft",
       "node": "episode_writer",
-      "call_id": "975d59b0a431417fbd45cfaac96de757",
+      "call_id": "0fd507ce40c1410f8f7067925c6d1f5f",
       "provider": "openai_compat",
       "role": "storycraft_episode_writer",
       "requested_model": "qwen/qwen3.7-max",
       "attempt": 1,
       "prompt_version": "p1.6.5",
-      "started_at": "2026-10-12T04:04:14.976780+00:00",
+      "started_at": "2026-10-12T07:21:45.823503+00:00",
       "actual_model": "qwen3.7-max",
-      "input_tokens": 7150,
-      "output_tokens": 8871,
+      "input_tokens": 7475,
+      "output_tokens": 7321,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "reasoning_tokens": 6429,
+      "reasoning_tokens": 5239,
       "reasoning_included_in_output": true,
       "usage_source": "reported",
-      "provider_request_id": "11b48793-5e2b-41eb-b448-cff149f8c63f",
+      "provider_request_id": "e837bc05-f0cb-47a0-a196-b6237bb95ac6",
       "status": "success",
       "error_code": null,
-      "latency_ms": 103140,
-      "completed_at": "2026-10-12T04:05:58.118001+00:00"
+      "latency_ms": 83202,
+      "completed_at": "2026-10-12T07:23:09.026375+00:00"
     },
     {
-      "request_id": "b9882621ac7f427e93be2a725774d92c",
-      "job_id": "cb70b6486a1e440882d328fe09e26e9a",
-      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+      "request_id": "b4acf40147bd467a9c76bd3c23055168",
+      "job_id": "287b00095f1e44aeac465da5e4b97aa7",
+      "plan_id": "e584ab41341f4b9a8d19af738aa56909",
       "stage": "generation",
       "attempt_kind": "approved_job",
-      "call_id": "364262231f474657958cadcf5c1672e2",
+      "call_id": "2945e300f15243c7b9fd990f72bcbbcb",
       "provider": "openai_compat",
       "node": "performance_annotation",
       "role": "performance_annotation",
       "requested_model": "qwen/qwen3.6-flash",
       "attempt": 1,
       "prompt_version": "p1.6.5",
-      "started_at": "2026-10-12T04:05:58.122675+00:00",
+      "started_at": "2026-10-12T07:23:09.031410+00:00",
       "actual_model": "qwen3.6-flash",
-      "input_tokens": 2528,
-      "output_tokens": 6023,
+      "input_tokens": 2434,
+      "output_tokens": 4195,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "reasoning_tokens": 4655,
+      "reasoning_tokens": 3255,
       "reasoning_included_in_output": true,
       "usage_source": "reported",
-      "provider_request_id": "8cdb0146-e8bf-497b-b131-28b0c1930c67",
+      "provider_request_id": "3d352dfc-183a-4973-ab2c-c242a35b42e6",
       "status": "success",
       "error_code": null,
-      "latency_ms": 43403,
-      "completed_at": "2026-10-12T04:06:41.526479+00:00"
+      "latency_ms": 34420,
+      "completed_at": "2026-10-12T07:23:43.452232+00:00"
     },
     {
-      "request_id": "b9882621ac7f427e93be2a725774d92c",
-      "job_id": "cb70b6486a1e440882d328fe09e26e9a",
-      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+      "request_id": "b4acf40147bd467a9c76bd3c23055168",
+      "job_id": "287b00095f1e44aeac465da5e4b97aa7",
+      "plan_id": "e584ab41341f4b9a8d19af738aa56909",
       "stage": "generation",
-      "attempt_kind": "json_schema_repair",
-      "call_id": "924a02dbf45f408ab45e135f5c2a9003",
+      "attempt_kind": "approved_job",
+      "call_id": "6654cdfe6f7244ac9df22a1d686219e6",
       "provider": "openai_compat",
       "node": "performance_annotation",
       "role": "performance_annotation",
       "requested_model": "qwen/qwen3.6-flash",
       "attempt": 1,
       "prompt_version": "p1.6.5",
-      "started_at": "2026-10-12T04:06:41.526479+00:00",
+      "started_at": "2026-10-12T07:23:43.456233+00:00",
       "actual_model": "qwen3.6-flash",
-      "input_tokens": 2567,
-      "output_tokens": 6238,
+      "input_tokens": 2335,
+      "output_tokens": 3742,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "reasoning_tokens": 4972,
+      "reasoning_tokens": 3054,
       "reasoning_included_in_output": true,
       "usage_source": "reported",
-      "provider_request_id": "144732c7-de7c-4506-a109-d05cb85fefe2",
+      "provider_request_id": "9d0c6a73-b3e3-4d74-962d-381e2ba38d13",
       "status": "success",
       "error_code": null,
-      "latency_ms": 44531,
-      "completed_at": "2026-10-12T04:07:26.058500+00:00"
+      "latency_ms": 33173,
+      "completed_at": "2026-10-12T07:24:16.630200+00:00"
     },
     {
-      "request_id": "b9882621ac7f427e93be2a725774d92c",
-      "job_id": "cb70b6486a1e440882d328fe09e26e9a",
-      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+      "request_id": "b4acf40147bd467a9c76bd3c23055168",
+      "job_id": "287b00095f1e44aeac465da5e4b97aa7",
+      "plan_id": "e584ab41341f4b9a8d19af738aa56909",
       "stage": "generation",
       "attempt_kind": "approved_job",
-      "call_id": "599634e3de3043a99dbcef3c2045fe31",
+      "call_id": "e2e33115590f4d039da824b0d12a08b8",
       "provider": "openai_compat",
       "node": "performance_annotation",
       "role": "performance_annotation",
       "requested_model": "qwen/qwen3.6-flash",
       "attempt": 1,
       "prompt_version": "p1.6.5",
-      "started_at": "2026-10-12T04:07:26.062680+00:00",
+      "started_at": "2026-10-12T07:24:16.636935+00:00",
       "actual_model": "qwen3.6-flash",
-      "input_tokens": 2022,
-      "output_tokens": 3788,
+      "input_tokens": 3153,
+      "output_tokens": 6404,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "reasoning_tokens": 3426,
+      "reasoning_tokens": 4638,
       "reasoning_included_in_output": true,
       "usage_source": "reported",
-      "provider_request_id": "bdfee680-ef24-425b-bde7-619ee309322e",
+      "provider_request_id": "4e61ec43-1ef4-4d80-9494-775c5e8cbc67",
       "status": "success",
       "error_code": null,
-      "latency_ms": 28949,
-      "completed_at": "2026-10-12T04:07:55.012084+00:00"
+      "latency_ms": 49443,
+      "completed_at": "2026-10-12T07:25:06.080431+00:00"
     },
     {
-      "request_id": "b9882621ac7f427e93be2a725774d92c",
-      "job_id": "cb70b6486a1e440882d328fe09e26e9a",
-      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+      "request_id": "b4acf40147bd467a9c76bd3c23055168",
+      "job_id": "287b00095f1e44aeac465da5e4b97aa7",
+      "plan_id": "e584ab41341f4b9a8d19af738aa56909",
       "stage": "generation",
       "attempt_kind": "approved_job",
-      "call_id": "0485b320e1514dda8347092ac0ab150d",
+      "call_id": "cab01ab7e0d949fdbec13324c83851be",
       "provider": "openai_compat",
       "node": "performance_annotation",
       "role": "performance_annotation",
       "requested_model": "qwen/qwen3.6-flash",
       "attempt": 1,
       "prompt_version": "p1.6.5",
-      "started_at": "2026-10-12T04:07:55.019544+00:00",
+      "started_at": "2026-10-12T07:25:06.084592+00:00",
       "actual_model": "qwen3.6-flash",
-      "input_tokens": 2639,
-      "output_tokens": 6277,
+      "input_tokens": 2265,
+      "output_tokens": 5728,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "reasoning_tokens": 4920,
+      "reasoning_tokens": 4847,
       "reasoning_included_in_output": true,
       "usage_source": "reported",
-      "provider_request_id": "446dbeb3-7b8d-4842-9846-7784498936bf",
+      "provider_request_id": "b5a1fd75-1e34-4dd2-a40f-d5d399252f40",
       "status": "success",
       "error_code": null,
-      "latency_ms": 46418,
-      "completed_at": "2026-10-12T04:08:41.438129+00:00"
+      "latency_ms": 44792,
+      "completed_at": "2026-10-12T07:25:50.877764+00:00"
     },
     {
-      "request_id": "b9882621ac7f427e93be2a725774d92c",
-      "job_id": "cb70b6486a1e440882d328fe09e26e9a",
-      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
+      "request_id": "b4acf40147bd467a9c76bd3c23055168",
+      "job_id": "287b00095f1e44aeac465da5e4b97aa7",
+      "plan_id": "e584ab41341f4b9a8d19af738aa56909",
       "stage": "generation",
       "attempt_kind": "approved_job",
-      "call_id": "81f0ad28736d49908e0fc8343f0866ae",
-      "provider": "openai_compat",
-      "node": "performance_annotation",
-      "role": "performance_annotation",
-      "requested_model": "qwen/qwen3.6-flash",
-      "attempt": 1,
-      "prompt_version": "p1.6.5",
-      "started_at": "2026-10-12T04:08:41.442871+00:00",
-      "actual_model": "qwen3.6-flash",
-      "input_tokens": 2122,
-      "output_tokens": 4571,
-      "cache_read_tokens": 0,
-      "cache_write_tokens": 0,
-      "reasoning_tokens": 4035,
-      "reasoning_included_in_output": true,
-      "usage_source": "reported",
-      "provider_request_id": "c95ab661-300b-4ca0-9c70-f2a374bcb06d",
-      "status": "success",
-      "error_code": null,
-      "latency_ms": 34052,
-      "completed_at": "2026-10-12T04:09:15.495563+00:00"
-    },
-    {
-      "request_id": "b9882621ac7f427e93be2a725774d92c",
-      "job_id": "cb70b6486a1e440882d328fe09e26e9a",
-      "plan_id": "a239be2620694bc68bf66dea26ecfda2",
-      "stage": "generation",
-      "attempt_kind": "approved_job",
-      "call_id": "435b6ea26b92424a8135fedde0774972",
+      "call_id": "867fef3442da429bb9df95eae45923c0",
       "provider": "openai_compat",
       "node": "judge",
       "role": "judge",
       "requested_model": "qwen/qwen3.6-flash",
       "attempt": 1,
       "prompt_version": "p1.6.5",
-      "started_at": "2026-10-12T04:09:15.497709+00:00",
+      "started_at": "2026-10-12T07:25:50.879764+00:00",
       "actual_model": "qwen3.6-flash",
-      "input_tokens": 7625,
-      "output_tokens": 2374,
+      "input_tokens": 8943,
+      "output_tokens": 2356,
       "cache_read_tokens": 0,
       "cache_write_tokens": 0,
-      "reasoning_tokens": 2332,
+      "reasoning_tokens": 2314,
       "reasoning_included_in_output": true,
       "usage_source": "reported",
-      "provider_request_id": "15548ab4-7918-47e5-bbe7-08a68abe51d6",
+      "provider_request_id": "c1741877-6472-4b5c-bb3c-4a6c7b7a3db9",
       "status": "success",
       "error_code": null,
-      "latency_ms": 21255,
-      "completed_at": "2026-10-12T04:09:36.752810+00:00"
+      "latency_ms": 22984,
+      "completed_at": "2026-10-12T07:26:13.864694+00:00"
     }
   ],
-  "created_at": "2026-10-12T04:09:15.496098Z"
+  "created_at": "2026-10-12T07:25:50.878766Z"
 }

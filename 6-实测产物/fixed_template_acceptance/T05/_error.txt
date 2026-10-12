@@ -1,7 +1,7 @@
 Error: The read operation timed out
 
 Traceback (most recent call last):
-  File "H:\Projects\StoryGenerate\scripts\test_fixed_story_templates.py", line 132, in run_case
+  File "H:\Projects\StoryGenerate\scripts\test_fixed_story_templates.py", line 136, in run_case
     plan = service.prepare_story_plan(request, OperationContext())
   File "H:\Projects\StoryGenerate\4-引擎代码\drama_engine\workflow\service.py", line 146, in prepare_story_plan
     content = self.plan_generator.generate(

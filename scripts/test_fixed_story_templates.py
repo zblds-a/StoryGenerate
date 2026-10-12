@@ -175,6 +175,13 @@ def run_case(case: dict, provider, service, template_resolver) -> dict:
         result["integrity_errors"] = len(integrity.errors)
         result["integrity_warnings"] = len(integrity.warnings)
 
+        # integrity_valid=false means the case FAILS acceptance
+        if not integrity.valid:
+            result["status"] = "integrity_fail"
+            result["error"] = f"Integrity check failed: {integrity.errors[:3]}"
+            print(f"  ❌ INTEGRITY FAIL — {len(integrity.errors)} errors")
+            # Continue to save artifacts for debugging, but mark as failed
+
         # ── Step 6: Export ──
         export_delivery_bundle(delivery, str(case_dir), case_id)
 
