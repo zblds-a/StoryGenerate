@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 FORMULA_LIB = "drama-formula-library.json"
+FORMULA_EXT = "drama-formula-library-extension.json"
 TIMETRAVEL_LIB = "穿越剧引擎规则.json"
 # 第三份规则库：人物选择规律 + 关系变化 + 事实账本 + 证据评审判据。
 # 它单独成库而不是并进前两份，原因是它服务于一组全新的问题（人物是否有魅力、
@@ -56,9 +57,14 @@ def _resolve_lib(filename: str, root: Path) -> Path:
 
 @dataclass
 class RuleLibrary:
-    """两份规则库的只读视图 + 派生索引。"""
+    """规则库的只读视图 + 派生索引。
+
+    支持基础库（drama-formula-library.json）和扩展库（-extension.json）的合并加载。
+    配方机制、题材映射、亲和度等均可从库数据查询，不再依赖硬编码的 Python 常量。
+    """
 
     formula: dict[str, Any] = field(default_factory=dict)
+    formula_ext: dict[str, Any] = field(default_factory=dict)
     timetravel: dict[str, Any] = field(default_factory=dict)
     continuity: dict[str, Any] = field(default_factory=dict)
     source_dir: Path = field(default_factory=_default_workspace)
@@ -74,6 +80,12 @@ class RuleLibrary:
         lib.formula = _read_json(formula_path)
         lib.timetravel = _read_json(timetravel_path)
         lib.continuity = _read_json(continuity_path)
+        # Extension library: optional, graceful degradation if missing
+        try:
+            ext_path = _resolve_lib(FORMULA_EXT, root)
+            lib.formula_ext = _read_json(ext_path)
+        except FileNotFoundError:
+            lib.formula_ext = {}
         return lib
 
     # ---------- 版本与缓存指纹 ----------
@@ -106,19 +118,97 @@ class RuleLibrary:
         return self.formula.get("genre_fit_matrix", [])
 
     def genre(self, genre_id: str) -> dict | None:
-        return next((g for g in self.genres if g.get("genre_id") == genre_id), None)
+        return next((g for g in self.all_genres if g.get("genre_id") == genre_id), None)
+
+    @property
+    def all_genres(self) -> list[dict]:
+        """基础库体裁 + 扩展库体裁（合并）。"""
+        base = self.formula.get("genre_fit_matrix", [])
+        ext = self.formula_ext.get("genre_fit_matrix_extension", [])
+        return base + ext
 
     @property
     def audio_ready_genres(self) -> list[dict]:
         """广播剧适配分 >= 70 的赛道。选题节点的白名单。"""
-        return [g for g in self.genres if g.get("audio_fit_score", 0) >= 70]
+        return [g for g in self.all_genres if g.get("audio_fit_score", 0) >= 70]
 
     @property
     def recipes(self) -> list[dict]:
         return self.formula.get("roster_recipes", [])
 
     def recipe(self, recipe_id: str) -> dict | None:
-        return next((r for r in self.recipes if r.get("id") == recipe_id), None)
+        """查找配方（含基础库和扩展库）。"""
+        return next((r for r in self.all_recipes if r.get("id") == recipe_id), None)
+
+    @property
+    def all_recipes(self) -> list[dict]:
+        """基础库配方 + 扩展库配方（合并）。扩展库配方以 'enabled' 字段过滤。"""
+        base = self.formula.get("roster_recipes", [])
+        ext = self.formula_ext.get("roster_recipes_extension", [])
+        # Only include enabled extension recipes
+        enabled_ext = [r for r in ext if r.get("enabled", True)]
+        return base + enabled_ext
+
+    def recipe_mechanism(self, recipe_id: str) -> dict[str, str] | None:
+        """获取配方的创作机制（conflict_mechanism, causal_driver, ending_strategy, tone_guidance）。
+
+        查找优先级：1) 配方条目内联字段 → 2) 扩展库 recipe_mechanisms_base
+        """
+        r = self.recipe(recipe_id)
+        if r:
+            mech = {
+                "conflict_mechanism": r.get("conflict_mechanism", ""),
+                "causal_driver": r.get("causal_driver", ""),
+                "ending_strategy": r.get("ending_strategy", ""),
+                "tone_guidance": r.get("tone_guidance", ""),
+            }
+            if any(mech.values()):
+                return mech
+        # Fallback: extension's recipe_mechanisms_base (for R1-R5)
+        base = self.formula_ext.get("recipe_mechanisms_base", {})
+        if recipe_id in base:
+            return dict(base[recipe_id])
+        return None
+
+    def genre_default_recipe(self, genre_id: str) -> str | None:
+        """体裁的默认配方映射（数据驱动）。"""
+        # First check genre entry for explicit default_recipe
+        g = self.genre(genre_id)
+        if g and g.get("default_recipe"):
+            return g["default_recipe"]
+        # Fall back to extension map
+        ext_map = self.formula_ext.get("genre_default_recipe_map", {})
+        return ext_map.get(genre_id)
+
+    def recipe_mode_affinity(self) -> dict[str, list[str]]:
+        """配方→模式亲和度（合并基础库和扩展库数据）。"""
+        aff: dict[str, list[str]] = {}
+        # Base library: infer from recipe entries
+        for r in self.recipes:
+            rid = r.get("id", "")
+            default = r.get("default_mode", "general")
+            supported = r.get("supported_modes", [default])
+            if rid:
+                aff[rid] = supported
+        # Extension: explicit map
+        ext_aff = self.formula_ext.get("recipe_mode_affinity", {})
+        for rid, modes in ext_aff.items():
+            aff[rid] = modes
+        return aff
+
+    @property
+    def freetext_genre_map(self) -> dict[str, str]:
+        """自由文本→体裁ID映射（合并基础库和扩展库关键词）。"""
+        ft: dict[str, str] = {}
+        # From extension explicit map
+        ext_map = self.formula_ext.get("freetext_genre_map_extension", {})
+        ft.update(ext_map)
+        # From genre keywords
+        for g in self.all_genres:
+            for kw in g.get("keywords", []):
+                if kw not in ft:
+                    ft[kw] = g["genre_id"]
+        return ft
 
     @property
     def beat_segments(self) -> list[dict]:

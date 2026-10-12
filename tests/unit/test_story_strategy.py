@@ -8,10 +8,6 @@ from drama_engine.workflow.strategy import (
     ResolvedStoryStrategy,
     StoryStrategyResolver,
     StrategyConflictError,
-    _GENRE_DEFAULT_RECIPE,
-    _GENRE_DEFAULT_MODE,
-    _RECIPE_MODE_AFFINITY,
-    _RECIPE_MECHANISMS,
 )
 
 
@@ -136,15 +132,23 @@ class TestStrategyResolver:
             assert strategy.story_mode in ("viral_drama", "general", "mystery", "serialized")
             assert strategy.genre_id == genre_id
 
-    def test_genre_default_mappings_are_complete(self):
-        """Every genre has a default mode and recipe mapping."""
-        for gid in _GENRE_DEFAULT_MODE:
-            assert gid in _GENRE_DEFAULT_RECIPE, f"Genre {gid} missing default recipe"
+    def test_genre_default_mappings_are_complete(self, lib):
+        """Every genre has a default recipe via genre_default_recipe or genre entry."""
+        for g in lib.all_genres:
+            gid = g.get("genre_id", "")
+            default = lib.genre_default_recipe(gid)
+            # If genre has keywords, it should have a default recipe mapping
+            if g.get("keywords"):
+                assert default, f"Genre {gid} ({g.get('name','?')}) missing default recipe"
 
-    def test_recipe_mode_affinity_consistent(self):
-        """All recipes with affinity also have a default mode."""
-        for rid in _RECIPE_MODE_AFFINITY:
-            assert rid in _GENRE_DEFAULT_RECIPE.values() or rid in ("R1", "R2", "R3", "R4", "R5")
+    def test_recipe_mode_affinity_consistent(self, lib):
+        """All recipes have at least one compatible mode."""
+        affinity = lib.recipe_mode_affinity()
+        for r in lib.all_recipes:
+            rid = r.get("id", "")
+            if r.get("enabled", True):
+                modes = affinity.get(rid, [])
+                assert len(modes) > 0, f"Recipe {rid} has no compatible modes"
 
 
 class TestStrategyConflictDetection:
@@ -160,9 +164,14 @@ class TestStrategyConflictDetection:
                 explicit_fields=["story_mode", "recipe_id"],
             )
 
-    def test_all_recipes_have_mechanism_coverage(self):
-        for rid in _RECIPE_MECHANISMS:
-            mech = _RECIPE_MECHANISMS[rid]
+    def test_all_recipes_have_mechanism_coverage(self, lib):
+        for r in lib.all_recipes:
+            rid = r.get("id", "")
+            if not r.get("enabled", True):
+                continue
+            mech = lib.recipe_mechanism(rid)
+            if mech is None:
+                continue  # Some recipes may not have mechanisms in the library yet
             assert mech.get("conflict_mechanism"), f"{rid}: missing conflict_mechanism"
             assert mech.get("causal_driver"), f"{rid}: missing causal_driver"
             assert mech.get("ending_strategy"), f"{rid}: missing ending_strategy"

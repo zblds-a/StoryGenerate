@@ -1,13 +1,15 @@
-"""Story Strategy Resolver — deterministic, 0-LLM.
+"""Story Strategy Resolver — data-driven, 0-LLM.
 
 Unifies Story Mode + Genre + Recipe + Template into a single
 ResolvedStoryStrategy that the Plan and Writer stages can consume.
 
 Design principles:
-- Deterministic: no LLM call, purely rule-based matching.
+- Data-driven: recipe mechanisms, genre mappings, and mode affinities
+  are read from the RuleLibrary (JSON), not hardcoded Python constants.
 - Explicit-first: user-specified values always win; auto-match only fills gaps.
-- Conflict-aware: incompatible combinations produce clear errors, not silent overwrites.
-- Lightweight: reuses existing RuleLibrary, TemplateResolver, and ModeRegistry.
+- Conflict-aware: incompatible combinations produce clear errors.
+- Extensible: R6–R13 (and beyond) are loaded as library data — adding a
+  new recipe only requires a JSON entry, not a Python code change.
 """
 from __future__ import annotations
 
@@ -35,11 +37,7 @@ class StrategyConflictError(StoryEngineError):
 # ---------------------------------------------------------------------------
 
 class ResolvedStoryStrategy(BaseModel):
-    """The frozen strategy snapshot that enters Plan and Writer stages.
-
-    Every field that was auto-filled is recorded so the system can report
-    what was inferred vs. what the user specified.
-    """
+    """The frozen strategy snapshot that enters Plan and Writer stages."""
 
     story_mode: str = Field(description="Final resolved story mode key")
     mode_label: str = Field(default="", description="Human-readable mode name")
@@ -51,57 +49,40 @@ class ResolvedStoryStrategy(BaseModel):
 
     recipe_id: str = Field(default="", description="Recipe id, e.g. R1")
     recipe_name: str = Field(default="", description="Human-readable recipe name")
-    recipe_slots: dict[str, str] = Field(
-        default_factory=dict,
-        description="Slot assignments A→E from the recipe",
-    )
-    recipe_landing_note: str = Field(
-        default="",
-        description="Audio-adaptation guidance from the recipe",
-    )
+    recipe_slots: dict[str, str] = Field(default_factory=dict, description="Slot assignments A→E")
+    recipe_landing_note: str = Field(default="", description="Audio-adaptation guidance")
+    recipe_version: str = Field(default="", description="Recipe version from library data")
+    recipe_enabled: bool = Field(default=True, description="Whether the recipe is enabled")
 
     template_ref: str = Field(default="", description="Resolved template id")
     template_version: int = Field(default=1, description="Template version")
 
-    # Which fields were explicitly specified by the user
     explicit_fields: list[str] = Field(default_factory=list)
     auto_filled_fields: list[str] = Field(default_factory=list)
 
-    # Derived writing guidance — not raw rule dumps
-    conflict_mechanism: str = Field(
-        default="",
-        description="How conflict escalates in this strategy",
-    )
-    causal_driver: str = Field(
-        default="",
-        description="What drives causal progression: character choices, clue discovery, etc.",
-    )
-    ending_strategy: str = Field(
-        default="",
-        description="How the story should end: closed, open, cliffhanger, etc.",
-    )
-    tone_guidance: str = Field(
-        default="",
-        description="Tone hints for the writer",
-    )
+    conflict_mechanism: str = Field(default="", description="How conflict escalates")
+    causal_driver: str = Field(default="", description="Causal progression driver")
+    ending_strategy: str = Field(default="", description="How the story should end")
+    tone_guidance: str = Field(default="", description="Tone hints for the writer")
 
-    # The raw snapshot of the underlying data for debugging
     genre_data: dict[str, Any] = Field(default_factory=dict)
     recipe_data: dict[str, Any] = Field(default_factory=dict)
 
     def plan_context(self) -> str:
         """Compact context for injection into the Plan system prompt."""
-        parts = [
-            f"故事模式：{self.mode_label}（{self.story_mode}）",
-            f"题材赛道：{self.genre_name}（{self.genre_id}）",
-            f"题材机制：{self.genre_mechanism}",
-            f"情绪弧线：{self.genre_emotion}",
-        ]
+        parts = []
+        if self.story_mode:
+            parts.append(f"故事模式：{self.mode_label}（{self.story_mode}）")
+        if self.genre_id:
+            parts.append(f"题材赛道：{self.genre_name}（{self.genre_id}）")
+            if self.genre_mechanism:
+                parts.append(f"题材机制：{self.genre_mechanism}")
+            if self.genre_emotion:
+                parts.append(f"情绪弧线：{self.genre_emotion}")
         if self.recipe_id:
-            parts.extend([
-                f"角色配方：{self.recipe_name}（{self.recipe_id}）",
-                f"配方落地提醒：{self.recipe_landing_note}",
-            ])
+            parts.append(f"角色配方：{self.recipe_name}（{self.recipe_id}）")
+            if self.recipe_landing_note:
+                parts.append(f"配方落地提醒：{self.recipe_landing_note}")
         if self.conflict_mechanism:
             parts.append(f"核心冲突机制：{self.conflict_mechanism}")
         if self.causal_driver:
@@ -113,7 +94,7 @@ class ResolvedStoryStrategy(BaseModel):
         return "\n".join(parts)
 
     def writer_context(self) -> list[str]:
-        """Compact strategy hints for the Writer creative packet."""
+        """Hints for injection into the Writer stage via creative_packet.strategy_hints."""
         hints = []
         if self.conflict_mechanism:
             hints.append(f"冲突机制：{self.conflict_mechanism}")
@@ -127,261 +108,229 @@ class ResolvedStoryStrategy(BaseModel):
 
 
 # ---------------------------------------------------------------------------
-# Recipe → Mode compatibility table
+# Keyword Helpers
 # ---------------------------------------------------------------------------
-# Each recipe has a natural story-mode affinity.  Mismatches produce warnings
-# but only *explicit* conflicts raise errors.
-_RECIPE_MODE_AFFINITY: dict[str, set[str]] = {
-    "R1": {"viral_drama", "serialized"},       # 大女主升级流
-    "R2": {"viral_drama", "serialized"},       # 萌宝团宠
-    "R3": {"viral_drama", "general"},           # 反差搞事业
-    "R4": {"general", "viral_drama"},           # 家庭反击
-    "R5": {"general"},                          # 破镜重圆治愈
-}
 
-# Recipe → default mode when user doesn't specify
-_RECIPE_DEFAULT_MODE: dict[str, str] = {
-    "R1": "viral_drama",
-    "R2": "viral_drama",
-    "R3": "viral_drama",
-    "R4": "general",
-    "R5": "general",
-}
-
-# Genre → default recipe
-_GENRE_DEFAULT_RECIPE: dict[str, str] = {
-    "G01": "R4",  # 现实家庭冲突 → 家庭反击
-    "G02": "R5",  # 成年人治愈爱情 → 破镜重圆治愈
-    "G03": "R5",  # 重生虐恋 → 破镜重圆治愈
-    "G04": "R1",  # 宫斗复仇 → 大女主升级流
-    "G05": "R5",  # 现实治愈/救赎 → 破镜重圆治愈
-    "G06": "R4",  # 反差霸总×草根女 → 家庭反击 (closest match)
-    "G07": "R2",  # 萌宝团宠 → 萌宝团宠
-    "G08": "R3",  # 脑洞穿越搞事业 → 反差搞事业
-    "G09": "R1",  # 反差修仙喜剧 → 大女主升级流
-    "G10": "R1",  # 国风玄幻升级流 → 大女主升级流
-}
-
-# Free-text genre → formula library genre ID
-# Users can pass natural language like "温情", "悬疑", "职场"
-_FREETEXT_GENRE_MAP: dict[str, str] = {
-    "温情": "G05", "温暖": "G05", "治愈": "G05", "救赎": "G05",
-    "悬疑": "G05", "推理": "G05", "破案": "G05",
-    "家庭": "G01", "家庭冲突": "G01", "家庭伦理": "G01", "婆媳": "G01",
-    "爱情": "G02", "恋爱": "G02", "治愈爱情": "G02", "成年人爱情": "G02",
-    "虐恋": "G03", "重生": "G03", "虐": "G03",
-    "宫斗": "G04", "复仇": "G04", "宅斗": "G04",
-    "霸总": "G06", "总裁": "G06", "反差": "G06",
-    "萌宝": "G07", "团宠": "G07", "萌娃": "G07",
-    "穿越": "G08", "搞事业": "G08", "经商": "G08", "种田": "G08",
-    "修仙": "G09", "仙侠": "G09", "喜剧": "G09",
-    "玄幻": "G10", "升级": "G10", "打怪": "G10",
-    "职场": "G05", "都市": "G05", "现实": "G05",
-    "青春": "G05", "校园": "G05",
-    "轻悬疑": "G05",  # 轻悬疑映射到现实治愈/悬疑推理
-}
-
-# Genre → default mode
-_GENRE_DEFAULT_MODE: dict[str, str] = {
-    "G01": "general",
-    "G02": "general",
-    "G03": "general",
-    "G04": "viral_drama",
-    "G05": "general",
-    "G06": "viral_drama",
-    "G07": "viral_drama",
-    "G08": "viral_drama",
-    "G09": "viral_drama",
-    "G10": "viral_drama",
-}
+def _chinese_keywords(text: str) -> list[str]:
+    """Extract CJK character 2-3 grams + significant single chars."""
+    if not text:
+        return []
+    cjk = [c for c in text if "\u4e00" <= c <= "\u9fff" or "\u3400" <= c <= "\u4dbf"]
+    if not cjk:
+        return []
+    grams = []
+    for i in range(len(cjk)):
+        grams.append(cjk[i])
+        if i + 1 < len(cjk):
+            grams.append(cjk[i] + cjk[i + 1])
+        if i + 2 < len(cjk):
+            grams.append(cjk[i] + cjk[i + 1] + cjk[i + 2])
+    return sorted(set(grams), key=len, reverse=True)
 
 
-# ---------------------------------------------------------------------------
-# Recipe-specific story mechanisms
-# ---------------------------------------------------------------------------
-# Each recipe has a conflict mechanism, causal driver, ending strategy, and
-# tone guidance beyond slot assignments — these make the recipe actually
-# affect the story instead of just providing labels.
-_RECIPE_MECHANISMS: dict[str, dict[str, str]] = {
-    "R1": {
-        "conflict_mechanism": (
-            "升级式冲突：主角能力每提升一层，敌人也随之升级。冲突来自能力边界的不断测试，"
-            "而非一次性对决。每一次胜利都带来更大的责任或更强的对手。"
-        ),
-        "causal_driver": (
-            "主角的主动选择驱动：每一次升级都源于主角决定挑战更强的对手或更难的副本。"
-            "金手指提供能力，但选择如何使用（或克制不使用）才是剧情推进的核心。"
-        ),
-        "ending_strategy": (
-            "阶段性成就 + 更大世界的暗示。当前冲突解决，但主角的成长远未结束。"
-            "结局应展示主角在新层次上的状态，为续集留下自然入口。"
-        ),
-        "tone_guidance": "热血、成长感、阶段性爽感。避免全程碾压的无聊感。",
-    },
-    "R2": {
-        "conflict_mechanism": (
-            "反差式冲突：冲突来自外界对主角的低估与主角真实身份/能力之间的差距。"
-            "每一次打脸都是身份揭示，而非暴力对抗。轻量反派，重情绪供给。"
-        ),
-        "causal_driver": (
-            "外界误解 → 主角自然行动 → 真相逐步揭示。主角不需要主动证明自己，"
-            "护短群体（师兄团等）的介入是事件触发器。"
-        ),
-        "ending_strategy": (
-            "温馨团聚 + 身份完全揭示。家人/师兄团真正理解主角的价值。"
-            "结局是情感层面的圆满，不一定是武力层面的胜利。"
-        ),
-        "tone_guidance": "温暖、甜、轻度爽感。萌点是核心，不要引入沉重虐点。",
-    },
-    "R3": {
-        "conflict_mechanism": (
-            "认知差冲突：主角用现代思维/异世界知识解决古代/异界问题，"
-            "冲突来自新旧观念的碰撞，而非武力对抗。喜剧化处理矛盾，避免严肃权谋。"
-        ),
-        "causal_driver": (
-            "信息差变现：主角发现一个被本地人忽视的机会（经济、技术、组织方式），"
-            "通过现代知识降维打击。每一次成功都来自知识应用，不是运气或武力。"
-        ),
-        "ending_strategy": (
-            "事业阶段性成功 + 新世界立足。主角证明了自己的价值，获得认可。"
-            "结局可以开放（继续搞事业）但不能悲剧收场。"
-        ),
-        "tone_guidance": "爽快、喜剧、聪明。核心爽点是'他们不懂但我懂'的知识碾压。",
-    },
-    "R4": {
-        "conflict_mechanism": (
-            "亲密关系中的权力反转：冲突来自家庭内部的压迫与反抗。"
-            "反派必须是私人化的（婆婆、丈夫、小姑），冲突发生在日常场景中。"
-            "每一次反击都是界限的重新划定，不是暴力宣泄。"
-        ),
-        "causal_driver": (
-            "憋屈积累 → 觉醒时刻 → 用事实反击。主角的觉醒是因果链的起点，"
-            "实证（账目、证据、外部身份）是反击的武器。"
-            "冲突升级来自反派的不甘与反扑。"
-        ),
-        "ending_strategy": (
-            "关系重新定义，而非简单的'赢'。结局展示新的家庭平衡状态，"
-            "可以和解也可以分离，但主角获得了尊重和自主权。不建议强制大团圆。"
-        ),
-        "tone_guidance": "真实、情绪浓度高、渐进式爽感。核心是'终于等到这一天'的释放感。",
-    },
-    "R5": {
-        "conflict_mechanism": (
-            "内心拉扯式冲突：冲突主要来自人物的内心障碍和过去创伤，外部冲突为辅助。"
-            "以'拉扯'代替'对抗'——两个人互相靠近又推开的过程。"
-            "旧误会是障碍，但解决方案不是一次性真相大白，而是渐进理解。"
-        ),
-        "causal_driver": (
-            "一次偶然重逢/交集 → 旧伤被触发 → 被迫面对 → 渐进理解。"
-            "关系变化来自双方的主动选择，不是命运安排。"
-            "金手指（重生记忆）只提供'提前知道'，不改变人物需要做的选择。"
-        ),
-        "ending_strategy": (
-            "和解与重新开始。不一定是复合，但双方都在过程中成长了。"
-            "结局展示新的关系状态，可以是'带着伤痕继续前行'。"
-            "不建议强行圆满——'不完美但真实'的结局更有力量。"
-        ),
-        "tone_guidance": "细腻、酸涩、温暖。情感张力来自台词中的未尽之言，不靠激烈冲突。",
-    },
-}
+def _is_significant_char(ch: str) -> bool:
+    """Single CJK chars that carry meaning."""
+    trivial = {"的", "了", "在", "是", "我", "有", "和", "就", "不", "人",
+               "他", "她", "它", "们", "这", "那", "一", "个", "都", "也",
+               "很", "到", "说", "要", "去", "你", "会", "着", "没", "看",
+               "好", "自", "过", "对", "想", "来", "能", "多", "然", "心"}
+    return ch not in trivial
 
 
 # ---------------------------------------------------------------------------
 # Resolver
 # ---------------------------------------------------------------------------
 
-# Characters that carry semantic weight in Chinese genre names
-_SIGNIFICANT_CHARS: set[str] = {
-    "虐", "宠", "甜", "暖", "爽", "恨", "怒", "酸", "笑",
-    "穿", "越", "斗", "战", "修", "反", "萌", "宝",
-    "爱", "情", "家", "庭", "治", "愈", "复", "仇",
-    "悬", "疑", "推", "理", "宫", "谋", "霸", "总",
-}
-
-
-def _is_significant_char(ch: str) -> bool:
-    return ch in _SIGNIFICANT_CHARS
-
-
-def _chinese_keywords(text: str) -> list[str]:
-    """Split Chinese text into meaningful 1-3 character keyword chunks.
-
-    Example: "现实家庭冲突" → ["现实", "家庭", "冲突", "实家", "庭冲"]
-    Example: "憋屈积累→反击打脸" → ["憋屈", "积累", "反击", "打脸"]
-    """
-    # Remove arrows and other delimiters
-    cleaned = text.replace("→", " ").replace("·", " ").replace("/", " ").replace("、", " ")
-    # Extract all CJK character sequences
-    result: list[str] = []
-    current: list[str] = []
-    for ch in cleaned:
-        if "\u4e00" <= ch <= "\u9fff" or "\u3400" <= ch <= "\u4dbf":
-            current.append(ch)
-        else:
-            if current:
-                result.extend(_sliding_windows("".join(current)))
-                current = []
-    if current:
-        result.extend(_sliding_windows("".join(current)))
-    return result
-
-
-def _sliding_windows(s: str) -> list[str]:
-    """Generate 1-3 char sliding windows from a CJK string."""
-    n = len(s)
-    windows: list[str] = []
-    for size in (2, 3):
-        if n >= size:
-            for i in range(n - size + 1):
-                windows.append(s[i:i + size])
-    # Also include individual significant chars
-    for ch in s:
-        if _is_significant_char(ch):
-            windows.append(ch)
-    return windows
-
-
-@dataclass
 class StoryStrategyResolver:
-    """Deterministic resolver that produces a ResolvedStoryStrategy.
+    """Resolve story strategy: Mode + Genre + Recipe + Template.
 
-    Usage:
-        resolver = StoryStrategyResolver(lib)
-        strategy = resolver.resolve(
-            story_mode="auto",
-            genre="auto",
-            recipe_id=None,
-            template_ref=None,
-            user_instruction="一个人在城市重新找到生活方向",
-            explicit_fields=["user_instruction"],
-        )
+    All mapping data comes from the RuleLibrary (JSON), enabling R1–R5
+    and R6–R13 (and beyond) without code changes.
     """
 
-    lib: RuleLibrary
+    def __init__(self, lib: RuleLibrary) -> None:
+        self.lib = lib
 
-    # ---- helpers ----
+    # ── public API ──
+
+    def resolve(
+        self,
+        *,
+        story_mode: str,
+        genre: str,
+        recipe_id: str | None = None,
+        template_ref: str | None = None,
+        user_instruction: str = "",
+        explicit_fields: list[str] | None = None,
+    ) -> ResolvedStoryStrategy:
+        explicit = set(explicit_fields or [])
+        auto_filled: list[str] = []
+
+        # --- Step 1: resolve genre ---
+        resolved_genre_id = self._resolve_genre(genre, user_instruction, explicit, auto_filled)
+        genre_data = self.lib.genre(resolved_genre_id) or {}
+
+        # --- Step 2: resolve story mode ---
+        resolved_mode = self._resolve_mode(story_mode, resolved_genre_id, genre_data, explicit, auto_filled)
+        mode_label = self._mode_label(resolved_mode)
+
+        # --- Step 3: resolve recipe ---
+        resolved_recipe_id = self._resolve_recipe(
+            recipe_id, resolved_genre_id, resolved_mode, explicit, auto_filled,
+        )
+        recipe_data = self.lib.recipe(resolved_recipe_id) or {}
+        recipe_slots = {s: recipe_data.get(s, "") for s in ("A", "B", "C", "D", "E")}
+
+        # --- Step 4: resolve mechanisms ---
+        mechanisms = self.lib.recipe_mechanism(resolved_recipe_id) or {
+            "conflict_mechanism": "",
+            "causal_driver": "",
+            "ending_strategy": "",
+            "tone_guidance": "",
+        }
+
+        return ResolvedStoryStrategy(
+            story_mode=resolved_mode,
+            mode_label=mode_label,
+            genre_id=resolved_genre_id,
+            genre_name=genre_data.get("name", ""),
+            genre_mechanism=genre_data.get("mechanism", ""),
+            genre_emotion=genre_data.get("emotion", ""),
+            recipe_id=resolved_recipe_id or "",
+            recipe_name=recipe_data.get("name", ""),
+            recipe_slots=recipe_slots,
+            recipe_landing_note=recipe_data.get("landing_note", ""),
+            recipe_version=recipe_data.get("version", ""),
+            recipe_enabled=recipe_data.get("enabled", True),
+            template_ref=template_ref or "",
+            template_version=1,
+            explicit_fields=sorted(explicit),
+            auto_filled_fields=sorted(auto_filled),
+            conflict_mechanism=mechanisms["conflict_mechanism"],
+            causal_driver=mechanisms["causal_driver"],
+            ending_strategy=mechanisms["ending_strategy"],
+            tone_guidance=mechanisms["tone_guidance"],
+            genre_data=genre_data,
+            recipe_data=recipe_data,
+        )
+
+    # ── Step 1: Genre ──
+
+    def _resolve_genre(self, genre: str, instruction: str,
+                       explicit: set, auto_filled: list) -> str:
+        if genre and genre != "auto":
+            # Explicit genre: formula ID or free-text
+            if genre.startswith("G") and genre[1:].isdigit():
+                return genre
+            # Free-text lookup (data-driven from library keywords)
+            ft_map = self.lib.freetext_genre_map
+            gid = self._match_free_text(genre, ft_map)
+            if gid:
+                return gid
+            # Fallback: keyword match from genre text + instruction
+            return self._match_or_fallback(genre + " " + instruction)
+        # Auto: match from instruction keywords
+        auto_filled.append("genre")
+        return self._match_or_fallback(instruction)
+
+    def _match_free_text(self, text: str, ft_map: dict[str, str]) -> str | None:
+        """Exact match or substring match against free-text genre keywords."""
+        if text in ft_map:
+            return ft_map[text]
+        for kw in sorted(ft_map, key=len, reverse=True):
+            if kw in text:
+                return ft_map[kw]
+        return None
+
+    def _match_or_fallback(self, text: str) -> str:
+        """Keyword match from idea, fallback to best audio-fit genre."""
+        matched = self._match_genre_from_idea(text)
+        if matched:
+            return matched
+        # Best audio-fit as safe default
+        best = max(self.lib.all_genres, key=lambda g: g.get("audio_fit_score", 0),
+                   default={"genre_id": "G01"})
+        return best.get("genre_id", "G01")
+
+    # ── Step 2: Mode ──
+
+    def _resolve_mode(self, mode: str, genre_id: str,
+                      genre_data: dict, explicit: set, auto_filled: list) -> str:
+        if mode and mode != "auto":
+            return mode
+        auto_filled.append("story_mode")
+        # Infer from genre data or recipe affinity
+        # Default: general is the safest fallback
+        return genre_data.get("default_mode", "general")
+
+    @staticmethod
+    def _mode_label(mode: str) -> str:
+        return {
+            "general": "通用故事", "viral_drama": "爆款广播剧",
+            "mystery": "悬疑", "serialized": "连载",
+        }.get(mode, mode)
+
+    # ── Step 3: Recipe ──
+
+    def _resolve_recipe(self, recipe_id: str | None, genre_id: str,
+                        mode: str, explicit: set, auto_filled: list) -> str | None:
+        if recipe_id:
+            # Validate the recipe exists
+            r = self.lib.recipe(recipe_id)
+            if not r:
+                available = sorted(item.get("id", "?") for item in self.lib.all_recipes)
+                raise StrategyConflictError(
+                    f"配方 '{recipe_id}' 不存在。可用配方：{', '.join(available)}"
+                )
+            if not r.get("enabled", True):
+                raise StrategyConflictError(
+                    f"配方 '{recipe_id}'（{r.get('name', '?')}）已禁用（版本 {r.get('version', '?')}）"
+                )
+            # Check mode compatibility
+            affinity = self.lib.recipe_mode_affinity()
+            allowed_modes = affinity.get(recipe_id, [])
+            if allowed_modes and mode not in allowed_modes:
+                raise StrategyConflictError(
+                    f"配方 '{recipe_id}'（{r.get('name', '?')}）不支持模式 '{mode}'。"
+                    f"支持的公式模式：{', '.join(allowed_modes)}"
+                )
+            return recipe_id
+
+        # Auto: derive from genre
+        auto_filled.append("recipe_id")
+        default = self.lib.genre_default_recipe(genre_id)
+        if default:
+            r = self.lib.recipe(default)
+            if r and r.get("enabled", True):
+                return default
+        # Generic fallback: first enabled recipe compatible with mode
+        for r in self.lib.all_recipes:
+            if not r.get("enabled", True):
+                continue
+            rid = r.get("id", "")
+            affinity = self.lib.recipe_mode_affinity()
+            if mode in affinity.get(rid, [mode]):
+                return rid
+        return None
+
+    # ── Keyword matching ──
 
     def _match_genre_from_idea(self, idea: str) -> str | None:
-        """Simple keyword matching against genre matrix names and mechanisms.
-
-        Deliberately NOT an LLM call — this is a fast deterministic match that
-        can be overridden by explicit user specification.
-        """
         idea_lower = idea.casefold()
         best_score = 0
         best_genre: str | None = None
 
-        for genre in self.lib.genres:
+        for genre in self.lib.all_genres:
             score = 0
             name = genre.get("name", "").casefold()
             mechanism = genre.get("mechanism", "").casefold()
             emotion = genre.get("emotion", "").casefold()
+            keywords = genre.get("keywords", [])
 
-            # Collect all keywords, deduplicate across sources
             seen_single: set[str] = set()
             seen_multi: set[str] = set()
 
-            # Check name keywords (highest weight — genre name is most specific)
+            # Name keywords (highest weight)
             for kw in _chinese_keywords(name):
                 if len(kw) >= 2:
                     if kw not in seen_multi and kw in idea_lower:
@@ -392,7 +341,7 @@ class StoryStrategyResolver:
                         score += 12
                         seen_single.add(kw)
 
-            # Check mechanism keywords (medium weight)
+            # Mechanism keywords (medium weight)
             for kw in _chinese_keywords(mechanism):
                 if len(kw) >= 2:
                     if kw not in seen_multi and kw in idea_lower:
@@ -403,7 +352,12 @@ class StoryStrategyResolver:
                         score += 8
                         seen_single.add(kw)
 
-            # Check emotion keywords (lowest weight)
+            # Genre keywords from data
+            for kw in keywords:
+                if kw in idea_lower:
+                    score += 15
+
+            # Emotion keywords (lowest weight)
             for kw in _chinese_keywords(emotion):
                 if len(kw) >= 2:
                     if kw not in seen_multi and kw in idea_lower:
@@ -418,176 +372,4 @@ class StoryStrategyResolver:
                 best_score = score
                 best_genre = genre.get("genre_id")
 
-        # Only auto-match when we have a meaningful signal
-        if best_score < 10:
-            return None
-        return best_genre
-
-    @staticmethod
-    def _resolve_free_text_genre(genre_text: str) -> str | None:
-        """Map free-text genre labels like '温情','职场' to formula library IDs.
-
-        Returns None if no mapping found — caller should treat as explicit
-        but unmapped genre and raise an appropriate error.
-        """
-        # Direct formula-library ID check
-        if genre_text.startswith("G") and genre_text[1:].isdigit():
-            return genre_text
-        # Exact free-text match
-        if genre_text in _FREETEXT_GENRE_MAP:
-            return _FREETEXT_GENRE_MAP[genre_text]
-        # Substring match (longest first for specificity)
-        for kw in sorted(_FREETEXT_GENRE_MAP, key=len, reverse=True):
-            if kw in genre_text:
-                return _FREETEXT_GENRE_MAP[kw]
-        return None
-
-    def _mode_from_genre(self, genre_id: str) -> str:
-        return _GENRE_DEFAULT_MODE.get(genre_id, "general")
-
-    def _recipe_from_genre(self, genre_id: str) -> str | None:
-        return _GENRE_DEFAULT_RECIPE.get(genre_id)
-
-    # ---- main resolve ----
-
-    def resolve(
-        self,
-        story_mode: str = "auto",
-        genre: str = "auto",
-        recipe_id: str | None = None,
-        template_ref: str | None = None,
-        user_instruction: str = "",
-        explicit_fields: list[str] | None = None,
-    ) -> ResolvedStoryStrategy:
-        """Resolve a complete story strategy.
-
-        Resolution order (explicit wins, auto fills gaps):
-        1. story_mode: explicit → genre-derived → "general"
-        2. genre: explicit → keyword-match from user_instruction → best audio-fit
-        3. recipe: explicit → genre-derived → None
-        4. template: explicit → mode-default → ""
-        """
-        explicit = set(explicit_fields or [])
-        auto_filled: list[str] = []
-
-        # --- Step 1: resolve genre ---
-        resolved_genre_id: str | None = None
-        if genre and genre != "auto":
-            # Support both formula-library IDs (G01) and free-text ("温情", "职场")
-            if genre.startswith("G") and genre[1:].isdigit():
-                resolved_genre_id = genre
-            else:
-                resolved_genre_id = self._resolve_free_text_genre(genre)
-                if resolved_genre_id is None:
-                    # Free-text genre not recognized — fall back to keyword match
-                    # from the genre text itself combined with user instruction
-                    matched = self._match_genre_from_idea(genre + " " + user_instruction)
-                    if matched:
-                        resolved_genre_id = matched
-                    else:
-                        # Still not found: use best audio-fit as safe default
-                        resolved_genre_id = max(
-                            self.lib.genres, key=lambda g: g.get("audio_fit_score", 0),
-                        ).get("genre_id", "G01")
-                    auto_filled.append("genre")
-        else:
-            # Auto-match from user instruction
-            matched = self._match_genre_from_idea(user_instruction)
-            if matched:
-                resolved_genre_id = matched
-                auto_filled.append("genre")
-            else:
-                # Fall back to highest audio-fit genre
-                best = max(self.lib.genres, key=lambda g: g.get("audio_fit_score", 0),
-                          default=None)
-                resolved_genre_id = best.get("genre_id") if best else "G01"
-                auto_filled.append("genre")
-
-        genre_data = self.lib.genre(resolved_genre_id) or {}
-
-        # --- Step 2: resolve story_mode ---
-        resolved_mode: str
-        if story_mode != "auto":
-            resolved_mode = story_mode
-        else:
-            resolved_mode = self._mode_from_genre(resolved_genre_id)
-            auto_filled.append("story_mode")
-
-        # --- Step 3: resolve recipe ---
-        resolved_recipe_id: str | None = None
-        if recipe_id:
-            # Verify the recipe exists
-            recipe_check = self.lib.recipe(recipe_id)
-            if not recipe_check:
-                available = [r.get("id", "?") for r in self.lib.recipes]
-                raise StrategyConflictError(
-                    f"配方 '{recipe_id}' 不存在。可用配方：{', '.join(available)}"
-                )
-            resolved_recipe_id = recipe_id
-        else:
-            resolved_recipe_id = self._recipe_from_genre(resolved_genre_id)
-            if resolved_recipe_id:
-                auto_filled.append("recipe_id")
-
-        recipe_data = self.lib.recipe(resolved_recipe_id) if resolved_recipe_id else {}
-
-        # --- Step 4: validate compatibility ---
-        if recipe_id and resolved_mode:
-            allowed = _RECIPE_MODE_AFFINITY.get(recipe_id, set())
-            if allowed and resolved_mode not in allowed:
-                # If recipe is explicit but mode is auto-resolved, adjust mode
-                if story_mode == "auto":
-                    resolved_mode = _RECIPE_DEFAULT_MODE.get(recipe_id, next(iter(allowed), "general"))
-                    auto_filled.append("story_mode")
-                else:
-                    raise StrategyConflictError(
-                        f"配方 '{recipe_id}'（{recipe_data.get('name', '')}）与模式 "
-                        f"'{resolved_mode}' 不兼容。"
-                        f"该配方支持的模式：{', '.join(sorted(allowed))}。"
-                    )
-
-        # --- Step 5: derive story mechanisms ---
-        mechanisms = _RECIPE_MECHANISMS.get(
-            resolved_recipe_id or "",
-            {
-                "conflict_mechanism": "人物选择驱动的自然冲突",
-                "causal_driver": "人物目标 → 行动 → 阻力 → 选择 → 后果",
-                "ending_strategy": "根据故事自然收束，闭合或开放均可",
-                "tone_guidance": "自然、真实",
-            },
-        )
-
-        # --- Build strategy ---
-        recipe_slots: dict[str, str] = {}
-        for slot_key in ("A", "B", "C", "D", "E"):
-            val = recipe_data.get(slot_key, "")
-            if val:
-                recipe_slots[slot_key] = val
-
-        return ResolvedStoryStrategy(
-            story_mode=resolved_mode,
-            mode_label={
-                "viral_drama": "爆款广播剧",
-                "general": "通用故事",
-                "mystery": "悬疑推理",
-                "serialized": "连载",
-            }.get(resolved_mode, resolved_mode),
-            genre_id=resolved_genre_id,
-            genre_name=genre_data.get("name", ""),
-            genre_mechanism=genre_data.get("mechanism", ""),
-            genre_emotion=genre_data.get("emotion", ""),
-            recipe_id=resolved_recipe_id or "",
-            recipe_name=recipe_data.get("name", ""),
-            recipe_slots=recipe_slots,
-            recipe_landing_note=recipe_data.get("landing_note", ""),
-            template_ref=template_ref or "",
-            template_version=1,
-            explicit_fields=sorted(explicit),
-            auto_filled_fields=sorted(auto_filled),
-            conflict_mechanism=mechanisms["conflict_mechanism"],
-            causal_driver=mechanisms["causal_driver"],
-            ending_strategy=mechanisms["ending_strategy"],
-            tone_guidance=mechanisms["tone_guidance"],
-            genre_data=genre_data,
-            recipe_data=recipe_data,
-        )
+        return best_genre if best_score >= 10 else None

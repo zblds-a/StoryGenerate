@@ -80,10 +80,26 @@ class StoryWorkflowService:
         preferences, auto_fields = self._resolve_preferences(request)
 
         # Resolve story strategy (mode + genre + recipe + template)
+        # Template → Recipe: if template declares a default_recipe and user hasn't
+        # explicitly specified one, use it. Priority:
+        #   1. user explicit recipe_id
+        #   2. template defaults.default_recipe
+        #   3. genre default recipe
+        #   4. generic fallback
+        template_default_recipe = None
+        if request.template_ref and self.template_resolver:
+            try:
+                spec = self.template_resolver.repository.get(request.template_ref.template_id)
+                if spec and spec.defaults:
+                    template_default_recipe = spec.defaults.get("default_recipe")
+            except Exception:
+                pass  # Template not found; graceful degradation
+
+        effective_recipe = preferences.recipe_id or template_default_recipe
         strategy = self._strategy_resolver.resolve(
             story_mode=preferences.story_mode if preferences.story_mode != StoryModeChoice.AUTO else "auto",
             genre=preferences.genre,
-            recipe_id=preferences.recipe_id,
+            recipe_id=effective_recipe,
             template_ref=request.template_ref.template_id if request.template_ref else None,
             user_instruction=request.user_instruction,
             explicit_fields=explicit_fields,

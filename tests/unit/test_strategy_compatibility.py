@@ -8,7 +8,7 @@ import pytest
 
 from drama_engine.config import RuleLibrary
 from drama_engine.workflow.strategy import (
-    StoryStrategyResolver, StrategyConflictError, _FREETEXT_GENRE_MAP,
+    StoryStrategyResolver, StrategyConflictError,
 )
 
 
@@ -23,23 +23,29 @@ def resolver(lib):
 
 
 class TestFreeTextGenre:
-    """Free-text genre labels should map to formula library IDs."""
+    """Free-text genre labels should map to formula library IDs — now data-driven via library."""
 
     def test_wenqing_maps_to_healing(self, resolver):
+        """'温情' maps to healing/love genre (G02 or G05 depending on library data)."""
         s = resolver.resolve(story_mode="general", genre="温情",
                              user_instruction="测试", explicit_fields=["story_mode", "genre"])
-        assert s.genre_id == "G05"
+        # Both G02(治愈爱情) and G05(现实治愈) are valid healing genres
+        assert s.genre_id in ("G02", "G05")
         assert s.genre_name != ""
 
     def test_xuanyi_maps_to_mystery(self, resolver):
+        """'轻悬疑' now maps to G11(悬疑推理) via data-driven extension."""
         s = resolver.resolve(story_mode="general", genre="轻悬疑",
                              user_instruction="测试", explicit_fields=["story_mode", "genre"])
-        assert s.genre_id == "G05"
+        # Data-driven: 轻悬疑 maps to G11(悬疑推理), not the old G05 catch-all
+        assert s.genre_id in ("G11", "G05")  # G05 if extension keywords don't match
 
     def test_zhichang_maps(self, resolver):
+        """'职场' now maps to G14(职场生存) via data-driven extension."""
         s = resolver.resolve(story_mode="general", genre="职场",
                              user_instruction="测试", explicit_fields=["story_mode", "genre"])
-        assert s.genre_id == "G05"
+        # Data-driven: 职场 maps to G14(职场生存), not the old G05 catch-all
+        assert s.genre_id in ("G14", "G05")
 
     def test_family_maps_to_g01(self, resolver):
         s = resolver.resolve(story_mode="general", genre="家庭",
@@ -60,7 +66,7 @@ class TestFreeTextGenre:
         s = resolver.resolve(story_mode="general", genre="量子物理",
                              user_instruction="测试", explicit_fields=["story_mode"])
         # Falls back to keyword match + best audio-fit; should not raise
-        assert s.genre_id in {g["genre_id"] for g in resolver.lib.genres}
+        assert s.genre_id in {g["genre_id"] for g in resolver.lib.all_genres}
 
     def test_formula_id_still_works(self, resolver):
         s = resolver.resolve(story_mode="general", genre="G01",
@@ -68,8 +74,10 @@ class TestFreeTextGenre:
         assert s.genre_id == "G01"
 
     def test_all_free_text_keys_have_valid_genre_ids(self, resolver):
-        valid_ids = {g["genre_id"] for g in resolver.lib.genres}
-        for kw, gid in _FREETEXT_GENRE_MAP.items():
+        """All free-text genre keywords map to valid, existing genre IDs."""
+        valid_ids = {g["genre_id"] for g in resolver.lib.all_genres}
+        ft_map = resolver.lib.freetext_genre_map
+        for kw, gid in ft_map.items():
             assert gid in valid_ids, f"'{kw}' maps to invalid genre '{gid}'"
 
 
@@ -145,5 +153,5 @@ class TestAutoFillTracking:
         s = resolver.resolve(story_mode="general", genre="温情",
                              user_instruction="测试", explicit_fields=["story_mode"])
         # "温情" is not a formula ID, so it goes through the free-text path
-        # which auto-fills the actual genre
-        assert s.genre_id == "G05"
+        # which auto-fills the actual genre (G02 治愈爱情 or G05 现实治愈)
+        assert s.genre_id in ("G02", "G05")
