@@ -391,6 +391,7 @@ class Utterance(WorkflowModel):
 
 class SceneDelivery(WorkflowModel):
     scene_id: str
+    scene_index: int = Field(default=1, ge=1, description="1-based scene index within the episode")
     title: str
     location: str = ""
     dramatic_goal: str = ""
@@ -444,6 +445,10 @@ class StoryDelivery(WorkflowModel):
     story_mode: str
     content_form: Literal["audio_drama"] = "audio_drama"
     character_snapshot: list[CharacterSnapshot] = Field(default_factory=list)
+    character_portrayals: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="Plan-generated character portrayals: role_id→story_name, goal, avoidance, speech_style, relationship_stance",
+    )
     outline: PlanContent
     episodes: list[EpisodeDelivery] = Field(default_factory=list)
     continuity_state: dict[str, Any] = Field(default_factory=dict)
@@ -451,6 +456,10 @@ class StoryDelivery(WorkflowModel):
     ready_for_playback: bool = False
     status: StoryVersionStatus = StoryVersionStatus.CANDIDATE
     engine_version: str = "0.3.0"
+    delivery_format_version: str = Field(
+        default="1.0",
+        description="Format version for downstream compatibility; increment when field semantics change",
+    )
     rule_versions: dict[str, Any] = Field(default_factory=dict)
     model_trace: list[dict[str, Any]] = Field(default_factory=list)
     created_at: datetime = Field(default_factory=utcnow)

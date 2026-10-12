@@ -496,6 +496,7 @@ class ApprovedPlanLLMExecutor:
                 })
                 scenes.append(SceneDelivery(
                     scene_id=f"ep{outline.index}-scene{scene_index}",
+                    scene_index=scene_index,
                     title=scene.title, location=scene.location,
                     dramatic_goal=scene.dramatic_goal, utterances=utterances,
                 ))
@@ -527,7 +528,9 @@ class ApprovedPlanLLMExecutor:
             title=preview.plan.title, summary=preview.plan.premise,
             preview_blurb=first_preview_blurb or preview.plan.premise,
             tags=[prefs.genre, prefs.tone_style, prefs.audience_band, prefs.content_rating],
-            story_mode=prefs.story_mode, character_snapshot=preview.character_snapshots,
+            story_mode=prefs.story_mode,
+            character_snapshot=preview.character_snapshots,
+            character_portrayals=[p.model_dump(mode="json") for p in preview.plan.character_portrayals],
             outline=preview.plan, episodes=episodes,
             rule_versions=preview.rule_versions,
             continuity_state={
