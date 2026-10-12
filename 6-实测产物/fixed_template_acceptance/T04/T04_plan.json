@@ -1,0 +1,312 @@
+{
+  "plan_id": "7102ba56f53a443a8b461a55b6b08326",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": {
+    "template_id": "SPY_MYSTERY_SERIALIZED",
+    "version": 1,
+    "name": "长篇谍战悬疑·前五分钟",
+    "source": "explicit",
+    "supported_modes": [
+      "serialized"
+    ],
+    "beats": [
+      {
+        "key": "hook",
+        "purpose": "开场危机与长期谜团的入口",
+        "guidance": "第一分钟内建立迫在眉睫的选择",
+        "required": true
+      },
+      {
+        "key": "first_clue",
+        "purpose": "给出一个可追查但尚无解释的线索",
+        "guidance": "线索要能在后续集数回收",
+        "required": true
+      },
+      {
+        "key": "misdirection",
+        "purpose": "可信的误导让人物选择错误方向",
+        "guidance": "误导不能违反人物已知事实",
+        "required": true
+      },
+      {
+        "key": "local_turn",
+        "purpose": "前五分钟的小目标达成或失败",
+        "guidance": "让片段有局部结果，不只是拖到悬念",
+        "required": true
+      },
+      {
+        "key": "cliffhanger",
+        "purpose": "揭示更大威胁或身份反转",
+        "guidance": "不提前解答核心谜团，留下明确下一步行动",
+        "required": true
+      }
+    ],
+    "constraints": [
+      "前五分钟只交付长篇第一集的开场片段，不伪装成完整结局",
+      "清楚区分已证实事实、人物猜测和待解伏笔",
+      "不要出现现实机构的可操作间谍技术步骤"
+    ],
+    "recommended_characters": 3,
+    "tone_hints": [
+      "谍战",
+      "疑云",
+      "层层反转"
+    ],
+    "ending_guidance": "cliffhanger",
+    "defaults": {
+      "target_duration_sec": 300,
+      "content_form": "audio_drama"
+    }
+  },
+  "strategy_snapshot": {
+    "story_mode": "serialized",
+    "mode_label": "连载",
+    "genre_id": "G11",
+    "genre_name": "悬疑推理",
+    "genre_mechanism": "线索层层揭示、认知不断翻转",
+    "genre_emotion": "疑→惊→悟",
+    "recipe_id": "R9",
+    "recipe_name": "年代奋斗",
+    "recipe_slots": {
+      "A": "特殊年代的小人物/家庭支柱",
+      "B": "韧性和手艺/时代的机遇",
+      "C": "互相扶持的家人/邻里",
+      "D": "时代困境（政策、偏见、经济冲击），非个人反派",
+      "E": "同代不同命者/离散的亲人"
+    },
+    "recipe_landing_note": "年代感通过声音符号建立：收音机播报、街头叫卖、特定年代音乐。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "SPY_MYSTERY_SERIALIZED",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [
+      "recipe_id"
+    ],
+    "conflict_mechanism": "时代洪流式冲突：冲突主要来自时代变迁对小人物的冲击（政策变化、经济危机、社会偏见），而非个人恩怨。每一次困境都是时代的缩影。禁止将反派个人化——反派是时代、观念和环境的产物。",
+    "causal_driver": "平稳生活被时代事件打破 → 适应/抗争 → 阶段性成果 → 新的时代冲击 → 坚守或转型 → 时代更迭后的回望。每一步都体现人物在时代中的主动选择。",
+    "ending_strategy": "不是个人胜利，而是时代洪流中小人物的一份答卷。可以是有遗憾的圆满。主题落在传承（手艺、家风、精神）而非财富积累。结尾应有时代更迭的声音标志（如从广播到电视到手机）。",
+    "tone_guidance": "厚重、生活化、带着时代的粉尘感。情感来自日常细节与时代回响的交织。用具体的物（粮票、搪瓷缸、的确良衬衫）承载抽象的时代记忆。",
+    "genre_data": {
+      "genre_id": "G11",
+      "name": "悬疑推理",
+      "works": "消失的她 / 隐秘的角落",
+      "emotion": "疑→惊→悟",
+      "mechanism": "线索层层揭示、认知不断翻转",
+      "audio_fit": "high",
+      "audio_fit_score": 82,
+      "driver": "信息差由台词与声音承载",
+      "default_recipe": "R6",
+      "keywords": [
+        "悬疑",
+        "推理",
+        "破案",
+        "侦探",
+        "线索",
+        "反转",
+        "秘密",
+        "真相",
+        "目击",
+        "失踪"
+      ]
+    },
+    "recipe_data": {
+      "id": "R9",
+      "name": "年代奋斗",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "mid_high",
+      "audio_fit_score": 68,
+      "default_mode": "general",
+      "supported_modes": [
+        "general",
+        "serialized"
+      ],
+      "A": "特殊年代的小人物/家庭支柱",
+      "B": "韧性和手艺/时代的机遇",
+      "C": "互相扶持的家人/邻里",
+      "D": "时代困境（政策、偏见、经济冲击），非个人反派",
+      "E": "同代不同命者/离散的亲人",
+      "reference": "人世间 / 大江大河",
+      "landing_note": "年代感通过声音符号建立：收音机播报、街头叫卖、特定年代音乐。",
+      "conflict_mechanism": "时代洪流式冲突：冲突主要来自时代变迁对小人物的冲击（政策变化、经济危机、社会偏见），而非个人恩怨。每一次困境都是时代的缩影。禁止将反派个人化——反派是时代、观念和环境的产物。",
+      "causal_driver": "平稳生活被时代事件打破 → 适应/抗争 → 阶段性成果 → 新的时代冲击 → 坚守或转型 → 时代更迭后的回望。每一步都体现人物在时代中的主动选择。",
+      "ending_strategy": "不是个人胜利，而是时代洪流中小人物的一份答卷。可以是有遗憾的圆满。主题落在传承（手艺、家风、精神）而非财富积累。结尾应有时代更迭的声音标志（如从广播到电视到手机）。",
+      "tone_guidance": "厚重、生活化、带着时代的粉尘感。情感来自日常细节与时代回响的交织。用具体的物（粮票、搪瓷缸、的确良衬衫）承载抽象的时代记忆。"
+    }
+  },
+  "plan": {
+    "title": "暗流1992：第七十三号坐标",
+    "premise": "1992年国企改制浪潮中，保密干事林秋雁为查明搭档失踪真相，循着旧书里的加密坐标，撞破了时代洪流下国有资产流失的巨大黑幕。",
+    "theme": "在时代巨变与利益诱惑前，小人物对真相与底线的坚守。",
+    "beginning": "林秋雁拒绝在搭档“携密潜逃”的结案报告上签字，与急于推进改制的老领导老赵发生激烈冲突。",
+    "development": "林秋雁从搭档遗留的旧书中发现加密坐标，不顾老赵关于“破坏改制大局”的警告，独自前往废弃的73号防空洞探查。",
+    "climax": "在防空洞内，林秋雁发现被倒卖的“报废”核心设备，并找到搭档留下的警示暗号，证实了搭档因揭露黑幕而遇险。",
+    "ending": "老赵与私人老板出现在防空洞外并锁死铁门，林秋雁陷入绝境，长线悬念展开。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "第一集：旧书里的坐标",
+        "core_goal": "查明搭档失踪的初步线索，并抵达坐标地点发现核心秘密。",
+        "major_beats": [
+          "[0-5s] 收音机播报“股份制改造试点”新闻中，林秋雁用力划破结案报告纸张，老赵推门而入将“停薪留职表”拍在桌上，建立改制与失踪案的双重压迫。",
+          "[5-17s] 老赵催促林秋雁签字定性陈建国“携密潜逃”以换取改制补贴，林秋雁拒绝并质问，交代两人立场冲突与当前麻烦。",
+          "[17-50s] 老赵称陈建国已去深圳倒卖批文，林秋雁拿出陈建国留下的《地质勘探手册》，伴随撕开书页胶水的裂音，掉出带有陈建国特有标高符号的坐标纸条，完成第一次反转。",
+          "[50-200s] 林秋雁认出坐标指向73号废弃防空洞，老赵警告那里已被私人老板承包，去探查会破坏厂里改制大局；林秋雁反驳“连真相都不要算什么大局”，夺门而出。伴随街头“下海”叫卖与BP机滴滴声，她骑车前往坐标地。",
+          "[200-283s] 林秋雁进入防空洞，在滴水与回音中摸索，发现堆满厂里申报“报废”的进口数控机床核心部件；她找到陈建国用粉笔画的地质警示暗号，推断出他因发现倒卖证据而遇险，真相升级。",
+          "[283-300s] 铁门突然作响，老赵与私人老板的声音从门外传来，老赵说“我知道她看了书会来，把门锁死”，林秋雁意识到老赵已妥协并被困，留下强悬念。"
+        ],
+        "ending": "老赵锁死防空洞铁门，林秋雁被困于倒卖现场，面临生存与揭露真相的双重危机。",
+        "target_duration_sec": 300
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_qiuyan",
+        "story_name": "林秋雁",
+        "external_goal": "查明搭档陈建国失踪真相，证明其清白，阻止厂里核心资产被借改制之名侵吞。",
+        "emotional_avoidance": "害怕面对陈建国真的“变节”的事实，害怕自己坚守的原则在时代浪潮前毫无意义。",
+        "speech_style": "语速快，咬字清晰，习惯用数据和规定反驳人；受压时会沉默并反复摩挲手边的旧物件（如钢笔）。",
+        "relationship_stance": "对老赵既敬重其过去的保护，又警惕其现在的妥协；对陈建国是绝对信任的生死搭档。"
+      },
+      {
+        "role_id": "lao_zhao",
+        "story_name": "老赵",
+        "external_goal": "尽快结案陈建国失踪案，确保厂里顺利拿到改制补贴，保住全厂职工的安置费。",
+        "emotional_avoidance": "回避深究厂领导倒卖资产的真相，用“大局”和“生存”来麻痹自己的良知。",
+        "speech_style": "语重心长，喜欢用“大环境”“大家伙儿”“听我一句劝”等词汇；着急时会提高音量并伴随拍桌子或叹气。",
+        "relationship_stance": "把林秋雁当徒弟和晚辈，试图保护她不被时代碾碎，但方式是把她也拉入妥协的泥潭。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "radio_host",
+        "story_name": "电台播音员",
+        "performer_id": "voice_actor_3",
+        "medium": "broadcast",
+        "dramatic_purpose": "播报1992年国企改制与股份制试点新闻，营造时代洪流背景，暗示单位面临的生存危机。"
+      }
+    ],
+    "mystery_causal_proof": {
+      "actual_event_timeline": "半年前陈建国失踪前夜，将写有73号防空洞坐标的纸条夹入《地质勘探手册》借给林秋雁。",
+      "witnessed_event": "林秋雁当时看到陈建国匆忙还书，听到他说“这书你留着，以后用得着”，并听到书页间有轻微的纸张摩擦声。",
+      "actor_opportunity": "陈建国作为技术骨干，有权接触厂区旧图纸，有机会在失踪前将坐标写在纸条上并夹入书中。",
+      "audible_trace_before_reveal": "林秋雁在翻书时，听到书页间不正常的“沙沙”摩擦声，且书本重量和厚度手感不对。",
+      "onstage_verification": "林秋雁撕开书页夹层，掉出带有特定打孔和手写字迹的坐标纸条，上面有陈建国特有的绘图习惯（如特定的标高符号）。"
+    },
+    "performance_plan": {
+      "soundscape": "90年代初国营厂矿环境音：老式转盘电话、收音机底噪、自行车链条声、防空洞滴水与回音。",
+      "pacing_notes": "前50秒对话紧凑、压迫感强；中段赶路时加入时代环境音（街头叫卖、BP机）过渡；后段防空洞探索放慢节奏，突出空间混响和悬疑感。"
+    },
+    "continuity_constraints": [
+      "陈建国失踪时间必须严格设定为半年前（1992年春）。",
+      "73号防空洞的坐标必须通过《地质勘探手册》中的纸条传递，不可使用高科技电子设备。",
+      "老赵的动机必须始终围绕“保住全厂职工安置费”和“顺应改制大局”，不能写成单纯的个人贪腐。"
+    ],
+    "change_summary": [
+      "将传统谍战背景平移至1992年国企改制时期，以时代洪流（机构精简、资产流失）替代敌我斗争作为核心冲突。",
+      "将加密坐标的载体设定为具有年代感的《地质勘探手册》旧书，符合当时技术条件与人物身份。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "serialized",
+    "content_form": "audio_drama",
+    "genre": "G11",
+    "recipe_id": null,
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 300,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style",
+    "recipe_id"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "17946645437b42ccb0cdf8b792dd2bb6",
+      "plan_id": "7102ba56f53a443a8b461a55b6b08326",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "62df08719cad4d1287fc95e1236edca4",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:19:30.184694+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5130,
+      "output_tokens": 6182,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4503,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "9959b9cc-d07b-4e70-9b2f-885a9692e85c",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 89543,
+      "completed_at": "2026-10-12T04:20:59.728092+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "d29431b9c2449285414b0781d68213127431a06f2bddbecbd4ec0754dca44032",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T04:20:59.728599Z",
+  "updated_at": "2026-10-12T04:20:59.728599Z"
+}

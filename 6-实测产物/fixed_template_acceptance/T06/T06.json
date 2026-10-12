@@ -1,0 +1,1239 @@
+{
+  "story_id": "084c120cb1a94615bdf90f214b5c6122",
+  "story_version_id": "1d6bb42902964bd98141914bd436b54a",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+  "approved_plan_revision": 1,
+  "title": "胃药与终身合约",
+  "summary": "为了完成爷爷的遗愿，互相看不顺眼的林夏与陆廷舟签订了一年婚约。在约定互不干涉的同居生活中，一张意外发现的体检报告打破了表面的冷漠，让两人在合约到期前重新审视彼此的真实情感。",
+  "preview_blurb": "一纸婚约，一年期限。当重度胃溃疡的体检报告打破了同居的冷漠，她决定用终身计划替换那张离婚协议。",
+  "tags": [
+    "G02",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [],
+  "character_portrayals": [
+    {
+      "role_id": "lin_xia",
+      "story_name": "林夏",
+      "external_goal": "完成爷爷遗愿熬过一年婚约，同时搞清楚陆廷舟到底在隐瞒什么病情。",
+      "emotional_avoidance": "害怕自己在这段虚假婚姻中动真心，用带刺的言语和假装不在乎来掩饰关心。",
+      "speech_style": "语速快，喜欢用反问句，受压时会提高音量掩饰心虚，常用“随便你”“谁稀罕”来防御。",
+      "relationship_stance": "表面上嫌弃陆廷舟的冷漠，实际上渴望被他在乎，处于“想靠近又怕被推开”的试探状态。"
+    },
+    {
+      "role_id": "lu_tingzhou",
+      "story_name": "陆廷舟",
+      "external_goal": "履行对爷爷的承诺，保护林夏不受自己高压生活和病痛的影响，平稳度过一年婚约。",
+      "emotional_avoidance": "害怕自己的病态和负能量拖累林夏，用“公事公办”的态度切断情感连接。",
+      "speech_style": "语速平缓，措辞严谨克制，受压时习惯用沉默或转移话题（如“这是私事”）来回避，极少表达情绪。",
+      "relationship_stance": "默默守护但保持物理与心理距离，认为“不干涉”是对林夏最好的保护，内心渴望靠近但极力克制。"
+    }
+  ],
+  "outline": {
+    "title": "胃药与终身合约",
+    "premise": "为了完成爷爷的遗愿，互相看不顺眼的林夏与陆廷舟签订了一年婚约。在约定互不干涉的同居生活中，一张意外发现的体检报告打破了表面的冷漠，让两人在合约到期前重新审视彼此的真实情感。",
+    "theme": "在克制的距离中发现隐秘的守护，用真实的关心打破虚假的合约。",
+    "beginning": "林夏意外发现陆廷舟隐瞒的严重体检报告，当面质问他为何在婚约中伪装冷漠，两人爆发激烈争吵。",
+    "development": "争吵后两人陷入微妙的冷战，但林夏开始通过深夜的药片声和日常的细节，察觉到陆廷舟“互不干涉”背后的隐忍与保护，并主动用熬粥等行动回应。",
+    "climax": "一年婚约到期，陆廷舟拿出离婚协议准备放手，林夏却用红笔划掉“离婚”二字，拒绝结束关系。",
+    "ending": "林夏坦白自己愿意将照顾他作为终身计划，陆廷舟卸下防备，两人在真实的承诺中重新建立平等的亲密关系。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "胃药与终身合约",
+        "core_goal": "通过体检报告打破先婚后爱的表面冷漠，在合约到期时完成从“义务”到“真心”的情感转折。",
+        "major_beats": [
+          "【0-3s 黄金钩子】一沓纸张被重重拍在实木餐桌上（突发听觉事件），伴随林夏急促的呼吸声和椅子摩擦声。",
+          "【3-10s 矛盾三要素】林夏质问：“这就是你说的‘互不干涉’？重度胃溃疡加长期失眠，陆廷舟，你每天半夜在厨房到底干什么？”交代两人同居、婚约背景及体检报告引发的麻烦。",
+          "【10-30s 第一次反转】陆廷舟伸手去拿报告（衣物摩擦声），林夏一把抽走。林夏爆发：“爷爷让你照顾我，没让你把命搭进去！你装什么冷血工作狂？”陆廷舟沉默两秒，冷冷回应：“这是我的私事，不劳陆太太费心。”",
+          "【30-120s 中段推进】两人陷入冷战。深夜，林夏在房间听到隔壁传来压抑的咳嗽声和吞咽药片的喝水声。次日，林夏默默在厨房熬养胃粥（瓷勺碰碗声），放在陆廷舟书房门口，敲门后离开。陆廷舟开门，看着热粥，轻声说了一句“谢谢”。林夏在走廊拐角听到，停下脚步。",
+          "【120-153s 升级/二次反转】婚约到期前夜。陆廷舟将一份《离婚协议书》推到林夏面前，语气平静：“一年期满，你自由了。”林夏看着协议，没有拿笔签字，而是直接拿起桌上的红笔，用力划掉了“离婚”两个字（笔尖划破纸张的刺耳声）。",
+          "【153-180s 强情感收束】林夏直视陆廷舟：“陆廷舟，爷爷的遗愿是一年，但我的胃药采购计划，签的是终身。”陆廷舟愣住，随后发出一声释然的轻笑，伸手覆上林夏握笔的手。两人呼吸声靠近，温暖的吉他扫弦渐强，在音乐余韵中淡出。"
+        ],
+        "ending": "林夏拒绝离婚并表白心意，陆廷舟卸下伪装接受她的照顾，两人基于真实感情重新建立关系，合约被真心的承诺取代。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_xia",
+        "story_name": "林夏",
+        "external_goal": "完成爷爷遗愿熬过一年婚约，同时搞清楚陆廷舟到底在隐瞒什么病情。",
+        "emotional_avoidance": "害怕自己在这段虚假婚姻中动真心，用带刺的言语和假装不在乎来掩饰关心。",
+        "speech_style": "语速快，喜欢用反问句，受压时会提高音量掩饰心虚，常用“随便你”“谁稀罕”来防御。",
+        "relationship_stance": "表面上嫌弃陆廷舟的冷漠，实际上渴望被他在乎，处于“想靠近又怕被推开”的试探状态。"
+      },
+      {
+        "role_id": "lu_tingzhou",
+        "story_name": "陆廷舟",
+        "external_goal": "履行对爷爷的承诺，保护林夏不受自己高压生活和病痛的影响，平稳度过一年婚约。",
+        "emotional_avoidance": "害怕自己的病态和负能量拖累林夏，用“公事公办”的态度切断情感连接。",
+        "speech_style": "语速平缓，措辞严谨克制，受压时习惯用沉默或转移话题（如“这是私事”）来回避，极少表达情绪。",
+        "relationship_stance": "默默守护但保持物理与心理距离，认为“不干涉”是对林夏最好的保护，内心渴望靠近但极力克制。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "audio_cues": [
+        "纸张拍桌声",
+        "吞咽药片声",
+        "瓷勺碰碗声",
+        "笔尖划纸声"
+      ],
+      "pacing_notes": "前30秒节奏紧凑，台词交锋快；中段放慢，留白增多，用环境音和呼吸声填补；结尾温暖舒缓。"
+    },
+    "continuity_constraints": [
+      "陆廷舟的胃病和失眠必须在S1-S3中通过体检报告确立，并在S4中通过吃药声和煮粥细节呼应。",
+      "一年婚约的期限必须在S2或S4中提及，为S5的离婚协议做铺垫。",
+      "林夏的态度转变必须基于S4中观察到的具体细节，不能突然顿悟。"
+    ],
+    "change_summary": [
+      "将S6的“戛然而止”调整为符合ending_contract的“情感余韵收束”，确保最后15%展示人物选择与后果。",
+      "明确了体检报告的具体内容（重度胃溃疡与失眠），使冲突具象化且符合治愈基调。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-18605151",
+      "index": 1,
+      "title": "胃药与终身合约",
+      "synopsis": "为了完成爷爷的遗愿，林夏与陆廷舟签订了一年婚约。一张意外发现的体检报告打破了表面的冷漠，让两人在合约到期前重新审视彼此的真实情感。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 172,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "scene_index": 1,
+          "title": "质问与伪装",
+          "location": "餐厅",
+          "dramatic_goal": "林夏通过体检报告揭穿陆廷舟的病情，打破两人互不干涉的虚假平静。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "纸张重重拍在实木餐桌上，急促呼吸，椅子摩擦",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "这就是你说的互不干涉？重度胃溃疡加长期失眠！陆廷舟，你每天半夜在厨房到底干什么？",
+              "emotion": "angry",
+              "tone_instruction": "语速偏快，前半句带着难以置信的质问，读到体检结果时加重语气，最后半句压低声音带出压抑的怒火。",
+              "emphasis": [
+                {
+                  "span_text": "互不干涉",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 10,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "重度胃溃疡加长期失眠",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 21,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首“这”字前留0.5秒呼吸停顿，模拟拍桌后的余震感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "说话啊！同居这半年，你天天装没事人一样，其实疼得整宿睡不着对不对？你把我当傻子骗吗？",
+              "emotion": "angry",
+              "tone_instruction": "咬字加重，节奏紧凑。“说话啊！”短促爆发，中间叙述部分气息微颤，尾音上扬带出质问与委屈。",
+              "emphasis": [
+                {
+                  "span_text": "装没事人一样",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 19,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "当傻子骗吗",
+                  "occurrence": 1,
+                  "start_char": 36,
+                  "end_char": 41,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“说话啊！”后接0.3秒急促换气，模拟情绪递进。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "把东西放下，别闹了。",
+              "emotion": "calm",
+              "tone_instruction": "嗓音压低，语速放缓，用平稳但缺乏温度的语气试图压制对方情绪，尾音收短。",
+              "emphasis": [
+                {
+                  "span_text": "放下",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "别闹了",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 9,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末“了”字轻吐，不留拖音，制造对话断点。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "我不放！",
+              "emotion": "angry",
+              "tone_instruction": "短促有力，字头咬死，不带任何拖沓，展现倔强与对抗姿态。",
+              "emphasis": [
+                {
+                  "span_text": "不放",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 3,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "无额外停顿，直接切入，保持气息紧绷。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "冷硬的防线",
+          "location": "餐厅",
+          "dramatic_goal": "陆廷舟试图用合约条款推开林夏，林夏在愤怒中掩饰关心，两人不欢而散。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "衣物摩擦，伸手拿报告，林夏一把抽走",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "爷爷让你照顾我，没让你把命搭进去！你装什么冷血工作狂？你以为你一个人扛着不说就是伟大吗？",
+              "emotion": "angry",
+              "tone_instruction": "前半句压住颤抖的怒气，后半句转为急促质问，尾音带出掩饰不住的焦灼",
+              "emphasis": [
+                {
+                  "span_text": "把命搭进去",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 16,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "冷血工作狂",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首深吸气后直接开口，第二句前微顿半秒，第三句语速加快但保持胸腔共鸣",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "这是我的私事，不劳陆太太费心。我们签过协议，互不干涉对方的生活。把报告给我。",
+              "emotion": "calm",
+              "tone_instruction": "语气平稳无波澜，咬字清晰偏冷，最后一句加重语气施压",
+              "emphasis": [
+                {
+                  "span_text": "不劳陆太太费心",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 14,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "把报告给我",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 37,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "每句结尾干脆收声不留拖音，营造疏离与克制感",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "谁稀罕管你！随便你！你要是疼死在书房里，我连救护车都懒得给你叫！",
+              "emotion": "angry",
+              "tone_instruction": "前两短句语速快且带刺，第三句突然放缓，尾音压低透出无奈与关切",
+              "emphasis": [
+                {
+                  "span_text": "谁稀罕管你",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "懒得给你叫",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 31,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“随便你”后明显换气停顿，第三句气息下沉，避免喊叫感",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "scene_index": 3,
+          "title": "细节与期限",
+          "location": "书房门外/餐厅",
+          "dramatic_goal": "林夏通过日常细节察觉陆廷舟的隐忍，并在婚约到期前夜面对离婚协议做出反击。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "那晚之后，我们陷入了漫长的冷战。直到深夜，隔壁再次传来压抑的咳嗽和吞咽药片的声音。",
+              "emotion": "serious",
+              "tone_instruction": "语速放缓，前半句平稳叙述，后半句“压抑的咳嗽”处气息微沉，带出担忧感。",
+              "emphasis": [
+                {
+                  "span_text": "漫长的冷战",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 15,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "压抑的咳嗽",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 32,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留白两秒，为后续环境音留出空间。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "深夜，压抑咳嗽声，喝水吞药声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "第二天清晨，我在厨房熬了养胃粥，端过去放在他书房门口。敲了敲门，转身离开。",
+              "emotion": "calm",
+              "tone_instruction": "语气轻缓平稳，动作感强，“熬了养胃粥”处气息微扬，体现小心翼翼的照顾。",
+              "emphasis": [
+                {
+                  "span_text": "养胃粥",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 15,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "转身离开",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 36,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“敲门”后停顿半秒模拟动作节奏，随后自然衔接下一句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "瓷勺碰碗声，敲门，脚步声离开，开门声",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "谢谢。",
+              "emotion": "tender",
+              "tone_instruction": "声音压低，气息收敛，尾音轻微上扬但克制，体现意外后的软化。",
+              "emphasis": [
+                {
+                  "span_text": "谢谢",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "发声前微吸气，模拟开门后的短暂停顿。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "我在走廊拐角停下脚步，心跳得很快。一年婚约到期前夜，他把一份离婚协议书推到我面前。",
+              "emotion": "worried",
+              "tone_instruction": "前半句语速加快，呼吸微促；后半句转为低沉叙述，营造压迫感。",
+              "emphasis": [
+                {
+                  "span_text": "心跳得很快",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 16,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "离婚协议书",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 35,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“很快”后换气一次，模拟心跳加速的节奏，句末降调收束。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "纸张推过桌面",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "一年期满，你自由了。签个字吧，财产都按协议走，我不会亏待你。",
+              "emotion": "serious",
+              "tone_instruction": "语气平稳克制，不带情绪起伏，“自由了”处稍作停顿强调界限，“不会亏待你”咬字加重，透出固执的保护欲。",
+              "emphasis": [
+                {
+                  "span_text": "一年期满",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "不会亏待你",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首无拖沓，直接切入正题，句末气息平稳落下。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l9",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "你胃疼得直冒冷汗的时候，怎么不跟我提自由？现在装什么大方？",
+              "emotion": "angry",
+              "tone_instruction": "语速加快，音调拔高，“冒冷汗”处气息急促带颤，“装什么大方”压低嗓音反问，充满委屈与怒火。",
+              "emphasis": [
+                {
+                  "span_text": "直冒冷汗",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "装什么大方",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首快速吐字，句末反问时喉部收紧，模拟气声质问。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l10",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "林夏，合约就是合约。期限到了就该结束，别让我为难，也别耽误你自己。",
+              "emotion": "serious",
+              "tone_instruction": "语气冷硬但带疲惫感，“合约就是合约”一字一顿切断情绪，“别耽误你自己”放缓语速，透出无奈与疏离。",
+              "emphasis": [
+                {
+                  "span_text": "合约就是合约",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "别耽误你自己",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 32,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“林夏”后微顿，句末气息渐弱，模拟放弃争辩的状态。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l11",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "好，我签。这是我最后一次配合你的演出。",
+              "emotion": "sad",
+              "tone_instruction": "前半句干脆利落，后半句语气转冷，“最后一次”咬字极重，尾音下沉，掩饰真实情绪。",
+              "emphasis": [
+                {
+                  "span_text": "最后一次",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 12,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "演出",
+                  "occurrence": 1,
+                  "start_char": 16,
+                  "end_char": 18,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“好，我签。”后短促换气，模拟握笔准备的动作节奏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l12",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "笔尖划破纸张的刺耳声，用力划掉字",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l13",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "你干什么？那是签字的地方吗？",
+              "emotion": "surprised",
+              "tone_instruction": "语速骤快，音调陡然拔高，“干什么”带破音边缘的急切，“签字的地方”语气慌乱质问，打破原有平静。",
+              "emphasis": [
+                {
+                  "span_text": "干什么",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "签字的地方",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 12,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.18,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首无铺垫直接爆发，句末气息上浮，模拟瞬间失态。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "scene_index": 4,
+          "title": "终身计划",
+          "location": "餐厅",
+          "dramatic_goal": "林夏拒绝离婚并表白心意，陆廷舟卸下伪装接受她的照顾，两人基于真实感情重新建立关系。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "我划掉离婚两个字。陆廷舟，爷爷的遗愿是一年，但我的胃药采购计划，签的是终身。",
+              "emotion": "serious",
+              "tone_instruction": "语气坚定平稳，前半句陈述事实不带起伏，后半句放缓语速，字字清晰落地。",
+              "emphasis": [
+                {
+                  "span_text": "离婚两个字",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "签的是终身",
+                  "occurrence": 1,
+                  "start_char": 32,
+                  "end_char": 37,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿半秒，配合笔尖划纸声余韵收尾后开口。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "你知不知道，照顾一个重度胃溃疡加失眠的病人，以后会有多麻烦？",
+              "emotion": "worried",
+              "tone_instruction": "压低嗓音，语气带着试探与隐忧，尾音微微下沉。",
+              "emphasis": [
+                {
+                  "span_text": "重度胃溃疡加失眠",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 18,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "多麻烦",
+                  "occurrence": 1,
+                  "start_char": 26,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "吸气后轻声开口，句末留白一秒等待对方回应。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "我连你半夜喝几口水、咽几次药都数得清清楚楚，我还怕麻烦？",
+              "emotion": "tender",
+              "tone_instruction": "语气笃定且带一丝无奈的笑意，节奏轻快但不失郑重。",
+              "emphasis": [
+                {
+                  "span_text": "数得清清楚楚",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 21,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "怕麻烦",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 27,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句连贯吐出，在“我还怕麻烦？”前微顿，反问语气上扬。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "伸手覆上握笔的手，衣物摩擦，呼吸声靠近",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "那……陆太太，以后的日子，请多指教。",
+              "emotion": "tender",
+              "tone_instruction": "声音放松下来，带着释然与温柔，“陆太太”三字加重亲昵感，整体气息绵长。",
+              "emphasis": [
+                {
+                  "span_text": "陆太太",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 6,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "请多指教",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 17,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "那……处有短暂停顿，随后平稳接话，句尾自然收气。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "少废话，先去把桌上的粥喝了，不然陆太太现在就要发火。",
+              "emotion": "playful",
+              "tone_instruction": "语速稍快，语气干脆利落带点娇嗔，发火二字故意拖长制造玩笑感。",
+              "emphasis": [
+                {
+                  "span_text": "先",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "发火",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 25,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首不换气直接切入，句末气息上扬后迅速切断。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "lu_tingzhou",
+              "narrator_id": null,
+              "performer_id": "lu_tingzhou",
+              "text": "好，听你的。",
+              "emotion": "calm",
+              "tone_instruction": "声音柔和顺从，无多余修饰，如常应答般自然。",
+              "emphasis": [
+                {
+                  "span_text": "听你的",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 5,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "短促应答，句尾气息平稳落下，为后续环境音留出空间。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l8",
+              "kind": "music",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "温暖的吉他扫弦渐强，在音乐余韵中淡出",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林夏发现陆廷舟隐瞒的严重胃病，两人爆发争吵。在随后的冷战中，林夏通过细节察觉到他的隐忍，并在婚约到期前夜拒绝签字，用真实的承诺取代了虚假的合约。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "陆廷舟患有重度胃溃疡和长期失眠",
+          "status": "revealed"
+        },
+        {
+          "fact": "一年婚约正式到期",
+          "status": "resolved"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "from": "合约夫妻/互不干涉",
+          "to": "真实伴侣/相互照顾",
+          "evidence": "林夏划掉离婚协议，陆廷舟接受她的照顾"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "一年婚约的去留",
+        "陆廷舟隐瞒病情的原因"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "陆廷舟患有重度胃溃疡和长期失眠",
+        "status": "revealed"
+      },
+      {
+        "fact": "一年婚约正式到期",
+        "status": "resolved"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "合约夫妻/互不干涉",
+        "to": "真实伴侣/相互照顾",
+        "evidence": "林夏划掉离婚协议，陆廷舟接受她的照顾"
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 22,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "delivery_format_version": "1.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "ca47e3ba89b042ef8666ce055d1725d1",
+      "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "34a658dac1084a6cac243a3d18a7b858",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:29:06.169366+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5186,
+      "output_tokens": 4484,
+      "cache_read_tokens": 1152,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3020,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "c6749fbf-222b-4619-b136-1a1832651f0a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 59645,
+      "completed_at": "2026-10-12T04:30:05.815750+00:00"
+    },
+    {
+      "request_id": "ca47e3ba89b042ef8666ce055d1725d1",
+      "job_id": "061ac2393ae84c0195b92073bcb63c5f",
+      "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "7ff7c62178fc4f9287cbd88077964ceb",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:30:05.837709+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 7450,
+      "output_tokens": 7902,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5902,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "c73f5145-cfe6-4cd6-8b52-b31d6e5150bd",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 68136,
+      "completed_at": "2026-10-12T04:31:13.974271+00:00"
+    },
+    {
+      "request_id": "ca47e3ba89b042ef8666ce055d1725d1",
+      "job_id": "061ac2393ae84c0195b92073bcb63c5f",
+      "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "bf3a6750cf5346ad90342f44d26efe1a",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:31:13.980259+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2262,
+      "output_tokens": 5336,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4643,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "3b350a6c-19ae-4fbd-aa8f-d8077c5c901b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 38467,
+      "completed_at": "2026-10-12T04:31:52.447673+00:00"
+    },
+    {
+      "request_id": "ca47e3ba89b042ef8666ce055d1725d1",
+      "job_id": "061ac2393ae84c0195b92073bcb63c5f",
+      "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "8bd907d826e94c528c2c35c5113a01ab",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:31:52.451296+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2203,
+      "output_tokens": 4296,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3751,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "75b2cdd4-03d1-4a73-8729-df819a99ff84",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 34032,
+      "completed_at": "2026-10-12T04:32:26.483881+00:00"
+    },
+    {
+      "request_id": "ca47e3ba89b042ef8666ce055d1725d1",
+      "job_id": "061ac2393ae84c0195b92073bcb63c5f",
+      "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "ab2deb9a217b4d3ba5f558a645e3050f",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:32:26.523873+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2734,
+      "output_tokens": 6163,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4597,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "c5506d1f-c6d4-437e-8c11-ca491a9480b6",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 46242,
+      "completed_at": "2026-10-12T04:33:12.766995+00:00"
+    },
+    {
+      "request_id": "ca47e3ba89b042ef8666ce055d1725d1",
+      "job_id": "061ac2393ae84c0195b92073bcb63c5f",
+      "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "e3d34eb9494d4c41b6be3a20ee9bb2a1",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:33:12.772960+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2450,
+      "output_tokens": 5337,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4339,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "7bd84f7d-adbf-4b30-a441-adecd6d6a789",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 38680,
+      "completed_at": "2026-10-12T04:33:51.453632+00:00"
+    },
+    {
+      "request_id": "ca47e3ba89b042ef8666ce055d1725d1",
+      "job_id": "061ac2393ae84c0195b92073bcb63c5f",
+      "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "e441e871ba654d49b430ec438dd4970c",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:33:51.455743+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 8579,
+      "output_tokens": 1621,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1579,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "769fbbed-e5c2-41e3-84be-cc134fe6777a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 16146,
+      "completed_at": "2026-10-12T04:34:07.602781+00:00"
+    }
+  ],
+  "created_at": "2026-10-12T04:33:51.454161Z"
+}

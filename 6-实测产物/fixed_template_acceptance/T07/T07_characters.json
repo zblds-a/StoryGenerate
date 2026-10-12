@@ -1,0 +1,42 @@
+{
+  "lin_xia": {
+    "role_id": "lin_xia",
+    "character_id": "lin_xia",
+    "performer_id": "lin_xia",
+    "story_name": "林夏",
+    "canon_name": "林夏",
+    "immutable_facts": [],
+    "goal": "弄清楚未婚夫到底爱的是谁，找回自己的独立人格。",
+    "motivation": "",
+    "fear": "害怕面对自己只是个替身的残酷事实，前期一直自欺欺人。",
+    "speech_style": "前期轻柔顺从，后期短促、坚定、带着颤音但不再退缩。",
+    "relationship_stance": "从依附、渴望被爱，转变为决绝、要求被当作独立个体尊重。",
+    "source": "character_portrayal"
+  },
+  "gu_han": {
+    "role_id": "gu_han",
+    "character_id": "gu_han",
+    "performer_id": "gu_han",
+    "story_name": "顾寒",
+    "canon_name": "顾寒",
+    "immutable_facts": [],
+    "goal": "把林夏留在身边，维持他构建的完美替身幻象。",
+    "motivation": "",
+    "fear": "回避自己对林夏本人产生的真实感情，用对亡者的执念来掩饰。",
+    "speech_style": "平时低沉温柔但带着不容置疑的控制欲，受压时语速变慢、咬字极重、带有压抑的疯狂感。",
+    "relationship_stance": "把林夏视为亡者的延续，但在失去她时才发现自己无法接受林夏这个独立个体的离开。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

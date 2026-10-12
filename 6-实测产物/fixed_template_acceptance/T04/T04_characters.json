@@ -1,0 +1,42 @@
+{
+  "lin_qiuyan": {
+    "role_id": "lin_qiuyan",
+    "character_id": "lin_qiuyan",
+    "performer_id": "lin_qiuyan",
+    "story_name": "林秋雁",
+    "canon_name": "林秋雁",
+    "immutable_facts": [],
+    "goal": "查明搭档陈建国失踪真相，证明其清白，阻止厂里核心资产被借改制之名侵吞。",
+    "motivation": "",
+    "fear": "害怕面对陈建国真的“变节”的事实，害怕自己坚守的原则在时代浪潮前毫无意义。",
+    "speech_style": "语速快，咬字清晰，习惯用数据和规定反驳人；受压时会沉默并反复摩挲手边的旧物件（如钢笔）。",
+    "relationship_stance": "对老赵既敬重其过去的保护，又警惕其现在的妥协；对陈建国是绝对信任的生死搭档。",
+    "source": "character_portrayal"
+  },
+  "lao_zhao": {
+    "role_id": "lao_zhao",
+    "character_id": "lao_zhao",
+    "performer_id": "lao_zhao",
+    "story_name": "老赵",
+    "canon_name": "老赵",
+    "immutable_facts": [],
+    "goal": "尽快结案陈建国失踪案，确保厂里顺利拿到改制补贴，保住全厂职工的安置费。",
+    "motivation": "",
+    "fear": "回避深究厂领导倒卖资产的真相，用“大局”和“生存”来麻痹自己的良知。",
+    "speech_style": "语重心长，喜欢用“大环境”“大家伙儿”“听我一句劝”等词汇；着急时会提高音量并伴随拍桌子或叹气。",
+    "relationship_stance": "把林秋雁当徒弟和晚辈，试图保护她不被时代碾碎，但方式是把她也拉入妥协的泥潭。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

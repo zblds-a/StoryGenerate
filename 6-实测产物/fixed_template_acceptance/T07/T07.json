@@ -1,0 +1,1118 @@
+{
+  "story_id": "654bf20fa738497db3cb3829fec6376e",
+  "story_version_id": "f9f7ef1c070d4352aa27727d61a4cfee",
+  "version_no": 1,
+  "parent_story_version_id": null,
+  "lineage_type": "create",
+  "series_id": null,
+  "approved_plan_id": "727f023fc3594908a9b3074980692de9",
+  "approved_plan_revision": 1,
+  "title": "影子的回声",
+  "summary": "女孩在未婚夫手机里发现与自己容貌相同的已故前女友照片，在极限拉扯中觉醒并找回独立人格。",
+  "preview_blurb": "手机里的一张旧照片，撕开了完美未婚夫的深情伪装。当替身的幻梦碎裂，她该如何找回自己的名字？",
+  "tags": [
+    "G03",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [],
+  "character_portrayals": [
+    {
+      "role_id": "lin_xia",
+      "story_name": "林夏",
+      "external_goal": "弄清楚未婚夫到底爱的是谁，找回自己的独立人格。",
+      "emotional_avoidance": "害怕面对自己只是个替身的残酷事实，前期一直自欺欺人。",
+      "speech_style": "前期轻柔顺从，后期短促、坚定、带着颤音但不再退缩。",
+      "relationship_stance": "从依附、渴望被爱，转变为决绝、要求被当作独立个体尊重。"
+    },
+    {
+      "role_id": "gu_han",
+      "story_name": "顾寒",
+      "external_goal": "把林夏留在身边，维持他构建的完美替身幻象。",
+      "emotional_avoidance": "回避自己对林夏本人产生的真实感情，用对亡者的执念来掩饰。",
+      "speech_style": "平时低沉温柔但带着不容置疑的控制欲，受压时语速变慢、咬字极重、带有压抑的疯狂感。",
+      "relationship_stance": "把林夏视为亡者的延续，但在失去她时才发现自己无法接受林夏这个独立个体的离开。"
+    }
+  ],
+  "outline": {
+    "title": "影子的回声",
+    "premise": "女孩在未婚夫手机里发现与自己容貌相同的已故前女友照片，在极限拉扯中觉醒并找回独立人格。",
+    "theme": "拒绝成为替身，找回自我与独立人格。",
+    "beginning": "林夏意外发现未婚夫顾寒手机里已故前女友的照片，揭开替身真相。",
+    "development": "林夏通过家中的物品和顾寒的梦境，确认自己只是替身，顾寒试图用控制掩盖心虚。",
+    "climax": "林夏逼问顾寒到底爱谁，顾寒暴露偏执与疯狂，林夏彻底清醒并摘下订婚戒指。",
+    "ending": "林夏选择离开，顾寒在失去的瞬间终于喊出她的真名，但林夏没有回头。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "影子的回声",
+        "core_goal": "林夏揭开替身真相，完成从依附到独立的人格觉醒。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：手机砸在木地板上的闷响，林夏颤抖质问：‘顾寒，照片里的人……是谁？’",
+          "[3-10s] 矛盾交代：顾寒脚步声逼近夺过手机，林夏点破照片女人与自己容貌相同且是已故前女友的事实。",
+          "[10-30s] 第一次反转：顾寒不仅不道歉，反而冷冷擦拭屏幕斥责林夏‘不配看她的照片’，林夏倒吸凉气，意识到自己毫无地位。",
+          "[30-120s] 中段推进：林夏后退撞倒衣帽架，翻出满柜S码白裙和同款白茶香水质问。顾寒试图用‘乖乖听话’安抚，林夏打断并逼问昨晚他发烧梦话喊‘音音’，到底叫的是谁的名字。",
+          "[120-170s] 升级反转：顾寒受刺激后语速变慢、咬字极重地暴露偏执：‘你连她的笑都学不会，怎么敢走？’林夏彻底清醒，宣告‘我不是她’，并用力拔下订婚戒指。",
+          "[170-180s] 结局收束：戒指扔在玻璃茶几上发出清脆回响，林夏拉开大门。顾寒绝望喊出她的真名‘林夏’，林夏脚步微顿后关门，留下顾寒沉重的呼吸声。"
+        ],
+        "ending": "林夏放下戒指离开，顾寒在失去的瞬间喊出她的真名，完成情感收束。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_xia",
+        "story_name": "林夏",
+        "external_goal": "弄清楚未婚夫到底爱的是谁，找回自己的独立人格。",
+        "emotional_avoidance": "害怕面对自己只是个替身的残酷事实，前期一直自欺欺人。",
+        "speech_style": "前期轻柔顺从，后期短促、坚定、带着颤音但不再退缩。",
+        "relationship_stance": "从依附、渴望被爱，转变为决绝、要求被当作独立个体尊重。"
+      },
+      {
+        "role_id": "gu_han",
+        "story_name": "顾寒",
+        "external_goal": "把林夏留在身边，维持他构建的完美替身幻象。",
+        "emotional_avoidance": "回避自己对林夏本人产生的真实感情，用对亡者的执念来掩饰。",
+        "speech_style": "平时低沉温柔但带着不容置疑的控制欲，受压时语速变慢、咬字极重、带有压抑的疯狂感。",
+        "relationship_stance": "把林夏视为亡者的延续，但在失去她时才发现自己无法接受林夏这个独立个体的离开。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "audio_focus": "重点捕捉林夏从颤抖到坚定的呼吸变化，以及顾寒在S5段落咬字过重、语速异常的压抑疯狂感。",
+      "sound_design": "手机落地闷响、衣帽架倒塌声、戒指落在玻璃茶几上的清脆‘叮’声、最后的关门声与沉重呼吸声。"
+    },
+    "continuity_constraints": [
+      "林夏的觉醒必须基于具体物件（照片、白裙、香水）和具体事件（梦话），不能凭空顿悟。",
+      "顾寒最后喊出‘林夏’必须是他第一次在剧中叫她的真名，以此体现他终于承认了她的独立人格。"
+    ],
+    "change_summary": [
+      "根据ending_contract调整了S6的收尾方式，将原本的悬念断章改为情感高潮后的动作收束与余韵。",
+      "强化了替身虐恋的核心机制，确保关键台词和偏执方的声音表演要求落实到具体节拍中。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-89511bd3",
+      "index": 1,
+      "title": "影子的回声",
+      "synopsis": "林夏在未婚夫手机里发现与自己容貌相同的已故前女友照片，在极限拉扯中揭开替身真相，最终摘下戒指找回独立人格。",
+      "duration_target_sec": 180,
+      "duration_estimate_sec": 169,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "scene_index": 1,
+          "title": "照片里的秘密",
+          "location": "客厅",
+          "dramatic_goal": "林夏发现照片，质问顾寒，揭开替身真相的冰山一角。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "手机砸在木地板上发出一声闷响。林夏的声音止不住地发颤。",
+              "emotion": "neutral",
+              "tone_instruction": "平稳铺陈场景，后半句气息微收带出紧绷感。",
+              "emphasis": [
+                {
+                  "span_text": "一声闷响",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "止不住地发颤",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 26,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首预留半秒环境空白，读至“发颤”时气息微抖但不破音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "顾寒，照片里的人……是谁？为什么她穿着我最喜欢的裙子？",
+              "emotion": "worried",
+              "tone_instruction": "前半句压抑惊疑，停顿后语气转为急切质问。",
+              "emphasis": [
+                {
+                  "span_text": "照片里的人",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 8,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "最喜欢的裙子",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "省略号处留0.8秒呼吸间隙，后半句咬字加重，尾音微扬显出慌乱。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "急促的脚步声逼近，顾寒一把夺过手机，屏幕的光映冷了他的脸。",
+              "emotion": "neutral",
+              "tone_instruction": "语速加快营造压迫感，“夺过”二字短促有力，末句语气转冷。",
+              "emphasis": [
+                {
+                  "span_text": "急促的脚步声",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "一把夺过",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "连续短句紧凑衔接不拖沓，“脸”字落音干脆。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "gu_han",
+              "narrator_id": null,
+              "performer_id": "gu_han",
+              "text": "谁让你碰我手机的？谁准你看的？",
+              "emotion": "angry",
+              "tone_instruction": "压低嗓音，语气强硬且带有不容置疑的压迫感。",
+              "emphasis": [
+                {
+                  "span_text": "碰我手机",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "准你看",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 13,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "两句之间不留气口直接连读，尾音下沉收住。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "她长得和我一模一样……是你那个出车祸去世的前女友，对不对？",
+              "emotion": "serious",
+              "tone_instruction": "前半句语气渐强，停顿后带着试探与确认的执拗。",
+              "emphasis": [
+                {
+                  "span_text": "一模一样",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "前女友",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "省略号处吸气一次，后半句语速放缓，强调“前女友”三字以逼问。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "你一直留着我的脸，看着她？你看着我笑的时候，到底在看谁？",
+              "emotion": "sad",
+              "tone_instruction": "语气由质问转为心碎的低语，后半句咬字极轻但穿透力强。",
+              "emphasis": [
+                {
+                  "span_text": "一直留着",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "到底在看谁",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 27,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿蓄力，读到“看谁”时气息微颤，尾音自然消散不刻意拉长。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "不配的替身",
+          "location": "客厅",
+          "dramatic_goal": "顾寒的冷酷斥责让林夏意识到自己毫无地位。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "顾寒没有道歉，只是抽出纸巾，冷冷地擦拭着屏幕，仿佛碰到了什么脏东西。",
+              "emotion": "neutral",
+              "tone_instruction": "语速平稳偏慢，咬字清晰克制，突出“冷冷地”与“脏东西”的对比感。",
+              "emphasis": [
+                {
+                  "span_text": "冷冷地",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 17,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "脏东西",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 33,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句末留白0.5秒，为下一句台词留出情绪空间。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "gu_han",
+              "narrator_id": null,
+              "performer_id": "gu_han",
+              "text": "你不配看她的照片。",
+              "emotion": "angry",
+              "tone_instruction": "压低嗓音，语气冰冷不带起伏，尾音干脆收住，不留余地。",
+              "emphasis": [
+                {
+                  "span_text": "不配",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "她的",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 6,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "前半句微顿，强调“不配”后稍作停顿再出后半句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林夏倒吸了一口凉气，如坠冰窟。",
+              "emotion": "neutral",
+              "tone_instruction": "语速放缓，气息下沉，用冷色调的旁白质感传递窒息感。",
+              "emphasis": [
+                {
+                  "span_text": "倒吸了一口凉气",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 9,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "冰窟",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“凉气”后轻微换气一次，模拟生理反应，随后接“如坠冰窟”。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "我不配？我是你的未婚妻啊！我们下个月就要结婚了！",
+              "emotion": "angry",
+              "tone_instruction": "前半句带难以置信的反问上扬，后半句语速加快、音量推高，透出委屈与不甘。",
+              "emphasis": [
+                {
+                  "span_text": "不配",
+                  "occurrence": 1,
+                  "start_char": 1,
+                  "end_char": 3,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "未婚妻",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 11,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "下个月",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 18,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“不配？”后急促吸气，紧接着连珠炮式抛出后两句，句尾保持颤音不散。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "gu_han",
+              "narrator_id": null,
+              "performer_id": "gu_han",
+              "text": "认清你自己的位置。别逼我发火。",
+              "emotion": "angry",
+              "tone_instruction": "压低喉音，咬字极重且一字一顿，后半句转为低沉警告，压迫感十足。",
+              "emphasis": [
+                {
+                  "span_text": "位置",
+                  "occurrence": 1,
+                  "start_char": 6,
+                  "end_char": 8,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "发火",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“位置”后长停顿两秒，制造压迫感，再缓缓吐出后半句。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "scene_index": 3,
+          "title": "偏执的幻梦",
+          "location": "卧室衣帽间",
+          "dramatic_goal": "林夏通过物件和梦话彻底逼问真相，顾寒暴露偏执，林夏觉醒反抗。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林夏踉跄后退撞倒衣帽架，柜门敞开，满柜的S码白裙赫然入目。",
+              "emotion": "neutral",
+              "tone_instruction": "语速平稳，在“撞倒”与“赫然入目”处做轻微停顿以配合音效节奏。",
+              "emphasis": [
+                {
+                  "span_text": "赫然入目",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 28,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "留0.5秒空白供衣帽架倒地音效进入。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "满柜子的白裙，还有这款绝版白茶香水……你把我当成什么了？一个随时可以替换的替身？",
+              "emotion": "angry",
+              "tone_instruction": "前半句语气发颤带难以置信，后半句压低嗓音质问，尾音上扬。",
+              "emphasis": [
+                {
+                  "span_text": "随时可以替换的替身",
+                  "occurrence": 1,
+                  "start_char": 30,
+                  "end_char": 39,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“香水……”后留0.8秒气口，模拟呼吸急促后的停顿。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "gu_han",
+              "narrator_id": null,
+              "performer_id": "gu_han",
+              "text": "夏夏，别闹了。乖乖听话，把衣服换上，明天还要去试婚纱。别让我说第二遍。",
+              "emotion": "calm",
+              "tone_instruction": "语气平淡却带着不容置疑的命令感，“乖乖听话”稍作拖长以示安抚与控制。",
+              "emphasis": [
+                {
+                  "span_text": "别让我说第二遍",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 34,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“别闹了。”后接0.3秒短促吸气，随即恢复平稳语调。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "昨晚你发烧，死死抓着我的手喊“音音”……顾寒，你到底叫的是谁的名字？！",
+              "emotion": "angry",
+              "tone_instruction": "咬字加重，前半句压抑怒火，后半句突然拔高音量逼问。",
+              "emphasis": [
+                {
+                  "span_text": "到底叫的是谁的名字",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 33,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“音音……”后留1秒空白，配合角色情绪积压后的爆发前奏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "空气死一般寂静。顾寒受刺激后语速变得极慢，咬字重得发狠。",
+              "emotion": "neutral",
+              "tone_instruction": "语速放缓，字字清晰，在“极慢”与“发狠”处加重咬字以铺垫压迫感。",
+              "emphasis": [
+                {
+                  "span_text": "咬字重得发狠",
+                  "occurrence": 1,
+                  "start_char": 21,
+                  "end_char": 27,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“寂静。”后留1.5秒绝对静音，仅保留环境底噪。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "gu_han",
+              "narrator_id": null,
+              "performer_id": "gu_han",
+              "text": "你连她的笑都学不会，怎么敢走？",
+              "emotion": "serious",
+              "tone_instruction": "气息下沉，每个字间隔拉长，尾音收短且冷硬。",
+              "emphasis": [
+                {
+                  "span_text": "怎么敢走",
+                  "occurrence": 1,
+                  "start_char": 10,
+                  "end_char": 14,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.8,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“学不会，”后留0.6秒停顿，模拟咀嚼字眼的偏执感。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "我不是她！我叫林夏，有血有肉的林夏，不是你的音音！",
+              "emotion": "angry",
+              "tone_instruction": "声音彻底放开，第一句短促爆发，第二句语气转为坚定清亮。",
+              "emphasis": [
+                {
+                  "span_text": "不是你的音音",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 24,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“我不是她！”后接0.4秒强烈换气，直接切入下一句。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l8",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林夏用力拔下无名指上的订婚戒指，指节泛白。",
+              "emotion": "neutral",
+              "tone_instruction": "语速平稳但力度加重，在“用力拔下”处配合动作节奏顿挫。",
+              "emphasis": [
+                {
+                  "span_text": "用力拔下",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 6,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "留0.5秒空白供戒指落地清脆音效进入。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene4",
+          "scene_index": 4,
+          "title": "找回真名",
+          "location": "玄关",
+          "dramatic_goal": "林夏留下戒指决绝离开，顾寒在失去的瞬间喊出她的真名。",
+          "utterances": [
+            {
+              "line_id": "ep1-s4-l1",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "戒指扔在玻璃茶几上，发出一声清脆而决绝的回响。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳，语气客观带出画面感，“决绝”二字稍作停顿以强调态度。",
+              "emphasis": [
+                {
+                  "span_text": "决绝",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "录音时注意“回响”一词尾音自然收束，留出环境音空间。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "lin_xia",
+              "narrator_id": null,
+              "performer_id": "lin_xia",
+              "text": "这婚，我不结了。你的幻梦，自己留着做吧。再见，顾寒。",
+              "emotion": "serious",
+              "tone_instruction": "前半句语气坚定不带颤音，中间“幻梦”处微降调显冷漠，结尾“再见”干脆利落不拖沓。",
+              "emphasis": [
+                {
+                  "span_text": "不结了",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "再见",
+                  "occurrence": 1,
+                  "start_char": 20,
+                  "end_char": 22,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“这婚”后留0.5秒气口，“再见”后直接切断麦克风输入，模拟起身离开的动作节奏。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l3",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "林夏拉开大门，楼道的冷风瞬间灌入。",
+              "emotion": "neutral",
+              "tone_instruction": "语速加快半拍，配合动作描写营造突发感，“瞬间”二字咬字清晰。",
+              "emphasis": [
+                {
+                  "span_text": "瞬间灌入",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 16,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "朗读时气息略提，模拟推门瞬间的风流感，句末不留长停顿以便接下一句台词。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "gu_han",
+              "narrator_id": null,
+              "performer_id": "gu_han",
+              "text": "林夏！",
+              "emotion": "fearful",
+              "tone_instruction": "破音边缘的嘶吼，声音从胸腔猛地挤出，尾音因情绪失控而颤抖。",
+              "emphasis": [
+                {
+                  "span_text": "林夏",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 2,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "贴近麦克风前倾发声，避免喷麦，吸气后直接爆发，保持单音节短促有力。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s4-l5",
+              "kind": "narration",
+              "speaker_role_id": null,
+              "narrator_id": "narrator",
+              "performer_id": "narrator",
+              "text": "这是顾寒第一次喊出她的真名。林夏脚步微顿，随后重重关上门，只留下顾寒沉重而绝望的呼吸声。",
+              "emotion": "calm",
+              "tone_instruction": "语气沉缓，带有收束感，“第一次”和“真名”加重以点题，后半句渐弱处理。",
+              "emphasis": [
+                {
+                  "span_text": "第一次",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 7,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "真名",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 13,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“微顿”后留1秒空白模拟脚步声停驻，“关上门”三字压低音量，句末气息缓缓吐出，为环境音留出入口。",
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "林夏通过照片、白裙和梦话确认了自己只是替身的残酷事实。面对顾寒偏执的控制与情感勒索，林夏彻底清醒，摘下订婚戒指决绝离开。顾寒在失去的瞬间终于喊出她的真名，但林夏没有回头。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "林夏确认自己只是顾寒已故前女友的替身",
+          "change": "发现"
+        },
+        {
+          "fact": "林夏与顾寒解除婚约",
+          "change": "发生"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "from": "依附与控制的未婚夫妻",
+          "to": "彻底决裂，林夏找回独立人格",
+          "characters": [
+            "lin_xia",
+            "gu_han"
+          ]
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "替身真相的揭露",
+        "林夏的人格觉醒与离开"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "continuity_state": {
+    "source_version_id": null,
+    "facts": [
+      {
+        "fact": "林夏确认自己只是顾寒已故前女友的替身",
+        "change": "发现"
+      },
+      {
+        "fact": "林夏与顾寒解除婚约",
+        "change": "发生"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "依附与控制的未婚夫妻",
+        "to": "彻底决裂，林夏找回独立人格",
+        "characters": [
+          "lin_xia",
+          "gu_han"
+        ]
+      }
+    ],
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 24,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "delivery_format_version": "1.0",
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "ec8a9e0c3d414eafb8d04d4633b73ec8",
+      "plan_id": "727f023fc3594908a9b3074980692de9",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "e827b18de5744ae7828e71039d33e420",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:34:07.637719+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5217,
+      "output_tokens": 3710,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2543,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "8179e0e5-313a-4087-96cc-118c864aa126",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 45908,
+      "completed_at": "2026-10-12T04:34:53.547359+00:00"
+    },
+    {
+      "request_id": "ec8a9e0c3d414eafb8d04d4633b73ec8",
+      "job_id": "b44d08f1194846bcb6a8b1f9581f27e1",
+      "plan_id": "727f023fc3594908a9b3074980692de9",
+      "stage": "story_generation",
+      "attempt_kind": "first_draft",
+      "node": "episode_writer",
+      "call_id": "ec17cdc10bdd459fadbbdbfca992c32b",
+      "provider": "openai_compat",
+      "role": "storycraft_episode_writer",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:34:53.568255+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 6820,
+      "output_tokens": 7572,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 5349,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "51d15497-e964-43e7-95a0-6698f14fbebc",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 67607,
+      "completed_at": "2026-10-12T04:36:01.176451+00:00"
+    },
+    {
+      "request_id": "ec8a9e0c3d414eafb8d04d4633b73ec8",
+      "job_id": "b44d08f1194846bcb6a8b1f9581f27e1",
+      "plan_id": "727f023fc3594908a9b3074980692de9",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "b2232c320b9446c8b392ac0717cf25ac",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:36:01.180664+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2302,
+      "output_tokens": 4244,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3211,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "ecf5f724-8478-4284-8773-beb39223a5d3",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 30928,
+      "completed_at": "2026-10-12T04:36:32.109104+00:00"
+    },
+    {
+      "request_id": "ec8a9e0c3d414eafb8d04d4633b73ec8",
+      "job_id": "b44d08f1194846bcb6a8b1f9581f27e1",
+      "plan_id": "727f023fc3594908a9b3074980692de9",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "23be9e0af8d24f15bcb18e9e592171ea",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:36:32.115911+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2195,
+      "output_tokens": 4583,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3670,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "b208f463-3488-4eff-8a92-50c5604a3de7",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 35441,
+      "completed_at": "2026-10-12T04:37:07.557793+00:00"
+    },
+    {
+      "request_id": "ec8a9e0c3d414eafb8d04d4633b73ec8",
+      "job_id": "b44d08f1194846bcb6a8b1f9581f27e1",
+      "plan_id": "727f023fc3594908a9b3074980692de9",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "69c9373ca8d34d1c874a83c9bf6c0a2f",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:37:07.561995+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2527,
+      "output_tokens": 5798,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4672,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "44a22b11-fefb-4abb-a590-53443e29e152",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 40445,
+      "completed_at": "2026-10-12T04:37:48.007743+00:00"
+    },
+    {
+      "request_id": "ec8a9e0c3d414eafb8d04d4633b73ec8",
+      "job_id": "b44d08f1194846bcb6a8b1f9581f27e1",
+      "plan_id": "727f023fc3594908a9b3074980692de9",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "26a6169ef1d44315857d4471f9b52748",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:37:48.015309+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 2211,
+      "output_tokens": 5110,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 4290,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "cd6b2a82-1873-48fe-b4d1-af16666d3251",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 38445,
+      "completed_at": "2026-10-12T04:38:26.461002+00:00"
+    },
+    {
+      "request_id": "ec8a9e0c3d414eafb8d04d4633b73ec8",
+      "job_id": "b44d08f1194846bcb6a8b1f9581f27e1",
+      "plan_id": "727f023fc3594908a9b3074980692de9",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "8ad99eb500aa4561988aa1fea4aca26e",
+      "provider": "openai_compat",
+      "node": "judge",
+      "role": "judge",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:38:26.463088+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 7551,
+      "output_tokens": 1711,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 1669,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "004e76dd-5b7c-482d-9445-fecac963305a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 16709,
+      "completed_at": "2026-10-12T04:38:43.173121+00:00"
+    }
+  ],
+  "created_at": "2026-10-12T04:38:26.462058Z"
+}

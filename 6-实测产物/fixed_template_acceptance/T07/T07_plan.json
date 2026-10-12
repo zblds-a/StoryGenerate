@@ -1,0 +1,286 @@
+{
+  "plan_id": "727f023fc3594908a9b3074980692de9",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": {
+    "template_id": "GENERAL_RELATIONSHIP_TURN",
+    "version": 1,
+    "name": "关系转折结构",
+    "source": "explicit",
+    "supported_modes": [
+      "general"
+    ],
+    "beats": [
+      {
+        "key": "setup",
+        "purpose": "展示两个人物的关系现状及其隐含矛盾",
+        "guidance": "通过互动细节展示关系，不只靠台词说明",
+        "required": true
+      },
+      {
+        "key": "trigger",
+        "purpose": "触发事件：迫使其中一方或双方重新审视关系",
+        "guidance": "触发事件应与之前的隐含矛盾直接相关",
+        "required": true
+      },
+      {
+        "key": "separation",
+        "purpose": "分离或冲突阶段：双方采取对立的行动",
+        "guidance": "双方各自的选择必须符合其行为规律",
+        "required": true
+      },
+      {
+        "key": "recognition",
+        "purpose": "认知转变：其中一方意识到新的真相",
+        "guidance": "转变应来自具体事件或他人的揭示，不是突然顿悟",
+        "required": true
+      },
+      {
+        "key": "reunion",
+        "purpose": "重逢或和解：双方在新理解的基础上重新接触",
+        "guidance": "和解不需要完美，保留真实的不完美感",
+        "required": true
+      },
+      {
+        "key": "new_normal",
+        "purpose": "新常态：展示关系的新平衡状态",
+        "guidance": "用具体细节暗示未来，不要书面总结",
+        "required": true
+      }
+    ],
+    "constraints": [
+      "关系变化必须来自角色的主动选择",
+      "不能使用'从此幸福地生活在一起'式收尾"
+    ],
+    "recommended_characters": 3,
+    "tone_hints": [
+      "细腻",
+      "情感",
+      "真实"
+    ],
+    "ending_guidance": "closed_with_hope",
+    "defaults": {
+      "target_duration_sec": 180,
+      "default_recipe": "R5"
+    }
+  },
+  "strategy_snapshot": {
+    "story_mode": "general",
+    "mode_label": "通用故事",
+    "genre_id": "G03",
+    "genre_name": "重生虐恋",
+    "genre_mechanism": "命运改写、极限拉扯",
+    "genre_emotion": "虐→甜→虐",
+    "recipe_id": "R12",
+    "recipe_name": "替身虐恋",
+    "recipe_slots": {
+      "A": "被当作替身的主角（有独立人格）",
+      "B": "与正主的差异（是推动剧情的关键）",
+      "C": "知情但不戳破的旁观者/朋友",
+      "D": "把主角当替身的偏执一方（不是纯反派，是病态情感对象）",
+      "E": "真正的正主（可能回归）"
+    },
+    "recipe_landing_note": "情感浓度极高。语气转换是区分正主与替身的核心音频工具。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "GENERAL_RELATIONSHIP_TURN",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "身份吞噬式冲突：主角的自我被他人投射的正主形象替代，冲突来自'成为别人'与'做回自己'之间的挣扎。偏执方的情感既是伤害来源又扭曲地包含着真实情感。禁止合理化情感虐待——主角的觉醒和反抗是必须的。",
+    "causal_driver": "被选为替身 → 被迫扮演 → 逐渐被自我认知折磨 → 正主可能回归（转折） → 偏执方面临真正选择 → 主角选择离开或对方承认主角的独立人格。每一步都推动主角从客体走向主体。",
+    "ending_strategy": "主角获得独立人格认可。可以离开，也可以在被真正看见后选择留下——但必须是对方先承认'你就是你'。不可以让主角永远活在正主阴影下。虐感来自过程的拉扯，结局必须是解脱。",
+    "tone_guidance": "虐感来自情感错位，不是肉体伤害。关键台词：'你叫的是谁的名字？'。偏执方的台词应有压抑的疯狂感（咬字过重、语速异常）。主角台词从迎合到反抗的渐变。",
+    "genre_data": {
+      "genre_id": "G03",
+      "name": "重生虐恋",
+      "works": "他深情侵入",
+      "emotion": "虐→甜→虐",
+      "mechanism": "命运改写、极限拉扯",
+      "audio_fit": "high",
+      "audio_fit_score": 88,
+      "driver": "靠台词张力"
+    },
+    "recipe_data": {
+      "id": "R12",
+      "name": "替身虐恋",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "high",
+      "audio_fit_score": 85,
+      "default_mode": "general",
+      "supported_modes": [
+        "general",
+        "mystery"
+      ],
+      "A": "被当作替身的主角（有独立人格）",
+      "B": "与正主的差异（是推动剧情的关键）",
+      "C": "知情但不戳破的旁观者/朋友",
+      "D": "把主角当替身的偏执一方（不是纯反派，是病态情感对象）",
+      "E": "真正的正主（可能回归）",
+      "reference": "掌中之物 / 替身文学",
+      "landing_note": "情感浓度极高。语气转换是区分正主与替身的核心音频工具。",
+      "conflict_mechanism": "身份吞噬式冲突：主角的自我被他人投射的正主形象替代，冲突来自'成为别人'与'做回自己'之间的挣扎。偏执方的情感既是伤害来源又扭曲地包含着真实情感。禁止合理化情感虐待——主角的觉醒和反抗是必须的。",
+      "causal_driver": "被选为替身 → 被迫扮演 → 逐渐被自我认知折磨 → 正主可能回归（转折） → 偏执方面临真正选择 → 主角选择离开或对方承认主角的独立人格。每一步都推动主角从客体走向主体。",
+      "ending_strategy": "主角获得独立人格认可。可以离开，也可以在被真正看见后选择留下——但必须是对方先承认'你就是你'。不可以让主角永远活在正主阴影下。虐感来自过程的拉扯，结局必须是解脱。",
+      "tone_guidance": "虐感来自情感错位，不是肉体伤害。关键台词：'你叫的是谁的名字？'。偏执方的台词应有压抑的疯狂感（咬字过重、语速异常）。主角台词从迎合到反抗的渐变。"
+    }
+  },
+  "plan": {
+    "title": "影子的回声",
+    "premise": "女孩在未婚夫手机里发现与自己容貌相同的已故前女友照片，在极限拉扯中觉醒并找回独立人格。",
+    "theme": "拒绝成为替身，找回自我与独立人格。",
+    "beginning": "林夏意外发现未婚夫顾寒手机里已故前女友的照片，揭开替身真相。",
+    "development": "林夏通过家中的物品和顾寒的梦境，确认自己只是替身，顾寒试图用控制掩盖心虚。",
+    "climax": "林夏逼问顾寒到底爱谁，顾寒暴露偏执与疯狂，林夏彻底清醒并摘下订婚戒指。",
+    "ending": "林夏选择离开，顾寒在失去的瞬间终于喊出她的真名，但林夏没有回头。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "影子的回声",
+        "core_goal": "林夏揭开替身真相，完成从依附到独立的人格觉醒。",
+        "major_beats": [
+          "[0-3s] 黄金钩子：手机砸在木地板上的闷响，林夏颤抖质问：‘顾寒，照片里的人……是谁？’",
+          "[3-10s] 矛盾交代：顾寒脚步声逼近夺过手机，林夏点破照片女人与自己容貌相同且是已故前女友的事实。",
+          "[10-30s] 第一次反转：顾寒不仅不道歉，反而冷冷擦拭屏幕斥责林夏‘不配看她的照片’，林夏倒吸凉气，意识到自己毫无地位。",
+          "[30-120s] 中段推进：林夏后退撞倒衣帽架，翻出满柜S码白裙和同款白茶香水质问。顾寒试图用‘乖乖听话’安抚，林夏打断并逼问昨晚他发烧梦话喊‘音音’，到底叫的是谁的名字。",
+          "[120-170s] 升级反转：顾寒受刺激后语速变慢、咬字极重地暴露偏执：‘你连她的笑都学不会，怎么敢走？’林夏彻底清醒，宣告‘我不是她’，并用力拔下订婚戒指。",
+          "[170-180s] 结局收束：戒指扔在玻璃茶几上发出清脆回响，林夏拉开大门。顾寒绝望喊出她的真名‘林夏’，林夏脚步微顿后关门，留下顾寒沉重的呼吸声。"
+        ],
+        "ending": "林夏放下戒指离开，顾寒在失去的瞬间喊出她的真名，完成情感收束。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_xia",
+        "story_name": "林夏",
+        "external_goal": "弄清楚未婚夫到底爱的是谁，找回自己的独立人格。",
+        "emotional_avoidance": "害怕面对自己只是个替身的残酷事实，前期一直自欺欺人。",
+        "speech_style": "前期轻柔顺从，后期短促、坚定、带着颤音但不再退缩。",
+        "relationship_stance": "从依附、渴望被爱，转变为决绝、要求被当作独立个体尊重。"
+      },
+      {
+        "role_id": "gu_han",
+        "story_name": "顾寒",
+        "external_goal": "把林夏留在身边，维持他构建的完美替身幻象。",
+        "emotional_avoidance": "回避自己对林夏本人产生的真实感情，用对亡者的执念来掩饰。",
+        "speech_style": "平时低沉温柔但带着不容置疑的控制欲，受压时语速变慢、咬字极重、带有压抑的疯狂感。",
+        "relationship_stance": "把林夏视为亡者的延续，但在失去她时才发现自己无法接受林夏这个独立个体的离开。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "audio_focus": "重点捕捉林夏从颤抖到坚定的呼吸变化，以及顾寒在S5段落咬字过重、语速异常的压抑疯狂感。",
+      "sound_design": "手机落地闷响、衣帽架倒塌声、戒指落在玻璃茶几上的清脆‘叮’声、最后的关门声与沉重呼吸声。"
+    },
+    "continuity_constraints": [
+      "林夏的觉醒必须基于具体物件（照片、白裙、香水）和具体事件（梦话），不能凭空顿悟。",
+      "顾寒最后喊出‘林夏’必须是他第一次在剧中叫她的真名，以此体现他终于承认了她的独立人格。"
+    ],
+    "change_summary": [
+      "根据ending_contract调整了S6的收尾方式，将原本的悬念断章改为情感高潮后的动作收束与余韵。",
+      "强化了替身虐恋的核心机制，确保关键台词和偏执方的声音表演要求落实到具体节拍中。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "G03",
+    "recipe_id": "R12",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "ec8a9e0c3d414eafb8d04d4633b73ec8",
+      "plan_id": "727f023fc3594908a9b3074980692de9",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "e827b18de5744ae7828e71039d33e420",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:34:07.637719+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5217,
+      "output_tokens": 3710,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2543,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "8179e0e5-313a-4087-96cc-118c864aa126",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 45908,
+      "completed_at": "2026-10-12T04:34:53.547359+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "8a2a35db09ebf1330f00a56d2d131d68c2f1d5bdda79f7baa1ef9a1d9c28a11f",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T04:34:53.547883Z",
+  "updated_at": "2026-10-12T04:34:53.547883Z"
+}

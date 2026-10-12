@@ -1,0 +1,42 @@
+{
+  "lin_xia": {
+    "role_id": "lin_xia",
+    "character_id": "lin_xia",
+    "performer_id": "lin_xia",
+    "story_name": "林夏",
+    "canon_name": "林夏",
+    "immutable_facts": [],
+    "goal": "完成爷爷遗愿熬过一年婚约，同时搞清楚陆廷舟到底在隐瞒什么病情。",
+    "motivation": "",
+    "fear": "害怕自己在这段虚假婚姻中动真心，用带刺的言语和假装不在乎来掩饰关心。",
+    "speech_style": "语速快，喜欢用反问句，受压时会提高音量掩饰心虚，常用“随便你”“谁稀罕”来防御。",
+    "relationship_stance": "表面上嫌弃陆廷舟的冷漠，实际上渴望被他在乎，处于“想靠近又怕被推开”的试探状态。",
+    "source": "character_portrayal"
+  },
+  "lu_tingzhou": {
+    "role_id": "lu_tingzhou",
+    "character_id": "lu_tingzhou",
+    "performer_id": "lu_tingzhou",
+    "story_name": "陆廷舟",
+    "canon_name": "陆廷舟",
+    "immutable_facts": [],
+    "goal": "履行对爷爷的承诺，保护林夏不受自己高压生活和病痛的影响，平稳度过一年婚约。",
+    "motivation": "",
+    "fear": "害怕自己的病态和负能量拖累林夏，用“公事公办”的态度切断情感连接。",
+    "speech_style": "语速平缓，措辞严谨克制，受压时习惯用沉默或转移话题（如“这是私事”）来回避，极少表达情绪。",
+    "relationship_stance": "默默守护但保持物理与心理距离，认为“不干涉”是对林夏最好的保护，内心渴望靠近但极力克制。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

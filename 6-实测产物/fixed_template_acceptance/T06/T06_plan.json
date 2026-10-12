@@ -1,0 +1,292 @@
+{
+  "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": {
+    "template_id": "GENERAL_RELATIONSHIP_TURN",
+    "version": 1,
+    "name": "关系转折结构",
+    "source": "explicit",
+    "supported_modes": [
+      "general"
+    ],
+    "beats": [
+      {
+        "key": "setup",
+        "purpose": "展示两个人物的关系现状及其隐含矛盾",
+        "guidance": "通过互动细节展示关系，不只靠台词说明",
+        "required": true
+      },
+      {
+        "key": "trigger",
+        "purpose": "触发事件：迫使其中一方或双方重新审视关系",
+        "guidance": "触发事件应与之前的隐含矛盾直接相关",
+        "required": true
+      },
+      {
+        "key": "separation",
+        "purpose": "分离或冲突阶段：双方采取对立的行动",
+        "guidance": "双方各自的选择必须符合其行为规律",
+        "required": true
+      },
+      {
+        "key": "recognition",
+        "purpose": "认知转变：其中一方意识到新的真相",
+        "guidance": "转变应来自具体事件或他人的揭示，不是突然顿悟",
+        "required": true
+      },
+      {
+        "key": "reunion",
+        "purpose": "重逢或和解：双方在新理解的基础上重新接触",
+        "guidance": "和解不需要完美，保留真实的不完美感",
+        "required": true
+      },
+      {
+        "key": "new_normal",
+        "purpose": "新常态：展示关系的新平衡状态",
+        "guidance": "用具体细节暗示未来，不要书面总结",
+        "required": true
+      }
+    ],
+    "constraints": [
+      "关系变化必须来自角色的主动选择",
+      "不能使用'从此幸福地生活在一起'式收尾"
+    ],
+    "recommended_characters": 3,
+    "tone_hints": [
+      "细腻",
+      "情感",
+      "真实"
+    ],
+    "ending_guidance": "closed_with_hope",
+    "defaults": {
+      "target_duration_sec": 180,
+      "default_recipe": "R5"
+    }
+  },
+  "strategy_snapshot": {
+    "story_mode": "general",
+    "mode_label": "通用故事",
+    "genre_id": "G02",
+    "genre_name": "成年人治愈爱情",
+    "genre_mechanism": "细水长流、互相救赎",
+    "genre_emotion": "酸→暖",
+    "recipe_id": "R11",
+    "recipe_name": "先婚后爱",
+    "recipe_slots": {
+      "A": "因为协议/交易进入婚姻的主角",
+      "B": "婚姻合约本身 + 隐藏的真实意图",
+      "C": "中介/促成者/家人的期待",
+      "D": "对婚姻有敌意的外部阻挠者/前伴侣",
+      "E": "正常恋爱的对照/过去的感情"
+    },
+    "recipe_landing_note": "纯对白驱动，广播剧最优品类之一。情感转折通过语气变化体现。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "GENERAL_RELATIONSHIP_TURN",
+    "template_version": 1,
+    "explicit_fields": [
+      "genre",
+      "recipe_id",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [],
+    "conflict_mechanism": "渐进式情感冲突：婚姻由合约开始，冲突来自合约义务与真实情感的错位。禁止一见钟情式转折——感情必须通过具体事件和选择逐步建立。反派是阻挠婚姻的外部力量（家族、前情人、商业对手），不是双方自身。",
+    "causal_driver": "签订合约 → 同居磨合 → 一次需要保护的危机（情感转折点） → 合约期限逼近 → 面临是否续约的选择 → 揭晓最初隐藏的意图 → 在合约终止前做出真心选择。每一步都是双方在责任与感情之间的推进。",
+    "ending_strategy": "合约终止时，双方基于真实感情重新建立关系（而非续约）。可以是一方放弃合约中的利益保护来证明真心。结局展示新的平等关系，合约被替换为真正的承诺。",
+    "tone_guidance": "甜而不腻、克制的温柔。情感来自台词的克制与行动的对比。旁白尽量少介入情感描写——用对话间的停顿和沉默传达试探。",
+    "genre_data": {
+      "genre_id": "G02",
+      "name": "成年人治愈爱情",
+      "works": "渐染 / 好雨知时节",
+      "emotion": "酸→暖",
+      "mechanism": "细水长流、互相救赎",
+      "audio_fit": "very_high",
+      "audio_fit_score": 95,
+      "driver": "无需视觉"
+    },
+    "recipe_data": {
+      "id": "R11",
+      "name": "先婚后爱",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "very_high",
+      "audio_fit_score": 92,
+      "default_mode": "general",
+      "supported_modes": [
+        "general",
+        "viral_drama"
+      ],
+      "A": "因为协议/交易进入婚姻的主角",
+      "B": "婚姻合约本身 + 隐藏的真实意图",
+      "C": "中介/促成者/家人的期待",
+      "D": "对婚姻有敌意的外部阻挠者/前伴侣",
+      "E": "正常恋爱的对照/过去的感情",
+      "reference": "先婚后爱 / 合约夫妻",
+      "landing_note": "纯对白驱动，广播剧最优品类之一。情感转折通过语气变化体现。",
+      "conflict_mechanism": "渐进式情感冲突：婚姻由合约开始，冲突来自合约义务与真实情感的错位。禁止一见钟情式转折——感情必须通过具体事件和选择逐步建立。反派是阻挠婚姻的外部力量（家族、前情人、商业对手），不是双方自身。",
+      "causal_driver": "签订合约 → 同居磨合 → 一次需要保护的危机（情感转折点） → 合约期限逼近 → 面临是否续约的选择 → 揭晓最初隐藏的意图 → 在合约终止前做出真心选择。每一步都是双方在责任与感情之间的推进。",
+      "ending_strategy": "合约终止时，双方基于真实感情重新建立关系（而非续约）。可以是一方放弃合约中的利益保护来证明真心。结局展示新的平等关系，合约被替换为真正的承诺。",
+      "tone_guidance": "甜而不腻、克制的温柔。情感来自台词的克制与行动的对比。旁白尽量少介入情感描写——用对话间的停顿和沉默传达试探。"
+    }
+  },
+  "plan": {
+    "title": "胃药与终身合约",
+    "premise": "为了完成爷爷的遗愿，互相看不顺眼的林夏与陆廷舟签订了一年婚约。在约定互不干涉的同居生活中，一张意外发现的体检报告打破了表面的冷漠，让两人在合约到期前重新审视彼此的真实情感。",
+    "theme": "在克制的距离中发现隐秘的守护，用真实的关心打破虚假的合约。",
+    "beginning": "林夏意外发现陆廷舟隐瞒的严重体检报告，当面质问他为何在婚约中伪装冷漠，两人爆发激烈争吵。",
+    "development": "争吵后两人陷入微妙的冷战，但林夏开始通过深夜的药片声和日常的细节，察觉到陆廷舟“互不干涉”背后的隐忍与保护，并主动用熬粥等行动回应。",
+    "climax": "一年婚约到期，陆廷舟拿出离婚协议准备放手，林夏却用红笔划掉“离婚”二字，拒绝结束关系。",
+    "ending": "林夏坦白自己愿意将照顾他作为终身计划，陆廷舟卸下防备，两人在真实的承诺中重新建立平等的亲密关系。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "胃药与终身合约",
+        "core_goal": "通过体检报告打破先婚后爱的表面冷漠，在合约到期时完成从“义务”到“真心”的情感转折。",
+        "major_beats": [
+          "【0-3s 黄金钩子】一沓纸张被重重拍在实木餐桌上（突发听觉事件），伴随林夏急促的呼吸声和椅子摩擦声。",
+          "【3-10s 矛盾三要素】林夏质问：“这就是你说的‘互不干涉’？重度胃溃疡加长期失眠，陆廷舟，你每天半夜在厨房到底干什么？”交代两人同居、婚约背景及体检报告引发的麻烦。",
+          "【10-30s 第一次反转】陆廷舟伸手去拿报告（衣物摩擦声），林夏一把抽走。林夏爆发：“爷爷让你照顾我，没让你把命搭进去！你装什么冷血工作狂？”陆廷舟沉默两秒，冷冷回应：“这是我的私事，不劳陆太太费心。”",
+          "【30-120s 中段推进】两人陷入冷战。深夜，林夏在房间听到隔壁传来压抑的咳嗽声和吞咽药片的喝水声。次日，林夏默默在厨房熬养胃粥（瓷勺碰碗声），放在陆廷舟书房门口，敲门后离开。陆廷舟开门，看着热粥，轻声说了一句“谢谢”。林夏在走廊拐角听到，停下脚步。",
+          "【120-153s 升级/二次反转】婚约到期前夜。陆廷舟将一份《离婚协议书》推到林夏面前，语气平静：“一年期满，你自由了。”林夏看着协议，没有拿笔签字，而是直接拿起桌上的红笔，用力划掉了“离婚”两个字（笔尖划破纸张的刺耳声）。",
+          "【153-180s 强情感收束】林夏直视陆廷舟：“陆廷舟，爷爷的遗愿是一年，但我的胃药采购计划，签的是终身。”陆廷舟愣住，随后发出一声释然的轻笑，伸手覆上林夏握笔的手。两人呼吸声靠近，温暖的吉他扫弦渐强，在音乐余韵中淡出。"
+        ],
+        "ending": "林夏拒绝离婚并表白心意，陆廷舟卸下伪装接受她的照顾，两人基于真实感情重新建立关系，合约被真心的承诺取代。",
+        "target_duration_sec": 180
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "lin_xia",
+        "story_name": "林夏",
+        "external_goal": "完成爷爷遗愿熬过一年婚约，同时搞清楚陆廷舟到底在隐瞒什么病情。",
+        "emotional_avoidance": "害怕自己在这段虚假婚姻中动真心，用带刺的言语和假装不在乎来掩饰关心。",
+        "speech_style": "语速快，喜欢用反问句，受压时会提高音量掩饰心虚，常用“随便你”“谁稀罕”来防御。",
+        "relationship_stance": "表面上嫌弃陆廷舟的冷漠，实际上渴望被他在乎，处于“想靠近又怕被推开”的试探状态。"
+      },
+      {
+        "role_id": "lu_tingzhou",
+        "story_name": "陆廷舟",
+        "external_goal": "履行对爷爷的承诺，保护林夏不受自己高压生活和病痛的影响，平稳度过一年婚约。",
+        "emotional_avoidance": "害怕自己的病态和负能量拖累林夏，用“公事公办”的态度切断情感连接。",
+        "speech_style": "语速平缓，措辞严谨克制，受压时习惯用沉默或转移话题（如“这是私事”）来回避，极少表达情绪。",
+        "relationship_stance": "默默守护但保持物理与心理距离，认为“不干涉”是对林夏最好的保护，内心渴望靠近但极力克制。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "audio_cues": [
+        "纸张拍桌声",
+        "吞咽药片声",
+        "瓷勺碰碗声",
+        "笔尖划纸声"
+      ],
+      "pacing_notes": "前30秒节奏紧凑，台词交锋快；中段放慢，留白增多，用环境音和呼吸声填补；结尾温暖舒缓。"
+    },
+    "continuity_constraints": [
+      "陆廷舟的胃病和失眠必须在S1-S3中通过体检报告确立，并在S4中通过吃药声和煮粥细节呼应。",
+      "一年婚约的期限必须在S2或S4中提及，为S5的离婚协议做铺垫。",
+      "林夏的态度转变必须基于S4中观察到的具体细节，不能突然顿悟。"
+    ],
+    "change_summary": [
+      "将S6的“戛然而止”调整为符合ending_contract的“情感余韵收束”，确保最后15%展示人物选择与后果。",
+      "明确了体检报告的具体内容（重度胃溃疡与失眠），使冲突具象化且符合治愈基调。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "G02",
+    "recipe_id": "R11",
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 180,
+    "target_episodes": 1,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "auto",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [],
+  "character_profile_revision_map": {},
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "ending_preference",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "theme_keywords",
+    "tone_style"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "ca47e3ba89b042ef8666ce055d1725d1",
+      "plan_id": "10c959d98e664120ba4b6ca5eb9ee5f1",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "34a658dac1084a6cac243a3d18a7b858",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-12T04:29:06.169366+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5186,
+      "output_tokens": 4484,
+      "cache_read_tokens": 1152,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3020,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "c6749fbf-222b-4619-b136-1a1832651f0a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 59645,
+      "completed_at": "2026-10-12T04:30:05.815750+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "genre",
+    "recipe_id",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "6174e09e247993daa33f2578626d675649ac0818b571c47756becc24a481d945",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-12T04:30:05.815750Z",
+  "updated_at": "2026-10-12T04:30:05.815750Z"
+}

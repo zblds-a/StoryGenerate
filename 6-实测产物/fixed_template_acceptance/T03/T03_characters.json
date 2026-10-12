@@ -1,0 +1,42 @@
+{
+  "lin_su": {
+    "role_id": "lin_su",
+    "character_id": "lin_su",
+    "performer_id": "lin_su",
+    "story_name": "林溯",
+    "canon_name": "林溯",
+    "immutable_facts": [],
+    "goal": "查明同事陈默死亡的真相，保护陈默的遗物不被销毁。",
+    "motivation": "",
+    "fear": "避免直面陈默已死的事实，用过度工作和数据分析麻痹自己。",
+    "speech_style": "语速快，逻辑严密，紧张时习惯用反问句和专业术语来掩饰情绪。",
+    "relationship_stance": "对赵主任表面服从实则警惕，对陈默怀有深厚的战友愧疚。",
+    "source": "character_portrayal"
+  },
+  "zhao_qiming": {
+    "role_id": "zhao_qiming",
+    "character_id": "zhao_qiming",
+    "performer_id": "zhao_qiming",
+    "story_name": "赵启明",
+    "canon_name": "赵启明",
+    "immutable_facts": [],
+    "goal": "回收并销毁陈默留下的录音笔，掩盖自己叛徒的身份。",
+    "motivation": "",
+    "fear": "避免表现出对陈默之死的任何心虚，用官僚做派和体制内话术掩饰。",
+    "speech_style": "语速平缓，喜欢用“规定”“大局”等词汇，施压时声音压低、不带感情。",
+    "relationship_stance": "视林溯为需要安抚或随时可清除的下属，表面关怀实则绝对控制。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}
