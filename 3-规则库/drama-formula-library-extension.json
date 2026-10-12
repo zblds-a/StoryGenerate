@@ -292,7 +292,7 @@
     "R7": ["viral_drama", "general"],
     "R8": ["general", "viral_drama", "mystery"],
     "R9": ["general", "serialized"],
-    "R10": ["viral_drama", "mystery"],
+    "R10": ["viral_drama", "mystery", "general"],
     "R11": ["general", "viral_drama"],
     "R12": ["general", "mystery"],
     "R13": ["viral_drama", "general", "serialized"]

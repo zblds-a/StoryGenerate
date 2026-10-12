@@ -10,20 +10,21 @@ os.makedirs(OUT_DIR, exist_ok=True)
 from drama_engine.config import RuleLibrary
 from drama_engine.workflow.strategy import StoryStrategyResolver
 from drama_engine.workflow.service import StoryWorkflowService
-from drama_engine.workflow.schemas import (
-    StoryPreferences, StoryIntent, CreationPreferences,
-)
+from drama_engine.workflow.schemas import CreateStoryRequest, CreationPreferences
+from drama_engine.workflow.repository import InMemoryWorkflowRepository
 from drama_engine.workflow.delivery import export_delivery_bundle, verify_round_trip
-from drama_engine.core.provider import build_provider_from_env
+from drama_engine.llm.openai_compat import build_provider_from_env
+from drama_engine.workflow.adapters import LiveWorkflowAdapter
 
 def main():
     lib = RuleLibrary.load()
     resolver = StoryStrategyResolver(lib)
     provider = build_provider_from_env()
+
     service = StoryWorkflowService(
+        repository=InMemoryWorkflowRepository(),
         plan_generator=provider,
-        repository=None,
-        template_resolver=None,
+        story_executor=provider,
         strategy_resolver=resolver,
     )
 
@@ -38,11 +39,15 @@ def main():
         explicit_fields=['story_mode', 'genre', 'recipe_id'],
     )
     print(f'Strategy: {strategy.recipe_name} / {strategy.genre_name} / mode={strategy.story_mode}')
+    print(f'  冲突: {strategy.conflict_mechanism[:80]}...')
+    print(f'  结局: {strategy.ending_strategy[:80]}...')
 
     prefs = CreationPreferences(story_mode='mystery', genre='G11', recipe_id='R6')
-    request = StoryPreferences(
-        intent=StoryIntent.CREATE, user_instruction=idea,
-        creation_preferences=prefs, request_id=uuid.uuid4().hex,
+    request = CreateStoryRequest(
+        request_id=uuid.uuid4().hex,
+        idempotency_key=uuid.uuid4().hex,
+        user_instruction=idea,
+        creation_preferences=prefs,
     )
 
     try:
@@ -52,8 +57,10 @@ def main():
         plan_path = OUT_DIR / 'A_R6_plan.json'
         plan_path.write_text(json.dumps(plan.model_dump(mode='json'), ensure_ascii=False, indent=2), encoding='utf-8')
 
-        approved = service.approve_story_plan(plan.plan_id, prefs)
-        delivery = service.generate_from_approved_plan(approved, prefs, idea)
+        job = service.approve_story_plan(plan.plan_id, plan.plan_fingerprint)
+        print(f'Approve: job_id={job.job_id}')
+
+        delivery = service.generate_from_approved_plan(job.job_id)
         elapsed_total = time.time() - start
         print(f'Generate 完成 ({elapsed_total:.0f}s)')
 
