@@ -1,5 +1,7 @@
 # StoryGenerate — AI 故事生成引擎 v0.2.1
 
+Phase 11 产品后端：复用已验收四操作引擎，新增 PostgreSQL 异步 HTTP 服务、版本化角色库和演绎任务适配器。参见 [部署与 API 调用](docs/phase11/DEPLOYMENT.md)、[OpenAPI](docs/phase11/openapi.json)、[TTS/客户端联调](docs/phase11/TTS_CLIENT_INTEGRATION.md)。真实音频与硬件播放不在本轮范围。
+
 > **原 Phase 0–9 Roadmap 完成；获批大纲工作流正在进行真实模型验收。**
 
 一个完整的 AI 故事生成引擎，将爆款故事的结构规律（角色槽位、情节节拍、人物选择规律、事实账本、证据评审）编译成可执行的确定性流水线。支持多故事模式（病毒短剧 / 通用 / 悬疑推理解谜 / 连续剧连载）、多内容形态（广播剧 / 散文体 / 小说 / 口述故事 / 单口喜剧 / 相声）、Long-form 异步任务、SQL 持久化断点续传、角色记忆系统。
