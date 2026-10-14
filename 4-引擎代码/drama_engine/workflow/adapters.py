@@ -15,7 +15,7 @@ from .creative_context import (
     build_episode_creative_packet, ending_contract_for, is_closed_short_story,
 )
 from .performance import normalize_utterance, validate_story_delivery
-from .operations import source_delivery, fold_continuity, operation_requirements
+from .operations import source_delivery, fold_continuity, operation_requirements, evidence_kind_errors
 from .timeline import timeline_errors
 from .storycraft_prompts import (
     PLAN_SYSTEM_V2,
@@ -159,7 +159,7 @@ def validate_generated_plan_ending(content: PlanContent, preferences) -> None:
     """Reject explicit late reveal devices in a promised closed short story."""
     if not is_closed_short_story(preferences):
         return
-    for episode in content.episode_outlines:
+    for episode in content.episode_outlines[-1:]:
         if _TAIL_REVEAL.search(episode.major_beats[-1]):
             raise ValueError(f"PLAN_CLOSED_ENDING_TAIL_REVEAL: episode {episode.index}")
     if re.search(r"Closed\s*/\s*Open|闭合.{0,8}开放|开放.{0,8}闭合", content.ending, re.I):
@@ -676,6 +676,10 @@ class ApprovedPlanLLMExecutor:
                 [u.line_id for ep in episodes for scene in ep.scenes for u in scene.utterances]),
         )
         checks = canonical_check_evidence(judgement.operation_checks, episodes)
+        kind_errors = evidence_kind_errors(snapshot.request, checks, episodes)
+        if kind_errors:
+            judgement = judgement.model_copy(update={"continuity_passed": False,
+                "reasons": [*judgement.reasons, *kind_errors]})
         time_errors = timeline_errors(judgement.timeline_claims, episodes)
         if time_errors:
             for check in checks:

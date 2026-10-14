@@ -245,7 +245,10 @@ def run_round(engine, out, number):
     continued = run_operation(engine, out, prefix + "_continue", request("continue",
         "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；"
         "第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
-        revised, creation_preferences={"target_episodes": 2, "ending_preference": "closed"}))
+        revised, creation_preferences={"target_episodes": 2, "ending_preference": "closed"},
+        client_context={"operation_requirements": {
+            "bell_effect": "结尾必须用sfx、action或narration明确呈现已经发生的三声铃响，例如叮、叮、叮；不能只写角色宣布要敲或说我敲了。",
+        }, "evidence_kinds": {"constraint:bell_effect": ["sfx", "action", "narration"]}}))
     if continued is None:
         blocked(out, prefix + "_remix", "remix", "Continue未通过")
         return created

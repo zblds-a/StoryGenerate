@@ -10,8 +10,9 @@ from pydantic import ValidationError
 from drama_engine.workflow.adapters import (ApprovedPlanLLMExecutor, DeterministicPerformanceAnnotator, bound_quality_schema,
     canonical_check_evidence, bound_thread_schema,
     LLMPlanGenerator,
+    validate_generated_plan_ending,
     DraftEpisode, DraftScene, DraftLine, EpisodeRevision, RevisionScene, RevisionLine, QualityDecision)
-from drama_engine.workflow.operations import fold_continuity, operation_errors, operation_requirements
+from drama_engine.workflow.operations import fold_continuity, operation_errors, operation_requirements, evidence_kind_errors
 from drama_engine.workflow.repository import InMemoryWorkflowRepository, WorkflowConflictError
 from drama_engine.workflow.schemas import OperationContext, StoryDelivery, OperationCheck
 from drama_engine.workflow.schemas import CreateStoryRequest, CreationPreferences, PlanContent
@@ -326,3 +327,29 @@ def test_request_bound_plan_remains_public_plan_content_after_validation():
         def complete_structured(self, spec, system, user, schema):
             return schema.model_validate(content.model_dump(mode="json"))
     assert type(LLMPlanGenerator(ContractProvider()).generate(request, None, [])) is PlanContent
+
+
+def test_closed_multi_episode_plan_allows_nonfinal_hook_but_rejects_final_tail_reveal():
+    request=CreateStoryRequest(request_id="contract",idempotency_key="contract",user_instruction="广播站",
+        creation_preferences=CreationPreferences(story_mode="general",target_episodes=2,ending_preference="closed"))
+    content=FixedPlanGenerator().generate(request,None,[])
+    first=content.episode_outlines[0].model_copy(update={"major_beats":["问题","行动","新危机让第二集继续处理"]})
+    content=content.model_copy(update={"episode_outlines":[first,content.episode_outlines[1]]})
+    validate_generated_plan_ending(content,request.creation_preferences)
+    last=content.episode_outlines[1].model_copy(update={"major_beats":["问题","行动","新危机突然出现"]})
+    with pytest.raises(ValueError,match="TAIL_REVEAL"):
+        validate_generated_plan_ending(content.model_copy(update={"episode_outlines":[first,last]}),request.creation_preferences)
+
+
+def test_required_audible_event_cannot_be_proven_only_by_dialogue_intention():
+    app,_=setup(); source=create(app)
+    line=source.episodes[0].scenes[0].utterances[0]
+    value=req(client_context={"operation_requirements":{"bell_effect":"三声铃实际响起"},
+        "evidence_kinds":{"constraint:bell_effect":["sfx","narration","action"]}})
+    operation_requirements(value)
+    checks=[{"requirement_id":"constraint:bell_effect","passed":True,"evidence_line_ids":[line.line_id]}]
+    assert evidence_kind_errors(value,checks,source.episodes)
+    changed_line=line.model_copy(update={"kind":"sfx","text":"叮、叮、叮，三声铃響。"})
+    scene=source.episodes[0].scenes[0].model_copy(update={"utterances":[changed_line]})
+    ep=source.episodes[0].model_copy(update={"scenes":[scene]})
+    assert not evidence_kind_errors(value,checks,[ep])

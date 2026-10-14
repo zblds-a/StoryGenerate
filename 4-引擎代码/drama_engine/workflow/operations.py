@@ -34,7 +34,26 @@ def operation_requirements(request) -> dict[str, str]:
         required["remix_instruction"] = request["remix"]["instruction"]
         required.update({f"retain:{i}": t for i, t in enumerate(request["remix"]["retain_elements"])})
         required.update({f"transform:{i}": t for i, t in enumerate(request["remix"]["transform_elements"])})
+    kinds = request.get("client_context", {}).get("evidence_kinds", {})
+    if not isinstance(kinds, dict) or any(
+        k not in required or not isinstance(v, list) or not v
+        or any(item not in ("dialogue", "narration", "sfx", "music", "action") for item in v)
+        for k, v in kinds.items()
+    ):
+        raise ValueError("INVALID_EVIDENCE_KINDS")
     return required
+
+
+def evidence_kind_errors(request, checks, episodes):
+    restrictions = request.get("client_context", {}).get("evidence_kinds", {})
+    lines = {u.line_id: u for ep in episodes for scene in ep.scenes for u in scene.utterances}
+    by_requirement = {c["requirement_id"]: c for c in checks}
+    errors = []
+    for key, allowed in restrictions.items():
+        cited = by_requirement.get(key, {}).get("evidence_line_ids", [])
+        if not any(k in lines and lines[k].kind in allowed for k in cited):
+            errors.append(f"OPERATION_EVIDENCE_KIND_MISMATCH: {key}: expected {allowed}")
+    return errors
 
 
 def revision_impact(edit, delivery, selected_episode_id=None) -> dict:
