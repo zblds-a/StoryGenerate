@@ -13,9 +13,12 @@ def source_delivery(source) -> StoryDelivery | None:
 
 def operation_requirements(request) -> dict[str, str]:
     intent = request["intent"]
-    if intent == "create":
-        return {"instruction": request["user_instruction"]}
     required = {"instruction": request["user_instruction"]}
+    explicit = request.get("client_context", {}).get("operation_requirements", {})
+    if not isinstance(explicit, dict) or any(not isinstance(k, str) or not isinstance(v, str) or not v.strip()
+                                              for k, v in explicit.items()):
+        raise ValueError("INVALID_OPERATION_REQUIREMENTS")
+    required.update({f"constraint:{k}": v for k, v in explicit.items()})
     if intent == "continue":
         required.update(identity="继承来源角色身份、姓名和演绎者", facts="不得违背来源已发生事实",
                         relationships="继承并合理发展来源关系", threads="按指令继承或回收伏笔，不能凭空消失")

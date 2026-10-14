@@ -5,8 +5,9 @@ import json
 import uuid
 
 import pytest
+from pydantic import ValidationError
 
-from drama_engine.workflow.adapters import (ApprovedPlanLLMExecutor, DeterministicPerformanceAnnotator,
+from drama_engine.workflow.adapters import (ApprovedPlanLLMExecutor, DeterministicPerformanceAnnotator, bound_quality_schema,
     DraftEpisode, DraftScene, DraftLine, EpisodeRevision, RevisionScene, RevisionLine, QualityDecision)
 from drama_engine.workflow.operations import fold_continuity, operation_errors, operation_requirements
 from drama_engine.workflow.repository import InMemoryWorkflowRepository, WorkflowConflictError
@@ -53,10 +54,10 @@ class ScriptedProvider:
             return EpisodeRevision(scenes=scenes, episode_summary="共同核对完成",
                 fact_delta=[{"id": f"ep{ep['index']}", "value": "共同核对完成"}],
                 relationship_delta=ep["relationship_delta"], new_open_threads=ep["new_open_threads"], closed_threads=ep["closed_threads"])
-        if schema is QualityDecision:
+        if issubclass(schema, QualityDecision):
             changed = [ep for ep in payload["episodes"] if ep["episode_id"] in payload["generated_episode_ids"]]
             quote = changed[-1]["scenes"][0]["utterances"][0]["text"]
-            return QualityDecision(outline_alignment_passed=True, continuity_passed=True, content_rating_passed=True,
+            return schema(outline_alignment_passed=True, continuity_passed=True, content_rating_passed=True,
                 operation_checks=[{"requirement_id": k, "requirement": v, "passed": True,
                                    "evidence_quotes": ["invented quote" if self.false_quote else quote]}
                                   for k, v in payload["required_checks"].items()])
@@ -235,3 +236,28 @@ def test_continuation_rejects_recasting_existing_character():
     with pytest.raises(WorkflowConflictError, match="CHARACTER_IDENTITY_CONFLICT"):
         app.prepare_story_plan(req("continue", source, characters={"selected_character_ids": ["c"],
             "role_bindings": [{"character_id": "c", "story_role_id": "other", "performer_id": "hero"}]}), context)
+
+
+@pytest.mark.parametrize("ids", [["invented", "facts"], ["instruction", "instruction"], ["instruction"]])
+def test_judge_schema_rejects_invented_duplicate_and_missing_requirement_ids(ids):
+    schema = bound_quality_schema({"instruction": "执行指令", "facts": "继承事实"})
+    with pytest.raises(ValidationError):
+        schema(outline_alignment_passed=True, continuity_passed=True, content_rating_passed=True,
+               operation_checks=[{"requirement_id": k, "requirement": "事实", "passed": True,
+                                  "evidence_quotes": ["正文"]} for k in ids])
+
+
+def test_failed_claim_releases_repository_transaction():
+    class LostClaim(InMemoryWorkflowRepository):
+        rolled_back = False
+        def claim_job(self, job_id):
+            raise WorkflowConflictError("JOB_NOT_RUNNABLE")
+        def rollback(self):
+            self.rolled_back = True
+    repo = LostClaim()
+    app, _ = setup(repo)
+    plan = app.prepare_story_plan(req())
+    job = app.approve_story_plan(plan.plan_id, 1, plan.plan_fingerprint, uuid.uuid4().hex)
+    with pytest.raises(WorkflowConflictError):
+        app.generate_from_approved_plan(job.job_id)
+    assert repo.rolled_back

@@ -88,6 +88,10 @@ def _token_stats(call_history: list) -> dict:
         "cache_read_tokens": total_cache,
         "total_tokens": total_in + total_out,  # NOT +reasoning (already included)
         "llm_calls": len(call_history),
+        "reported_input_tokens": sum(c.get("input_tokens", 0) or 0 for c in call_history if c.get("usage_source") == "reported"),
+        "reported_output_tokens": sum(c.get("output_tokens", 0) or 0 for c in call_history if c.get("usage_source") == "reported"),
+        "estimated_input_tokens": sum(c.get("input_tokens", 0) or 0 for c in call_history if c.get("usage_source") == "estimated"),
+        "unavailable_usage_calls": sum(c.get("usage_source") == "unavailable" for c in call_history),
     }
 
 
@@ -202,7 +206,7 @@ def run_case(case: dict, provider, service, template_resolver) -> dict:
         result.update(tokens)
 
         result["status"] = "ok" if integrity.valid and round_trip_ok else "integrity_fail"
-        print(f"  ✅ OK ({result['total_sec']}s) — {total_utts} utterances, "
+        print(f"  {result['status']} ({result['total_sec']}s) — {total_utts} utterances, "
               f"{tokens['total_tokens']} tokens, {tokens['llm_calls']} calls")
 
     except Exception as e:

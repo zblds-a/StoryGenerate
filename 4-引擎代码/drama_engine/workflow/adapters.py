@@ -4,9 +4,9 @@ from __future__ import annotations
 import json
 import re
 import uuid
-from typing import Any, Protocol
+from typing import Any, Protocol, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, create_model, model_validator
 
 from ..config import RuleLibrary
 from ..llm.usage_context import usage_scope
@@ -68,6 +68,7 @@ class LLMPlanGenerator:
         system = PLAN_SYSTEM_V2
         payload = {
             "intent": request.intent,
+            "operation_requirements": operation_requirements(request.model_dump(mode="json")),
             "user_instruction": request.user_instruction,
             "preferences": preferences,
             "ending_contract": ending_contract_for(request.creation_preferences),
@@ -390,6 +391,19 @@ class QualityDecision(BaseModel):
     operation_checks: list[OperationCheck] = Field(default_factory=list)
 
 
+def bound_quality_schema(requirements):
+    """Make omitted/renamed requirements schema errors, eligible for one JSON repair."""
+    check_schema = create_model("BoundOperationCheck", __base__=OperationCheck,
+        requirement_id=(Literal[tuple(requirements)], Field(description="Copy one exact required_checks key; do not invent IDs")))
+    def complete_checks(self):
+        if {c.requirement_id for c in self.operation_checks} != set(requirements):
+            raise ValueError("operation_checks must cover every exact required_checks key once")
+        return self
+    return create_model("BoundQualityDecision", __base__=QualityDecision,
+        operation_checks=(list[check_schema], Field(min_length=len(requirements), max_length=len(requirements))),
+        __validators__={"complete_checks": model_validator(mode="after")(complete_checks)})
+
+
 class RevisionLine(DraftLine):
     line_id: str
 
@@ -601,7 +615,7 @@ class ApprovedPlanLLMExecutor:
                 "content_rating": prefs.content_rating,
                 "episodes": [episode.model_dump(mode="json") for episode in episodes],
             }, ensure_ascii=False),
-            QualityDecision,
+            bound_quality_schema(operation_requirements(snapshot.request)),
         )
         checks = [c.model_dump(mode="json") for c in judgement.operation_checks]
         if checks or intent != "create":
@@ -671,6 +685,7 @@ class ApprovedPlanLLMExecutor:
                 raise ValueError("REVISION_SCOPE_VIOLATION: lines")
             old_lines = {u.line_id: u for u in scene.utterances}
             replacements = {}
+            pending_annotations = []
             for line in revised.lines:
                 old = old_lines.get(line.line_id)
                 if impact["scope"] == "line" and (line.kind != old.kind or line.speaker_role_id != old.speaker_role_id):
@@ -679,12 +694,16 @@ class ApprovedPlanLLMExecutor:
                     replacements[line.line_id] = old
                     continue
                 performer, cue = resolve_line_cast(line, snapshot.preview)
-                replacements[line.line_id] = self.annotator.annotate([{
+                pending_annotations.append({
                     "line_id": line.line_id, "kind": line.kind, "speaker": line.speaker_role_id,
                     "text": line.text, "performance_hint": line.performance_hint,
                     "performer_id": performer, "sfx_category": cue,
-                }], {"approved_outline": outline.model_dump(mode="json"), "scene": scene.title,
-                     "model_mapping_snapshot": snapshot.model_mapping_snapshot})[0]
+                })
+            if pending_annotations:
+                annotated = self.annotator.annotate(pending_annotations, {
+                    "approved_outline": outline.model_dump(mode="json"), "scene": scene.title,
+                    "model_mapping_snapshot": snapshot.model_mapping_snapshot})
+                replacements.update({u.line_id: u for u in annotated})
             utterances = ([replacements.get(u.line_id, u) for u in scene.utterances] if impact["scope"] == "line"
                           else [replacements[u.line_id] for u in revised.lines])
             scenes.append(scene.model_copy(update={"utterances": utterances}))

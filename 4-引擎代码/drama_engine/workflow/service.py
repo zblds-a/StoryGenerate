@@ -10,7 +10,7 @@ from ..llm.usage_context import usage_scope
 from .adapters import PlanGenerator, StoryExecutor
 from .performance import validate_story_delivery
 from .delivery import validate_delivery_integrity
-from .operations import revision_impact, operation_errors, source_delivery
+from .operations import revision_impact, operation_errors, source_delivery, operation_requirements
 from .repository import WorkflowConflictError, WorkflowNotFoundError
 from .repository import _rule_versions
 from .schemas import (
@@ -62,6 +62,7 @@ class StoryWorkflowService:
         operation_context: OperationContext | None = None,
     ) -> PlanPreview:
         request = request if hasattr(request, "intent") else _REQUEST_ADAPTER.validate_python(request)
+        operation_requirements(request.model_dump(mode="json"))
         if request.intent == StoryIntent.CONTINUE and request.continuation_kind == "resume_playback":
             raise WorkflowConflictError("PLAYBACK_RESUME_NOT_A_GENERATION_OPERATION")
         context = operation_context or OperationContext()
@@ -290,8 +291,12 @@ class StoryWorkflowService:
             return self.repository.get_story_version(job.result_story_version_id)
         if job.status != WorkflowJobStatus.QUEUED:
             raise WorkflowConflictError(f"JOB_NOT_RUNNABLE: {job.status}")
-        running = self.repository.claim_job(job_id)
-        self.repository.commit()
+        try:
+            running = self.repository.claim_job(job_id)
+            self.repository.commit()
+        except Exception:
+            self.repository.rollback()
+            raise
         try:
             with usage_scope(
                 request_id=job.request_id,
