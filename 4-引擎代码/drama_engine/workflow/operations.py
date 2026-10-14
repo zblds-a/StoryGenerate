@@ -14,6 +14,11 @@ def source_delivery(source) -> StoryDelivery | None:
 def operation_requirements(request) -> dict[str, str]:
     intent = request["intent"]
     required = {"instruction": request["user_instruction"]}
+    required["timeline"] = (
+        "同一交付版本内各集事实、处境和明确时间安排必须连续一致。"
+        "不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；"
+        "时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。"
+    )
     explicit = request.get("client_context", {}).get("operation_requirements", {})
     if not isinstance(explicit, dict) or any(not isinstance(k, str) or not isinstance(v, str) or not v.strip()
                                               for k, v in explicit.items()):

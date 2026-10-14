@@ -273,7 +273,7 @@ files = export_delivery_bundle(delivery, "output/", "my_story")
 | `"1.0"` | 初始版本。包含 character_portrayals, scene_index, delivery_format_version。 |
 
 当 `delivery_format_version` 递增时：
-- 新增字段永远设置合理默认值，旧客户端可安全忽略。
+- 新增字段设置合理默认值，供新客户端读取旧 JSON。消费端须忽略未知字段；使用旧版严格 Schema 的客户端需升级后才能读取新增字段。
 - 删除字段前至少保留一个主版本过渡期。
 - 语义变更（如字段单位或枚举值变化）在新主版本中完成。
 

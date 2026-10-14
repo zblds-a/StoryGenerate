@@ -328,6 +328,7 @@ class StoryWorkflowService:
                 "content_rating_passed": executor_report.content_rating_passed,
                 "warnings": [*report.warnings, *executor_report.warnings],
                 "operation_checks": executor_report.operation_checks,
+                "timeline_claims": executor_report.timeline_claims,
             })
             approved = job.input_snapshot.preview
             integrity = validate_delivery_integrity(delivery)

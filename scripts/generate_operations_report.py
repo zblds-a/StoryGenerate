@@ -56,11 +56,17 @@ def main():
     by_stage = defaultdict(list)
     for batch in args.batch:
         results = [read(p) | {"directory": str(p.parent.resolve())} for p in sorted(batch.glob("*/result.json"))]
-        histories.append({"batch": str(batch), "manifest": read(batch / "manifest.json", {}), "results": results})
+        attempts = [read(p) | {"directory": str(p.parent.resolve())} for p in sorted(batch.glob("attempts/*/result.json"))]
+        histories.append({"batch": str(batch), "manifest": read(batch / "manifest.json", {}), "results": results, "earlier_attempts": attempts})
         potential_inflight_unknown_nodes += read(batch / "manifest.json", {}).get("potential_inflight_usage_unknown_nodes", 0)
         if batch == current:
             current_results = results
-        for path in batch.glob("*/calls.json"):
+        if (batch / "calls.json").exists():
+            extra_calls = read(batch / "calls.json", [])
+            all_calls.extend(extra_calls)
+            for call in extra_calls:
+                by_stage[call.get("node", "unknown")].append(call)
+        for path in [*batch.glob("*/calls.json"), *batch.glob("attempts/*/calls.json")]:
             calls = read(path, [])
             all_calls.extend(calls)
             for call in calls:

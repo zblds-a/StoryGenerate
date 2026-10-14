@@ -425,6 +425,14 @@ class OperationCheck(WorkflowModel):
     evidence_line_ids: list[str] = Field(default_factory=list)
 
 
+class TimelineClaim(WorkflowModel):
+    event_id: str = Field(min_length=1, description="Same concrete occurrence uses one ID; programme opening is its start unless explicit warm-up/trial")
+    kind: Literal["scheduled", "actual", "deadline", "clock", "explicit_change"]
+    normalized_time: str = Field(pattern=r"^(?:[01]\d|2[0-3]):[0-5]\d$")
+    line_id: str
+    quote: str = Field(min_length=1)
+
+
 class PerformanceValidationReport(WorkflowModel):
     validation_status: Literal["PASSED", "FAILED"]
     spoken_line_count: int = 0
@@ -437,6 +445,7 @@ class PerformanceValidationReport(WorkflowModel):
     content_rating_passed: bool = True
     warnings: list[str] = Field(default_factory=list)
     operation_checks: list[dict[str, Any]] = Field(default_factory=list)
+    timeline_claims: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class StoryDelivery(WorkflowModel):

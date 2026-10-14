@@ -1,0 +1,42 @@
+"""Grounded schedule comparisons; model pass alone cannot bypass a mismatch."""
+import pytest
+from drama_engine.workflow.timeline import clock_values,timeline_errors
+from drama_engine.workflow.schemas import EpisodeDelivery,SceneDelivery,Utterance,TimelineClaim
+
+def episode(lines):
+    return EpisodeDelivery(episode_id="ep",index=1,title="时间核验",duration_target_sec=120,
+        scenes=[SceneDelivery(scene_id="scene",title="播音",utterances=[
+            Utterance(line_id=str(i),kind="narration",text=text) for i,text in enumerate(lines)])])
+
+@pytest.mark.parametrize("text,expected", [
+    ("六点早新闻，五点前必须拿下",{"06:00","05:00"}),
+    ("四点五十了，五点整播片头",{"04:50","05:00"}),
+    ("凌晨一点半，下午两点一刻",{"01:30","14:15"}),
+    ("06:00开始，05:30完成",{"06:00","05:30"}),
+    ("一点杂音都没有，调大一点，记住这两点建议",set()),
+    ("总共四点，记住这三点。现在只有五点整。",{"05:00"}),
+    ("下午一点、晚上九点、凌晨十二点",{"13:00","21:00","00:00"}),
+])
+def test_clock_extraction_distinguishes_clock_and_quantity(text,expected):
+    assert clock_values(text)==expected
+
+def test_schedule_actual_conflict_is_blocked_while_deadline_is_distinct():
+    ep=episode(["明早六点早新闻，五点前必须拿下。","五点整。片头曲进来了。"])
+    claims=[TimelineClaim(event_id="news",kind="scheduled",normalized_time="06:00",line_id="0",quote="六点早新闻"),
+            TimelineClaim(event_id="repair",kind="deadline",normalized_time="05:00",line_id="0",quote="五点前必须拿下"),
+            TimelineClaim(event_id="news",kind="actual",normalized_time="05:00",line_id="1",quote="五点整。片头曲进来了。")]
+    errors=timeline_errors(claims,[ep])
+    assert len(errors)==1 and "TIMELINE_EVENT_TIME_CONFLICT" in errors[0]
+
+def test_explicit_change_is_allowed_but_unexplained_change_is_not():
+    ep=episode(["六点早新闻。","通知街坊，改为五点播新闻。","五点整，片头响了。"])
+    claims=[TimelineClaim(event_id="news",kind="scheduled",normalized_time="06:00",line_id="0",quote="六点早新闻"),
+            TimelineClaim(event_id="news",kind="explicit_change",normalized_time="05:00",line_id="1",quote="改为五点播新闻"),
+            TimelineClaim(event_id="news",kind="actual",normalized_time="05:00",line_id="2",quote="五点整，片头响了。")]
+    assert not timeline_errors(claims,[ep])
+
+def test_missing_and_fabricated_time_claims_fail():
+    ep=episode(["五点整，片头进来了。"])
+    assert "MISSING" in timeline_errors([],[ep])[0]
+    claim=TimelineClaim(event_id="news",kind="actual",normalized_time="06:00",line_id="0",quote="五点整")
+    assert "UNGROUNDED" in timeline_errors([claim],[ep])[0]

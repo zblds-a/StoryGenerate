@@ -127,7 +127,7 @@ def revision(source, scope, target, instruction, downstream="branch_from_here"):
         "instruction": instruction, "preserve": {"identity": True, "facts": True}, "downstream_policy": downstream})
 
 
-def run_operation(engine, out, label, value, context=None):
+def run_operation(engine, out, label, value, context=None, retry_job_id=None):
     directory = out / label
     directory.mkdir(parents=True, exist_ok=True)
     start = time.monotonic()
@@ -143,16 +143,26 @@ def run_operation(engine, out, label, value, context=None):
                 return candidate
         return StoryWorkflowService(SqlAlchemyWorkflowRepository(session), LLMPlanGenerator(provider), CaptureExecutor())
     try:
-        with Session(engine) as session:
-            plan = service(session).prepare_story_plan(value, context)
-            save(directory / "plan.json", plan.model_dump(mode="json"))
-        with Session(engine) as session:
-            app = service(session)
-            restored_plan = app.get_story_plan(plan.plan_id)
-            assert restored_plan == plan
-            job = app.approve_story_plan(plan.plan_id, plan.plan_revision, plan.plan_fingerprint, uuid.uuid4().hex)
-            job_id = job.job_id
-            save(directory / "approved_job.json", job.model_dump(mode="json"))
+        if retry_job_id:
+            with Session(engine) as session:
+                app = service(session)
+                job = app.retry_failed_job(retry_job_id)
+                plan = job.input_snapshot.preview
+                job_id = job.job_id
+                record.update(retry_job_id=job_id, approved_snapshot_reused=True)
+                save(directory / "plan.json", plan.model_dump(mode="json"))
+                save(directory / "approved_job.json", job.model_dump(mode="json"))
+        else:
+            with Session(engine) as session:
+                plan = service(session).prepare_story_plan(value, context)
+                save(directory / "plan.json", plan.model_dump(mode="json"))
+            with Session(engine) as session:
+                app = service(session)
+                restored_plan = app.get_story_plan(plan.plan_id)
+                assert restored_plan == plan
+                job = app.approve_story_plan(plan.plan_id, plan.plan_revision, plan.plan_fingerprint, uuid.uuid4().hex)
+                job_id = job.job_id
+                save(directory / "approved_job.json", job.model_dump(mode="json"))
         with Session(engine) as session:
             delivery = service(session).generate_from_approved_plan(job_id)
         with Session(engine) as session:

@@ -104,3 +104,14 @@ JUDGE_SYSTEM_V2 = """\
 **不以审查替代创作，不使用质量评价触发常态化多轮生成。** 单次成稿质量应由前置策划和正文提示词负责。
 只输出符合 QualityDecision Schema 的 JSON。
 """
+
+OPERATION_JUDGE_INSTRUCTIONS = """
+逐项核查 required_checks。operation_checks 必须覆盖全部原始 requirement_id，每项提供 passed 和 evidence_line_ids，代码会提取当前 episodes 的台词原文。evidence_quotes 如填写只复制原文，不加编号或角色包装。
+来源只供比较；通过证据须来自当前交付正文，不能引用大纲、synopsis 或摘要代替实际事件。
+revise 检查指定修改及 preserve；continue 检查身份、事实、关系、伏笔及新增集间连续性；remix 逐项检查保留和变更。
+明确的同一事件时刻改变而正文未说明，必须判 timeline=false、continuity_passed=false。不能替作品猜测“提前播出”“临时改期”“片头提前暖场”来抹平矛盾。区分任务完成期限与已约定播出时间；若后续把期限写成播出时间且缺少通知解释，不能通过。
+事实冲突、未执行要求或证据不足均不得以大纲批准过为理由自动通过。保持一次核验，不提出文学改稿方案。
+timeline_claims 必须提取当前 episodes 每一处明确时钟时刻（中文“六点/四点五十”及“06:00”）。每个声明给 event_id、kind、normalized_time(HH:MM)、line_id、quote，quote逐字复制包含该时刻的原文。同一行两个时刻拆两项；没有时钟时刻返回空数组。
+“一点杂音”“调大一点”“两点建议”不是时钟时刻，不能提取为时间声明。
+kind区分 scheduled(安排某具体事件)、actual(事件实际发生)、deadline(完成任务期限)、clock(仅观察钟表)、explicit_change(正文明确通知改期)。同一具体事件在各集使用完全相同event_id，节目片头就是该节目开始，除非正文明确说明试播/暖场。维修截止时间不是新闻播出安排。
+"""

@@ -16,17 +16,20 @@ from .creative_context import (
 )
 from .performance import normalize_utterance, validate_story_delivery
 from .operations import source_delivery, fold_continuity, operation_requirements
+from .timeline import timeline_errors
 from .storycraft_prompts import (
     PLAN_SYSTEM_V2,
     EPISODE_SYSTEM_V2,
     PERFORMANCE_SYSTEM_V2,
     JUDGE_SYSTEM_V2,
+    OPERATION_JUDGE_INSTRUCTIONS,
 )
 from .schemas import (
     ApprovedPlanSnapshot,
     CharacterSnapshot,
     Emotion,
     OperationCheck,
+    TimelineClaim,
     EmphasisSpan,
     EpisodeDelivery,
     EpisodeOutline,
@@ -67,6 +70,7 @@ class LLMPlanGenerator:
     def generate(self, request, source, characters, previous=None, feedback="", template=None, strategy=None) -> PlanContent:
         preferences = request.creation_preferences.model_dump(mode="json")
         system = PLAN_SYSTEM_V2
+        system += "\n各集剧情时间必须一致。未给定的精确时刻或倒计时不要随意添加；确需安排时须在全部剧集保持一致，不得混淆维修截止时间与播出时间。"
         payload = {
             "intent": request.intent,
             "operation_requirements": operation_requirements(request.model_dump(mode="json")),
@@ -398,6 +402,7 @@ class QualityDecision(BaseModel):
     content_rating_passed: bool
     reasons: list[str] = Field(default_factory=list)
     operation_checks: list[OperationCheck] = Field(default_factory=list)
+    timeline_claims: list[TimelineClaim] = Field(default_factory=list)
 
 
 def bound_quality_schema(requirements, line_ids=None):
@@ -412,6 +417,8 @@ def bound_quality_schema(requirements, line_ids=None):
         return self
     return create_model("BoundQualityDecision", __base__=QualityDecision,
         operation_checks=(list[check_schema], Field(min_length=len(requirements), max_length=len(requirements))),
+        **({"timeline_claims": (list[create_model("BoundTimelineClaim", __base__=TimelineClaim,
+            line_id=(Literal[tuple(line_ids)], ...))], Field(default_factory=list))} if line_ids else {}),
         __validators__={"complete_checks": model_validator(mode="after")(complete_checks)})
 
 
@@ -516,6 +523,7 @@ class ApprovedPlanLLMExecutor:
                 snapshot, outline, min_chars, ideal_chars, max_chars, continuity_override=continuity,
             )
             system = EPISODE_SYSTEM_V2
+            system += "\n逐项核对previous_generated_episodes和current_continuity：继承已经写出的角色、事实、关系、时间安排。不得混淆任务截止时刻与约定事件时刻。未获批或来源未明确的精确时刻和倒计时不要随意新增。"
             strategy_hint_text = ""
             if creative_packet.strategy_hints:
                 strategy_hint_text = (
@@ -651,15 +659,8 @@ class ApprovedPlanLLMExecutor:
             quality_report={"validation_status": "FAILED"},
         )
         judgement = self.provider.complete_structured(
-            resolve_spec("judge", tier_map=tier_map, temperature=0),
-            JUDGE_SYSTEM_V2 + (
-                "\n核查操作要求与来源。必须逐项返回required_checks中的全部operation_checks，每项含requirement_id、requirement、"
-                "passed(bool)、evidence_quotes(正文逐字引文列表)。revise核查instruction及preserve；"
-                "continue核查身份、事实、关系、伏笔及user_instruction；remix逐项核查每条保留和变更要求。"
-                "与来源矛盾、未执行要求或证据不足必须判失败。不能只核查生成大纲内部一致性。"
-                "优先填写evidence_line_ids，必须使用实际正文line_id，代码会提取其原文作为证据。"
-                "evidence_quotes如填写则只复制原文，不加台词ID、角色标签或引号包装。"
-            ),
+            resolve_spec("storycraft_operation_judge", tier_map=tier_map, temperature=0),
+            JUDGE_SYSTEM_V2 + OPERATION_JUDGE_INSTRUCTIONS,
             json.dumps({
                 "approved_plan": preview.plan.model_dump(mode="json"),
                 "operation_request": snapshot.request,
@@ -675,6 +676,13 @@ class ApprovedPlanLLMExecutor:
                 [u.line_id for ep in episodes for scene in ep.scenes for u in scene.utterances]),
         )
         checks = canonical_check_evidence(judgement.operation_checks, episodes)
+        time_errors = timeline_errors(judgement.timeline_claims, episodes)
+        if time_errors:
+            for check in checks:
+                if check["requirement_id"] == "timeline":
+                    check.update(model_passed=check["passed"], passed=False, deterministic_errors=time_errors)
+            judgement = judgement.model_copy(update={"continuity_passed": False,
+                "reasons": [*judgement.reasons, *time_errors]})
         if checks or intent != "create":
             text_evidence = "\n".join(u.text for ep in episodes for s in ep.scenes for u in s.utterances)
             changed_text = "\n".join(u.text for ep in episodes if ep.episode_id in generated_episode_ids
@@ -698,6 +706,7 @@ class ApprovedPlanLLMExecutor:
             "content_rating_passed": judgement.content_rating_passed,
             "warnings": judgement.reasons,
             "operation_checks": checks,
+            "timeline_claims": [c.model_dump(mode="json") for c in judgement.timeline_claims],
         })
         if not judgement.content_rating_passed:
             report = report.model_copy(update={
