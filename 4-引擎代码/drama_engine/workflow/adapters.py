@@ -15,6 +15,7 @@ from .creative_context import (
     build_episode_creative_packet, ending_contract_for, is_closed_short_story,
 )
 from .performance import normalize_utterance, validate_story_delivery
+from .operations import source_delivery, fold_continuity, operation_requirements
 from .storycraft_prompts import (
     PLAN_SYSTEM_V2,
     EPISODE_SYSTEM_V2,
@@ -25,6 +26,7 @@ from .schemas import (
     ApprovedPlanSnapshot,
     CharacterSnapshot,
     Emotion,
+    OperationCheck,
     EmphasisSpan,
     EpisodeDelivery,
     PlanContent,
@@ -385,6 +387,25 @@ class QualityDecision(BaseModel):
     continuity_passed: bool
     content_rating_passed: bool
     reasons: list[str] = Field(default_factory=list)
+    operation_checks: list[OperationCheck] = Field(default_factory=list)
+
+
+class RevisionLine(DraftLine):
+    line_id: str
+
+
+class RevisionScene(BaseModel):
+    scene_id: str
+    lines: list[RevisionLine] = Field(min_length=1)
+
+
+class EpisodeRevision(BaseModel):
+    scenes: list[RevisionScene] = Field(min_length=1)
+    episode_summary: str
+    fact_delta: list[dict[str, Any]]
+    relationship_delta: list[dict[str, Any]]
+    new_open_threads: list[str]
+    closed_threads: list[str]
 
 
 class ApprovedPlanLLMExecutor:
@@ -400,13 +421,31 @@ class ApprovedPlanLLMExecutor:
         trace_start = len(getattr(self.provider, "call_history", []))
         prefs = preview.resolved_preferences
         source = preview.source_reference
+        original = source_delivery(source)
+        intent = snapshot.request["intent"]
+        inherited_episodes = list(original.episodes) if original and intent in ("continue", "revise") else []
+        continuity = source.continuity_snapshot if source and intent == "continue" else {}
         tier_map = ModelTierMap(mapping=snapshot.model_mapping_snapshot) if snapshot.model_mapping_snapshot else None
         episodes: list[EpisodeDelivery] = []
         first_preview_blurb = ""
         for outline in preview.plan.episode_outlines:
+            if intent == "revise":
+                continuity = fold_continuity([ep for ep in original.episodes if ep.index < outline.index])
+                # Replace prior affected episodes with the actual revised results.
+                prefix = [next((new for new in episodes if new.index == old.index), old)
+                          for old in original.episodes if old.index < outline.index]
+                continuity = fold_continuity(prefix)
+            prior_episode = next((ep for ep in inherited_episodes if ep.index == outline.index), None)
+            impact = preview.impact_analysis
+            if (intent == "revise" and impact["scope"] in ("line", "scene", "ending")
+                    and outline.index not in impact["downstream_episode_indexes"]):
+                episode = self._revise_local_episode(snapshot, prior_episode, outline, continuity, tier_map)
+                episodes.append(episode)
+                continuity = fold_continuity([episode], continuity)
+                continue
             min_chars, ideal_chars, max_chars = spoken_character_budget(prefs.target_duration_sec)
             creative_packet = build_episode_creative_packet(
-                snapshot, outline, min_chars, ideal_chars, max_chars,
+                snapshot, outline, min_chars, ideal_chars, max_chars, continuity_override=continuity,
             )
             system = EPISODE_SYSTEM_V2
             strategy_hint_text = ""
@@ -432,6 +471,9 @@ class ApprovedPlanLLMExecutor:
                 "preferences": prefs.model_dump(mode="json"),
                 "characters": [c.model_dump(mode="json") for c in preview.character_snapshots],
                 "source": source.model_dump(mode="json") if source else None,
+                "operation_request": snapshot.request,
+                "current_continuity": continuity,
+                "previous_generated_episodes": [ep.model_dump(mode="json") for ep in episodes],
                 "template_snapshot": preview.template_snapshot,
                 "creative_packet": creative_packet.model_dump(mode="json"),
                 "instruction": (
@@ -501,7 +543,7 @@ class ApprovedPlanLLMExecutor:
                     dramatic_goal=scene.dramatic_goal, utterances=utterances,
                 ))
             episodes.append(EpisodeDelivery(
-                episode_id=f"ep-{outline.index}-{uuid.uuid4().hex[:8]}",
+                episode_id=prior_episode.episode_id if prior_episode else f"ep-{outline.index}-{uuid.uuid4().hex[:8]}",
                 index=outline.index, title=draft.title, synopsis=draft.synopsis,
                 duration_target_sec=outline.target_duration_sec,
                 duration_estimate_sec=estimated, scenes=scenes,
@@ -510,12 +552,14 @@ class ApprovedPlanLLMExecutor:
                 new_open_threads=draft.new_open_threads, closed_threads=draft.closed_threads,
                 validation_status="PASSED", ready_for_playback=True,
             ))
+            continuity = fold_continuity([episodes[-1]], continuity)
+        generated_episode_ids = [ep.episode_id for ep in episodes]
+        if intent == "continue":
+            episodes = [*inherited_episodes, *episodes]
+        elif intent == "revise":
+            replacements = {ep.index: ep for ep in episodes}
+            episodes = [replacements.get(ep.index, ep) for ep in inherited_episodes]
         same_story = source and snapshot.request["intent"] in ("continue", "revise")
-        prior_state = source.continuity_snapshot if source else {}
-        unresolved = list(prior_state.get("unresolved_threads") or [])
-        for episode in episodes:
-            unresolved = [thread for thread in unresolved if thread not in episode.closed_threads]
-            unresolved.extend(thread for thread in episode.new_open_threads if thread not in unresolved)
         delivery = StoryDelivery(
             story_id=source.story_id if same_story else uuid.uuid4().hex,
             story_version_id=uuid.uuid4().hex,
@@ -526,42 +570,63 @@ class ApprovedPlanLLMExecutor:
             approved_plan_id=snapshot.plan_id,
             approved_plan_revision=snapshot.plan_revision,
             title=preview.plan.title, summary=preview.plan.premise,
-            preview_blurb=first_preview_blurb or preview.plan.premise,
+            preview_blurb=first_preview_blurb or (original.preview_blurb if original else preview.plan.premise),
             tags=[prefs.genre, prefs.tone_style, prefs.audience_band, prefs.content_rating],
             story_mode=prefs.story_mode,
             character_snapshot=preview.character_snapshots,
             character_portrayals=[p.model_dump(mode="json") for p in preview.plan.character_portrayals],
             fictional_voice_roles=[v.model_dump(mode="json") for v in preview.plan.fictional_voice_roles],
             outline=preview.plan, episodes=episodes,
+            generated_episode_ids=generated_episode_ids,
             rule_versions=preview.rule_versions,
-            continuity_state={
-                "source_version_id": source.story_version_id if source else None,
-                "facts": [*(prior_state.get("facts") or []), *(
-                    fact for ep in episodes for fact in ep.fact_delta
-                )],
-                "relationships": [*(prior_state.get("relationships") or []), *(
-                    change for ep in episodes for change in ep.relationship_delta
-                )],
-                "unresolved_threads": unresolved,
-            },
+            continuity_state={**fold_continuity(episodes), "source_version_id": source.story_version_id if source else None},
             quality_report={"validation_status": "FAILED"},
         )
         judgement = self.provider.complete_structured(
             resolve_spec("judge", tier_map=tier_map, temperature=0),
-            JUDGE_SYSTEM_V2,
+            JUDGE_SYSTEM_V2 + (
+                "\n核查操作要求与来源。必须逐项返回required_checks中的全部operation_checks，每项含requirement_id、requirement、"
+                "passed(bool)、evidence_quotes(正文逐字引文列表)。revise核查instruction及preserve；"
+                "continue核查身份、事实、关系、伏笔及user_instruction；remix逐项核查每条保留和变更要求。"
+                "与来源矛盾、未执行要求或证据不足必须判失败。不能只核查生成大纲内部一致性。"
+            ),
             json.dumps({
                 "approved_plan": preview.plan.model_dump(mode="json"),
+                "operation_request": snapshot.request,
+                "source": source.model_dump(mode="json") if source else None,
+                "approved_impact": preview.impact_analysis,
+                "required_checks": operation_requirements(snapshot.request),
+                "generated_episode_ids": generated_episode_ids,
                 "audience_band": prefs.audience_band,
                 "content_rating": prefs.content_rating,
                 "episodes": [episode.model_dump(mode="json") for episode in episodes],
             }, ensure_ascii=False),
             QualityDecision,
         )
+        checks = [c.model_dump(mode="json") for c in judgement.operation_checks]
+        if checks or intent != "create":
+            text_evidence = "\n".join(u.text for ep in episodes for s in ep.scenes for u in s.utterances)
+            changed_text = "\n".join(u.text for ep in episodes if ep.episode_id in generated_episode_ids
+                                      for s in ep.scenes for u in s.utterances)
+            expected_checks = operation_requirements(snapshot.request)
+            evidence_valid = ({c.get("requirement_id") for c in checks} == set(expected_checks)
+                              and len(checks) == len(expected_checks)) and all(
+                c.get("passed") is True and c.get("requirement") and c.get("evidence_quotes")
+                and all(isinstance(q, str) and q.strip() and q in text_evidence for q in c["evidence_quotes"])
+                and (not (c.get("requirement_id") in ("instruction", "edit_instruction", "remix_instruction")
+                          or str(c.get("requirement_id", "")).startswith("transform:"))
+                     or any(q in changed_text for q in c["evidence_quotes"]))
+                for c in checks
+            )
+            if not evidence_valid:
+                judgement = judgement.model_copy(update={"continuity_passed": False,
+                    "reasons": [*judgement.reasons, "OPERATION_REQUIREMENTS_NOT_PROVEN"]})
         report = validate_story_delivery(delivery).model_copy(update={
             "outline_alignment_passed": judgement.outline_alignment_passed,
             "continuity_passed": judgement.continuity_passed,
             "content_rating_passed": judgement.content_rating_passed,
             "warnings": judgement.reasons,
+            "operation_checks": checks,
         })
         if not judgement.content_rating_passed:
             report = report.model_copy(update={
@@ -577,6 +642,59 @@ class ApprovedPlanLLMExecutor:
                 *getattr(self.provider, "call_history", [])[trace_start:],
             ],
         })
+
+    def _revise_local_episode(self, snapshot, episode, outline, continuity, tier_map):
+        impact = snapshot.preview.impact_analysis
+        scene_ids = impact["target_scene_ids"]
+        with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="local_revision"):
+            patch = self.provider.complete_structured(
+                resolve_spec("storycraft_episode_writer", tier_map=tier_map),
+                "你是局部故事修订器。只返回获准目标的替换，禁止修改其他内容。"
+                "保留所有已有line_id；新台词使用不重复的新ID。line范围仅返回指定一行，保留kind和speaker_role_id。"
+                "scene/ending范围返回目标场景完整台词。episode_summary与事实关系伏笔增量须重新概括整集，"
+                "不得保留已被修改内容产生的过时增量。closed_threads必须逐字引用来源线程。",
+                json.dumps({"operation_request": snapshot.request, "approved_outline": outline.model_dump(mode="json"),
+                    "approved_scope": impact, "source_episode": episode.model_dump(mode="json"),
+                    "current_continuity": continuity,
+                    "approved_cast": snapshot.preview.plan.model_dump(mode="json")}, ensure_ascii=False),
+                EpisodeRevision,
+            )
+        if len(patch.scenes) != len(scene_ids) or {s.scene_id for s in patch.scenes} != set(scene_ids):
+            raise ValueError("REVISION_SCOPE_VIOLATION: scenes")
+        scenes = []
+        for scene in episode.scenes:
+            revised = next((s for s in patch.scenes if s.scene_id == scene.scene_id), None)
+            if revised is None:
+                scenes.append(scene)
+                continue
+            if impact["scope"] == "line" and [u.line_id for u in revised.lines] != impact["target_line_ids"]:
+                raise ValueError("REVISION_SCOPE_VIOLATION: lines")
+            old_lines = {u.line_id: u for u in scene.utterances}
+            replacements = {}
+            for line in revised.lines:
+                old = old_lines.get(line.line_id)
+                if impact["scope"] == "line" and (line.kind != old.kind or line.speaker_role_id != old.speaker_role_id):
+                    raise ValueError("REVISION_SCOPE_VIOLATION: line identity")
+                if old and (line.kind, line.speaker_role_id, line.text) == (old.kind, old.speaker_role_id, old.text):
+                    replacements[line.line_id] = old
+                    continue
+                performer, cue = resolve_line_cast(line, snapshot.preview)
+                replacements[line.line_id] = self.annotator.annotate([{
+                    "line_id": line.line_id, "kind": line.kind, "speaker": line.speaker_role_id,
+                    "text": line.text, "performance_hint": line.performance_hint,
+                    "performer_id": performer, "sfx_category": cue,
+                }], {"approved_outline": outline.model_dump(mode="json"), "scene": scene.title,
+                     "model_mapping_snapshot": snapshot.model_mapping_snapshot})[0]
+            utterances = ([replacements.get(u.line_id, u) for u in scene.utterances] if impact["scope"] == "line"
+                          else [replacements[u.line_id] for u in revised.lines])
+            scenes.append(scene.model_copy(update={"utterances": utterances}))
+        estimated = round(sum(len(u.text) for s in scenes for u in s.utterances if u.kind in ("dialogue", "narration")) / 3.5)
+        if not 0.85 * episode.duration_target_sec <= estimated <= 1.15 * episode.duration_target_sec:
+            raise ValueError("REVISION_DURATION_OUT_OF_RANGE")
+        return episode.model_copy(update={"scenes": scenes, "duration_estimate_sec": estimated,
+            "episode_summary": patch.episode_summary, "fact_delta": patch.fact_delta,
+            "relationship_delta": patch.relationship_delta, "new_open_threads": patch.new_open_threads,
+            "closed_threads": patch.closed_threads})
 
     def _repair_duration_scene(
         self, *, draft: DraftEpisode, creative_packet, target_duration_sec: int,
@@ -668,6 +786,8 @@ class GraphStoryExecutor:
         from ..graph import run_pipeline
 
         request = snapshot.request
+        if request["intent"] != "create":
+            raise ValueError("GRAPH_EXECUTOR_DOES_NOT_SUPPORT_STORY_OPERATIONS")
         preview = snapshot.preview
         prefs = preview.resolved_preferences
         characters = [
@@ -712,6 +832,7 @@ class GraphStoryExecutor:
             character_snapshot=preview.character_snapshots,
             outline=preview.plan,
             episodes=episodes,
+            generated_episode_ids=[ep.episode_id for ep in episodes],
             continuity_state={
                 "source": source.model_dump(mode="json") if source else None,
                 "unresolved_threads": [thread for ep in episodes for thread in ep.new_open_threads],
@@ -753,6 +874,7 @@ class GraphStoryExecutor:
                 })
                 scenes.append(SceneDelivery(
                     scene_id=f"scene_{index}_{scene_index}",
+                    scene_index=scene_index,
                     title=beat.get("label") or f"场景{scene_index}",
                     dramatic_goal=beat.get("event") or "",
                     utterances=utterances,

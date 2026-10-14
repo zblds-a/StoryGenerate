@@ -1,0 +1,56 @@
+# 四种故事操作审计与执行合同
+
+基线：`codex/story-formula-integration`，`712247446a246b09ba35ca9816c9230d1e1ccc99`。范围为引擎与结构化台本，不包括真实 TTS 时长、HTTP 服务或玩具调度。
+
+## 统一调用链及事务
+
+`StoryOperationRequest` 按 intent 区分四种请求 → `StoryWorkflowService.prepare_story_plan` → 来源 READY 校验、参数/角色继承、修改目标验证 → Strategy/Template 解析 → `LLMPlanGenerator.generate` → `PlanPreview` 与指纹 → `create_plan` 提交 → `approve_story_plan` 校验 revision/指纹/角色资料/动态来源 → 同事务保存审批快照及 QUEUED Job → `generate_from_approved_plan` 原子领取 → `ApprovedPlanLLMExecutor.execute` 正文/局部替换及真实演绎 → 现有 Judge 加操作要求逐项证据 → 完整性/范围/快照质量门 → StoryVersion 与 SUCCEEDED Job 同事务提交 → 新 Session 重读 → `export_delivery_bundle`。
+
+Plan、Revision、Job、StoryVersion 分别存于 `story_plans`、`story_plan_revisions`、`story_jobs`、`story_versions`。Job JSON 冻结 request、preview、模型路由；Delivery JSON 保存完整台本、来源、连续性及模型调用记录。角色资料与播放记录使用既有版本表。应用服务管理事务，调用者不要在同一 Session 混入其他业务写入。
+
+| 操作 | 请求特有字段 | 输出与版本关系 |
+| --- | --- | --- |
+| Create | 无来源；可选 characters/template_ref | 新 story_id、version_no=1、无父版本 |
+| Revise | source_selector、edit | 同 story_id、新版本、父版本为准确来源；返回完整故事 |
+| Continue | source_selector、next_episode | target_episodes 为新增集数；同 story_id、新版本、全量剧集按全局序号排列 |
+| Remix | source_selector、remix | 独立 story_id、version_no=1，保留来源 parent_story_version_id |
+
+同故事版本号在保存事务内分配 max+1，以 PostgreSQL advisory transaction lock 串行保护。版本号表示提交顺序，父版本表示实际派生关系，历史版本可以派生多个子版本。`003` 迁移的触发器禁止修改已保存正文和来源身份。
+
+## 修改与续写合同
+
+- line：target 必须含 episode_id、scene_id、line_id；只替换该行，kind 与发声身份不变。
+- scene：必须含 episode_id、scene_id；替换该场台词，保留场景身份和其余场景。
+- episode：必须含 episode_id；只重写该集。
+- arc：必须含按播放顺序排列的连续 episode_ids，不再把任意 arc 当作全故事。
+- ending：可省略 episode_id（最后一集），scene_ids 必须为该集连续尾部场景，省略时使用最后一场。
+- whole_story：修改整个来源版本。所有范围均返回完整故事，原版本不变。
+- branch_from_here 仅修改目标；replan_affected 将目标之后的剧集纳入审批快照并重写，目标集内非目标场景仍保护。
+
+`generated_episode_ids` 为可缺省的新字段；旧 JSON 可读取，新任务交付必须填写本次新增/替换的剧集 ID。审批 Plan 只包含本次生成范围，Continue 的 episode_outlines.index 使用全局集号，Revise 使用受影响集号；Delivery.episodes 始终是完整播放顺序。不把完整剧集数量错误地与 Continue 新增集数比较。
+
+Continue/Revise 继承来源审批参数，明确提供的参数覆盖继承值，target_episodes 在 Revise 中由实际修改范围确定。来源剧情名、角色身份和演绎者保持不变。每集生成后折叠真实增量再生成下一集；Revise 根据保留/替换后的完整剧集重建状态；Remix 从二创结果重建状态，不注入被改变的旧事实。事实/关系有稳定 id/fact_id/relationship_id 时新值替换旧值；无稳定 ID 的条目保留时间顺序，不猜测对象语义。closed_threads 必须使用已有线程原文。
+
+新增字段 `quality_report.operation_checks` 保存 requirement_id、判定及正文逐字引文；漏项、失败项或虚构引文均阻止发布。模型语义判定仍需验收报告逐项复核，不能将自动 READY 等同于产品验收。
+
+## 异常与兼容
+
+Job 的 execution_token 是 JSON 中的运行令牌，无新增数据库列。领取必须从 QUEUED 原子转换；重复成功执行返回持久化结果；取消与发布竞争通过行锁协调。显式 `recover_interrupted_job(job_id, expected_execution_token)` 使旧 worker 失去发布资格，标记 WORKER_INTERRUPTED；`retry_failed_job(job_id)` 重新排队。不存在后台自动判断 worker 死亡或自动恢复调度器。
+
+失败不保存 READY StoryVersion，重试复用冻结的审批快照。验收入口另存候选和原始模型响应，包括未形成完整候选的失败。旧 GraphStoryExecutor 只保留 Create 兼容入口，对另外三种操作明确拒绝，防止走旧链误报成功；四项产品操作使用 ApprovedPlanLLMExecutor。
+
+历史固定模板脚本确有两处误判：完整性失败状态被后续 ok 覆盖；verify_round_trip 的二元组被直接当布尔值。历史报告 6/7 和 616 项单测不能作为四操作真实验收结论，必须以新批次证据重新判断。
+
+## 重现验收
+
+在项目目录使用现有 Python 环境，安全注入 DRAMA_LLM_API_KEY；默认数据库连接仅适用于项目 Docker 的开发库。可通过 TEST_DATABASE_URL 指定专用库。
+
+```powershell
+docker compose up -d postgres
+python -m pytest tests/unit -q -p no:cacheprovider
+$env:TEST_DATABASE_URL = 'postgresql+psycopg://storygen:storygen_dev@localhost:5432/storygenerate'
+python -m pytest tests/integration -q -p no:cacheprovider
+python tests/acceptance/real_operations_chain.py --rounds 3
+```
+
+真实入口仅使用 build_provider_from_env，无 Mock 回退。三轮主链并发执行，每轮按 Create→Revise→Continue→Remix 串行；专项从首轮通过来源派生。每批创建独立 schema 并运行真实迁移，保留 schema 与产物供追溯，不删除验收数据库记录。输出包含 SHA、请求、大纲、审批任务、原始模型调用、候选、正文、重读结果、差异、Token 与时延；失败关联阶段明确阻塞。

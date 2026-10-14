@@ -283,23 +283,27 @@ def validate_delivery_integrity(delivery: StoryDelivery) -> DeliveryIntegrityRep
         return report
 
     all_scene_ids: set[str] = set()
+    all_episode_ids: set[str] = set()
     all_line_ids: set[str] = set()
     total_dialogue = 0
     total_narration = 0
     total_sfx = 0
 
     for ep_idx, ep in enumerate(delivery.episodes, 1):
+        if ep.episode_id in all_episode_ids:
+            report.errors.append(f"duplicate episode_id: {ep.episode_id}")
+        all_episode_ids.add(ep.episode_id)
         if ep.index != ep_idx:
             report.errors.append(f"episode {ep_idx}: expected index {ep_idx}, got {ep.index}")
 
-        for scene in ep.scenes:
+        for scene_idx, scene in enumerate(ep.scenes, 1):
             # ID uniqueness
             if scene.scene_id in all_scene_ids:
                 report.errors.append(f"duplicate scene_id: {scene.scene_id}")
             all_scene_ids.add(scene.scene_id)
 
-            if scene.scene_index < 1:
-                report.errors.append(f"scene {scene.scene_id}: invalid scene_index {scene.scene_index}")
+            if scene.scene_index != scene_idx:
+                report.errors.append(f"scene {scene.scene_id}: expected scene_index {scene_idx}, got {scene.scene_index}")
 
             # Utterance checks
             for u_idx, u in enumerate(scene.utterances, 1):
@@ -369,6 +373,8 @@ def verify_round_trip(delivery: StoryDelivery) -> tuple[bool, str]:
     try:
         json_str = delivery_to_json(delivery)
         reloaded = delivery_from_json(json_str)
+        if reloaded != delivery:
+            return False, "full delivery round-trip mismatch"
 
         # Check critical fields
         if reloaded.title != delivery.title:

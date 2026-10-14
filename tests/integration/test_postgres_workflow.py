@@ -3,11 +3,14 @@ from __future__ import annotations
 
 import os
 import uuid
+from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 
 import pytest
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import Session
+from alembic import command
+from alembic.config import Config
 
 from drama_engine.persistence.models import Base
 from drama_engine.templates.models import StoryTemplateSpec, TemplateBeat
@@ -19,7 +22,7 @@ from drama_engine.workflow.service import StoryWorkflowService
 
 
 class PlanGenerator:
-    def generate(self, request, source, characters, previous=None, feedback="", template=None):
+    def generate(self, request, source, characters, previous=None, feedback="", template=None, strategy=None):
         return PlanContent(
             title="数据库验收", premise=request.user_instruction, theme="选择",
             beginning="开场", development="冲突", climax="选择", ending="收束",
@@ -47,7 +50,12 @@ def pg_engine():
         conn.execute(text(f'CREATE SCHEMA "{schema}"'))
     engine = create_engine(url, connect_args={"options": f"-csearch_path={schema}"})
     try:
-        Base.metadata.create_all(engine)
+        root = Path(__file__).resolve().parents[2]
+        config = Config(str(root / "alembic.ini"))
+        config.set_main_option("script_location", str(root / "alembic"))
+        with engine.begin() as connection:
+            config.attributes["connection"] = connection
+            command.upgrade(config, "head")
         yield engine
     finally:
         engine.dispose()

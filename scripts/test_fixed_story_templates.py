@@ -169,7 +169,9 @@ def run_case(case: dict, provider, service, template_resolver) -> dict:
         result["total_sec"] = round(time.time() - t0)
 
         # ── Step 5: Validate ──
-        result["round_trip"] = "OK" if verify_round_trip(delivery) else "FAIL"
+        round_trip_ok, round_trip_message = verify_round_trip(delivery)
+        result["round_trip"] = "OK" if round_trip_ok else "FAIL"
+        result["round_trip_message"] = round_trip_message
         integrity = validate_delivery_integrity(delivery)
         result["integrity_valid"] = integrity.valid
         result["integrity_errors"] = len(integrity.errors)
@@ -199,7 +201,7 @@ def run_case(case: dict, provider, service, template_resolver) -> dict:
         tokens = _token_stats(provider.call_history)
         result.update(tokens)
 
-        result["status"] = "ok"
+        result["status"] = "ok" if integrity.valid and round_trip_ok else "integrity_fail"
         print(f"  ✅ OK ({result['total_sec']}s) — {total_utts} utterances, "
               f"{tokens['total_tokens']} tokens, {tokens['llm_calls']} calls")
 
@@ -214,6 +216,9 @@ def run_case(case: dict, provider, service, template_resolver) -> dict:
         (case_dir / "_error.txt").write_text(
             f"Error: {e}\n\n{traceback.format_exc()}", encoding="utf-8"
         )
+
+    result.update(_token_stats(provider.call_history))
+    result["calls"] = provider.call_history
 
     return result
 
@@ -293,7 +298,7 @@ def main():
     for r in err:
         print(f"  [{r['case_id']}] {r.get('error', '?')[:80]}")
 
-    total_tokens = sum(r.get("total_tokens", 0) for r in ok)
+    total_tokens = sum(r.get("total_tokens", 0) for r in all_results)
     total_time = sum(r.get("total_sec", 0) for r in all_results)
     print(f"\nTotal: {total_time}s, {total_tokens} tokens, {len(ok)} stories")
 

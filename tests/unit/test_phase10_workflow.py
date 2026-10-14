@@ -76,6 +76,8 @@ class FixedPlanGenerator:
                 for i in range(1, prefs.target_episodes + 1)
             ],
             performance_plan={"format": "audio_drama"},
+            fictional_voice_roles=[FictionalVoiceRole(role_id="hero", story_name="林岚",
+                performer_id="hero", medium="live", dramatic_purpose="推动行动")],
             continuity_constraints=[source.story_summary] if source else [],
             change_summary=[feedback] if feedback else [],
         )
@@ -89,7 +91,8 @@ class FixedStoryExecutor:
         prefs = snapshot.preview.resolved_preferences
         source = snapshot.preview.source_reference
         episodes = []
-        for index, outline in enumerate(snapshot.preview.plan.episode_outlines, start=1):
+        for outline in snapshot.preview.plan.episode_outlines:
+            index = outline.index
             utterance = Utterance(
                 line_id=f"line-{index}",
                 kind="dialogue",
@@ -108,6 +111,10 @@ class FixedStoryExecutor:
                 scenes=[SceneDelivery(scene_id=f"scene-{index}", title="任务", utterances=[utterance])],
                 validation_status="PASSED", ready_for_playback=True,
             ))
+        generated_ids = [ep.episode_id for ep in episodes]
+        if source and snapshot.request["intent"] == "continue":
+            inherited = StoryDelivery.model_validate(source.source_content_snapshot["delivery"])
+            episodes = [*inherited.episodes, *episodes]
         delivery = StoryDelivery(
             story_id=source.story_id if source and snapshot.request["intent"] in ("continue", "revise") else uuid.uuid4().hex,
             story_version_id=uuid.uuid4().hex,
@@ -121,7 +128,9 @@ class FixedStoryExecutor:
             preview_blurb="一位城市居民面临新的选择，必须在现实阻碍中找到自己的方向。",
             story_mode=prefs.story_mode,
             outline=snapshot.preview.plan,
+            fictional_voice_roles=[v.model_dump() for v in snapshot.preview.plan.fictional_voice_roles],
             episodes=episodes,
+            generated_episode_ids=generated_ids,
             quality_report={"validation_status": "FAILED"},
         )
         report = validate_story_delivery(delivery)

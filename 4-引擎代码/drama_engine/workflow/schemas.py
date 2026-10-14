@@ -336,6 +336,7 @@ class GenerationJob(WorkflowModel):
     result_story_version_id: str | None = None
     error_code: str | None = None
     error_message: str | None = None
+    execution_token: str | None = None
     input_snapshot: ApprovedPlanSnapshot
     created_at: datetime = Field(default_factory=utcnow)
     updated_at: datetime = Field(default_factory=utcnow)
@@ -416,6 +417,13 @@ class EpisodeDelivery(WorkflowModel):
     ready_for_playback: bool = False
 
 
+class OperationCheck(WorkflowModel):
+    requirement_id: str = Field(min_length=1)
+    requirement: str = Field(min_length=1)
+    passed: bool = Field(strict=True)
+    evidence_quotes: list[str] = Field(default_factory=list)
+
+
 class PerformanceValidationReport(WorkflowModel):
     validation_status: Literal["PASSED", "FAILED"]
     spoken_line_count: int = 0
@@ -427,6 +435,7 @@ class PerformanceValidationReport(WorkflowModel):
     outline_alignment_passed: bool = True
     content_rating_passed: bool = True
     warnings: list[str] = Field(default_factory=list)
+    operation_checks: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class StoryDelivery(WorkflowModel):
@@ -455,6 +464,7 @@ class StoryDelivery(WorkflowModel):
     )
     outline: PlanContent
     episodes: list[EpisodeDelivery] = Field(default_factory=list)
+    generated_episode_ids: list[str] = Field(default_factory=list)
     continuity_state: dict[str, Any] = Field(default_factory=dict)
     quality_report: PerformanceValidationReport
     ready_for_playback: bool = False

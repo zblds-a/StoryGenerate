@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from sqlalchemy.orm import Session
+from sqlalchemy import func, text
 from ..core.settings import get_settings
 from ..config import PROMPT_VERSION, RuleLibrary
 
@@ -157,13 +158,44 @@ class InMemoryWorkflowRepository:
         with self._lock:
             if job.job_id not in self._jobs:
                 raise WorkflowNotFoundError(job.job_id)
+            if self._jobs[job.job_id].execution_token != job.execution_token:
+                raise WorkflowConflictError("JOB_EXECUTION_FENCED")
             self._jobs[job.job_id] = job.model_copy(update={"updated_at": utcnow()})
             return self._jobs[job.job_id]
+
+    def claim_job(self, job_id: str) -> GenerationJob:
+        with self._lock:
+            job = self.get_job(job_id)
+            if job is None:
+                raise WorkflowNotFoundError(job_id)
+            if job.status != WorkflowJobStatus.QUEUED:
+                raise WorkflowConflictError(f"JOB_NOT_RUNNABLE: {job.status}")
+            running = job.model_copy(update={"status": WorkflowJobStatus.RUNNING,
+                "stage": "generation", "progress_pct": 10, "execution_token": uuid.uuid4().hex})
+            self._jobs[job_id] = running
+            return running
+
+    def lock_job(self, job_id: str):
+        return self.get_job(job_id)
+
+    def fence_job(self, job_id: str, token: str) -> GenerationJob:
+        with self._lock:
+            job = self.get_job(job_id)
+            if job is None or job.execution_token != token or job.status not in (
+                WorkflowJobStatus.RUNNING, WorkflowJobStatus.VALIDATING, WorkflowJobStatus.CANCEL_REQUESTED
+            ):
+                raise WorkflowConflictError("JOB_RECOVERY_CONFLICT")
+            failed = job.model_copy(update={"status": WorkflowJobStatus.FAILED,
+                "stage": "interrupted", "error_code": "WORKER_INTERRUPTED", "execution_token": None})
+            self._jobs[job_id] = failed
+            return failed
 
     def save_story_version(self, delivery: StoryDelivery, principal_id: str = "local") -> StoryDelivery:
         with self._lock:
             if delivery.story_version_id in self._versions:
                 raise WorkflowConflictError("story versions are immutable")
+            delivery = delivery.model_copy(update={"version_no": 1 + max(
+                (v.version_no for v in self._versions.values() if v.story_id == delivery.story_id), default=0)})
             self._versions[delivery.story_version_id] = delivery
             self._version_principals[delivery.story_version_id] = self._principals.get(delivery.approved_plan_id, principal_id)
             return delivery
@@ -318,6 +350,9 @@ class SqlAlchemyWorkflowRepository:
         self, plan_id: str, expected_revision: int, fingerprint: str,
         idempotency_key: str, current_profile_revisions: dict[str, int] | None = None,
     ) -> GenerationJob:
+        if self.session.bind.dialect.name == "postgresql":
+            self.session.execute(text("SELECT pg_advisory_xact_lock(hashtextextended(:key, 0))"),
+                                 {"key": "story-approval:" + idempotency_key})
         with self.session.begin_nested():
             existing = self.session.query(StoryJobModel).filter_by(idempotency_key=idempotency_key).first()
             if existing:
@@ -382,9 +417,12 @@ class SqlAlchemyWorkflowRepository:
         return GenerationJob.model_validate(row.input_snapshot["job"]) if row and row.input_snapshot else None
 
     def save_job(self, job: GenerationJob) -> GenerationJob:
-        row = self.session.query(StoryJobModel).filter_by(job_id=job.job_id).first()
+        row = self.session.query(StoryJobModel).filter_by(job_id=job.job_id).populate_existing().with_for_update().first()
         if row is None:
             raise WorkflowNotFoundError(job.job_id)
+        current = GenerationJob.model_validate(row.input_snapshot["job"])
+        if current.execution_token != job.execution_token:
+            raise WorkflowConflictError("JOB_EXECUTION_FENCED")
         row.status = job.status
         row.current_stage = job.stage
         row.progress_pct = job.progress_pct
@@ -396,6 +434,35 @@ class SqlAlchemyWorkflowRepository:
         self.session.flush()
         return job
 
+    def lock_job(self, job_id: str):
+        row = self.session.query(StoryJobModel).filter_by(job_id=job_id).populate_existing().with_for_update().first()
+        return GenerationJob.model_validate(row.input_snapshot["job"]) if row else None
+
+    def claim_job(self, job_id: str) -> GenerationJob:
+        job = self.lock_job(job_id)
+        if job is None:
+            raise WorkflowNotFoundError(job_id)
+        if job.status != WorkflowJobStatus.QUEUED:
+            raise WorkflowConflictError(f"JOB_NOT_RUNNABLE: {job.status}")
+        running = job.model_copy(update={"status": WorkflowJobStatus.RUNNING,
+            "stage": "generation", "progress_pct": 10, "execution_token": uuid.uuid4().hex})
+        # Token changes are only permitted while the row is exclusively held.
+        row = self.session.query(StoryJobModel).filter_by(job_id=job_id).first()
+        row.input_snapshot = {"job": running.model_dump(mode="json")}
+        return self.save_job(running)
+
+    def fence_job(self, job_id: str, token: str) -> GenerationJob:
+        job = self.lock_job(job_id)
+        if job is None or job.execution_token != token or job.status not in (
+            WorkflowJobStatus.RUNNING, WorkflowJobStatus.VALIDATING, WorkflowJobStatus.CANCEL_REQUESTED
+        ):
+            raise WorkflowConflictError("JOB_RECOVERY_CONFLICT")
+        failed = job.model_copy(update={"status": WorkflowJobStatus.FAILED,
+            "stage": "interrupted", "error_code": "WORKER_INTERRUPTED", "execution_token": None})
+        row = self.session.query(StoryJobModel).filter_by(job_id=job_id).first()
+        row.input_snapshot = {"job": failed.model_dump(mode="json")}
+        return self.save_job(failed)
+
     def save_story_version(self, delivery: StoryDelivery, principal_id: str = "local") -> StoryDelivery:
         existing = self.session.query(StoryVersionModel).filter_by(
             story_version_id=delivery.story_version_id
@@ -405,6 +472,11 @@ class SqlAlchemyWorkflowRepository:
         plan = self.session.query(StoryPlanModel).filter_by(plan_id=delivery.approved_plan_id).first()
         if plan is None:
             raise WorkflowNotFoundError(delivery.approved_plan_id)
+        if self.session.bind.dialect.name == "postgresql":
+            self.session.execute(text("SELECT pg_advisory_xact_lock(hashtextextended(:story_id, 0))"),
+                                 {"story_id": delivery.story_id})
+        latest = self.session.query(func.max(StoryVersionModel.version_no)).filter_by(story_id=delivery.story_id).scalar()
+        delivery = delivery.model_copy(update={"version_no": (latest or 0) + 1})
         self.session.add(StoryVersionModel(
             story_version_id=delivery.story_version_id,
             story_id=delivery.story_id,
@@ -569,7 +641,12 @@ def _validate_source_version(repository, request: dict[str, Any], plan: PlanPrev
 def _source_from_delivery(
     delivery: StoryDelivery, reason: str, episode_id: str | None, position: int | None,
 ) -> ResolvedSourceReference:
+    if not delivery.ready_for_playback or delivery.status != "READY":
+        raise WorkflowConflictError("SOURCE_NOT_READY")
+    if episode_id and not any(ep.episode_id == episode_id for ep in delivery.episodes):
+        raise WorkflowConflictError("SOURCE_EPISODE_NOT_FOUND")
     content_snapshot = {
+        "delivery": delivery.model_dump(mode="json"),
         "approved_outline": delivery.outline.model_dump(mode="json"),
         "episodes": [{
             "episode_id": episode.episode_id,

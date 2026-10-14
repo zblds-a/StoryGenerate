@@ -72,7 +72,7 @@ StoryDelivery                          # 顶层：故事交付
 | `continuity_state` | dict | ✅ | 跨集连续性（facts, relationships, unresolved_threads） |
 | `quality_report` | PerformanceValidationReport | ✅ | 自动质量校验报告 |
 | `ready_for_playback` | bool | ✅ | 是否通过校验，可播放 |
-| `status` | enum | | "CANDIDATE" \| "APPROVED" \| "PLAYED" |
+| `status` | enum | | "CANDIDATE" \| "READY" \| "SUPERSEDED" \| "ARCHIVED" |
 | `engine_version` | string | | 创作引擎版本 |
 | `delivery_format_version` | string | ✅ | 交付格式版本，当前为 "1.0" |
 | `rule_versions` | dict | | 规则库版本信息 |
@@ -115,7 +115,7 @@ Plan 阶段生成的角色创作指南，存储为 dict：
 | `title` | string | ✅ | 剧集标题 |
 | `synopsis` | string | | 剧集梗概 |
 | `duration_target_sec` | int | ✅ | **目标**时长（秒），用户设定值 |
-| `duration_estimate_sec` | int | ✅ | **预估**时长（秒），基于文本字数 × 3.5 字符/秒的估算 |
+| `duration_estimate_sec` | int | ✅ | **预估**时长（秒），基于发声文本字符数 ÷ 3.5 字符/秒的估算 |
 | `scenes` | SceneDelivery[] | ✅ | 场景列表 |
 | `episode_summary` | string | | 剧集摘要 |
 | `ending_hook` | string | | 结尾悬念 |
@@ -168,7 +168,7 @@ Plan 阶段生成的角色创作指南，存储为 dict：
 
 ### 3.7 Emotion（情绪）
 
-枚举值：`neutral`, `happy`, `sad`, `worried`, `angry`, `surprised`, `fearful`, `reassuring`, `serious`, `playful`, `mysterious`, `tender`
+枚举值：`neutral`, `calm`, `happy`, `excited`, `sad`, `worried`, `angry`, `surprised`, `fearful`, `reassuring`, `serious`, `playful`, `mysterious`, `tender`
 
 ### 3.8 EmphasisSpan（重读区间）
 

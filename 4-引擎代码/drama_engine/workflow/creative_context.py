@@ -95,6 +95,7 @@ def build_episode_creative_packet(
     min_chars: int,
     ideal_chars: int,
     max_chars: int,
+    continuity_override: dict | None = None,
 ) -> EpisodeCreativePacket:
     """Build the writer-facing packet without changing the approved plan."""
     preview = snapshot.preview
@@ -121,7 +122,7 @@ def build_episode_creative_packet(
         ))
 
     source = preview.source_reference
-    continuity = source.continuity_snapshot if source else {}
+    continuity = continuity_override if continuity_override is not None else (source.continuity_snapshot if source else {})
     portrayals = {item.role_id: item for item in preview.plan.character_portrayals}
     character_logic = []
     for item in preview.character_snapshots:
