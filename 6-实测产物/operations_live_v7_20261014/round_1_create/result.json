@@ -1,0 +1,118 @@
+{
+  "label": "round_1_create",
+  "intent": "create",
+  "status": "passed",
+  "story_id": "1d1ef3aee8d04ff5b31006aa6656e7d2",
+  "version_no": 1,
+  "story_version_id": "9e184ab651ce4cc4b508a0181f6947f9",
+  "parent": null,
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "先别下结论。万用表显示阻值趋近于零，是短路，不是断路。线没断，没人剪。",
+        "找到了。外墙旧电源接头，防水胶老化，雨水渗进去了。",
+        "要是这广播站真废了，老街坊们得多不习惯啊。等彻底修好，恢复广播那天，我在节目里敲三声铃，给大伙儿报个平安，行吗？",
+        "先擦擦头发吧，别着凉。明天上午我带仪器，来做最后的通电验收。",
+        "擦干净了。明天验收完，就能敲这三声铃了吧？",
+        "那就修到通为止。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3",
+        "ep1-s2-l1",
+        "ep1-s2-l5",
+        "ep2-s2-l2",
+        "ep2-s2-l6",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "先擦擦头发吧，别着凉。明天上午我带仪器，来做最后的通电验收。",
+        "如果……明天验收还是通不过，该怎么办？"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l2",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+      "requirement_id": "constraint:fault",
+      "evidence_quotes": [
+        "先别下结论。万用表显示阻值趋近于零，是短路，不是断路。线没断，没人剪。",
+        "找到了。外墙旧电源接头，防水胶老化，雨水渗进去了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3",
+        "ep1-s2-l1"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+      "requirement_id": "constraint:identities",
+      "evidence_quotes": [
+        "别动。主电源跳闸，设备没烧。",
+        "要是这广播站真废了，老街坊们得多不习惯啊。等彻底修好，恢复广播那天，我在节目里敲三声铃，给大伙儿报个平安，行吗？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s2-l5"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+      "requirement_id": "constraint:cooperation",
+      "evidence_quotes": [
+        "我帮你照着。给，绝缘胶带。唉，我还以为真有人搞破坏，神经过敏了。",
+        "卡扣！帮我按住右边，别让水灌进去！",
+        "我拿身体挡着呢，你快盖！这雨太邪门了！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep2-s1-l1",
+        "ep2-s1-l2"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+      "requirement_id": "constraint:deferred_bell",
+      "evidence_quotes": [
+        "擦干净了。明天验收完，就能敲这三声铃了吧？",
+        "只要通电正常，就能敲。",
+        "门被轻轻关上，把未尽的话语和那只安静的铜铃，一起留在了雨后的黑夜里。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l6",
+        "ep2-s2-l7",
+        "ep2-s3-l5"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 53030,
+  "reported_output_tokens": 48944,
+  "reported_total_tokens": 101974,
+  "reasoning_tokens_included_in_output": 37533,
+  "cache_read_tokens": 9216,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 481.618,
+  "wall_time_sec": 482.797
+}

@@ -1,0 +1,6 @@
+{
+  "label": "special_continue_again",
+  "intent": "continue",
+  "status": "blocked",
+  "reason": "原来源Continue时间表述被拒绝验收，最终版本重新生成"
+}

@@ -1,0 +1,14 @@
+{
+  "label": "special_arc",
+  "intent": "revise",
+  "status": "failed",
+  "error_type": "WorkerInterrupted",
+  "error": "被闭合证据/多集结局修复替代的旧批次，进程终止并恢复",
+  "pending_capture_ids": [
+    "4b89c82f9c834f13bc9e3b9d2f5f8444"
+  ],
+  "potential_inflight_usage_unknown": true,
+  "reported_input_tokens": 29532,
+  "reported_output_tokens": 3623,
+  "persisted_job_status": "FAILED"
+}

@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "彻底排查并修复老街广播站的线路故障，确保用电安全。",
+    "motivation": "",
+    "fear": "避免在维修时与人产生不必要的情感交流，习惯用专业术语和冷淡态度保持距离。",
+    "speech_style": "简短具体，先确认再行动。常用祈使句，受压时会用“看数据”“测电压”来转移话题。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "认为周野是个只会催进度的外行，但在看到周野对街坊的真心后，逐渐愿意让他参与辅助工作。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "尽快恢复广播站播音，让老街坊重新听到社区声音。",
+    "motivation": "",
+    "fear": "害怕自己作为主持人失去与社区的联系，用热心和自嘲掩饰内心的焦虑与无力感。",
+    "speech_style": "热心、会自嘲。喜欢用比喻和玩笑化解尴尬，受压时会语速加快并反复强调“街坊们等着呢”。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "起初觉得林岚太冷漠、不近人情，后来在共同维修中理解了她的严谨，产生依赖与信任。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

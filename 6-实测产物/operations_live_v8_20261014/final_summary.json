@@ -1,0 +1,2435 @@
+{
+  "expected_cases": 18,
+  "results": [
+    {
+      "label": "round_1_continue",
+      "intent": "continue",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 3,
+      "story_version_id": "a1a7476c911e4009bdb841b97f6d1f40",
+      "parent": "52101a4ab82f484eb1375d0d9c2700a6",
+      "episodes": 4,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "带负载试音通过，待最终阻抗校准。现在还不能正式开播。",
+            "两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s3-l2",
+            "ep4-s3-l3"
+          ],
+          "raw_evidence_quotes": [
+            "带负载试音通过，待最终阻抗校准。现在还不能正式开播。",
+            "两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "行，都听你的。街坊们等了这么久，也不差这最后十分钟。岚姐，你慢慢弄，我给你打下手。",
+            "阻抗匹配完成。周野，对着麦克风试音。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s3-l5",
+            "ep4-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "行，都听你的。街坊们等了这么久，也不差这最后十分钟。岚姐，你慢慢弄，我给你打下手。",
+            "阻抗匹配完成。周野，对着麦克风试音。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "结尾必须用sfx、action或narration明确呈现已经发生的三声铃响，例如叮、叮、叮；不能只写角色宣布要敲或说我敲了。",
+          "requirement_id": "constraint:bell_effect",
+          "evidence_quotes": [
+            "两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s3-l3"
+          ],
+          "raw_evidence_quotes": [
+            "两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "继承来源角色身份、姓名和演绎者",
+          "requirement_id": "identity",
+          "evidence_quotes": [
+            "嘶！怎么这么大动静！我得赶紧推上推子，街坊们可都等着降温预警呢！",
+            "别动！刚修好的主板必须进行带负载试音，现在推上去，系统不稳直接烧。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s1-l2",
+            "ep3-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "嘶！怎么这么大动静！我得赶紧推上推子，街坊们可都等着降温预警呢！",
+            "别动！刚修好的主板必须进行带负载试音，现在推上去，系统不稳直接烧。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "不得违背来源已发生事实",
+          "requirement_id": "facts",
+          "evidence_quotes": [
+            "主板没烧。是碳膜电位器氧化，导致接触不良。把无水酒精递给我。",
+            "信号很干净，底噪也压住了。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s2-l3",
+            "ep4-s1-l5"
+          ],
+          "raw_evidence_quotes": [
+            "主板没烧。是碳膜电位器氧化，导致接触不良。把无水酒精递给我。",
+            "信号很干净，底噪也压住了。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "继承并合理发展来源关系",
+          "requirement_id": "relationships",
+          "evidence_quotes": [
+            "滴几滴？哎，以前我总催你们维修班，还以为你们磨洋工。今天算见识了，这带负载排查的含金量，我是真服了。",
+            "岚姐，这阵子辛苦了，多亏了你。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s2-l5",
+            "ep4-s3-l2"
+          ],
+          "raw_evidence_quotes": [
+            "滴几滴？哎，以前我总催你们维修班，还以为你们磨洋工。今天算见识了，这带负载排查的含金量，我是真服了。",
+            "岚姐，这阵子辛苦了，多亏了你。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "按指令继承或回收伏笔，不能凭空消失",
+          "requirement_id": "threads",
+          "evidence_quotes": [
+            "说好了的。验收通过，第一声由我来敲。",
+            "两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s2-l7",
+            "ep4-s3-l3"
+          ],
+          "raw_evidence_quotes": [
+            "说好了的。验收通过，第一声由我来敲。",
+            "两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。"
+          ]
+        }
+      ],
+      "calls": 11,
+      "reported_input_tokens": 136620,
+      "reported_output_tokens": 50641,
+      "reported_total_tokens": 187261,
+      "reasoning_tokens_included_in_output": 39939,
+      "cache_read_tokens": 9216,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 468.363,
+      "wall_time_sec": 469.312
+    },
+    {
+      "label": "round_1_create",
+      "intent": "create",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 1,
+      "story_version_id": "a04475a957cb49abbccc0cf430ee4eac",
+      "parent": null,
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "说好了的。验收通过，由我来敲。",
+            "林岚指了指墙上的黄铜铃铛。周野愣了一下，笑着放下麦克风，伸手向铃铛。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l8",
+            "ep1-s3-l7",
+            "ep2-s3-l7",
+            "ep2-s3-l8"
+          ],
+          "raw_evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "说好了的。验收通过，由我来敲。",
+            "林岚指了指墙上的黄铜铃铛。周野愣了一下，笑着放下麦克风，伸手向铃铛。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l7",
+            "ep2-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+          "requirement_id": "constraint:fault",
+          "evidence_quotes": [
+            "林岚拆开电源面板，万用表发出急促的滴滴声。",
+            "阻值归零，线皮没破，是内部击穿。没人剪线。",
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l2",
+            "ep1-s2-l3",
+            "ep1-s2-l8"
+          ],
+          "raw_evidence_quotes": [
+            "林岚拆开电源面板，万用表发出急促的滴滴声。",
+            "阻值归零，线皮没破，是内部击穿。没人剪线。",
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+          "requirement_id": "constraint:identities",
+          "evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听天气预报呢！",
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1",
+            "ep1-s2-l9"
+          ],
+          "raw_evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听天气预报呢！",
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+          "requirement_id": "constraint:cooperation",
+          "evidence_quotes": [
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。",
+            "知道就行。手电拿稳，别晃。",
+            "不用。你拿夹子固定住针脚，别抖。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l9",
+            "ep1-s2-l10",
+            "ep2-s2-l3"
+          ],
+          "raw_evidence_quotes": [
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。",
+            "知道就行。手电拿稳，别晃。",
+            "不用。你拿夹子固定住针脚，别抖。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+          "requirement_id": "constraint:deferred_bell",
+          "evidence_quotes": [
+            "说好了的。验收通过，由我来敲。",
+            "林岚指了指墙上的黄铜铃铛。周野愣了一下，笑着放下麦克风，伸手向铃铛。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l7",
+            "ep2-s3-l8"
+          ],
+          "raw_evidence_quotes": [
+            "说好了的。验收通过，由我来敲。",
+            "林岚指了指墙上的黄铜铃铛。周野愣了一下，笑着放下麦克风，伸手向铃铛。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 55046,
+      "reported_output_tokens": 52676,
+      "reported_total_tokens": 107722,
+      "reasoning_tokens_included_in_output": 40303,
+      "cache_read_tokens": 9216,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 496.064,
+      "wall_time_sec": 497.203
+    },
+    {
+      "label": "round_1_remix",
+      "intent": "remix",
+      "status": "passed",
+      "story_id": "a953b21b4dc04899914a9cd09af1eabf",
+      "version_no": 1,
+      "story_version_id": "75a62658a75f44f5993feace667dd5a0",
+      "parent": "a1a7476c911e4009bdb841b97f6d1f40",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。 两集均发生在同一个晚上：周野本晚制造断电并隐瞒，林岚本晚查明原因，同晚公开道歉；广播站计划在明天关停。必须交代当前断电发生在今晚，不能道歉称昨天的故障。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "没、没有！是设备老化短路，自己跳闸的。明天广播站就要永久关停了，今晚的告别广播……只能取消了，你早点回去吧。",
+            "街坊们，对不起。今晚没有设备老化。是我害怕明天关停，害怕亲口说出再见，自己拔了电源。",
+            "明天广播站关停，但老街的声音不会断。设备会捐给社区，以后每周日晚，我们继续做“老街回声”广播。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3",
+            "ep2-s2-l2",
+            "ep2-s3-l1"
+          ],
+          "raw_evidence_quotes": [
+            "没、没有！是设备老化短路，自己跳闸的。明天广播站就要永久关停了，今晚的告别广播……只能取消了，你早点回去吧。",
+            "街坊们，对不起。今晚没有设备老化。是我害怕明天关停，害怕亲口说出再见，自己拔了电源。",
+            "明天广播站关停，但老街的声音不会断。设备会捐给社区，以后每周日晚，我们继续做“老街回声”广播。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "没、没有！是设备老化短路，自己跳闸的。明天广播站就要永久关停了，今晚的告别广播……只能取消了，你早点回去吧。",
+            "我不敢面对告别，搞砸了今晚。对不起大家，也对不起林岚，让你半夜来排查我的谎言。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3",
+            "ep2-s2-l3"
+          ],
+          "raw_evidence_quotes": [
+            "没、没有！是设备老化短路，自己跳闸的。明天广播站就要永久关停了，今晚的告别广播……只能取消了，你早点回去吧。",
+            "我不敢面对告别，搞砸了今晚。对不起大家，也对不起林岚，让你半夜来排查我的谎言。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "两集均发生同一晚；本晚断电、本晚调查、本晚道歉，广播站计划明天关停。正文明确这一时间关系，不得把本晚断电写成昨天。",
+          "requirement_id": "constraint:calendar",
+          "evidence_quotes": [
+            "没、没有！是设备老化短路，自己跳闸的。明天广播站就要永久关停了，今晚的告别广播……只能取消了，你早点回去吧。",
+            "我不敢面对告别，搞砸了今晚。对不起大家，也对不起林岚，让你半夜来排查我的谎言。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3",
+            "ep2-s2-l3"
+          ],
+          "raw_evidence_quotes": [
+            "没、没有！是设备老化短路，自己跳闸的。明天广播站就要永久关停了，今晚的告别广播……只能取消了，你早点回去吧。",
+            "我不敢面对告别，搞砸了今晚。对不起大家，也对不起林岚，让你半夜来排查我的谎言。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+          "requirement_id": "remix_instruction",
+          "evidence_quotes": [
+            "总进线电压二百二，外部供电正常。不是短路，是内部被人为切断了。",
+            "合作整改与移交清单。签个字吧，周主播。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l1",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "总进线电压二百二，外部供电正常。不是短路，是内部被人为切断了。",
+            "合作整改与移交清单。签个字吧，周主播。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "林岚是维修员，周野是主持人",
+          "requirement_id": "retain:0",
+          "evidence_quotes": [
+            "我是维修员林岚。我承诺每周提前做设备巡检，保证回声不断线。",
+            "合作整改与移交清单。签个字吧，周主播。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "我是维修员林岚。我承诺每周提前做设备巡检，保证回声不断线。",
+            "合作整改与移交清单。签个字吧，周主播。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "故事发生在老街广播站",
+          "requirement_id": "retain:1",
+          "evidence_quotes": [
+            "没、没有！是设备老化短路，自己跳闸的。明天广播站就要永久关停了，今晚的告别广播……只能取消了，你早点回去吧。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "没、没有！是设备老化短路，自己跳闸的。明天广播站就要永久关停了，今晚的告别广播……只能取消了，你早点回去吧。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+          "requirement_id": "transform:0",
+          "evidence_quotes": [
+            "是我拔的……都是我干的！明天一早，广播站这块牌子就要摘了。我害怕面对街坊们，害怕在麦克风前说出那句“再见”……只要没电，我就不用亲口送走它了。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l1"
+          ],
+          "raw_evidence_quotes": [
+            "是我拔的……都是我干的！明天一早，广播站这块牌子就要摘了。我害怕面对街坊们，害怕在麦克风前说出那句“再见”……只要没电，我就不用亲口送走它了。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "结局改为周野公开认错并合作整改，不能以三声铃报平安收束",
+          "requirement_id": "transform:1",
+          "evidence_quotes": [
+            "街坊们，对不起。今晚没有设备老化。是我害怕明天关停，害怕亲口说出再见，自己拔了电源。",
+            "合作整改与移交清单。签个字吧，周主播。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s2-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "街坊们，对不起。今晚没有设备老化。是我害怕明天关停，害怕亲口说出再见，自己拔了电源。",
+            "合作整改与移交清单。签个字吧，周主播。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 178748,
+      "reported_output_tokens": 49143,
+      "reported_total_tokens": 227891,
+      "reasoning_tokens_included_in_output": 38296,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 412.711,
+      "wall_time_sec": 414.234
+    },
+    {
+      "label": "round_1_revise",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 2,
+      "story_version_id": "52101a4ab82f484eb1375d0d9c2700a6",
+      "parent": "a04475a957cb49abbccc0cf430ee4eac",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "先别动推子。周野，你帮我核对一下控制台的推子和指示灯状态，确认设备端无异常，我们再决定下一步排查方向。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "先别动推子。周野，你帮我核对一下控制台的推子和指示灯状态，确认设备端无异常，我们再决定下一步排查方向。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l7",
+            "ep2-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "先别动推子。周野，你帮我核对一下控制台的推子和指示灯状态，确认设备端无异常，我们再决定下一步排查方向。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "先别动推子。周野，你帮我核对一下控制台的推子和指示灯状态，确认设备端无异常，我们再决定下一步排查方向。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "电容还没焊，现在推闸通电，主板瞬间就会击穿烧毁。把绝缘夹递给我。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l8",
+            "ep2-s1-l6"
+          ],
+          "raw_evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "电容还没焊，现在推闸通电，主板瞬间就会击穿烧毁。把绝缘夹递给我。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听天气预报呢！",
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1",
+            "ep1-s2-l9"
+          ],
+          "raw_evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听天气预报呢！",
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。"
+          ]
+        }
+      ],
+      "calls": 4,
+      "reported_input_tokens": 86968,
+      "reported_output_tokens": 11945,
+      "reported_total_tokens": 98913,
+      "reasoning_tokens_included_in_output": 9076,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 106.727,
+      "wall_time_sec": 107.844
+    },
+    {
+      "label": "round_2_continue",
+      "intent": "continue",
+      "status": "passed",
+      "story_id": "8cf08dd57dcb49999a0a1dfd74055af8",
+      "version_no": 3,
+      "story_version_id": "4ec5893f2e8c4d4aba858036a1446de1",
+      "parent": "f7c83bc7b5b3474a8383ea68c02999c3",
+      "episodes": 4,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "喇叭传出忽大忽小的声音，伴随轻微破音“滋啦”。",
+            "主推子老化，登记待校准更换。今天太晚，买不到原装配件了。",
+            "看着电平表，指针稳在零分贝，没有跳动。输出完美，带载试音彻底通过。",
+            "清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s2-l7",
+            "ep3-s3-l6",
+            "ep4-s2-l5",
+            "ep4-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "喇叭传出忽大忽小的声音，伴随轻微破音“滋啦”。",
+            "主推子老化，登记待校准更换。今天太晚，买不到原装配件了。",
+            "看着电平表，指针稳在零分贝，没有跳动。输出完美，带载试音彻底通过。",
+            "清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "主推子老化，登记待校准更换。今天太晚，买不到原装配件了。",
+            "明天一早。配件明早到，你提前准备好铃铛，等我换完，你来敲。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s3-l6",
+            "ep3-s3-l8"
+          ],
+          "raw_evidence_quotes": [
+            "主推子老化，登记待校准更换。今天太晚，买不到原装配件了。",
+            "明天一早。配件明早到，你提前准备好铃铛，等我换完，你来敲。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "结尾必须用sfx、action或narration明确呈现已经发生的三声铃响，例如叮、叮、叮；不能只写角色宣布要敲或说我敲了。",
+          "requirement_id": "constraint:bell_effect",
+          "evidence_quotes": [
+            "清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "继承来源角色身份、姓名和演绎者",
+          "requirement_id": "identity",
+          "evidence_quotes": [
+            "接假负载。",
+            "呼……这大功率铁疙瘩真沉，我的腰都快闪了。接线柱到底在哪？"
+          ],
+          "evidence_line_ids": [
+            "ep3-s1-l2",
+            "ep3-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "接假负载。",
+            "呼……这大功率铁疙瘩真沉，我的腰都快闪了。接线柱到底在哪？"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "不得违背来源已发生事实",
+          "requirement_id": "facts",
+          "evidence_quotes": [
+            "推闸。看万用表读数，输出电压稳定，底噪正常。功放安全，没烧坏。",
+            "扶稳面板，手别抖。引脚有点氧化，我用无水酒精棉片仔细擦一下，不然接触还是不好。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s2-l2",
+            "ep4-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "推闸。看万用表读数，输出电压稳定，底噪正常。功放安全，没烧坏。",
+            "扶稳面板，手别抖。引脚有点氧化，我用无水酒精棉片仔细擦一下，不然接触还是不好。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "继承并合理发展来源关系",
+          "requirement_id": "relationships",
+          "evidence_quotes": [
+            "林岚……谢谢你。谢谢你没放弃这破站，也没放弃我。以前我总瞎操心，以后后勤粗活我都包了，你只管修。",
+            "嗯，真好听。以后这广播站的铃声，咱们一起守着，再也不让它断了。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s3-l2",
+            "ep4-s3-l6"
+          ],
+          "raw_evidence_quotes": [
+            "林岚……谢谢你。谢谢你没放弃这破站，也没放弃我。以前我总瞎操心，以后后勤粗活我都包了，你只管修。",
+            "嗯，真好听。以后这广播站的铃声，咱们一起守着，再也不让它断了。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "按指令继承或回收伏笔，不能凭空消失",
+          "requirement_id": "threads",
+          "evidence_quotes": [
+            "清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。",
+            "听见了吗？窗外大家都在欢呼呢。这三声铃，真好听。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s3-l4",
+            "ep4-s3-l5"
+          ],
+          "raw_evidence_quotes": [
+            "清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。",
+            "听见了吗？窗外大家都在欢呼呢。这三声铃，真好听。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 143009,
+      "reported_output_tokens": 49081,
+      "reported_total_tokens": 192090,
+      "reasoning_tokens_included_in_output": 38109,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 455.651,
+      "wall_time_sec": 456.422
+    },
+    {
+      "label": "round_2_create",
+      "intent": "create",
+      "status": "passed",
+      "story_id": "8cf08dd57dcb49999a0a1dfd74055af8",
+      "version_no": 1,
+      "story_version_id": "7497ced975ff43df8e940cea79792f69",
+      "parent": null,
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+            "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+            "等等！别敲！",
+            "先做假负载测试。铃放下，去拿负载电阻。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l3",
+            "ep1-s3-l2",
+            "ep2-s3-l6",
+            "ep2-s3-l10"
+          ],
+          "raw_evidence_quotes": [
+            "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+            "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+            "等等！别敲！",
+            "先做假负载测试。铃放下，去拿负载电阻。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+            "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+            "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+          "requirement_id": "constraint:fault",
+          "evidence_quotes": [
+            "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+            "这旧电源接头的防水胶布都老化开裂了……上次暴雨我忘关窗，雨水顺着墙缝渗进来了。我的锅，真对不住。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l3",
+            "ep1-s2-l5"
+          ],
+          "raw_evidence_quotes": [
+            "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+            "这旧电源接头的防水胶布都老化开裂了……上次暴雨我忘关窗，雨水顺着墙缝渗进来了。我的锅，真对不住。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+          "requirement_id": "constraint:identities",
+          "evidence_quotes": [
+            "先别急着下定论，也别去惹事。把手电筒拿过来，照一下控制台后盖。",
+            "好嘞。林岚，其实你心里还是在乎这广播站的，只是嘴上不承认，对吧？"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3",
+            "ep1-s2-l7"
+          ],
+          "raw_evidence_quotes": [
+            "先别急着下定论，也别去惹事。把手电筒拿过来，照一下控制台后盖。",
+            "好嘞。林岚，其实你心里还是在乎这广播站的，只是嘴上不承认，对吧？"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+          "requirement_id": "constraint:cooperation",
+          "evidence_quotes": [
+            "现在自责没用。把水渍擦干，拿这卷防水胶带，我缠你递。",
+            "这后盖空间太挤了，我帮你拿吸锡器。焊锡丝要递到哪个角度？"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l6",
+            "ep2-s2-l2"
+          ],
+          "raw_evidence_quotes": [
+            "现在自责没用。把水渍擦干，拿这卷防水胶带，我缠你递。",
+            "这后盖空间太挤了，我帮你拿吸锡器。焊锡丝要递到哪个角度？"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+          "requirement_id": "constraint:deferred_bell",
+          "evidence_quotes": [
+            "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！",
+            "等等！别敲！",
+            "先做假负载测试。铃放下，去拿负载电阻。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l4",
+            "ep2-s3-l6",
+            "ep2-s3-l10"
+          ],
+          "raw_evidence_quotes": [
+            "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！",
+            "等等！别敲！",
+            "先做假负载测试。铃放下，去拿负载电阻。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 55100,
+      "reported_output_tokens": 48555,
+      "reported_total_tokens": 103655,
+      "reasoning_tokens_included_in_output": 36570,
+      "cache_read_tokens": 2304,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 460.617,
+      "wall_time_sec": 462.062
+    },
+    {
+      "label": "round_2_remix",
+      "intent": "remix",
+      "status": "passed",
+      "story_id": "936924b2f11e4b3da8dbc15c31af4fc3",
+      "version_no": 1,
+      "story_version_id": "65dacba5bcb3497cad9931cca9ed0235",
+      "parent": "4ec5893f2e8c4d4aba858036a1446de1",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+            "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。我总以为拖延就能留住过去，但我错了，这反而剥夺了大家好好道别的权利。",
+            "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep2-s3-l2",
+            "ep2-s3-l7"
+          ],
+          "raw_evidence_quotes": [
+            "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+            "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。",
+            "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！我的锅，昨晚我走得急没锁门，让他们钻了空子……",
+            "只要它一直“坏”着，我就不用播那期告别节目。老街的记忆……是不是就能多留一天？林岚，我不敢说再见，我怕一说出口，这十年的声音就真的散了。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3",
+            "ep2-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！我的锅，昨晚我走得急没锁门，让他们钻了空子……",
+            "只要它一直“坏”着，我就不用播那期告别节目。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+          "requirement_id": "remix_instruction",
+          "evidence_quotes": [
+            "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+            "现在，我和林岚决定用最后的时间，不再播干巴巴的告别语，而是为大家做一份老街声音档案。把早市的叫卖声、树下的聊天声，全都录下来。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep2-s3-l3"
+          ],
+          "raw_evidence_quotes": [
+            "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+            "现在，我和林岚决定用最后的时间，不再播干巴巴的告别语，而是为大家做一份老街声音档案。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "林岚是维修员，周野是主持人",
+          "requirement_id": "retain:0",
+          "evidence_quotes": [
+            "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+            "老街坊们，这可能是我们最后一次……"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep1-s3-l3"
+          ],
+          "raw_evidence_quotes": [
+            "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+            "老街坊们，这可能是我们最后一次……"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "故事发生在老街广播站",
+          "requirement_id": "retain:1",
+          "evidence_quotes": [
+            "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！我的锅，昨晚我走得急没锁门，让他们钻了空子……"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+          "requirement_id": "transform:0",
+          "evidence_quotes": [
+            "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "结局改为周野公开认错并合作整改，不能以三声铃报平安收束",
+          "requirement_id": "transform:1",
+          "evidence_quotes": [
+            "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。我总以为拖延就能留住过去，但我错了，这反而剥夺了大家好好道别的权利。",
+            "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l2",
+            "ep2-s3-l7"
+          ],
+          "raw_evidence_quotes": [
+            "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。",
+            "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 187833,
+      "reported_output_tokens": 45199,
+      "reported_total_tokens": 233032,
+      "reasoning_tokens_included_in_output": 35448,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 396.161,
+      "wall_time_sec": 397.391
+    },
+    {
+      "label": "round_2_revise",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "8cf08dd57dcb49999a0a1dfd74055af8",
+      "version_no": 2,
+      "story_version_id": "f7c83bc7b5b3474a8383ea68c02999c3",
+      "parent": "7497ced975ff43df8e940cea79792f69",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "先别急着下定论。咱们先共同核对控制台设备状态，确认事实再决定下一步。把手电筒拿过来，照一下后盖。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3"
+          ],
+          "raw_evidence_quotes": []
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+            "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": []
+        },
+        {
+          "passed": true,
+          "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "先别急着下定论。咱们先共同核对控制台设备状态，确认事实再决定下一步。把手电筒拿过来，照一下后盖。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3"
+          ],
+          "raw_evidence_quotes": []
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+            "继电器卡死了。别碰铃铛，快切断总电源！",
+            "输出电平不对，指针飘了。直接推上去会烧功放。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l3",
+            "ep1-s3-l8",
+            "ep2-s3-l8"
+          ],
+          "raw_evidence_quotes": []
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "先别急着下定论。咱们先共同核对控制台设备状态，确认事实再决定下一步。把手电筒拿过来，照一下后盖。",
+            "好嘞。林岚，其实你心里还是在乎这广播站的，只是嘴上不承认，对吧？"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l3",
+            "ep1-s2-l7"
+          ],
+          "raw_evidence_quotes": []
+        }
+      ],
+      "calls": 4,
+      "reported_input_tokens": 88789,
+      "reported_output_tokens": 10191,
+      "reported_total_tokens": 98980,
+      "reasoning_tokens_included_in_output": 7457,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 88.437,
+      "wall_time_sec": 89.282
+    },
+    {
+      "label": "round_3_continue",
+      "intent": "continue",
+      "status": "passed",
+      "story_id": "63d93c8162c54571a17db7908803f4bc",
+      "version_no": 3,
+      "story_version_id": "dce01aac37ed46e0b1bfd05c15a7f8a2",
+      "parent": "6d6970df1fb749388fab09b752a388fe",
+      "episodes": 4,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "击锤复位了。推负载开关，准备带负载试音。",
+            "电位器碳膜磨损，待物理限位校准。记在日志上了。",
+            "锁死了。电位器齿轮物理锁死，音量彻底稳住了。你手别抖。",
+            "用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s2-l5",
+            "ep3-s2-l10",
+            "ep4-s1-l2",
+            "ep4-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "击锤复位了。推负载开关，准备带负载试音。",
+            "电位器碳膜磨损，待物理限位校准。记在日志上了。",
+            "锁死了。电位器齿轮物理锁死，音量彻底稳住了。你手别抖。",
+            "用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "傍晚到了。岚哥，我坐好了，随时能开口。",
+            "配重？这大傍晚的，我上哪给你找标准件去啊？",
+            "哎哟我的妈，刚才那啸叫差点把我耳膜震穿！太好了，外头天都黑透了，街坊们全搬着小板凳在院子里等着呢。现在能正式播了吗？"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l2",
+            "ep3-s1-l4",
+            "ep4-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "傍晚到了。岚哥，我坐好了，随时能开口。",
+            "配重？这大傍晚的，我上哪给你找标准件去啊？",
+            "哎哟我的妈，刚才那啸叫差点把我耳膜震穿！太好了，外头天都黑透了，街坊们全搬着小板凳在院子里等着呢。现在能正式播了吗？"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "结尾必须用sfx、action或narration明确呈现已经发生的三声铃响，例如叮、叮、叮；不能只写角色宣布要敲或说我敲了。",
+          "requirement_id": "constraint:bell_effect",
+          "evidence_quotes": [
+            "用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "继承来源角色身份、姓名和演绎者",
+          "requirement_id": "identity",
+          "evidence_quotes": [
+            "弹簧老化，除锈后张力不够，得重新调配重。",
+            "是不是弄坏了？这弹簧怎么弹出来了！外头街坊可都搬着板凳等着听响呢！"
+          ],
+          "evidence_line_ids": [
+            "ep3-s1-l3",
+            "ep3-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "弹簧老化，除锈后张力不够，得重新调配重。",
+            "是不是弄坏了？这弹簧怎么弹出来了！外头街坊可都搬着板凳等着听响呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "不得违背来源已发生事实",
+          "requirement_id": "facts",
+          "evidence_quotes": [
+            "老街坊们，大家晚上好。这里是老街广播站。昨晚屋顶漏水，让咱们的广播哑了嗓子，让大家跟着担惊受怕了。但请大家放心，旧接头换了，飞线接好了，老机器也重新转起来了。",
+            "除锈剂喷洒声，用力扳动击锤的金属摩擦声，突然“咔哒”一声脆响，弹簧滑脱。窗外隐约传来街坊聚集的人声。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s2-l2",
+            "ep3-s1-l1"
+          ],
+          "raw_evidence_quotes": [
+            "老街坊们，大家晚上好。这里是老街广播站。昨晚屋顶漏水，让咱们的广播哑了嗓子，让大家跟着担惊受怕了。但请大家放心，旧接头换了，飞线接好了，老机器也重新转起来了。",
+            "除锈剂喷洒声，用力扳动击锤的金属摩擦声，突然“咔哒”一声脆响，弹簧滑脱。窗外隐约传来街坊聚集的人声。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "继承并合理发展来源关系",
+          "requirement_id": "relationships",
+          "evidence_quotes": [
+            "别急，街坊们不在乎音量完不完美，在乎的是咱们还在。",
+            "这几十个小时，多亏了咱们的维修员林岚。他通宵飞线，拿硬币做配重，满手都是机油和铁锈。他修好的不仅是这台老机器，更是咱们老街的底气。只要这大喇叭还能响，咱们街坊邻居的心就永远散不了。"
+          ],
+          "evidence_line_ids": [
+            "ep3-s3-l5",
+            "ep4-s2-l3"
+          ],
+          "raw_evidence_quotes": [
+            "别急，街坊们不在乎音量完不完美，在乎的是咱们还在。",
+            "这几十个小时，多亏了咱们的维修员林岚。他通宵飞线，拿硬币做配重，满手都是机油和铁锈。他修好的不仅是这台老机器，更是咱们老街的底气。只要这大喇叭还能响，咱们街坊邻居的心就永远散不了。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "按指令继承或回收伏笔，不能凭空消失",
+          "requirement_id": "threads",
+          "evidence_quotes": [
+            "用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。",
+            "锁死了。电位器齿轮物理锁死，音量彻底稳住了。你手别抖。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s3-l4",
+            "ep4-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。",
+            "锁死了。电位器齿轮物理锁死，音量彻底稳住了。你手别抖。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 143577,
+      "reported_output_tokens": 49931,
+      "reported_total_tokens": 193508,
+      "reasoning_tokens_included_in_output": 39131,
+      "cache_read_tokens": 6912,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 457.601,
+      "wall_time_sec": 458.39
+    },
+    {
+      "label": "round_3_create",
+      "intent": "create",
+      "status": "passed",
+      "story_id": "63d93c8162c54571a17db7908803f4bc",
+      "version_no": 1,
+      "story_version_id": "7fc964639a7a41999c8807b7f9e37c68",
+      "parent": null,
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+            "外头线路昨晚我理过了，没问题。稿子我也顺了三遍了。岚哥，老街坊们可都等着咱们恢复后的“三声铃”报平安呢，这约定今天能兑现吧？",
+            "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l2",
+            "ep2-s2-l5",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+            "老街坊们可都等着咱们恢复后的“三声铃”报平安呢，这约定今天能兑现吧？",
+            "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "那我给你泡茶递扳手。这大半夜的，我留在这陪你熬。",
+            "这都天亮了，要不先睡会儿？万一傍晚没修好，大家也能理解。",
+            "傍晚到了。岚哥，我坐好了，随时能开口。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l12",
+            "ep2-s1-l4",
+            "ep2-s3-l2"
+          ],
+          "raw_evidence_quotes": [
+            "那我给你泡茶递扳手。这大半夜的，我留在这陪你熬。",
+            "这都天亮了，要不先睡会儿？万一傍晚没修好，大家也能理解。",
+            "傍晚到了。岚哥，我坐好了，随时能开口。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+          "requirement_id": "constraint:fault",
+          "evidence_quotes": [
+            "螺丝刀用力刮擦金属泥垢的刺耳声。",
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l1",
+            "ep1-s2-l2"
+          ],
+          "raw_evidence_quotes": [
+            "螺丝刀用力刮擦金属泥垢的刺耳声。",
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+          "requirement_id": "constraint:identities",
+          "evidence_quotes": [
+            "哎哟我的祖宗！怎么又断了？这都第三回了，是不是外头那帮小混混嫌吵，故意把线给剪了？我这安抚街坊的稿子还没念完呢，急死个人。",
+            "给。哎，我这拿话筒的手干粗活是不行，你看我这手抖得，差点照偏了。",
+            "放边上。电容爆了，正在飞线。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep1-s2-l5",
+            "ep2-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "哎哟我的祖宗！怎么又断了？这都第三回了，是不是外头那帮小混混嫌吵，故意把线给剪了？我这安抚街坊的稿子还没念完呢，急死个人。",
+            "给。哎，我这拿话筒的手干粗活是不行，你看我这手抖得，差点照偏了。",
+            "放边上。电容爆了，正在飞线。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+          "requirement_id": "constraint:cooperation",
+          "evidence_quotes": [
+            "啊？漏水？我还以为有人搞破坏……行，手电我来拿，你专心弄，我不乱说话了。",
+            "尺寸刚好，能用。帮我按住这头，我拧紧螺丝。",
+            "按住了。嘿，接上了！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l3",
+            "ep1-s3-l4",
+            "ep1-s3-l5"
+          ],
+          "raw_evidence_quotes": [
+            "啊？漏水？我还以为有人搞破坏……行，手电我来拿，你专心弄，我不乱说话了。",
+            "尺寸刚好，能用。帮我按住这头，我拧紧螺丝。",
+            "按住了。嘿，接上了！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+          "requirement_id": "constraint:deferred_bell",
+          "evidence_quotes": [
+            "只要推子推上去，我就敲三声铃。去把话筒架调好，准备试音。",
+            "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。",
+            "别动推子。击锤锈死了，我得拆开调一下。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s2-l6",
+            "ep2-s3-l4",
+            "ep2-s3-l6"
+          ],
+          "raw_evidence_quotes": [
+            "只要推子推上去，我就敲三声铃。去把话筒架调好，准备试音。",
+            "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。",
+            "别动推子。击锤锈死了，我得拆开调一下。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 56630,
+      "reported_output_tokens": 46165,
+      "reported_total_tokens": 102795,
+      "reasoning_tokens_included_in_output": 34146,
+      "cache_read_tokens": 9216,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 454.977,
+      "wall_time_sec": 456.109
+    },
+    {
+      "label": "round_3_remix",
+      "intent": "remix",
+      "status": "passed",
+      "story_id": "dfc77047ed7c43829f8bbbefe9854966",
+      "version_no": 1,
+      "story_version_id": "1e939d2382ec415ab693118c9b9a818c",
+      "parent": "dce01aac37ed46e0b1bfd05c15a7f8a2",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "没进水。线路干燥，总闸是被人刻意拉下的。",
+            "街坊们……对不起。设备没坏，是我……是我自己拔了电源。",
+            "擦擦眼泪。评估报告我来写技术背书。“设备老化，需全面整改升级”。咱们一起向街道申请改造资金。",
+            "好。老街广播站，今天不报平安。咱们……报个新开始。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep2-s2-l2",
+            "ep2-s3-l2",
+            "ep2-s3-l5"
+          ],
+          "raw_evidence_quotes": [
+            "没进水。线路干燥，总闸是被人刻意拉下的。",
+            "街坊们……对不起。设备没坏，是我……是我自己拔了电源。",
+            "擦擦眼泪。评估报告我来写技术背书。“设备老化，需全面整改升级”。咱们一起向街道申请改造资金。",
+            "好。老街广播站，今天不报平安。咱们……报个新开始。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "怕街坊担心？明天上午街道办就要来做广播站撤并评估。你人为制造断电故障，只是为了拖延评估时间，对不对？",
+            "可是明天上午街道办就来做撤并评估了！我不能让广播站就这么没了，我不能连个播音员都不是了！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l4",
+            "ep2-s1-l4"
+          ],
+          "raw_evidence_quotes": [
+            "怕街坊担心？明天上午街道办就要来做广播站撤并评估。你人为制造断电故障，只是为了拖延评估时间，对不对？",
+            "可是明天上午街道办就来做撤并评估了！我不能让广播站就这么没了，我不能连个播音员都不是了！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+          "requirement_id": "remix_instruction",
+          "evidence_quotes": [
+            "没进水。线路干燥，总闸是被人刻意拉下的。",
+            "擦擦眼泪。评估报告我来写技术背书。“设备老化，需全面整改升级”。咱们一起向街道申请改造资金。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep2-s3-l2"
+          ],
+          "raw_evidence_quotes": [
+            "没进水。线路干燥，总闸是被人刻意拉下的。",
+            "擦擦眼泪。评估报告我来写技术背书。“设备老化，需全面整改升级”。咱们一起向街道申请改造资金。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "林岚是维修员，周野是主持人",
+          "requirement_id": "retain:0",
+          "evidence_quotes": [
+            "没进水。线路干燥，总闸是被人刻意拉下的。",
+            "啊？怎么可能！是不是昨晚风太大，把闸刀给吹掉了？这老房子到处漏风，什么怪事没有啊。岚哥，你再仔细查查？"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep1-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "没进水。线路干燥，总闸是被人刻意拉下的。",
+            "啊？怎么可能！是不是昨晚风太大，把闸刀给吹掉了？这老房子到处漏风，什么怪事没有啊。岚哥，你再仔细查查？"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "故事发生在老街广播站",
+          "requirement_id": "retain:1",
+          "evidence_quotes": [
+            "好。老街广播站，今天不报平安。咱们……报个新开始。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l5"
+          ],
+          "raw_evidence_quotes": [
+            "好。老街广播站，今天不报平安。咱们……报个新开始。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+          "requirement_id": "transform:0",
+          "evidence_quotes": [
+            "没进水。线路干燥，总闸是被人刻意拉下的。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "没进水。线路干燥，总闸是被人刻意拉下的。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "结局改为周野公开认错并合作整改，不能以三声铃报平安收束",
+          "requirement_id": "transform:1",
+          "evidence_quotes": [
+            "街坊们……对不起。设备没坏，是我……是我自己拔了电源。",
+            "好。老街广播站，今天不报平安。咱们……报个新开始。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s2-l2",
+            "ep2-s3-l5"
+          ],
+          "raw_evidence_quotes": [
+            "街坊们……对不起。设备没坏，是我……是我自己拔了电源。",
+            "好。老街广播站，今天不报平安。咱们……报个新开始。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 182769,
+      "reported_output_tokens": 47068,
+      "reported_total_tokens": 229837,
+      "reasoning_tokens_included_in_output": 37308,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 410.305,
+      "wall_time_sec": 411.61
+    },
+    {
+      "label": "round_3_revise",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "63d93c8162c54571a17db7908803f4bc",
+      "version_no": 2,
+      "story_version_id": "6d6970df1fb749388fab09b752a388fe",
+      "parent": "7fc964639a7a41999c8807b7f9e37c68",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "先别下定论。拿上手电，跟我一起核对下设备状态，再决定下一步怎么修。",
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+            "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l4",
+            "ep1-s2-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "先别下定论。拿上手电，跟我一起核对下设备状态，再决定下一步怎么修。",
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+            "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "我今晚通宵修。",
+            "这都天亮了，要不先睡会儿？万一傍晚没修好，大家也能理解。",
+            "傍晚到了。岚哥，我坐好了，随时能开口。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l11",
+            "ep2-s1-l4",
+            "ep2-s3-l2"
+          ],
+          "raw_evidence_quotes": [
+            "我今晚通宵修。",
+            "这都天亮了，要不先睡会儿？万一傍晚没修好，大家也能理解。",
+            "傍晚到了。岚哥，我坐好了，随时能开口。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "先别下定论。拿上手电，跟我一起核对下设备状态，再决定下一步怎么修。",
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+            "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l4",
+            "ep1-s2-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "先别下定论。拿上手电，跟我一起核对下设备状态，再决定下一步怎么修。",
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+            "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+            "防水盒……我想想。老站长抽屉里有个旧铁盒，以前装零件的，你看这个行不行？",
+            "别动推子。击锤锈死了，我得拆开调一下。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l2",
+            "ep1-s3-l2",
+            "ep2-s3-l6"
+          ],
+          "raw_evidence_quotes": [
+            "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+            "防水盒……我想想。老站长抽屉里有个旧铁盒，以前装零件的，你看这个行不行？",
+            "别动推子。击锤锈死了，我得拆开调一下。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "哎哟我的祖宗！怎么又断了？这都第三回了，是不是外头那帮小混混嫌吵，故意把线给剪了？我这安抚街坊的稿子还没念完呢，急死个人。",
+            "给。哎，我这拿话筒的手干粗活是不行，你看我这手抖得，差点照偏了。",
+            "放边上。电容爆了，正在飞线。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep1-s2-l5",
+            "ep2-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "哎哟我的祖宗！怎么又断了？这都第三回了，是不是外头那帮小混混嫌吵，故意把线给剪了？我这安抚街坊的稿子还没念完呢，急死个人。",
+            "给。哎，我这拿话筒的手干粗活是不行，你看我这手抖得，差点照偏了。",
+            "放边上。电容爆了，正在飞线。"
+          ]
+        }
+      ],
+      "calls": 4,
+      "reported_input_tokens": 91556,
+      "reported_output_tokens": 14233,
+      "reported_total_tokens": 105789,
+      "reasoning_tokens_included_in_output": 10752,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 117.106,
+      "wall_time_sec": 118.016
+    },
+    {
+      "label": "special_arc",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 7,
+      "story_version_id": "74e9da8c0e384a2bbfd66e9240bc8b51",
+      "parent": "a04475a957cb49abbccc0cf430ee4eac",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "重写两集合作弧线，让信任逐步建立；保留人物、进水故障和未兑现三声铃的结果。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "说好了的。验收通过，由我来敲。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l4",
+            "ep1-s3-l7",
+            "ep2-s3-l7"
+          ],
+          "raw_evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "说好了的。验收通过，由我来敲。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l7",
+            "ep2-s1-l3"
+          ],
+          "raw_evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "重写两集合作弧线，让信任逐步建立；保留人物、进水故障和未兑现三声铃的结果。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "说好了的。验收通过，由我来敲。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l4",
+            "ep1-s3-l7",
+            "ep2-s3-l7"
+          ],
+          "raw_evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "说好了的。验收通过，由我来敲。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "阻值归零，线皮没破，是内部击穿。没人剪线。",
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l6",
+            "ep1-s2-l4"
+          ],
+          "raw_evidence_quotes": [
+            "阻值归零，线皮没破，是内部击穿。没人剪线。",
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听天气预报呢！",
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1",
+            "ep1-s2-l5"
+          ],
+          "raw_evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听天气预报呢！",
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 142797,
+      "reported_output_tokens": 50189,
+      "reported_total_tokens": 192986,
+      "reasoning_tokens_included_in_output": 37227,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 434.29,
+      "wall_time_sec": 435.422
+    },
+    {
+      "label": "special_continue_again",
+      "intent": "continue",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 9,
+      "story_version_id": "082918a439534e178bfbf84cab7011bf",
+      "parent": "a1a7476c911e4009bdb841b97f6d1f40",
+      "episodes": 5,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "新增一集，承接广播恢复且三声铃约定已兑现、音量已校准的结果。两人合作组织首次街坊广播，不能再把这些问题当作未完成。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "老街的街坊们，晚上好。降温预警马上就来，注意保暖。这次广播能恢复，多亏了维修班的林岚。",
+            "谢谢王奶奶。红霉素我涂了。广播站一直都在，大家放心。"
+          ],
+          "evidence_line_ids": [
+            "ep5-s2-l4",
+            "ep5-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "老街的街坊们，晚上好。降温预警马上就来，注意保暖。这次广播能恢复，多亏了维修班的林岚。",
+            "谢谢王奶奶。红霉素我涂了。广播站一直都在，大家放心。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "老街的街坊们，晚上好。降温了，大家注意添衣，广播站一直都在。",
+            "今晚夜色真好。明天同一时间，再见。"
+          ],
+          "evidence_line_ids": [
+            "ep4-s3-l5",
+            "ep5-s3-l6"
+          ],
+          "raw_evidence_quotes": [
+            "老街的街坊们，晚上好。降温了，大家注意添衣，广播站一直都在。",
+            "今晚夜色真好。明天同一时间，再见。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "继承来源角色身份、姓名和演绎者",
+          "requirement_id": "identity",
+          "evidence_quotes": [
+            "岚姐，我嗓子突然发紧。真播了，反而怕说错话。",
+            "深呼吸。设备没问题，你也没问题。"
+          ],
+          "evidence_line_ids": [
+            "ep5-s1-l4",
+            "ep5-s2-l2"
+          ],
+          "raw_evidence_quotes": [
+            "岚姐，我嗓子突然发紧。真播了，反而怕说错话。",
+            "深呼吸。设备没问题，你也没问题。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "不得违背来源已发生事实",
+          "requirement_id": "facts",
+          "evidence_quotes": [
+            "给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？",
+            "王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？"
+          ],
+          "evidence_line_ids": [
+            "ep2-s2-l2",
+            "ep5-s2-l6"
+          ],
+          "raw_evidence_quotes": [
+            "给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？",
+            "王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "继承并合理发展来源关系",
+          "requirement_id": "relationships",
+          "evidence_quotes": [
+            "周野轻轻按住她的手背，将麦克风推向她。",
+            "林岚反手握住周野的手腕，凑近麦克风，声音轻柔却清晰。"
+          ],
+          "evidence_line_ids": [
+            "ep5-s3-l1",
+            "ep5-s3-l3"
+          ],
+          "raw_evidence_quotes": [
+            "周野轻轻按住她的手背，将麦克风推向她。",
+            "林岚反手握住周野的手腕，凑近麦克风，声音轻柔却清晰。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "按指令继承或回收伏笔，不能凭空消失",
+          "requirement_id": "threads",
+          "evidence_quotes": [
+            "给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？",
+            "王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？"
+          ],
+          "evidence_line_ids": [
+            "ep2-s2-l2",
+            "ep5-s2-l6"
+          ],
+          "raw_evidence_quotes": [
+            "给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？",
+            "王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？"
+          ]
+        }
+      ],
+      "calls": 6,
+      "reported_input_tokens": 147129,
+      "reported_output_tokens": 26672,
+      "reported_total_tokens": 173801,
+      "reasoning_tokens_included_in_output": 19652,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 235.531,
+      "wall_time_sec": 236.562
+    },
+    {
+      "label": "special_ending",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 6,
+      "story_version_id": "fb3ba447e92b4ee68444862d1391fe43",
+      "parent": "a04475a957cb49abbccc0cf430ee4eac",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "按流程，验收签字后，才能敲铃报平安。",
+            "林岚按住麦克风开关，递给他一张维修验收单和一支笔。周野笑着接过笔，在验收单上郑重写下名字。笔尖划过纸面的沙沙声，在控制室里清晰作响。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l7",
+            "ep2-s3-l8"
+          ],
+          "raw_evidence_quotes": [
+            "按流程，验收签字后，才能敲铃报平安。",
+            "林岚按住麦克风开关，递给他一张维修验收单和一支笔。周野笑着接过笔，在验收单上郑重写下名字。笔尖划过纸面的沙沙声，在控制室里清晰作响。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l7",
+            "ep2-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "按流程，验收签字后，才能敲铃报平安。",
+            "林岚按住麦克风开关，递给他一张维修验收单和一支笔。周野笑着接过笔，在验收单上郑重写下名字。笔尖划过纸面的沙沙声，在控制室里清晰作响。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l7",
+            "ep2-s3-l8"
+          ],
+          "raw_evidence_quotes": [
+            "按流程，验收签字后，才能敲铃报平安。",
+            "林岚按住麦克风开关，递给他一张维修验收单和一支笔。周野笑着接过笔，在验收单上郑重写下名字。笔尖划过纸面的沙沙声，在控制室里清晰作响。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "周野跑去推上总闸。控制室电源灯亮起，喇叭传出轻微的电流底噪。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l8",
+            "ep2-s3-l2"
+          ],
+          "raw_evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "周野跑去推上总闸。控制室电源灯亮起，喇叭传出轻微的电流底噪。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听天气预报呢！",
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1",
+            "ep1-s2-l9"
+          ],
+          "raw_evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听天气预报呢！",
+            "好嘞。哎，以前我总催你们维修班，还以为你们偷懒，原来这老设备这么难搞。对不住了啊。"
+          ]
+        }
+      ],
+      "calls": 4,
+      "reported_input_tokens": 75267,
+      "reported_output_tokens": 15563,
+      "reported_total_tokens": 90830,
+      "reasoning_tokens_included_in_output": 11969,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 146.936,
+      "wall_time_sec": 147.812
+    },
+    {
+      "label": "special_episode",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 5,
+      "story_version_id": "b23351f7540446b7b8f6aa4d83419719",
+      "parent": "a04475a957cb49abbccc0cf430ee4eac",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "风雨声里，周野默默侧身挡住漏风的窗缝，递上胶带。",
+            "以前我总催你们维修班，还以为偷懒，对不住了啊。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l7",
+            "ep1-s2-l8",
+            "ep1-s3-l7"
+          ],
+          "raw_evidence_quotes": [
+            "风雨声里，周野默默侧身挡住漏风的窗缝，递上胶带。",
+            "以前我总催你们维修班，还以为偷懒，对不住了啊。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l7",
+            "ep2-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "风雨声里，周野默默侧身挡住漏风的窗缝，递上胶带。",
+            "以前我总催你们维修班，还以为偷懒，对不住了啊。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l7",
+            "ep1-s2-l8",
+            "ep1-s3-l7"
+          ],
+          "raw_evidence_quotes": [
+            "风雨声里，周野默默侧身挡住漏风的窗缝，递上胶带。",
+            "以前我总催你们维修班，还以为偷懒，对不住了啊。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "主控板因进水短路冲击烧毁了。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l6",
+            "ep1-s3-l5"
+          ],
+          "raw_evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "主控板因进水短路冲击烧毁了。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听降温预警呢！",
+            "以前我总催你们维修班，还以为偷懒，对不住了啊。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1",
+            "ep1-s2-l8"
+          ],
+          "raw_evidence_quotes": [
+            "怎么又断了？这都第几次了，街坊们还等着听降温预警呢！",
+            "以前我总催你们维修班，还以为偷懒，对不住了啊。"
+          ]
+        }
+      ],
+      "calls": 6,
+      "reported_input_tokens": 116657,
+      "reported_output_tokens": 27762,
+      "reported_total_tokens": 144419,
+      "reasoning_tokens_included_in_output": 20660,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 229.437,
+      "wall_time_sec": 230.593
+    },
+    {
+      "label": "special_line",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 4,
+      "story_version_id": "93795207eb314589a9ed67f777d667f1",
+      "parent": "a04475a957cb49abbccc0cf430ee4eac",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "仅将指定台词表达改得更口语化，保持原意、身份及事实，长度与原文接近。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "咋又没声了？这都第几回了，街坊们还等着听天气预报呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1"
+          ],
+          "raw_evidence_quotes": [
+            "咋又没声了？这都第几回了，街坊们还等着听天气预报呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l7",
+            "ep2-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "仅将指定台词表达改得更口语化，保持原意、身份及事实，长度与原文接近。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "咋又没声了？这都第几回了，街坊们还等着听天气预报呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1"
+          ],
+          "raw_evidence_quotes": [
+            "咋又没声了？这都第几回了，街坊们还等着听天气预报呢！"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "电容还没焊，现在推闸通电，主板瞬间就会击穿烧毁。把绝缘夹递给我。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l8",
+            "ep2-s1-l6"
+          ],
+          "raw_evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "电容还没焊，现在推闸通电，主板瞬间就会击穿烧毁。把绝缘夹递给我。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "咋又没声了？这都第几回了，街坊们还等着听天气预报呢！",
+            "别动推子。不是信号中断，是电源短路。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1",
+            "ep1-s1-l2"
+          ],
+          "raw_evidence_quotes": [
+            "咋又没声了？这都第几回了，街坊们还等着听天气预报呢！",
+            "别动推子。不是信号中断，是电源短路。"
+          ]
+        }
+      ],
+      "calls": 4,
+      "reported_input_tokens": 86709,
+      "reported_output_tokens": 13221,
+      "reported_total_tokens": 99930,
+      "reasoning_tokens_included_in_output": 10636,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 115.866,
+      "wall_time_sec": 117.406
+    },
+    {
+      "label": "special_whole_story",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+      "version_no": 8,
+      "story_version_id": "5e36fe7c0c534b9dbc16176ab149956e",
+      "parent": "a04475a957cb49abbccc0cf430ee4eac",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "重写完整故事，减少说教，以具体行动建立信任；保留两人身份、进水故障以及三声铃尚未兑现的结果。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "周野撕开创可贴推到手边，双手紧握绝缘夹，稳稳夹住电容。",
+            "说好了的。验收通过，由我来敲。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l5",
+            "ep1-s3-l7",
+            "ep2-s2-l4",
+            "ep2-s3-l7"
+          ],
+          "raw_evidence_quotes": []
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "岚姐，电容买回来了！赶紧换上通电，街坊们等着听降温预警呢！"
+          ],
+          "evidence_line_ids": [
+            "ep1-s3-l7",
+            "ep2-s1-l3"
+          ],
+          "raw_evidence_quotes": []
+        },
+        {
+          "passed": true,
+          "requirement": "重写完整故事，减少说教，以具体行动建立信任；保留两人身份、进水故障以及三声铃尚未兑现的结果。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "周野默默收起手机，剥好胶带递上。林岚满手泥水，接过胶带缠绕。",
+            "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+            "周野撕开创可贴推到手边，双手紧握绝缘夹，稳稳夹住电容。",
+            "林岚指了指墙上的黄铜铃铛。周野愣了一下，笑着放下麦克风，伸手向铃铛。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l6",
+            "ep1-s3-l7",
+            "ep2-s2-l4",
+            "ep2-s3-l8"
+          ],
+          "raw_evidence_quotes": []
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+            "电容没焊，现在推闸主板瞬间击穿。把绝缘夹递我。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l5",
+            "ep2-s1-l7"
+          ],
+          "raw_evidence_quotes": []
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "怎么又断了？街坊们还等着听天气预报呢！",
+            "好嘞。以前我总催你们维修班，还以为你们偷懒，原来这么难搞。对不住了。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l1",
+            "ep1-s2-l7"
+          ],
+          "raw_evidence_quotes": []
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 143577,
+      "reported_output_tokens": 51615,
+      "reported_total_tokens": 195192,
+      "reasoning_tokens_included_in_output": 39081,
+      "cache_read_tokens": 5760,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 445.175,
+      "wall_time_sec": 446.313
+    }
+  ],
+  "earlier_attempts": [
+    {
+      "label": "round_1_remix",
+      "intent": "remix",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; continuity_passed=false: 第2集中存在明显的时间线矛盾。ep2-s2-l1周野称“可是明天就要关停了”，表明当前距离关停还有一天；但在随后的正式播音中（ep2-s3-l2），周野却道歉称“昨天的故障”，若故障发生在昨天，则今天已是关停日，与前文“明天关停”冲突。若当前仍是关停前一天，则故障应为“今天/刚才”发生，而非“昨天”。; OPERATION_REQUIREMENTS_NOT_PROVEN",
+      "calls": 10,
+      "reported_input_tokens": 177853,
+      "reported_output_tokens": 45082,
+      "reported_total_tokens": 222935,
+      "reasoning_tokens_included_in_output": 35074,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 382.188,
+      "wall_time_sec": 383.219
+    },
+    {
+      "label": "round_1_remix",
+      "intent": "remix",
+      "status": "failed",
+      "retry_job_id": "0b12aa496dd2437dbd7cad46483ed38d",
+      "approved_snapshot_reused": true,
+      "story_id": "d4f3708da2cc4ab18646140eadcffcd6",
+      "version_no": 1,
+      "story_version_id": "2c8be30b5fef43e59275859e9a488e9f",
+      "parent": "a1a7476c911e4009bdb841b97f6d1f40",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+            "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+            "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep1-s2-l6",
+            "ep2-s3-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+            "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+            "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+          "requirement_id": "timeline",
+          "evidence_quotes": [
+            "别弄了！明天站里就要合并关停，修好也是浪费，算了吧。",
+            "墙上的时钟指向原定试音时间。周野深吸一口气，坐上主播台，推上推子。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l4",
+            "ep2-s3-l1",
+            "ep2-s3-l2"
+          ],
+          "raw_evidence_quotes": [
+            "别弄了！明天站里就要合并关停，修好也是浪费，算了吧。",
+            "墙上的时钟指向原定试音时间。周野深吸一口气，坐上主播台，推上推子。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+          "requirement_id": "remix_instruction",
+          "evidence_quotes": [
+            "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+            "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l6",
+            "ep2-s3-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+            "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "林岚是维修员，周野是主持人",
+          "requirement_id": "retain:0",
+          "evidence_quotes": [
+            "林岚没说话，直接拿出万用表，表笔扎进墙插测试，仪器发出滴的长鸣。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s2-l1",
+            "ep2-s3-l2"
+          ],
+          "raw_evidence_quotes": [
+            "林岚没说话，直接拿出万用表，表笔扎进墙插测试，仪器发出滴的长鸣。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "故事发生在老街广播站",
+          "requirement_id": "retain:1",
+          "evidence_quotes": [
+            "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+            "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep2-s3-l4"
+          ],
+          "raw_evidence_quotes": [
+            "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+            "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+          "requirement_id": "transform:0",
+          "evidence_quotes": [
+            "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+            "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+          ],
+          "evidence_line_ids": [
+            "ep1-s1-l2",
+            "ep1-s2-l6",
+            "ep2-s3-l2"
+          ],
+          "raw_evidence_quotes": [
+            "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+            "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "结局改为周野公开认错并合作整改，不能以三声铃报平安收束",
+          "requirement_id": "transform:1",
+          "evidence_quotes": [
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+            "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。",
+            "温暖的片尾曲缓缓推入，与控制室亮起的绿灯交织，圆满收束。"
+          ],
+          "evidence_line_ids": [
+            "ep2-s3-l2",
+            "ep2-s3-l4",
+            "ep2-s3-l5"
+          ],
+          "raw_evidence_quotes": [
+            "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+            "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。",
+            "温暖的片尾曲缓缓推入，与控制室亮起的绿灯交织，圆满收束。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 136232,
+      "reported_output_tokens": 41725,
+      "reported_total_tokens": 177957,
+      "reasoning_tokens_included_in_output": 33030,
+      "cache_read_tokens": 34816,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 340.886,
+      "wall_time_sec": 342.109,
+      "error_type": "ArtifactReviewError",
+      "error": "Relative fault date remains ungrounded: ep1 investigation/closure tomorrow vs ep2 apology for yesterday without explaining when the unplugging occurred. Artifact review requests an explicit same-evening timeline; automated pass is not final acceptance."
+    }
+  ],
+  "accepted_cases": 18,
+  "failed_attempts": 2,
+  "accepted_after_named_calendar_clarification": [
+    "round_1_remix"
+  ],
+  "completed_at": "2026-10-14T14:07:42.973658+00:00"
+}

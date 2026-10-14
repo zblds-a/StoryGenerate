@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "彻底修好老街广播站，通过专业验收。",
+    "motivation": "",
+    "fear": "回避提及当年周野违规操作导致设备烧毁的旧事，用冷漠的专业态度保持距离。",
+    "speech_style": "简短具体，先确认再行动。常用祈使句，如‘递扳手’‘别碰那个’。受压时会沉默并加快手上动作。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "认为周野是个只会动嘴皮子、不负责任的主持人，但在合作中逐渐认可他的热忱。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "尽快恢复广播，让老街坊重新听到他的声音。",
+    "motivation": "",
+    "fear": "回避自己对当年事故的内疚，用过度热情和自嘲来掩饰怕被林岚拒绝的忐忑。",
+    "speech_style": "热心、会自嘲。喜欢用夸张的比喻和玩笑，如‘我这手可是开过光的’。被指责时会立刻认怂并找补。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "渴望弥补过去的过错，重新获得林岚的信任，愿意放下身段打下手。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

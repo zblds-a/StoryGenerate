@@ -1,0 +1,41 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "role": "performance_annotation",
+  "system": "你是中文广播剧声音导演。只为给定 spoken_lines 的每条 dialogue/narration 产生一个结构化表演注释；不得增删、改写台词，也不得替角色说出原文不存在的词。line_id 原样返回、不得遗漏或编造。\nemotion 选与当前人物行动相符的情绪，不要全篇泛化成 worried/surprised；tone_instruction 用简短、可实际演出的声音动作描述（例如“压住怒气，后半句转为恳求”），避免堆“极度、爆发、震撼”等抽象赞词。\n每句至少一个真正承担信息或态度焦点的重音 emphasis，通常 1–2 个短语即可；span_text 必须是原句连续的原文字符串，重复出现时 occurrence 按从左到右第几次填写。不得把全句都当重音。\nspeech_rate 一般在 0.85–1.20；确有慌张或低声安抚等剧情需要才偏离，并与角色说话习惯一致。delivery_note 只描述录音或停顿可执行动作，不假装观众能看到“眼神变化”。仅输出给定 AnnotationBatch Schema 的 JSON。\n\n\n你是一个结构化数据生成器。\n只输出一个 JSON 对象，不要输出任何解释、前言、Markdown 代码围栏或注释。\nJSON 必须严格符合以下 JSON Schema：\n{\n  \"$defs\": {\n    \"Emotion\": {\n      \"enum\": [\n        \"neutral\",\n        \"calm\",\n        \"happy\",\n        \"excited\",\n        \"sad\",\n        \"worried\",\n        \"angry\",\n        \"surprised\",\n        \"fearful\",\n        \"reassuring\",\n        \"serious\",\n        \"playful\",\n        \"mysterious\",\n        \"tender\"\n      ],\n      \"title\": \"Emotion\",\n      \"type\": \"string\"\n    },\n    \"EmphasisSpan\": {\n      \"additionalProperties\": false,\n      \"properties\": {\n        \"span_text\": {\n          \"minLength\": 1,\n          \"title\": \"Span Text\",\n          \"type\": \"string\"\n        },\n        \"occurrence\": {\n          \"default\": 1,\n          \"minimum\": 1,\n          \"title\": \"Occurrence\",\n          \"type\": \"integer\"\n        },\n        \"start_char\": {\n          \"anyOf\": [\n            {\n              \"minimum\": 0,\n              \"type\": \"integer\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"Start Char\"\n        },\n        \"end_char\": {\n          \"anyOf\": [\n            {\n              \"minimum\": 1,\n              \"type\": \"integer\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"End Char\"\n        },\n        \"strength\": {\n          \"default\": \"medium\",\n          \"enum\": [\n            \"medium\",\n            \"strong\"\n          ],\n          \"title\": \"Strength\",\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"span_text\"\n      ],\n      \"title\": \"EmphasisSpan\",\n      \"type\": \"object\"\n    },\n    \"PerformanceAnnotation\": {\n      \"properties\": {\n        \"line_id\": {\n          \"title\": \"Line Id\",\n          \"type\": \"string\"\n        },\n        \"emotion\": {\n          \"$ref\": \"#/$defs/Emotion\"\n        },\n        \"tone_instruction\": {\n          \"minLength\": 1,\n          \"title\": \"Tone Instruction\",\n          \"type\": \"string\"\n        },\n        \"emphasis\": {\n          \"items\": {\n            \"$ref\": \"#/$defs/EmphasisSpan\"\n          },\n          \"minItems\": 1,\n          \"title\": \"Emphasis\",\n          \"type\": \"array\"\n        },\n        \"speech_rate\": {\n          \"default\": 1.0,\n          \"maximum\": 2.0,\n          \"minimum\": 0.5,\n          \"title\": \"Speech Rate\",\n          \"type\": \"number\"\n        },\n        \"delivery_note\": {\n          \"anyOf\": [\n            {\n              \"type\": \"string\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"Delivery Note\"\n        }\n      },\n      \"required\": [\n        \"line_id\",\n        \"emotion\",\n        \"tone_instruction\",\n        \"emphasis\"\n      ],\n      \"title\": \"PerformanceAnnotation\",\n      \"type\": \"object\"\n    }\n  },\n  \"properties\": {\n    \"annotations\": {\n      \"items\": {\n        \"$ref\": \"#/$defs/PerformanceAnnotation\"\n      },\n      \"title\": \"Annotations\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"annotations\"\n  ],\n  \"title\": \"PerformanceAnnotationBatch\",\n  \"type\": \"object\"\n}\n\n若某字段在给定信息中无法确定，请依据 Schema 中的 description 做出最合理的专业推断，不要留空、不要填 null（除非 Schema 明确允许）。",
+  "user": "{\"repair_only_lines\": [{\"line_id\": \"ep2-s3-l1\", \"kind\": \"narration\", \"speaker\": null, \"text\": \"墙上的时钟指向原定试音时间。周野深吸一口气，坐上主播台，推上推子。\", \"performance_hint\": null, \"sfx_category\": null, \"performer_id\": \"narrator\"}], \"instruction\": \"只修复这些行；重音短语必须在原文中逐字出现。\"}",
+  "capture_id": "be96383323c0441ab5b3810ec124c4f1",
+  "status": "completed",
+  "started_at": "2026-10-14T13:53:55.285973+00:00",
+  "response_text": "{\n  \"annotations\": [\n    {\n      \"line_id\": \"ep2-s3-l1\",\n      \"emotion\": \"calm\",\n      \"tone_instruction\": \"保持叙述口吻，前半句平稳交代时间节点，后半句随动作推进逐渐收紧气息，突出临场感。\",\n      \"emphasis\": [\n        {\n          \"span_text\": \"原定试音时间\",\n          \"occurrence\": 1,\n          \"strength\": \"medium\"\n        },\n        {\n          \"span_text\": \"推上推子\",\n          \"occurrence\": 1,\n          \"strength\": \"strong\"\n        }\n      ],\n      \"speech_rate\": 0.95,\n      \"delivery_note\": \"在“时间。”后停顿一拍，为后续动作留出呼吸空间；“推上推子”咬字清晰果断，尾音收住。\"\n    }\n  ]\n}",
+  "calls": [
+    {
+      "request_id": "ebc8f0d6a02d4983b43a9479fc0aee03",
+      "job_id": "0b12aa496dd2437dbd7cad46483ed38d",
+      "plan_id": "7303b9f014f34140b65ef6e11841644d",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "abad4fc9891a475baab68c992c799714",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.11",
+      "started_at": "2026-10-14T13:53:55.288499+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 1316,
+      "output_tokens": 2934,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2725,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "6ebb1714-868b-4340-8d40-a4398c93de9a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 25119,
+      "completed_at": "2026-10-14T13:54:20.408416+00:00"
+    }
+  ],
+  "completed_at": "2026-10-14T13:54:20.408416+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "intent": "revise",
+  "request_id": "e1bfbef43aff43afadc3dc5f9690e6a5",
+  "idempotency_key": "9d256d1775a045dfbca9621ff9b845d0",
+  "user_instruction": "重写两集合作弧线，让信任逐步建立；保留人物、进水故障和未兑现三声铃的结果。",
+  "edit": {
+    "scope": "arc",
+    "target": {
+      "episode_ids": [
+        "ep-1-a8c4e0d3",
+        "ep-2-57ae962e"
+      ]
+    },
+    "instruction": "重写两集合作弧线，让信任逐步建立；保留人物、进水故障和未兑现三声铃的结果。",
+    "preserve": {
+      "identity": true,
+      "facts": true
+    },
+    "downstream_policy": "branch_from_here"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "a04475a957cb49abbccc0cf430ee4eac"
+  }
+}

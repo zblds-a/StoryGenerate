@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "彻底修复广播站线路，完成通电验收任务。",
+    "motivation": "",
+    "fear": "害怕承诺无法兑现，用专业术语和冷漠掩饰对周野情绪的在意，避免过度介入他的情感世界。",
+    "speech_style": "简短具体，先确认再行动。受压时用报数据或转移话题到技术细节来回避情感问题，常用句式如‘万用表显示…’‘先别动，让我测一下’。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "保持专业距离，不愿与周野有过多情感牵扯，但行动上默默支持他的坚守，对他的焦虑抱有克制的理解。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "恢复街坊广播，留住老街的记忆和人情味。",
+    "motivation": "",
+    "fear": "害怕面对广播站被废弃的现实，用自嘲和过度热情掩饰内心的焦虑与失落。",
+    "speech_style": "热心、会自嘲，喜欢用玩笑和反问句。受压时语速变快、声音变大，常用句式如‘你说这帮人是不是…’‘要是真没声了，街坊们得多不习惯啊’。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "试图拉近与林岚的关系，渴望得到她的理解和情感共鸣，有时会因焦虑而越界干涉维修判断，但愿意听从她的专业指导。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

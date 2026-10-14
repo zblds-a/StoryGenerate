@@ -1,0 +1,16 @@
+{
+  "label": "round_3_remix",
+  "intent": "remix",
+  "status": "failed",
+  "error": "WORKER_INTERRUPTED_SUPERSEDED_BY_CLOCK_IDIOM_FIX",
+  "calls": 4,
+  "reported_input_tokens": 89824,
+  "reported_output_tokens": 17481,
+  "reported_total_tokens": 107305,
+  "reasoning_tokens_included_in_output": 12361,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 172.431,
+  "wall_time_sec": null
+}

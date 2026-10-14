@@ -1,0 +1,42 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "repairer",
+    "performer_id": "repairer",
+    "story_name": "林岚",
+    "canon_name": "林岚",
+    "immutable_facts": [],
+    "goal": "查出停播的真实原因，并推动广播站完成技术整改以适应未来。",
+    "motivation": "",
+    "fear": "回避谈论分离的感伤，习惯用冰冷的专业数据和行动来掩饰内心的不舍。",
+    "speech_style": "简短具体，先确认再行动。受压时用专业术语和数据反驳，不解释情绪，语气笃定且带有压迫感。",
+    "relationship_stance": "对周野的逃避感到愤怒但理解其脆弱，保持专业距离，但在关键时刻愿意用技术方案为对方兜底。",
+    "source": "character_portrayal"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "host",
+    "performer_id": "host",
+    "story_name": "周野",
+    "canon_name": "周野",
+    "immutable_facts": [],
+    "goal": "拖延广播站关停的时间，逃避说出“最后一次播音”。",
+    "motivation": "",
+    "fear": "极度害怕告别与失去，用拙劣的谎言和自嘲来掩饰内心的恐慌与无助。",
+    "speech_style": "热心、会自嘲。语速快，喜欢用反问句，受压时容易提高音量、语无伦次，但被戳穿后会迅速软化并展露脆弱。",
+    "relationship_stance": "极度依赖林岚的技术与陪伴，内心想留住对方却用了错误的方式，最终在林岚的引导下学会勇敢面对。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

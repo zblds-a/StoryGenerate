@@ -1,0 +1,17 @@
+{
+  "label": "round_2_continue",
+  "intent": "continue",
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; TIMELINE_UNGROUNDED_CLAIM: ep3-s1-l2; TIMELINE_CLOCK_CLAIMS_MISSING: [('ep2-s3-l6', '08:00'), ('ep2-s3-l7', '08:00'), ('ep3-s2-l3', '08:00'), ('ep4-s3-l2', '08:00')]; OPERATION_REQUIREMENTS_NOT_PROVEN",
+  "calls": 10,
+  "reported_input_tokens": 133559,
+  "reported_output_tokens": 44101,
+  "reported_total_tokens": 177660,
+  "reasoning_tokens_included_in_output": 34785,
+  "cache_read_tokens": 2304,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 417.657,
+  "wall_time_sec": 419.141
+}

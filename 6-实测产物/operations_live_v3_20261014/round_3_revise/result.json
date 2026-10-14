@@ -1,0 +1,84 @@
+{
+  "label": "round_3_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "43d19eec749c478180e074e00b5927be",
+  "version_no": 2,
+  "story_version_id": "a6011dd326404fd087abcec345a6d6d2",
+  "parent": "c1d98d0f6b444807bd51e258007ede47",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "我是维修员林岚。我们先共同核对一下设备状态，再决定下一步。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "我是维修员林岚。我们先共同核对一下设备状态，再决定下一步。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "我是维修员林岚。我们先共同核对一下设备状态，再决定下一步。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "我是维修员林岚。我们先共同核对一下设备状态，再决定下一步。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "看数据，线路没断，不是人为剪线。是旧电源接头短路。",
+        "这不是漏雨。墙里的老水管破了，水正滴在主板上。拿防水布来，快！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1",
+        "ep1-s3-l5"
+      ],
+      "raw_evidence_quotes": [
+        "看数据，线路没断，不是人为剪线。是旧电源接头短路。",
+        "这不是漏雨。墙里的老水管破了，水正滴在主板上。拿防水布来，快！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "我是维修员林岚。我们先共同核对一下设备状态，再决定下一步。",
+        "哎！怎么黑了？这马上要播晚间新闻了！不会是街角李大爷嫌吵，偷偷把线给剪了吧？我这就出去找他去！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3",
+        "ep1-s1-l1"
+      ],
+      "raw_evidence_quotes": [
+        "我是维修员林岚。我们先共同核对一下设备状态，再决定下一步。",
+        "哎！怎么黑了？这马上要播晚间新闻了！不会是街角李大爷嫌吵，偷偷把线给剪了吧？我这就出去找他去！"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 77651,
+  "reported_output_tokens": 13166,
+  "reported_total_tokens": 90817,
+  "reasoning_tokens_included_in_output": 10353,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 117.763,
+  "wall_time_sec": 118.906
+}

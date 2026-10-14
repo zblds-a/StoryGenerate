@@ -1,0 +1,8 @@
+{
+  "implementation_sha": "06a5a7bfe47980af87744fb06546d2511b5d923b",
+  "tested_head": "6d84584",
+  "grouped_from": "all.xml",
+  "unit": "scripted test models",
+  "postgres": "real PostgreSQL16 with scripted test models",
+  "previous_failure": "Version assertion expected p1.6.10; only test expectation updated to p1.6.11. Full rerun passed. Original failed XML retained."
+}

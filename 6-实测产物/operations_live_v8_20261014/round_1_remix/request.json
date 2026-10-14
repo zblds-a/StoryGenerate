@@ -1,0 +1,34 @@
+{
+  "intent": "remix",
+  "request_id": "4b1abca1ecd24470aa89186f29f19251",
+  "idempotency_key": "e6f836cedf6a4c8e9b5d8e264a17d59c",
+  "user_instruction": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。 两集均发生在同一个晚上：周野本晚制造断电并隐瞒，林岚本晚查明原因，同晚公开道歉；广播站计划在明天关停。必须交代当前断电发生在今晚，不能道歉称昨天的故障。",
+  "creation_preferences": {
+    "story_mode": "general",
+    "genre": "温情",
+    "target_episodes": 2,
+    "target_duration_sec": 120,
+    "ending_preference": "closed"
+  },
+  "remix": {
+    "instruction": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+    "retain_elements": [
+      "林岚是维修员，周野是主持人",
+      "故事发生在老街广播站"
+    ],
+    "transform_elements": [
+      "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+      "结局改为周野公开认错并合作整改，不能以三声铃报平安收束"
+    ],
+    "relation_to_source": "parallel_world"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "a1a7476c911e4009bdb841b97f6d1f40"
+  },
+  "client_context": {
+    "operation_requirements": {
+      "calendar": "两集均发生同一晚；本晚断电、本晚调查、本晚道歉，广播站计划明天关停。正文明确这一时间关系，不得把本晚断电写成昨天。"
+    }
+  }
+}

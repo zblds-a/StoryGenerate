@@ -1,0 +1,12 @@
+{
+  "implementation_sha": "b9d5d5f38b13830637b6504d3214e8d672bea6c0",
+  "completed_at": "2026-10-14T12:59:57.922884+00:00",
+  "attempted": [
+    "round_2_continue"
+  ],
+  "not_attempted": [
+    "round_3_continue"
+  ],
+  "error": "Auxiliary path assertion stopped the second thread before model call; first retry rejected for missing clock evidence. Original failed attempts retained.",
+  "wall_time_sec": 380.141
+}

@@ -1,0 +1,31 @@
+{
+  "intent": "create",
+  "request_id": "88ff76535e144a889457195a8a9ba0c6",
+  "idempotency_key": "4955feeb51124bd3b96b9294dc7e0b16",
+  "user_instruction": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。",
+  "creation_preferences": {
+    "story_mode": "serialized",
+    "genre": "温情",
+    "target_episodes": 2,
+    "target_duration_sec": 120,
+    "ending_preference": "open"
+  },
+  "characters": {
+    "selected_character_ids": [
+      "linlan",
+      "zhouye"
+    ],
+    "role_bindings": [
+      {
+        "character_id": "linlan",
+        "story_role_id": "repairer",
+        "performer_id": "voice-linlan"
+      },
+      {
+        "character_id": "zhouye",
+        "story_role_id": "host",
+        "performer_id": "voice-zhouye"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "label": "round_1_continue",
+  "intent": "continue",
+  "status": "blocked",
+  "reason": "Revise未通过"
+}

@@ -1,0 +1,14 @@
+{
+  "git_sha": "74f6171f2ef699c7341e04ade9d74950f2998c36",
+  "tracked_dirty": false,
+  "schema": "storyoperations_0e7fcf07ce8a",
+  "rounds": 3,
+  "real_provider": true,
+  "mock_fallback": false,
+  "target": "engine_and_structured_delivery",
+  "started_at": "2026-10-14T10:39:38.627123+00:00",
+  "completed_at": "2026-10-14T11:09:36.829385+00:00",
+  "interrupted": true,
+  "potential_inflight_usage_unknown_nodes": 3,
+  "interruption_reason": "completion_evidence_and_multiepisode_ending_fix"
+}

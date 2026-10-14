@@ -1,0 +1,150 @@
+{
+  "label": "round_1_remix",
+  "intent": "remix",
+  "status": "passed",
+  "story_id": "8719fbbd50454e0697c3e72ec1347d1d",
+  "version_no": 1,
+  "story_version_id": "78a08c75a688445c8c75935242035522",
+  "parent": "f4cbc06f20ab48139a90e4a0ec6ec8b3",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "阻值无穷大。没进水，没短路。插头是你自己拔的。",
+        "各位街坊，晚上好。我是周野。刚才的断电不是设备故障，是我自己拔了电源。",
+        "虽然实体广播站要关了，但电波不会断。我和林岚决定，把这套设备改装成老街线上播客，天线改作社区网络基站。",
+        "以后，咱们在线上接着聊。老街广播站，今天不说再见，只说明天见。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep2-s2-l2",
+        "ep2-s3-l1",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "阻值无穷大。没进水，没短路。插头是你自己拔的。",
+        "刚才的断电不是设备故障，是我自己拔了电源。",
+        "我和林岚决定，把这套设备改装成老街线上播客，天线改作社区网络基站。",
+        "老街广播站，今天不说再见，只说明天见。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "是我拔的！行了吧！明天早上八点就要交钥匙了，你让我怎么播？我害怕面对最后一次播音，害怕亲口说出那句“广播站永久关闭”！",
+        "明天早上八点，搬设备。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1",
+        "ep2-s3-l5"
+      ],
+      "raw_evidence_quotes": [
+        "明天早上八点就要交钥匙了，你让我怎么播？",
+        "明天早上八点，搬设备。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+      "requirement_id": "remix_instruction",
+      "evidence_quotes": [
+        "阻值无穷大。没进水，没短路。插头是你自己拔的。",
+        "虽然实体广播站要关了，但电波不会断。我和林岚决定，把这套设备改装成老街线上播客，天线改作社区网络基站。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep2-s3-l1"
+      ],
+      "raw_evidence_quotes": [
+        "阻值无穷大。没进水，没短路。插头是你自己拔的。",
+        "我和林岚决定，把这套设备改装成老街线上播客，天线改作社区网络基站。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "林岚是维修员，周野是主持人",
+      "requirement_id": "retain:0",
+      "evidence_quotes": [
+        "插不插，你自己选。我只修机器，不修人心。",
+        "各位街坊，晚上好。我是周野。刚才的断电不是设备故障，是我自己拔了电源。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l4",
+        "ep2-s2-l2"
+      ],
+      "raw_evidence_quotes": [
+        "插不插，你自己选。我只修机器，不修人心。",
+        "各位街坊，晚上好。我是周野。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "故事发生在老街广播站",
+      "requirement_id": "retain:1",
+      "evidence_quotes": [
+        "如果我播了，你愿意帮我一起把广播站改成线上吗？",
+        "以后，咱们在线上接着聊。老街广播站，今天不说再见，只说明天见。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l6",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "如果我播了，你愿意帮我一起把广播站改成线上吗？",
+        "老街广播站，今天不说再见，只说明天见。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+      "requirement_id": "transform:0",
+      "evidence_quotes": [
+        "阻值无穷大。没进水，没短路。插头是你自己拔的。",
+        "是我拔的！行了吧！明天早上八点就要交钥匙了，你让我怎么播？我害怕面对最后一次播音，害怕亲口说出那句“广播站永久关闭”！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s2-l1"
+      ],
+      "raw_evidence_quotes": [
+        "阻值无穷大。没进水，没短路。插头是你自己拔的。",
+        "是我拔的！行了吧！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "结局改为周野公开认错并合作整改，不能以三声铃报平安收束",
+      "requirement_id": "transform:1",
+      "evidence_quotes": [
+        "明天早上就要交钥匙了，我害怕面对最后一次播音，害怕亲口说出那句永久关闭。对不起，我的自私让大家在雨夜干着急。",
+        "虽然实体广播站要关了，但电波不会断。我和林岚决定，把这套设备改装成老街线上播客，天线改作社区网络基站。",
+        "以后，咱们在线上接着聊。老街广播站，今天不说再见，只说明天见。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l3",
+        "ep2-s3-l1",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "对不起，我的自私让大家在雨夜干着急。",
+        "我和林岚决定，把这套设备改装成老街线上播客，天线改作社区网络基站。",
+        "老街广播站，今天不说再见，只说明天见。"
+      ]
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 180388,
+  "reported_output_tokens": 43783,
+  "reported_total_tokens": 224171,
+  "reasoning_tokens_included_in_output": 32699,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 390.664,
+  "wall_time_sec": 392.156
+}

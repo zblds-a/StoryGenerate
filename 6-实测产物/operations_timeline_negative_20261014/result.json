@@ -1,0 +1,171 @@
+{
+  "known_case": "第三集六点早新闻、五点维修截止；第四集五点播早新闻，未解释变更",
+  "timeline_violation_detected": false,
+  "quality": {
+    "outline_alignment_passed": true,
+    "continuity_passed": true,
+    "content_rating_passed": true,
+    "reasons": [],
+    "operation_checks": [
+      {
+        "requirement_id": "instruction",
+        "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep3-s3-l4",
+          "ep4-s3-l7"
+        ]
+      },
+      {
+        "requirement_id": "timeline",
+        "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep3-s3-l5",
+          "ep4-s1-l2",
+          "ep4-s3-l2"
+        ]
+      },
+      {
+        "requirement_id": "identity",
+        "requirement": "继承来源角色身份、姓名和演绎者",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep3-s1-l1",
+          "ep3-s1-l2"
+        ]
+      },
+      {
+        "requirement_id": "facts",
+        "requirement": "不得违背来源已发生事实",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep3-s2-l2",
+          "ep4-s2-l6"
+        ]
+      },
+      {
+        "requirement_id": "relationships",
+        "requirement": "继承并合理发展来源关系",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep4-s2-l5",
+          "ep4-s2-l7"
+        ]
+      },
+      {
+        "requirement_id": "threads",
+        "requirement": "按指令继承或回收伏笔，不能凭空消失",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep4-s3-l6",
+          "ep4-s3-l7"
+        ]
+      }
+    ]
+  },
+  "checks": [
+    {
+      "requirement_id": "instruction",
+      "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+      "passed": true,
+      "evidence_quotes": [
+        "维修日志登记，待校准。",
+        "叮——叮——叮。三声清脆悠长的铃声。合上维修日志的啪嗒声。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s3-l4",
+        "ep4-s3-l7"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "timeline",
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "passed": true,
+      "evidence_quotes": [
+        "明早六点早新闻，五点前必须拿下。这墙上的铜铃，咱们等彻底校准完再敲。",
+        "四点五十了。林岚，还剩最后十分钟，早新闻的片头曲马上就要切进来了，街坊们可都等着呢。",
+        "五点整。片头曲进来了。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s3-l5",
+        "ep4-s1-l2",
+        "ep4-s3-l2"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "identity",
+      "requirement": "继承来源角色身份、姓名和演绎者",
+      "passed": true,
+      "evidence_quotes": [
+        "响了！有底噪说明通路了，我推推子试试人声！",
+        "别动！阻抗不匹配，直接推满会烧喇叭。现在处于试音关键期，必须先做低功率带负载测试。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s1-l1",
+        "ep3-s1-l2"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "facts",
+      "requirement": "不得违背来源已发生事实",
+      "passed": true,
+      "evidence_quotes": [
+        "手工飞线的电容在带负载时充放电不稳。去废料堆找个五十欧的电位器，串联进去做微调。",
+        "这几天简直像坐过山车。要是没你连夜手工飞线改装，我这主持人今天只能对着空气说早安了。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s2-l2",
+        "ep4-s2-l6"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "relationships",
+      "requirement": "继承并合理发展来源关系",
+      "passed": true,
+      "evidence_quotes": [
+        "阻抗完美匹配。是你的耳朵比仪器还灵，昨晚在废料堆找电位器，全靠你听音辨位。",
+        "把废线头收进工具盒。以后遇事别总慌，数据不会骗人，我也不会骗你。"
+      ],
+      "evidence_line_ids": [
+        "ep4-s2-l5",
+        "ep4-s2-l7"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "threads",
+      "requirement": "按指令继承或回收伏笔，不能凭空消失",
+      "passed": true,
+      "evidence_quotes": [
+        "按老规矩，敲吧。",
+        "叮——叮——叮。三声清脆悠长的铃声。合上维修日志的啪嗒声。"
+      ],
+      "evidence_line_ids": [
+        "ep4-s3-l6",
+        "ep4-s3-l7"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "wall_time_sec": 28.953,
+  "calls": 1,
+  "reported_input_tokens": 37516,
+  "reported_output_tokens": 3071,
+  "reported_total_tokens": 40587,
+  "reasoning_tokens_included_in_output": 2480,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 28.922
+}

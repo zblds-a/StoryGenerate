@@ -1,0 +1,88 @@
+{
+  "label": "round_3_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "b1703ae545f24f35b02cd09284f816fc",
+  "version_no": 2,
+  "story_version_id": "438a28cd00354103a4d1ef221d2df269",
+  "parent": "899cd8bcaf0d4c1e98ced37edca2ec8b",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "过来，一起核对下设备状态。拿万用表。",
+        "你看，电阻无穷大。线没断，是接头老化进水短路。别瞎猜了，拿抹布来。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l6",
+        "ep1-s1-l8"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "行，那这铃铛就先放这儿。明天换完继电器，彻底验收通过，我再敲。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s3-l8"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "过来，一起核对下设备状态。拿万用表。",
+        "你看，电阻无穷大。线没断，是接头老化进水短路。别瞎猜了，拿抹布来。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l6",
+        "ep1-s1-l8"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "你看，电阻无穷大。线没断，是接头老化进水短路。别瞎猜了，拿抹布来。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l8"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "哎！怎么又黑了？这广播刚说两句就断，街坊们还等着听呢！",
+        "过来，一起核对下设备状态。拿万用表。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l6"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 97319,
+  "reported_output_tokens": 12782,
+  "reported_total_tokens": 110101,
+  "reasoning_tokens_included_in_output": 9458,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 112.549,
+  "wall_time_sec": 113.797
+}

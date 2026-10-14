@@ -1,0 +1,65 @@
+[
+  {
+    "case": "T01",
+    "saved_delivery_present": true,
+    "integrity_passed": true,
+    "errors": [],
+    "warnings": [],
+    "round_trip_passed": true,
+    "message": "OK: 1 episodes, 22 utterances"
+  },
+  {
+    "case": "T02",
+    "saved_delivery_present": true,
+    "integrity_passed": true,
+    "errors": [],
+    "warnings": [],
+    "round_trip_passed": true,
+    "message": "OK: 1 episodes, 29 utterances"
+  },
+  {
+    "case": "T03",
+    "saved_delivery_present": true,
+    "integrity_passed": false,
+    "errors": [
+      "ep1-s1-l2: speaker_role_id 'chen_mo' not in character role map (available: ['lin_su', 'narrator', 'zhao_qiming'])",
+      "ep1-s5-l4: speaker_role_id 'chen_mo' not in character role map (available: ['lin_su', 'narrator', 'zhao_qiming'])"
+    ],
+    "warnings": [],
+    "round_trip_passed": true,
+    "message": "OK: 1 episodes, 49 utterances"
+  },
+  {
+    "case": "T04",
+    "saved_delivery_present": true,
+    "integrity_passed": true,
+    "errors": [],
+    "warnings": [],
+    "round_trip_passed": true,
+    "message": "OK: 1 episodes, 41 utterances"
+  },
+  {
+    "case": "T05",
+    "saved_delivery_present": false,
+    "error_type": "FileNotFoundError",
+    "error": "[Errno 2] No such file or directory: '6-实测产物\\\\fixed_template_acceptance\\\\T05\\\\T05.json'"
+  },
+  {
+    "case": "T06",
+    "saved_delivery_present": true,
+    "integrity_passed": true,
+    "errors": [],
+    "warnings": [],
+    "round_trip_passed": true,
+    "message": "OK: 1 episodes, 30 utterances"
+  },
+  {
+    "case": "T07",
+    "saved_delivery_present": true,
+    "integrity_passed": true,
+    "errors": [],
+    "warnings": [],
+    "round_trip_passed": true,
+    "message": "OK: 1 episodes, 24 utterances"
+  }
+]

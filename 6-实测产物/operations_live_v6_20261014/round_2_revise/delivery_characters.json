@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "排查并修复广播站的硬件故障，确保设备安全运行。",
+    "motivation": "",
+    "fear": "避免陷入情绪化的争论，用技术数据和实际行动回应质疑。",
+    "speech_style": "简短具体，先确认再行动。常用祈使句和陈述句，如“递一下万用表”“数据正常”。受压时沉默并加快手头动作。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "起初对周野的感性抱怨保持距离，只关注机器；在合作中逐渐认可周野对街坊的责任感，愿意为他的目标提供技术兜底。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "尽快恢复广播站的信号，向老街坊传递积水和安全信息。",
+    "motivation": "",
+    "fear": "害怕自己的努力被街坊认为无用，用热心和自嘲掩饰内心的焦虑与不自信。",
+    "speech_style": "热心、会自嘲。语速较快，喜欢用反问和感叹句，如“这怎么又断了？”“得，又白忙活”。受压时会用玩笑化解尴尬。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "起初对林岚的“冷酷”技术态度有微词，觉得他不懂人情味；在共同维修中感受到林岚的可靠，将其视为实现广播目标的最佳搭档。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

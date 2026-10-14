@@ -1,0 +1,42 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "repairer",
+    "performer_id": "repairer",
+    "story_name": "林岚",
+    "canon_name": "林岚",
+    "immutable_facts": [],
+    "goal": "查明今晚断电真相，确保广播站最后一晚的设备状态正常。",
+    "motivation": "",
+    "fear": "回避自己对广播站关停的不舍，用严苛的技术排查来掩饰内心的波澜。",
+    "speech_style": "简短具体，先确认再行动。受压时不争吵，而是直接拿出工具或数据说话。",
+    "relationship_stance": "初期对周野的隐瞒感到愤怒和不解，后期理解其脆弱后，选择用专业和陪伴支持他完成告别。",
+    "source": "character_portrayal"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "host",
+    "performer_id": "host",
+    "story_name": "周野",
+    "canon_name": "周野",
+    "immutable_facts": [],
+    "goal": "掩盖自己断电的事实，逃避明天关停的告别广播。",
+    "motivation": "",
+    "fear": "害怕面对告别，害怕失去老街的声音，用慌乱和借口来掩饰内心的恐惧。",
+    "speech_style": "语速较快，受压时容易冲动、找借口，但在被戳穿后会展现出脆弱和真诚。",
+    "relationship_stance": "初期试图对林岚隐瞒并抗拒排查，后期在林岚的引导下放下防备，坦诚相待并寻求合作。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

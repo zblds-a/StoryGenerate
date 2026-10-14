@@ -1,0 +1,42 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "repairer",
+    "performer_id": "repairer",
+    "story_name": "林岚",
+    "canon_name": "林岚",
+    "immutable_facts": [],
+    "goal": "查出断电真相并恢复设备运转，为广播站寻找技术上的新出路。",
+    "motivation": "",
+    "fear": "用冰冷的技术排查和短句掩饰自己对广播站即将关闭的失落与不舍。",
+    "speech_style": "句式极短，多用祈使句，受压时用数据和事实反驳，不留情面；心软时声音会不自觉地放轻。",
+    "relationship_stance": "认为周野的逃避是对老街坊的不负责任，但在看到他崩溃后，愿意成为他面对现实的支撑与技术后盾。",
+    "source": "character_portrayal"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "host",
+    "performer_id": "host",
+    "story_name": "周野",
+    "canon_name": "周野",
+    "immutable_facts": [],
+    "goal": "前期试图掩盖自己拔掉电源的事实，后期渴望与林岚合作延续广播站的生命。",
+    "motivation": "",
+    "fear": "用谎言和焦躁掩饰对“彻底失去广播站”的恐惧，害怕说出告别，害怕面对结束。",
+    "speech_style": "语速快，多用反问和感叹，心虚时结巴，崩溃时语无伦次，真诚道歉时气息绵长且微颤。",
+    "relationship_stance": "觉得林岚过于理智冷酷，但在林岚的逼迫与陪伴下，意识到诚实面对才是对彼此和老街最大的尊重。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

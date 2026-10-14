@@ -1,0 +1,7 @@
+{
+  "implementation_sha": "45ac96ab1597a18f50a240c6069068cb79ca76fc",
+  "grouped_from": "all.xml",
+  "unit": "explicit scripted test models",
+  "postgres": "real PostgreSQL16 with explicit scripted test models",
+  "test_count": 664
+}

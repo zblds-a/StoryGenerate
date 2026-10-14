@@ -1,0 +1,6 @@
+{
+  "label": "special_ending",
+  "intent": "revise",
+  "status": "blocked",
+  "reason": "旧批次中断，最终版本另行完整重验"
+}

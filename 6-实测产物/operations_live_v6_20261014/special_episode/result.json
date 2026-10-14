@@ -1,0 +1,113 @@
+{
+  "label": "special_episode",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "961f3f0ea1ea4866ac3073fbd090dd8e",
+  "version_no": 5,
+  "story_version_id": "35a5ae4d122642d6834aadcb45359585",
+  "parent": "748a7f9207de44c6bfe4bc4350a6d409",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "顺着线查到了，外墙旧电源接头防水胶老化，雨水渗进去了。递防水胶带。",
+        "我脱外套垫着梯脚防滑。你踩稳，我拿肩膀死死抵着梯子，有我在绝对摔不下来。",
+        "怎么全是杂音？没信号啊！这到底怎么回事？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1",
+        "ep1-s3-l2",
+        "ep1-s3-l8"
+      ],
+      "raw_evidence_quotes": [
+        "顺着线查到了，外墙旧电源接头防水胶老化，雨水渗进去了。递防水胶带。",
+        "我脱外套垫着梯脚防滑。你踩稳，我拿肩膀死死抵着梯子，有我在绝对摔不下来。",
+        "怎么全是杂音？没信号啊！这到底怎么回事？"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "又罢工了？这破设备！这大暴雨的，没广播街坊们怎么知道哪条路积水？",
+        "这大半夜的，拆了还能装上吗？今晚这三声铃，怕是敲不响了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep2-s1-l4"
+      ],
+      "raw_evidence_quotes": [
+        "又罢工了？这破设备！这大暴雨的，没广播街坊们怎么知道哪条路积水？",
+        "这大半夜的，拆了还能装上吗？今晚这三声铃，怕是敲不响了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "找到了，给。我顺便用干抹布把接头下面的积水擦干，免得你操作时漏电。",
+        "慢点下。太好了！推闸吧。只要出声，我就敲三声铃给街坊报平安，他们等着呢。",
+        "怎么全是杂音？没信号啊！这到底怎么回事？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l4",
+        "ep1-s3-l5",
+        "ep1-s3-l8"
+      ],
+      "raw_evidence_quotes": [
+        "找到了，给。我顺便用干抹布把接头下面的积水擦干，免得你操作时漏电。",
+        "慢点下。太好了！推闸吧。只要出声，我就敲三声铃给街坊报平安，他们等着呢。",
+        "怎么全是杂音？没信号啊！这到底怎么回事？"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "万用表测过了，阻值趋近于零。是短路，不是剪断。别瞎猜，去拿干抹布。",
+        "顺着线查到了，外墙旧电源接头防水胶老化，雨水渗进去了。递防水胶带。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l5",
+        "ep1-s2-l1"
+      ],
+      "raw_evidence_quotes": [
+        "万用表测过了，阻值趋近于零。是短路，不是剪断。别瞎猜，去拿干抹布。",
+        "顺着线查到了，外墙旧电源接头防水胶老化，雨水渗进去了。递防水胶带。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "又罢工了？这破设备！这大暴雨的，没广播街坊们怎么知道哪条路积水？",
+        "手别碰总闸，危险。手电给我，我来查线。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "又罢工了？这破设备！这大暴雨的，没广播街坊们怎么知道哪条路积水？",
+        "手别碰总闸，危险。手电给我，我来查线。"
+      ]
+    }
+  ],
+  "calls": 6,
+  "reported_input_tokens": 116009,
+  "reported_output_tokens": 28801,
+  "reported_total_tokens": 144810,
+  "reasoning_tokens_included_in_output": 22246,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 233.329,
+  "wall_time_sec": 235.219
+}

@@ -1,0 +1,19 @@
+{
+  "git_sha": "06a5a7bfe47980af87744fb06546d2511b5d923b",
+  "tracked_dirty": false,
+  "schema": "storyoperations_7cce4e65670b",
+  "rounds": 3,
+  "real_provider": true,
+  "mock_fallback": false,
+  "target": "engine_and_structured_delivery",
+  "started_at": "2026-10-14T13:00:21.347880+00:00",
+  "completed_at": "2026-10-14T13:22:45.381975+00:00",
+  "potential_inflight_usage_unknown_nodes": 2,
+  "terminated_reason": "Superseded by deterministic non-clock idiom correction",
+  "fenced_jobs": [
+    "a5a122264a1e40e9867cb41928e7093a",
+    "3e337665e3984d54a675985e67d1e7dd"
+  ],
+  "wall_time_sec": 1344.034095,
+  "wall_time_basis": "UTC timestamps; worker monotonic counter lost during explicit interruption"
+}

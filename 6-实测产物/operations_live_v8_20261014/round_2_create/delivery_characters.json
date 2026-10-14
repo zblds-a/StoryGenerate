@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "彻底排查并修复广播站硬件故障，确保设备安全运行。",
+    "motivation": "",
+    "fear": "避免谈论过去两人因广播站维护产生的旧怨，用专注工作来回避情感交流。",
+    "speech_style": "简短具体，先确认再行动。受压时直接抛出数据或物理证据，不陷入情绪争论。常用句式：‘把那个递给我’‘看万用表读数’。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "认为周野过去只懂播音不懂设备，但认可他对广播站的热情，愿意在技术上引导他，逐渐接纳他的协助。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "尽快恢复广播站播出，安抚老街坊的情绪，完成报平安的约定。",
+    "motivation": "",
+    "fear": "害怕广播站被彻底关停，用怀疑外部破坏或自嘲来掩饰对设备老化的无力感与内疚。",
+    "speech_style": "热心、会自嘲。语速较快，喜欢用比喻，受压时容易过度反应或把问题归结于外部。常用句式：‘这肯定是……’‘我的锅我的锅’。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "觉得林岚过去对广播站不上心，但现在依赖她的专业技术，渴望得到她的认可并共同参与修复，试图用行动弥补过去的疏忽。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

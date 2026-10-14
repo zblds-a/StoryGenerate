@@ -1,0 +1,113 @@
+{
+  "label": "special_episode",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+  "version_no": 5,
+  "story_version_id": "b23351f7540446b7b8f6aa4d83419719",
+  "parent": "a04475a957cb49abbccc0cf430ee4eac",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "风雨声里，周野默默侧身挡住漏风的窗缝，递上胶带。",
+        "以前我总催你们维修班，还以为偷懒，对不住了啊。",
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l7",
+        "ep1-s2-l8",
+        "ep1-s3-l7"
+      ],
+      "raw_evidence_quotes": [
+        "风雨声里，周野默默侧身挡住漏风的窗缝，递上胶带。",
+        "以前我总催你们维修班，还以为偷懒，对不住了啊。",
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+        "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l7",
+        "ep2-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+        "岚姐，电容买回来了！街角五金店最后两个。赶紧换上通电试试，街坊们都等着听降温预警呢！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "风雨声里，周野默默侧身挡住漏风的窗缝，递上胶带。",
+        "以前我总催你们维修班，还以为偷懒，对不住了啊。",
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l7",
+        "ep1-s2-l8",
+        "ep1-s3-l7"
+      ],
+      "raw_evidence_quotes": [
+        "风雨声里，周野默默侧身挡住漏风的窗缝，递上胶带。",
+        "以前我总催你们维修班，还以为偷懒，对不住了啊。",
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+        "主控板因进水短路冲击烧毁了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l6",
+        "ep1-s3-l5"
+      ],
+      "raw_evidence_quotes": [
+        "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+        "主控板因进水短路冲击烧毁了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "怎么又断了？这都第几次了，街坊们还等着听降温预警呢！",
+        "以前我总催你们维修班，还以为偷懒，对不住了啊。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s2-l8"
+      ],
+      "raw_evidence_quotes": [
+        "怎么又断了？这都第几次了，街坊们还等着听降温预警呢！",
+        "以前我总催你们维修班，还以为偷懒，对不住了啊。"
+      ]
+    }
+  ],
+  "calls": 6,
+  "reported_input_tokens": 116657,
+  "reported_output_tokens": 27762,
+  "reported_total_tokens": 144419,
+  "reasoning_tokens_included_in_output": 20660,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 229.437,
+  "wall_time_sec": 230.593
+}

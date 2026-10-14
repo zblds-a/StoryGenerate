@@ -1,0 +1,17 @@
+{
+  "label": "round_1_remix",
+  "intent": "remix",
+  "status": "failed",
+  "error_type": "ModelUnavailableError",
+  "error": "[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)",
+  "calls": 2,
+  "reported_input_tokens": 0,
+  "reported_output_tokens": 0,
+  "reported_total_tokens": 0,
+  "reasoning_tokens_included_in_output": 0,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 2,
+  "model_request_latency_sec": 457.461,
+  "wall_time_sec": 459.015
+}

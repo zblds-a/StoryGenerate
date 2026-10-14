@@ -1,0 +1,139 @@
+{
+  "label": "round_3_create",
+  "intent": "create",
+  "status": "passed",
+  "story_id": "63d93c8162c54571a17db7908803f4bc",
+  "version_no": 1,
+  "story_version_id": "7fc964639a7a41999c8807b7f9e37c68",
+  "parent": null,
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+        "外头线路昨晚我理过了，没问题。稿子我也顺了三遍了。岚哥，老街坊们可都等着咱们恢复后的“三声铃”报平安呢，这约定今天能兑现吧？",
+        "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep2-s2-l5",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": [
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+        "老街坊们可都等着咱们恢复后的“三声铃”报平安呢，这约定今天能兑现吧？",
+        "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "那我给你泡茶递扳手。这大半夜的，我留在这陪你熬。",
+        "这都天亮了，要不先睡会儿？万一傍晚没修好，大家也能理解。",
+        "傍晚到了。岚哥，我坐好了，随时能开口。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l12",
+        "ep2-s1-l4",
+        "ep2-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "那我给你泡茶递扳手。这大半夜的，我留在这陪你熬。",
+        "这都天亮了，要不先睡会儿？万一傍晚没修好，大家也能理解。",
+        "傍晚到了。岚哥，我坐好了，随时能开口。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+      "requirement_id": "constraint:fault",
+      "evidence_quotes": [
+        "螺丝刀用力刮擦金属泥垢的刺耳声。",
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1",
+        "ep1-s2-l2"
+      ],
+      "raw_evidence_quotes": [
+        "螺丝刀用力刮擦金属泥垢的刺耳声。",
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+      "requirement_id": "constraint:identities",
+      "evidence_quotes": [
+        "哎哟我的祖宗！怎么又断了？这都第三回了，是不是外头那帮小混混嫌吵，故意把线给剪了？我这安抚街坊的稿子还没念完呢，急死个人。",
+        "给。哎，我这拿话筒的手干粗活是不行，你看我这手抖得，差点照偏了。",
+        "放边上。电容爆了，正在飞线。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s2-l5",
+        "ep2-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "哎哟我的祖宗！怎么又断了？这都第三回了，是不是外头那帮小混混嫌吵，故意把线给剪了？我这安抚街坊的稿子还没念完呢，急死个人。",
+        "给。哎，我这拿话筒的手干粗活是不行，你看我这手抖得，差点照偏了。",
+        "放边上。电容爆了，正在飞线。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+      "requirement_id": "constraint:cooperation",
+      "evidence_quotes": [
+        "啊？漏水？我还以为有人搞破坏……行，手电我来拿，你专心弄，我不乱说话了。",
+        "尺寸刚好，能用。帮我按住这头，我拧紧螺丝。",
+        "按住了。嘿，接上了！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l3",
+        "ep1-s3-l4",
+        "ep1-s3-l5"
+      ],
+      "raw_evidence_quotes": [
+        "啊？漏水？我还以为有人搞破坏……行，手电我来拿，你专心弄，我不乱说话了。",
+        "尺寸刚好，能用。帮我按住这头，我拧紧螺丝。",
+        "按住了。嘿，接上了！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+      "requirement_id": "constraint:deferred_bell",
+      "evidence_quotes": [
+        "只要推子推上去，我就敲三声铃。去把话筒架调好，准备试音。",
+        "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。",
+        "别动推子。击锤锈死了，我得拆开调一下。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l6",
+        "ep2-s3-l4",
+        "ep2-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "只要推子推上去，我就敲三声铃。去把话筒架调好，准备试音。",
+        "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。",
+        "别动推子。击锤锈死了，我得拆开调一下。"
+      ]
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 56630,
+  "reported_output_tokens": 46165,
+  "reported_total_tokens": 102795,
+  "reasoning_tokens_included_in_output": 34146,
+  "cache_read_tokens": 9216,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 454.977,
+  "wall_time_sec": 456.109
+}

@@ -1,0 +1,37 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "role": "performance_annotation",
+  "system": "只返回JSON\n\n你是一个结构化数据生成器。\n只输出一个 JSON 对象，不要输出任何解释、前言、Markdown 代码围栏或注释。\nJSON 必须严格符合以下 JSON Schema：\n{\n  \"properties\": {\n    \"ok\": {\n      \"title\": \"Ok\",\n      \"type\": \"boolean\"\n    }\n  },\n  \"required\": [\n    \"ok\"\n  ],\n  \"title\": \"Probe\",\n  \"type\": \"object\"\n}\n\n若某字段在给定信息中无法确定，请依据 Schema 中的 description 做出最合理的专业推断，不要留空、不要填 null（除非 Schema 明确允许）。",
+  "user": "返回{\"ok\":true}",
+  "capture_id": "7bc366fb393840a2ac40025164333a08",
+  "status": "completed",
+  "started_at": "2026-10-14T13:21:40.541915+00:00",
+  "response_text": "{\n  \"ok\": true\n}",
+  "calls": [
+    {
+      "call_id": "b5433c82531b4ccdaf3aed2f325ecb92",
+      "provider": "openai_compat",
+      "stage": "generation",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.11",
+      "started_at": "2026-10-14T13:21:40.544757+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 169,
+      "output_tokens": 114,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 100,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "86328b38-a4d5-400e-b61e-5877902e4a36",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 2194,
+      "completed_at": "2026-10-14T13:21:42.739771+00:00"
+    }
+  ],
+  "completed_at": "2026-10-14T13:21:42.739771+00:00"
+}

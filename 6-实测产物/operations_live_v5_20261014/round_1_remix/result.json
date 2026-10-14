@@ -1,0 +1,17 @@
+{
+  "label": "round_1_remix",
+  "intent": "remix",
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "PLAN_CLOSED_ENDING_TAIL_REVEAL: episode 1",
+  "calls": 1,
+  "reported_input_tokens": 41815,
+  "reported_output_tokens": 4221,
+  "reported_total_tokens": 46036,
+  "reasoning_tokens_included_in_output": 2478,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 44.888,
+  "wall_time_sec": 45.171
+}

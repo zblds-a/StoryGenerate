@@ -1,0 +1,90 @@
+{
+  "label": "round_2_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "8cf08dd57dcb49999a0a1dfd74055af8",
+  "version_no": 2,
+  "story_version_id": "f7c83bc7b5b3474a8383ea68c02999c3",
+  "parent": "7497ced975ff43df8e940cea79792f69",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "先别急着下定论。咱们先共同核对控制台设备状态，确认事实再决定下一步。把手电筒拿过来，照一下后盖。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+        "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l2",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "先别急着下定论。咱们先共同核对控制台设备状态，确认事实再决定下一步。把手电筒拿过来，照一下后盖。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+        "继电器卡死了。别碰铃铛，快切断总电源！",
+        "输出电平不对，指针飘了。直接推上去会烧功放。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l3",
+        "ep1-s3-l8",
+        "ep2-s3-l8"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "先别急着下定论。咱们先共同核对控制台设备状态，确认事实再决定下一步。把手电筒拿过来，照一下后盖。",
+        "好嘞。林岚，其实你心里还是在乎这广播站的，只是嘴上不承认，对吧？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3",
+        "ep1-s2-l7"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 88789,
+  "reported_output_tokens": 10191,
+  "reported_total_tokens": 98980,
+  "reasoning_tokens_included_in_output": 7457,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 88.437,
+  "wall_time_sec": 89.282
+}

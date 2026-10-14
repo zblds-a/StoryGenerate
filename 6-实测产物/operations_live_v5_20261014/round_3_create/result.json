@@ -1,0 +1,130 @@
+{
+  "label": "round_3_create",
+  "intent": "create",
+  "status": "passed",
+  "story_id": "b808795136774c6f9f1483f2d36f9830",
+  "version_no": 1,
+  "story_version_id": "723eb8179cf044dca87c52942bb9a204",
+  "parent": null,
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "外墙旧电源接头防水老化，昨晚暴雨进水了。没剪线，别去吵架。",
+        "等等！你看这个。黄铜手铃。咱们老街的规矩，广播恢复前得敲三声铃给街坊报平安。等会儿通电了，我来敲，行吗？",
+        "门外传来街坊王大妈急促的敲门声，大声催促着说好的广播怎么还没响。铃铛悬在半空，周野和林岚相视一笑。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l4",
+        "ep1-s2-l8",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "外墙旧电源接头防水老化，昨晚暴雨进水了。没剪线，别去吵架。",
+        "等等！你看这个。黄铜手铃。咱们老街的规矩，广播恢复前得敲三声铃给街坊报平安。等会儿通电了，我来敲，行吗？",
+        "门外传来街坊王大妈急促的敲门声，大声催促着说好的广播怎么还没响。铃铛悬在半空，周野和林岚相视一笑。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "外墙旧电源接头防水老化，昨晚暴雨进水了。没剪线，别去吵架。",
+        "焊点冷却了。准备推闸，试音。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l4",
+        "ep2-s3-l1"
+      ],
+      "raw_evidence_quotes": [
+        "外墙旧电源接头防水老化，昨晚暴雨进水了。没剪线，别去吵架。",
+        "焊点冷却了。准备推闸，试音。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+      "requirement_id": "constraint:fault",
+      "evidence_quotes": [
+        "站住。万用表测过了，阻值趋近于零，是短路。",
+        "外墙旧电源接头防水老化，昨晚暴雨进水了。没剪线，别去吵架。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l4"
+      ],
+      "raw_evidence_quotes": [
+        "站住。万用表测过了，阻值趋近于零，是短路。",
+        "外墙旧电源接头防水老化，昨晚暴雨进水了。没剪线，别去吵架。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+      "requirement_id": "constraint:identities",
+      "evidence_quotes": [
+        "好嘞。哎，我这主持人当的，除了动嘴皮子，也就只能给你打个光了。",
+        "这样？嘿，剥开了！林师傅，手艺传男不传女啊？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep1-s2-l6"
+      ],
+      "raw_evidence_quotes": [
+        "好嘞。哎，我这主持人当的，除了动嘴皮子，也就只能给你打个光了。",
+        "这样？嘿，剥开了！林师傅，手艺传男不传女啊？"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+      "requirement_id": "constraint:cooperation",
+      "evidence_quotes": [
+        "把手电打近点，照这个接线盒。递绝缘胶布。",
+        "……拿好。你左手捏住线头，右手用剥线钳卡住缺口，往下压。",
+        "能。滴在齿轮轴承上。我喊一，你顺时针盘车。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1",
+        "ep1-s2-l5",
+        "ep2-s2-l4"
+      ],
+      "raw_evidence_quotes": [
+        "把手电打近点，照这个接线盒。递绝缘胶布。",
+        "……拿好。你左手捏住线头，右手用剥线钳卡住缺口，往下压。",
+        "能。滴在齿轮轴承上。我喊一，你顺时针盘车。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+      "requirement_id": "constraint:deferred_bell",
+      "evidence_quotes": [
+        "好嘞。这回总算能敲铃给街坊们报平安了。",
+        "门外传来街坊王大妈急促的敲门声，大声催促着说好的广播怎么还没响。铃铛悬在半空，周野和林岚相视一笑。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s3-l2",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "好嘞。这回总算能敲铃给街坊们报平安了。",
+        "门外传来街坊王大妈急促的敲门声，大声催促着说好的广播怎么还没响。铃铛悬在半空，周野和林岚相视一笑。"
+      ]
+    }
+  ],
+  "calls": 11,
+  "reported_input_tokens": 54337,
+  "reported_output_tokens": 59382,
+  "reported_total_tokens": 113719,
+  "reasoning_tokens_included_in_output": 45469,
+  "cache_read_tokens": 6912,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 540.709,
+  "wall_time_sec": 543.125
+}

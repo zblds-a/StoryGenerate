@@ -1,0 +1,61 @@
+{
+  "label": "special_episode",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "5cd40c336ebd46dd988b2cd3e44a285c",
+  "version_no": 4,
+  "story_version_id": "660c0b340e0a4a4b82e2832595fbbd2f",
+  "parent": "da7fc4fa3d8747289682a38bf100d48b",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "阻值归零，短路。不是剪线，是室外防水盒老化进水。",
+        "……剥线钳递上来。把红线外皮剥掉两厘米，别伤到铜芯。",
+        "我戴上绝缘手套帮你稳住线缆。你清理铜锈，我来做绝缘包扎。",
+        "亮了！林岚，咱们说好啊，彻底修好出声了，我就敲三声铃给街坊们报平安！",
+        "设备突发刺耳异响，指示灯狂闪的电流声。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "……剥线钳递上来。把红线外皮剥掉两厘米，别伤到铜芯。",
+        "我戴上绝缘手套帮你稳住线缆。你清理铜锈，我来做绝缘包扎。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "阻值归零，短路。不是剪线，是室外防水盒老化进水。",
+        "设备突发刺耳异响，指示灯狂闪的电流声。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "退后。别碰机箱，上面有漏电风险。",
+        "哎哟我的祖宗！这广播怎么又断了？肯定是街口那帮小混混嫌吵，偷偷把外线给剪了！"
+      ]
+    }
+  ],
+  "calls": 6,
+  "reported_input_tokens": 120275,
+  "reported_output_tokens": 25965,
+  "reported_total_tokens": 146240,
+  "reasoning_tokens_included_in_output": 19363,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 228.594,
+  "wall_time_sec": 231.64
+}

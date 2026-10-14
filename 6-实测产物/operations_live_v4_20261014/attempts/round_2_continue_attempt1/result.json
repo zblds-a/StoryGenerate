@@ -1,0 +1,17 @@
+{
+  "label": "round_2_continue",
+  "intent": "continue",
+  "status": "failed",
+  "error_type": "ModelUnavailableError",
+  "error": "[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)",
+  "calls": 11,
+  "reported_input_tokens": 103479,
+  "reported_output_tokens": 44498,
+  "reported_total_tokens": 147977,
+  "reasoning_tokens_included_in_output": 33566,
+  "cache_read_tokens": 6912,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 2,
+  "model_request_latency_sec": 836.919,
+  "wall_time_sec": 839.531
+}

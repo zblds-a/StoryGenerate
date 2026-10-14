@@ -1,0 +1,6 @@
+{
+  "implementation_sha": "b9d5d5f38b13830637b6504d3214e8d672bea6c0",
+  "grouped_from": "all.xml",
+  "unit": "scripted test models",
+  "postgres": "real PostgreSQL16 with scripted test models"
+}

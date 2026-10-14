@@ -1,0 +1,6 @@
+{
+  "label": "special_continue_again",
+  "intent": "continue",
+  "status": "blocked",
+  "reason": "批次被新修复提交取代，未执行"
+}

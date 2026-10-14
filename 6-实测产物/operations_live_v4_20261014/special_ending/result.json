@@ -1,0 +1,90 @@
+{
+  "label": "special_ending",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "79b25a68183f465ebeb9c7bcf6857338",
+  "version_no": 6,
+  "story_version_id": "945a0973f6134a2fb8f5afa95b8b02bb",
+  "parent": "7d3a527f52ed41adb1f5d47d5743cbb1",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。我拿十字螺丝刀和万用表，你快找纸笔，准备记录阻抗数据。",
+        "好，听你的。铃铛先搁桌上，我找纸笔，咱们马上开始最终调试。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s3-l5",
+        "ep2-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。我拿十字螺丝刀和万用表，你快找纸笔，准备记录阻抗数据。",
+        "好，听你的。铃铛先搁桌上，我找纸笔，咱们马上开始最终调试。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。我拿十字螺丝刀和万用表，你快找纸笔，准备记录阻抗数据。",
+        "好，听你的。铃铛先搁桌上，我找纸笔，咱们马上开始最终调试。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s3-l5",
+        "ep2-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。我拿十字螺丝刀和万用表，你快找纸笔，准备记录阻抗数据。",
+        "好，听你的。铃铛先搁桌上，我找纸笔，咱们马上开始最终调试。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "手电打高点。防水胶老化，接头进水短路了。递一下刮刀。",
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。我拿十字螺丝刀和万用表，你快找纸笔，准备记录阻抗数据。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l5",
+        "ep2-s3-l5"
+      ],
+      "raw_evidence_quotes": [
+        "防水胶老化，接头进水短路了。递一下刮刀。",
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底会不会修啊？街坊大爷大妈还等着听早新闻呢！",
+        "睁大眼睛看。万用表显示零电压。线没断，是前端根本没电。别拿你的阴谋论侮辱我的专业。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s2-l2"
+      ],
+      "raw_evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底会不会修啊？街坊大爷大妈还等着听早新闻呢！",
+        "睁大眼睛看。万用表显示零电压。线没断，是前端根本没电。别拿你的阴谋论侮辱我的专业。"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 70592,
+  "reported_output_tokens": 14755,
+  "reported_total_tokens": 85347,
+  "reasoning_tokens_included_in_output": 11542,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 136.107,
+  "wall_time_sec": 138.328
+}

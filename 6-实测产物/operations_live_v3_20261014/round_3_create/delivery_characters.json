@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "彻底修复广播站设备，确保播音质量完美，不留任何安全隐患。",
+    "motivation": "",
+    "fear": "害怕修不好辜负街坊期待，用冰冷的专业术语和严谨动作掩饰内心的在意与紧张。",
+    "speech_style": "简短具体，先确认再行动。常用祈使句，如“别动”“递扳手”“看数据”，受压时会重复确认步骤，不轻易表露情绪。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "起初觉得周野是个只会添乱的外行，后来认可他的热心与责任感，愿意引导他参与维修，形成专业与情感的互补。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "尽快恢复街坊广播，证明自己对社区的价值，不让老街坊失望。",
+    "motivation": "",
+    "fear": "害怕被看作只会说话不会做事的“花瓶”，用自嘲和过度热情掩饰对设备一窍不通的心虚。",
+    "speech_style": "热心、会自嘲。常用语气词和反问句，如“不会吧？”“我这手是不是太笨了？”，受压时会主动找活干以缓解尴尬。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "起初对林岚的冷淡感到挫败并怀疑她的判断，后来被她的专业与严谨折服，甘愿做她的助手，在配合中建立信任。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

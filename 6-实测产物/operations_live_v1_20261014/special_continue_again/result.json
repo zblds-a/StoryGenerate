@@ -1,0 +1,6 @@
+{
+  "label": "special_continue_again",
+  "intent": "continue",
+  "status": "blocked",
+  "reason": "首轮Create未通过"
+}

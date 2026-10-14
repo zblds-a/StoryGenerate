@@ -1,0 +1,18 @@
+{
+  "git_sha": "45ac96ab1597a18f50a240c6069068cb79ca76fc",
+  "tracked_dirty": true,
+  "schema": "storyoperations_5948ea834b01",
+  "rounds": 3,
+  "real_provider": true,
+  "mock_fallback": false,
+  "target": "engine_and_structured_delivery",
+  "started_at": "2026-10-14T13:21:37.057879+00:00",
+  "completed_at": "2026-10-14T14:01:15.539102+00:00",
+  "wall_time_sec": 2378.719,
+  "acceptance_completed_at": "2026-10-14T14:07:42.973658+00:00",
+  "acceptance_wall_time_sec": 2765.915779,
+  "supplemental_manifests": [
+    "retry_manifest.json",
+    "calendar_clarification_manifest.json"
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "call_id": "55c642d02bd849c89ffb9bacbf4355ad",
+    "provider": "openai_compat",
+    "stage": "generation",
+    "node": "storycraft_operation_judge",
+    "role": "storycraft_operation_judge",
+    "requested_model": "qwen/qwen3.7-max",
+    "attempt": 1,
+    "prompt_version": "p1.6.9",
+    "started_at": "2026-10-14T10:22:29.598209+00:00",
+    "actual_model": "qwen3.7-max",
+    "input_tokens": 38912,
+    "output_tokens": 5092,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "reasoning_tokens": 4021,
+    "reasoning_included_in_output": true,
+    "usage_source": "reported",
+    "provider_request_id": "9d6c03e8-1386-4cb5-bdb8-a7119b300318",
+    "status": "success",
+    "error_code": null,
+    "latency_ms": 47415,
+    "completed_at": "2026-10-14T10:23:17.013251+00:00"
+  }
+]

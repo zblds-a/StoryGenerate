@@ -1,0 +1,19 @@
+{
+  "label": "round_2_continue",
+  "intent": "continue",
+  "status": "failed",
+  "retry_job_id": "a22740e66bff440195dd1531054364ba",
+  "approved_snapshot_reused": true,
+  "error_type": "ValueError",
+  "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; TIMELINE_CLOCK_CLAIMS_MISSING: [('ep3-s2-l4', '08:00')]; OPERATION_REQUIREMENTS_NOT_PROVEN",
+  "calls": 9,
+  "reported_input_tokens": 109899,
+  "reported_output_tokens": 42554,
+  "reported_total_tokens": 152453,
+  "reasoning_tokens_included_in_output": 34354,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 378.327,
+  "wall_time_sec": 380.141
+}

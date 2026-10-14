@@ -1,0 +1,102 @@
+{
+  "label": "special_arc",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "79b25a68183f465ebeb9c7bcf6857338",
+  "version_no": 7,
+  "story_version_id": "fb5b1c3e6d1d4c91aad32ff214a82fd0",
+  "parent": "7d3a527f52ed41adb1f5d47d5743cbb1",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "重写两集合作弧线，让信任逐步建立；保留人物、进水故障和未兑现三声铃的结果。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "给。当年……好像也是这个接头漏水？对不起，那时我太急躁，没查清就错怪你了。",
+        "等等！输出阻抗不匹配，现在一开麦就会烧喇叭。拿十字螺丝刀，重新调。",
+        "好，听你的。这铃铛，我先给你悬在半空，等调好了再敲。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l4",
+        "ep2-s3-l2",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "给。当年……好像也是这个接头漏水？对不起，那时我太急躁，没查清就错怪你了。",
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。拿十字螺丝刀，重新调。",
+        "好，听你的。这铃铛，我先给你悬在半空，等调好了再敲。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "重写两集合作弧线，让信任逐步建立；保留人物、进水故障和未兑现三声铃的结果。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "给。当年……好像也是这个接头漏水？对不起，那时我太急躁，没查清就错怪你了。",
+        "等等！输出阻抗不匹配，现在一开麦就会烧喇叭。拿十字螺丝刀，重新调。",
+        "好，听你的。这铃铛，我先给你悬在半空，等调好了再敲。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l4",
+        "ep2-s3-l2",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "给。当年……好像也是这个接头漏水？对不起，那时我太急躁，没查清就错怪你了。",
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。拿十字螺丝刀，重新调。",
+        "好，听你的。这铃铛，我先给你悬在半空，等调好了再敲。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "好。手电打高点……这防水胶都老化了，接头进水短路了？",
+        "十年前就停产了。只能找旧件拼凑一个替代模块。帮我打个手电，照一下底层货架。",
+        "放下。内部电路完全不对，装上去直接烧主板。",
+        "等等！输出阻抗不匹配，现在一开麦就会烧喇叭。拿十字螺丝刀，重新调。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep2-s1-l4",
+        "ep2-s2-l2",
+        "ep2-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "好。手电打高点……这防水胶都老化了，接头进水短路了？",
+        "十年前就停产了。只能找旧件拼凑一个替代模块。帮我打个手电，照一下底层货架。",
+        "放下。内部电路完全不对，装上去直接烧主板。",
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "这老街广播都停播三天了！林岚，你到底会不会修？街坊还等着听早新闻呢！",
+        "别催。让开，正在测线路。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "这老街广播都停播三天了！林岚，你到底会不会修？街坊还等着听早新闻呢！",
+        "别催。让开，正在测线路。"
+      ]
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 133480,
+  "reported_output_tokens": 56134,
+  "reported_total_tokens": 189614,
+  "reasoning_tokens_included_in_output": 44816,
+  "cache_read_tokens": 2304,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 477.517,
+  "wall_time_sec": 478.765
+}

@@ -1,0 +1,22 @@
+{
+  "intent": "revise",
+  "request_id": "084895fd3e354143bf068a5c1eff808a",
+  "idempotency_key": "7ae2854a58fb4505bb151fa1ad7cb884",
+  "user_instruction": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+  "edit": {
+    "scope": "episode",
+    "target": {
+      "episode_id": "ep-1-647ad694"
+    },
+    "instruction": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+    "preserve": {
+      "identity": true,
+      "facts": true
+    },
+    "downstream_policy": "branch_from_here"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "748a7f9207de44c6bfe4bc4350a6d409"
+  }
+}

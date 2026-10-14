@@ -1,0 +1,55 @@
+# Continue 专项验收报告
+
+实现提交：`45ac96ab1597a18f50a240c6069068cb79ca76fc`。
+
+| 已实现 | 测试通过 | 真实模型通过 | 具备产品交付条件 |
+| --- | --- | --- | --- |
+| 是 | 是 | 是 | 是 |
+
+最终批次通过 4/4 项；工程单元 658 项、PostgreSQL 6 项。
+
+| 案例 | 结果 | Input / Output Token | 壁钟秒 | 产物 |
+| --- | --- | ---: | ---: | --- |
+| round_1_continue | passed | 136620 / 50641 | 469.312 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_1_continue/result.json) |
+| round_2_continue | passed | 143009 / 49081 | 456.422 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_2_continue/result.json) |
+| round_3_continue | passed | 143577 / 49931 | 458.39 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_3_continue/result.json) |
+| special_continue_again | passed | 147129 / 26672 | 236.562 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/special_continue_again/result.json) |
+
+## 原始产物复核
+
+- round_1_continue：第三集清洗电位器后仍待最终阻抗校准；第四集匹配完成并在日志写校准完毕；林岚亲自拉铃，保留来源的执行者约定；原集与新增集组成完整4集；角色与雨水故障事实继承，关系继续合作；三声铃报平安及其他待解决维修线程已闭合；实际非对白铃声证据：ep4-s3-l3: 两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。
+- round_2_continue：第三集带载发现碳膜磨损、登记待校准更换；第四集更换新电位器，电平与声音稳定，周野敲铃；原集与新增集组成完整4集；角色与雨水故障事实继承，关系继续合作；三声铃报平安及其他待解决维修线程已闭合；实际非对白铃声证据：ep4-s3-l4: 清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。
+- round_3_continue：第三集先恢复击锤、试音发现电压不稳并登记；第四集物理锁定电位器使音量稳定，继承上一新增集采取的限位校准方案，林岚拉铃；原集与新增集组成完整4集；角色与雨水故障事实继承，关系继续合作；三声铃报平安及其他待解决维修线程已闭合；实际非对白铃声证据：ep4-s3-l4: 用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。
+- special_continue_again：完整返回五集，旧四集逐字段保留；第五集ep5-s2-l2明确设备没有问题，三声铃/校准状态没有重新列为待解决；第五集承接三声铃恢复电波后的街坊热线和降温广播，林岚/周野协作发声，角色、关系、演绎者继承；本专项复核给定已完成事实及播放顺序，不宣称已确定性覆盖任意相对日期/跨日推理
+
+## 逐项模型证据及定位
+
+- round_1_continue / instruction：True；“带负载试音通过，待最终阻抗校准。现在还不能正式开播。” (第3集/ep3-scene3/ep3-s3-l2)；“两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。” (第4集/ep4-scene3/ep4-s3-l3)
+- round_1_continue / timeline：True；“行，都听你的。街坊们等了这么久，也不差这最后十分钟。岚姐，你慢慢弄，我给你打下手。” (第3集/ep3-scene3/ep3-s3-l5)；“阻抗匹配完成。周野，对着麦克风试音。” (第4集/ep4-scene1/ep4-s1-l2)
+- round_1_continue / constraint:bell_effect：True；“两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。” (第4集/ep4-scene3/ep4-s3-l3)
+- round_1_continue / identity：True；“嘶！怎么这么大动静！我得赶紧推上推子，街坊们可都等着降温预警呢！” (第3集/ep3-scene1/ep3-s1-l2)；“别动！刚修好的主板必须进行带负载试音，现在推上去，系统不稳直接烧。” (第3集/ep3-scene1/ep3-s1-l3)
+- round_1_continue / facts：True；“主板没烧。是碳膜电位器氧化，导致接触不良。把无水酒精递给我。” (第3集/ep3-scene2/ep3-s2-l3)；“信号很干净，底噪也压住了。” (第4集/ep4-scene1/ep4-s1-l5)
+- round_1_continue / relationships：True；“滴几滴？哎，以前我总催你们维修班，还以为你们磨洋工。今天算见识了，这带负载排查的含金量，我是真服了。” (第3集/ep3-scene2/ep3-s2-l5)；“岚姐，这阵子辛苦了，多亏了你。” (第4集/ep4-scene3/ep4-s3-l2)
+- round_1_continue / threads：True；“说好了的。验收通过，第一声由我来敲。” (第4集/ep4-scene2/ep4-s2-l7)；“两人相视一笑，过往的猜疑与急躁在此刻彻底消散。林岚用力拉动铃绳。叮，叮，叮。三声清脆悠长的铜铃声在控制室和老街回荡。” (第4集/ep4-scene3/ep4-s3-l3)
+- round_2_continue / instruction：True；“喇叭传出忽大忽小的声音，伴随轻微破音“滋啦”。” (第3集/ep3-scene2/ep3-s2-l7)；“主推子老化，登记待校准更换。今天太晚，买不到原装配件了。” (第3集/ep3-scene3/ep3-s3-l6)；“看着电平表，指针稳在零分贝，没有跳动。输出完美，带载试音彻底通过。” (第4集/ep4-scene2/ep4-s2-l5)；“清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。” (第4集/ep4-scene3/ep4-s3-l4)
+- round_2_continue / timeline：True；“主推子老化，登记待校准更换。今天太晚，买不到原装配件了。” (第3集/ep3-scene3/ep3-s3-l6)；“明天一早。配件明早到，你提前准备好铃铛，等我换完，你来敲。” (第3集/ep3-scene3/ep3-s3-l8)
+- round_2_continue / constraint:bell_effect：True；“清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。” (第4集/ep4-scene3/ep4-s3-l4)
+- round_2_continue / identity：True；“接假负载。” (第3集/ep3-scene1/ep3-s1-l2)；“呼……这大功率铁疙瘩真沉，我的腰都快闪了。接线柱到底在哪？” (第3集/ep3-scene1/ep3-s1-l3)
+- round_2_continue / facts：True；“推闸。看万用表读数，输出电压稳定，底噪正常。功放安全，没烧坏。” (第3集/ep3-scene2/ep3-s2-l2)；“扶稳面板，手别抖。引脚有点氧化，我用无水酒精棉片仔细擦一下，不然接触还是不好。” (第4集/ep4-scene1/ep4-s1-l2)
+- round_2_continue / relationships：True；“林岚……谢谢你。谢谢你没放弃这破站，也没放弃我。以前我总瞎操心，以后后勤粗活我都包了，你只管修。” (第4集/ep4-scene3/ep4-s3-l2)；“嗯，真好听。以后这广播站的铃声，咱们一起守着，再也不让它断了。” (第4集/ep4-scene3/ep4-s3-l6)
+- round_2_continue / threads：True；“清脆悠长的铜铃声“叮——叮——叮——”。声音透过麦克风传遍老街，伴随着窗外隐约传来的街坊欢呼声。” (第4集/ep4-scene3/ep4-s3-l4)；“听见了吗？窗外大家都在欢呼呢。这三声铃，真好听。” (第4集/ep4-scene3/ep4-s3-l5)
+- round_3_continue / instruction：True；“击锤复位了。推负载开关，准备带负载试音。” (第3集/ep3-scene2/ep3-s2-l5)；“电位器碳膜磨损，待物理限位校准。记在日志上了。” (第3集/ep3-scene2/ep3-s2-l10)；“锁死了。电位器齿轮物理锁死，音量彻底稳住了。你手别抖。” (第4集/ep4-scene1/ep4-s1-l2)；“用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。” (第4集/ep4-scene3/ep4-s3-l4)
+- round_3_continue / timeline：True；“傍晚到了。岚哥，我坐好了，随时能开口。” (第2集/ep2-scene3/ep2-s3-l2)；“配重？这大傍晚的，我上哪给你找标准件去啊？” (第3集/ep3-scene1/ep3-s1-l4)；“哎哟我的妈，刚才那啸叫差点把我耳膜震穿！太好了，外头天都黑透了，街坊们全搬着小板凳在院子里等着呢。现在能正式播了吗？” (第4集/ep4-scene1/ep4-s1-l3)
+- round_3_continue / constraint:bell_effect：True；“用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。” (第4集/ep4-scene3/ep4-s3-l4)
+- round_3_continue / identity：True；“弹簧老化，除锈后张力不够，得重新调配重。” (第3集/ep3-scene1/ep3-s1-l3)；“是不是弄坏了？这弹簧怎么弹出来了！外头街坊可都搬着板凳等着听响呢！” (第3集/ep3-scene1/ep3-s1-l2)
+- round_3_continue / facts：True；“老街坊们，大家晚上好。这里是老街广播站。昨晚屋顶漏水，让咱们的广播哑了嗓子，让大家跟着担惊受怕了。但请大家放心，旧接头换了，飞线接好了，老机器也重新转起来了。” (第4集/ep4-scene2/ep4-s2-l2)；“除锈剂喷洒声，用力扳动击锤的金属摩擦声，突然“咔哒”一声脆响，弹簧滑脱。窗外隐约传来街坊聚集的人声。” (第3集/ep3-scene1/ep3-s1-l1)
+- round_3_continue / relationships：True；“别急，街坊们不在乎音量完不完美，在乎的是咱们还在。” (第3集/ep3-scene3/ep3-s3-l5)；“这几十个小时，多亏了咱们的维修员林岚。他通宵飞线，拿硬币做配重，满手都是机油和铁锈。他修好的不仅是这台老机器，更是咱们老街的底气。只要这大喇叭还能响，咱们街坊邻居的心就永远散不了。” (第4集/ep4-scene2/ep4-s2-l3)
+- round_3_continue / threads：True；“用力拉动铃绳。清脆的机械铃声响起：叮！……叮！……叮！三声铃响余音在老街夜空回荡。” (第4集/ep4-scene3/ep4-s3-l4)；“锁死了。电位器齿轮物理锁死，音量彻底稳住了。你手别抖。” (第4集/ep4-scene1/ep4-s1-l2)
+- special_continue_again / instruction：True；“老街的街坊们，晚上好。降温预警马上就来，注意保暖。这次广播能恢复，多亏了维修班的林岚。” (第5集/ep5-scene2/ep5-s2-l4)；“谢谢王奶奶。红霉素我涂了。广播站一直都在，大家放心。” (第5集/ep5-scene3/ep5-s3-l4)
+- special_continue_again / timeline：True；“老街的街坊们，晚上好。降温了，大家注意添衣，广播站一直都在。” (第4集/ep4-scene3/ep4-s3-l5)；“今晚夜色真好。明天同一时间，再见。” (第5集/ep5-scene3/ep5-s3-l6)
+- special_continue_again / identity：True；“岚姐，我嗓子突然发紧。真播了，反而怕说错话。” (第5集/ep5-scene1/ep5-s1-l4)；“深呼吸。设备没问题，你也没问题。” (第5集/ep5-scene2/ep5-s2-l2)
+- special_continue_again / facts：True；“给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？” (第2集/ep2-scene2/ep2-s2-l2)；“王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？” (第5集/ep5-scene2/ep5-s2-l6)
+- special_continue_again / relationships：True；“周野轻轻按住她的手背，将麦克风推向她。” (第5集/ep5-scene3/ep5-s3-l1)；“林岚反手握住周野的手腕，凑近麦克风，声音轻柔却清晰。” (第5集/ep5-scene3/ep5-s3-l3)
+- special_continue_again / threads：True；“给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？” (第2集/ep2-scene2/ep2-s2-l2)；“王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？” (第5集/ep5-scene2/ep5-s2-l6)
+
+单元与数据库测试使用显式测试替身，真实模型状态仅由本批次真实 Provider 产物判定。三轮样本不代表规模化稳定性。

@@ -1,0 +1,29 @@
+{
+  "intent": "remix",
+  "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+  "idempotency_key": "e64f693a0a8142bd8611ea3c4d9a8533",
+  "user_instruction": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。",
+  "creation_preferences": {
+    "story_mode": "general",
+    "genre": "温情",
+    "target_episodes": 2,
+    "target_duration_sec": 120,
+    "ending_preference": "closed"
+  },
+  "remix": {
+    "instruction": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+    "retain_elements": [
+      "林岚是维修员，周野是主持人",
+      "故事发生在老街广播站"
+    ],
+    "transform_elements": [
+      "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+      "结局改为周野公开认错并合作整改，不能以三声铃报平安收束"
+    ],
+    "relation_to_source": "parallel_world"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "4ec5893f2e8c4d4aba858036a1446de1"
+  }
+}

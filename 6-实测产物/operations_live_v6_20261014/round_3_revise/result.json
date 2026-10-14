@@ -1,0 +1,98 @@
+{
+  "label": "round_3_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "a0a7b7f8196243a5b7417708980dfd47",
+  "version_no": 2,
+  "story_version_id": "9fdc2cb6e2e54173a6591b41551ffd8e",
+  "parent": "09875906bc134662997c3cf4f4d3be2e",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "站住。先别急着出去，过来一起核对下设备状态。你看万用表蜂鸣档的读数，阻值接近零。这不是断路，是进水导致的短路。确认了原因，我们再决定下一步怎么排查。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l5"
+      ],
+      "raw_evidence_quotes": [
+        "站住。先别急着出去，过来一起核对下设备状态。你看万用表蜂鸣档的读数，阻值接近零。这不是断路，是进水导致的短路。确认了原因，我们再决定下一步怎么排查。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "积水清了。但防水接头彻底报废，备件在总仓，今晚只能做临时绝缘处理。",
+        "主线绝缘层也脆化了。主线也得换，今晚弄不完了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l1",
+        "ep1-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "积水清了。但防水接头彻底报废，备件在总仓，今晚只能做临时绝缘处理。",
+        "主线绝缘层也脆化了。主线也得换，今晚弄不完了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "站住。先别急着出去，过来一起核对下设备状态。你看万用表蜂鸣档的读数，阻值接近零。这不是断路，是进水导致的短路。确认了原因，我们再决定下一步怎么排查。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l5"
+      ],
+      "raw_evidence_quotes": [
+        "站住。先别急着出去，过来一起核对下设备状态。你看万用表蜂鸣档的读数，阻值接近零。这不是断路，是进水导致的短路。确认了原因，我们再决定下一步怎么排查。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "看清楚了。雨水顺着外墙裂缝倒灌，里面全是铜绿。",
+        "主线绝缘层也脆化了。主线也得换，今晚弄不完了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l4",
+        "ep1-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "看清楚了。雨水顺着外墙裂缝倒灌，里面全是铜绿。",
+        "主线绝缘层也脆化了。主线也得换，今晚弄不完了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "哎哟！怎么又没声了？林师傅，这广播到底什么时候能响？街坊们都等着听晚间新闻呢！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "哎哟！怎么又没声了？林师傅，这广播到底什么时候能响？街坊们都等着听晚间新闻呢！"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 87028,
+  "reported_output_tokens": 11608,
+  "reported_total_tokens": 98636,
+  "reasoning_tokens_included_in_output": 8400,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 108.224,
+  "wall_time_sec": 109.703
+}

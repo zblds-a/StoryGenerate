@@ -1,0 +1,41 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "role": "performance_annotation",
+  "system": "你是中文广播剧声音导演。只为给定 spoken_lines 的每条 dialogue/narration 产生一个结构化表演注释；不得增删、改写台词，也不得替角色说出原文不存在的词。line_id 原样返回、不得遗漏或编造。\nemotion 选与当前人物行动相符的情绪，不要全篇泛化成 worried/surprised；tone_instruction 用简短、可实际演出的声音动作描述（例如“压住怒气，后半句转为恳求”），避免堆“极度、爆发、震撼”等抽象赞词。\n每句至少一个真正承担信息或态度焦点的重音 emphasis，通常 1–2 个短语即可；span_text 必须是原句连续的原文字符串，重复出现时 occurrence 按从左到右第几次填写。不得把全句都当重音。\nspeech_rate 一般在 0.85–1.20；确有慌张或低声安抚等剧情需要才偏离，并与角色说话习惯一致。delivery_note 只描述录音或停顿可执行动作，不假装观众能看到“眼神变化”。仅输出给定 AnnotationBatch Schema 的 JSON。\n\n\n你是一个结构化数据生成器。\n只输出一个 JSON 对象，不要输出任何解释、前言、Markdown 代码围栏或注释。\nJSON 必须严格符合以下 JSON Schema：\n{\n  \"$defs\": {\n    \"Emotion\": {\n      \"enum\": [\n        \"neutral\",\n        \"calm\",\n        \"happy\",\n        \"excited\",\n        \"sad\",\n        \"worried\",\n        \"angry\",\n        \"surprised\",\n        \"fearful\",\n        \"reassuring\",\n        \"serious\",\n        \"playful\",\n        \"mysterious\",\n        \"tender\"\n      ],\n      \"title\": \"Emotion\",\n      \"type\": \"string\"\n    },\n    \"EmphasisSpan\": {\n      \"additionalProperties\": false,\n      \"properties\": {\n        \"span_text\": {\n          \"minLength\": 1,\n          \"title\": \"Span Text\",\n          \"type\": \"string\"\n        },\n        \"occurrence\": {\n          \"default\": 1,\n          \"minimum\": 1,\n          \"title\": \"Occurrence\",\n          \"type\": \"integer\"\n        },\n        \"start_char\": {\n          \"anyOf\": [\n            {\n              \"minimum\": 0,\n              \"type\": \"integer\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"Start Char\"\n        },\n        \"end_char\": {\n          \"anyOf\": [\n            {\n              \"minimum\": 1,\n              \"type\": \"integer\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"End Char\"\n        },\n        \"strength\": {\n          \"default\": \"medium\",\n          \"enum\": [\n            \"medium\",\n            \"strong\"\n          ],\n          \"title\": \"Strength\",\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"span_text\"\n      ],\n      \"title\": \"EmphasisSpan\",\n      \"type\": \"object\"\n    },\n    \"PerformanceAnnotation\": {\n      \"properties\": {\n        \"line_id\": {\n          \"title\": \"Line Id\",\n          \"type\": \"string\"\n        },\n        \"emotion\": {\n          \"$ref\": \"#/$defs/Emotion\"\n        },\n        \"tone_instruction\": {\n          \"minLength\": 1,\n          \"title\": \"Tone Instruction\",\n          \"type\": \"string\"\n        },\n        \"emphasis\": {\n          \"items\": {\n            \"$ref\": \"#/$defs/EmphasisSpan\"\n          },\n          \"minItems\": 1,\n          \"title\": \"Emphasis\",\n          \"type\": \"array\"\n        },\n        \"speech_rate\": {\n          \"default\": 1.0,\n          \"maximum\": 2.0,\n          \"minimum\": 0.5,\n          \"title\": \"Speech Rate\",\n          \"type\": \"number\"\n        },\n        \"delivery_note\": {\n          \"anyOf\": [\n            {\n              \"type\": \"string\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"Delivery Note\"\n        }\n      },\n      \"required\": [\n        \"line_id\",\n        \"emotion\",\n        \"tone_instruction\",\n        \"emphasis\"\n      ],\n      \"title\": \"PerformanceAnnotation\",\n      \"type\": \"object\"\n    }\n  },\n  \"properties\": {\n    \"annotations\": {\n      \"items\": {\n        \"$ref\": \"#/$defs/PerformanceAnnotation\"\n      },\n      \"title\": \"Annotations\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"annotations\"\n  ],\n  \"title\": \"PerformanceAnnotationBatch\",\n  \"type\": \"object\"\n}\n\n若某字段在给定信息中无法确定，请依据 Schema 中的 description 做出最合理的专业推断，不要留空、不要填 null（除非 Schema 明确允许）。",
+  "user": "{\n  \"context\": {\n    \"approved_outline\": {\n      \"index\": 4,\n      \"title\": \"三声平安铃\",\n      \"core_goal\": \"完成音量校准，正式播报平安信息，并敲响三声铜铃回收伏笔。\",\n      \"major_beats\": [\n        \"[0-2s] 旋钮转动的细微摩擦声，林岚微调阻抗旋钮，喇叭里的电流底噪逐渐消失。\",\n        \"[2-7s] 林岚点头示意，周野深吸一口气，用温暖平稳的声音正式播报老街积水退去、道路恢复通行的平安信息。\",\n        \"[7-20s] 外部喇叭传出清晰、音量稳定的广播声，窗外隐约传来王奶奶等街坊“听见啦”的欢呼与回应。\",\n        \"[20-80s] 播报结束，周野放下麦克风长舒一口气。林岚在维修日志上郑重写下“校准完毕，运行正常”并合上本子。两人相视一笑，回顾这一夜从猜疑到默契的波折，确认彼此都是广播站不可或缺的支柱。\",\n        \"[80-113s] 周野拿起桌上的黄铜铃，走到麦克风前，林岚帮他推开广播推子。周野对着麦克风，向老街坊们宣告广播站彻底恢复正常。\",\n        \"[113-120s] 周野敲击铜铃。SFX：清脆的“叮——”，停顿，“叮——”，停顿，“叮——”。三声铃响通过广播传遍老街，伴随清晨阳光与远处的街坊回应声，故事温暖落幕。\"\n      ],\n      \"ending\": \"三声铃响真正通过广播传出，伏笔回收，双向治愈的Closed Ending。\",\n      \"target_duration_sec\": 120\n    },\n    \"scene\": \"微调与播报\",\n    \"content_rating\": \"teen\",\n    \"model_mapping_snapshot\": {\n      \"FAST\": \"qwen/qwen3.6-flash\",\n      \"LONG\": \"zhipu/glm-5.3\",\n      \"STRONG\": \"qwen/qwen3.7-max\",\n      \"BALANCED\": \"qwen/qwen3.7-plus\"\n    }\n  },\n  \"spoken_lines\": [\n    {\n      \"line_id\": \"ep4-s1-l2\",\n      \"kind\": \"dialogue\",\n      \"speaker\": \"repairer\",\n      \"text\": \"阻抗匹配正常，底噪消除。电流声完全没了，可以开始。\",\n      \"performance_hint\": null,\n      \"sfx_category\": null,\n      \"performer_id\": \"voice-linlan\"\n    },\n    {\n      \"line_id\": \"ep4-s1-l3\",\n      \"kind\": \"dialogue\",\n      \"speaker\": \"host\",\n      \"text\": \"各位老街坊，大家早上好。我是周野。昨晚的暴雨已经停了，老街积水全部退去，各条道路恢复通行。大家出门注意安全，放心出门买菜吧，街口的早餐摊也出摊了。\",\n      \"performance_hint\": null,\n      \"sfx_category\": null,\n      \"performer_id\": \"voice-zhouye\"\n    }\n  ]\n}",
+  "capture_id": "4ec4d5eaff0f42bb9ae88703bdb5e435",
+  "status": "completed",
+  "started_at": "2026-10-14T11:24:34.962808+00:00",
+  "response_text": "{\n  \"annotations\": [\n    {\n      \"line_id\": \"ep4-s1-l2\",\n      \"emotion\": \"calm\",\n      \"tone_instruction\": \"语气平稳专注，确认技术状态后转为干脆利落\",\n      \"emphasis\": [\n        {\n          \"span_text\": \"阻抗匹配正常\",\n          \"occurrence\": 1,\n          \"strength\": \"medium\"\n        },\n        {\n          \"span_text\": \"可以开始\",\n          \"occurrence\": 1,\n          \"strength\": \"strong\"\n        }\n      ],\n      \"speech_rate\": 0.95,\n      \"delivery_note\": \"前半句保持专业汇报感，后半句气息下沉准备进入播报状态\"\n    },\n    {\n      \"line_id\": \"ep4-s1-l3\",\n      \"emotion\": \"reassuring\",\n      \"tone_instruction\": \"深吸一口气后开口，音色放暖，语流平稳如常日广播，不刻意煽情\",\n      \"emphasis\": [\n        {\n          \"span_text\": \"老街积水全部退去\",\n          \"occurrence\": 1,\n          \"strength\": \"medium\"\n        },\n        {\n          \"span_text\": \"放心出门买菜吧\",\n          \"occurrence\": 1,\n          \"strength\": \"strong\"\n        }\n      ],\n      \"speech_rate\": 1.0,\n      \"delivery_note\": \"开头前留0.5秒呼吸停顿，句间换气自然，结尾尾音微微上扬带出生活气息\"\n    }\n  ]\n}",
+  "calls": [
+    {
+      "request_id": "0d91bcc5d26b427d8c0d2c69006ddebf",
+      "job_id": "a22740e66bff440195dd1531054364ba",
+      "plan_id": "6a4187c230a242db9778f44439f6c825",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "ad07b6c701a2486bbb1dcad24bbddec3",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.10",
+      "started_at": "2026-10-14T11:24:34.963950+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 1927,
+      "output_tokens": 2978,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2620,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "8d3e2426-360b-48fa-b949-28c384cde790",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 25215,
+      "completed_at": "2026-10-14T11:25:00.179963+00:00"
+    }
+  ],
+  "completed_at": "2026-10-14T11:25:00.179963+00:00"
+}

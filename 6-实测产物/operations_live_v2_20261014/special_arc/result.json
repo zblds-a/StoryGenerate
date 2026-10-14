@@ -1,0 +1,17 @@
+{
+  "label": "special_arc",
+  "intent": "revise",
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+  "calls": 10,
+  "reported_input_tokens": 146403,
+  "reported_output_tokens": 52369,
+  "reported_total_tokens": 198772,
+  "reasoning_tokens_included_in_output": 39461,
+  "cache_read_tokens": 2304,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 464.386,
+  "wall_time_sec": 466.125
+}

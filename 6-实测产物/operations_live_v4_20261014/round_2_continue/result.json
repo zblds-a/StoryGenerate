@@ -1,0 +1,109 @@
+{
+  "label": "round_2_continue",
+  "intent": "continue",
+  "status": "passed",
+  "retry_job_id": "fb01771d0bca44268fff44abf0a6ecfe",
+  "approved_snapshot_reused": true,
+  "story_id": "8e72ec3f8f674929a028e4e196030175",
+  "version_no": 3,
+  "story_version_id": "fb0d586422ae4df790249687afaca6b9",
+  "parent": "6d46bedd78464af4a7e733f83b99726b",
+  "episodes": 4,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "维修日志登记：音量失控，待手动校准。",
+        "说好了的，这三声报平安的铃，我替你敲。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s2-l5",
+        "ep4-s3-l1"
+      ],
+      "raw_evidence_quotes": [
+        "维修日志登记：音量失控，待手动校准。",
+        "说好了的，这三声报平安的铃，我替你敲。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "继承来源角色身份、姓名和演绎者",
+      "requirement_id": "identity",
+      "evidence_quotes": [
+        "捂耳朵，退后。",
+        "测试麦克风，一二三，老街坊们晚上好，我是周野……"
+      ],
+      "evidence_line_ids": [
+        "ep3-s1-l4",
+        "ep3-s1-l1"
+      ],
+      "raw_evidence_quotes": [
+        "捂耳朵，退后。",
+        "测试麦克风，一二三，老街坊们晚上好，我是周野……"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "不得违背来源已发生事实",
+      "requirement_id": "facts",
+      "evidence_quotes": [
+        "万用表递我。测出来了，功放负载反馈电位器的碳膜严重磨损，导致接触不良。",
+        "我出来了。负载彻底稳了，把主控推子推到标准线吧。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s2-l1",
+        "ep4-s2-l6"
+      ],
+      "raw_evidence_quotes": [
+        "测出来了，功放负载反馈电位器的碳膜严重磨损，导致接触不良。",
+        "负载彻底稳了，把主控推子推到标准线吧。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "继承并合理发展来源关系",
+      "requirement_id": "relationships",
+      "evidence_quotes": [
+        "手别抖。拿无水酒精和棉签过来，我一点点清理这些氧化触点。",
+        "喝口温水。别把它当成验收，就当平时在巷口跟李大爷他们唠嗑。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s2-l3",
+        "ep4-s2-l1"
+      ],
+      "raw_evidence_quotes": [
+        "手别抖。拿无水酒精和棉签过来，我一点点清理这些氧化触点。",
+        "喝口温水。别把它当成验收，就当平时在巷口跟李大爷他们唠嗑。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "按指令继承或回收伏笔，不能凭空消失",
+      "requirement_id": "threads",
+      "evidence_quotes": [
+        "说好了的，这三声报平安的铃，我替你敲。",
+        "老街坊们，晚上好。老街频段，重新上线。"
+      ],
+      "evidence_line_ids": [
+        "ep4-s3-l1",
+        "ep4-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "说好了的，这三声报平安的铃，我替你敲。",
+        "老街坊们，晚上好。老街频段，重新上线。"
+      ]
+    }
+  ],
+  "calls": 9,
+  "reported_input_tokens": 118506,
+  "reported_output_tokens": 44508,
+  "reported_total_tokens": 163014,
+  "reasoning_tokens_included_in_output": 35596,
+  "cache_read_tokens": 2304,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 385.922,
+  "wall_time_sec": 388.047
+}

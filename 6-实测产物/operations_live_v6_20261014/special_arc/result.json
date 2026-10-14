@@ -1,0 +1,113 @@
+{
+  "label": "special_arc",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "961f3f0ea1ea4866ac3073fbd090dd8e",
+  "version_no": 7,
+  "story_version_id": "28b82829280849649ad09fd1f82c0e0c",
+  "parent": "748a7f9207de44c6bfe4bc4350a6d409",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "重写两集合作弧线，让信任逐步建立；保留人物、进水故障和未兑现三声铃的结果。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "外墙旧电源接头防水胶老化，雨水渗进去了。这是你上次做户外直播乱接电线留下的隐患。拿手电，照上面。",
+        "太好了！只要推闸出声，我就敲三声铃给街坊报平安。张奶奶他们等着呢。",
+        "等等。别敲。",
+        "拿上工具包。走，去楼顶查天线。这三声铃，等信号通了再敲。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l3",
+        "ep1-s3-l3",
+        "ep2-s3-l5",
+        "ep2-s3-l9"
+      ],
+      "raw_evidence_quotes": [
+        "外墙旧电源接头防水胶老化，雨水渗进去了。这是你上次做户外直播乱接电线留下的隐患。拿手电，照上面。",
+        "太好了！只要推闸出声，我就敲三声铃给街坊报平安。张奶奶他们等着呢。",
+        "等等。别敲。",
+        "拿上工具包。走，去楼顶查天线。这三声铃，等信号通了再敲。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "喂？喂！街坊们能听见吗？这大暴雨的，没广播大家怎么知道积水情况？这破设备怎么又断了！",
+        "这大半夜的，拆了还能装上吗？今晚这三声铃，怕是敲不响了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep2-s1-l4"
+      ],
+      "raw_evidence_quotes": [
+        "喂？喂！街坊们能听见吗？这大暴雨的，没广播大家怎么知道积水情况？这破设备怎么又断了！",
+        "这大半夜的，拆了还能装上吗？今晚这三声铃，怕是敲不响了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "重写两集合作弧线，让信任逐步建立；保留人物、进水故障和未兑现三声铃的结果。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "……光打得很稳。保持住。",
+        "原来你这么想。我以前光动嘴皮子，以后设备维护，我跟你学。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l8",
+        "ep2-s2-l6"
+      ],
+      "raw_evidence_quotes": [
+        "……光打得很稳。保持住。",
+        "原来你这么想。我以前光动嘴皮子，以后设备维护，我跟你学。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "万用表测过了，阻值趋近于零。是短路，不是剪断。别瞎猜。",
+        "主控室监听耳机没声音。调音台修好了，但信号没送进发射塔。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1",
+        "ep2-s3-l7"
+      ],
+      "raw_evidence_quotes": [
+        "万用表测过了，阻值趋近于零。是短路，不是剪断。别瞎猜。",
+        "主控室监听耳机没声音。调音台修好了，但信号没送进发射塔。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "喂？喂！街坊们能听见吗？这大暴雨的，没广播大家怎么知道积水情况？这破设备怎么又断了！",
+        "别碰总闸！手上有水，退后。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "喂？喂！街坊们能听见吗？这大暴雨的，没广播大家怎么知道积水情况？这破设备怎么又断了！",
+        "别碰总闸！手上有水，退后。"
+      ]
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 143714,
+  "reported_output_tokens": 49128,
+  "reported_total_tokens": 192842,
+  "reasoning_tokens_included_in_output": 36964,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 444.838,
+  "wall_time_sec": 446.344
+}

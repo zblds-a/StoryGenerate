@@ -1,0 +1,133 @@
+{
+  "label": "round_2_create",
+  "intent": "create",
+  "status": "passed",
+  "story_id": "8cf08dd57dcb49999a0a1dfd74055af8",
+  "version_no": 1,
+  "story_version_id": "7497ced975ff43df8e940cea79792f69",
+  "parent": null,
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+        "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+        "等等！别敲！",
+        "先做假负载测试。铃放下，去拿负载电阻。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l3",
+        "ep1-s3-l2",
+        "ep2-s3-l6",
+        "ep2-s3-l10"
+      ],
+      "raw_evidence_quotes": [
+        "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+        "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+        "等等！别敲！",
+        "先做假负载测试。铃放下，去拿负载电阻。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+        "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l2",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": [
+        "主控板差不多吹干了吧？等会儿修好试播，我敲三声老铜铃给街坊们报个平安，让他们安心，怎么样？",
+        "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+      "requirement_id": "constraint:fault",
+      "evidence_quotes": [
+        "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+        "这旧电源接头的防水胶布都老化开裂了……上次暴雨我忘关窗，雨水顺着墙缝渗进来了。我的锅，真对不住。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l3",
+        "ep1-s2-l5"
+      ],
+      "raw_evidence_quotes": [
+        "看万用表读数，零线和地线阻值接近零，典型的短路。是漏水，不是剪线。拿上工具，顺着线去外墙看看。",
+        "这旧电源接头的防水胶布都老化开裂了……上次暴雨我忘关窗，雨水顺着墙缝渗进来了。我的锅，真对不住。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+      "requirement_id": "constraint:identities",
+      "evidence_quotes": [
+        "先别急着下定论，也别去惹事。把手电筒拿过来，照一下控制台后盖。",
+        "好嘞。林岚，其实你心里还是在乎这广播站的，只是嘴上不承认，对吧？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3",
+        "ep1-s2-l7"
+      ],
+      "raw_evidence_quotes": [
+        "先别急着下定论，也别去惹事。把手电筒拿过来，照一下控制台后盖。",
+        "好嘞。林岚，其实你心里还是在乎这广播站的，只是嘴上不承认，对吧？"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+      "requirement_id": "constraint:cooperation",
+      "evidence_quotes": [
+        "现在自责没用。把水渍擦干，拿这卷防水胶带，我缠你递。",
+        "这后盖空间太挤了，我帮你拿吸锡器。焊锡丝要递到哪个角度？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l6",
+        "ep2-s2-l2"
+      ],
+      "raw_evidence_quotes": [
+        "现在自责没用。把水渍擦干，拿这卷防水胶带，我缠你递。",
+        "这后盖空间太挤了，我帮你拿吸锡器。焊锡丝要递到哪个角度？"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+      "requirement_id": "constraint:deferred_bell",
+      "evidence_quotes": [
+        "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！",
+        "等等！别敲！",
+        "先做假负载测试。铃放下，去拿负载电阻。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s3-l4",
+        "ep2-s3-l6",
+        "ep2-s3-l10"
+      ],
+      "raw_evidence_quotes": [
+        "全绿了！没异响！我拿老铜铃了啊，敲三声给街坊们报平安！",
+        "等等！别敲！",
+        "先做假负载测试。铃放下，去拿负载电阻。"
+      ]
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 55100,
+  "reported_output_tokens": 48555,
+  "reported_total_tokens": 103655,
+  "reasoning_tokens_included_in_output": 36570,
+  "cache_read_tokens": 2304,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 460.617,
+  "wall_time_sec": 462.062
+}

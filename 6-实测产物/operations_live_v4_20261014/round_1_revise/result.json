@@ -1,0 +1,84 @@
+{
+  "label": "round_1_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "79b25a68183f465ebeb9c7bcf6857338",
+  "version_no": 2,
+  "story_version_id": "4b14b41f7a934b0bb741167964f1fa5f",
+  "parent": "7d3a527f52ed41adb1f5d47d5743cbb1",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "别催。过来，一起核对配电箱状态和万用表读数。确认彻底断电再定下一步排查方向。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "别催。过来，一起核对配电箱状态和万用表读数。确认彻底断电再定下一步排查方向。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "别催。过来，一起核对配电箱状态和万用表读数。确认彻底断电再定下一步排查方向。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "别催。过来，一起核对配电箱状态和万用表读数。确认彻底断电再定下一步排查方向。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "手电打高点。防水胶老化，接头进水短路了。递一下刮刀。",
+        "别高兴太早。功放模块已经烧穿了，输出端还是零。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l5",
+        "ep1-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "防水胶老化，接头进水短路了。递一下刮刀。",
+        "别高兴太早。功放模块已经烧穿了，输出端还是零。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底会不会修啊？街坊大爷大妈还等着听早新闻呢！",
+        "睁大眼睛看。万用表显示零电压。线没断，是前端根本没电。别拿你的阴谋论侮辱我的专业。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s2-l2"
+      ],
+      "raw_evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底会不会修啊？街坊大爷大妈还等着听早新闻呢！",
+        "睁大眼睛看。万用表显示零电压。线没断，是前端根本没电。别拿你的阴谋论侮辱我的专业。"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 79011,
+  "reported_output_tokens": 11300,
+  "reported_total_tokens": 90311,
+  "reasoning_tokens_included_in_output": 8845,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 102.931,
+  "wall_time_sec": 104.469
+}

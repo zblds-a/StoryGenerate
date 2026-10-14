@@ -1,0 +1,6 @@
+{
+  "label": "special_arc",
+  "intent": "revise",
+  "status": "blocked",
+  "reason": "批次被新修复提交取代，未执行"
+}

@@ -1,0 +1,110 @@
+{
+  "label": "round_3_continue",
+  "intent": "continue",
+  "status": "passed",
+  "story_id": "b808795136774c6f9f1483f2d36f9830",
+  "version_no": 3,
+  "story_version_id": "60b90cef18004bc299a467d4b6eb8188",
+  "parent": "e372d1b5017c4529ae9410b47d8fc8a2",
+  "episodes": 4,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "别自责。拿笔，在维修日志上写：带负载音量不稳，待校准。按流程来。",
+        "带负载音量不稳，待校准。呼，写下来了。有这流程兜底，心里踏实多了。",
+        "电平完美，没有破音。校准完成。",
+        "清脆的“叮、叮、叮”三声铃响，通过广播传遍老街。远处传来街坊们热烈的欢呼与回应。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s2-l5",
+        "ep3-s2-l6",
+        "ep4-s2-l6",
+        "ep4-s3-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "老街的街坊们，下午好，我是周野。今天阳光很好，点歌台马上开始。"
+      ],
+      "evidence_line_ids": [
+        "ep4-s2-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "继承来源角色身份、姓名和演绎者",
+      "requirement_id": "identity",
+      "evidence_quotes": [
+        "哎哟王大妈，您别拍门了！设备刚修好，正测试呢，马上就能听见响儿！",
+        "把门带上。我现在推上总控推子，开启带负载试音，接通全街喇叭网络。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s1-l2",
+        "ep3-s1-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "不得违背来源已发生事实",
+      "requirement_id": "facts",
+      "evidence_quotes": [
+        "哎哟王大妈，您别拍门了！设备刚修好，正测试呢，马上就能听见响儿！",
+        "停。带负载后阻抗变化导致输出电平不稳，必须重新校准。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s1-l2",
+        "ep3-s2-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "继承并合理发展来源关系",
+      "requirement_id": "relationships",
+      "evidence_quotes": [
+        "别自责。拿笔，在维修日志上写：带负载音量不稳，待校准。按流程来。",
+        "生活智慧。我试试。",
+        "老街的规矩，得主持人来。拿着。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s2-l5",
+        "ep4-s1-l6",
+        "ep4-s2-l10"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "按指令继承或回收伏笔，不能凭空消失",
+      "requirement_id": "threads",
+      "evidence_quotes": [
+        "老街广播站，正式恢复播音。",
+        "清脆的“叮、叮、叮”三声铃响，通过广播传遍老街。远处传来街坊们热烈的欢呼与回应。"
+      ],
+      "evidence_line_ids": [
+        "ep4-s3-l2",
+        "ep4-s3-l3"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 127775,
+  "reported_output_tokens": 45056,
+  "reported_total_tokens": 172831,
+  "reasoning_tokens_included_in_output": 34291,
+  "cache_read_tokens": 9216,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 422.589,
+  "wall_time_sec": 424.25
+}

@@ -1,0 +1,17 @@
+{
+  "label": "special_line",
+  "intent": "revise",
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "plan episode count differs from operation scope",
+  "calls": 1,
+  "reported_input_tokens": 38304,
+  "reported_output_tokens": 2840,
+  "reported_total_tokens": 41144,
+  "reasoning_tokens_included_in_output": 1150,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 30.985,
+  "wall_time_sec": 31.672
+}

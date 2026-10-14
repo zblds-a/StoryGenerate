@@ -1,0 +1,41 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "role": "performance_annotation",
+  "system": "你是中文广播剧声音导演。只为给定 spoken_lines 的每条 dialogue/narration 产生一个结构化表演注释；不得增删、改写台词，也不得替角色说出原文不存在的词。line_id 原样返回、不得遗漏或编造。\nemotion 选与当前人物行动相符的情绪，不要全篇泛化成 worried/surprised；tone_instruction 用简短、可实际演出的声音动作描述（例如“压住怒气，后半句转为恳求”），避免堆“极度、爆发、震撼”等抽象赞词。\n每句至少一个真正承担信息或态度焦点的重音 emphasis，通常 1–2 个短语即可；span_text 必须是原句连续的原文字符串，重复出现时 occurrence 按从左到右第几次填写。不得把全句都当重音。\nspeech_rate 一般在 0.85–1.20；确有慌张或低声安抚等剧情需要才偏离，并与角色说话习惯一致。delivery_note 只描述录音或停顿可执行动作，不假装观众能看到“眼神变化”。仅输出给定 AnnotationBatch Schema 的 JSON。\n\n\n你是一个结构化数据生成器。\n只输出一个 JSON 对象，不要输出任何解释、前言、Markdown 代码围栏或注释。\nJSON 必须严格符合以下 JSON Schema：\n{\n  \"$defs\": {\n    \"Emotion\": {\n      \"enum\": [\n        \"neutral\",\n        \"calm\",\n        \"happy\",\n        \"excited\",\n        \"sad\",\n        \"worried\",\n        \"angry\",\n        \"surprised\",\n        \"fearful\",\n        \"reassuring\",\n        \"serious\",\n        \"playful\",\n        \"mysterious\",\n        \"tender\"\n      ],\n      \"title\": \"Emotion\",\n      \"type\": \"string\"\n    },\n    \"EmphasisSpan\": {\n      \"additionalProperties\": false,\n      \"properties\": {\n        \"span_text\": {\n          \"minLength\": 1,\n          \"title\": \"Span Text\",\n          \"type\": \"string\"\n        },\n        \"occurrence\": {\n          \"default\": 1,\n          \"minimum\": 1,\n          \"title\": \"Occurrence\",\n          \"type\": \"integer\"\n        },\n        \"start_char\": {\n          \"anyOf\": [\n            {\n              \"minimum\": 0,\n              \"type\": \"integer\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"Start Char\"\n        },\n        \"end_char\": {\n          \"anyOf\": [\n            {\n              \"minimum\": 1,\n              \"type\": \"integer\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"End Char\"\n        },\n        \"strength\": {\n          \"default\": \"medium\",\n          \"enum\": [\n            \"medium\",\n            \"strong\"\n          ],\n          \"title\": \"Strength\",\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"span_text\"\n      ],\n      \"title\": \"EmphasisSpan\",\n      \"type\": \"object\"\n    },\n    \"PerformanceAnnotation\": {\n      \"properties\": {\n        \"line_id\": {\n          \"title\": \"Line Id\",\n          \"type\": \"string\"\n        },\n        \"emotion\": {\n          \"$ref\": \"#/$defs/Emotion\"\n        },\n        \"tone_instruction\": {\n          \"minLength\": 1,\n          \"title\": \"Tone Instruction\",\n          \"type\": \"string\"\n        },\n        \"emphasis\": {\n          \"items\": {\n            \"$ref\": \"#/$defs/EmphasisSpan\"\n          },\n          \"minItems\": 1,\n          \"title\": \"Emphasis\",\n          \"type\": \"array\"\n        },\n        \"speech_rate\": {\n          \"default\": 1.0,\n          \"maximum\": 2.0,\n          \"minimum\": 0.5,\n          \"title\": \"Speech Rate\",\n          \"type\": \"number\"\n        },\n        \"delivery_note\": {\n          \"anyOf\": [\n            {\n              \"type\": \"string\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"Delivery Note\"\n        }\n      },\n      \"required\": [\n        \"line_id\",\n        \"emotion\",\n        \"tone_instruction\",\n        \"emphasis\"\n      ],\n      \"title\": \"PerformanceAnnotation\",\n      \"type\": \"object\"\n    }\n  },\n  \"properties\": {\n    \"annotations\": {\n      \"items\": {\n        \"$ref\": \"#/$defs/PerformanceAnnotation\"\n      },\n      \"title\": \"Annotations\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"annotations\"\n  ],\n  \"title\": \"PerformanceAnnotationBatch\",\n  \"type\": \"object\"\n}\n\n若某字段在给定信息中无法确定，请依据 Schema 中的 description 做出最合理的专业推断，不要留空、不要填 null（除非 Schema 明确允许）。",
+  "user": "{\n  \"context\": {\n    \"approved_outline\": {\n      \"index\": 2,\n      \"title\": \"直面与重建\",\n      \"core_goal\": \"周野坦白内心的恐惧，在林岚的引导下直面告别，通过广播公开道歉并开启声音档案计划。\",\n      \"major_beats\": [\n        \"[0-2s] 承接钩子：沉重的呼吸声，周野弯腰捡起老铜铃，放在桌面上发出一声沉闷的“咚”声。\",\n        \"[2-7s] 矛盾三要素：周野颓然坐下承认隐瞒，哽咽着说只要设备“坏”着，就不用播那期告别节目，老街的记忆就能多留一天。\",\n        \"[7-20s] 第一次反转：林岚没有责骂，而是默默把插头重新插好，推上电闸。设备启动的底噪平稳响起。林岚平静地说：“逃避不能让时间停下，但会让告别变得难堪。”\",\n        \"[20-80s] 中段推进：周野看着亮起的指示灯，手在发抖，害怕说出再见。林岚递过麦克风，伸手覆在他发抖的手背上给予支撑，两人在沉默中完成情感的拉扯与治愈。\",\n        \"[80-113s] 升级/二次反转：周野深吸一口气，推开麦克风开关。他没有播告别语，而是公开道歉：“对不起，广播站没坏，是我因为害怕告别自私地拔了电源。但现在，我和林岚决定用最后的时间，一起为大家做一份老街声音档案。”\",\n        \"[113-120s] 结局收束：喇叭里传出窗外街坊们隐约的理解与鼓励声。没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。\"\n      ],\n      \"ending\": \"周野公开认错并宣布合作整改，两人在翻动档案的沙沙声中达成双向治愈，彻底告别旧日执念。\",\n      \"target_duration_sec\": 120\n    },\n    \"scene\": \"沉重的铜铃\",\n    \"content_rating\": \"teen\",\n    \"model_mapping_snapshot\": {\n      \"FAST\": \"qwen/qwen3.6-flash\",\n      \"LONG\": \"zhipu/glm-5.3\",\n      \"STRONG\": \"qwen/qwen3.7-max\",\n      \"BALANCED\": \"qwen/qwen3.7-plus\"\n    }\n  },\n  \"spoken_lines\": [\n    {\n      \"line_id\": \"ep2-s1-l2\",\n      \"kind\": \"dialogue\",\n      \"speaker\": \"host\",\n      \"text\": \"只要它一直“坏”着，我就不用播那期告别节目。老街的记忆……是不是就能多留一天？林岚，我不敢说再见，我怕一说出口，这十年的声音就真的散了。\",\n      \"performance_hint\": null,\n      \"sfx_category\": null,\n      \"performer_id\": \"host\"\n    },\n    {\n      \"line_id\": \"ep2-s1-l3\",\n      \"kind\": \"dialogue\",\n      \"speaker\": \"repairer\",\n      \"text\": \"所以你就拔了电源，用胶带缠住插头，骗大家，也骗你自己？\",\n      \"performance_hint\": null,\n      \"sfx_category\": null,\n      \"performer_id\": \"repairer\"\n    }\n  ]\n}",
+  "capture_id": "c44aa5dddf144195bb0de91eedddfa81",
+  "status": "completed",
+  "started_at": "2026-10-14T13:42:44.388900+00:00",
+  "response_text": "{\n  \"annotations\": [\n    {\n      \"line_id\": \"ep2-s1-l2\",\n      \"emotion\": \"sad\",\n      \"tone_instruction\": \"声音微颤，前半句压抑哽咽，后半句逐渐透出脆弱与恳求\",\n      \"emphasis\": [\n        {\n          \"span_text\": \"多留一天\",\n          \"occurrence\": 1,\n          \"strength\": \"medium\"\n        },\n        {\n          \"span_text\": \"真的散了\",\n          \"occurrence\": 1,\n          \"strength\": \"strong\"\n        }\n      ],\n      \"speech_rate\": 0.90,\n      \"delivery_note\": \"句首微顿，模拟吞咽动作；“老街的记忆……”处气声拉长停顿，接下一句时气息不稳\"\n    },\n    {\n      \"line_id\": \"ep2-s1-l3\",\n      \"emotion\": \"serious\",\n      \"tone_instruction\": \"语气平稳克制，不带指责的尖锐，以陈述事实的口吻逐层递进\",\n      \"emphasis\": [\n        {\n          \"span_text\": \"骗大家，也骗你自己\",\n          \"occurrence\": 1,\n          \"strength\": \"strong\"\n        }\n      ],\n      \"speech_rate\": 1.00,\n      \"delivery_note\": \"“插头”后微作停顿，给角色留出反应空间；句尾降调处理，避免上扬疑问感，保持冷静引导的姿态\"\n    }\n  ]\n}",
+  "calls": [
+    {
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "cb6c9fa9ae1e4d6fa9f5a5f540437759",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.11",
+      "started_at": "2026-10-14T13:42:44.390101+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 1970,
+      "output_tokens": 3736,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3395,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "1122014a-4cca-44c7-aa68-cecc9332d1b5",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 33314,
+      "completed_at": "2026-10-14T13:43:17.704411+00:00"
+    }
+  ],
+  "completed_at": "2026-10-14T13:43:17.704411+00:00"
+}

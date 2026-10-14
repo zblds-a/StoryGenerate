@@ -1,0 +1,402 @@
+{
+  "results": [
+    {
+      "label": "round_1_continue",
+      "intent": "continue",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+      "calls": 10,
+      "reported_input_tokens": 138795,
+      "reported_output_tokens": 49362,
+      "reported_total_tokens": 188157,
+      "reasoning_tokens_included_in_output": 39032,
+      "cache_read_tokens": 2304,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 458.172,
+      "wall_time_sec": 460.156
+    },
+    {
+      "label": "round_1_create",
+      "intent": "create",
+      "status": "passed",
+      "story_id": "5cd40c336ebd46dd988b2cd3e44a285c",
+      "version_no": 1,
+      "story_version_id": "da7fc4fa3d8747289682a38bf100d48b",
+      "parent": null,
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "万用表递给我。没查清前，先闭嘴。",
+            "老街坊们就指着这喇叭解闷呢。",
+            "刚才那一声……不算啊。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+          "requirement_id": "constraint:fault",
+          "evidence_quotes": [
+            "阻值归零，短路。不是剪线，是室外防水盒老化进水。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+          "requirement_id": "constraint:identities",
+          "evidence_quotes": [
+            "万用表递给我。没查清前，先闭嘴。",
+            "老街坊们就指着这喇叭解闷呢。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+          "requirement_id": "constraint:cooperation",
+          "evidence_quotes": [
+            "我帮你扶着。扳手给你。",
+            "绝缘胶带我来缠。你看，我这手可是开过光的，包得严严实实，绝对不漏电。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+          "requirement_id": "constraint:deferred_bell",
+          "evidence_quotes": [
+            "手忙脚乱碰倒工具，手背撞到黄铜铃铛发出一声单响，随后啸叫声戛然而止",
+            "刚才那一声……不算啊。"
+          ]
+        }
+      ],
+      "calls": 10,
+      "reported_input_tokens": 54690,
+      "reported_output_tokens": 51732,
+      "reported_total_tokens": 106422,
+      "reasoning_tokens_included_in_output": 39135,
+      "cache_read_tokens": 4608,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 521.132,
+      "wall_time_sec": 522.703
+    },
+    {
+      "label": "round_1_remix",
+      "intent": "remix",
+      "status": "blocked",
+      "reason": "Continue未通过"
+    },
+    {
+      "label": "round_1_revise",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "5cd40c336ebd46dd988b2cd3e44a285c",
+      "version_no": 2,
+      "story_version_id": "1265a7306efe4b718abeaf52b4d51a2e",
+      "parent": "da7fc4fa3d8747289682a38bf100d48b",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "先别碰。一起核对机箱外观和指示灯，确认没明火再定下一步。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "先别碰。一起核对机箱外观和指示灯，确认没明火再定下一步。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "外观没破损。万用表递给我，查清前别急着报警。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "先别碰。一起核对机箱外观和指示灯，确认没明火再定下一步。",
+            "行行行，你查，你专业，我给你打下手。"
+          ]
+        }
+      ],
+      "calls": 4,
+      "reported_input_tokens": 89746,
+      "reported_output_tokens": 12453,
+      "reported_total_tokens": 102199,
+      "reasoning_tokens_included_in_output": 9625,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 121.027,
+      "wall_time_sec": 122.984
+    },
+    {
+      "label": "round_2_continue",
+      "intent": "continue",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_2_create",
+      "intent": "create",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+      "calls": 10,
+      "reported_input_tokens": 53874,
+      "reported_output_tokens": 48790,
+      "reported_total_tokens": 102664,
+      "reasoning_tokens_included_in_output": 36535,
+      "cache_read_tokens": 6912,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 477.032,
+      "wall_time_sec": 478.875
+    },
+    {
+      "label": "round_2_remix",
+      "intent": "remix",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_2_revise",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_3_continue",
+      "intent": "continue",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_3_create",
+      "intent": "create",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+      "calls": 10,
+      "reported_input_tokens": 52685,
+      "reported_output_tokens": 50780,
+      "reported_total_tokens": 103465,
+      "reasoning_tokens_included_in_output": 39043,
+      "cache_read_tokens": 8064,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 492.708,
+      "wall_time_sec": 494.14
+    },
+    {
+      "label": "round_3_remix",
+      "intent": "remix",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_3_revise",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "special_arc",
+      "intent": "revise",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+      "calls": 10,
+      "reported_input_tokens": 146403,
+      "reported_output_tokens": 52369,
+      "reported_total_tokens": 198772,
+      "reasoning_tokens_included_in_output": 39461,
+      "cache_read_tokens": 2304,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 464.386,
+      "wall_time_sec": 466.125
+    },
+    {
+      "label": "special_continue_again",
+      "intent": "continue",
+      "status": "blocked",
+      "reason": "旧批次中断，最终版本另行完整重验"
+    },
+    {
+      "label": "special_ending",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "5cd40c336ebd46dd988b2cd3e44a285c",
+      "version_no": 3,
+      "story_version_id": "2c42321f4d8f4be2a0f1852b0158e663",
+      "parent": "da7fc4fa3d8747289682a38bf100d48b",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "功放块击穿了。",
+            "图纸我压着，表笔拿好，咱们从输出端重新查。",
+            "好，红黑表笔就位，随时准备测功放块。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "功放块击穿了。",
+            "图纸我压着，表笔拿好，咱们从输出端重新查。",
+            "好，红黑表笔就位，随时准备测功放块。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "数值正常。物理修复完成。",
+            "拔电源！快！",
+            "手忙脚乱碰倒工具，手背撞到黄铜铃铛发出一声单响，随后啸叫声戛然而止",
+            "功放块击穿了。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "数值正常。物理修复完成。",
+            "太好了！我手都悬在铃铛上了，只要推闸有声音，我就敲三下给街坊们报平安！",
+            "你……不怪我了？",
+            "把助焊剂递过来。下次别乱碰电闸就行。"
+          ]
+        }
+      ],
+      "calls": 4,
+      "reported_input_tokens": 79087,
+      "reported_output_tokens": 13740,
+      "reported_total_tokens": 92827,
+      "reasoning_tokens_included_in_output": 10392,
+      "cache_read_tokens": 3456,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 132.582,
+      "wall_time_sec": 134.984
+    },
+    {
+      "label": "special_episode",
+      "intent": "revise",
+      "status": "passed",
+      "story_id": "5cd40c336ebd46dd988b2cd3e44a285c",
+      "version_no": 4,
+      "story_version_id": "660c0b340e0a4a4b82e2832595fbbd2f",
+      "parent": "da7fc4fa3d8747289682a38bf100d48b",
+      "episodes": 2,
+      "operation_checks": [
+        {
+          "passed": true,
+          "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+          "requirement_id": "instruction",
+          "evidence_quotes": [
+            "阻值归零，短路。不是剪线，是室外防水盒老化进水。",
+            "……剥线钳递上来。把红线外皮剥掉两厘米，别伤到铜芯。",
+            "我戴上绝缘手套帮你稳住线缆。你清理铜锈，我来做绝缘包扎。",
+            "亮了！林岚，咱们说好啊，彻底修好出声了，我就敲三声铃给街坊们报平安！",
+            "设备突发刺耳异响，指示灯狂闪的电流声。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+          "requirement_id": "edit_instruction",
+          "evidence_quotes": [
+            "……剥线钳递上来。把红线外皮剥掉两厘米，别伤到铜芯。",
+            "我戴上绝缘手套帮你稳住线缆。你清理铜锈，我来做绝缘包扎。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持facts不变",
+          "requirement_id": "preserve:facts",
+          "evidence_quotes": [
+            "阻值归零，短路。不是剪线，是室外防水盒老化进水。",
+            "设备突发刺耳异响，指示灯狂闪的电流声。"
+          ]
+        },
+        {
+          "passed": true,
+          "requirement": "保持identity不变",
+          "requirement_id": "preserve:identity",
+          "evidence_quotes": [
+            "退后。别碰机箱，上面有漏电风险。",
+            "哎哟我的祖宗！这广播怎么又断了？肯定是街口那帮小混混嫌吵，偷偷把外线给剪了！"
+          ]
+        }
+      ],
+      "calls": 6,
+      "reported_input_tokens": 120275,
+      "reported_output_tokens": 25965,
+      "reported_total_tokens": 146240,
+      "reasoning_tokens_included_in_output": 19363,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 228.594,
+      "wall_time_sec": 231.64
+    },
+    {
+      "label": "special_line",
+      "intent": "revise",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "plan episode count differs from operation scope",
+      "calls": 1,
+      "reported_input_tokens": 38304,
+      "reported_output_tokens": 2840,
+      "reported_total_tokens": 41144,
+      "reasoning_tokens_included_in_output": 1150,
+      "cache_read_tokens": 0,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 30.985,
+      "wall_time_sec": 31.672
+    },
+    {
+      "label": "special_whole_story",
+      "intent": "revise",
+      "status": "failed",
+      "error_type": "WorkerInterrupted",
+      "error": "旧批次被新实现替代，真实进程已终止；不算模型通过",
+      "potential_inflight_usage_unknown": true,
+      "wall_time_sec": null,
+      "calls": 8,
+      "reported_input_tokens": 106976,
+      "reported_output_tokens": 42719,
+      "reported_total_tokens": 149695,
+      "unavailable_usage_calls": 0,
+      "stale_worker_fenced": true,
+      "persisted_job_status": "FAILED"
+    }
+  ],
+  "interrupted": true,
+  "unknown_inflight_nodes": 1
+}

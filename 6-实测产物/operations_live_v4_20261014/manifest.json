@@ -1,0 +1,13 @@
+{
+  "git_sha": "3c0b1e85e82ca3c9c8d39aac659b5db84de39702",
+  "tracked_dirty": false,
+  "schema": "storyoperations_d6efeab9fdc0",
+  "rounds": 3,
+  "real_provider": true,
+  "mock_fallback": false,
+  "target": "engine_and_structured_delivery",
+  "started_at": "2026-10-14T09:12:06.203761+00:00",
+  "completed_at": "2026-10-14T10:37:31.358454+00:00",
+  "superseded_due_to_quality_gap": true,
+  "potential_inflight_usage_unknown_nodes": 1
+}

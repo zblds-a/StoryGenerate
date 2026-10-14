@@ -1,0 +1,37 @@
+{
+  "model": "qwen/qwen3.7-max",
+  "role": "outline",
+  "system": "只返回JSON\n\n你是一个结构化数据生成器。\n只输出一个 JSON 对象，不要输出任何解释、前言、Markdown 代码围栏或注释。\nJSON 必须严格符合以下 JSON Schema：\n{\n  \"properties\": {\n    \"ok\": {\n      \"title\": \"Ok\",\n      \"type\": \"boolean\"\n    }\n  },\n  \"required\": [\n    \"ok\"\n  ],\n  \"title\": \"Probe\",\n  \"type\": \"object\"\n}\n\n若某字段在给定信息中无法确定，请依据 Schema 中的 description 做出最合理的专业推断，不要留空、不要填 null（除非 Schema 明确允许）。",
+  "user": "返回{\"ok\":true}",
+  "capture_id": "18eed9a370364234bcd59dd5cd132d14",
+  "status": "completed",
+  "started_at": "2026-10-14T13:00:21.352875+00:00",
+  "response_text": "{\"ok\":true}",
+  "calls": [
+    {
+      "call_id": "c3ab7ba123e6473b9cd824bfdf8f088b",
+      "provider": "openai_compat",
+      "stage": "generation",
+      "node": "outline",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.11",
+      "started_at": "2026-10-14T13:00:21.356872+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 169,
+      "output_tokens": 176,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 168,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "00eb1c18-bf76-4948-81f6-53647c0eef3a",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 3361,
+      "completed_at": "2026-10-14T13:00:24.718809+00:00"
+    }
+  ],
+  "completed_at": "2026-10-14T13:00:24.718809+00:00"
+}

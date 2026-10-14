@@ -1,0 +1,165 @@
+{
+  "round_1_continue": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "第3集ep3-s2-l3/l4试音忽大忽小，ep3-s3-l5登记待校准；第4集ep4-s1-l4至l6承接偏置校准并消除失真",
+      "ep4-s3-l1为实际sfx“叮——叮——叮——”，不是仅口头承诺；未解线程为空",
+      "检查新集writer请求含前一新增集摘要、事实与关系增量；返回完整4集而非孤立续集"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "继承的完整旧集逐字段相同，新增ID及全局集号连续，精确父版本正确，铃声线程已关闭"
+    ]
+  },
+  "round_1_create": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "逐场读取两集原始台本：林岚维修、周野播音的身份稳定；通过测量与现场排查明确雨水导致故障，排除人为破坏",
+      "合作关系由猜疑转为理解，三声铃承诺建立但仍未兑现；Create输出两集"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本"
+    ]
+  },
+  "round_1_remix": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "ep1-s1-l2明确没有进水；ep1-s2-l1承认拔电源系害怕告别；维修员/主持人和老街广播站背景保留",
+      "ep2-s2-l2/l3公开承认人为断电并道歉，ep2-s3-l1/l2承诺线上整改和技术合作；未用三声铃结尾",
+      "独立story_id、版本1且父版本准确；新连续性仅记录人为原因与整改，不累加原版进水事实"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本"
+    ]
+  },
+  "round_1_revise": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "逐场比对原稿：仅第一集指定场景变化，林岚明确请周野共同核对状态再决定排查方向",
+      "进水事实、后续行动结果及身份保持；未提前兑现三声铃；其余场景/集及标注完整一致"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "按获批scope复核完整未修改集/场景/台词及演绎标注保持一致；父版本与修改差异可追溯"
+    ]
+  },
+  "round_2_create": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "逐场读取两集原始台本：林岚维修、周野播音的身份稳定；通过测量与现场排查明确雨水导致故障，排除人为破坏",
+      "合作关系由猜疑转为理解，三声铃承诺建立但仍未兑现；Create输出两集"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本"
+    ]
+  },
+  "round_2_revise": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "逐场比对原稿：仅第一集指定场景变化，林岚明确请周野共同核对状态再决定排查方向",
+      "进水事实、后续行动结果及身份保持；未提前兑现三声铃；其余场景/集及标注完整一致"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "按获批scope复核完整未修改集/场景/台词及演绎标注保持一致；父版本与修改差异可追溯"
+    ]
+  },
+  "round_3_create": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "逐场读取两集原始台本：林岚维修、周野播音的身份稳定；通过测量与现场排查明确雨水导致故障，排除人为破坏",
+      "合作关系由猜疑转为理解，三声铃承诺建立但仍未兑现；Create输出两集"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本"
+    ]
+  },
+  "round_3_revise": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "逐场比对原稿：仅第一集指定场景变化，林岚明确请周野共同核对状态再决定排查方向",
+      "进水事实、后续行动结果及身份保持；未提前兑现三声铃；其余场景/集及标注完整一致"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "按获批scope复核完整未修改集/场景/台词及演绎标注保持一致；父版本与修改差异可追溯"
+    ]
+  },
+  "special_arc": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "两集合作弧线以扶梯/递毛巾与理解维修初衷逐步建立信任；保留进水原因、调音台修复后信号未送达的终点，铃声仍未兑现",
+      "新增过往情节为本次获准两集改写中的扩充，不与来源已知事实相冲突"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "按获批scope复核完整未修改集/场景/台词及演绎标注保持一致；父版本与修改差异可追溯"
+    ]
+  },
+  "special_continue_again": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "第5集ep5-s1-l3/l5明确旧维修任务结束、电平稳定；耳机无声解释为拔备用线，没有重启设备故障",
+      "ep5-s2-l1开启首次街坊广播，合作处理街坊求助，ep5-s3-l2/l3继续合作；三声铃保持已兑现，完整输出5集"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "继承的完整旧集逐字段相同，新增ID及全局集号连续，精确父版本正确，铃声线程已关闭"
+    ]
+  },
+  "special_ending": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "仅末集末场变化，ep2-s3-l10/l11/l12用测量、手套安全绳和登顶验收准备收束；保留信号未送达事实和未敲铃状态"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "按获批scope复核完整未修改集/场景/台词及演绎标注保持一致；父版本与修改差异可追溯"
+    ]
+  },
+  "special_episode": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "只重写第一集，将找备用胶带、扶稳梯子具体化；保留进水短路和杂音结果；第二集完整相同，铃声未兑现"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "按获批scope复核完整未修改集/场景/台词及演绎标注保持一致；父版本与修改差异可追溯"
+    ]
+  },
+  "special_line": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "仅ep1-s1-l2改为“又歇菜了”口语表达，保留原意；其他所有台词、场景、集与标注逐字段相等"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "按获批scope复核完整未修改集/场景/台词及演绎标注保持一致；父版本与修改差异可追溯"
+    ]
+  },
+  "special_whole_story": {
+    "passed": true,
+    "reviewer": "Codex artifact inspection",
+    "findings": [
+      "全故事获批重写，以扶梯、交工具和拆修推进合作；整体表达仍保留部分原台词，不能宣称文学质量显著提升",
+      "两人身份、进水故障与未兑现三声铃保持；scope符合整故事范围"
+    ],
+    "mechanical_checks": [
+      "完整结构校验通过；关闭Session后读取任务/版本并完整导出往返一致；成功任务重复执行返回同一版本",
+      "按获批scope复核完整未修改集/场景/台词及演绎标注保持一致；父版本与修改差异可追溯"
+    ]
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "timeline_violation_detected": false,
+  "blocked_by_deterministic_gate": true,
+  "same_production_judge_prompt": true,
+  "quality": {
+    "outline_alignment_passed": true,
+    "continuity_passed": false,
+    "content_rating_passed": true,
+    "reasons": [
+      "ep3-s3-l5明确约定‘明早六点早新闻，五点前必须拿下’（05:00为维修截止期限，06:00为早新闻播出时间），但ep4-s1-l2与ep4-s3-l2将05:00直接作为‘早新闻片头曲切进来’的播出时刻，把任务完成期限混同为节目播出时间，且无提前播出的通知解释，构成时间事实冲突。"
+    ],
+    "operation_checks": [
+      {
+        "requirement_id": "instruction",
+        "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep3-s1-l2",
+          "ep3-s3-l4",
+          "ep4-s2-l2",
+          "ep4-s3-l7"
+        ]
+      },
+      {
+        "requirement_id": "timeline",
+        "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+        "passed": false,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep3-s3-l5",
+          "ep4-s1-l2",
+          "ep4-s3-l2"
+        ]
+      },
+      {
+        "requirement_id": "identity",
+        "requirement": "继承来源角色身份、姓名和演绎者",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep3-s1-l2",
+          "ep4-s3-l8"
+        ]
+      },
+      {
+        "requirement_id": "facts",
+        "requirement": "不得违背来源已发生事实",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep3-s2-l2",
+          "ep4-s1-l3"
+        ]
+      },
+      {
+        "requirement_id": "relationships",
+        "requirement": "继承并合理发展来源关系",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep4-s2-l5",
+          "ep4-s2-l7"
+        ]
+      },
+      {
+        "requirement_id": "threads",
+        "requirement": "按指令继承或回收伏笔，不能凭空消失",
+        "passed": true,
+        "evidence_quotes": [],
+        "evidence_line_ids": [
+          "ep4-s3-l5",
+          "ep4-s3-l7"
+        ]
+      }
+    ],
+    "timeline_claims": [
+      {
+        "event_id": "early_news_broadcast",
+        "kind": "scheduled",
+        "normalized_time": "06:00",
+        "line_id": "ep3-s3-l5",
+        "quote": "明早六点早新闻，五点前必须拿下。"
+      },
+      {
+        "event_id": "repair_deadline",
+        "kind": "deadline",
+        "normalized_time": "05:00",
+        "line_id": "ep3-s3-l5",
+        "quote": "明早六点早新闻，五点前必须拿下。"
+      },
+      {
+        "event_id": "clock_check",
+        "kind": "clock",
+        "normalized_time": "04:50",
+        "line_id": "ep4-s1-l2",
+        "quote": "四点五十了。"
+      },
+      {
+        "event_id": "news_intro_music",
+        "kind": "scheduled",
+        "normalized_time": "05:00",
+        "line_id": "ep4-s1-l2",
+        "quote": "还剩最后十分钟，早新闻的片头曲马上就要切进来了"
+      },
+      {
+        "event_id": "news_intro_music",
+        "kind": "actual",
+        "normalized_time": "05:00",
+        "line_id": "ep4-s3-l2",
+        "quote": "五点整。片头曲进来了。"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "requirement_id": "instruction",
+      "requirement": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+      "passed": true,
+      "evidence_quotes": [
+        "别动！阻抗不匹配，直接推满会烧喇叭。现在处于试音关键期，必须先做低功率带负载测试。",
+        "维修日志登记，待校准。",
+        "锁定。绝缘胶滴好了。推满推子，准备试音。",
+        "叮——叮——叮。三声清脆悠长的铃声。合上维修日志的啪嗒声。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s1-l2",
+        "ep3-s3-l4",
+        "ep4-s2-l2",
+        "ep4-s3-l7"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "timeline",
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "passed": false,
+      "evidence_quotes": [
+        "明早六点早新闻，五点前必须拿下。这墙上的铜铃，咱们等彻底校准完再敲。",
+        "四点五十了。林岚，还剩最后十分钟，早新闻的片头曲马上就要切进来了，街坊们可都等着呢。",
+        "五点整。片头曲进来了。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s3-l5",
+        "ep4-s1-l2",
+        "ep4-s3-l2"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "identity",
+      "requirement": "继承来源角色身份、姓名和演绎者",
+      "passed": true,
+      "evidence_quotes": [
+        "别动！阻抗不匹配，直接推满会烧喇叭。现在处于试音关键期，必须先做低功率带负载测试。",
+        "老街的街坊们，早安。广播站，恢复正常。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s1-l2",
+        "ep4-s3-l8"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "facts",
+      "requirement": "不得违背来源已发生事实",
+      "passed": true,
+      "evidence_quotes": [
+        "手工飞线的电容在带负载时充放电不稳。去废料堆找个五十欧的电位器，串联进去做微调。",
+        "别出声。高频阻抗还差最后两欧。屏住呼吸，这电位器稍微偏一点，高音单元就得当场烧毁。"
+      ],
+      "evidence_line_ids": [
+        "ep3-s2-l2",
+        "ep4-s1-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "relationships",
+      "requirement": "继承并合理发展来源关系",
+      "passed": true,
+      "evidence_quotes": [
+        "阻抗完美匹配。是你的耳朵比仪器还灵，昨晚在废料堆找电位器，全靠你听音辨位。",
+        "把废线头收进工具盒。以后遇事别总慌，数据不会骗人，我也不会骗你。"
+      ],
+      "evidence_line_ids": [
+        "ep4-s2-l5",
+        "ep4-s2-l7"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "requirement_id": "threads",
+      "requirement": "按指令继承或回收伏笔，不能凭空消失",
+      "passed": true,
+      "evidence_quotes": [
+        "这把铃悬了两天两夜，今天总算能踏踏实实摘下来了。",
+        "叮——叮——叮。三声清脆悠长的铃声。合上维修日志的啪嗒声。"
+      ],
+      "evidence_line_ids": [
+        "ep4-s3-l5",
+        "ep4-s3-l7"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "deterministic_errors": [
+    "TIMELINE_UNGROUNDED_CLAIM: ep4-s1-l2",
+    "TIMELINE_CLOCK_CLAIMS_MISSING: [('ep4-s3-l1', '05:00')]"
+  ],
+  "wall_time_sec": 47.453,
+  "calls": 1,
+  "reported_input_tokens": 38912,
+  "reported_output_tokens": 5092,
+  "reported_total_tokens": 44004,
+  "reasoning_tokens_included_in_output": 4021,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 47.415
+}

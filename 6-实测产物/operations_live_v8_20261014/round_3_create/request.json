@@ -1,0 +1,39 @@
+{
+  "intent": "create",
+  "request_id": "bd316d18c0854fc69b5dda1c7b99ed08",
+  "idempotency_key": "52b559bc8aed41efb0d8ea801ae710df",
+  "user_instruction": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+  "client_context": {
+    "operation_requirements": {
+      "identities": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+      "fault": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+      "cooperation": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+      "deferred_bell": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。"
+    }
+  },
+  "creation_preferences": {
+    "story_mode": "general",
+    "genre": "温情",
+    "target_episodes": 2,
+    "target_duration_sec": 120,
+    "ending_preference": "open"
+  },
+  "characters": {
+    "selected_character_ids": [
+      "linlan",
+      "zhouye"
+    ],
+    "role_bindings": [
+      {
+        "character_id": "linlan",
+        "story_role_id": "repairer",
+        "performer_id": "voice-linlan"
+      },
+      {
+        "character_id": "zhouye",
+        "story_role_id": "host",
+        "performer_id": "voice-zhouye"
+      }
+    ]
+  }
+}

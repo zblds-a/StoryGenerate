@@ -1,0 +1,101 @@
+{
+  "label": "round_2_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "b600fc2604dd40bdaffc530994d8c0ec",
+  "version_no": 2,
+  "story_version_id": "8e9e302e446547aba2f132a227fc8cf5",
+  "parent": "4225559c7ca74b48abef03e7dce24d34",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "别乱拍操作台，越拍越坏。这是硬件故障，我们先共同核对设备状态，再决定下一步。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "别乱拍操作台，越拍越坏。这是硬件故障，我们先共同核对设备状态，再决定下一步。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "等等……主线缆可能还有暗伤。",
+        "主线缆老化比预想的严重，外皮全脆了，必须重做防水接头。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l8",
+        "ep2-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "等等……主线缆可能还有暗伤。",
+        "主线缆老化比预想的严重，外皮全脆了，必须重做防水接头。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "别乱拍操作台，越拍越坏。这是硬件故障，我们先共同核对设备状态，再决定下一步。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "别乱拍操作台，越拍越坏。这是硬件故障，我们先共同核对设备状态，再决定下一步。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "剪线？万用表测出短路，阻值趋近于零。听这连续的滴滴声，是线路进水，不是人为破坏。拿上手电，跟我去外墙接线盒。",
+        "果然，旧电源接头绝缘层严重老化，里面全进水了。我得悬空重新接线，角度太偏，手有点够不到。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1",
+        "ep1-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "剪线？万用表测出短路，阻值趋近于零。听这连续的滴滴声，是线路进水，不是人为破坏。拿上手电，跟我去外墙接线盒。",
+        "果然，旧电源接头绝缘层严重老化，里面全进水了。我得悬空重新接线，角度太偏，手有点够不到。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "哎！怎么又没声了？这破设备是不是成心跟我作对？老街坊可都等着听下午的评书呢！",
+        "我知道。但我是维修员，安全是底线。宁可晚十分钟，不能让他们听着广播出事故。把绝缘自粘带递给我，快。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep2-s2-l5"
+      ],
+      "raw_evidence_quotes": [
+        "哎！怎么又没声了？这破设备是不是成心跟我作对？老街坊可都等着听下午的评书呢！",
+        "我知道。但我是维修员，安全是底线。宁可晚十分钟，不能让他们听着广播出事故。把绝缘自粘带递给我，快。"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 81791,
+  "reported_output_tokens": 12548,
+  "reported_total_tokens": 94339,
+  "reasoning_tokens_included_in_output": 9574,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 109.09,
+  "wall_time_sec": 110.203
+}

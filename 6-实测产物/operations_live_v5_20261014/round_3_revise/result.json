@@ -1,0 +1,110 @@
+{
+  "label": "round_3_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "b808795136774c6f9f1483f2d36f9830",
+  "version_no": 2,
+  "story_version_id": "e372d1b5017c4529ae9410b47d8fc8a2",
+  "parent": "723eb8179cf044dca87c52942bb9a204",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "站住。先别去，过来跟我一起核对下设备状态。看万用表，这阻值说明什么？",
+        "别急着下结论。你顺着线看看外墙那个旧电源接头，我们再决定下一步。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l4"
+      ],
+      "raw_evidence_quotes": [
+        "站住。先别去，过来跟我一起核对下设备状态。看万用表，这阻值说明什么？",
+        "别急着下结论。你顺着线看看外墙那个旧电源接头，我们再决定下一步。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "别急着下结论。你顺着线看看外墙那个旧电源接头，我们再决定下一步。",
+        "焊点冷却了。准备推闸，试音。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l4",
+        "ep2-s3-l1"
+      ],
+      "raw_evidence_quotes": [
+        "别急着下结论。你顺着线看看外墙那个旧电源接头，我们再决定下一步。",
+        "焊点冷却了。准备推闸，试音。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "站住。先别去，过来跟我一起核对下设备状态。看万用表，这阻值说明什么？",
+        "外墙接头……防水老化了，里面全是昨晚暴雨进的水。没剪线……啊，那、那这尴尬了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l5"
+      ],
+      "raw_evidence_quotes": [
+        "站住。先别去，过来跟我一起核对下设备状态。看万用表，这阻值说明什么？",
+        "外墙接头……防水老化了，里面全是昨晚暴雨进的水。没剪线……啊，那、那这尴尬了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "外墙接头……防水老化了，里面全是昨晚暴雨进的水。没剪线……啊，那、那这尴尬了。",
+        "不是喇叭。主传动齿轮卡死了。铃铛先放下，拿十字螺丝刀给我。",
+        "音频输出线虚接。现在敲铃，一开播就会断音。把铃铛放下，帮我捏住这根红线。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l5",
+        "ep1-s3-l3",
+        "ep2-s2-l8"
+      ],
+      "raw_evidence_quotes": [
+        "外墙接头……防水老化了，里面全是昨晚暴雨进的水。没剪线……啊，那、那这尴尬了。",
+        "不是喇叭。主传动齿轮卡死了。铃铛先放下，拿十字螺丝刀给我。",
+        "音频输出线虚接。现在敲铃，一开播就会断音。把铃铛放下，帮我捏住这根红线。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "好嘞。哎，我这主持人当的，除了动嘴皮子，也就只能给你打个光了。",
+        "这样？嘿，剥开了！林师傅，手艺传男不传女啊？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep1-s2-l6"
+      ],
+      "raw_evidence_quotes": [
+        "好嘞。哎，我这主持人当的，除了动嘴皮子，也就只能给你打个光了。",
+        "这样？嘿，剥开了！林师傅，手艺传男不传女啊？"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 81372,
+  "reported_output_tokens": 12733,
+  "reported_total_tokens": 94105,
+  "reasoning_tokens_included_in_output": 9465,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 104.75,
+  "wall_time_sec": 106.468
+}

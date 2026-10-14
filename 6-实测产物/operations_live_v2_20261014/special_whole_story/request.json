@@ -1,0 +1,20 @@
+{
+  "intent": "revise",
+  "request_id": "782aa0af36f74aab94ab1d269af44796",
+  "idempotency_key": "c2e94c5720cb45a0b31e4b681c749266",
+  "user_instruction": "重写完整故事，减少说教，以具体行动建立信任；保留两人身份、进水故障以及三声铃尚未兑现的结果。",
+  "edit": {
+    "scope": "whole_story",
+    "target": {},
+    "instruction": "重写完整故事，减少说教，以具体行动建立信任；保留两人身份、进水故障以及三声铃尚未兑现的结果。",
+    "preserve": {
+      "identity": true,
+      "facts": true
+    },
+    "downstream_policy": "branch_from_here"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "da7fc4fa3d8747289682a38bf100d48b"
+  }
+}

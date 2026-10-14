@@ -1,0 +1,272 @@
+{
+  "plan_id": "4d65d03f70a140edb2c9f1738db54b50",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "general",
+    "mode_label": "通用故事",
+    "genre_id": "G05",
+    "genre_name": "现实治愈/救赎",
+    "genre_mechanism": "重建与和解",
+    "genre_emotion": "暖·沉重",
+    "recipe_id": "R5",
+    "recipe_name": "破镜重圆治愈",
+    "recipe_slots": {
+      "A": "受过伤的成年人",
+      "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+      "C": "新的生活共同体（邻居、家中孩童）",
+      "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+      "E": "曾经的选择"
+    },
+    "recipe_landing_note": "首选赛道。戏剧张力天然存在于台词",
+    "recipe_version": "",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "ending_preference",
+      "genre",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [
+      "recipe_id"
+    ],
+    "conflict_mechanism": "内心拉扯式冲突：冲突主要来自人物的内心障碍和过去创伤，外部冲突为辅助。以'拉扯'代替'对抗'——两个人互相靠近又推开的过程。旧误会是障碍，但解决方案不是一次性真相大白，而是渐进理解。",
+    "causal_driver": "相遇/重逢 → 旧伤复发 → 拉扯与试探 → 关键事件打破僵局 → 逐步理解对方的真实处境 → 双向治愈。每一步都是情感层面的推进而非事件层面的推进。",
+    "ending_strategy": "双向治愈，不是单方面的拯救。结局展示双方各自成长后才走到一起，不是因为'对方改变了'。和解是过程的自然结果，不是强制的拥抱与原谅。",
+    "tone_guidance": "细腻、拉扯感、克制的温柔。情感张力的来源是'明明在意却不敢靠近'的微妙距离。",
+    "genre_data": {
+      "genre_id": "G05",
+      "name": "现实治愈/救赎",
+      "works": "破茧",
+      "emotion": "暖·沉重",
+      "mechanism": "重建与和解",
+      "audio_fit": "high",
+      "audio_fit_score": 85,
+      "driver": "情绪靠人声"
+    },
+    "recipe_data": {
+      "id": "R5",
+      "name": "破镜重圆治愈",
+      "audio_fit": "very_high",
+      "A": "受过伤的成年人",
+      "B": "对方不肯放手的坚持 / 重生带来的『提前知道』",
+      "C": "新的生活共同体（邻居、家中孩童）",
+      "D": "内化心结与旧误会 > 外部反派，以『拉扯』代替『对抗』",
+      "E": "曾经的选择",
+      "reference": "渐染 / 好雨知时节 / 破茧 / 他深情侵入",
+      "landing_note": "首选赛道。戏剧张力天然存在于台词"
+    }
+  },
+  "plan": {
+    "title": "老街电波：未响的三声铃",
+    "premise": "社区广播站突发故障，维修员林岚与主持人周野在排查旧电源接头进水问题的过程中，从互相猜疑走向默契合作，共同守护老街坊的声音陪伴。",
+    "theme": "在细致的修复中重建信任，用专业的坚守回应社区的期待。",
+    "beginning": "广播站设备突发短路断电，周野怀疑人为破坏，林岚用专业排查打破猜疑，确认是旧电源接头进水。",
+    "development": "两人分工合作清理主板与接头，在维修细节中放下防备，理解彼此对广播站的在意，约定修好后敲三声老铜铃报平安。",
+    "climax": "主板清理完毕并成功通电测试，声音清晰，周野拿起铜铃准备兑现报平安的约定。",
+    "ending": "林岚在最终验收时发现外部喇叭线阻抗异常，阻止了敲铃，将任务自然延伸至外线排查，三声铃伏笔保留。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "进水与猜疑",
+        "core_goal": "确认故障原因，排除人为破坏，建立初步合作。",
+        "major_beats": [
+          "[0-2s] 黄金钩子：广播站设备突然发出刺耳的电流啸叫，接着“啪”一声断电，陷入黑暗。",
+          "[2-7s] 矛盾三要素：周野焦急抱怨马上要播晚间新闻，怀疑是老街坊嫌吵故意剪了线；林岚打断他，打开手电筒，要求他别乱动现场。",
+          "[7-20s] 第一次反转：林岚用万用表快速测试，用数据证明线路没断，排除人为破坏，指出是旧电源接头处有短路痕迹。",
+          "[20-80s] 中段推进：林岚拆下接头，发现里面全是绿色铜锈和水渍。周野从怀疑转为愧疚，主动拿干毛巾帮忙清理水渍，两人开始默契配合，林岚指导他递螺丝刀和绝缘胶布。",
+          "[80-113s] 升级/二次反转：接头清理完毕重新接通，设备指示灯亮起。周野松口气准备开播，林岚却拦住他，指出主板可能也受潮了，必须彻底干燥，两人约定彻底修好后敲三声老铜铃给街坊报平安。",
+          "[113-120s] 强钩子：林岚用手电筒照向电源接头后方，发现积水是从墙内暗管渗出的，她皱眉说：“这不是漏雨，是墙里的老水管破了，水正滴在主板上。”"
+        ],
+        "ending": "林岚发现积水源于墙内老水管破裂，维修难度升级，但两人已建立合作基础。",
+        "target_duration_sec": 120
+      },
+      {
+        "index": 2,
+        "title": "除水与验收",
+        "core_goal": "完成主板清理与内部通电测试，推进维修验收，保留三声铃伏笔。",
+        "major_beats": [
+          "[0-2s] 黄金钩子：急促的金属刮擦声，林岚用力撬开广播站主机沉重的金属后盖。",
+          "[2-7s] 矛盾三要素：周野拿着吹风机（冷风档）在旁边待命，林岚指出主板积水比预想多，必须立刻吸干，否则电容会爆。",
+          "[7-20s] 第一次反转：周野吹风时不小心碰倒了水杯，水差点溅到主板，林岚迅速用身体挡住并一把夺过吹风机，周野自嘲“帮倒忙”，林岚却把吸水纸递给他，让他负责边缘清理。",
+          "[20-80s] 中段推进：两人分工合作，周野仔细吸干边缘水渍，林岚用洗板水清理主板。周野轻声说起这广播站是老街坊的陪伴，自己太想快点修好；林岚回应说维修不能急，得对声音负责，两人达成内心的和解与理解。",
+          "[80-113s] 升级/二次反转：主板清理完毕，通电测试，播音声音清晰无底噪。周野拿起桌上的老铜铃，准备敲响三声报平安，林岚也露出微笑。",
+          "[113-120s] 强钩子：就在周野要摇铃时，林岚突然按住他的手，盯着万用表说：“等一下，输出端阻抗不对，外面的高音喇叭线可能老化短路了，现在敲铃街坊听到的会是破音，得去查外线。”三声铃悬而未决。"
+        ],
+        "ending": "内部维修完成，但在准备敲铃报平安时，林岚发现外部喇叭线阻抗异常，三声铃约定暂未兑现，转入外线验收任务。",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "repairer",
+        "story_name": "林岚",
+        "external_goal": "彻底修复广播站设备，确保播音质量完美，不留任何安全隐患。",
+        "emotional_avoidance": "害怕修不好辜负街坊期待，用冰冷的专业术语和严谨动作掩饰内心的在意与紧张。",
+        "speech_style": "简短具体，先确认再行动。常用祈使句，如“别动”“递扳手”“看数据”，受压时会重复确认步骤，不轻易表露情绪。",
+        "relationship_stance": "起初觉得周野是个只会添乱的外行，后来认可他的热心与责任感，愿意引导他参与维修，形成专业与情感的互补。"
+      },
+      {
+        "role_id": "host",
+        "story_name": "周野",
+        "external_goal": "尽快恢复街坊广播，证明自己对社区的价值，不让老街坊失望。",
+        "emotional_avoidance": "害怕被看作只会说话不会做事的“花瓶”，用自嘲和过度热情掩饰对设备一窍不通的心虚。",
+        "speech_style": "热心、会自嘲。常用语气词和反问句，如“不会吧？”“我这手是不是太笨了？”，受压时会主动找活干以缓解尴尬。",
+        "relationship_stance": "起初对林岚的冷淡感到挫败并怀疑她的判断，后来被她的专业与严谨折服，甘愿做她的助手，在配合中建立信任。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "sound_design": "突出维修工具的金属碰撞声、万用表的滴滴声、吹风机的白噪音，增强现实感与操作细节。",
+      "acoustics": "广播站内部空间较小，带有轻微的房间混响，体现密闭感与两人距离的拉近。",
+      "pacing": "第一集从急促紧张到平稳合作；第二集从小心翼翼到温馨和解，最后戛然而止，留有余韵。"
+    },
+    "continuity_constraints": [
+      "三声铃报平安（伏笔，后续回收时必须原样引用，不可用其他物品替代）",
+      "旧电源接头进水故障（已确认事实，无人为破坏）",
+      "墙内老水管破裂渗水（第一集末尾发现的事实，需在后续解决）",
+      "外部高音喇叭线阻抗异常（第二集末尾发现的验收问题）"
+    ],
+    "change_summary": [
+      "事实变化：确认广播站故障原因为旧电源接头进水及墙内水管渗水，排除人为破坏；完成主板清理与内部通电测试，发现外线阻抗异常。",
+      "关系变化：林岚与周野从最初的互相猜疑（周野怀疑人为破坏，林岚嫌他碍事）转变为互相信任、分工合作的默契搭档，达成对广播站责任的共识。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "general",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "recipe_id": null,
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 2,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "open",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "linlan",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "林岚",
+        "immutable_facts": [
+          "林岚是广播站维修员，非记者"
+        ]
+      },
+      "profile": {
+        "goal": "修复广播站",
+        "speech_style": "简短具体，先确认再行动"
+      },
+      "role_id": "repairer",
+      "performer_id": "voice-linlan"
+    },
+    {
+      "character_id": "zhouye",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "周野",
+        "immutable_facts": [
+          "周野是社区广播主持人，非维修员"
+        ]
+      },
+      "profile": {
+        "goal": "恢复街坊广播",
+        "speech_style": "热心、会自嘲"
+      },
+      "role_id": "host",
+      "performer_id": "voice-zhouye"
+    }
+  ],
+  "character_profile_revision_map": {
+    "linlan": 1,
+    "zhouye": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "recipe_id",
+    "theme_keywords",
+    "tone_style",
+    "recipe_id"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "dcd3ceefe97a4f549692aff263a6eb8e",
+      "plan_id": "4d65d03f70a140edb2c9f1738db54b50",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "f0618dbeeeaa4bd2a0dc792d53c486a4",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.7",
+      "started_at": "2026-10-14T08:56:00.168464+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 5299,
+      "output_tokens": 4694,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 2890,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "eff8afd9-dec7-41a1-b7a7-6e7ddce1758f",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 68357,
+      "completed_at": "2026-10-14T08:57:08.526331+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.7"
+  },
+  "explicit_fields": [
+    "ending_preference",
+    "genre",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "36d336d9012be8bc008c8e4f4769d887bb5bf096706b1b2c2a397afd681fae57",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-14T08:57:08.532689Z",
+  "updated_at": "2026-10-14T08:57:08.532689Z"
+}

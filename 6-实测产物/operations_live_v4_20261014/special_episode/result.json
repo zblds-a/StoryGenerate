@@ -1,0 +1,105 @@
+{
+  "label": "special_episode",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "79b25a68183f465ebeb9c7bcf6857338",
+  "version_no": 5,
+  "story_version_id": "7eaf317342ab44dcade2b83a7dbc7c07",
+  "parent": "7d3a527f52ed41adb1f5d47d5743cbb1",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "手电打高点。防水胶老化，接头进水短路了。递一下刮刀。",
+        "给。当年……好像也是这个接头漏水？那时候……是我太急躁了，没查清楚。",
+        "这功放型号十年前就停产了，没法直接换。",
+        "收工具。我今晚去废旧库房翻一翻，看能不能找几个旧件拼一个替代模块出来。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l5",
+        "ep1-s2-l6",
+        "ep1-s3-l4",
+        "ep1-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "手电打高点。防水胶老化，接头进水短路了。递一下刮刀。",
+        "给。当年……好像也是这个接头漏水？那时候……是我太急躁了，没查清楚就怪你剪线，对不起。",
+        "这功放型号十年前就停产了，没法直接换。",
+        "收工具。我今晚去废旧库房翻一翻，看能不能找几个旧件拼一个替代模块出来。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "只重写指定集，使两人合作过程更自然。保留进水故障事实、角色身份和结果，不兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "过去的事别提。把锈迹刮干净。递绝缘胶带。",
+        "重新合闸了！电源指示灯亮了！终于有戏了！",
+        "啊？那明天的早新闻怎么办？等彻底修好，咱们按老规矩敲三声铃给街坊报平安，行不行？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l7",
+        "ep1-s3-l1",
+        "ep1-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "过去的事别提。把锈迹刮干净。递绝缘胶带。",
+        "重新合闸了！电源指示灯亮了！终于有戏了！",
+        "啊？那明天的早新闻怎么办？等彻底修好，咱们按老规矩敲三声铃给街坊报平安，行不行？"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "睁大眼睛看。万用表显示零电压。线没断，是前端根本没电。别拿你的阴谋论侮辱我的专业。",
+        "手电打高点。防水胶老化，接头进水短路了。递一下刮刀。",
+        "别高兴太早。功放模块已经烧穿了，输出端还是零。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep1-s2-l5",
+        "ep1-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "睁大眼睛看。万用表显示零电压。线没断，是前端根本没电。别拿你的阴谋论侮辱我的专业。",
+        "手电打高点。防水胶老化，接头进水短路了。递一下刮刀。",
+        "别高兴太早。功放模块已经烧穿了，输出端还是零。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底会不会修啊？街坊大爷大妈还等着听早新闻呢！",
+        "别催。让开点，万用表正测着线路呢。",
+        "外墙旧电源接头。拿上手电，跟我出去。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s1-l2",
+        "ep1-s2-l4"
+      ],
+      "raw_evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底会不会修啊？街坊大爷大妈还等着听早新闻呢！",
+        "别催。让开点，万用表正测着线路呢。",
+        "外墙旧电源接头。拿上手电，跟我出去。"
+      ]
+    }
+  ],
+  "calls": 6,
+  "reported_input_tokens": 107296,
+  "reported_output_tokens": 27371,
+  "reported_total_tokens": 134667,
+  "reasoning_tokens_included_in_output": 21452,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 227.225,
+  "wall_time_sec": 228.484
+}

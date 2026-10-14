@@ -1,0 +1,41 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "role": "performance_annotation",
+  "system": "你是中文广播剧声音导演。只为给定 spoken_lines 的每条 dialogue/narration 产生一个结构化表演注释；不得增删、改写台词，也不得替角色说出原文不存在的词。line_id 原样返回、不得遗漏或编造。\nemotion 选与当前人物行动相符的情绪，不要全篇泛化成 worried/surprised；tone_instruction 用简短、可实际演出的声音动作描述（例如“压住怒气，后半句转为恳求”），避免堆“极度、爆发、震撼”等抽象赞词。\n每句至少一个真正承担信息或态度焦点的重音 emphasis，通常 1–2 个短语即可；span_text 必须是原句连续的原文字符串，重复出现时 occurrence 按从左到右第几次填写。不得把全句都当重音。\nspeech_rate 一般在 0.85–1.20；确有慌张或低声安抚等剧情需要才偏离，并与角色说话习惯一致。delivery_note 只描述录音或停顿可执行动作，不假装观众能看到“眼神变化”。仅输出给定 AnnotationBatch Schema 的 JSON。\n\n\n你是一个结构化数据生成器。\n只输出一个 JSON 对象，不要输出任何解释、前言、Markdown 代码围栏或注释。\nJSON 必须严格符合以下 JSON Schema：\n{\n  \"$defs\": {\n    \"Emotion\": {\n      \"enum\": [\n        \"neutral\",\n        \"calm\",\n        \"happy\",\n        \"excited\",\n        \"sad\",\n        \"worried\",\n        \"angry\",\n        \"surprised\",\n        \"fearful\",\n        \"reassuring\",\n        \"serious\",\n        \"playful\",\n        \"mysterious\",\n        \"tender\"\n      ],\n      \"title\": \"Emotion\",\n      \"type\": \"string\"\n    },\n    \"EmphasisSpan\": {\n      \"additionalProperties\": false,\n      \"properties\": {\n        \"span_text\": {\n          \"minLength\": 1,\n          \"title\": \"Span Text\",\n          \"type\": \"string\"\n        },\n        \"occurrence\": {\n          \"default\": 1,\n          \"minimum\": 1,\n          \"title\": \"Occurrence\",\n          \"type\": \"integer\"\n        },\n        \"start_char\": {\n          \"anyOf\": [\n            {\n              \"minimum\": 0,\n              \"type\": \"integer\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"Start Char\"\n        },\n        \"end_char\": {\n          \"anyOf\": [\n            {\n              \"minimum\": 1,\n              \"type\": \"integer\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"End Char\"\n        },\n        \"strength\": {\n          \"default\": \"medium\",\n          \"enum\": [\n            \"medium\",\n            \"strong\"\n          ],\n          \"title\": \"Strength\",\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"span_text\"\n      ],\n      \"title\": \"EmphasisSpan\",\n      \"type\": \"object\"\n    },\n    \"PerformanceAnnotation\": {\n      \"properties\": {\n        \"line_id\": {\n          \"title\": \"Line Id\",\n          \"type\": \"string\"\n        },\n        \"emotion\": {\n          \"$ref\": \"#/$defs/Emotion\"\n        },\n        \"tone_instruction\": {\n          \"minLength\": 1,\n          \"title\": \"Tone Instruction\",\n          \"type\": \"string\"\n        },\n        \"emphasis\": {\n          \"items\": {\n            \"$ref\": \"#/$defs/EmphasisSpan\"\n          },\n          \"minItems\": 1,\n          \"title\": \"Emphasis\",\n          \"type\": \"array\"\n        },\n        \"speech_rate\": {\n          \"default\": 1.0,\n          \"maximum\": 2.0,\n          \"minimum\": 0.5,\n          \"title\": \"Speech Rate\",\n          \"type\": \"number\"\n        },\n        \"delivery_note\": {\n          \"anyOf\": [\n            {\n              \"type\": \"string\"\n            },\n            {\n              \"type\": \"null\"\n            }\n          ],\n          \"default\": null,\n          \"title\": \"Delivery Note\"\n        }\n      },\n      \"required\": [\n        \"line_id\",\n        \"emotion\",\n        \"tone_instruction\",\n        \"emphasis\"\n      ],\n      \"title\": \"PerformanceAnnotation\",\n      \"type\": \"object\"\n    }\n  },\n  \"properties\": {\n    \"annotations\": {\n      \"items\": {\n        \"$ref\": \"#/$defs/PerformanceAnnotation\"\n      },\n      \"title\": \"Annotations\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"annotations\"\n  ],\n  \"title\": \"PerformanceAnnotationBatch\",\n  \"type\": \"object\"\n}\n\n若某字段在给定信息中无法确定，请依据 Schema 中的 description 做出最合理的专业推断，不要留空、不要填 null（除非 Schema 明确允许）。",
+  "user": "{\n  \"context\": {\n    \"approved_outline\": {\n      \"index\": 1,\n      \"title\": \"进水与猜疑\",\n      \"core_goal\": \"确认广播站断电的真实原因，排除人为破坏，并建立初步的合作默契。\",\n      \"major_beats\": [\n        \"[0-2s] 刺耳的麦克风电流啸叫声骤然响起，紧接着“啪”的一声闷响，广播站陷入死寂。\",\n        \"[2-7s] 周野在老街广播站抱怨设备又罢工，林岚打断他，指出可能是硬件故障，明确提议两人先共同核对设备状态再决定下一步。\",\n        \"[7-20s] 周野怀疑是有人恶意剪线，林岚用万用表测出短路，用连续的“滴滴”声反驳，确认是线路进水而非人为破坏。\",\n        \"[20-80s] 两人开始排查外墙接线盒。周野想帮忙却差点碰倒工具，林岚让他只负责打手电。周野提及街坊等广播的焦急，林岚态度微缓，指导他配合拆卸螺丝。\",\n        \"[80-113s] 拆开接线盒发现旧电源接头绝缘层老化进水。林岚需要悬空重新接线，周野主动托住她的手臂借力，两人默契配合完成初步清理与剥线。\",\n        \"[113-120s] 林岚表示修好要测试，周野提议“恢复后我敲三声老铜铃给街坊报平安”，林岚答应。此时窗外突然传来一声惊雷，林岚脸色一变：“主线缆可能还有暗伤。”\"\n      ],\n      \"ending\": \"Open\",\n      \"target_duration_sec\": 120\n    },\n    \"scene\": \"突发断电与争执\",\n    \"model_mapping_snapshot\": {\n      \"FAST\": \"qwen/qwen3.6-flash\",\n      \"LONG\": \"zhipu/glm-5.3\",\n      \"STRONG\": \"qwen/qwen3.7-max\",\n      \"BALANCED\": \"qwen/qwen3.7-plus\"\n    }\n  },\n  \"spoken_lines\": [\n    {\n      \"line_id\": \"ep1-s1-l3\",\n      \"kind\": \"dialogue\",\n      \"speaker\": \"repairer\",\n      \"text\": \"别乱拍操作台，越拍越坏。这是硬件故障，我们先共同核对设备状态，再决定下一步。\",\n      \"performance_hint\": null,\n      \"performer_id\": \"voice-linlan\",\n      \"sfx_category\": null\n    }\n  ]\n}",
+  "capture_id": "0b2157e5da97459eacdd11af5d34cc8b",
+  "status": "completed",
+  "started_at": "2026-10-14T13:09:19.479855+00:00",
+  "response_text": "{\n  \"annotations\": [\n    {\n      \"line_id\": \"ep1-s1-l3\",\n      \"emotion\": \"calm\",\n      \"tone_instruction\": \"语气果断制止，后半句放缓转为协作口吻\",\n      \"emphasis\": [\n        {\n          \"span_text\": \"别乱拍操作台\",\n          \"occurrence\": 1,\n          \"start_char\": 0,\n          \"end_char\": 6,\n          \"strength\": \"strong\"\n        },\n        {\n          \"span_text\": \"先共同核对设备状态\",\n          \"occurrence\": 1,\n          \"start_char\": 21,\n          \"end_char\": 30,\n          \"strength\": \"medium\"\n        }\n      ],\n      \"speech_rate\": 1.0,\n      \"delivery_note\": \"句首果断起音，‘越拍越坏’后微顿换气，后半句保持平稳吐字推进\"\n    }\n  ]\n}",
+  "calls": [
+    {
+      "request_id": "252e68e4d6a04272a85a639dc0312a34",
+      "job_id": "21dbe581e9604586933d432cc506dbe3",
+      "plan_id": "382d9a15c2c04154941d81c087e99170",
+      "stage": "generation",
+      "attempt_kind": "approved_job",
+      "call_id": "608bb0a3d8464f10a0ec1339f4bd79f5",
+      "provider": "openai_compat",
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "requested_model": "qwen/qwen3.6-flash",
+      "attempt": 1,
+      "prompt_version": "p1.6.11",
+      "started_at": "2026-10-14T13:09:19.482170+00:00",
+      "actual_model": "qwen3.6-flash",
+      "input_tokens": 1800,
+      "output_tokens": 3718,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3491,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "0e89d1fe-c8cd-4386-b19b-9d921ef1921b",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 31459,
+      "completed_at": "2026-10-14T13:09:50.941996+00:00"
+    }
+  ],
+  "completed_at": "2026-10-14T13:09:50.941996+00:00"
+}

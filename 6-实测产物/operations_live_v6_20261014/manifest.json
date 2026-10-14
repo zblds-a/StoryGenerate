@@ -1,0 +1,12 @@
+{
+  "git_sha": "b9d5d5f38b13830637b6504d3214e8d672bea6c0",
+  "tracked_dirty": false,
+  "schema": "storyoperations_7497a9f86e84",
+  "rounds": 3,
+  "real_provider": true,
+  "mock_fallback": false,
+  "target": "engine_and_structured_delivery",
+  "started_at": "2026-10-14T11:09:49.235765+00:00",
+  "completed_at": "2026-10-14T11:48:53.353959+00:00",
+  "wall_time_sec": 2344.406
+}

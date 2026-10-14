@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "彻底修复老街广播站的硬件故障，确保设备安全运行。",
+    "motivation": "",
+    "fear": "回避谈论当年广播站停播的旧事，害怕再次因失误让人失望，用专业掩饰内心的在意。",
+    "speech_style": "简短具体，先确认再行动；受压时用专业术语和指令转移话题，不轻易表露情绪。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "对周野保持专业距离，内心在意但不敢靠近，怕重蹈覆辙，在协作中逐渐卸下防备。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "尽快恢复街坊广播，完成试音和敲铃报平安的承诺。",
+    "motivation": "",
+    "fear": "回避当年自己急躁导致事故的无力感，用热心和自嘲掩饰焦虑，害怕被林岚责怪。",
+    "speech_style": "热心、会自嘲；受压时语速加快，用玩笑或抱怨掩饰内心的慌张，真诚时声音会放轻。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "渴望弥补当年的遗憾，主动靠近林岚，但怕被拒绝而显得笨拙，在理解中找回默契。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "implementation_sha": "45ac96ab1597a18f50a240c6069068cb79ca76fc",
+  "verified_at": "2026-10-14T13:22:45.610040+00:00",
+  "tracked_changes_at_launch_and_verification": [
+    "scripts/generate_operations_report.py"
+  ],
+  "engine_and_acceptance_sources_match_commit": true,
+  "explanation": "Only the report aggregation script had uncommitted historical-failure accounting edits. Engine, tests and real acceptance runner match the stated implementation commit. Original manifest dirty flag retained."
+}

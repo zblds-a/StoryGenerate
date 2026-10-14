@@ -1,0 +1,116 @@
+{
+  "label": "round_2_create",
+  "intent": "create",
+  "status": "passed",
+  "story_id": "8e72ec3f8f674929a028e4e196030175",
+  "version_no": 1,
+  "story_version_id": "5cd324db689449a8b5d011933eb62f1d",
+  "parent": null,
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "零线带电。这是典型的设备短路，不是人为剪线。",
+        "好嘞，给。看来我也只能给你递递工具，当个后勤了。",
+        "敲三声，给街坊报平安，告诉他们设备修好了，然后再开麦说话。",
+        "电压不稳，指针在剧烈跳。先别敲，等电压降下来再说。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l4",
+        "ep1-s2-l9",
+        "ep2-s2-l6",
+        "ep2-s3-l9"
+      ],
+      "raw_evidence_quotes": [
+        "零线带电。这是典型的设备短路，不是人为剪线。",
+        "好嘞，给。看来我也只能给你递递工具，当个后勤了。",
+        "敲三声，给街坊报平安，告诉他们设备修好了，然后再开麦说话。",
+        "电压不稳，指针在剧烈跳。先别敲，等电压降下来再说。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+      "requirement_id": "constraint:fault",
+      "evidence_quotes": [
+        "零线带电。这是典型的设备短路，不是人为剪线。",
+        "外墙电源接头有严重水渍。防水胶老化，雨水渗进去了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l4",
+        "ep1-s2-l6"
+      ],
+      "raw_evidence_quotes": [
+        "零线带电。这是典型的设备短路，不是人为剪线。",
+        "外墙电源接头有严重水渍。防水胶老化，雨水渗进去了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+      "requirement_id": "constraint:identities",
+      "evidence_quotes": [
+        "哎哟我的腰！这怎么又断电了？老街坊们还等着听晚间新闻呢，这黑灯瞎火的。",
+        "别乱踩。手电递给我。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "哎哟我的腰！这怎么又断电了？老街坊们还等着听晚间新闻呢，这黑灯瞎火的。",
+        "别乱踩。手电递给我。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+      "requirement_id": "constraint:cooperation",
+      "evidence_quotes": [
+        "退后！带电水渍会触电。拿绝缘胶带和剥线钳。",
+        "好嘞，给。看来我也只能给你递递工具，当个后勤了。",
+        "你连这种老型号的冷门备件，都随身带在工具包暗格里？给，小心烫。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l8",
+        "ep1-s2-l9",
+        "ep2-s1-l10"
+      ],
+      "raw_evidence_quotes": [
+        "退后！带电水渍会触电。拿绝缘胶带和剥线钳。",
+        "好嘞，给。看来我也只能给你递递工具，当个后勤了。",
+        "你连这种老型号的冷门备件，都随身带在工具包暗格里？给，小心烫。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+      "requirement_id": "constraint:deferred_bell",
+      "evidence_quotes": [
+        "敲三声，给街坊报平安，告诉他们设备修好了，然后再开麦说话。",
+        "电压不稳，指针在剧烈跳。先别敲，等电压降下来再说。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l6",
+        "ep2-s3-l9"
+      ],
+      "raw_evidence_quotes": [
+        "敲三声，给街坊报平安，告诉他们设备修好了，然后再开麦说话。",
+        "电压不稳，指针在剧烈跳。先别敲，等电压降下来再说。"
+      ]
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 58052,
+  "reported_output_tokens": 54968,
+  "reported_total_tokens": 113020,
+  "reasoning_tokens_included_in_output": 41659,
+  "cache_read_tokens": 9216,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 535.416,
+  "wall_time_sec": 536.844
+}

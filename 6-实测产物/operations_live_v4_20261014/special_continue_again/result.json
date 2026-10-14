@@ -1,0 +1,16 @@
+{
+  "label": "special_continue_again",
+  "intent": "continue",
+  "status": "failed",
+  "error": "WORKER_INTERRUPTED; source later disqualified by artifact review; operation had started, original blocked label corrected after database audit",
+  "wall_time_sec": null,
+  "calls": 3,
+  "reported_input_tokens": 81549,
+  "reported_output_tokens": 13183,
+  "reported_total_tokens": 94732,
+  "reasoning_tokens_included_in_output": 9668,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 131.487
+}

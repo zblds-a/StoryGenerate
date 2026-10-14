@@ -1,0 +1,12 @@
+[
+  {
+    "role": "outline",
+    "model": "qwen/qwen3.7-max",
+    "passed": true
+  },
+  {
+    "role": "performance_annotation",
+    "model": "qwen/qwen3.6-flash",
+    "passed": true
+  }
+]

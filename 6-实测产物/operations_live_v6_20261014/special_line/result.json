@@ -1,0 +1,88 @@
+{
+  "label": "special_line",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "961f3f0ea1ea4866ac3073fbd090dd8e",
+  "version_no": 4,
+  "story_version_id": "61c33aca8e9b46129a023577f8265934",
+  "parent": "748a7f9207de44c6bfe4bc4350a6d409",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅将指定台词表达改得更口语化，保持原意、身份及事实，长度与原文接近。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "又歇菜了？这破机器！外头雨这么大，没广播街坊们上哪知道哪儿淹水啊？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "又歇菜了？这破机器！外头雨这么大，没广播街坊们上哪知道哪儿淹水啊？",
+        "这大半夜的，拆了还能装上吗？今晚这三声铃，怕是敲不响了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep2-s1-l4"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "仅将指定台词表达改得更口语化，保持原意、身份及事实，长度与原文接近。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "又歇菜了？这破机器！外头雨这么大，没广播街坊们上哪知道哪儿淹水啊？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "万用表测过了，阻值趋近于零，是短路，不是剪断。别瞎猜，去拿手电。",
+        "顺着线查到了，外墙旧电源接头防水胶老化，雨水渗进去了。递绝缘胶布。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l5",
+        "ep1-s2-l1"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "别动，我来查线。把手从总闸上拿开，危险。",
+        "林岚，你说这机器要是真救不回来，老街坊该多失望。张奶奶腿脚不好，就指望听这广播知道哪儿能走。我以前总觉得你冷血，只知道对着机器较劲。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3",
+        "ep2-s2-l2"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 85484,
+  "reported_output_tokens": 11639,
+  "reported_total_tokens": 97123,
+  "reasoning_tokens_included_in_output": 9187,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 105.98,
+  "wall_time_sec": 107.344
+}

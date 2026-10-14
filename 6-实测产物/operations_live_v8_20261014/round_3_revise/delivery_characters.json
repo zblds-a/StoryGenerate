@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "修复广播站，确保设备安全运行，兑现对街坊的承诺。",
+    "motivation": "",
+    "fear": "用极度专注和简短的指令回避对“修不好”的焦虑与自责，不轻易表露疲惫。",
+    "speech_style": "祈使句为主，词汇具体（如“递胶布”“推推子”），受压时只陈述事实不解释情绪，语速平稳。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "初期对周野的“外行指导”保持警惕，后期认可其热心，形成“技术+后勤”的互补依赖，愿意向对方展露脆弱。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "恢复街坊广播，用声音安抚社区情绪，完成报平安的播音。",
+    "motivation": "",
+    "fear": "用话多、自嘲和过度热心来掩饰对广播站可能彻底关闭的恐惧，害怕自己失去价值。",
+    "speech_style": "喜欢用比喻和自嘲（如“拿话筒的手干粗活”），语速较快，受压时会反复确认进度，语气中带着讨好与关切。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "初期对林岚的冷淡感到挫败，后期被其专业折服，主动承担辅助角色，形成情感上的托底，成为林岚的心理支撑。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

@@ -1,0 +1,44 @@
+# StoryGenerate 四操作验收总报告
+
+最终实现提交：`45ac96ab1597a18f50a240c6069068cb79ca76fc`。
+引擎与结构化故事交付；不含实际 TTS、HTTP 和硬件播放。
+
+| 操作 | 已实现 | 测试通过 | 真实模型通过 | 产品交付条件 | 最终通过数 |
+| --- | --- | --- | --- | --- | ---: |
+| [Create](CREATE_REPORT.md) | 是 | 是 | 是 | 满足本轮边界 | 3/3 |
+| [Revise](REVISE_REPORT.md) | 是 | 是 | 是 | 满足本轮边界 | 8/8 |
+| [Continue](CONTINUE_REPORT.md) | 是 | 是 | 是 | 满足本轮边界 | 4/4 |
+| [Remix](REMIX_REPORT.md) | 是 | 是 | 是 | 满足本轮边界 | 3/3 |
+
+单元 658 项、PostgreSQL 6 项；失败/错误/跳过分别为 0/0/0。
+
+最终批次实际执行 20 次操作尝试，失败 2 次（10.0%）；被阻塞未调用模型的阶段不进入尝试分母。成功重试不覆盖原失败。
+保留的历次操作尝试合计 103 次，失败 29 次（28.2%），包含中断后判失败及正文复核撤销通过的案例；跨修复提交样本不能用作当前版本失败率估计。
+最终批次含失败与重试：Input 2,433,204、Output 746,942、合计 3,180,146 Token。原运行器壁钟 2378.719 秒；含补充执行的验收壁钟 2765.915779 秒。重试/澄清独立耗时见 retry_manifest.json 和 calendar_clarification_manifest.json。
+Remix 第一轮首次被模型质量门拒绝，重试自动通过但产物复核仍要求澄清日期；最终新增同晚 calendar 输入约束并重新执行原 prepare→approve→generate 链，正文由真实模型重新生成。未将模糊原稿计为最终通过，也不宣称通用相对日期推理已经形式化证明。
+
+## 全部尝试的 Token 与耗时
+
+提供商报告 Input 10,390,368，Output 3,646,159，合计 14,036,527 Token；共 801 次请求。
+Reasoning 2,790,252 已包含在 Output，不再累加；缓存读取 400,256 单列。
+本地估算 Input 0；6 次请求用量不可获取，未记为零成本。
+另有 9 个中断节点未获得最终响应，可能产生额外用量；上述 Token 是可核验下限，不能作为供应商账单总额。
+模型请求时延总和 34,832.524 秒；并发运行不能将此数当作批次壁钟时长。各操作壁钟见明细，批次时间见 manifest。
+
+## 历史证据修正
+
+固定模板脚本的完整性失败覆盖及元组真假误判已修复。历史 T03 的 chen_mo 缺角色映射，T05 无成功正文，七个案例仅五个保存产物通过当前结构复核；这不是重新执行生成或文学质量验收。
+
+## 证据与限制
+
+acceptance.json 汇总所有批次、失败、阻塞与逐阶段用量。各批次保留请求、审批快照、候选、正文、模型请求响应、数据库重读、差异及持久化任务。最终通过必须同时满足工程测试、指定真实用例和独立产物复核。
+原始 manifest 的 tracked_dirty 不覆盖：若仅报告统计脚本有未提交修改，另以 code_verification.json 核对引擎、测试和真实验收入口与实现提交完全一致；任何业务代码差异均不满足绑定提交要求。
+三轮只能证明本批次重复验收；不得推断大规模成功率。READY 不等于真实 TTS 时长或文学盲评通过。
+
+## 复核入口
+
+- [调用链、Schema、事务与恢复合同](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/docs/STORY_OPERATIONS_AUDIT.md)
+- [最终18项产物与原失败尝试](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/final_summary.json)
+- [跨集输入与正文复核](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/auditor_review.json)
+- [八个保留schema无待执行任务检查](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/database_final_audit.json)
+- [工程回归原始JUnit](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_engineering_v8_20261014/all.xml)

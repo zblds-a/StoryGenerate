@@ -1,0 +1,64 @@
+{
+  "label": "special_ending",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "5cd40c336ebd46dd988b2cd3e44a285c",
+  "version_no": 3,
+  "story_version_id": "2c42321f4d8f4be2a0f1852b0158e663",
+  "parent": "da7fc4fa3d8747289682a38bf100d48b",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "功放块击穿了。",
+        "图纸我压着，表笔拿好，咱们从输出端重新查。",
+        "好，红黑表笔就位，随时准备测功放块。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "功放块击穿了。",
+        "图纸我压着，表笔拿好，咱们从输出端重新查。",
+        "好，红黑表笔就位，随时准备测功放块。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "数值正常。物理修复完成。",
+        "拔电源！快！",
+        "手忙脚乱碰倒工具，手背撞到黄铜铃铛发出一声单响，随后啸叫声戛然而止",
+        "功放块击穿了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "数值正常。物理修复完成。",
+        "太好了！我手都悬在铃铛上了，只要推闸有声音，我就敲三下给街坊们报平安！",
+        "你……不怪我了？",
+        "把助焊剂递过来。下次别乱碰电闸就行。"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 79087,
+  "reported_output_tokens": 13740,
+  "reported_total_tokens": 92827,
+  "reasoning_tokens_included_in_output": 10392,
+  "cache_read_tokens": 3456,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 132.582,
+  "wall_time_sec": 134.984
+}

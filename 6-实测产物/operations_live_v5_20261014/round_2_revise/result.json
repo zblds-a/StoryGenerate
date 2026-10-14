@@ -1,0 +1,101 @@
+{
+  "label": "round_2_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "8215a64f92d7404aa0c0322d46e9b59a",
+  "version_no": 2,
+  "story_version_id": "d7d91bc143684e62a63a46fc271f4908",
+  "parent": "c22cecb0352748e2a1e873f2f5380e53",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "不能干看着，但也不能乱动。你过来，先和我一起核对调音台和电源盒的指示灯状态，确认断电范围后再决定下一步。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l4"
+      ],
+      "raw_evidence_quotes": [
+        "不能干看着，但也不能乱动。你过来，先和我一起核对调音台和电源盒的指示灯状态，确认断电范围后再决定下一步。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "线路老化严重，现在满载播音会短路起火。必须等明天做完绝缘验收才能用。",
+        "绝缘胶没干透，现在通电直接短路起火，昨晚咱们辛辛苦苦除的锈就全白干了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l4",
+        "ep2-s2-l2"
+      ],
+      "raw_evidence_quotes": [
+        "必须等明天做完绝缘验收才能用。",
+        "绝缘胶没干透，现在通电直接短路起火，昨晚咱们辛辛苦苦除的锈就全白干了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "不能干看着，但也不能乱动。你过来，先和我一起核对调音台和电源盒的指示灯状态，确认断电范围后再决定下一步。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l4"
+      ],
+      "raw_evidence_quotes": [
+        "不能干看着，但也不能乱动。你过来，先和我一起核对调音台和电源盒的指示灯状态，确认断电范围后再决定下一步。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "站住。看这儿。电源盒接头全是绿色铜锈。这是雨水倒灌导致的进水氧化，不是人为剪线。",
+        "表面干透了。总闸推上，电流平稳，风扇转速正常。绝缘验收通过，可以播音了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep2-s3-l1"
+      ],
+      "raw_evidence_quotes": [
+        "这是雨水倒灌导致的进水氧化，不是人为剪线。",
+        "绝缘验收通过，可以播音了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "哎！怎么黑了？这调音台怎么没反应了！街坊们还等着听晚间天气预报呢，这节骨眼上断电，不是要命吗！",
+        "别拍！手离开调音台。主板已经过载，再拍就彻底烧毁了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "街坊们还等着听晚间天气预报呢，这节骨眼上断电，不是要命吗！",
+        "别拍！手离开调音台。主板已经过载，再拍就彻底烧毁了。"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 78269,
+  "reported_output_tokens": 12996,
+  "reported_total_tokens": 91265,
+  "reasoning_tokens_included_in_output": 9790,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 112.381,
+  "wall_time_sec": 114.109
+}

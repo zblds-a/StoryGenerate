@@ -1,0 +1,84 @@
+{
+  "label": "round_2_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "8e72ec3f8f674929a028e4e196030175",
+  "version_no": 2,
+  "story_version_id": "6d46bedd78464af4a7e733f83b99726b",
+  "parent": "5cd324db689449a8b5d011933eb62f1d",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "别乱踩。周野，拿手电过来，我们一起核对下配电箱状态。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "周野，拿手电过来，我们一起核对下配电箱状态。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "别乱踩。周野，拿手电过来，我们一起核对下配电箱状态。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "周野，拿手电过来，我们一起核对下配电箱状态。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "外墙电源接头有严重水渍。防水胶老化，雨水渗进去了。",
+        "保险管发黑。主板烧了，得大修。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l6",
+        "ep1-s3-l9"
+      ],
+      "raw_evidence_quotes": [
+        "外墙电源接头有严重水渍。防水胶老化，雨水渗进去了。",
+        "保险管发黑。主板烧了，得大修。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "别乱踩。周野，拿手电过来，我们一起核对下配电箱状态。",
+        "哎哟我的腰！这怎么又断电了？老街坊们还等着听晚间新闻呢，这黑灯瞎火的。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3",
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "别乱踩。周野，拿手电过来，我们一起核对下配电箱状态。",
+        "哎哟我的腰！这怎么又断电了？老街坊们还等着听晚间新闻呢，这黑灯瞎火的。"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 97472,
+  "reported_output_tokens": 15989,
+  "reported_total_tokens": 113461,
+  "reasoning_tokens_included_in_output": 12485,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 144.912,
+  "wall_time_sec": 146.266
+}

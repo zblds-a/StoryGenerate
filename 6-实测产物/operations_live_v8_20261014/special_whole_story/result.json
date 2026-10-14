@@ -1,0 +1,100 @@
+{
+  "label": "special_whole_story",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+  "version_no": 8,
+  "story_version_id": "5e36fe7c0c534b9dbc16176ab149956e",
+  "parent": "a04475a957cb49abbccc0cf430ee4eac",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "重写完整故事，减少说教，以具体行动建立信任；保留两人身份、进水故障以及三声铃尚未兑现的结果。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+        "周野撕开创可贴推到手边，双手紧握绝缘夹，稳稳夹住电容。",
+        "说好了的。验收通过，由我来敲。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l5",
+        "ep1-s3-l7",
+        "ep2-s2-l4",
+        "ep2-s3-l7"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+        "岚姐，电容买回来了！赶紧换上通电，街坊们等着听降温预警呢！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l7",
+        "ep2-s1-l3"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "重写完整故事，减少说教，以具体行动建立信任；保留两人身份、进水故障以及三声铃尚未兑现的结果。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "周野默默收起手机，剥好胶带递上。林岚满手泥水，接过胶带缠绕。",
+        "给我半小时换电容。修好后，我亲自敲墙上的三声铃，给街坊报平安。",
+        "周野撕开创可贴推到手边，双手紧握绝缘夹，稳稳夹住电容。",
+        "林岚指了指墙上的黄铜铃铛。周野愣了一下，笑着放下麦克风，伸手向铃铛。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l6",
+        "ep1-s3-l7",
+        "ep2-s2-l4",
+        "ep2-s3-l8"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "防水胶圈老化，雨水倒灌。递我绝缘胶带。",
+        "电容没焊，现在推闸主板瞬间击穿。把绝缘夹递我。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l5",
+        "ep2-s1-l7"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "怎么又断了？街坊们还等着听天气预报呢！",
+        "好嘞。以前我总催你们维修班，还以为你们偷懒，原来这么难搞。对不住了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s2-l7"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 143577,
+  "reported_output_tokens": 51615,
+  "reported_total_tokens": 195192,
+  "reasoning_tokens_included_in_output": 39081,
+  "cache_read_tokens": 5760,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 445.175,
+  "wall_time_sec": 446.313
+}

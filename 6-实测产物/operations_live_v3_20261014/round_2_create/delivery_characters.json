@@ -1,0 +1,46 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "linlan",
+    "performer_id": "voice-linlan",
+    "canon_name": "林岚",
+    "immutable_facts": [
+      "林岚是广播站维修员，非记者"
+    ],
+    "goal": "彻底修好广播站设备，完成严格的维修验收。",
+    "motivation": "",
+    "fear": "回避谈论当年广播事故的责任归属，害怕再次因为配合失误让周野背锅。",
+    "speech_style": "祈使句多，专业术语准确。受压时会用‘先别动’‘让我来’打断对方，拒绝情感沟通。",
+    "source": "character_snapshot",
+    "story_name": "林岚",
+    "relationship_stance": "认为周野做事毛躁，虽然在意他但保持专业距离，用工作掩盖关心，害怕再次因配合失误让他背锅。"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "zhouye",
+    "performer_id": "voice-zhouye",
+    "canon_name": "周野",
+    "immutable_facts": [
+      "周野是社区广播主持人，非维修员"
+    ],
+    "goal": "尽快恢复广播，让老街坊重新听到熟悉的声音。",
+    "motivation": "",
+    "fear": "回避自己当年擅自揽责导致两人疏远的真相，用自嘲掩饰内疚。",
+    "speech_style": "喜欢用反问和玩笑化解尴尬，语速快。受压时会说‘行行行，听你的’‘我的锅’来退让。",
+    "source": "character_snapshot",
+    "story_name": "周野",
+    "relationship_stance": "渴望弥补当年的裂痕，试图通过帮忙维修来靠近林岚，但常因不专业而弄巧成拙，内心对当年擅自揽责充满愧疚。"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "label": "special_whole_story",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "79b25a68183f465ebeb9c7bcf6857338",
+  "version_no": 8,
+  "story_version_id": "352236cf2c2d46b089e9fb2d427b988f",
+  "parent": "7d3a527f52ed41adb1f5d47d5743cbb1",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "重写完整故事，减少说教，以具体行动建立信任；保留两人身份、进水故障以及三声铃尚未兑现的结果。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "给。当年……好像也是这接头漏水？对不起，那时候我太急躁，没查清就错怪你了。",
+        "过去的事别提。把锈迹刮干净，递绝缘胶带。",
+        "好，听你的。这铃铛，我先给你悬在半空，等调好了再敲。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l5",
+        "ep1-s2-l6",
+        "ep2-s3-l7"
+      ],
+      "raw_evidence_quotes": [
+        "给。当年……好像也是这接头漏水？对不起，那时候我太急躁，没查清就错怪你了。",
+        "过去的事别提。把锈迹刮干净，递绝缘胶带。",
+        "好，听你的。这铃铛，我先给你悬在半空，等调好了再敲。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "重写完整故事，减少说教，以具体行动建立信任；保留两人身份、进水故障以及三声铃尚未兑现的结果。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "给，镊子。当年……是我太急躁，没查清就怪你剪线，对不起。",
+        "手别抖。当年我也有错，遇到事只会闷头干，从来不解释。",
+        "等等！输出阻抗不匹配，现在一开麦就会烧喇叭。拿十字螺丝刀，重新调。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l7",
+        "ep2-s2-l8",
+        "ep2-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "给，镊子。当年……是我太急躁，没查清就怪你剪线，对不起。",
+        "手别抖。当年我也有错，遇到事只会闷头干，从来不解释。",
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。拿十字螺丝刀，重新调。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "外墙旧电源接头。拿上手电，跟我出去。",
+        "手电打高点。防水胶老化，接头进水短路了。递一下刮刀。",
+        "十年前就停产了。只能找旧件拼凑一个替代模块。帮我打个手电，照一下底层。",
+        "把那边那个旧收音机拿过来。我拆它的电容，手工飞线改装。",
+        "等等！输出阻抗不匹配，现在一开麦就会烧喇叭。拿十字螺丝刀，重新调。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep1-s2-l4",
+        "ep2-s1-l5",
+        "ep2-s2-l5",
+        "ep2-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "外墙旧电源接头。拿上手电，跟我出去。",
+        "手电打高点。防水胶老化，接头进水短路了。递一下刮刀。",
+        "十年前就停产了。只能找旧件拼凑一个替代模块。帮我打个手电，照一下底层。",
+        "我拆它的电容，手工飞线改装。",
+        "输出阻抗不匹配，现在一开麦就会烧喇叭。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "老街广播停播三天了！林岚，你到底会不会修？街坊还等着听早新闻呢！",
+        "别催，让开点，正在测线路。",
+        "大半夜的折腾，原装功放模块真就找不到了？",
+        "十年前就停产了。只能找旧件拼凑一个替代模块。帮我打个手电，照一下底层。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l3",
+        "ep2-s1-l4",
+        "ep2-s1-l5"
+      ],
+      "raw_evidence_quotes": [
+        "老街广播停播三天了！林岚，你到底会不会修？街坊还等着听早新闻呢！",
+        "别催，让开点，正在测线路。",
+        "大半夜的折腾，原装功放模块真就找不到了？",
+        "十年前就停产了。只能找旧件拼凑一个替代模块。"
+      ]
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 136415,
+  "reported_output_tokens": 53236,
+  "reported_total_tokens": 189651,
+  "reasoning_tokens_included_in_output": 40822,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 440.759,
+  "wall_time_sec": 442.531
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "label": "round_2_continue",
+    "intent": "continue",
+    "status": "failed",
+    "error_type": "WorkerInterrupted",
+    "error": "旧批次被新实现替代，真实进程已终止；不算模型通过",
+    "potential_inflight_usage_unknown": true,
+    "wall_time_sec": null,
+    "calls": 2,
+    "reported_input_tokens": 56044,
+    "reported_output_tokens": 9982,
+    "reported_total_tokens": 66026,
+    "unavailable_usage_calls": 0,
+    "stale_worker_fenced": true,
+    "persisted_job_status": "FAILED"
+  },
+  {
+    "label": "round_3_continue",
+    "intent": "continue",
+    "status": "failed",
+    "error_type": "WorkerInterrupted",
+    "error": "旧批次被新实现替代，真实进程已终止；不算模型通过",
+    "potential_inflight_usage_unknown": true,
+    "wall_time_sec": null,
+    "calls": 2,
+    "reported_input_tokens": 47587,
+    "reported_output_tokens": 9323,
+    "reported_total_tokens": 56910,
+    "unavailable_usage_calls": 0,
+    "stale_worker_fenced": true,
+    "persisted_job_status": "FAILED"
+  }
+]

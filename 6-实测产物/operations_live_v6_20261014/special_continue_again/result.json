@@ -1,0 +1,121 @@
+{
+  "label": "special_continue_again",
+  "intent": "continue",
+  "status": "passed",
+  "story_id": "961f3f0ea1ea4866ac3073fbd090dd8e",
+  "version_no": 9,
+  "story_version_id": "3ab6a04de5524d9786fa428778767751",
+  "parent": "f4cbc06f20ab48139a90e4a0ec6ec8b3",
+  "episodes": 5,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "新增一集，承接广播恢复且三声铃约定已兑现、音量已校准的结果。两人合作组织首次街坊广播，不能再把这些问题当作未完成。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "备用线我拔了。机器全修好，任务结束。西街水泵还等着我。",
+        "各位街坊早上好，老街广播站恢复播音。低洼区积水还在退……"
+      ],
+      "evidence_line_ids": [
+        "ep5-s1-l3",
+        "ep5-s2-l1"
+      ],
+      "raw_evidence_quotes": [
+        "备用线我拔了。机器全修好，任务结束。西街水泵还等着我。",
+        "各位街坊早上好，老街广播站恢复播音。低洼区积水还在退……"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "清晨鸟鸣混着扫水声，阳光透进主控室。"
+      ],
+      "evidence_line_ids": [
+        "ep5-s1-l1"
+      ],
+      "raw_evidence_quotes": [
+        "清晨鸟鸣混着扫水声，阳光透进主控室。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "继承来源角色身份、姓名和演绎者",
+      "requirement_id": "identity",
+      "evidence_quotes": [
+        "哎？怎么没声了？林岚，监听耳机断电了！",
+        "备用线我拔了。机器全修好，任务结束。西街水泵还等着我。"
+      ],
+      "evidence_line_ids": [
+        "ep5-s1-l2",
+        "ep5-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "哎？怎么没声了？林岚，监听耳机断电了！",
+        "备用线我拔了。机器全修好，任务结束。西街水泵还等着我。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "不得违背来源已发生事实",
+      "requirement_id": "facts",
+      "evidence_quotes": [
+        "备用线我拔了。机器全修好，任务结束。西街水泵还等着我。",
+        "设备正常，电平很稳。我只会修机器，不会说话。"
+      ],
+      "evidence_line_ids": [
+        "ep5-s1-l3",
+        "ep5-s1-l5"
+      ],
+      "raw_evidence_quotes": [
+        "备用线我拔了。机器全修好，任务结束。西街水泵还等着我。",
+        "设备正常，电平很稳。我只会修机器，不会说话。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "继承并合理发展来源关系",
+      "requirement_id": "relationships",
+      "evidence_quotes": [
+        "林岚，你的声音，比机器还让人踏实。老街需要你。",
+        "推子有点涩。我帮你推背景音乐。"
+      ],
+      "evidence_line_ids": [
+        "ep5-s3-l1",
+        "ep5-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "林岚，你的声音，比机器还让人踏实。老街需要你。",
+        "推子有点涩。我帮你推背景音乐。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "按指令继承或回收伏笔，不能凭空消失",
+      "requirement_id": "threads",
+      "evidence_quotes": [
+        "张奶奶？您别急……抽水泵不会接电？红线接火线，然后……胶布怎么缠？",
+        "林岚，张奶奶家水泵卡住了，水快漫进屋了！帮帮忙！"
+      ],
+      "evidence_line_ids": [
+        "ep5-s2-l3",
+        "ep5-s2-l5"
+      ],
+      "raw_evidence_quotes": [
+        "张奶奶？您别急……抽水泵不会接电？红线接火线，然后……胶布怎么缠？",
+        "林岚，张奶奶家水泵卡住了，水快漫进屋了！帮帮忙！"
+      ]
+    }
+  ],
+  "calls": 6,
+  "reported_input_tokens": 146862,
+  "reported_output_tokens": 24990,
+  "reported_total_tokens": 171852,
+  "reasoning_tokens_included_in_output": 18320,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 233.475,
+  "wall_time_sec": 234.985
+}

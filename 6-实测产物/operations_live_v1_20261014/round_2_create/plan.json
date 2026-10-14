@@ -1,0 +1,304 @@
+{
+  "plan_id": "172da1b282d1404e94aedda1584df93e",
+  "plan_revision": 1,
+  "status": "AWAITING_APPROVAL",
+  "intent": "create",
+  "requires_confirmation": true,
+  "source_reference": null,
+  "template_snapshot": null,
+  "strategy_snapshot": {
+    "story_mode": "serialized",
+    "mode_label": "连载",
+    "genre_id": "G05",
+    "genre_name": "现实治愈/救赎",
+    "genre_mechanism": "重建与和解",
+    "genre_emotion": "暖·沉重",
+    "recipe_id": "R6",
+    "recipe_name": "悬疑反转",
+    "recipe_slots": {
+      "A": "被卷入事件的普通人/调查者",
+      "B": "一个被忽略的关键物证/证词",
+      "C": "可靠的搭档/技术支援者",
+      "D": "表面和善、实为真凶的身边人",
+      "E": "被误判的无辜者/替罪羊"
+    },
+    "recipe_landing_note": "信息差是核心。关键线索必须以可听形式至少呈现两次。",
+    "recipe_version": "1.0",
+    "recipe_enabled": true,
+    "template_ref": "",
+    "template_version": 1,
+    "explicit_fields": [
+      "ending_preference",
+      "genre",
+      "story_mode",
+      "target_duration_sec",
+      "target_episodes"
+    ],
+    "auto_filled_fields": [
+      "recipe_id"
+    ],
+    "conflict_mechanism": "信息不对称式冲突：真相被层层掩盖，每一次揭示都推翻前一层认知。冲突来自假象与真相之间的落差，而非武力对抗。反派必须是主角信任的身边人。关键证据必须可听（录音、证词、环境音反差），不依赖视觉。",
+    "causal_driver": "一次意外发现 → 怀疑 → 初查被误导 → 关键证据浮现 → 认知重构 → 全部线索串联。每一步发现都改变主角对局势的判断。观众必须能在最终反转时回听所有伏笔。",
+    "ending_strategy": "真相大白但不一定正义伸张。允许开放式结局（凶手逃脱但主角获得证据），允许反转式结局（你以为的好人不是好人）。禁止机械的'凶手认罪'式收尾。如有系列续集，预留未解线索。",
+    "tone_guidance": "紧张、智性、层层递进。用『已知』的积累推翻『以为』的真相。情感来自认知颠覆，不是煽情对白。",
+    "genre_data": {
+      "genre_id": "G05",
+      "name": "现实治愈/救赎",
+      "works": "破茧",
+      "emotion": "暖·沉重",
+      "mechanism": "重建与和解",
+      "audio_fit": "high",
+      "audio_fit_score": 85,
+      "driver": "情绪靠人声"
+    },
+    "recipe_data": {
+      "id": "R6",
+      "name": "悬疑反转",
+      "enabled": true,
+      "version": "1.0",
+      "audio_fit": "high",
+      "audio_fit_score": 82,
+      "default_mode": "mystery",
+      "supported_modes": [
+        "mystery",
+        "general",
+        "viral_drama"
+      ],
+      "A": "被卷入事件的普通人/调查者",
+      "B": "一个被忽略的关键物证/证词",
+      "C": "可靠的搭档/技术支援者",
+      "D": "表面和善、实为真凶的身边人",
+      "E": "被误判的无辜者/替罪羊",
+      "reference": "消失的她 / 隐秘的角落",
+      "landing_note": "信息差是核心。关键线索必须以可听形式至少呈现两次。",
+      "conflict_mechanism": "信息不对称式冲突：真相被层层掩盖，每一次揭示都推翻前一层认知。冲突来自假象与真相之间的落差，而非武力对抗。反派必须是主角信任的身边人。关键证据必须可听（录音、证词、环境音反差），不依赖视觉。",
+      "causal_driver": "一次意外发现 → 怀疑 → 初查被误导 → 关键证据浮现 → 认知重构 → 全部线索串联。每一步发现都改变主角对局势的判断。观众必须能在最终反转时回听所有伏笔。",
+      "ending_strategy": "真相大白但不一定正义伸张。允许开放式结局（凶手逃脱但主角获得证据），允许反转式结局（你以为的好人不是好人）。禁止机械的'凶手认罪'式收尾。如有系列续集，预留未解线索。",
+      "tone_guidance": "紧张、智性、层层递进。用『已知』的积累推翻『以为』的真相。情感来自认知颠覆，不是煽情对白。"
+    }
+  },
+  "plan": {
+    "title": "老街回音",
+    "premise": "维修员林岚与主持人周野在修复老街广播站的过程中，从互相猜疑到携手合作，却在即将成功时遭遇神秘的串频干扰与新的设备危机。",
+    "theme": "信任重建与社区羁绊",
+    "beginning": "广播站电源短路，林岚怀疑周野人为破坏，两人产生信任危机。",
+    "development": "林岚通过检测发现是外墙渗水导致接头进水，排除人为破坏，两人和解并合作修复主线路，约定修好后敲三声铃报平安。",
+    "climax": "线路接通时，广播里突然传出神秘女声，两人排查发现是废弃寻呼台线路串频，解除了灵异与破坏疑云。",
+    "ending": "准备敲铃时发射器功率掉底，未能兑现三声铃约定。此时王阿婆家收音机冒烟，引出老街广播网络更深层的隐患，留下悬念。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "进水与猜疑",
+        "core_goal": "查明电源短路原因，解除两人猜疑，确立合作与三声铃约定。",
+        "major_beats": [
+          "[0-2s] 黄金钩子：电流短路爆音，重物砸在铁皮箱上。",
+          "[2-7s] 矛盾三要素：林岚质问周野是否动了总闸，周野否认，广播站陷入断电麻烦。",
+          "[7-20s] 第一次反转：林岚用测电笔检测出泥水痕迹，怀疑人为泼水；周野以自嘲化解，指出自己没动机。",
+          "[20-80s] 中段推进：林岚检查外墙发现水管老化渗水滴在旧接头上，确认非人为破坏。周野递上绝缘胶带，两人开始合作清理积水、重新接线。",
+          "[80-113s] 升级/二次反转：主线路接通，指示灯亮起。林岚约定完全修好后敲三声铃给街坊报平安，周野答应。",
+          "[113-120s] 强钩子：广播突然传出刺耳电流麦和陌生女人低语“别修了”，信号戛然而止。"
+        ],
+        "ending": "悬念结局，神秘声音打断修复进程。",
+        "target_duration_sec": 120
+      },
+      {
+        "index": 2,
+        "title": "串频与暗患",
+        "core_goal": "排查神秘声音来源，尝试兑现三声铃约定但失败，引出新的设备危机。",
+        "major_beats": [
+          "[0-2s] 黄金钩子：广播喇叭再次传出“别修了”低语，伴随指甲刮擦麦克风的刺耳声。",
+          "[2-7s] 矛盾三要素：林岚拔掉音频线质问谁在切频，周野表示控制台只有他们俩，陷入外部入侵的麻烦。",
+          "[7-20s] 第一次反转：林岚检查调音台确认推子没动，判断声音是外部天线倒灌，周野想起老街废弃天线。",
+          "[20-80s] 中段推进：两人顺线排查，发现私接的旧寻呼台线路。周野解释这是王阿婆儿子留下的，阿婆常对着废麦克风说话。林岚确认是串频而非破坏。",
+          "[80-113s] 升级/二次反转：林岚切断旧线，电流声消失。林岚拿起铃铛准备敲击，却发现发射器功率表指针掉底，天线馈线老化导致功率不足，无法兑现三声铃约定。",
+          "[113-120s] 强钩子：周野提议去楼顶换馈线，门外突然传来王阿婆焦急的敲门声，呼喊她家收音机冒烟了。"
+        ],
+        "ending": "开放结局，三声铃未兑现，引出老街电网与广播网的新危机。",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "repairer",
+        "story_name": "林岚",
+        "external_goal": "查明故障原因，彻底修复老街广播站。",
+        "emotional_avoidance": "避免在没证据时轻信他人，用技术检测代替主观猜测。",
+        "speech_style": "简短具体，先确认再行动。常用句式：‘测一下’、‘看数据’、‘别动那个’。受压时沉默并加快手头动作。",
+        "relationship_stance": "初期对周野保持职业警惕，确认其清白后转为技术上的依赖与信任。"
+      },
+      {
+        "role_id": "host",
+        "story_name": "周野",
+        "external_goal": "尽快恢复广播，让街坊们重新听到社区声音。",
+        "emotional_avoidance": "避免气氛僵化，用自嘲和打圆场掩饰对广播站可能彻底报废的焦虑。",
+        "speech_style": "热心、会自嘲。常用句式：‘图什么呀’、‘街坊们还等着呢’、‘我来搭把手’。受压时语速变快，试图用玩笑缓解紧张。",
+        "relationship_stance": "渴望得到林岚的专业认可，从被怀疑的委屈到主动配合的默契。"
+      }
+    ],
+    "fictional_voice_roles": [
+      {
+        "role_id": "wangapo",
+        "story_name": "王阿婆",
+        "performer_id": "voice-wangapo",
+        "medium": "live",
+        "dramatic_purpose": "引出老街广播网络更深层的隐患，作为第二集强钩子的触发者。"
+      },
+      {
+        "role_id": "mystery_voice",
+        "story_name": "神秘女声",
+        "performer_id": "voice-mystery",
+        "medium": "broadcast",
+        "dramatic_purpose": "制造第一集末尾和第二集开头的悬疑感，最终揭晓为王阿婆的旧麦克风串频。"
+      }
+    ],
+    "mystery_causal_proof": {
+      "actual_event_timeline": "王阿婆在废弃寻呼台线路的旧麦克风前说话，声音通过未切断的私接旧线倒灌进广播站天线。",
+      "witnessed_event": "林岚和周野在控制台听到广播里传出“别修了”的低语和刮擦声。",
+      "actor_opportunity": "王阿婆随时可以在家对着旧麦克风说话，无需进入广播站。",
+      "audible_trace_before_reveal": "第一集末尾和第二集开头的“别修了”低语，以及第二集指甲刮擦麦克风的刺耳声（提示是物理麦克风而非电子合成）。",
+      "onstage_verification": "林岚顺着音频线排查，物理找到私接的旧线，切断后电流声立刻消失，证实了串频路径。"
+    },
+    "performance_plan": {
+      "sound_design": "电流短路爆音、测电笔滴滴声、指甲刮擦麦克风声、老式铃铛声。",
+      "spatial_reverb": "广播站控制室内的轻微回音，与门外王阿婆喊话的走廊混响形成对比。",
+      "pacing": "前20秒语速快、冲突强；中段排查时语速放缓，加入环境音；最后10秒情绪骤然拉高。"
+    },
+    "continuity_constraints": [
+      "三声铃报平安：林岚与周野约定广播完全修好后敲三声铃给街坊报平安，此伏笔必须在后续回收时原样引用。",
+      "废弃寻呼台线路：第二集查明串频来源为王阿婆儿子留下的旧线路，此设定不可在后续被推翻。"
+    ],
+    "change_summary": [
+      "fact_delta: 确认广播站电源短路原因为外墙水管老化渗水导致旧电源接头进水，排除人为破坏；发现老街存在废弃寻呼台线路串频隐患及天线馈线老化问题。",
+      "relationship_delta: 林岚与周野从初期的互相猜疑（林岚怀疑周野动总闸/泼水），转变为查明真相后的信任与默契合作。"
+    ]
+  },
+  "resolved_preferences": {
+    "story_mode": "serialized",
+    "content_form": "audio_drama",
+    "genre": "温情",
+    "recipe_id": null,
+    "tone_style": "warm",
+    "audience_band": "18-35",
+    "content_rating": "teen",
+    "target_duration_sec": 120,
+    "target_episodes": 2,
+    "language": "zh-CN",
+    "narration_pov": "auto",
+    "dialogue_density": "medium",
+    "pacing": "normal",
+    "ending_preference": "open",
+    "theme_keywords": [],
+    "must_include": [],
+    "must_avoid": [],
+    "additional_instructions": ""
+  },
+  "character_snapshots": [
+    {
+      "character_id": "linlan",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "林岚",
+        "immutable_facts": [
+          "林岚是广播站维修员，非记者"
+        ]
+      },
+      "profile": {
+        "goal": "修复广播站",
+        "speech_style": "简短具体，先确认再行动"
+      },
+      "role_id": "repairer",
+      "performer_id": "voice-linlan"
+    },
+    {
+      "character_id": "zhouye",
+      "canon_revision": 1,
+      "profile_revision": 1,
+      "canon": {
+        "name": "周野",
+        "immutable_facts": [
+          "周野是社区广播主持人，非维修员"
+        ]
+      },
+      "profile": {
+        "goal": "恢复街坊广播",
+        "speech_style": "热心、会自嘲"
+      },
+      "role_id": "host",
+      "performer_id": "voice-zhouye"
+    }
+  ],
+  "character_profile_revision_map": {
+    "linlan": 1,
+    "zhouye": 1
+  },
+  "auto_filled_fields": [
+    "additional_instructions",
+    "audience_band",
+    "content_form",
+    "content_rating",
+    "dialogue_density",
+    "language",
+    "must_avoid",
+    "must_include",
+    "narration_pov",
+    "pacing",
+    "recipe_id",
+    "theme_keywords",
+    "tone_style",
+    "recipe_id"
+  ],
+  "inherited_fields": [],
+  "impact_analysis": {},
+  "model_trace": [
+    {
+      "principal_id": "local",
+      "request_id": "88ff76535e144a889457195a8a9ba0c6",
+      "plan_id": "172da1b282d1404e94aedda1584df93e",
+      "stage": "planning",
+      "node": "outline",
+      "attempt_kind": "initial_plan",
+      "call_id": "2bd6d72b966a4193a64c5c73a8a33814",
+      "provider": "openai_compat",
+      "role": "outline",
+      "requested_model": "qwen/qwen3.7-max",
+      "attempt": 1,
+      "prompt_version": "p1.6.5",
+      "started_at": "2026-10-14T08:24:35.421923+00:00",
+      "actual_model": "qwen3.7-max",
+      "input_tokens": 4978,
+      "output_tokens": 5271,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 3365,
+      "reasoning_included_in_output": true,
+      "usage_source": "reported",
+      "provider_request_id": "966b7275-f1bb-4232-8458-bc7421b53fd1",
+      "status": "success",
+      "error_code": null,
+      "latency_ms": 69870,
+      "completed_at": "2026-10-14T08:25:45.293015+00:00"
+    }
+  ],
+  "rule_versions": {
+    "formula": "1.0.0",
+    "timetravel": "1.2.0",
+    "continuity": "1.0.0",
+    "prompt": "p1.6.5"
+  },
+  "explicit_fields": [
+    "ending_preference",
+    "genre",
+    "story_mode",
+    "target_duration_sec",
+    "target_episodes"
+  ],
+  "plan_fingerprint": "0e37f07b5eb1a1a22b454b3efc08847033ef81712ddabb8f740a033e7b284f3b",
+  "allowed_actions": [
+    "revise_plan",
+    "approve_plan",
+    "cancel_plan"
+  ],
+  "created_at": "2026-10-14T08:25:45.307896Z",
+  "updated_at": "2026-10-14T08:25:45.307896Z"
+}

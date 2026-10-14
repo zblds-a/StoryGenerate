@@ -1,0 +1,163 @@
+{
+  "label": "round_1_remix",
+  "intent": "remix",
+  "status": "failed",
+  "retry_job_id": "0b12aa496dd2437dbd7cad46483ed38d",
+  "approved_snapshot_reused": true,
+  "story_id": "d4f3708da2cc4ab18646140eadcffcd6",
+  "version_no": 1,
+  "story_version_id": "2c8be30b5fef43e59275859e9a488e9f",
+  "parent": "a1a7476c911e4009bdb841b97f6d1f40",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+        "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+        "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s2-l6",
+        "ep2-s3-l2",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": [
+        "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+        "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+        "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "别弄了！明天站里就要合并关停，修好也是浪费，算了吧。",
+        "墙上的时钟指向原定试音时间。周野深吸一口气，坐上主播台，推上推子。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l4",
+        "ep2-s3-l1",
+        "ep2-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "别弄了！明天站里就要合并关停，修好也是浪费，算了吧。",
+        "墙上的时钟指向原定试音时间。周野深吸一口气，坐上主播台，推上推子。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+      "requirement_id": "remix_instruction",
+      "evidence_quotes": [
+        "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+        "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l6",
+        "ep2-s3-l2",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": [
+        "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+        "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "林岚是维修员，周野是主持人",
+      "requirement_id": "retain:0",
+      "evidence_quotes": [
+        "林岚没说话，直接拿出万用表，表笔扎进墙插测试，仪器发出滴的长鸣。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1",
+        "ep2-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "林岚没说话，直接拿出万用表，表笔扎进墙插测试，仪器发出滴的长鸣。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "故事发生在老街广播站",
+      "requirement_id": "retain:1",
+      "evidence_quotes": [
+        "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+        "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": [
+        "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+        "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+      "requirement_id": "transform:0",
+      "evidence_quotes": [
+        "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+        "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s2-l6",
+        "ep2-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "肯定是外墙防水胶圈老化，雨水倒灌把线烧了！岚姐你别查了，这老站没救了，咱们直接收拾东西吧。",
+        "插头是被整齐拔下的。还有这绝缘拉杆上，留着你那双防滑手套的橡胶印。老鼠可不会戴手套拔插头。",
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "结局改为周野公开认错并合作整改，不能以三声铃报平安收束",
+      "requirement_id": "transform:1",
+      "evidence_quotes": [
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+        "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。",
+        "温暖的片尾曲缓缓推入，与控制室亮起的绿灯交织，圆满收束。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s3-l2",
+        "ep2-s3-l4",
+        "ep2-s3-l5"
+      ],
+      "raw_evidence_quotes": [
+        "街坊们，我是周野。对不起，昨天的故障，是我因为害怕告别，偷偷拔了电源。",
+        "但老街广播站不会说再见。我和林岚将一起推进播客整改计划，用新方式继续陪着大家。",
+        "温暖的片尾曲缓缓推入，与控制室亮起的绿灯交织，圆满收束。"
+      ]
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 136232,
+  "reported_output_tokens": 41725,
+  "reported_total_tokens": 177957,
+  "reasoning_tokens_included_in_output": 33030,
+  "cache_read_tokens": 34816,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 340.886,
+  "wall_time_sec": 342.109,
+  "error_type": "ArtifactReviewError",
+  "error": "Relative fault date remains ungrounded: ep1 investigation/closure tomorrow vs ep2 apology for yesterday without explaining when the unplugging occurred. Artifact review requests an explicit same-evening timeline; automated pass is not final acceptance."
+}

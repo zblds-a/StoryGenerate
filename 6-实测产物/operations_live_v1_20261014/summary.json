@@ -1,0 +1,157 @@
+{
+  "results": [
+    {
+      "label": "round_1_continue",
+      "intent": "continue",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_1_create",
+      "intent": "create",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+      "calls": 10,
+      "reported_input_tokens": 53879,
+      "reported_output_tokens": 53596,
+      "reported_total_tokens": 107475,
+      "reasoning_tokens_included_in_output": 40452,
+      "cache_read_tokens": 2304,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 508.643,
+      "wall_time_sec": 510.094
+    },
+    {
+      "label": "round_1_remix",
+      "intent": "remix",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_1_revise",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_2_continue",
+      "intent": "continue",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_2_create",
+      "intent": "create",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+      "calls": 10,
+      "reported_input_tokens": 54859,
+      "reported_output_tokens": 53340,
+      "reported_total_tokens": 108199,
+      "reasoning_tokens_included_in_output": 40231,
+      "cache_read_tokens": 2304,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 0,
+      "model_request_latency_sec": 500.25,
+      "wall_time_sec": 501.781
+    },
+    {
+      "label": "round_2_remix",
+      "intent": "remix",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_2_revise",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_3_continue",
+      "intent": "continue",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_3_create",
+      "intent": "create",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+      "calls": 11,
+      "reported_input_tokens": 50599,
+      "reported_output_tokens": 53905,
+      "reported_total_tokens": 104504,
+      "reasoning_tokens_included_in_output": 42499,
+      "cache_read_tokens": 4608,
+      "estimated_input_tokens": 0,
+      "unavailable_usage_calls": 1,
+      "model_request_latency_sec": 526.179,
+      "wall_time_sec": 529.016
+    },
+    {
+      "label": "round_3_remix",
+      "intent": "remix",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "round_3_revise",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "Create未通过"
+    },
+    {
+      "label": "special_arc",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "首轮Create未通过"
+    },
+    {
+      "label": "special_continue_again",
+      "intent": "continue",
+      "status": "blocked",
+      "reason": "首轮Create未通过"
+    },
+    {
+      "label": "special_ending",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "首轮Create未通过"
+    },
+    {
+      "label": "special_episode",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "首轮Create未通过"
+    },
+    {
+      "label": "special_line",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "首轮Create未通过"
+    },
+    {
+      "label": "special_whole_story",
+      "intent": "revise",
+      "status": "blocked",
+      "reason": "首轮Create未通过"
+    }
+  ],
+  "calls": 33,
+  "reported_input_tokens": 159675,
+  "reported_output_tokens": 161207,
+  "reported_total_tokens": 320882,
+  "reasoning_tokens_included_in_output": 123526,
+  "cache_read_tokens": 9216,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 1,
+  "model_request_latency_sec": 1547.155,
+  "passed": 0,
+  "failed": 3,
+  "blocked": 15
+}

@@ -1,0 +1,14 @@
+{
+  "intent": "continue",
+  "request_id": "6d83cd2119df4d25b783d06169ac6e4c",
+  "idempotency_key": "29b5c2581ee143d59dcab3dde4992fed",
+  "user_instruction": "新增两集，继承全部人物、进水故障事实与合作关系。第一新增集完成带负载试音、发现音量仍不稳定并登记待校准；第二新增集承接该结果完成音量校准，最后真正敲三声铃报平安，回收‘三声铃报平安’伏笔，不能再留在未解列表。",
+  "creation_preferences": {
+    "target_episodes": 2,
+    "ending_preference": "closed"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "a6011dd326404fd087abcec345a6d6d2"
+  }
+}

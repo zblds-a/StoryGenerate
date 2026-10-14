@@ -1,0 +1,84 @@
+{
+  "label": "round_3_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "984f321dd4cc449c9ffebb5ba5b6fbe0",
+  "version_no": 2,
+  "story_version_id": "02955635a7ec447e9823ea16491a40bf",
+  "parent": "ec32a738a1cc4e9ebb25505c98b61157",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "先别急。你来看看墙上的配电箱，总闸没跳，但设备指示灯全灭了。咱们先一起核对下总闸状态和外部供电，再决定下一步排查方向。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "先别急。你来看看墙上的配电箱，总闸没跳，但设备指示灯全灭了。咱们先一起核对下总闸状态和外部供电，再决定下一步排查方向。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "先别急。你来看看墙上的配电箱，总闸没跳，但设备指示灯全灭了。咱们先一起核对下总闸状态和外部供电，再决定下一步排查方向。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "先别急。你来看看墙上的配电箱，总闸没跳，但设备指示灯全灭了。咱们先一起核对下总闸状态和外部供电，再决定下一步排查方向。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "看万用表。阻值无穷大，线没断。接头处绝缘层发黑，是自然老化导致的进水短路。别瞎猜了，帮我扶稳梯子。",
+        "指示灯亮了！林岚，你太牛了！看到墙上那个老铜铃没？等会儿广播一出声，我就敲三声，给街坊们报个平安！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep1-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "看万用表。阻值无穷大，线没断。接头处绝缘层发黑，是自然老化导致的进水短路。别瞎猜了，帮我扶稳梯子。",
+        "指示灯亮了！林岚，你太牛了！看到墙上那个老铜铃没？等会儿广播一出声，我就敲三声，给街坊们报个平安！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "哎哟！这老街怎么又停电了？王记烧烤的排风扇刚停，这边也黑灯瞎火的，街坊们还等着听晚间新闻呢！",
+        "先别急。你来看看墙上的配电箱，总闸没跳，但设备指示灯全灭了。咱们先一起核对下总闸状态和外部供电，再决定下一步排查方向。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "哎哟！这老街怎么又停电了？王记烧烤的排风扇刚停，这边也黑灯瞎火的，街坊们还等着听晚间新闻呢！",
+        "先别急。你来看看墙上的配电箱，总闸没跳，但设备指示灯全灭了。咱们先一起核对下总闸状态和外部供电，再决定下一步排查方向。"
+      ]
+    }
+  ],
+  "calls": 5,
+  "reported_input_tokens": 123869,
+  "reported_output_tokens": 16182,
+  "reported_total_tokens": 140051,
+  "reasoning_tokens_included_in_output": 11174,
+  "cache_read_tokens": 34816,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 144.749,
+  "wall_time_sec": 146.313
+}

@@ -1,0 +1,23 @@
+{
+  "intent": "revise",
+  "request_id": "1c459a46ae074d7f8636164b16ada052",
+  "idempotency_key": "16cec62106384b058d348c7ce2f23961",
+  "user_instruction": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+  "edit": {
+    "scope": "scene",
+    "target": {
+      "episode_id": "ep-1-d38c0453",
+      "scene_id": "ep1-scene1"
+    },
+    "instruction": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+    "preserve": {
+      "identity": true,
+      "facts": true
+    },
+    "downstream_policy": "branch_from_here"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "642ccffff2194fc7a8b279f4b0574389"
+  }
+}

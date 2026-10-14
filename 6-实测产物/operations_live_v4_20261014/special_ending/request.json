@@ -1,0 +1,20 @@
+{
+  "intent": "revise",
+  "request_id": "60ffe02c49dd4c60bf35b8e5839b606c",
+  "idempotency_key": "d3fcd343cc7f4837870d3764385495aa",
+  "user_instruction": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+  "edit": {
+    "scope": "ending",
+    "target": {},
+    "instruction": "仅将最后一场收束表达改为具体的维修验收准备动作，保留原有事实结果，不兑现三声铃。",
+    "preserve": {
+      "identity": true,
+      "facts": true
+    },
+    "downstream_policy": "branch_from_here"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "7d3a527f52ed41adb1f5d47d5743cbb1"
+  }
+}

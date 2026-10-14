@@ -1,0 +1,16 @@
+{
+  "label": "special_whole_story",
+  "intent": "revise",
+  "status": "failed",
+  "error_type": "WorkerInterrupted",
+  "error": "旧批次被新实现替代，真实进程已终止；不算模型通过",
+  "potential_inflight_usage_unknown": true,
+  "wall_time_sec": null,
+  "calls": 8,
+  "reported_input_tokens": 106976,
+  "reported_output_tokens": 42719,
+  "reported_total_tokens": 149695,
+  "unavailable_usage_calls": 0,
+  "stale_worker_fenced": true,
+  "persisted_job_status": "FAILED"
+}

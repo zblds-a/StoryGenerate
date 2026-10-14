@@ -1,0 +1,13 @@
+{
+  "intent": "continue",
+  "request_id": "6478bcc2fa474b3e8c5e5a7a9aa20a0c",
+  "idempotency_key": "12ac1627c639439c80078c7bfa85ee8e",
+  "user_instruction": "新增一集，承接广播恢复且三声铃约定已兑现、音量已校准的结果。两人合作组织首次街坊广播，不能再把这些问题当作未完成。",
+  "creation_preferences": {
+    "target_episodes": 1
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "a1a7476c911e4009bdb841b97f6d1f40"
+  }
+}

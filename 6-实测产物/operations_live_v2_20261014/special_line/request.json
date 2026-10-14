@@ -1,0 +1,24 @@
+{
+  "intent": "revise",
+  "request_id": "6491f16e0b7f4ae58b96810548489f62",
+  "idempotency_key": "60116cde7280427ba586c124426ffb43",
+  "user_instruction": "仅将指定台词表达改得更口语化，保持原意、身份及事实，长度与原文接近。",
+  "edit": {
+    "scope": "line",
+    "target": {
+      "episode_id": "ep-1-22af60c4",
+      "scene_id": "ep1-scene1",
+      "line_id": "ep1-s1-l2"
+    },
+    "instruction": "仅将指定台词表达改得更口语化，保持原意、身份及事实，长度与原文接近。",
+    "preserve": {
+      "identity": true,
+      "facts": true
+    },
+    "downstream_policy": "branch_from_here"
+  },
+  "source_selector": {
+    "type": "by_id",
+    "story_version_id": "da7fc4fa3d8747289682a38bf100d48b"
+  }
+}

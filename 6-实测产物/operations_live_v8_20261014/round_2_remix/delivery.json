@@ -1,0 +1,1584 @@
+{
+  "story_id": "936924b2f11e4b3da8dbc15c31af4fc3",
+  "story_version_id": "65dacba5bcb3497cad9931cca9ed0235",
+  "version_no": 1,
+  "parent_story_version_id": "4ec5893f2e8c4d4aba858036a1446de1",
+  "lineage_type": "remix",
+  "series_id": null,
+  "approved_plan_id": "e81306afa5394e65ba27bded4243c9bd",
+  "approved_plan_revision": 1,
+  "title": "老街频率：未完成的告别",
+  "summary": "老街广播站突发断电，维修员林岚在排查中发现并非设备老化或外部破坏，而是主持人周野因害怕面对拆迁告别，自私地拔掉了电源并刻意隐瞒。",
+  "preview_blurb": "广播站突发断电，周野试图将故障归咎于拆迁队破坏，林岚却通过物理证据和系统日志步步紧逼，揭开了一个关于逃避与告别的秘密。",
+  "tags": [
+    "温情",
+    "warm",
+    "18-35",
+    "teen"
+  ],
+  "story_mode": "general",
+  "content_form": "audio_drama",
+  "character_snapshot": [],
+  "character_portrayals": [
+    {
+      "role_id": "repairer",
+      "story_name": "林岚",
+      "speech_style": "简短具体，先确认再行动。受压时直接抛出数据或物理证据，不陷入情绪争论。常用句式：‘看万用表读数’‘数据不会撒谎’。",
+      "external_goal": "查明广播站断电的真实原因，确保设备恢复正常，引导周野完成体面的告别。",
+      "emotional_avoidance": "避免直接触碰周野对老街拆迁的感伤情绪，用冰冷的技术排查和数据来掩饰自己内心的不舍。",
+      "relationship_stance": "认为周野的感性逃避会阻碍解决问题，但内心深处理解他的重情，愿意用理性的方式帮他体面地完成告别。"
+    },
+    {
+      "role_id": "host",
+      "story_name": "周野",
+      "speech_style": "语速快，受压时容易过度反应、找借口或自嘲掩饰。常用句式：‘这肯定是……’‘我的锅，但是……’。",
+      "external_goal": "阻止广播站立刻进入“告别”流程，试图用设备故障的假象来拖延时间。",
+      "emotional_avoidance": "极度害怕面对老街坊说再见，用甩锅外部破坏或假装设备损坏来逃避内心的丧失感与无力感。",
+      "relationship_stance": "依赖林岚的技术，但又害怕她太快修好设备，在隐瞒与愧疚中对林岚产生复杂的拉扯感，最终在她的支撑下获得勇气。"
+    }
+  ],
+  "fictional_voice_roles": [],
+  "outline": {
+    "title": "老街频率：未完成的告别",
+    "premise": "老街广播站突发断电，维修员林岚在排查中发现并非设备老化或外部破坏，而是主持人周野因害怕面对拆迁告别，自私地拔掉了电源并刻意隐瞒。",
+    "theme": "真正的治愈不是逃避失去，而是勇敢直面告别；在理性的拆解与感性的拉扯中，两人学会用记录代替挽留，完成内心的重建与和解。",
+    "beginning": "广播站断电，周野试图将故障归咎于拆迁队破坏，林岚通过物理证据和系统日志步步紧逼，揭穿设备并未损坏的真相。",
+    "development": "林岚调出断电前的音频缓存，周野害怕告别的脆弱内心彻底暴露。两人在控制台前发生情感拉扯，周野陷入逃避与愧疚的痛苦挣扎。",
+    "climax": "林岚没有指责，而是默默恢复供电，用理性的温柔引导周野直面恐惧。周野握住麦克风，在林岚的支撑下克服颤抖，决定不再逃避。",
+    "ending": "周野通过广播向老街坊公开道歉，承认自己的隐瞒与自私，并宣布两人将合作整改，用最后的时间为老街制作声音档案，在翻动纸张的沙沙声中温暖收束。",
+    "episode_outlines": [
+      {
+        "index": 1,
+        "title": "人为的断电",
+        "core_goal": "林岚通过技术排查排除外部破坏，揭穿周野因害怕告别而人为断电的隐瞒真相。",
+        "major_beats": [
+          "[0-2s] 黄金钩子：林岚拔下主控电源插头发出清脆的“咔哒”声，紧接着万用表发出急促的“滴滴滴”短路报警声。",
+          "[2-7s] 矛盾三要素：林岚指出主板根本没进水，插座内部完全干燥，插头是被人为拔出的。周野在一旁紧张地擦汗，试图辩解。",
+          "[7-20s] 第一次反转：周野甩锅给拆迁队半夜搞破坏，林岚直接拿出插头根部残留的绝缘胶带，指出这是站内专用的防静电胶带，只有主持人才有。",
+          "[20-80s] 中段推进：周野情绪失控，大喊广播站马上就要没了修好也没用。林岚不理会他的情绪，调出系统日志发现断电前执行了“手动强制关机”。周野试图抢夺日志本，拉扯中碰倒了桌上的老铜铃，铜铃滚落。",
+          "[80-113s] 升级/二次反转：林岚接通备用电源，调出断电前未播出的音频缓存。喇叭里传出周野哽咽的录音：“老街坊们，这可能是我们最后一次……”声音戛然而止。",
+          "[113-120s] 强钩子：林岚按下暂停键，转头盯着周野：“你怕的不是拆迁，是告别。所以你自己拔了电源，对吗？”周野僵在原地，呼吸急促。"
+        ],
+        "ending": "林岚用确凿的证据和音频缓存揭穿周野的隐瞒，周野的逃避心理被彻底逼到墙角，留下强烈的悬念。",
+        "target_duration_sec": 120
+      },
+      {
+        "index": 2,
+        "title": "直面与重建",
+        "core_goal": "周野坦白内心的恐惧，在林岚的引导下直面告别，通过广播公开道歉并开启声音档案计划。",
+        "major_beats": [
+          "[0-2s] 承接钩子：沉重的呼吸声，周野弯腰捡起老铜铃，放在桌面上发出一声沉闷的“咚”声。",
+          "[2-7s] 矛盾三要素：周野颓然坐下承认隐瞒，哽咽着说只要设备“坏”着，就不用播那期告别节目，老街的记忆就能多留一天。",
+          "[7-20s] 第一次反转：林岚没有责骂，而是默默把插头重新插好，推上电闸。设备启动的底噪平稳响起。林岚平静地说：“逃避不能让时间停下，但会让告别变得难堪。”",
+          "[20-80s] 中段推进：周野看着亮起的指示灯，手在发抖，害怕说出再见。林岚递过麦克风，伸手覆在他发抖的手背上给予支撑，两人在沉默中完成情感的拉扯与治愈。",
+          "[80-113s] 升级/二次反转：周野深吸一口气，推开麦克风开关。他没有播告别语，而是公开道歉：“对不起，广播站没坏，是我因为害怕告别自私地拔了电源。但现在，我和林岚决定用最后的时间，一起为大家做一份老街声音档案。”",
+          "[113-120s] 结局收束：喇叭里传出窗外街坊们隐约的理解与鼓励声。没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+        ],
+        "ending": "周野公开认错并宣布合作整改，两人在翻动档案的沙沙声中达成双向治愈，彻底告别旧日执念。",
+        "target_duration_sec": 120
+      }
+    ],
+    "character_portrayals": [
+      {
+        "role_id": "repairer",
+        "story_name": "林岚",
+        "external_goal": "查明广播站断电的真实原因，确保设备恢复正常，引导周野完成体面的告别。",
+        "emotional_avoidance": "避免直接触碰周野对老街拆迁的感伤情绪，用冰冷的技术排查和数据来掩饰自己内心的不舍。",
+        "speech_style": "简短具体，先确认再行动。受压时直接抛出数据或物理证据，不陷入情绪争论。常用句式：‘看万用表读数’‘数据不会撒谎’。",
+        "relationship_stance": "认为周野的感性逃避会阻碍解决问题，但内心深处理解他的重情，愿意用理性的方式帮他体面地完成告别。"
+      },
+      {
+        "role_id": "host",
+        "story_name": "周野",
+        "external_goal": "阻止广播站立刻进入“告别”流程，试图用设备故障的假象来拖延时间。",
+        "emotional_avoidance": "极度害怕面对老街坊说再见，用甩锅外部破坏或假装设备损坏来逃避内心的丧失感与无力感。",
+        "speech_style": "语速快，受压时容易过度反应、找借口或自嘲掩饰。常用句式：‘这肯定是……’‘我的锅，但是……’。",
+        "relationship_stance": "依赖林岚的技术，但又害怕她太快修好设备，在隐瞒与愧疚中对林岚产生复杂的拉扯感，最终在她的支撑下获得勇气。"
+      }
+    ],
+    "fictional_voice_roles": [],
+    "mystery_causal_proof": null,
+    "performance_plan": {
+      "foley": "插头拔插的咔哒声、万用表急促报警声、铜铃滚落与放置的沉闷声、电闸推合声、麦克风开关的机械声、翻动纸张的沙沙声。",
+      "spatial": "控制室内的近距离拉扯，最后广播时声音通过麦克风产生轻微的广播混响，并延伸至室外街坊的环境音。",
+      "environment": "老街广播站控制室，从断电的死寂到设备恢复后平稳温暖的底噪，窗外充满生活气息与隐约的人声。"
+    },
+    "continuity_constraints": [
+      "本版本为平行世界，设备故障原因必须为周野人为断电并隐瞒，彻底废除原版“进水/继电器卡死/假负载”等技术故障设定。",
+      "结局必须为周野公开道歉并宣布合作整改建立声音档案，绝对不能出现“敲三声铜铃报平安”的情节。",
+      "第一集必须完成“发现人为断电证据”到“调出缓存揭穿周野隐瞒”的完整因果链。",
+      "两人关系的核心冲突是“理性面对与感性逃避”的拉扯，和解必须建立在周野主动认错与林岚的无声支撑上。"
+    ],
+    "change_summary": [
+      "彻底重构故障原因：从“进水导致的技术故障”改为“周野因害怕告别而人为断电的心理故障”。",
+      "重构结局：废除“修好设备敲三声铃”的治愈模式，改为“周野公开认错、直面告别并合作建立声音档案”的成熟和解。",
+      "调整角色动机：周野从“粗心大意导致进水”变为“因重情而逃避告别”，林岚从“单纯的技术修复”变为“引导对方直面内心的治愈者”。"
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "ep-1-a1709f08",
+      "index": 1,
+      "title": "人为的断电",
+      "synopsis": "老街广播站突发断电，维修员林岚在排查中发现并非设备老化或外部破坏，而是主持人周野因害怕面对拆迁告别，自私地拔掉了电源并刻意隐瞒。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 109,
+      "scenes": [
+        {
+          "scene_id": "ep1-scene1",
+          "scene_index": 1,
+          "title": "干燥的插座",
+          "location": "老街广播站控制室",
+          "dramatic_goal": "林岚通过物理排查排除外部破坏，初步锁定人为断电，周野试图用拆迁队掩饰。",
+          "utterances": [
+            {
+              "line_id": "ep1-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "拔下主控电源插头发出清脆的“咔哒”声，紧接着万用表发出急促的“滴滴滴”短路报警声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+              "emotion": "serious",
+              "tone_instruction": "语气平稳但带有不容置疑的肯定，前半句陈述事实，后半句加重咬字指出结论。",
+              "emphasis": [
+                {
+                  "span_text": "根本没进水",
+                  "occurrence": 1,
+                  "start_char": 2,
+                  "end_char": 7,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "人为拔出来的",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 29,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“这插头”后微顿半秒，制造悬念感，随后清晰吐出结论。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！我的锅，昨晚我走得急没锁门，让他们钻了空子……",
+              "emotion": "worried",
+              "tone_instruction": "语速加快，带着明显的慌乱与急于撇清责任的急切，尾音逐渐虚化显露心虚。",
+              "emphasis": [
+                {
+                  "span_text": "搞拆迁的",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 21,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "钻了空子",
+                  "occurrence": 1,
+                  "start_char": 54,
+                  "end_char": 58,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“搬走！”后换气一次，接“我的锅”时气息发虚，句末省略号处声音渐弱并带轻微颤抖。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s1-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "剪线？插头金属片上连点划痕都没有。周野，你一直在擦汗，到底在紧张什么？",
+              "emotion": "serious",
+              "tone_instruction": "前半句反问短促冷硬，后半句直视对方，语气由陈述转为步步紧逼的质问。",
+              "emphasis": [
+                {
+                  "span_text": "连点划痕都没有",
+                  "occurrence": 1,
+                  "start_char": 9,
+                  "end_char": 16,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "到底在紧张什么",
+                  "occurrence": 1,
+                  "start_char": 27,
+                  "end_char": 34,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“剪线？”后停顿一秒，随后直呼其名时压低音量，增强压迫感。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene2",
+          "scene_index": 2,
+          "title": "防静电胶带与日志",
+          "location": "老街广播站控制室",
+          "dramatic_goal": "林岚用胶带证据和系统日志彻底击碎周野的借口，周野情绪失控抢夺日志碰倒铜铃。",
+          "utterances": [
+            {
+              "line_id": "ep1-s2-l1",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "拆迁队？那你解释一下，插头根部这圈残留的绝缘胶带哪来的？这是站内专用的防静电胶带，只有主持人才有钥匙拿。",
+              "emotion": "serious",
+              "tone_instruction": "语气冷静但带有压迫感，前半句设问后微顿，后半句逐字咬实。",
+              "emphasis": [
+                {
+                  "span_text": "残留的绝缘胶带",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 24,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "只有主持人才有",
+                  "occurrence": 1,
+                  "start_char": 41,
+                  "end_char": 48,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“哪来的？”后留0.5秒空白，配合翻找证据的轻微衣物摩擦声提示。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "我……那是我以前缠的！林岚，你别修了行不行？广播站马上就要没了，修好有什么用？反正过几天都要拆，大家迟早要散的！",
+              "emotion": "sad",
+              "tone_instruction": "语速加快，尾音发颤，从强辩转为近乎崩溃的哀求。",
+              "emphasis": [
+                {
+                  "span_text": "马上就要没了",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 31,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "迟早要散的！",
+                  "occurrence": 1,
+                  "start_char": 50,
+                  "end_char": 56,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“行不行？”后气息微喘，紧接着“修好有什么用？”音量陡然拔高并带轻微破音。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "数据不会撒谎。系统日志显示，断电前最后一条指令是“手动强制关机”。",
+              "emotion": "calm",
+              "tone_instruction": "压低嗓音，咬字清晰如宣读判决，不带任何情绪起伏。",
+              "emphasis": [
+                {
+                  "span_text": "数据不会撒谎",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 6,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "手动强制关机",
+                  "occurrence": 1,
+                  "start_char": 25,
+                  "end_char": 31,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“不会撒谎。”后停顿1秒，制造压迫感，再平稳读出日志内容。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l4",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "你别查了！把日志本给我！",
+              "emotion": "angry",
+              "tone_instruction": "破音嘶吼，伴随急促呼吸，后半句因动作拉扯略显气短。",
+              "emphasis": [
+                {
+                  "span_text": "你别查了！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 5,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "把日志本给我！",
+                  "occurrence": 1,
+                  "start_char": 5,
+                  "end_char": 12,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.2,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“别查了！”与“给我！”之间加入明显的吞咽口水声，体现极度焦躁。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "放手！",
+              "emotion": "serious",
+              "tone_instruction": "短促有力，重音砸在动词上，带着不容挣脱的力道。",
+              "emphasis": [
+                {
+                  "span_text": "放手！",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 3,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.1,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首无吸气，直接爆发，句末不留余韵，为后续铜铃碰倒的音效留出切入空间。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s2-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "拉扯中碰倒了桌上的老铜铃，铜铃滚落在地发出沉闷的碰撞声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep1-scene3",
+          "scene_index": 3,
+          "title": "未播出的告别",
+          "location": "老街广播站控制室",
+          "dramatic_goal": "林岚调出音频缓存揭穿周野害怕告白的真相，将周野的逃避心理逼到墙角。",
+          "utterances": [
+            {
+              "line_id": "ep1-s3-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "接通备用电源，设备启动底噪平稳响起。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "备用电源接通了。这是断电前没播出去的音频缓存，系统自动保存在本地。",
+              "emotion": "serious",
+              "tone_instruction": "语气平稳但带有探究感，前半句交代事实，后半句强调技术细节。",
+              "emphasis": [
+                {
+                  "span_text": "音频缓存",
+                  "occurrence": 1,
+                  "start_char": 18,
+                  "end_char": 22,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "系统自动保存",
+                  "occurrence": 1,
+                  "start_char": 23,
+                  "end_char": 29,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句间留0.5秒停顿，模拟设备启动后的确认动作。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "老街坊们，这可能是我们最后一次……",
+              "emotion": "sad",
+              "tone_instruction": "模仿旧录音质感，气息微颤，尾音因哽咽而自然中断，不强行补全。",
+              "emphasis": [
+                {
+                  "span_text": "最后一次",
+                  "occurrence": 1,
+                  "start_char": 11,
+                  "end_char": 15,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "加入轻微底噪与磁带摩擦感，句末气息收住后留1秒空白再切下一句。",
+              "audio_cue_ref": "recording"
+            },
+            {
+              "line_id": "ep1-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "录音戛然而止，林岚按下暂停键的机械声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "录音断了。你连一句完整的再见都不敢说。周野，你怕的根本不是拆迁，是告别。所以你自己拔了电源，对吗？",
+              "emotion": "serious",
+              "tone_instruction": "语速渐快，前半句冷峻陈述，中间压低声音施压，最后反问句咬字清晰、不留退路。",
+              "emphasis": [
+                {
+                  "span_text": "不敢说",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 18,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "告别",
+                  "occurrence": 1,
+                  "start_char": 33,
+                  "end_char": 35,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“录音断了。”后停顿0.8秒，“周野”二字加重气声，“对吗？”尾音下沉并维持3秒静默等待反应。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep1-s3-l6",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "周野僵在原地，急促而沉重的呼吸声在安静的控制室里格外清晰。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "老街广播站突发断电，周野试图将故障归咎于拆迁队破坏，林岚通过物理证据和系统日志步步紧逼，揭穿设备并未损坏的真相。最终，林岚调出断电前的音频缓存，点破周野因害怕告别而人为拔除电源的隐瞒，将他的逃避心理彻底逼到墙角。",
+      "ending_hook": "林岚用确凿的证据和音频缓存揭穿周野的隐瞒，周野的逃避心理被彻底逼到墙角，留下强烈的悬念。",
+      "fact_delta": [
+        {
+          "fact": "广播站断电原因",
+          "change": "确认并非外部破坏或设备老化，而是周野因害怕告别主动拔除电源并隐瞒。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "change": "从单纯的技术排查，转为看透其内心逃避并试图用理性逼迫其直面真相。",
+          "relationship": "林岚对周野"
+        },
+        {
+          "change": "从试图用借口隐瞒敷衍，转为被揭穿后的无措、僵持与内心防线崩溃。",
+          "relationship": "周野对林岚"
+        }
+      ],
+      "new_open_threads": [
+        "周野如何面对内心的告别恐惧",
+        "两人如何收拾残局并处理广播站的最终告别"
+      ],
+      "closed_threads": [],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    },
+    {
+      "episode_id": "ep-2-c3476b3c",
+      "index": 2,
+      "title": "直面与重建",
+      "synopsis": "周野坦白内心的恐惧，在林岚的引导下直面告别，通过广播公开道歉并开启声音档案计划。",
+      "duration_target_sec": 120,
+      "duration_estimate_sec": 125,
+      "scenes": [
+        {
+          "scene_id": "ep2-scene1",
+          "scene_index": 1,
+          "title": "沉重的铜铃",
+          "location": "老街广播站控制室",
+          "dramatic_goal": "周野承认因害怕告别而人为断电的隐瞒，展现其内心的逃避与脆弱。",
+          "utterances": [
+            {
+              "line_id": "ep2-s1-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "沉重的呼吸声，周野弯腰捡起老铜铃，放在桌面上发出一声沉闷的“咚”声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s1-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "只要它一直“坏”着，我就不用播那期告别节目。老街的记忆……是不是就能多留一天？林岚，我不敢说再见，我怕一说出口，这十年的声音就真的散了。",
+              "emotion": "sad",
+              "tone_instruction": "声音微颤，前半句压抑哽咽，后半句逐渐透出脆弱与恳求",
+              "emphasis": [
+                {
+                  "span_text": "多留一天",
+                  "occurrence": 1,
+                  "start_char": 34,
+                  "end_char": 38,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "真的散了",
+                  "occurrence": 1,
+                  "start_char": 63,
+                  "end_char": 67,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿，模拟吞咽动作；“老街的记忆……”处气声拉长停顿，接下一句时气息不稳",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s1-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "所以你就拔了电源，用胶带缠住插头，骗大家，也骗你自己？",
+              "emotion": "serious",
+              "tone_instruction": "语气平稳克制，不带指责的尖锐，以陈述事实的口吻逐层递进",
+              "emphasis": [
+                {
+                  "span_text": "骗大家，也骗你自己",
+                  "occurrence": 1,
+                  "start_char": 17,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“插头”后微作停顿，给角色留出反应空间；句尾降调处理，避免上扬疑问感，保持冷静引导的姿态",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep2-scene2",
+          "scene_index": 2,
+          "title": "无声的支撑",
+          "location": "老街广播站控制室",
+          "dramatic_goal": "林岚恢复供电并给予周野情感支撑，两人在拉扯中完成内心的治愈与和解。",
+          "utterances": [
+            {
+              "line_id": "ep2-s2-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林岚默默把插头重新插好，推上电闸。设备启动的底噪平稳响起。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s2-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "逃避不能让时间停下，但会让告别变得难堪。机器没坏，坏的是你面对结局的勇气。",
+              "emotion": "serious",
+              "tone_instruction": "语气平稳坚定，前半句稍作停顿强调道理，后半句加重咬字指出核心问题。",
+              "emphasis": [
+                {
+                  "span_text": "告别变得难堪",
+                  "occurrence": 1,
+                  "start_char": 13,
+                  "end_char": 19,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "面对结局的勇气",
+                  "occurrence": 1,
+                  "start_char": 29,
+                  "end_char": 36,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首微顿后清晰吐出，第二句“坏的是”前吸气一次，语速放缓。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s2-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "可是我怎么面对他们？街坊们听了十年的声音，突然要告诉他们以后没了……我手抖得连麦克风都拿不住，怕一开口就会哭出来。",
+              "emotion": "fearful",
+              "tone_instruction": "气息不稳带颤音，问句尾音上扬显慌乱，省略号处换气压抑哽咽感，后半句压低音量。",
+              "emphasis": [
+                {
+                  "span_text": "怎么面对他们",
+                  "occurrence": 1,
+                  "start_char": 3,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "以后没了",
+                  "occurrence": 1,
+                  "start_char": 28,
+                  "end_char": 32,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.15,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“可是”前轻叹，省略号后留白0.5秒接下一句，尾音渐弱收住。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s2-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "林岚递过麦克风，伸手覆在他发抖的手背上。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s2-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "拿不住，我帮你托着。想哭就带着哭腔播，这才是真实的你。",
+              "emotion": "reassuring",
+              "tone_instruction": "语速放缓，第一句贴近耳畔般轻柔笃定，第二句“真实的你”加重并拉长尾音传递接纳。",
+              "emphasis": [
+                {
+                  "span_text": "我帮你托着",
+                  "occurrence": 1,
+                  "start_char": 4,
+                  "end_char": 9,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "真实的你",
+                  "occurrence": 1,
+                  "start_char": 22,
+                  "end_char": 26,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首不拖沓直接切入，两句话之间留0.3秒呼吸间隙，保持胸腔共鸣。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s2-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "林岚……谢谢你没直接拆穿我，也没丢下我。",
+              "emotion": "tender",
+              "tone_instruction": "气息下沉，名字处微顿显郑重，“谢谢”二字吐字清晰柔和，后半句语气渐缓带释然感。",
+              "emphasis": [
+                {
+                  "span_text": "没直接拆穿我",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "没丢下我",
+                  "occurrence": 1,
+                  "start_char": 15,
+                  "end_char": 19,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 0.85,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“林岚”后停顿1秒，句末不留气口自然收尾，保持声音贴麦。",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s2-l7",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "推开关吧。大家都在等一个真实的交代，而不是一个永远修不好的机器。",
+              "emotion": "serious",
+              "tone_instruction": "语气干脆利落推动行动，“真实的交代”咬字加重，“永远修不好的机器”语调微降显笃定。",
+              "emphasis": [
+                {
+                  "span_text": "推开关吧",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "真实的交代",
+                  "occurrence": 1,
+                  "start_char": 12,
+                  "end_char": 17,
+                  "strength": "strong"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "句首短促有力，逗号处微顿给角色反应空间，全句保持中低音区稳定输出。",
+              "audio_cue_ref": null
+            }
+          ]
+        },
+        {
+          "scene_id": "ep2-scene3",
+          "scene_index": 3,
+          "title": "声音档案",
+          "location": "老街广播站控制室",
+          "dramatic_goal": "周野公开道歉并宣布合作建立声音档案，两人在翻动纸张的沙沙声中温暖收束。",
+          "utterances": [
+            {
+              "line_id": "ep2-s3-l1",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "周野深吸一口气，推开麦克风开关，轻微的电流声后传出广播混响。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s3-l2",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。我总以为拖延就能留住过去，但我错了，这反而剥夺了大家好好道别的权利。",
+              "emotion": "serious",
+              "tone_instruction": "语气沉稳诚恳，前半句带轻微哽咽后迅速收住，后半句咬字清晰坚定",
+              "emphasis": [
+                {
+                  "span_text": "自私地拔了电源",
+                  "occurrence": 1,
+                  "start_char": 24,
+                  "end_char": 31,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "好好道别的权利",
+                  "occurrence": 1,
+                  "start_char": 58,
+                  "end_char": 65,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.95,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "开头“对不起”前留0.5秒呼吸停顿，麦克风开关推起瞬间有轻微电流底噪",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s3-l3",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "现在，我和林岚决定用最后的时间，不再播干巴巴的告别语，而是为大家做一份老街声音档案。把早市的叫卖声、树下的聊天声，全都录下来。",
+              "emotion": "calm",
+              "tone_instruction": "语速平稳渐升，说到“声音档案”时语气微扬，传递出释然与期待",
+              "emphasis": [
+                {
+                  "span_text": "老街声音档案",
+                  "occurrence": 1,
+                  "start_char": 35,
+                  "end_char": 41,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "全都录下来",
+                  "occurrence": 1,
+                  "start_char": 57,
+                  "end_char": 62,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.05,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "“决定”后微顿，强调后续方案的郑重感",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s3-l4",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "喇叭里传出窗外街坊们隐约的理解与鼓励声。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s3-l5",
+              "kind": "dialogue",
+              "speaker_role_id": "repairer",
+              "narrator_id": null,
+              "performer_id": "repairer",
+              "text": "第一份档案，就从今天的道歉和窗外的风声开始。准备好记录了吗？",
+              "emotion": "reassuring",
+              "tone_instruction": "声音柔和稳定，尾音微微上扬引导对方回应，保持专业记录的节奏感",
+              "emphasis": [
+                {
+                  "span_text": "今天的道歉",
+                  "occurrence": 1,
+                  "start_char": 8,
+                  "end_char": 13,
+                  "strength": "medium"
+                },
+                {
+                  "span_text": "窗外的风声",
+                  "occurrence": 1,
+                  "start_char": 14,
+                  "end_char": 19,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 0.9,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "提问前轻敲桌面两下作为节拍提示，营造录制启动的仪式感",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s3-l6",
+              "kind": "dialogue",
+              "speaker_role_id": "host",
+              "narrator_id": null,
+              "performer_id": "host",
+              "text": "准备好了。我们翻页。",
+              "emotion": "calm",
+              "tone_instruction": "回答干脆利落，不带犹豫，“翻页”二字配合纸张摩擦动作同步发出",
+              "emphasis": [
+                {
+                  "span_text": "准备好了",
+                  "occurrence": 1,
+                  "start_char": 0,
+                  "end_char": 4,
+                  "strength": "strong"
+                },
+                {
+                  "span_text": "翻页",
+                  "occurrence": 1,
+                  "start_char": 7,
+                  "end_char": 9,
+                  "strength": "medium"
+                }
+              ],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": "话音落下即刻伴随清晰的纸张翻动声，不留空白停顿",
+              "audio_cue_ref": null
+            },
+            {
+              "line_id": "ep2-s3-l7",
+              "kind": "sfx",
+              "speaker_role_id": null,
+              "narrator_id": null,
+              "performer_id": "narrator",
+              "text": "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。",
+              "emotion": null,
+              "tone_instruction": null,
+              "emphasis": [],
+              "speech_rate": 1.0,
+              "pitch": null,
+              "volume": null,
+              "pauses": [],
+              "delivery_note": null,
+              "audio_cue_ref": null
+            }
+          ]
+        }
+      ],
+      "episode_summary": "周野颓然承认因害怕告别而人为断电的隐瞒，林岚没有责骂，而是默默恢复供电并用手覆在他发抖的手背上给予支撑。周野最终推开麦克风公开道歉，宣布两人将合作建立老街声音档案，在翻动纸张的沙沙声中达成双向治愈。",
+      "ending_hook": "",
+      "fact_delta": [
+        {
+          "fact": "广播站后续计划",
+          "change": "从单纯的告别节目改为合作建立老街声音档案。"
+        }
+      ],
+      "relationship_delta": [
+        {
+          "change": "从被揭穿后的无措僵持，转为感激其无声支撑并确立合作整改的信任。",
+          "relationship": "周野对林岚"
+        },
+        {
+          "change": "从逼迫其直面真相，转为接纳其脆弱并给予温柔支撑，达成双向治愈。",
+          "relationship": "林岚对周野"
+        }
+      ],
+      "new_open_threads": [],
+      "closed_threads": [
+        "周野如何面对内心的告别恐惧",
+        "两人如何收拾残局并处理广播站的最终告别"
+      ],
+      "validation_status": "PASSED",
+      "ready_for_playback": true
+    }
+  ],
+  "generated_episode_ids": [
+    "ep-1-a1709f08",
+    "ep-2-c3476b3c"
+  ],
+  "continuity_state": {
+    "facts": [
+      {
+        "fact": "广播站断电原因",
+        "change": "确认并非外部破坏或设备老化，而是周野因害怕告别主动拔除电源并隐瞒。"
+      },
+      {
+        "fact": "广播站后续计划",
+        "change": "从单纯的告别节目改为合作建立老街声音档案。"
+      }
+    ],
+    "relationships": [
+      {
+        "change": "从单纯的技术排查，转为看透其内心逃避并试图用理性逼迫其直面真相。",
+        "relationship": "林岚对周野"
+      },
+      {
+        "change": "从试图用借口隐瞒敷衍，转为被揭穿后的无措、僵持与内心防线崩溃。",
+        "relationship": "周野对林岚"
+      },
+      {
+        "change": "从被揭穿后的无措僵持，转为感激其无声支撑并确立合作整改的信任。",
+        "relationship": "周野对林岚"
+      },
+      {
+        "change": "从逼迫其直面真相，转为接纳其脆弱并给予温柔支撑，达成双向治愈。",
+        "relationship": "林岚对周野"
+      }
+    ],
+    "episode_summaries": [
+      {
+        "index": 1,
+        "summary": "老街广播站突发断电，周野试图将故障归咎于拆迁队破坏，林岚通过物理证据和系统日志步步紧逼，揭穿设备并未损坏的真相。最终，林岚调出断电前的音频缓存，点破周野因害怕告别而人为拔除电源的隐瞒，将他的逃避心理彻底逼到墙角。"
+      },
+      {
+        "index": 2,
+        "summary": "周野颓然承认因害怕告别而人为断电的隐瞒，林岚没有责骂，而是默默恢复供电并用手覆在他发抖的手背上给予支撑。周野最终推开麦克风公开道歉，宣布两人将合作建立老街声音档案，在翻动纸张的沙沙声中达成双向治愈。"
+      }
+    ],
+    "source_version_id": "4ec5893f2e8c4d4aba858036a1446de1",
+    "unresolved_threads": []
+  },
+  "quality_report": {
+    "validation_status": "PASSED",
+    "spoken_line_count": 22,
+    "emotion_coverage": 1.0,
+    "tone_coverage": 1.0,
+    "emphasis_coverage": 1.0,
+    "emphasis_span_validity": 1.0,
+    "continuity_passed": true,
+    "outline_alignment_passed": true,
+    "content_rating_passed": true,
+    "warnings": [],
+    "operation_checks": [
+      {
+        "passed": true,
+        "requirement": "创作两集平行版本，保留维修员林岚、主持人周野和老街广播站背景。改变冲突：设备没有进水，周野曾因害怕告别而主动断开电源并隐瞒。结尾由周野承认隐瞒、公开道歉，两人约定合作整改，不能沿用原版修好设备敲铃报平安的结局。",
+        "requirement_id": "instruction",
+        "evidence_quotes": [
+          "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+          "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。我总以为拖延就能留住过去，但我错了，这反而剥夺了大家好好道别的权利。",
+          "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+        ],
+        "evidence_line_ids": [
+          "ep1-s1-l2",
+          "ep2-s3-l2",
+          "ep2-s3-l7"
+        ],
+        "raw_evidence_quotes": [
+          "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+          "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。",
+          "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+        ]
+      },
+      {
+        "passed": true,
+        "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+        "requirement_id": "timeline",
+        "evidence_quotes": [
+          "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！我的锅，昨晚我走得急没锁门，让他们钻了空子……",
+          "只要它一直“坏”着，我就不用播那期告别节目。老街的记忆……是不是就能多留一天？林岚，我不敢说再见，我怕一说出口，这十年的声音就真的散了。"
+        ],
+        "evidence_line_ids": [
+          "ep1-s1-l3",
+          "ep2-s1-l2"
+        ],
+        "raw_evidence_quotes": [
+          "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！我的锅，昨晚我走得急没锁门，让他们钻了空子……",
+          "只要它一直“坏”着，我就不用播那期告别节目。"
+        ]
+      },
+      {
+        "passed": true,
+        "requirement": "平行版本中设备并未进水，故障由周野主动断开电源并隐瞒造成；结局改为公开认错与合作整改。",
+        "requirement_id": "remix_instruction",
+        "evidence_quotes": [
+          "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+          "现在，我和林岚决定用最后的时间，不再播干巴巴的告别语，而是为大家做一份老街声音档案。把早市的叫卖声、树下的聊天声，全都录下来。"
+        ],
+        "evidence_line_ids": [
+          "ep1-s1-l2",
+          "ep2-s3-l3"
+        ],
+        "raw_evidence_quotes": [
+          "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+          "现在，我和林岚决定用最后的时间，不再播干巴巴的告别语，而是为大家做一份老街声音档案。"
+        ]
+      },
+      {
+        "passed": true,
+        "requirement": "林岚是维修员，周野是主持人",
+        "requirement_id": "retain:0",
+        "evidence_quotes": [
+          "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+          "老街坊们，这可能是我们最后一次……"
+        ],
+        "evidence_line_ids": [
+          "ep1-s1-l2",
+          "ep1-s3-l3"
+        ],
+        "raw_evidence_quotes": [
+          "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。",
+          "老街坊们，这可能是我们最后一次……"
+        ]
+      },
+      {
+        "passed": true,
+        "requirement": "故事发生在老街广播站",
+        "requirement_id": "retain:1",
+        "evidence_quotes": [
+          "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！我的锅，昨晚我走得急没锁门，让他们钻了空子……"
+        ],
+        "evidence_line_ids": [
+          "ep1-s1-l3"
+        ],
+        "raw_evidence_quotes": [
+          "怎么可能是人为的？这肯定是街角那帮搞拆迁的半夜剪了线，想逼咱们广播站搬走！"
+        ]
+      },
+      {
+        "passed": true,
+        "requirement": "设备故障改为周野主动断开电源并隐瞒，不能仍是进水故障",
+        "requirement_id": "transform:0",
+        "evidence_quotes": [
+          "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。"
+        ],
+        "evidence_line_ids": [
+          "ep1-s1-l2"
+        ],
+        "raw_evidence_quotes": [
+          "主板根本没进水，插座内部完全干燥。这插头，是被人为拔出来的。"
+        ]
+      },
+      {
+        "passed": true,
+        "requirement": "结局改为周野公开认错并合作整改，不能以三声铃报平安收束",
+        "requirement_id": "transform:1",
+        "evidence_quotes": [
+          "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。我总以为拖延就能留住过去，但我错了，这反而剥夺了大家好好道别的权利。",
+          "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+        ],
+        "evidence_line_ids": [
+          "ep2-s3-l2",
+          "ep2-s3-l7"
+        ],
+        "raw_evidence_quotes": [
+          "对不起，老街坊们。广播站没坏，是我因为害怕告别，自私地拔了电源。",
+          "没有敲铃，只有设备平稳运行的底噪和两人翻动档案纸张的“沙沙”声，温暖余韵。"
+        ]
+      }
+    ],
+    "timeline_claims": []
+  },
+  "ready_for_playback": true,
+  "status": "READY",
+  "engine_version": "0.3.0",
+  "delivery_format_version": "1.0",
+  "rule_versions": {
+    "prompt": "p1.6.11",
+    "formula": "1.0.0",
+    "continuity": "1.0.0",
+    "timetravel": "1.2.0"
+  },
+  "model_trace": [
+    {
+      "node": "outline",
+      "role": "outline",
+      "stage": "planning",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "bde3e0acb3c4496b9af9341c53d9b941",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 57109,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:38:32.415000+00:00",
+      "actual_model": "qwen3.7-max",
+      "attempt_kind": "initial_plan",
+      "completed_at": "2026-10-14T13:39:29.524708+00:00",
+      "input_tokens": 45365,
+      "principal_id": "local",
+      "usage_source": "reported",
+      "output_tokens": 4776,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.7-max",
+      "reasoning_tokens": 2838,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "a722cd52-9d76-40bd-9d08-ebd907f95a67",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "episode_writer",
+      "role": "storycraft_episode_writer",
+      "stage": "story_generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "b884289b90d1464f82944e0a85408265",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 44931,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:39:30.175313+00:00",
+      "actual_model": "qwen3.7-max",
+      "attempt_kind": "first_draft",
+      "completed_at": "2026-10-14T13:40:15.106852+00:00",
+      "input_tokens": 40145,
+      "usage_source": "reported",
+      "output_tokens": 4930,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.7-max",
+      "reasoning_tokens": 3455,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "adabb40f-96bb-4111-9e36-1ad6250993a1",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "stage": "generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "613913b3a6bf449d81ee65f8ac426d92",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 36427,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:40:15.128482+00:00",
+      "actual_model": "qwen3.6-flash",
+      "attempt_kind": "approved_job",
+      "completed_at": "2026-10-14T13:40:51.557103+00:00",
+      "input_tokens": 2071,
+      "usage_source": "reported",
+      "output_tokens": 4194,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.6-flash",
+      "reasoning_tokens": 3639,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "264eea14-6754-4ced-9f2d-5d12f615be33",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "stage": "generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "1439800d18374d0d88a6e8bf692f928c",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 39027,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:40:51.568627+00:00",
+      "actual_model": "qwen3.6-flash",
+      "attempt_kind": "approved_job",
+      "completed_at": "2026-10-14T13:41:30.596453+00:00",
+      "input_tokens": 2224,
+      "usage_source": "reported",
+      "output_tokens": 4507,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.6-flash",
+      "reasoning_tokens": 3802,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "a234370c-a68b-4fc7-a524-d3afbc159e0a",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "stage": "generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "e455c216360846ed869177fad45135bd",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 36114,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:41:30.606683+00:00",
+      "actual_model": "qwen3.6-flash",
+      "attempt_kind": "approved_job",
+      "completed_at": "2026-10-14T13:42:06.721579+00:00",
+      "input_tokens": 2046,
+      "usage_source": "reported",
+      "output_tokens": 4463,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.6-flash",
+      "reasoning_tokens": 3946,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "32f09cd4-9c51-44fd-a19e-3a7d32b351e4",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "episode_writer",
+      "role": "storycraft_episode_writer",
+      "stage": "story_generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "4c733228d4a24c1cb1c5eeb9eeab77b5",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 37639,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:42:06.744196+00:00",
+      "actual_model": "qwen3.7-max",
+      "attempt_kind": "first_draft",
+      "completed_at": "2026-10-14T13:42:44.384372+00:00",
+      "input_tokens": 44285,
+      "usage_source": "reported",
+      "output_tokens": 4623,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.7-max",
+      "reasoning_tokens": 3135,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "406600aa-d356-4c8f-be91-a448a5c90704",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "stage": "generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "cb6c9fa9ae1e4d6fa9f5a5f540437759",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 33314,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:42:44.390101+00:00",
+      "actual_model": "qwen3.6-flash",
+      "attempt_kind": "approved_job",
+      "completed_at": "2026-10-14T13:43:17.704411+00:00",
+      "input_tokens": 1970,
+      "usage_source": "reported",
+      "output_tokens": 3736,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.6-flash",
+      "reasoning_tokens": 3395,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "1122014a-4cca-44c7-aa68-cecc9332d1b5",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "stage": "generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "107fbbc42363445ebaaa1b6bb69da655",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 42710,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:43:17.717340+00:00",
+      "actual_model": "qwen3.6-flash",
+      "attempt_kind": "approved_job",
+      "completed_at": "2026-10-14T13:44:00.427313+00:00",
+      "input_tokens": 2235,
+      "usage_source": "reported",
+      "output_tokens": 5519,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.6-flash",
+      "reasoning_tokens": 4582,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "10114245-450e-47b7-865b-7c8f3cab41b7",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "performance_annotation",
+      "role": "performance_annotation",
+      "stage": "generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "9c2d5e78adc84a5bb46a0038aed96a8f",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 36962,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:44:00.434911+00:00",
+      "actual_model": "qwen3.6-flash",
+      "attempt_kind": "approved_job",
+      "completed_at": "2026-10-14T13:44:37.396273+00:00",
+      "input_tokens": 2156,
+      "usage_source": "reported",
+      "output_tokens": 4519,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.6-flash",
+      "reasoning_tokens": 3832,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "2710be5b-f18e-4089-90df-d94b64814d49",
+      "reasoning_included_in_output": true
+    },
+    {
+      "node": "storycraft_operation_judge",
+      "role": "storycraft_operation_judge",
+      "stage": "generation",
+      "job_id": "0527437421554928bad88b8959c85aaa",
+      "status": "success",
+      "attempt": 1,
+      "call_id": "d050d022052249bcb96cef63316da893",
+      "plan_id": "e81306afa5394e65ba27bded4243c9bd",
+      "provider": "openai_compat",
+      "error_code": null,
+      "latency_ms": 31928,
+      "request_id": "b2c9773c6a6e49df89c8532028f8913c",
+      "started_at": "2026-10-14T13:44:37.439679+00:00",
+      "actual_model": "qwen3.7-max",
+      "attempt_kind": "approved_job",
+      "completed_at": "2026-10-14T13:45:09.368429+00:00",
+      "input_tokens": 45336,
+      "usage_source": "reported",
+      "output_tokens": 3932,
+      "prompt_version": "p1.6.11",
+      "requested_model": "qwen/qwen3.7-max",
+      "reasoning_tokens": 2824,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "provider_request_id": "b4a51871-cb69-4021-80b4-525515a56ad1",
+      "reasoning_included_in_output": true
+    }
+  ],
+  "created_at": "2026-10-14T13:44:37.401108Z"
+}

@@ -1,0 +1,17 @@
+{
+  "label": "round_1_create",
+  "intent": "create",
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; OPERATION_REQUIREMENTS_NOT_PROVEN",
+  "calls": 10,
+  "reported_input_tokens": 53879,
+  "reported_output_tokens": 53596,
+  "reported_total_tokens": 107475,
+  "reasoning_tokens_included_in_output": 40452,
+  "cache_read_tokens": 2304,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 508.643,
+  "wall_time_sec": 510.094
+}

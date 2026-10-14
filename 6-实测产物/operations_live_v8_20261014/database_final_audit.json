@@ -1,0 +1,80 @@
+[
+  {
+    "batch": "operations_live_v1_20261014",
+    "schema": "storyoperations_a1d90f81fb36",
+    "jobs": {
+      "FAILED": 3
+    },
+    "versions": 0,
+    "no_pending_jobs": true
+  },
+  {
+    "batch": "operations_live_v2_20261014",
+    "schema": "storyoperations_78b68b53b826",
+    "jobs": {
+      "FAILED": 5,
+      "SUCCEEDED": 4
+    },
+    "versions": 4,
+    "no_pending_jobs": true
+  },
+  {
+    "batch": "operations_live_v3_20261014",
+    "schema": "storyoperations_45d79608203b",
+    "jobs": {
+      "FAILED": 2,
+      "SUCCEEDED": 5
+    },
+    "versions": 5,
+    "no_pending_jobs": true
+  },
+  {
+    "batch": "operations_live_v4_20261014",
+    "schema": "storyoperations_d6efeab9fdc0",
+    "jobs": {
+      "FAILED": 1,
+      "SUCCEEDED": 17
+    },
+    "versions": 17,
+    "no_pending_jobs": true
+  },
+  {
+    "batch": "operations_live_v5_20261014",
+    "schema": "storyoperations_0e7fcf07ce8a",
+    "jobs": {
+      "FAILED": 3,
+      "SUCCEEDED": 11
+    },
+    "versions": 11,
+    "no_pending_jobs": true
+  },
+  {
+    "batch": "operations_live_v6_20261014",
+    "schema": "storyoperations_7497a9f86e84",
+    "jobs": {
+      "FAILED": 2,
+      "SUCCEEDED": 14
+    },
+    "versions": 14,
+    "no_pending_jobs": true
+  },
+  {
+    "batch": "operations_live_v7_20261014",
+    "schema": "storyoperations_7cce4e65670b",
+    "jobs": {
+      "FAILED": 3,
+      "SUCCEEDED": 8
+    },
+    "versions": 8,
+    "no_pending_jobs": true
+  },
+  {
+    "batch": "operations_live_v8_20261014",
+    "schema": "storyoperations_5948ea834b01",
+    "jobs": {
+      "SUCCEEDED": 19
+    },
+    "versions": 19,
+    "no_pending_jobs": true
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "implementation_sha": "74f6171f2ef699c7341e04ade9d74950f2998c36",
+  "grouped_xml_source": "all.xml",
+  "grouping": "tests.integration.* separates PostgreSQL tests from unit tests",
+  "unit_uses_test_doubles": true,
+  "postgres_uses_real_database_and_scripted_model": true
+}

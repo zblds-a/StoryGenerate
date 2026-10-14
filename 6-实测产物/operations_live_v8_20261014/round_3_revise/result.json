@@ -1,0 +1,122 @@
+{
+  "label": "round_3_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "63d93c8162c54571a17db7908803f4bc",
+  "version_no": 2,
+  "story_version_id": "6d6970df1fb749388fab09b752a388fe",
+  "parent": "7fc964639a7a41999c8807b7f9e37c68",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "先别下定论。拿上手电，跟我一起核对下设备状态，再决定下一步怎么修。",
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+        "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l4",
+        "ep1-s2-l2",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": [
+        "先别下定论。拿上手电，跟我一起核对下设备状态，再决定下一步怎么修。",
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+        "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "我今晚通宵修。",
+        "这都天亮了，要不先睡会儿？万一傍晚没修好，大家也能理解。",
+        "傍晚到了。岚哥，我坐好了，随时能开口。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l11",
+        "ep2-s1-l4",
+        "ep2-s3-l2"
+      ],
+      "raw_evidence_quotes": [
+        "我今晚通宵修。",
+        "这都天亮了，要不先睡会儿？万一傍晚没修好，大家也能理解。",
+        "傍晚到了。岚哥，我坐好了，随时能开口。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "先别下定论。拿上手电，跟我一起核对下设备状态，再决定下一步怎么修。",
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+        "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l4",
+        "ep1-s2-l2",
+        "ep2-s3-l4"
+      ],
+      "raw_evidence_quotes": [
+        "先别下定论。拿上手电，跟我一起核对下设备状态，再决定下一步怎么修。",
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+        "拉动铃绳，却只有机械摩擦的咔咔声，铃铛没响。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+        "防水盒……我想想。老站长抽屉里有个旧铁盒，以前装零件的，你看这个行不行？",
+        "别动推子。击锤锈死了，我得拆开调一下。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep1-s3-l2",
+        "ep2-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "看清楚了。接头全是水渍，屋顶漏水顺着墙皮渗下来的，没人剪线。",
+        "防水盒……我想想。老站长抽屉里有个旧铁盒，以前装零件的，你看这个行不行？",
+        "别动推子。击锤锈死了，我得拆开调一下。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "哎哟我的祖宗！怎么又断了？这都第三回了，是不是外头那帮小混混嫌吵，故意把线给剪了？我这安抚街坊的稿子还没念完呢，急死个人。",
+        "给。哎，我这拿话筒的手干粗活是不行，你看我这手抖得，差点照偏了。",
+        "放边上。电容爆了，正在飞线。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep1-s2-l5",
+        "ep2-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "哎哟我的祖宗！怎么又断了？这都第三回了，是不是外头那帮小混混嫌吵，故意把线给剪了？我这安抚街坊的稿子还没念完呢，急死个人。",
+        "给。哎，我这拿话筒的手干粗活是不行，你看我这手抖得，差点照偏了。",
+        "放边上。电容爆了，正在飞线。"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 91556,
+  "reported_output_tokens": 14233,
+  "reported_total_tokens": 105789,
+  "reasoning_tokens_included_in_output": 10752,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 117.106,
+  "wall_time_sec": 118.016
+}

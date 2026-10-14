@@ -1,0 +1,9 @@
+{
+  "git_sha": "8539a536fdc7167b25f2436c65c182d21c0c53d6",
+  "tracked_dirty": false,
+  "schema": "storyoperations_a1d90f81fb36",
+  "rounds": 3,
+  "real_provider": true,
+  "mock_fallback": false,
+  "target": "engine_and_structured_delivery"
+}

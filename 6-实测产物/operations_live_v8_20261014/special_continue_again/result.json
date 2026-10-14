@@ -1,0 +1,124 @@
+{
+  "label": "special_continue_again",
+  "intent": "continue",
+  "status": "passed",
+  "story_id": "85f22b5453974511b8d6170beaf1e6c5",
+  "version_no": 9,
+  "story_version_id": "082918a439534e178bfbf84cab7011bf",
+  "parent": "a1a7476c911e4009bdb841b97f6d1f40",
+  "episodes": 5,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "新增一集，承接广播恢复且三声铃约定已兑现、音量已校准的结果。两人合作组织首次街坊广播，不能再把这些问题当作未完成。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "老街的街坊们，晚上好。降温预警马上就来，注意保暖。这次广播能恢复，多亏了维修班的林岚。",
+        "谢谢王奶奶。红霉素我涂了。广播站一直都在，大家放心。"
+      ],
+      "evidence_line_ids": [
+        "ep5-s2-l4",
+        "ep5-s3-l4"
+      ],
+      "raw_evidence_quotes": [
+        "老街的街坊们，晚上好。降温预警马上就来，注意保暖。这次广播能恢复，多亏了维修班的林岚。",
+        "谢谢王奶奶。红霉素我涂了。广播站一直都在，大家放心。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "老街的街坊们，晚上好。降温了，大家注意添衣，广播站一直都在。",
+        "今晚夜色真好。明天同一时间，再见。"
+      ],
+      "evidence_line_ids": [
+        "ep4-s3-l5",
+        "ep5-s3-l6"
+      ],
+      "raw_evidence_quotes": [
+        "老街的街坊们，晚上好。降温了，大家注意添衣，广播站一直都在。",
+        "今晚夜色真好。明天同一时间，再见。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "继承来源角色身份、姓名和演绎者",
+      "requirement_id": "identity",
+      "evidence_quotes": [
+        "岚姐，我嗓子突然发紧。真播了，反而怕说错话。",
+        "深呼吸。设备没问题，你也没问题。"
+      ],
+      "evidence_line_ids": [
+        "ep5-s1-l4",
+        "ep5-s2-l2"
+      ],
+      "raw_evidence_quotes": [
+        "岚姐，我嗓子突然发紧。真播了，反而怕说错话。",
+        "深呼吸。设备没问题，你也没问题。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "不得违背来源已发生事实",
+      "requirement_id": "facts",
+      "evidence_quotes": [
+        "给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？",
+        "王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l2",
+        "ep5-s2-l6"
+      ],
+      "raw_evidence_quotes": [
+        "给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？",
+        "王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "继承并合理发展来源关系",
+      "requirement_id": "relationships",
+      "evidence_quotes": [
+        "周野轻轻按住她的手背，将麦克风推向她。",
+        "林岚反手握住周野的手腕，凑近麦克风，声音轻柔却清晰。"
+      ],
+      "evidence_line_ids": [
+        "ep5-s3-l1",
+        "ep5-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "周野轻轻按住她的手背，将麦克风推向她。",
+        "林岚反手握住周野的手腕，凑近麦克风，声音轻柔却清晰。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "按指令继承或回收伏笔，不能凭空消失",
+      "requirement_id": "threads",
+      "evidence_quotes": [
+        "给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？",
+        "王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l2",
+        "ep5-s2-l6"
+      ],
+      "raw_evidence_quotes": [
+        "给，松香。岚姐，你手刚才划破了，还在渗血，要不我来焊？",
+        "王奶奶，您说慢点……哎，好，我一定加衣。您还惦记岚姐呢？昨天看她手划破了，让我提醒她涂红霉素？"
+      ]
+    }
+  ],
+  "calls": 6,
+  "reported_input_tokens": 147129,
+  "reported_output_tokens": 26672,
+  "reported_total_tokens": 173801,
+  "reasoning_tokens_included_in_output": 19652,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 235.531,
+  "wall_time_sec": 236.562
+}

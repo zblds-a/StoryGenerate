@@ -1,0 +1,42 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "repairer",
+    "performer_id": "repairer",
+    "story_name": "林岚",
+    "canon_name": "林岚",
+    "immutable_facts": [],
+    "goal": "查明断电真相并帮周野解开心结。",
+    "motivation": "",
+    "fear": "回避用煽情的话语安慰人，习惯用事实、数据和实际行动（如写整改书）来表达关心。",
+    "speech_style": "简短具体，先确认再行动。受压时不争吵，而是直接拿出工具或证据说话，语气冷静但有力量。",
+    "relationship_stance": "看破周野的逃避但不戳破他的自尊，用专业严谨和默默准备的整改计划拉他一把，是引导者与支撑者。",
+    "source": "character_portrayal"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "host",
+    "performer_id": "host",
+    "story_name": "周野",
+    "canon_name": "周野",
+    "immutable_facts": [],
+    "goal": "掩饰设备断电的真相，逃避最后一次告别播音。",
+    "motivation": "",
+    "fear": "回避面对自己害怕失去主持人身份和老街羁绊的脆弱，用慌乱找借口和自嘲来掩饰内心的恐惧。",
+    "speech_style": "语速较快，受压时容易冲动、找借口，但情感爆发时语速放慢、声音发颤，能听进林岚的劝导。",
+    "relationship_stance": "对林岚的排查从抗拒、心虚到最终的感激与依赖，愿意在她的支撑下直面内心的恐惧。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

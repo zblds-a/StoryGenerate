@@ -1,0 +1,17 @@
+{
+  "label": "round_1_remix",
+  "intent": "remix",
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "PERFORMANCE_OR_STORY_VALIDATION_FAILED: executor_validation, continuity; continuity_passed=false: 第2集中存在明显的时间线矛盾。ep2-s2-l1周野称“可是明天就要关停了”，表明当前距离关停还有一天；但在随后的正式播音中（ep2-s3-l2），周野却道歉称“昨天的故障”，若故障发生在昨天，则今天已是关停日，与前文“明天关停”冲突。若当前仍是关停前一天，则故障应为“今天/刚才”发生，而非“昨天”。; OPERATION_REQUIREMENTS_NOT_PROVEN",
+  "calls": 10,
+  "reported_input_tokens": 177853,
+  "reported_output_tokens": 45082,
+  "reported_total_tokens": 222935,
+  "reasoning_tokens_included_in_output": 35074,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 382.188,
+  "wall_time_sec": 383.219
+}

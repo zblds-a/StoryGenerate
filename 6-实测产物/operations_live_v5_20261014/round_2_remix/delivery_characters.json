@@ -1,0 +1,42 @@
+{
+  "repairer": {
+    "role_id": "repairer",
+    "character_id": "repairer",
+    "performer_id": "repairer",
+    "story_name": "林岚",
+    "canon_name": "林岚",
+    "immutable_facts": [],
+    "goal": "查明广播站断电真相，确保设备在最后一天正常交接与整改。",
+    "motivation": "",
+    "fear": "回避直接表达对他人的关心，习惯用冷硬的专业术语和严格的操作规范来掩饰内心的柔软。",
+    "speech_style": "简短具体，先确认再行动。常用祈使句，受压时不辩解，直接用行动或数据证明。",
+    "relationship_stance": "起初认为周野是不懂装懂、只会添乱的外行，但在发现他的脆弱后，选择用专业和陪伴引导他面对告别。",
+    "source": "character_portrayal"
+  },
+  "host": {
+    "role_id": "host",
+    "character_id": "host",
+    "performer_id": "host",
+    "story_name": "周野",
+    "canon_name": "周野",
+    "immutable_facts": [],
+    "goal": "逃避广播站即将关停的最后一次播音，掩饰自己对老街的不舍与告别恐惧。",
+    "motivation": "",
+    "fear": "用自嘲、玩笑和快速的语速来掩饰对广播站停播的焦虑和对自身无力改变现实的挫败感。",
+    "speech_style": "热心、会自嘲，语速较快，喜欢用夸张的比喻。受压时容易急躁，但被指出错误后会迅速软化。",
+    "relationship_stance": "依赖林岚的专业，起初试图用谎言掩盖自己的脆弱，最终在林岚的包容下卸下伪装，达成和解。",
+    "source": "character_portrayal"
+  },
+  "narrator": {
+    "role_id": "narrator",
+    "character_id": "narrator",
+    "performer_id": "narrator",
+    "canon_name": "旁白",
+    "immutable_facts": [],
+    "goal": "叙述故事",
+    "motivation": "",
+    "fear": "",
+    "speech_style": "沉稳、清晰",
+    "source": "system"
+  }
+}

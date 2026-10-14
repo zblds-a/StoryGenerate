@@ -1,0 +1,101 @@
+{
+  "label": "round_1_revise",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "1d1ef3aee8d04ff5b31006aa6656e7d2",
+  "version_no": 2,
+  "story_version_id": "e858bd3067d94e289a320c6fe3e57468",
+  "parent": "9e184ab651ce4cc4b508a0181f6947f9",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "别动。我们先共同核对主电源和设备状态，再决定下一步。",
+        "先别下结论。你看万用表，阻值趋近于零，是短路不是断路。主电源跳闸，设备没烧，没人剪线。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s1-l3"
+      ],
+      "raw_evidence_quotes": [
+        "别动。我们先共同核对主电源和设备状态，再决定下一步。",
+        "先别下结论。你看万用表，阻值趋近于零，是短路不是断路。主电源跳闸，设备没烧，没人剪线。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "先擦擦头发吧，别着凉。明天上午我带仪器，来做最后的通电验收。",
+        "如果……明天验收还是通不过，该怎么办？"
+      ],
+      "evidence_line_ids": [
+        "ep2-s2-l2",
+        "ep2-s3-l3"
+      ],
+      "raw_evidence_quotes": [
+        "先擦擦头发吧，别着凉。明天上午我带仪器，来做最后的通电验收。",
+        "如果……明天验收还是通不过，该怎么办？"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅调整指定场景中的决策表达：林岚明确先请周野共同核对设备状态，再决定下一步。保留该场已经发生的事实、行动结果及角色身份，不改变故障原因和其他场景；不得提前兑现三声铃。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "别动。我们先共同核对主电源和设备状态，再决定下一步。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1"
+      ],
+      "raw_evidence_quotes": [
+        "别动。我们先共同核对主电源和设备状态，再决定下一步。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "找到了。外墙旧电源接头，防水胶老化，雨水渗进去了。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l1"
+      ],
+      "raw_evidence_quotes": [
+        "找到了。外墙旧电源接头，防水胶老化，雨水渗进去了。"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "别动。我们先共同核对主电源和设备状态，再决定下一步。",
+        "肯定是拆迁办那帮人干的！昨天刚下最后通牒，今天就剪线，他们是不是玩不起？"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1",
+        "ep1-s1-l2"
+      ],
+      "raw_evidence_quotes": [
+        "别动。我们先共同核对主电源和设备状态，再决定下一步。",
+        "肯定是拆迁办那帮人干的！昨天刚下最后通牒，今天就剪线，他们是不是玩不起？"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 81400,
+  "reported_output_tokens": 12810,
+  "reported_total_tokens": 94210,
+  "reasoning_tokens_included_in_output": 9698,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 110.31,
+  "wall_time_sec": 111.219
+}

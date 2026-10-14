@@ -1,0 +1,78 @@
+{
+  "label": "special_line",
+  "intent": "revise",
+  "status": "passed",
+  "story_id": "79b25a68183f465ebeb9c7bcf6857338",
+  "version_no": 4,
+  "story_version_id": "515e7b04b8314453beaa72242bc2d2b9",
+  "parent": "7d3a527f52ed41adb1f5d47d5743cbb1",
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "仅将指定台词表达改得更口语化，保持原意、身份及事实，长度与原文接近。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底能不能搞定啊？街坊大爷大妈可都等着听早新闻呢！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1"
+      ],
+      "raw_evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底能不能搞定啊？街坊大爷大妈可都等着听早新闻呢！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "仅将指定台词表达改得更口语化，保持原意、身份及事实，长度与原文接近。",
+      "requirement_id": "edit_instruction",
+      "evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底能不能搞定啊？街坊大爷大妈可都等着听早新闻呢！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1"
+      ],
+      "raw_evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底能不能搞定啊？街坊大爷大妈可都等着听早新闻呢！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持facts不变",
+      "requirement_id": "preserve:facts",
+      "evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底能不能搞定啊？街坊大爷大妈可都等着听早新闻呢！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1"
+      ],
+      "raw_evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底能不能搞定啊？街坊大爷大妈可都等着听早新闻呢！"
+      ]
+    },
+    {
+      "passed": true,
+      "requirement": "保持identity不变",
+      "requirement_id": "preserve:identity",
+      "evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底能不能搞定啊？街坊大爷大妈可都等着听早新闻呢！"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l1"
+      ],
+      "raw_evidence_quotes": [
+        "这老街广播都停播整整三天了！林岚，你到底能不能搞定啊？街坊大爷大妈可都等着听早新闻呢！"
+      ]
+    }
+  ],
+  "calls": 4,
+  "reported_input_tokens": 78667,
+  "reported_output_tokens": 12523,
+  "reported_total_tokens": 91190,
+  "reasoning_tokens_included_in_output": 10250,
+  "cache_read_tokens": 0,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 101.112,
+  "wall_time_sec": 102.609
+}

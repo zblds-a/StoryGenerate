@@ -1,0 +1,30 @@
+[
+  {
+    "principal_id": "local",
+    "request_id": "1c459a46ae074d7f8636164b16ada052",
+    "plan_id": "2c43467431564259a56cdfea9bf18db2",
+    "stage": "planning",
+    "node": "outline",
+    "attempt_kind": "initial_plan",
+    "call_id": "3549fc5dcbf746e3a0ea7a3a82f9a8b0",
+    "provider": "openai_compat",
+    "role": "outline",
+    "requested_model": "qwen/qwen3.7-max",
+    "attempt": 1,
+    "prompt_version": "p1.6.7",
+    "started_at": "2026-10-14T09:04:24.838673+00:00",
+    "actual_model": "qwen3.7-max",
+    "input_tokens": 36912,
+    "output_tokens": 2990,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "reasoning_tokens": 1095,
+    "reasoning_included_in_output": true,
+    "usage_source": "reported",
+    "provider_request_id": "0c6b925c-cf3d-4109-8b82-b3c13c48198f",
+    "status": "success",
+    "error_code": null,
+    "latency_ms": 30937,
+    "completed_at": "2026-10-14T09:04:55.776131+00:00"
+  }
+]

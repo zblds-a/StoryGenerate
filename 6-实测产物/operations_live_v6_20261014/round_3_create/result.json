@@ -1,0 +1,112 @@
+{
+  "label": "round_3_create",
+  "intent": "create",
+  "status": "passed",
+  "story_id": "a0a7b7f8196243a5b7417708980dfd47",
+  "version_no": 1,
+  "story_version_id": "09875906bc134662997c3cf4f4d3be2e",
+  "parent": null,
+  "episodes": 2,
+  "operation_checks": [
+    {
+      "passed": true,
+      "requirement": "林岚（维修员）与周野（主持人）修复老街广播站。两集，每集120秒。第一集确定旧电源接头进水导致故障，没有人为破坏；两人从互相猜疑到愿意合作。约定广播恢复后敲三声铃给街坊报平安，第二集尚未兑现约定，保留这个伏笔，给后续留出维修验收任务。fact_delta、relationship_delta记录真实变化，三声铃伏笔在new_open_threads记录为‘三声铃报平安’，后续回收时必须原样引用。这是现实日常维修故事，两集只围绕故障排查与维修验收准备；不要增加神秘信号、倒计时、陌生人或新危机。第二集不得提前敲三声铃，也不能敲暖气管等替代物完成报平安。",
+      "requirement_id": "instruction",
+      "evidence_quotes": [
+        "站住。看数据。蜂鸣档响了，阻值接近零。不是断路，是进水导致的短路。",
+        "临时处理也行！只要明早能出声。林师傅，咱们定个规矩，等彻底修好恢复广播那天，我敲三声墙上的铜铃，给街坊们报个平安，怎么样？",
+        "监测表指针在跳。电压不稳，先别敲，得再测一次负载。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l5",
+        "ep1-s3-l2",
+        "ep2-s3-l10"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "同一交付版本内各集事实、处境和明确时间安排必须连续一致。不得把完成任务的截止时刻混同为已经约定的事件/播出时刻；时间安排如改变须在正文明确通知或解释。大纲节拍的播放秒数不是剧情时点。",
+      "requirement_id": "timeline",
+      "evidence_quotes": [
+        "主线绝缘层也脆化了。主线也得换，今晚弄不完了。",
+        "没事，一点小口子。街坊们都等着呢，我帮你理线，不然今晚又弄不完。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s3-l6",
+        "ep2-s1-l4"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "第一集用实际排查行动确认旧电源接头进水故障，排除人为破坏。",
+      "requirement_id": "constraint:fault",
+      "evidence_quotes": [
+        "站住。看数据。蜂鸣档响了，阻值接近零。不是断路，是进水导致的短路。",
+        "看清楚了。雨水顺着外墙裂缝倒灌，里面全是铜绿。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l5",
+        "ep1-s2-l4"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "林岚是维修员，周野是主持人，姓名和身份保持一致。",
+      "requirement_id": "constraint:identities",
+      "evidence_quotes": [
+        "哎哟！怎么又没声了？林师傅，这广播到底什么时候能响？街坊们都等着听晚间新闻呢！",
+        "林师傅，其实我之前催你，是怕王奶奶他们听不到晚间新闻睡不着。这广播站，是老街坊们的魂。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s1-l2",
+        "ep2-s2-l5"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "两人从猜疑到愿意合作，正文出现共同维修行动。",
+      "requirement_id": "constraint:cooperation",
+      "evidence_quotes": [
+        "别动！你不懂走线，触电了算谁的？拿好手电筒，给我打光。",
+        "老街的线路老化是通病，密封胶圈早该换了。拿抹布来，先把积水擦干。",
+        "拿着。半叠包法，绕两层，别留缝隙。"
+      ],
+      "evidence_line_ids": [
+        "ep1-s2-l2",
+        "ep1-s2-l6",
+        "ep2-s2-l2"
+      ],
+      "raw_evidence_quotes": []
+    },
+    {
+      "passed": true,
+      "requirement": "截至第二集结束，三声铃报平安尚未兑现，也不能以暖气管等替代物提前敲三声报平安；不能把已经完成的报平安因为新危机说成未完成。",
+      "requirement_id": "constraint:deferred_bell",
+      "evidence_quotes": [
+        "响了！终于响了！这声音真亮堂！街坊们听见肯定高兴，我去敲铃报平安！",
+        "等一下！",
+        "监测表指针在跳。电压不稳，先别敲，得再测一次负载。"
+      ],
+      "evidence_line_ids": [
+        "ep2-s3-l7",
+        "ep2-s3-l8",
+        "ep2-s3-l10"
+      ],
+      "raw_evidence_quotes": []
+    }
+  ],
+  "calls": 10,
+  "reported_input_tokens": 55468,
+  "reported_output_tokens": 52416,
+  "reported_total_tokens": 107884,
+  "reasoning_tokens_included_in_output": 40318,
+  "cache_read_tokens": 4608,
+  "estimated_input_tokens": 0,
+  "unavailable_usage_calls": 0,
+  "model_request_latency_sec": 500.363,
+  "wall_time_sec": 502.157
+}
