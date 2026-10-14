@@ -335,3 +335,66 @@ def test_upgrade_existing003_preserves_versions_and_canonical_records(http):
         config.attributes["connection"] = c
         command.upgrade(config, "head")
     assert client.get("/v1/story-versions/" + vid).json() == before
+
+
+def test_killed_worker_requires_explicit_retry_without_orphan_plan(http):
+    """Real process termination; deliberately blocked test planner, no live model."""
+    import os
+    import subprocess
+
+    client, engine, settings = http
+    task = client.post("/v1/plans", json=request()).json()
+    with engine.connect() as connection:
+        schema = connection.execute(text("SELECT current_schema()")).scalar_one()
+    root = Path(__file__).resolve().parents[2]
+    env = os.environ.copy()
+    env.update(
+        PYTHONPATH=str(root / "4-引擎代码"),
+        STORY_DATABASE_URL=engine.url.render_as_string(hide_password=False),
+        STORY_DATABASE_SCHEMA=schema,
+        STORY_API_KEYS='{"subprocess-test":{"principal_id":"tenant-a"}}',
+        STORY_WORKER_LEASE_SECONDS="2",
+        STORY_WORKER_HEARTBEAT_SECONDS="0.2",
+    )
+    script = """import time
+from drama_engine.service.config import ServiceSettings
+from drama_engine.service.worker import DurableWorker
+class Blocked:
+    def generate(self, *args, **kwargs):
+        time.sleep(300)
+settings=ServiceSettings.from_env()
+DurableWorker(settings.engine(),settings,provider_factory=lambda:object(),
+    planner_factory=lambda p:Blocked(),executor_factory=lambda p:object()).run_once()
+"""
+    process = subprocess.Popen(
+        [sys.executable, "-c", script],
+        env=env,
+        cwd=root,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
+    )
+    try:
+        deadline = time.monotonic() + 20
+        while client.get("/v1/tasks/" + task["task_id"]).json()["status"] != "RUNNING":
+            assert process.poll() is None and time.monotonic() < deadline
+            time.sleep(0.1)
+        time.sleep(
+            2.3
+        )  # Beyond initial lease; heartbeat must renew while planner blocks.
+        with Session(engine) as session:
+            row = session.get(ServicePlanTaskModel, task["task_id"])
+            assert row.lease_expires_at > db_now(session)
+        process.kill()
+        process.wait(timeout=10)
+    finally:
+        if process.poll() is None:
+            process.kill()
+            process.wait(timeout=10)
+    time.sleep(2.2)
+    assert not worker(engine, settings).run_once()
+    failed = client.get("/v1/tasks/" + task["task_id"]).json()
+    assert failed["status"] == "FAILED" and failed["usage"]["inflight_usage_unknown"]
+    assert client.post("/v1/tasks/" + task["task_id"] + "/retry").status_code == 202
+    assert worker(engine, settings).run_once()
+    assert client.get("/v1/tasks/" + task["task_id"]).json()["status"] == "SUCCEEDED"

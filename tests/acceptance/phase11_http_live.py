@@ -578,12 +578,29 @@ def main():
     try:
         runner.run()
     except Exception as exc:
+        if runner.results and runner.results[-1]["status"] == "passed":
+            runner.results[-1].update(
+                status="failed",
+                transport_succeeded=True,
+                postcondition_error=type(exc).__name__ + ": " + str(exc),
+            )
+            save(runner.out / "postcondition_failure.json", runner.results[-1])
         save(
             runner.out / "run_error.json",
             {"error_type": type(exc).__name__, "error": str(exc)},
         )
         raise
     finally:
+        finished = {item["operation"] for item in runner.results}
+        for operation in ("create", "revise", "continue", "remix"):
+            if operation not in finished:
+                runner.results.append(
+                    {
+                        "operation": operation,
+                        "status": "blocked",
+                        "reason": "Previous stage did not pass acceptance",
+                    }
+                )
         runner.close()
     return (
         0

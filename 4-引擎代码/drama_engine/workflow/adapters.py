@@ -524,6 +524,7 @@ class ApprovedPlanLLMExecutor:
             )
             system = EPISODE_SYSTEM_V2
             system += "\n逐项核对previous_generated_episodes和current_continuity：继承已经写出的角色、事实、关系、时间安排。不得混淆任务截止时刻与约定事件时刻。未获批或来源未明确的精确时刻和倒计时不要随意新增。"
+            system += "\n连续性增量必须对应正文证据：正文已提出但尚未兑现的约定、承诺和伏笔应逐项写入new_open_threads，不能仅记录设备问题或主要冲突。只有本集正文实际完成或明确撤销的剧情线才可写入closed_threads。"
             strategy_hint_text = ""
             if creative_packet.strategy_hints:
                 strategy_hint_text = (
