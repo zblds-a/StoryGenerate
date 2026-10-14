@@ -22,6 +22,8 @@ def _number(value):
 def clock_values(text, allow_bare=False):
     values = set()
     for match in _CLOCK.finditer(text):
+        if re.match(r"一点(?:一点|一滴|点)", text[match.start():]):
+            continue
         hour, minute = _number(match["h"]), _number(match["m"] or match["colon"])
         before, after = text[max(0, match.start() - 8):match.start()], text[match.end():match.end() + 8]
         if re.match(r"杂音|噪音|声音|要求|原因|建议|事项|意见|原则|细节|声|力|分贝|欧|伏|安|毫米|厘米", after):
