@@ -79,9 +79,10 @@ def main():
     for op in ("create", "revise", "continue", "remix"):
         labels = [f"round_{n}_{op}" for n in range(1, rounds + 1)] + expected_specials[op]
         selected = [r for r in current_results if r["label"] in labels]
-        real_passed = len(selected) == len(labels) and all(r["status"] == "passed" for r in selected)
+        automation_passed = len(selected) == len(labels) and all(r["status"] == "passed" for r in selected)
         tested = unit["passed"] and pg["passed"]
         reviewed = all(review.get(r["label"], {}).get("passed") is True for r in selected) and bool(selected)
+        real_passed = automation_passed and reviewed
         statuses[op] = {"implemented": True, "tested": tested, "real_model_passed": real_passed,
                         "artifact_review_passed": reviewed,
                         "deliverable": tested and real_passed and reviewed and not manifest.get("tracked_dirty", True),
@@ -117,9 +118,16 @@ def main():
         lines.extend(["", "单元与数据库测试使用显式测试替身，真实模型状态仅由本批次真实 Provider 产物判定。三轮样本不代表规模化稳定性。", ""])
         (args.output / f"{op.upper()}_REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     stats = token_stats(all_calls)
+    latest_calls = [c for path in [*current.glob("*/calls.json"), *current.glob("attempts/*/calls.json")]
+                    for c in read(path, [])]
+    latest_stats = token_stats(latest_calls)
+    attempted = [r for r in current_results + histories[-1]["earlier_attempts"] if r["status"] in ("passed", "failed")]
+    failed_attempts = sum(r["status"] == "failed" for r in attempted)
     result = {"manifest": manifest, "unit": unit, "postgres": pg, "statuses": statuses,
               "potential_inflight_usage_unknown_nodes": potential_inflight_unknown_nodes,
-              "all_attempts_usage": stats, "by_stage": {k: token_stats(v) for k, v in by_stage.items()},
+              "all_attempts_usage": stats, "latest_batch_usage": latest_stats,
+              "latest_executed_attempts": len(attempted), "latest_failed_attempts": failed_attempts,
+              "by_stage": {k: token_stats(v) for k, v in by_stage.items()},
               "batches": histories, "history_recheck": read(args.engineering / "history_recheck.json", [])}
     (args.output / "acceptance.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     lines = ["# StoryGenerate 四操作验收总报告", "", f"最终实现提交：`{manifest.get('git_sha', 'unknown')}`。",
@@ -128,7 +136,10 @@ def main():
              "| --- | --- | --- | --- | --- | ---: |"]
     for op, status in statuses.items():
         lines.append(f"| [{op.capitalize()}]({op.upper()}_REPORT.md) | 是 | {'是' if status['tested'] else '否'} | {'是' if status['real_model_passed'] else '否'} | {'满足本轮边界' if status['deliverable'] else '未满足'} | {status['passed']}/{status['expected']} |")
-    lines.extend(["", f"单元：{unit}。PostgreSQL：{pg}。", "", "## 全部尝试的 Token 与耗时", "",
+    lines.extend(["", f"单元 {unit.get('tests', 0)} 项、PostgreSQL {pg.get('tests', 0)} 项；失败/错误/跳过分别为 {unit.get('failures', 0) + pg.get('failures', 0)}/{unit.get('errors', 0) + pg.get('errors', 0)}/{unit.get('skipped', 0) + pg.get('skipped', 0)}。", "",
+                  f"最终批次实际执行 {len(attempted)} 次操作尝试，失败 {failed_attempts} 次（{failed_attempts / max(len(attempted), 1):.1%}）；被阻塞未调用模型的阶段不进入尝试分母。成功重试不覆盖原失败。",
+                  f"最终批次含失败与重试：Input {latest_stats['input']:,}、Output {latest_stats['output']:,}、合计 {latest_stats['input'] + latest_stats['output']:,} Token。首次完整批次壁钟 {manifest.get('wall_time_sec', '未知')} 秒；显式重试壁钟见 retry_manifest.json。", "",
+                  "## 全部尝试的 Token 与耗时", "",
                   f"提供商报告 Input {stats['input']:,}，Output {stats['output']:,}，合计 {stats['input']+stats['output']:,} Token；共 {stats['calls']} 次请求。",
                   f"Reasoning {stats['reasoning_in_output']:,} 已包含在 Output，不再累加；缓存读取 {stats['cache_read']:,} 单列。",
                   f"本地估算 Input {stats['estimated_input']:,}；{stats['unknown_usage_calls']} 次请求用量不可获取，未记为零成本。",

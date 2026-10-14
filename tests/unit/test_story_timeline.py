@@ -40,3 +40,12 @@ def test_missing_and_fabricated_time_claims_fail():
     assert "MISSING" in timeline_errors([],[ep])[0]
     claim=TimelineClaim(event_id="news",kind="actual",normalized_time="06:00",line_id="0",quote="五点整")
     assert "UNGROUNDED" in timeline_errors([claim],[ep])[0]
+
+
+def test_clock_coverage_targets_include_repetition_and_multiple_times_without_verdicts():
+    from drama_engine.workflow.timeline import required_clock_mentions
+    ep=episode(["明早八点验收。", "八点整敲铃。", "十二点五分测量，十二点八分校准。", "一点杂音没有。"])
+    targets=required_clock_mentions([ep])
+    assert [(t['line_id'],t['normalized_times']) for t in targets]==[
+        ('0',['08:00']),('1',['08:00']),('2',['12:05','12:08'])]
+    assert all('event_id' not in t and 'passed' not in t for t in targets)

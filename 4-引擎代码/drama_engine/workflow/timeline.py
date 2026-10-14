@@ -61,6 +61,13 @@ def _same_time(a, b):
     return (_face(a["normalized_time"]) == _face(b["normalized_time"])
             and not (_PERIOD.search(a["quote"]) and _PERIOD.search(b["quote"])))
 
+def required_clock_mentions(episodes):
+    """Provide literal coverage targets without inventing event identity or verdicts."""
+    return [{"line_id": u.line_id, "normalized_times": sorted(times), "text": u.text}
+            for ep in episodes for scene in ep.scenes for u in scene.utterances
+            if (times := clock_values(u.text))]
+
+
 def timeline_errors(claims, episodes):
     lines = {u.line_id: u.text for ep in episodes for scene in ep.scenes for u in scene.utterances}
     order = {key: index for index, key in enumerate(lines)}

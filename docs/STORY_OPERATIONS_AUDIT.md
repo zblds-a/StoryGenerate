@@ -33,7 +33,7 @@ Continue/Revise 继承来源审批参数，明确提供的参数覆盖继承值�
 
 新增字段 `quality_report.operation_checks` 保存 requirement_id、判定及正文逐字引文；漏项、失败项或虚构引文均阻止发布。模型语义判定仍需验收报告逐项复核，不能将自动 READY 等同于产品验收。
 
-`client_context.operation_requirements` 可提供额外的命名验收条件（字符串键→条件文本），与操作固有要求一起进入规划、正文和 Judge。Judge 的 requirement_id 枚举、数量和完整覆盖由动态 Schema 约束，拒绝模型自行编造 ID。evidence_line_ids 使用当前交付的真实行 ID，代码提取原文；已带行号的引文仅在剥离明确编号包装后仍逐字匹配对应原文时归一化，保留 raw_evidence_quotes，不接受改写引文。closed_threads 只能引用已知未解线程的原名，不得附加解释。Plan 的集数与时长同样绑定请求 Schema，防止局部修改误返回整部大纲。沿用 Provider 的一次 JSON 合同修复，不增加正文评价工作流。局部变化行按场景批量演绎，未变化行复用原标注。提示词版本为 p1.6.10。
+`client_context.operation_requirements` 可提供额外的命名验收条件（字符串键→条件文本），与操作固有要求一起进入规划、正文和 Judge。Judge 的 requirement_id 枚举、数量和完整覆盖由动态 Schema 约束，拒绝模型自行编造 ID。evidence_line_ids 使用当前交付的真实行 ID，代码提取原文；已带行号的引文仅在剥离明确编号包装后仍逐字匹配对应原文时归一化，保留 raw_evidence_quotes，不接受改写引文。closed_threads 只能引用已知未解线程的原名，不得附加解释。Plan 的集数与时长同样绑定请求 Schema，防止局部修改误返回整部大纲。沿用 Provider 的一次 JSON 合同修复，不增加正文评价工作流。局部变化行按场景批量演绎，未变化行复用原标注。提示词版本为 p1.6.11。
 
 `client_context.evidence_kinds` 可约束指定要求的可接受证据种类。铃声真正发生等可听事件可要求 sfx/action/narration，避免只凭“我准备敲/我敲了”台词或只举铃的 cue 宣布回收。多集 closed 结局只校验最后一集的尾部，非最后一集合理留下下一集任务不会被误拒。
 
@@ -63,3 +63,5 @@ python tests/acceptance/real_operations_chain.py --rounds 3
 ```
 
 真实入口仅使用 build_provider_from_env，无 Mock 回退。三轮主链并发执行，每轮按 Create→Revise→Continue→Remix 串行；专项从首轮通过来源派生。每批创建独立 schema 并运行真实迁移，保留 schema 与产物供追溯，不删除验收数据库记录。输出包含 SHA、请求、大纲、审批任务、原始模型调用、候选、正文、重读结果、差异、Token 与时延；失败关联阶段明确阻塞。
+
+Judge 输入另包含代码字面提取的 required_clock_mentions（每行完整原文及所有显式时刻），帮助逐行覆盖重复时刻。该清单不推断事件或判定一致性，未覆盖、虚构及冲突仍走原失败门。

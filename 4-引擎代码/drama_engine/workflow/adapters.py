@@ -16,7 +16,7 @@ from .creative_context import (
 )
 from .performance import normalize_utterance, validate_story_delivery
 from .operations import source_delivery, fold_continuity, operation_requirements, evidence_kind_errors
-from .timeline import timeline_errors
+from .timeline import timeline_errors, required_clock_mentions
 from .storycraft_prompts import (
     PLAN_SYSTEM_V2,
     EPISODE_SYSTEM_V2,
@@ -667,6 +667,8 @@ class ApprovedPlanLLMExecutor:
                 "source": source.model_dump(mode="json") if source else None,
                 "approved_impact": preview.impact_analysis,
                 "required_checks": operation_requirements(snapshot.request),
+                "required_clock_mentions": required_clock_mentions(episodes),
+                "clock_coverage_instruction": "timeline_claims必须逐项覆盖required_clock_mentions的每个行号和每个时刻（同一时刻重复出现也须逐行列出）。清单只是字面提取，不是时间一致性结论；请根据正文判定event_id及kind，计划、实际、期限分开；无依据不得假设改期。",
                 "generated_episode_ids": generated_episode_ids,
                 "audience_band": prefs.audience_band,
                 "content_rating": prefs.content_rating,
