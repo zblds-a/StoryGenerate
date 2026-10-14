@@ -33,7 +33,7 @@ def clock_values(text, allow_bare=False):
         if (not allow_bare and not match["colon"] and not temporal_context and not temporal_suffix
                 and re.search(r"(?:这|那|有|总共|记住|列出|提出|分为|第)$", before)):
             continue
-        if (not allow_bare and hour <= 2 and not match["m"] and not match["colon"]
+        if (not allow_bare and 0 < hour <= 2 and not match["m"] and not match["colon"]
                 and not re.search(r"凌晨|午夜|上午|下午|中午|晚上|夜里|明早|明天|时刻|时间|截止|开播", before)
                 and not re.match(r"整|钟|前|后|了", after)):
             continue

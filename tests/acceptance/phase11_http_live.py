@@ -10,6 +10,7 @@ import argparse, json, os, secrets, socket, subprocess, sys, time, uuid
 from pathlib import Path
 from datetime import datetime, timezone
 import httpx
+import shutil
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "4-引擎代码"))
@@ -525,6 +526,169 @@ class LiveAcceptance:
             },
         )
 
+    def resume_remix(self, previous):
+        """Rerun only the affected operation; prior real evidence remains explicit."""
+        from drama_engine.workflow.schemas import StoryDelivery
+        from drama_engine.workflow.timeline import timeline_errors
+
+        prior = json.loads((previous / "summary.json").read_text(encoding="utf-8"))
+        manifest = json.loads((previous / "manifest.json").read_text(encoding="utf-8"))
+        self.schema = manifest["schema"]
+        self.env["STORY_DATABASE_SCHEMA"] = self.schema
+        self.out.mkdir(parents=True, exist_ok=True)
+        shutil.copytree(previous / "model_calls", self.out / "model_calls")
+        self.resources = prior["resources"]
+        self.resources = {
+            key: {"operation": value["operation"], "phase": value["phase"]}
+            for key, value in self.resources.items()
+        }
+        save(
+            self.out / "manifest.json",
+            {
+                "implementation_sha": subprocess.check_output(
+                    ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+                ).strip(),
+                "schema": self.schema,
+                "real_model": True,
+                "mock_fallback": False,
+                "resumed_from": str(previous.relative_to(ROOT)),
+                "inherited_calls_are_original_evidence_not_new_billed_calls": True,
+            },
+        )
+        self.start_api()
+        validations = []
+        for operation in ("create", "revise", "continue"):
+            shutil.copytree(previous / operation, self.out / operation)
+            original = json.loads(
+                (previous / operation / "delivery.json").read_text(encoding="utf-8")
+            )["response"]
+            read = self.call(
+                self.out,
+                "revalidate_" + operation,
+                "GET",
+                "/v1/story-versions/" + original["story_version_id"],
+            )
+            assert read == original
+            delivery = StoryDelivery.model_validate(read)
+            assert not timeline_errors(
+                delivery.quality_report.timeline_claims, delivery.episodes
+            )
+            record = next(r for r in prior["results"] if r["operation"] == operation)
+            assert record["status"] == "passed"
+            self.results.append(
+                {
+                    **record,
+                    "reused_real_evidence_from": str(previous.relative_to(ROOT)),
+                    "fresh_model_calls_in_resume": 0,
+                }
+            )
+            validations.append(
+                {
+                    "operation": operation,
+                    "unchanged_database_delivery": True,
+                    "new_timeline_gate_passed": True,
+                    "story_version_id": delivery.story_version_id,
+                }
+            )
+        save(self.out / "prior_stage_revalidation.json", validations)
+        folder = self.out / "remix"
+        folder.mkdir()
+        for file in (previous / "remix").glob("*.json"):
+            shutil.copy2(
+                file,
+                folder
+                / ("prior_result.json" if file.name == "result.json" else file.name),
+            )
+        approval = json.loads((folder / "approval.json").read_text(encoding="utf-8"))[
+            "response"
+        ]
+        start = time.monotonic()
+        self.results.append(
+            {"operation": "remix", "status": "failed", "reason": "Resume not completed"}
+        )
+        self.call(
+            folder,
+            "retry_after_parser_fix",
+            "POST",
+            "/v1/jobs/" + approval["job_id"] + "/retry",
+            expected=202,
+        )
+        self.stop(self.api)
+        self.start_api()
+        assert (
+            self.call(
+                folder,
+                "queued_job_after_restart",
+                "GET",
+                "/v1/jobs/" + approval["job_id"],
+            )["status"]
+            == "QUEUED"
+        )
+        self.worker = self.launch("worker")
+        job = self.wait(folder, "jobs", approval["job_id"], "generation_attempt3")
+        assert job["status"] == "SUCCEEDED", job["error_message"]
+        version_id = job["result_story_version_id"]
+        delivery = self.call(
+            folder, "delivery", "GET", "/v1/story-versions/" + version_id
+        )
+        exported = self.call(
+            folder,
+            "export",
+            "GET",
+            "/v1/story-versions/" + version_id + "/export?format=json",
+        )
+        assert exported == delivery
+        for label, route in (
+            ("script", "/export?format=script"),
+            ("characters", "/export?format=characters"),
+            ("render", "/render-manifest"),
+        ):
+            self.call(folder, label, "GET", "/v1/story-versions/" + version_id + route)
+        simulated = self.call(
+            folder,
+            "simulation",
+            "POST",
+            "/v1/story-versions/" + version_id + "/simulate-tts",
+        )
+        assert (
+            simulated["simulation_only"]
+            and simulated["audio_state"] == "NOT_SYNTHESIZED"
+        )
+        lineage = self.call(
+            self.out, "lineage", "GET", "/v1/story-versions/" + version_id + "/lineage"
+        )
+        assert len(lineage["versions"]) == 4
+        source_story_id = next(
+            r["story_id"] for r in self.results if r["operation"] == "continue"
+        )
+        self.call(
+            self.out,
+            "story_versions",
+            "GET",
+            "/v1/stories/" + source_story_id + "/versions",
+        )
+        record = {
+            "operation": "remix",
+            "status": "passed",
+            "job_id": job["job_id"],
+            "plan_id": approval["approved_plan_id"],
+            "story_version_id": version_id,
+            "story_id": delivery["story_id"],
+            "episodes": len(delivery["episodes"]),
+            "wall_seconds": round(time.monotonic() - start, 3),
+            "attempt": 3,
+        }
+        self.results[-1] = record
+        save(folder / "result.json", record)
+        save(
+            self.out / "restart_evidence.json",
+            {
+                "api_restart_preserved_queued_generation": True,
+                "new_api_reads_preserved_all_three_prior_versions": True,
+            },
+        )
+        print(json.dumps(record, ensure_ascii=False), flush=True)
+
     def close(self):
         self.stop(self.worker)
         self.stop(self.api)
@@ -569,6 +733,7 @@ class LiveAcceptance:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--resume-remix-from", type=Path)
     args = parser.parse_args()
     if not os.environ.get("STORY_DATABASE_URL") or not (
         os.environ.get("DRAMA_LLM_API_KEY") or os.environ.get("STORY_LLM_API_KEY")
@@ -576,7 +741,10 @@ def main():
         raise RuntimeError("REAL_PROVIDER_AND_DATABASE_ENV_REQUIRED")
     runner = LiveAcceptance(args.output.resolve())
     try:
-        runner.run()
+        if args.resume_remix_from:
+            runner.resume_remix(args.resume_remix_from.resolve())
+        else:
+            runner.run()
     except Exception as exc:
         if runner.results and runner.results[-1]["status"] == "passed":
             runner.results[-1].update(
