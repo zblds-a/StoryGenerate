@@ -51,6 +51,11 @@ def main():
     pg = test_result(args.engineering / "postgres.xml")
     current = args.batch[-1]
     manifest = read(current / "manifest.json", {})
+    code_verification = read(current / 'code_verification.json', {})
+    implementation_verified = not manifest.get('tracked_dirty', True) or (
+        code_verification.get('implementation_sha') == manifest.get('git_sha')
+        and code_verification.get('engine_and_acceptance_sources_match_commit') is True
+        and code_verification.get('tracked_changes_at_launch_and_verification') == ['scripts/generate_operations_report.py'])
     all_calls, current_results, histories = [], [], []
     potential_inflight_unknown_nodes = 0
     by_stage = defaultdict(list)
@@ -85,7 +90,7 @@ def main():
         real_passed = automation_passed and reviewed
         statuses[op] = {"implemented": True, "tested": tested, "real_model_passed": real_passed,
                         "artifact_review_passed": reviewed,
-                        "deliverable": tested and real_passed and reviewed and not manifest.get("tracked_dirty", True),
+                        "deliverable": tested and real_passed and reviewed and implementation_verified,
                         "expected": len(labels), "passed": sum(r["status"] == "passed" for r in selected)}
         lines = [f"# {op.capitalize()} 专项验收报告", "", f"实现提交：`{manifest.get('git_sha', 'unknown')}`。", "",
                  "| 已实现 | 测试通过 | 真实模型通过 | 具备产品交付条件 |", "| --- | --- | --- | --- |",
@@ -123,10 +128,15 @@ def main():
     latest_stats = token_stats(latest_calls)
     attempted = [r for r in current_results + histories[-1]["earlier_attempts"] if r["status"] in ("passed", "failed")]
     failed_attempts = sum(r["status"] == "failed" for r in attempted)
-    result = {"manifest": manifest, "unit": unit, "postgres": pg, "statuses": statuses,
+    historical_attempts = [r for h in histories for r in h['results'] + h['earlier_attempts']
+                           if r['status'] in ('passed', 'failed')]
+    historical_failures = sum(r['status'] == 'failed' for r in historical_attempts)
+    result = {"manifest": manifest, "code_verification": code_verification,
+              "implementation_verified": implementation_verified, "unit": unit, "postgres": pg, "statuses": statuses,
               "potential_inflight_usage_unknown_nodes": potential_inflight_unknown_nodes,
               "all_attempts_usage": stats, "latest_batch_usage": latest_stats,
               "latest_executed_attempts": len(attempted), "latest_failed_attempts": failed_attempts,
+              "historical_executed_attempts": len(historical_attempts), "historical_failed_attempts": historical_failures,
               "by_stage": {k: token_stats(v) for k, v in by_stage.items()},
               "batches": histories, "history_recheck": read(args.engineering / "history_recheck.json", [])}
     (args.output / "acceptance.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -138,6 +148,7 @@ def main():
         lines.append(f"| [{op.capitalize()}]({op.upper()}_REPORT.md) | 是 | {'是' if status['tested'] else '否'} | {'是' if status['real_model_passed'] else '否'} | {'满足本轮边界' if status['deliverable'] else '未满足'} | {status['passed']}/{status['expected']} |")
     lines.extend(["", f"单元 {unit.get('tests', 0)} 项、PostgreSQL {pg.get('tests', 0)} 项；失败/错误/跳过分别为 {unit.get('failures', 0) + pg.get('failures', 0)}/{unit.get('errors', 0) + pg.get('errors', 0)}/{unit.get('skipped', 0) + pg.get('skipped', 0)}。", "",
                   f"最终批次实际执行 {len(attempted)} 次操作尝试，失败 {failed_attempts} 次（{failed_attempts / max(len(attempted), 1):.1%}）；被阻塞未调用模型的阶段不进入尝试分母。成功重试不覆盖原失败。",
+                  f"保留的历次操作尝试合计 {len(historical_attempts)} 次，失败 {historical_failures} 次（{historical_failures / max(len(historical_attempts), 1):.1%}），包含中断后判失败及正文复核撤销通过的案例；跨修复提交样本不能用作当前版本失败率估计。",
                   f"最终批次含失败与重试：Input {latest_stats['input']:,}、Output {latest_stats['output']:,}、合计 {latest_stats['input'] + latest_stats['output']:,} Token。首次完整批次壁钟 {manifest.get('wall_time_sec', '未知')} 秒；显式重试壁钟见 retry_manifest.json。", "",
                   "## 全部尝试的 Token 与耗时", "",
                   f"提供商报告 Input {stats['input']:,}，Output {stats['output']:,}，合计 {stats['input']+stats['output']:,} Token；共 {stats['calls']} 次请求。",
@@ -149,6 +160,7 @@ def main():
                   "固定模板脚本的完整性失败覆盖及元组真假误判已修复。历史 T03 的 chen_mo 缺角色映射，T05 无成功正文，七个案例仅五个保存产物通过当前结构复核；这不是重新执行生成或文学质量验收。", "",
                   "## 证据与限制", "",
                   "acceptance.json 汇总所有批次、失败、阻塞与逐阶段用量。各批次保留请求、审批快照、候选、正文、模型请求响应、数据库重读、差异及持久化任务。最终通过必须同时满足工程测试、指定真实用例和独立产物复核。",
+                  "原始 manifest 的 tracked_dirty 不覆盖：若仅报告统计脚本有未提交修改，另以 code_verification.json 核对引擎、测试和真实验收入口与实现提交完全一致；任何业务代码差异均不满足绑定提交要求。",
                   "三轮只能证明本批次重复验收；不得推断大规模成功率。READY 不等于真实 TTS 时长或文学盲评通过。", ""])
     (args.output / "FINAL_REPORT.md").write_text("\n".join(lines), encoding="utf-8")
 
