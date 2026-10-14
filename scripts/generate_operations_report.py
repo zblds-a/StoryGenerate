@@ -52,10 +52,12 @@ def main():
     current = args.batch[-1]
     manifest = read(current / "manifest.json", {})
     all_calls, current_results, histories = [], [], []
+    potential_inflight_unknown_nodes = 0
     by_stage = defaultdict(list)
     for batch in args.batch:
         results = [read(p) | {"directory": str(p.parent.resolve())} for p in sorted(batch.glob("*/result.json"))]
         histories.append({"batch": str(batch), "manifest": read(batch / "manifest.json", {}), "results": results})
+        potential_inflight_unknown_nodes += read(batch / "manifest.json", {}).get("potential_inflight_usage_unknown_nodes", 0)
         if batch == current:
             current_results = results
         for path in batch.glob("*/calls.json"):
@@ -110,6 +112,7 @@ def main():
         (args.output / f"{op.upper()}_REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     stats = token_stats(all_calls)
     result = {"manifest": manifest, "unit": unit, "postgres": pg, "statuses": statuses,
+              "potential_inflight_usage_unknown_nodes": potential_inflight_unknown_nodes,
               "all_attempts_usage": stats, "by_stage": {k: token_stats(v) for k, v in by_stage.items()},
               "batches": histories, "history_recheck": read(args.engineering / "history_recheck.json", [])}
     (args.output / "acceptance.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -123,6 +126,7 @@ def main():
                   f"提供商报告 Input {stats['input']:,}，Output {stats['output']:,}，合计 {stats['input']+stats['output']:,} Token；共 {stats['calls']} 次请求。",
                   f"Reasoning {stats['reasoning_in_output']:,} 已包含在 Output，不再累加；缓存读取 {stats['cache_read']:,} 单列。",
                   f"本地估算 Input {stats['estimated_input']:,}；{stats['unknown_usage_calls']} 次请求用量不可获取，未记为零成本。",
+                  f"另有 {potential_inflight_unknown_nodes} 个中断节点可能仍在模型端处理，未取得用量；上述 Token 是可核验下限，不能作为供应商账单总额。",
                   f"模型请求时延总和 {stats['model_seconds']:,.3f} 秒；并发运行不能将此数当作批次壁钟时长。各操作壁钟见明细，批次时间见 manifest。", "",
                   "## 历史证据修正", "",
                   "固定模板脚本的完整性失败覆盖及元组真假误判已修复。历史 T03 的 chen_mo 缺角色映射，T05 无成功正文，七个案例仅五个保存产物通过当前结构复核；这不是重新执行生成或文学质量验收。", "",

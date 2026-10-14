@@ -9,10 +9,12 @@ from pydantic import ValidationError
 
 from drama_engine.workflow.adapters import (ApprovedPlanLLMExecutor, DeterministicPerformanceAnnotator, bound_quality_schema,
     canonical_check_evidence, bound_thread_schema,
+    LLMPlanGenerator,
     DraftEpisode, DraftScene, DraftLine, EpisodeRevision, RevisionScene, RevisionLine, QualityDecision)
 from drama_engine.workflow.operations import fold_continuity, operation_errors, operation_requirements
 from drama_engine.workflow.repository import InMemoryWorkflowRepository, WorkflowConflictError
 from drama_engine.workflow.schemas import OperationContext, StoryDelivery, OperationCheck
+from drama_engine.workflow.schemas import CreateStoryRequest, CreationPreferences, PlanContent
 from drama_engine.workflow.service import StoryWorkflowService
 from test_phase10_workflow import FixedPlanGenerator
 
@@ -300,3 +302,27 @@ def test_closed_thread_names_must_match_existing_names_without_explanation_suffi
         schema.model_validate(data)
     data["closed_threads"] = ["三声铃"]
     assert schema.model_validate(data).closed_threads == ["三声铃"]
+
+
+@pytest.mark.parametrize("count,duration", [(2, 120), (1, 300)])
+def test_real_planner_contract_rejects_wrong_count_or_duration(count, duration):
+    request = CreateStoryRequest(request_id="contract", idempotency_key="contract", user_instruction="核对维修",
+        creation_preferences=CreationPreferences(story_mode="general", target_duration_sec=120, target_episodes=1))
+    wrong_request = request.model_copy(update={"creation_preferences": request.creation_preferences.model_copy(
+        update={"target_episodes": count, "target_duration_sec": duration})})
+    content = FixedPlanGenerator().generate(wrong_request, None, [])
+    class ContractProvider:
+        def complete_structured(self, spec, system, user, schema):
+            return schema.model_validate(content.model_dump(mode="json"))
+    with pytest.raises(ValidationError):
+        LLMPlanGenerator(ContractProvider()).generate(request, None, [])
+
+
+def test_request_bound_plan_remains_public_plan_content_after_validation():
+    request = CreateStoryRequest(request_id="contract", idempotency_key="contract", user_instruction="核对维修",
+        creation_preferences=CreationPreferences(story_mode="general", target_duration_sec=120, target_episodes=1))
+    content = FixedPlanGenerator().generate(request, None, [])
+    class ContractProvider:
+        def complete_structured(self, spec, system, user, schema):
+            return schema.model_validate(content.model_dump(mode="json"))
+    assert type(LLMPlanGenerator(ContractProvider()).generate(request, None, [])) is PlanContent

@@ -65,18 +65,25 @@ def provider_with_evidence(directory):
     original_complete = provider.complete
     def capture(spec, system, user, deadline=None):
         start = len(provider.call_history)
-        record = {"model": spec.model, "system": system, "user": user}
+        capture_id = uuid.uuid4().hex
+        record = {"model": spec.model, "role": spec.role, "system": system, "user": user,
+                  "capture_id": capture_id, "status": "pending", "started_at": datetime.now(timezone.utc).isoformat()}
+        target = directory / f"call_{capture_id}.json"
+        save(target, record)
         try:
             result = original_complete(spec, system, user, deadline)
             record["response_text"] = result.text
+            record["status"] = "completed"
             return result
         except Exception as exc:
             record["error_type"] = type(exc).__name__
+            record["status"] = "failed"
             raise
         finally:
             calls = provider.call_history[start:]
             record["calls"] = calls
-            save(directory / f"call_{calls[0]['call_id'] if calls else uuid.uuid4().hex}.json", record)
+            record["completed_at"] = datetime.now(timezone.utc).isoformat()
+            save(target, record)
     provider.complete = capture
     return provider
 

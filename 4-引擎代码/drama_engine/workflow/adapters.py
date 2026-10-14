@@ -29,6 +29,7 @@ from .schemas import (
     OperationCheck,
     EmphasisSpan,
     EpisodeDelivery,
+    EpisodeOutline,
     PlanContent,
     ResolvedSourceReference,
     SceneDelivery,
@@ -94,7 +95,15 @@ class LLMPlanGenerator:
             "每集 target_duration_sec 必须等于请求值。\n"
             + json.dumps(payload, ensure_ascii=False, indent=2)
         )
-        content = self.provider.complete_structured(resolve_spec("outline"), system, user, PlanContent)
+        outline_schema = create_model("BoundEpisodeOutline", __base__=EpisodeOutline,
+            target_duration_sec=(Literal[request.creation_preferences.target_duration_sec], ...))
+        plan_schema = create_model("BoundPlanContent", __base__=PlanContent,
+            episode_outlines=(list[outline_schema], Field(min_length=request.creation_preferences.target_episodes,
+                max_length=request.creation_preferences.target_episodes,
+                description="Only the requested generation/revision scope, not every episode in the source story")))
+        content = self.provider.complete_structured(resolve_spec("outline"), system, user, plan_schema)
+        # Keep the public type stable after the request-bound contract has passed.
+        content = PlanContent.model_validate(content.model_dump(mode="json"))
         validate_generated_plan_cast(content, characters)
         validate_generated_plan_ending(content, request.creation_preferences)
         validate_generated_plan_causality(content, request.creation_preferences)
@@ -442,7 +451,8 @@ def canonical_check_evidence(checks, episodes):
                             normalized.append(body)
                             found = True
                             break
-                normalized.append(quote) if not found else None
+                if not found:
+                    normalized.append(quote)
             raw["evidence_quotes"] = normalized
         rendered.append(raw)
     return rendered
