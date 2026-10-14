@@ -68,6 +68,7 @@ class CharacterTemplateModel(Base):
     canon_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
     # JSONB: CharacterRuntimeInput-compatible defaults
     runtime_defaults_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
+    assets_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
 
     created_at = Column(DateTime(timezone=True), default=_utcnow)
     updated_at = Column(DateTime(timezone=True), default=_utcnow, onupdate=_utcnow)
@@ -161,6 +162,9 @@ class StoryJobModel(Base):
     updated_at = Column(DateTime(timezone=True), nullable=True)
     finished_at = Column(DateTime(timezone=True), nullable=True)
     deadline_at = Column(DateTime(timezone=True), nullable=True)
+    lease_owner = Column(String(128), nullable=True)
+    lease_expires_at = Column(DateTime(timezone=True), nullable=True, index=True)
+    execution_usage_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=True)
 
 
 # ============================================================================
@@ -389,3 +393,27 @@ class PlaybackEventModel(Base):
     playback_position_ms = Column(Integer, nullable=False, default=0)
     event_type = Column(String(32), nullable=False, default="progress")
     occurred_at = Column(DateTime(timezone=True), default=_utcnow, index=True)
+
+
+class ServicePlanTaskModel(Base):
+    """Durable transport tasks for existing prepare/revise operations only."""
+    __tablename__ = "service_plan_tasks"
+    task_id = Column(String(64), primary_key=True, default=_new_id)
+    principal_id = Column(String(128), nullable=False, index=True)
+    idempotency_key = Column(String(128), nullable=False)
+    request_fingerprint = Column(String(64), nullable=False)
+    kind = Column(String(32), nullable=False)
+    status = Column(String(32), nullable=False, default="QUEUED", index=True)
+    payload_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False)
+    result_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
+    usage_json = Column(JSONB().with_variant(JSON, "sqlite"), nullable=False, default=dict)
+    progress_pct = Column(Integer, nullable=False, default=0)
+    stage = Column(String(64), nullable=False, default="queued")
+    error_code = Column(String(64), nullable=True)
+    error_message = Column(Text, nullable=True)
+    execution_token = Column(String(64), nullable=True)
+    lease_owner = Column(String(128), nullable=True)
+    lease_expires_at = Column(DateTime(timezone=True), nullable=True, index=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, default=_utcnow)
+    updated_at = Column(DateTime(timezone=True), nullable=False, default=_utcnow)
+    __table_args__ = (UniqueConstraint("principal_id", "idempotency_key", name="uq_service_plan_task_key"),)
