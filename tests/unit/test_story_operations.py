@@ -8,10 +8,11 @@ import pytest
 from pydantic import ValidationError
 
 from drama_engine.workflow.adapters import (ApprovedPlanLLMExecutor, DeterministicPerformanceAnnotator, bound_quality_schema,
+    canonical_check_evidence, bound_thread_schema,
     DraftEpisode, DraftScene, DraftLine, EpisodeRevision, RevisionScene, RevisionLine, QualityDecision)
 from drama_engine.workflow.operations import fold_continuity, operation_errors, operation_requirements
 from drama_engine.workflow.repository import InMemoryWorkflowRepository, WorkflowConflictError
-from drama_engine.workflow.schemas import OperationContext, StoryDelivery
+from drama_engine.workflow.schemas import OperationContext, StoryDelivery, OperationCheck
 from drama_engine.workflow.service import StoryWorkflowService
 from test_phase10_workflow import FixedPlanGenerator
 
@@ -27,16 +28,16 @@ class ScriptedProvider:
     def complete_structured(self, spec, system, user, schema):
         payload = json.loads(user)
         self.calls.append((schema, payload))
-        if schema is DraftEpisode:
+        if issubclass(schema, DraftEpisode):
             i = payload["episode_outline"]["index"]
-            return DraftEpisode(title=f"第{i}集", synopsis="维修行动", preview_blurb="林岚与周野在老街广播站核对设备状态，合作修复故障。",
+            return schema(title=f"第{i}集", synopsis="维修行动", preview_blurb="林岚与周野在老街广播站核对设备状态，合作修复故障。",
                 scenes=[DraftScene(title=f"场景{s}", dramatic_goal="核对设备", lines=[DraftLine(
                     kind="dialogue", speaker_role_id="hero", text=(f"第{i}集先核对设备再维修。" * 100)[:round(payload["preferences"]["target_duration_sec"] * 1.75)]
                 )]) for s in (1, 2)], episode_summary=f"第{i}集核对完成",
                 fact_delta=[{"id": f"ep{i}", "value": "核对完成"}],
                 relationship_delta=[{"id": "trust", "value": i}],
                 new_open_threads=["三声铃"] if i == 1 else [], closed_threads=["三声铃"] if i == 3 else [])
-        if schema is EpisodeRevision:
+        if issubclass(schema, EpisodeRevision):
             ep = payload["source_episode"]
             impact = payload["approved_scope"]
             selected = [s for s in ep["scenes"] if s["scene_id"] in impact["target_scene_ids"]]
@@ -51,7 +52,7 @@ class ScriptedProvider:
                 ) for u in lines]))
             if self.escape:
                 scenes[0].scene_id = "outside-scope"
-            return EpisodeRevision(scenes=scenes, episode_summary="共同核对完成",
+            return schema(scenes=scenes, episode_summary="共同核对完成",
                 fact_delta=[{"id": f"ep{ep['index']}", "value": "共同核对完成"}],
                 relationship_delta=ep["relationship_delta"], new_open_threads=ep["new_open_threads"], closed_threads=ep["closed_threads"])
         if issubclass(schema, QualityDecision):
@@ -124,7 +125,7 @@ def test_continue_inherits_complete_content_and_feeds_each_generated_episode_for
     assert len(continued.generated_episode_ids) == 2
     assert "target_duration_sec" in job.input_snapshot.preview.inherited_fields
     assert "三声铃" not in continued.continuity_state["unresolved_threads"]
-    fourth = next(p for schema, p in provider.calls if schema is DraftEpisode and p["episode_outline"]["index"] == 4)
+    fourth = next(p for schema, p in provider.calls if issubclass(schema, DraftEpisode) and p["episode_outline"]["index"] == 4)
     assert any(f["id"] == "ep3" for f in fourth["current_continuity"]["facts"])
     assert fourth["current_continuity"]["relationships"] == [{"id": "trust", "value": 3}]
     assert len(fourth["previous_generated_episodes"]) == 1
@@ -137,7 +138,7 @@ def test_remix_resets_source_continuity_and_preserves_parent():
     source = create(app)
     remix, _ = generate(app, req("remix", source, creation_preferences={"target_duration_sec": 120},
         remix={"instruction": "改变事故", "retain_elements": ["广播站"], "transform_elements": ["事故"]}))
-    writer = [p for schema, p in provider.calls if schema is DraftEpisode][-1]
+    writer = [p for schema, p in provider.calls if issubclass(schema, DraftEpisode)][-1]
     assert writer["current_continuity"] == {}
     assert not any(f["id"] == "ep2" for f in remix.continuity_state["facts"])
     assert remix.story_id != source.story_id and remix.version_no == 1
@@ -151,7 +152,7 @@ def test_downstream_replanning_is_approved_and_executed():
     assert job.input_snapshot.preview.impact_analysis["downstream_episode_indexes"] == [2]
     assert len(revised.generated_episode_ids) == 2
     assert revised.episodes[0].scenes[1] == source.episodes[0].scenes[1]
-    last_writer = [p for schema, p in provider.calls if schema is DraftEpisode][-1]
+    last_writer = [p for schema, p in provider.calls if issubclass(schema, DraftEpisode)][-1]
     assert last_writer["current_continuity"]["facts"][0]["value"] == "共同核对完成"
 
 
@@ -261,3 +262,41 @@ def test_failed_claim_releases_repository_transaction():
     with pytest.raises(WorkflowConflictError):
         app.generate_from_approved_plan(job.job_id)
     assert repo.rolled_back
+
+
+def test_formatted_real_citations_are_resolved_but_paraphrases_are_rejected():
+    app, _ = setup()
+    source = create(app)
+    line = source.episodes[0].scenes[0].utterances[0]
+    wrapped = OperationCheck(requirement_id="instruction", requirement="事实", passed=True,
+        evidence_quotes=[f"[{line.line_id}] {line.text}", f"{line.line_id} (speaker_role_id: hero): '{line.text}'"])
+    result = canonical_check_evidence([wrapped], source.episodes)[0]
+    assert result["evidence_quotes"] == [line.text, line.text]
+    invented = wrapped.model_copy(update={"evidence_quotes": [f"[{line.line_id}] fabricated statement"]})
+    assert canonical_check_evidence([invented], source.episodes)[0]["evidence_quotes"] == invented.evidence_quotes
+
+
+def test_line_id_evidence_copies_actual_text_and_unknown_id_is_schema_error():
+    app, _ = setup()
+    source = create(app)
+    line = source.episodes[0].scenes[0].utterances[0]
+    check = OperationCheck(requirement_id="instruction", requirement="事实", passed=True, evidence_line_ids=[line.line_id])
+    assert canonical_check_evidence([check], source.episodes)[0]["evidence_quotes"] == [line.text]
+    schema = bound_quality_schema({"instruction": "事实"}, [line.line_id])
+    with pytest.raises(ValidationError):
+        schema(outline_alignment_passed=True, continuity_passed=True, content_rating_passed=True,
+            operation_checks=[{"requirement_id": "instruction", "requirement": "事实", "passed": True,
+                               "evidence_line_ids": ["made-up-line"]}])
+
+
+def test_closed_thread_names_must_match_existing_names_without_explanation_suffix():
+    app, _ = setup()
+    source = create(app)
+    schema = bound_thread_schema(EpisodeRevision, {"unresolved_threads": ["三声铃"]})
+    data = {"scenes": [{"scene_id": "s", "lines": [{"line_id": "l", "kind": "action", "text": "动作"}]}],
+            "episode_summary": "完成", "fact_delta": [], "relationship_delta": [], "new_open_threads": [],
+            "closed_threads": ["三声铃（已兑现）"]}
+    with pytest.raises(ValidationError):
+        schema.model_validate(data)
+    data["closed_threads"] = ["三声铃"]
+    assert schema.model_validate(data).closed_threads == ["三声铃"]

@@ -422,6 +422,7 @@ class OperationCheck(WorkflowModel):
     requirement: str = Field(min_length=1)
     passed: bool = Field(strict=True)
     evidence_quotes: list[str] = Field(default_factory=list)
+    evidence_line_ids: list[str] = Field(default_factory=list)
 
 
 class PerformanceValidationReport(WorkflowModel):

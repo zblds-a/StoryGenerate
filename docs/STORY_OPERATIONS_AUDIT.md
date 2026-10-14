@@ -33,7 +33,7 @@ Continue/Revise 继承来源审批参数，明确提供的参数覆盖继承值�
 
 新增字段 `quality_report.operation_checks` 保存 requirement_id、判定及正文逐字引文；漏项、失败项或虚构引文均阻止发布。模型语义判定仍需验收报告逐项复核，不能将自动 READY 等同于产品验收。
 
-`client_context.operation_requirements` 可提供额外的命名验收条件（字符串键→条件文本），与操作固有要求一起进入规划、正文和 Judge。Judge 的 requirement_id 枚举、数量和完整覆盖由动态 Schema 约束，拒绝模型自行编造 ID；沿用 Provider 的一次 JSON 合同修复，不触发正文重写。局部变化行按场景批量演绎，未变化行复用原标注。提示词版本为 p1.6.6。
+`client_context.operation_requirements` 可提供额外的命名验收条件（字符串键→条件文本），与操作固有要求一起进入规划、正文和 Judge。Judge 的 requirement_id 枚举、数量和完整覆盖由动态 Schema 约束，拒绝模型自行编造 ID。evidence_line_ids 使用当前交付的真实行 ID，代码提取原文；已带行号的引文仅在剥离明确编号包装后仍逐字匹配对应原文时归一化，保留 raw_evidence_quotes，不接受改写引文。closed_threads 只能引用已知未解线程的原名，不得附加解释。沿用 Provider 的一次 JSON 合同修复，不增加正文评价工作流。局部变化行按场景批量演绎，未变化行复用原标注。提示词版本为 p1.6.7。
 
 ## 异常与兼容
 
@@ -49,6 +49,7 @@ Job 的 execution_token 是 JSON 中的运行令牌，无新增数据库列。�
 
 ```powershell
 docker compose up -d postgres
+$env:DRAMA_LLM_API_KEY = [Environment]::GetEnvironmentVariable('DRAMA_LLM_API_KEY', 'User')
 python -m pytest tests/unit -q -p no:cacheprovider
 $env:TEST_DATABASE_URL = 'postgresql+psycopg://storygen:storygen_dev@localhost:5432/storygenerate'
 python -m pytest tests/integration -q -p no:cacheprovider

@@ -391,10 +391,12 @@ class QualityDecision(BaseModel):
     operation_checks: list[OperationCheck] = Field(default_factory=list)
 
 
-def bound_quality_schema(requirements):
+def bound_quality_schema(requirements, line_ids=None):
     """Make omitted/renamed requirements schema errors, eligible for one JSON repair."""
     check_schema = create_model("BoundOperationCheck", __base__=OperationCheck,
-        requirement_id=(Literal[tuple(requirements)], Field(description="Copy one exact required_checks key; do not invent IDs")))
+        requirement_id=(Literal[tuple(requirements)], Field(description="Copy one exact required_checks key; do not invent IDs")),
+        **({"evidence_line_ids": (list[Literal[tuple(line_ids)]], Field(default_factory=list,
+            description="Select actual utterance line_id values proving this check; prefer IDs over formatted quotations"))} if line_ids else {}))
     def complete_checks(self):
         if {c.requirement_id for c in self.operation_checks} != set(requirements):
             raise ValueError("operation_checks must cover every exact required_checks key once")
@@ -402,6 +404,48 @@ def bound_quality_schema(requirements):
     return create_model("BoundQualityDecision", __base__=QualityDecision,
         operation_checks=(list[check_schema], Field(min_length=len(requirements), max_length=len(requirements))),
         __validators__={"complete_checks": model_validator(mode="after")(complete_checks)})
+
+
+def bound_thread_schema(base, continuity):
+    names = tuple(continuity.get("unresolved_threads") or [])
+    field_type = list[Literal[names]] if names else list[str]
+    field = (Field(default_factory=list, description="Only exact existing unresolved thread names; put closure explanation in episode_summary")
+             if names else Field(default_factory=list, max_length=0,
+                description="No prior unresolved threads exist; closures within this episode belong in its summary"))
+    return create_model("Bound" + base.__name__, __base__=base, closed_threads=(field_type, field))
+
+
+def canonical_check_evidence(checks, episodes):
+    """Resolve citations without paraphrasing or editing any story text."""
+    lines = {u.line_id: u.text for ep in episodes for scene in ep.scenes for u in scene.utterances}
+    rendered = []
+    for check in checks:
+        raw = check.model_dump(mode="json")
+        raw["raw_evidence_quotes"] = list(raw["evidence_quotes"])
+        if raw["evidence_line_ids"]:
+            if any(key not in lines for key in raw["evidence_line_ids"]):
+                raw["evidence_quotes"] = []
+            else:
+                raw["evidence_quotes"] = [lines[key] for key in raw["evidence_line_ids"]]
+        else:
+            normalized = []
+            for quote in raw["evidence_quotes"]:
+                found = False
+                for key, text in lines.items():
+                    match = re.match(r"^(?:\[" + re.escape(key) + r"\]|" + re.escape(key)
+                                     + r"(?:\s+\([^)]*\))?:)\s*", quote)
+                    if match:
+                        body = quote[match.end():]
+                        if len(body) >= 2 and (body[0], body[-1]) in (("'", "'"), ('"', '"'), ("“", "”"), ("‘", "’")):
+                            body = body[1:-1]
+                        if body and body in text:
+                            normalized.append(body)
+                            found = True
+                            break
+                normalized.append(quote) if not found else None
+            raw["evidence_quotes"] = normalized
+        rendered.append(raw)
+    return rendered
 
 
 class RevisionLine(DraftLine):
@@ -502,7 +546,7 @@ class ApprovedPlanLLMExecutor:
             with usage_scope(stage="story_generation", node="episode_writer", attempt_kind="first_draft"):
                 draft = self.provider.complete_structured(
                     resolve_spec("storycraft_episode_writer", tier_map=tier_map), system, user,
-                    DraftEpisode,
+                    bound_thread_schema(DraftEpisode, continuity),
                 )
             draft = normalize_draft_stage_directions(draft)
             estimated, contract_errors = draft_episode_contract_errors(
@@ -603,6 +647,8 @@ class ApprovedPlanLLMExecutor:
                 "passed(bool)、evidence_quotes(正文逐字引文列表)。revise核查instruction及preserve；"
                 "continue核查身份、事实、关系、伏笔及user_instruction；remix逐项核查每条保留和变更要求。"
                 "与来源矛盾、未执行要求或证据不足必须判失败。不能只核查生成大纲内部一致性。"
+                "优先填写evidence_line_ids，必须使用实际正文line_id，代码会提取其原文作为证据。"
+                "evidence_quotes如填写则只复制原文，不加台词ID、角色标签或引号包装。"
             ),
             json.dumps({
                 "approved_plan": preview.plan.model_dump(mode="json"),
@@ -615,9 +661,10 @@ class ApprovedPlanLLMExecutor:
                 "content_rating": prefs.content_rating,
                 "episodes": [episode.model_dump(mode="json") for episode in episodes],
             }, ensure_ascii=False),
-            bound_quality_schema(operation_requirements(snapshot.request)),
+            bound_quality_schema(operation_requirements(snapshot.request),
+                [u.line_id for ep in episodes for scene in ep.scenes for u in scene.utterances]),
         )
-        checks = [c.model_dump(mode="json") for c in judgement.operation_checks]
+        checks = canonical_check_evidence(judgement.operation_checks, episodes)
         if checks or intent != "create":
             text_evidence = "\n".join(u.text for ep in episodes for s in ep.scenes for u in s.utterances)
             changed_text = "\n".join(u.text for ep in episodes if ep.episode_id in generated_episode_ids
@@ -671,7 +718,7 @@ class ApprovedPlanLLMExecutor:
                     "approved_scope": impact, "source_episode": episode.model_dump(mode="json"),
                     "current_continuity": continuity,
                     "approved_cast": snapshot.preview.plan.model_dump(mode="json")}, ensure_ascii=False),
-                EpisodeRevision,
+                bound_thread_schema(EpisodeRevision, continuity),
             )
         if len(patch.scenes) != len(scene_ids) or {s.scene_id for s in patch.scenes} != set(scene_ids):
             raise ValueError("REVISION_SCOPE_VIOLATION: scenes")
