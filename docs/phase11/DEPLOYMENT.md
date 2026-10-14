@@ -33,6 +33,8 @@ API `/docs` 与 `/openapi.json` 提供交互文档；`/health` 检查数据库�
 
 API 与 Worker 可独立部署。Worker 串行执行自身任务，多个进程通过 PostgreSQL `FOR UPDATE SKIP LOCKED` 领取；数据库队列是唯一运行依据。建议 supervisor 自动重启进程。数据库不可用时不能发布版本，失去租约的执行者受到 token fencing 阻止写入。
 
+容器构建：`docker build -f Dockerfile.service -t storygenerate-service .`。镜像包含引擎、规则库与迁移；以 `-e STORY_DATABASE_URL -e STORY_API_KEYS -e STORY_DATABASE_SCHEMA` 从宿主环境传递配置，模型 Worker 另外传递 Provider 的环境变量。连接串主机必须能从容器网络访问 PostgreSQL。首次用镜像运行 `python -m drama_engine.service migrate`，再分别运行默认 API 命令与 `python -m drama_engine.service worker`，不要将数据库迁移并发放在每个 API 副本启动流程中。
+
 ## 调用顺序
 
 1. admin `POST /v1/characters/import` 导入 `examples/phase11/characters.json`。
@@ -68,3 +70,5 @@ python tests/acceptance/phase11_http_live.py --output 6-实测产物/phase11_liv
 ```
 
 单元/工程测试替身仅验证机制；真实验收入口没有 Mock 回退。统计按 call_id 去重，reasoning 已包含在 output，缓存单列；超时或进程中断没有返回用量时标记 unknown，不按零消耗处理。
+
+真实验收完成并停止 Worker 后，可执行 `python tests/acceptance/phase11_database_restore.py --manifest <实测目录>/manifest.json --output <实测目录>/database_restore.json`。脚本在项目 PostgreSQL 容器内使用 pg_dump/pg_restore 创建独立恢复库，并比较全部角色、Plan、任务、版本行的哈希；保留恢复库与容器内备份。需要 Docker CLI，数据库连接须与项目容器对应。备份不纳入 Git。
