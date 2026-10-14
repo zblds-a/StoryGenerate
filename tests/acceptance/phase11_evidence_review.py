@@ -142,6 +142,37 @@ def main():
         "remix_independent_story_and_correct_parent": True,
         "canon_preserved": True,
     }
+    # Verify actual writer input, rather than inferring handoff from final prose.
+    continue_job = load(root / "continue" / "result.json")["job_id"]
+    handoffs = []
+    for file in (root / "model_calls" / continue_job).rglob("call_*.json"):
+        capture = load(file)
+        if (
+            capture["status"] != "completed"
+            or capture["role"] != "storycraft_episode_writer"
+        ):
+            continue
+        try:
+            payload = json.loads(capture["user"])
+        except json.JSONDecodeError:
+            continue
+        if payload.get("episode_outline", {}).get("index") == 4:
+            previous = payload["previous_generated_episodes"]
+            generated = next(episode for episode in previous if episode["index"] == 3)
+            state = payload["current_continuity"]
+            assert any(item["index"] == 3 for item in state["episode_summaries"])
+            assert all(fact in state["facts"] for fact in generated["fact_delta"])
+            handoffs.append(
+                {
+                    "model_capture": str(file.relative_to(root)),
+                    "previous_new_episode_id": generated["episode_id"],
+                    "facts_received": generated["fact_delta"],
+                    "relationships_received": generated["relationship_delta"],
+                    "threads_received": state["unresolved_threads"],
+                }
+            )
+    assert handoffs, "NO_REAL_SECOND_NEW_EPISODE_HANDOFF_EVIDENCE"
+    report["continue_handoffs"] = handoffs
     (root / "evidence_review.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
     )
