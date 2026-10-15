@@ -1,0 +1,9 @@
+{
+  "implementation_sha": "84119eaad1ad31e7735f52eba1e637a8668a3563",
+  "tracked_dirty": true,
+  "schema": "phase11_live_5f51401450e4",
+  "started_at": "2026-10-14T16:13:44.507377+00:00",
+  "real_model": true,
+  "mock_fallback": false,
+  "transport": "real localhost HTTP + independent worker processes"
+}

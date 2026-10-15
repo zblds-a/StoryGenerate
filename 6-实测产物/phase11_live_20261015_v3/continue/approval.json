@@ -1,0 +1,28 @@
+{
+  "method": "POST",
+  "path": "/v1/plans/c73cc8db6c474a8e8a6f8e697f50be83/approve",
+  "request": {
+    "expected_revision": 1,
+    "fingerprint": "07fd2492f0674514b644adaf358738eca0437bc40016173d5a6938c584013316",
+    "idempotency_key": "6fb53cde7ffb421c967cad133f9a4d34"
+  },
+  "status_code": 202,
+  "response": {
+    "job_id": "8656080dfda94702957cd807a9a173ef",
+    "request_id": "d9073e5475a699bd61eaaf579a6062236c233c9e221dd6a8d1ad7e0ae66f736f",
+    "status": "QUEUED",
+    "stage": "queued",
+    "progress_pct": 0,
+    "approved_plan_id": "c73cc8db6c474a8e8a6f8e697f50be83",
+    "approved_plan_revision": 1,
+    "result_story_version_id": null,
+    "error_code": null,
+    "error_message": null,
+    "usage": {},
+    "story_state": "NOT_GENERATED",
+    "audio_state": "NOT_SYNTHESIZED",
+    "playback_state": "NOT_REPORTED"
+  },
+  "request_seconds": 0.32900000002700835,
+  "correlation_id": "48d5ff4c93704f1b9186a16f47363684"
+}

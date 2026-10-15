@@ -1,0 +1,11 @@
+{
+  "operation": "remix",
+  "status": "passed",
+  "job_id": "b0071d0a88c743aba1300f7f40c983a6",
+  "plan_id": "5d76f6f05a784fdea033336a41fda82f",
+  "story_version_id": "00311c8545574b6498afbe291e96ffce",
+  "story_id": "969862f3639242c48439db74505d544c",
+  "episodes": 2,
+  "wall_seconds": 351.547,
+  "attempt": 3
+}

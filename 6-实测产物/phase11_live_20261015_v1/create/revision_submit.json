@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "path": "/v1/plans/a1c70007bf9e46bd99f34d05b4fb09ae/revisions",
+  "request": {
+    "expected_revision": 1,
+    "feedback": "保留固定故障原因、人物身份、两集120秒及未兑现三声铃，增强共同核对设备的具体行动。",
+    "idempotency_key": "c892f4dee02448369503597e97850fe0"
+  },
+  "status_code": 202,
+  "response": {
+    "task_id": "ebd78ad4efd94410a0b149d8f4c01c60",
+    "kind": "revise",
+    "status": "QUEUED",
+    "progress_pct": 0,
+    "stage": "queued",
+    "result": {},
+    "error_code": null,
+    "error_message": null,
+    "usage": {},
+    "created_at": "2026-10-14T16:04:06.635580Z",
+    "updated_at": "2026-10-14T16:04:06.635580Z"
+  },
+  "request_seconds": 0.09399999998277053,
+  "correlation_id": "2ac5f8c0385c41b993af773d4ce843b2"
+}

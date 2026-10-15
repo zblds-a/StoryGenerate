@@ -1,7 +1,9 @@
 """Real HTTP processes + durable worker + PostgreSQL + actual model calls.
 
 Run with STORY_DATABASE_URL and DRAMA_LLM_API_KEY configured. No mock fallback.
-Each invocation creates and retains an isolated schema. Credentials stay in child
+Fresh invocations create and retain an isolated schema; --resume-remix-from
+reuses a passed source chain and explicitly retries its failed Remix job.
+Credentials stay in child
 process environments; saved HTTP/model evidence is redacted.
 """
 

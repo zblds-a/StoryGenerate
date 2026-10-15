@@ -1,0 +1,16 @@
+{
+  "final_acceptance": "FAILED",
+  "transport_generation": "SUCCEEDED",
+  "create": "FAILED",
+  "revise": "BLOCKED",
+  "continue": "BLOCKED",
+  "remix": "BLOCKED",
+  "reason": "Create正文有三声铃约定，但continuity_state.unresolved_threads遗漏该约定；run_error.json是操作后置条件失败。旧记录器result/summary中的passed只代表当时HTTP与导出检查，不能认定专项通过。",
+  "evidence": [
+    "run_error.json",
+    "create/delivery.json",
+    "create/result.json"
+  ],
+  "original_evidence_preserved": true,
+  "fix_commit": "84119eaad1ad31e7735f52eba1e637a8668a3563"
+}

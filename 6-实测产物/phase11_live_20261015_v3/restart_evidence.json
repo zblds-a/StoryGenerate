@@ -1,0 +1,4 @@
+{
+  "api_restart_preserved_queued_generation": true,
+  "new_api_reads_preserved_all_three_prior_versions": true
+}

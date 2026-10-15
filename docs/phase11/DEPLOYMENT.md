@@ -72,3 +72,5 @@ python tests/acceptance/phase11_http_live.py --output 6-实测产物/phase11_liv
 单元/工程测试替身仅验证机制；真实验收入口没有 Mock 回退。统计按 call_id 去重，reasoning 已包含在 output，缓存单列；超时或进程中断没有返回用量时标记 unknown，不按零消耗处理。
 
 真实验收完成并停止 Worker 后，可执行 `python tests/acceptance/phase11_database_restore.py --manifest <实测目录>/manifest.json --output <实测目录>/database_restore.json`。脚本在项目 PostgreSQL 容器内使用 pg_dump/pg_restore 创建独立恢复库，并比较全部角色、Plan、任务、版本行的哈希；保留恢复库与容器内备份。需要 Docker CLI，数据库连接须与项目容器对应。备份不纳入 Git。
+
+本批次失败与修复见 [最终验收报告](ACCEPTANCE.md)。`phase11_http_live.py --output <新目录> --resume-remix-from <原目录>` 可从已通过前三阶段的同一数据库重新读取验证，并通过正式 retry API 重新执行失败 Remix；历史证据复制到新目录，原目录保持不变。跨目录统计必须使用 `phase11_statistics.py` 按物理 call_id 去重，不能直接累加各目录 Token。

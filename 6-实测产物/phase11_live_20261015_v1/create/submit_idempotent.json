@@ -1,0 +1,51 @@
+{
+  "method": "POST",
+  "path": "/v1/plans",
+  "request": {
+    "intent": "create",
+    "request_id": "c5945c6be23a48558fa7b7a4395f98eb",
+    "idempotency_key": "4a66f70ce1db4ed1b7498a21384cca81",
+    "user_instruction": "林岚是广播站维修员，周野是社区广播主持人，两人修复老街广播站。旧电源接头进水造成故障，必须明确排除人为破坏。两人从猜疑到信任合作，约定广播恢复验收后敲三声铃报平安，但本次两集不得兑现。保留可供续写的未完成维修验收，不新增无关阴谋或倒计时。",
+    "creation_preferences": {
+      "story_mode": "general",
+      "genre": "温情",
+      "target_episodes": 2,
+      "target_duration_sec": 120,
+      "ending_preference": "open"
+    },
+    "characters": {
+      "selected_character_ids": [
+        "linlan",
+        "zhouye"
+      ],
+      "role_bindings": [
+        {
+          "character_id": "linlan",
+          "role_id": "repairer",
+          "performer_id": "voice-linlan"
+        },
+        {
+          "character_id": "zhouye",
+          "role_id": "host",
+          "performer_id": "voice-zhouye"
+        }
+      ]
+    }
+  },
+  "status_code": 202,
+  "response": {
+    "task_id": "e0e18942dd9f47ef972dba6c62771dbb",
+    "kind": "prepare",
+    "status": "QUEUED",
+    "progress_pct": 0,
+    "stage": "queued",
+    "result": {},
+    "error_code": null,
+    "error_message": null,
+    "usage": {},
+    "created_at": "2026-10-14T16:03:02.605975Z",
+    "updated_at": "2026-10-14T16:03:02.605975Z"
+  },
+  "request_seconds": 0.10999999998603016,
+  "correlation_id": "c4563b0a087e439f9c67b796bdef5e8e"
+}

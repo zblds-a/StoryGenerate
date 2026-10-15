@@ -1,0 +1,20 @@
+[
+  {
+    "operation": "create",
+    "unchanged_database_delivery": true,
+    "new_timeline_gate_passed": true,
+    "story_version_id": "8e0711e8c2fe4407b2e1e7449ecee292"
+  },
+  {
+    "operation": "revise",
+    "unchanged_database_delivery": true,
+    "new_timeline_gate_passed": true,
+    "story_version_id": "f3b9178f174f4cf39a7bfa8bd616abcb"
+  },
+  {
+    "operation": "continue",
+    "unchanged_database_delivery": true,
+    "new_timeline_gate_passed": true,
+    "story_version_id": "1cf88eb73f914da89b058679166830b6"
+  }
+]

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="14.321" timestamp="2026-10-15T00:07:09.237730+08:00" hostname="xurui"><testcase classname="tests.integration.test_phase11_postgres" name="test_killed_worker_requires_explicit_retry_without_orphan_plan" time="10.324"><failure message="KeyError: 'interrupted_inflight_usage_unknown'">http = (&lt;starlette.testclient.TestClient object at 0x0000019221887AD0&gt;, Engine(postgresql+psycopg://storygen:***@localhost:5432/storygenerate), ServiceSettings(schema=None, lease_seconds=120, heartbeat_seconds=10, poll_seconds=1, testing=True))
+
+    def test_killed_worker_requires_explicit_retry_without_orphan_plan(http):
+        """Real process termination; deliberately blocked test planner, no live model."""
+        import os
+        import subprocess
+    
+        client, engine, settings = http
+        task = client.post("/v1/plans", json=request()).json()
+        with engine.connect() as connection:
+            schema = connection.execute(text("SELECT current_schema()")).scalar_one()
+        root = Path(__file__).resolve().parents[2]
+        env = os.environ.copy()
+        env.update(PYTHONPATH=str(root / "4-引擎代码"),
+                   STORY_DATABASE_URL=engine.url.render_as_string(hide_password=False),
+                   STORY_DATABASE_SCHEMA=schema,
+                   STORY_API_KEYS='{"subprocess-test":{"principal_id":"tenant-a"}}',
+                   STORY_WORKER_LEASE_SECONDS="2", STORY_WORKER_HEARTBEAT_SECONDS="0.2")
+        script = '''import time
+    from drama_engine.service.config import ServiceSettings
+    from drama_engine.service.worker import DurableWorker
+    class Blocked:
+        def generate(self, *args, **kwargs):
+            time.sleep(300)
+    settings=ServiceSettings.from_env()
+    DurableWorker(settings.engine(),settings,provider_factory=lambda:object(),
+        planner_factory=lambda p:Blocked(),executor_factory=lambda p:object()).run_once()
+    '''
+        process = subprocess.Popen([sys.executable, "-c", script], env=env, cwd=root,
+                                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                                   creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
+        try:
+            deadline = time.monotonic() + 20
+            while client.get("/v1/tasks/" + task["task_id"]).json()["status"] != "RUNNING":
+                assert process.poll() is None and time.monotonic() &lt; deadline
+                time.sleep(0.1)
+            time.sleep(2.3)  # Beyond initial lease; heartbeat must renew while planner blocks.
+            with Session(engine) as session:
+                row = session.get(ServicePlanTaskModel, task["task_id"])
+                assert row.lease_expires_at &gt; db_now(session)
+            process.kill()
+            process.wait(timeout=10)
+        finally:
+            if process.poll() is None:
+                process.kill()
+                process.wait(timeout=10)
+        time.sleep(2.2)
+        assert not worker(engine, settings).run_once()
+        failed = client.get("/v1/tasks/" + task["task_id"]).json()
+&gt;       assert failed["status"] == "FAILED" and failed["usage"]["interrupted_inflight_usage_unknown"]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'interrupted_inflight_usage_unknown'
+
+tests\integration\test_phase11_postgres.py:387: KeyError</failure></testcase></testsuite></testsuites>

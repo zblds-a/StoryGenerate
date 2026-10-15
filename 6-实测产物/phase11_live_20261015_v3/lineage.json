@@ -1,0 +1,41 @@
+{
+  "method": "GET",
+  "path": "/v1/story-versions/00311c8545574b6498afbe291e96ffce/lineage",
+  "request": null,
+  "status_code": 200,
+  "response": {
+    "root_requested_version_id": "00311c8545574b6498afbe291e96ffce",
+    "versions": [
+      {
+        "story_id": "969862f3639242c48439db74505d544c",
+        "story_version_id": "00311c8545574b6498afbe291e96ffce",
+        "version_no": 1,
+        "parent_story_version_id": "1cf88eb73f914da89b058679166830b6",
+        "lineage_type": "remix"
+      },
+      {
+        "story_id": "8b8dd2f1fde64ba4a4820432f2ab06c7",
+        "story_version_id": "1cf88eb73f914da89b058679166830b6",
+        "version_no": 3,
+        "parent_story_version_id": "f3b9178f174f4cf39a7bfa8bd616abcb",
+        "lineage_type": "continue"
+      },
+      {
+        "story_id": "8b8dd2f1fde64ba4a4820432f2ab06c7",
+        "story_version_id": "f3b9178f174f4cf39a7bfa8bd616abcb",
+        "version_no": 2,
+        "parent_story_version_id": "8e0711e8c2fe4407b2e1e7449ecee292",
+        "lineage_type": "revise"
+      },
+      {
+        "story_id": "8b8dd2f1fde64ba4a4820432f2ab06c7",
+        "story_version_id": "8e0711e8c2fe4407b2e1e7449ecee292",
+        "version_no": 1,
+        "parent_story_version_id": null,
+        "lineage_type": "create"
+      }
+    ]
+  },
+  "request_seconds": 0.09399999998277053,
+  "correlation_id": "171ef72eb70940e89736d6fde1e6c9cc"
+}

@@ -1,0 +1,8 @@
+{
+  "implementation_sha": "9517b0d6d8ea8b3cbee7d3a34dc023ff83a857b1",
+  "schema": "phase11_live_5f51401450e4",
+  "real_model": true,
+  "mock_fallback": false,
+  "resumed_from": "6-实测产物\\phase11_live_20261015_v2",
+  "inherited_calls_are_original_evidence_not_new_billed_calls": true
+}

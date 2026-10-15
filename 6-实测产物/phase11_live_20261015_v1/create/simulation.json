@@ -1,0 +1,210 @@
+{
+  "method": "POST",
+  "path": "/v1/story-versions/87fabfaaa9fd49729fc5d9aa86a500f4/simulate-tts",
+  "request": null,
+  "status_code": 200,
+  "response": {
+    "story_version_id": "87fabfaaa9fd49729fc5d9aa86a500f4",
+    "simulation_only": true,
+    "contract_state": "SIMULATION_VERIFIED",
+    "story_state": "SUCCEEDED",
+    "audio_state": "NOT_SYNTHESIZED",
+    "playback_state": "NOT_REPORTED",
+    "speech_count": 38,
+    "cue_count": 0,
+    "assembly_sequence": [
+      {
+        "task_id": "c2f20f51321d10e0fe5f50319388be954c55ebc13260d52144481feeb57f6de6",
+        "sequence": 1,
+        "placeholder_ref": "simulation://c2f20f51321d10e0fe5f50319388be954c55ebc13260d52144481feeb57f6de6"
+      },
+      {
+        "task_id": "affdcf916f6f55b4f5255168ff578259f0659fbdd0b2f6ec77c6af1996856ce9",
+        "sequence": 2,
+        "placeholder_ref": "simulation://affdcf916f6f55b4f5255168ff578259f0659fbdd0b2f6ec77c6af1996856ce9"
+      },
+      {
+        "task_id": "20ac0e0e798b1f4771114df39aba7a650ad380016775d1e8b01547d347c3a1e5",
+        "sequence": 3,
+        "placeholder_ref": "simulation://20ac0e0e798b1f4771114df39aba7a650ad380016775d1e8b01547d347c3a1e5"
+      },
+      {
+        "task_id": "63994cb187cc3475f6ca608146800e3b5605d52c7dc0ceb4c206c827be0e01b2",
+        "sequence": 4,
+        "placeholder_ref": "simulation://63994cb187cc3475f6ca608146800e3b5605d52c7dc0ceb4c206c827be0e01b2"
+      },
+      {
+        "task_id": "5764b9201c563dad514c91e2c7e6026b29fc1d86b903b94bfb9b183635beffbe",
+        "sequence": 5,
+        "placeholder_ref": "simulation://5764b9201c563dad514c91e2c7e6026b29fc1d86b903b94bfb9b183635beffbe"
+      },
+      {
+        "task_id": "d57b513dffff6f69e52b3dd1a14555db09784addbe785bb24c6ffbde2e756fbd",
+        "sequence": 6,
+        "placeholder_ref": "simulation://d57b513dffff6f69e52b3dd1a14555db09784addbe785bb24c6ffbde2e756fbd"
+      },
+      {
+        "task_id": "75fb3a7a861685e00ea6cab21da070cf985b8eb37abcefacf28af8e415440e76",
+        "sequence": 7,
+        "placeholder_ref": "simulation://75fb3a7a861685e00ea6cab21da070cf985b8eb37abcefacf28af8e415440e76"
+      },
+      {
+        "task_id": "79ca85dac36b22880d1d6bf0073ee8d540aafd12bc3bfd01205cff67691001a1",
+        "sequence": 8,
+        "placeholder_ref": "simulation://79ca85dac36b22880d1d6bf0073ee8d540aafd12bc3bfd01205cff67691001a1"
+      },
+      {
+        "task_id": "49a1388dcddb1a414ca9a3d41277754da2c72cf39c0800b5290a903bb5c34cd3",
+        "sequence": 9,
+        "placeholder_ref": "simulation://49a1388dcddb1a414ca9a3d41277754da2c72cf39c0800b5290a903bb5c34cd3"
+      },
+      {
+        "task_id": "a83d9719b469e332ab09d992e6b1c5989497f930c3837cfb946c14fdce97d24d",
+        "sequence": 10,
+        "placeholder_ref": "simulation://a83d9719b469e332ab09d992e6b1c5989497f930c3837cfb946c14fdce97d24d"
+      },
+      {
+        "task_id": "e19b104de28e172d88000490cec363a3ced4361b0aba0068dd92a642b39b90cb",
+        "sequence": 11,
+        "placeholder_ref": "simulation://e19b104de28e172d88000490cec363a3ced4361b0aba0068dd92a642b39b90cb"
+      },
+      {
+        "task_id": "137881fcc2ab00eb20b0f9152824a420b294f336a841d516022d3ba393f6d042",
+        "sequence": 12,
+        "placeholder_ref": "simulation://137881fcc2ab00eb20b0f9152824a420b294f336a841d516022d3ba393f6d042"
+      },
+      {
+        "task_id": "7834cdab3c46088801831f9a681ebe516f28e2c2ff5858afaac719b85b5eaf09",
+        "sequence": 13,
+        "placeholder_ref": "simulation://7834cdab3c46088801831f9a681ebe516f28e2c2ff5858afaac719b85b5eaf09"
+      },
+      {
+        "task_id": "a635d7468b65e65ef2da812d7a79d2a04082bdb650f14a25934d2e44ca87b794",
+        "sequence": 14,
+        "placeholder_ref": "simulation://a635d7468b65e65ef2da812d7a79d2a04082bdb650f14a25934d2e44ca87b794"
+      },
+      {
+        "task_id": "b15555603fd390dc36dada4d9f195a5032c1b1c1c3fed1d051a14f87f6070799",
+        "sequence": 15,
+        "placeholder_ref": "simulation://b15555603fd390dc36dada4d9f195a5032c1b1c1c3fed1d051a14f87f6070799"
+      },
+      {
+        "task_id": "6c522936124828dd98d2f06b8b1e90bbf29c79a238f4f2b3762ee9ae9b573528",
+        "sequence": 16,
+        "placeholder_ref": "simulation://6c522936124828dd98d2f06b8b1e90bbf29c79a238f4f2b3762ee9ae9b573528"
+      },
+      {
+        "task_id": "8b11bb6d1e0052144838ea9edf5e4ebcd1c27d7f4de4b280b89b372ee713f498",
+        "sequence": 17,
+        "placeholder_ref": "simulation://8b11bb6d1e0052144838ea9edf5e4ebcd1c27d7f4de4b280b89b372ee713f498"
+      },
+      {
+        "task_id": "5af4a35e56566e2f01828c7b1541a795f5a184b990a772ccf213c364a2714527",
+        "sequence": 18,
+        "placeholder_ref": "simulation://5af4a35e56566e2f01828c7b1541a795f5a184b990a772ccf213c364a2714527"
+      },
+      {
+        "task_id": "34f6bf2ceea0eafd08d4dcfd276321d2cf1a6e8da91fc29569c1bcf8fe0327c9",
+        "sequence": 19,
+        "placeholder_ref": "simulation://34f6bf2ceea0eafd08d4dcfd276321d2cf1a6e8da91fc29569c1bcf8fe0327c9"
+      },
+      {
+        "task_id": "7b51663466ccf5d77e82b945fc8b8822b66b3b5286e3d4dcb8d58defb2fe8028",
+        "sequence": 20,
+        "placeholder_ref": "simulation://7b51663466ccf5d77e82b945fc8b8822b66b3b5286e3d4dcb8d58defb2fe8028"
+      },
+      {
+        "task_id": "91c237b418116991615b0fa3f8ff71da79304d346f19bbd3286e9c9d0de68c47",
+        "sequence": 21,
+        "placeholder_ref": "simulation://91c237b418116991615b0fa3f8ff71da79304d346f19bbd3286e9c9d0de68c47"
+      },
+      {
+        "task_id": "866a5ec847a7fd013917a8777660610af07494319dd66be9ca2ad59404d837b1",
+        "sequence": 22,
+        "placeholder_ref": "simulation://866a5ec847a7fd013917a8777660610af07494319dd66be9ca2ad59404d837b1"
+      },
+      {
+        "task_id": "43a479520bfc6a27cadf164252c44c60546f4beb38a6375fc81061230ceea48c",
+        "sequence": 23,
+        "placeholder_ref": "simulation://43a479520bfc6a27cadf164252c44c60546f4beb38a6375fc81061230ceea48c"
+      },
+      {
+        "task_id": "33c966382c95c8b93aafbf2a57a6f0b2056fd901a9623372ddbe5ac261566a3c",
+        "sequence": 24,
+        "placeholder_ref": "simulation://33c966382c95c8b93aafbf2a57a6f0b2056fd901a9623372ddbe5ac261566a3c"
+      },
+      {
+        "task_id": "6a81c3f297734ea9c1cee39b2ddd1761559b14f51db61e41a9584d16fe4ac880",
+        "sequence": 25,
+        "placeholder_ref": "simulation://6a81c3f297734ea9c1cee39b2ddd1761559b14f51db61e41a9584d16fe4ac880"
+      },
+      {
+        "task_id": "f0337506e3065e8011ccb29247461976154bc7560ca1095de1f0c1efafd465b0",
+        "sequence": 26,
+        "placeholder_ref": "simulation://f0337506e3065e8011ccb29247461976154bc7560ca1095de1f0c1efafd465b0"
+      },
+      {
+        "task_id": "680fd2883d3206a0bd04dc79d4d43553dae7c6f6a272559198e11a0a66e4241a",
+        "sequence": 27,
+        "placeholder_ref": "simulation://680fd2883d3206a0bd04dc79d4d43553dae7c6f6a272559198e11a0a66e4241a"
+      },
+      {
+        "task_id": "d2edb0043260f676c07d72114028ff3b6f1ee21ad5296d2eb2851991604ff8ed",
+        "sequence": 28,
+        "placeholder_ref": "simulation://d2edb0043260f676c07d72114028ff3b6f1ee21ad5296d2eb2851991604ff8ed"
+      },
+      {
+        "task_id": "6ebd816e8acb978a4b203d0ad44ac61b1ea9f35cd3ed141e357e99b66684174a",
+        "sequence": 29,
+        "placeholder_ref": "simulation://6ebd816e8acb978a4b203d0ad44ac61b1ea9f35cd3ed141e357e99b66684174a"
+      },
+      {
+        "task_id": "69cfbdc3f33a7da6155ac0150571695915c0b8a609c1b28ea3979c90077b2397",
+        "sequence": 30,
+        "placeholder_ref": "simulation://69cfbdc3f33a7da6155ac0150571695915c0b8a609c1b28ea3979c90077b2397"
+      },
+      {
+        "task_id": "426604b5611a6344b5e839c39242121584de0a9eae5a42dee08278da66114f91",
+        "sequence": 31,
+        "placeholder_ref": "simulation://426604b5611a6344b5e839c39242121584de0a9eae5a42dee08278da66114f91"
+      },
+      {
+        "task_id": "c161b153cc930f627cb1588bca1dd44d59f99c53ee8ca8111d45aeb1d5bbfe06",
+        "sequence": 32,
+        "placeholder_ref": "simulation://c161b153cc930f627cb1588bca1dd44d59f99c53ee8ca8111d45aeb1d5bbfe06"
+      },
+      {
+        "task_id": "d4a73a394f0824a7e1ed4ff87a4218a2b4cf3ae0d2be9e7f61b2d56753c083b5",
+        "sequence": 33,
+        "placeholder_ref": "simulation://d4a73a394f0824a7e1ed4ff87a4218a2b4cf3ae0d2be9e7f61b2d56753c083b5"
+      },
+      {
+        "task_id": "852ed21674c25a527a1cdec64ce298c30ab3e91106e460ae48d3875f9c351f40",
+        "sequence": 34,
+        "placeholder_ref": "simulation://852ed21674c25a527a1cdec64ce298c30ab3e91106e460ae48d3875f9c351f40"
+      },
+      {
+        "task_id": "d275ffb02086fdb6f8bc1f8b488c80607361f2b27e77622c4e47d95da884c9b9",
+        "sequence": 35,
+        "placeholder_ref": "simulation://d275ffb02086fdb6f8bc1f8b488c80607361f2b27e77622c4e47d95da884c9b9"
+      },
+      {
+        "task_id": "e8f2200649f25ca4c11a77a9b41e10bca5b18e34a2376dd8fbc7e86ac852d9ae",
+        "sequence": 36,
+        "placeholder_ref": "simulation://e8f2200649f25ca4c11a77a9b41e10bca5b18e34a2376dd8fbc7e86ac852d9ae"
+      },
+      {
+        "task_id": "e341cba30cdeeb1cbfc90011b9d074ab125277d1f58085b5c3f249ac0637e3ae",
+        "sequence": 37,
+        "placeholder_ref": "simulation://e341cba30cdeeb1cbfc90011b9d074ab125277d1f58085b5c3f249ac0637e3ae"
+      },
+      {
+        "task_id": "a041ad03278e4f037347a8a3f6a85658ac78c7562129e10d139fb32adbf61a0b",
+        "sequence": 38,
+        "placeholder_ref": "simulation://a041ad03278e4f037347a8a3f6a85658ac78c7562129e10d139fb32adbf61a0b"
+      }
+    ]
+  },
+  "request_seconds": 0.03200000000651926,
+  "correlation_id": "be0114a641024d3ba8fa7df1cc1f5b93"
+}

@@ -1,0 +1,54 @@
+{
+  "method": "GET",
+  "path": "/v1/story-versions/87fabfaaa9fd49729fc5d9aa86a500f4/export?format=characters",
+  "request": null,
+  "status_code": 200,
+  "response": {
+    "repairer": {
+      "role_id": "repairer",
+      "character_id": "linlan",
+      "performer_id": "voice-linlan",
+      "canon_name": "林岚",
+      "immutable_facts": [
+        "林岚是广播站维修员，非记者"
+      ],
+      "goal": "安全、彻底地修复老街广播站的硬件设备。",
+      "motivation": "",
+      "fear": "避免谈论当年停播的责任归属，害怕周野再次陷入自责。",
+      "speech_style": "简短具体，先确认再行动。常用祈使句和专业术语，受压时会用沉默或转移话题来回避情感交流。",
+      "source": "character_snapshot",
+      "story_name": "林岚",
+      "relationship_stance": "表面公事公办、要求严格，实则默默保护周野免受自责和设备危险，渴望被理解但不主动解释。"
+    },
+    "host": {
+      "role_id": "host",
+      "character_id": "zhouye",
+      "performer_id": "voice-zhouye",
+      "canon_name": "周野",
+      "immutable_facts": [
+        "周野是社区广播主持人，非维修员"
+      ],
+      "goal": "尽快恢复街坊广播，安抚社区居民的情绪。",
+      "motivation": "",
+      "fear": "用热心和自嘲掩饰对当年广播事故的愧疚，害怕面对林岚的失望。",
+      "speech_style": "热心、会自嘲，语速较快。喜欢用比喻和玩笑化解尴尬，受压时会变得急躁并试图用过度热情来弥补。",
+      "source": "character_snapshot",
+      "story_name": "周野",
+      "relationship_stance": "渴望得到林岚的原谅和认可，总觉得林岚冷漠，试图用热情打破坚冰，但在关键时刻愿意听从她的专业指挥。"
+    },
+    "narrator": {
+      "role_id": "narrator",
+      "character_id": "narrator",
+      "performer_id": "narrator",
+      "canon_name": "旁白",
+      "immutable_facts": [],
+      "goal": "叙述故事",
+      "motivation": "",
+      "fear": "",
+      "speech_style": "沉稳、清晰",
+      "source": "system"
+    }
+  },
+  "request_seconds": 0.031000000017229468,
+  "correlation_id": "47a10e44f2d44cecbb531fd498dfc6a7"
+}

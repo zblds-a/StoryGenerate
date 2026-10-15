@@ -1,0 +1,64 @@
+{
+  "task_id": "670b3218304c4c48aa70f48cfb9bcec7",
+  "kind": "revise",
+  "status": "SUCCEEDED",
+  "progress_pct": 100,
+  "stage": "completed",
+  "result": {
+    "plan_id": "e0f7df910be148eab9946b311afe9ac6",
+    "plan_revision": 2
+  },
+  "error_code": null,
+  "error_message": null,
+  "usage": {
+    "calls": 1,
+    "by_stage": {
+      "outline": 10826
+    },
+    "call_records": [
+      {
+        "node": "outline",
+        "role": "outline",
+        "stage": "planning",
+        "status": "success",
+        "attempt": 1,
+        "call_id": "2cdfe9d31d0a42bfb35ee6290f173311",
+        "plan_id": "e0f7df910be148eab9946b311afe9ac6",
+        "provider": "openai_compat",
+        "error_code": null,
+        "latency_ms": 34675,
+        "request_id": "e2c873e95370d9dddcda1523c1fccad87d9959c36b45563337add9e082bfab0e",
+        "started_at": "2026-10-14T16:15:05.475133+00:00",
+        "actual_model": "qwen3.7-max",
+        "attempt_kind": "user_plan_revision",
+        "completed_at": "2026-10-14T16:15:40.151160+00:00",
+        "input_tokens": 7153,
+        "usage_source": "reported",
+        "output_tokens": 3673,
+        "prompt_version": "p1.6.11",
+        "requested_model": "qwen/qwen3.7-max",
+        "reasoning_tokens": 1734,
+        "cache_read_tokens": 4608,
+        "cache_write_tokens": 0,
+        "provider_request_id": "eb1de175-71a3-4f1d-916d-f7a74fb1a3f2",
+        "reasoning_included_in_output": true
+      }
+    ],
+    "input_tokens": 7153,
+    "output_tokens": 3673,
+    "attempt_history": [],
+    "cache_read_tokens": 4608,
+    "attempt_started_at": "2026-10-14T16:15:05.085888+00:00",
+    "unknown_usage_calls": 0,
+    "attempt_completed_at": "2026-10-14T16:15:40.248781+00:00",
+    "attempt_wall_seconds": 35.163,
+    "model_request_seconds": 34.675,
+    "estimated_input_tokens": 0,
+    "current_attempt_call_ids": [
+      "2cdfe9d31d0a42bfb35ee6290f173311"
+    ],
+    "reasoning_tokens_in_output": 1734
+  },
+  "created_at": "2026-10-14T16:15:04.754884Z",
+  "updated_at": "2026-10-14T16:15:40.248781Z"
+}
