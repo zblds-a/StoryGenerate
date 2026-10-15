@@ -1,5 +1,7 @@
 # StoryGenerate 故事生成模块交付包
 
+直接转发给同事：[简短交接说明（代码与全部文档位置）](HANDOVER.md)。
+
 本交付包供业务后端、App、角色资产及 TTS 团队直接联调。**可进入联调**：四操作、审批、异步任务、PostgreSQL 与结构化演绎交付已有真实验收。完成故事生成不表示音频合成或设备播放成功。
 
 引擎基线：[`eeb99ae66069862878387ce6850fb20ef6ea0586`](https://github.com/zblds-a/StoryGenerate/commit/eeb99ae66069862878387ce6850fb20ef6ea0586)，HTTP API 11.0，StoryDelivery/RenderManifest 1.0，数据库迁移004。本包在独立分支 `codex/storygenerate-handoff` 整理；具体交付提交以本页所在 GitHub 分支的最新提交为准。未修改已验收研发分支，未合并 main。

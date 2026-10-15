@@ -36,7 +36,7 @@
     {
       "check": "GitHub relative Markdown targets",
       "passed": true,
-      "detail": 258
+      "detail": 285
     },
     {
       "check": "complete success example per operation",
