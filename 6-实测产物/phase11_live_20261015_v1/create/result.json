@@ -1,0 +1,11 @@
+{
+  "operation": "create",
+  "status": "passed",
+  "request_id": "c5945c6be23a48558fa7b7a4395f98eb",
+  "job_id": "d78d503a027b476e8e971001a685a9f9",
+  "plan_id": "a1c70007bf9e46bd99f34d05b4fb09ae",
+  "story_version_id": "87fabfaaa9fd49729fc5d9aa86a500f4",
+  "story_id": "67dc3c3aa9a046cb8448c0c715954372",
+  "episodes": 2,
+  "wall_seconds": 484.625
+}

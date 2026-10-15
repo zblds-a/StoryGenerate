@@ -1,0 +1,11 @@
+{
+  "operation": "revise",
+  "status": "passed",
+  "request_id": "5c89518c77684c11add864dff01ae4fb",
+  "job_id": "b8d09a1f2fae4c708fc082b2f83022be",
+  "plan_id": "db2f47617b5d4f2c92cfa49c7fb3d1b3",
+  "story_version_id": "f3b9178f174f4cf39a7bfa8bd616abcb",
+  "story_id": "8b8dd2f1fde64ba4a4820432f2ab06c7",
+  "episodes": 2,
+  "wall_seconds": 124.907
+}

@@ -1,0 +1,11 @@
+{
+  "operation": "continue",
+  "status": "passed",
+  "request_id": "575e88b53fa84c7bbf8c589658dd1a4b",
+  "job_id": "8656080dfda94702957cd807a9a173ef",
+  "plan_id": "c73cc8db6c474a8e8a6f8e697f50be83",
+  "story_version_id": "1cf88eb73f914da89b058679166830b6",
+  "story_id": "8b8dd2f1fde64ba4a4820432f2ab06c7",
+  "episodes": 4,
+  "wall_seconds": 424.297
+}

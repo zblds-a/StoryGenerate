@@ -1,0 +1,43 @@
+{
+  "method": "POST",
+  "path": "/v1/plans",
+  "request": {
+    "intent": "revise",
+    "request_id": "5c89518c77684c11add864dff01ae4fb",
+    "idempotency_key": "0160e535bac04b5f9001e2c4d1c55597",
+    "user_instruction": "只修改指定场景中的决策方式：林岚先请周野共同核对设备状态，再决定下一步。保留原有身份、故障原因和行动结果，不改其他场景，不提前兑现三声铃。",
+    "edit": {
+      "scope": "scene",
+      "target": {
+        "episode_id": "ep-1-4b27e608",
+        "scene_id": "ep1-scene1"
+      },
+      "instruction": "先请周野共同核对设备状态再决定下一步，保留已发生事实。",
+      "preserve": {
+        "identity": true,
+        "facts": true
+      },
+      "downstream_policy": "branch_from_here"
+    },
+    "source_selector": {
+      "type": "by_id",
+      "story_version_id": "8e0711e8c2fe4407b2e1e7449ecee292"
+    }
+  },
+  "status_code": 202,
+  "response": {
+    "task_id": "570bc7eaccc7473280dbc1c7c73600f3",
+    "kind": "prepare",
+    "status": "QUEUED",
+    "progress_pct": 0,
+    "stage": "queued",
+    "result": {},
+    "error_code": null,
+    "error_message": null,
+    "usage": {},
+    "created_at": "2026-10-14T16:29:26.091614Z",
+    "updated_at": "2026-10-14T16:29:26.091614Z"
+  },
+  "request_seconds": 0.046999999962281436,
+  "correlation_id": "05fd9144e0e342d192526d9ce5f39358"
+}

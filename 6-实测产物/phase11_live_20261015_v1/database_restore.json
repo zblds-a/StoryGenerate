@@ -1,0 +1,48 @@
+{
+  "schema": "phase11_live_17b714ca431d",
+  "restored_database": "phase11_restore_a3fe38e822f1",
+  "backup_format": "pg_dump custom",
+  "source": {
+    "counts": {
+      "character_templates": 2,
+      "character_profile_revisions": 0,
+      "story_plans": 1,
+      "story_plan_revisions": 2,
+      "story_jobs": 1,
+      "story_versions": 1,
+      "service_plan_tasks": 2
+    },
+    "row_hashes": {
+      "character_templates": "493b15cc2986e2f2534006e0843819e99e07e3295a647b023b2cd1e4b4e3c317",
+      "character_profile_revisions": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "story_plans": "d52df4424a8bea23649389d776f5e0387647d7610c5ed334f709c8fe3ce6fa59",
+      "story_plan_revisions": "5bd2426a3b98001037ad2f40d78c54c9403412f3479ec7f4180dbb14dbeb6379",
+      "story_jobs": "61242cfb8c682bc98521bf6aaf68f960b580ee5548b78d4120eb326d6656850f",
+      "story_versions": "42b03157ebaf994566445987245f29da0e1a57ccf451e0e7d95a4c20653f5102",
+      "service_plan_tasks": "9c1293bc14f89ab0394e1169c1db5698528ab083a039e61e472399df66ed7cf2"
+    }
+  },
+  "restored": {
+    "counts": {
+      "character_templates": 2,
+      "character_profile_revisions": 0,
+      "story_plans": 1,
+      "story_plan_revisions": 2,
+      "story_jobs": 1,
+      "story_versions": 1,
+      "service_plan_tasks": 2
+    },
+    "row_hashes": {
+      "character_templates": "493b15cc2986e2f2534006e0843819e99e07e3295a647b023b2cd1e4b4e3c317",
+      "character_profile_revisions": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "story_plans": "d52df4424a8bea23649389d776f5e0387647d7610c5ed334f709c8fe3ce6fa59",
+      "story_plan_revisions": "5bd2426a3b98001037ad2f40d78c54c9403412f3479ec7f4180dbb14dbeb6379",
+      "story_jobs": "61242cfb8c682bc98521bf6aaf68f960b580ee5548b78d4120eb326d6656850f",
+      "story_versions": "42b03157ebaf994566445987245f29da0e1a57ccf451e0e7d95a4c20653f5102",
+      "service_plan_tasks": "9c1293bc14f89ab0394e1169c1db5698528ab083a039e61e472399df66ed7cf2"
+    }
+  },
+  "passed": true,
+  "retained_in_container": true,
+  "credentials_in_artifacts": false
+}

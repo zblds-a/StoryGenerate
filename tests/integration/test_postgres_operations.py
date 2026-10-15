@@ -41,7 +41,7 @@ def test_four_operations_persist_and_restore_complete_deliveries(pg_engine):
         assert remix.parent_story_version_id == continued.story_version_id
         assert [original.version_no, revised.version_no, continued.version_no, remix.version_no] == [1, 2, 3, 1]
         assert app.get_story_version(original.story_version_id) == original
-        assert session.execute(text("SELECT version_num FROM alembic_version")).scalar() == "003"
+        assert session.execute(text("SELECT version_num FROM alembic_version")).scalar() == "004"
         with pytest.raises(DBAPIError, match="immutable"):
             session.execute(text("UPDATE story_versions SET delivery_json='{}' WHERE story_version_id=:id"),
                             {"id": original.story_version_id})

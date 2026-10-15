@@ -1,0 +1,65 @@
+{
+  "task_id": "e4a7bb5b13ac42dcb8f59dda35e9c3da",
+  "kind": "prepare",
+  "status": "SUCCEEDED",
+  "progress_pct": 100,
+  "stage": "completed",
+  "result": {
+    "plan_id": "e0f7df910be148eab9946b311afe9ac6",
+    "plan_revision": 1
+  },
+  "error_code": null,
+  "error_message": null,
+  "usage": {
+    "calls": 1,
+    "by_stage": {
+      "outline": 9838
+    },
+    "call_records": [
+      {
+        "node": "outline",
+        "role": "outline",
+        "stage": "planning",
+        "status": "success",
+        "attempt": 1,
+        "call_id": "297e26b9e07a48e0a568a4e4c70589e3",
+        "plan_id": "e0f7df910be148eab9946b311afe9ac6",
+        "provider": "openai_compat",
+        "error_code": null,
+        "latency_ms": 58905,
+        "request_id": "e2c873e95370d9dddcda1523c1fccad87d9959c36b45563337add9e082bfab0e",
+        "started_at": "2026-10-14T16:14:04.981283+00:00",
+        "actual_model": "qwen3.7-max",
+        "attempt_kind": "initial_plan",
+        "completed_at": "2026-10-14T16:15:03.886764+00:00",
+        "input_tokens": 5303,
+        "principal_id": "phase11-acceptance",
+        "usage_source": "reported",
+        "output_tokens": 4535,
+        "prompt_version": "p1.6.11",
+        "requested_model": "qwen/qwen3.7-max",
+        "reasoning_tokens": 2710,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "provider_request_id": "9bd68374-e633-4151-9347-92ecb7b71d7a",
+        "reasoning_included_in_output": true
+      }
+    ],
+    "input_tokens": 5303,
+    "output_tokens": 4535,
+    "attempt_history": [],
+    "cache_read_tokens": 0,
+    "attempt_started_at": "2026-10-14T16:14:04.667026+00:00",
+    "unknown_usage_calls": 0,
+    "attempt_completed_at": "2026-10-14T16:15:03.997468+00:00",
+    "attempt_wall_seconds": 59.33,
+    "model_request_seconds": 58.905,
+    "estimated_input_tokens": 0,
+    "current_attempt_call_ids": [
+      "297e26b9e07a48e0a568a4e4c70589e3"
+    ],
+    "reasoning_tokens_in_output": 2710
+  },
+  "created_at": "2026-10-14T16:13:55.046316Z",
+  "updated_at": "2026-10-14T16:15:03.997468Z"
+}

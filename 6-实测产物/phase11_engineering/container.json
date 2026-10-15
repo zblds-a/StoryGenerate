@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "health": {
+    "status": "ready",
+    "storage": "postgresql"
+  },
+  "image": "sha256:a216b13562a1b469cfa1a80a93bafc94d950528345d1005989ba63aa6285a20f",
+  "schema": "phase11_container_63b920023d0d",
+  "fresh_migration": "004",
+  "openapi_paths": 24
+}

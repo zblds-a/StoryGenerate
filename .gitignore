@@ -13,6 +13,9 @@ env/
 .env.*
 *.key
 *.pem
+*.secret
+.pytest_cache/
+service-private/
 
 # IDE
 .idea/

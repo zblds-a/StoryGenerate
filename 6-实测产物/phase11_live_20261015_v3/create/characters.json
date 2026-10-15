@@ -1,0 +1,54 @@
+{
+  "method": "GET",
+  "path": "/v1/story-versions/8e0711e8c2fe4407b2e1e7449ecee292/export?format=characters",
+  "request": null,
+  "status_code": 200,
+  "response": {
+    "repairer": {
+      "role_id": "repairer",
+      "character_id": "linlan",
+      "performer_id": "voice-linlan",
+      "canon_name": "林岚",
+      "immutable_facts": [
+        "林岚是广播站维修员，非记者"
+      ],
+      "goal": "安全、彻底地修复老街广播站的电路故障，确保设备不再因隐患宕机。",
+      "motivation": "",
+      "fear": "回避谈论当年因周野急躁导致设备烧毁和自己离开的旧事，用公事公办的专业态度保持情感距离。",
+      "speech_style": "简短具体，先确认再行动。受压时直接用动作（如拔电闸、堵漏水）打断对方，不陷入情绪争论，常用祈使句。",
+      "source": "character_snapshot",
+      "story_name": "林岚",
+      "relationship_stance": "对周野有旧怨但认可他的责任心，保持专业距离，克制地关心他的安全，在拉扯中逐渐放下防备。"
+    },
+    "host": {
+      "role_id": "host",
+      "character_id": "zhouye",
+      "performer_id": "voice-zhouye",
+      "canon_name": "周野",
+      "immutable_facts": [
+        "周野是社区广播主持人，非维修员"
+      ],
+      "goal": "尽快恢复街坊广播，播报天气预警和寻人信息，证明自己能胜任主持人。",
+      "motivation": "",
+      "fear": "用热心和自嘲掩饰内心的愧疚，害怕林岚再次因为自己的失误而离开，不敢直接表达歉意。",
+      "speech_style": "语速较快，热心、会自嘲。紧张时喜欢用反问句和假设句，被指责时会下意识找借口然后迅速认错，常用语气词缓和气氛。",
+      "source": "character_snapshot",
+      "story_name": "周野",
+      "relationship_stance": "渴望弥补过去的过错，对林岚有依赖和愧疚，试图用热情打破她的冷淡，但常因急躁弄巧成拙，最终学会在行动中给予支持。"
+    },
+    "narrator": {
+      "role_id": "narrator",
+      "character_id": "narrator",
+      "performer_id": "narrator",
+      "canon_name": "旁白",
+      "immutable_facts": [],
+      "goal": "叙述故事",
+      "motivation": "",
+      "fear": "",
+      "speech_style": "沉稳、清晰",
+      "source": "system"
+    }
+  },
+  "request_seconds": 0.030999999959021807,
+  "correlation_id": "352cc78d089c4f05affea2d052f5d2ae"
+}

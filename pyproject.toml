@@ -23,8 +23,13 @@ database = [
 test = [
   "pytest>=8.0",
 ]
+service = [
+  "storygenerate[database]",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+]
 dev = [
-  "storygenerate[database,test]",
+  "storygenerate[database,test,service]",
 ]
 
 [tool.setuptools]
@@ -36,6 +41,7 @@ include = ["drama_engine*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+python_files = ["test_*.py"]
 pythonpath = ["4-引擎代码"]
 markers = [
   "real_llm: requires a configured real model provider",

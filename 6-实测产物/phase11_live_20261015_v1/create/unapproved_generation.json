@@ -1,0 +1,16 @@
+{
+  "method": "POST",
+  "path": "/v1/plans/a1c70007bf9e46bd99f34d05b4fb09ae/generate",
+  "request": null,
+  "status_code": 409,
+  "response": {
+    "error": {
+      "code": "PLAN_APPROVAL_REQUIRED",
+      "message": "PLAN_APPROVAL_REQUIRED",
+      "request_id": "8b11a119977b48ac9cccfd300a0cb8b9",
+      "details": []
+    }
+  },
+  "request_seconds": 0.01600000000325963,
+  "correlation_id": "8b11a119977b48ac9cccfd300a0cb8b9"
+}

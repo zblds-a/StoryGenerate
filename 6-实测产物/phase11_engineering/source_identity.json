@@ -1,0 +1,15 @@
+{
+  "behavioral_fix_sha": "9517b0d6d8ea8b3cbee7d3a34dc023ff83a857b1",
+  "engine_tree": "6eafc4dbac28327292e16eab0f05df2cf269911e",
+  "full_regression": "final_9517b0d.xml",
+  "container_regression": "container_final_9517b0d.xml",
+  "image_id": "sha256:b8bc07ff1ecb235019058d127ad8a08eab4d9aec50d0a9a04bcd252fc10a1932",
+  "real_model_commits": {
+    "create": "84119ea",
+    "revise": "84119ea",
+    "continue": "84119ea",
+    "remix": "9517b0d"
+  },
+  "prior_three_revalidated_at": "9517b0d",
+  "later_changes_are_evidence_and_documentation_only": true
+}

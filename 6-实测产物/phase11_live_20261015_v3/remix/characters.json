@@ -1,0 +1,54 @@
+{
+  "method": "GET",
+  "path": "/v1/story-versions/00311c8545574b6498afbe291e96ffce/export?format=characters",
+  "request": null,
+  "status_code": 200,
+  "response": {
+    "repairer": {
+      "role_id": "repairer",
+      "character_id": "linlan",
+      "performer_id": "voice-linlan",
+      "canon_name": "林岚",
+      "immutable_facts": [
+        "林岚是广播站维修员，非记者"
+      ],
+      "goal": "确保广播站在最后一晚能正常运转，完成体面的告别，并寻找延续老街声音的新方案。",
+      "motivation": "",
+      "fear": "回避自己对广播站关停的失落，用严苛的维修标准和公事公办的态度掩饰内心的不舍。",
+      "speech_style": "简短、笃定。习惯用技术术语和动作指令打断情绪宣泄，受压时声音反而会压低、变冷，不陷入无意义的争论。",
+      "source": "character_snapshot",
+      "story_name": "林岚",
+      "relationship_stance": "对周野的幼稚行为感到无奈，但理解他的重情，在拉扯中引导他面对现实，最终用实际的改装图纸给予他最大的支持。"
+    },
+    "host": {
+      "role_id": "host",
+      "character_id": "zhouye",
+      "performer_id": "voice-zhouye",
+      "canon_name": "周野",
+      "immutable_facts": [
+        "周野是社区广播主持人，非维修员"
+      ],
+      "goal": "阻止或拖延广播站的关停，哪怕用破坏设备的笨办法，最终转变为寻找延续广播站生命的新途径。",
+      "motivation": "",
+      "fear": "害怕面对“结束”，用假装设备故障和急躁来掩饰内心的脆弱和不舍，不敢直接表达歉意。",
+      "speech_style": "语速快，多用反问和假设句掩饰心虚。被拆穿时声音会发紧、带颤音，坦诚后语速放缓、变得沉稳且充满感情。",
+      "source": "character_snapshot",
+      "story_name": "周野",
+      "relationship_stance": "依赖林岚的专业和包容，试图在她面前维持“主持人”的体面却屡屡破功，最终在她的引导下学会勇敢告别，并提出合作整改的新方向。"
+    },
+    "narrator": {
+      "role_id": "narrator",
+      "character_id": "narrator",
+      "performer_id": "narrator",
+      "canon_name": "旁白",
+      "immutable_facts": [],
+      "goal": "叙述故事",
+      "motivation": "",
+      "fear": "",
+      "speech_style": "沉稳、清晰",
+      "source": "system"
+    }
+  },
+  "request_seconds": 0.01600000000325963,
+  "correlation_id": "b74f5ec997564e8fbf22827855e71a9c"
+}
