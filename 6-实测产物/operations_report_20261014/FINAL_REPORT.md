@@ -37,8 +37,8 @@ acceptance.json 汇总所有批次、失败、阻塞与逐阶段用量。各批�
 
 ## 复核入口
 
-- [调用链、Schema、事务与恢复合同](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/docs/STORY_OPERATIONS_AUDIT.md)
-- [最终18项产物与原失败尝试](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/final_summary.json)
-- [跨集输入与正文复核](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/auditor_review.json)
-- [八个保留schema无待执行任务检查](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/database_final_audit.json)
-- [工程回归原始JUnit](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_engineering_v8_20261014/all.xml)
+- [调用链、Schema、事务与恢复合同](../../docs/STORY_OPERATIONS_AUDIT.md)
+- [最终18项产物与原失败尝试](../operations_live_v8_20261014/final_summary.json)
+- [跨集输入与正文复核](../operations_live_v8_20261014/auditor_review.json)
+- [八个保留schema无待执行任务检查](../operations_live_v8_20261014/database_final_audit.json)
+- [工程回归原始JUnit](../operations_engineering_v8_20261014/all.xml)

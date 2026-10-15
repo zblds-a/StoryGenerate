@@ -1,10 +1,12 @@
 # StoryGenerate — AI 故事生成引擎 v0.2.1
 
+**正式交付入口：[故事生成模块技术交接包](docs/handoff/README.md)**。包含完整26操作API手册、8套人工演示、7份真实故事全文、播放中改剧情边界、质量与成本评估及部署说明。基线eeb99ae；HTTP服务当前仅接受audio_drama，最低年龄档14-17；真实TTS与硬件由其他团队负责。
+
 Phase 11 产品后端：复用已验收四操作引擎，新增 PostgreSQL 异步 HTTP 服务、版本化角色库和演绎任务适配器。参见 [部署与 API 调用](docs/phase11/DEPLOYMENT.md)、[OpenAPI](docs/phase11/openapi.json)、[TTS/客户端联调](docs/phase11/TTS_CLIENT_INTEGRATION.md)。真实音频与硬件播放不在本轮范围。
 
 [Phase 11 最终验收与成本报告](docs/phase11/ACCEPTANCE.md)：685 项工程测试通过，最终容器34项合同测试通过，四操作真实业务链路完成；保留全部失败及增量修复证据。
 
-> **原 Phase 0–9 Roadmap 完成；获批大纲工作流正在进行真实模型验收。**
+> **下方包含早期引擎路线与历史能力说明；当前四操作服务的验收状态和接口边界以[正式交付包](docs/handoff/README.md)为准。**
 
 一个完整的 AI 故事生成引擎，将爆款故事的结构规律（角色槽位、情节节拍、人物选择规律、事实账本、证据评审）编译成可执行的确定性流水线。支持多故事模式（病毒短剧 / 通用 / 悬疑推理解谜 / 连续剧连载）、多内容形态（广播剧 / 散文体 / 小说 / 口述故事 / 单口喜剧 / 相声）、Long-form 异步任务、SQL 持久化断点续传、角色记忆系统。
 
@@ -310,13 +312,13 @@ CharacterMemoryService.capture()
 # 环境变量
 PERSISTENCE_BACKEND=memory   # 内存模式（默认，无外部依赖）
 PERSISTENCE_BACKEND=postgres # PostgreSQL 模式
-DATABASE_URL=postgresql://user:pass@localhost:5432/storygenerate
+# DATABASE_URL通过安全环境注入，不在文件内提供数据库密码
 
 # Docker PostgreSQL
 docker-compose up -d
 ```
 
-当前使用 SQLAlchemy + SQLite（dev/test）验证了全部持久化语义。生产 PostgreSQL 路径已验证代码兼容性，物理环境验证待进行。
+此节为旧引擎配置说明。当前HTTP服务要求PostgreSQL，已完成PG16集成与恢复验收；请使用[交付部署手册](docs/handoff/09-deployment.md)中的STORY_DATABASE_URL配置，不能用进程内模式承载正式业务。
 
 ---
 
