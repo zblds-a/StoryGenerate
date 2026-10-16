@@ -52,7 +52,7 @@ API 与 Worker 可独立部署。Worker 串行执行自身任务，多个进程�
 
 大纲：QUEUED → RUNNING → SUCCEEDED/FAILED；生成：QUEUED → RUNNING → VALIDATING → SUCCEEDED/FAILED。排队取消直接 CANCELLED；运行取消进入 CANCEL_REQUESTED，当前模型请求可能继续产生费用，随后禁止下一次模型调用并禁止发布结果。已成功的任务不可重试或取消。
 
-`POST /v1/tasks/{id}/cancel|retry`、`POST /v1/jobs/{id}/cancel|retry`。失败/取消的尝试保留累计调用与 attempt_history；重试使用原审批快照，不更新历史版本。进程中断后 Worker 以数据库 wall clock 检测过期租约，将任务标记 FAILED（或 CANCELLED），注明未知在途用量。必须显式 retry；不会悄悄重复收费调用。
+`POST /v1/tasks/{id}/cancel|retry`、`POST /v1/jobs/{id}/cancel|retry`。只有 FAILED 可以显式 retry，CANCELLED 不可重试；累计调用与 attempt_history 保留失败记录。重试使用原审批快照，不更新历史版本。进程中断后 Worker 以数据库 wall clock 检测过期租约，将任务标记 FAILED（或 CANCELLED），注明未知在途用量。必须显式 retry；不会悄悄重复收费调用。
 
 相同 principal 的幂等键与相同请求返回同一资源，不同请求返回冲突。审批校验最新 revision/fingerprint 和显式选中的角色版本。备份必须包含整个 schema；恢复后先 migrate，再启动 API/Worker。进程内缓存不是恢复前提。
 

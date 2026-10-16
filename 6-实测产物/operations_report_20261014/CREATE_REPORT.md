@@ -10,9 +10,9 @@
 
 | 案例 | 结果 | Input / Output Token | 壁钟秒 | 产物 |
 | --- | --- | ---: | ---: | --- |
-| round_1_create | passed | 55046 / 52676 | 497.203 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_1_create/result.json) |
-| round_2_create | passed | 55100 / 48555 | 462.062 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_2_create/result.json) |
-| round_3_create | passed | 56630 / 46165 | 456.109 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_3_create/result.json) |
+| round_1_create | passed | 55046 / 52676 | 497.203 | [证据](../operations_live_v8_20261014/round_1_create/result.json) |
+| round_2_create | passed | 55100 / 48555 | 462.062 | [证据](../operations_live_v8_20261014/round_2_create/result.json) |
+| round_3_create | passed | 56630 / 46165 | 456.109 | [证据](../operations_live_v8_20261014/round_3_create/result.json) |
 
 ## 原始产物复核
 

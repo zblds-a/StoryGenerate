@@ -10,14 +10,14 @@
 
 | 案例 | 结果 | Input / Output Token | 壁钟秒 | 产物 |
 | --- | --- | ---: | ---: | --- |
-| round_1_revise | passed | 86968 / 11945 | 107.844 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_1_revise/result.json) |
-| round_2_revise | passed | 88789 / 10191 | 89.282 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_2_revise/result.json) |
-| round_3_revise | passed | 91556 / 14233 | 118.016 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_3_revise/result.json) |
-| special_arc | passed | 142797 / 50189 | 435.422 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/special_arc/result.json) |
-| special_ending | passed | 75267 / 15563 | 147.812 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/special_ending/result.json) |
-| special_episode | passed | 116657 / 27762 | 230.593 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/special_episode/result.json) |
-| special_line | passed | 86709 / 13221 | 117.406 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/special_line/result.json) |
-| special_whole_story | passed | 143577 / 51615 | 446.313 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/special_whole_story/result.json) |
+| round_1_revise | passed | 86968 / 11945 | 107.844 | [证据](../operations_live_v8_20261014/round_1_revise/result.json) |
+| round_2_revise | passed | 88789 / 10191 | 89.282 | [证据](../operations_live_v8_20261014/round_2_revise/result.json) |
+| round_3_revise | passed | 91556 / 14233 | 118.016 | [证据](../operations_live_v8_20261014/round_3_revise/result.json) |
+| special_arc | passed | 142797 / 50189 | 435.422 | [证据](../operations_live_v8_20261014/special_arc/result.json) |
+| special_ending | passed | 75267 / 15563 | 147.812 | [证据](../operations_live_v8_20261014/special_ending/result.json) |
+| special_episode | passed | 116657 / 27762 | 230.593 | [证据](../operations_live_v8_20261014/special_episode/result.json) |
+| special_line | passed | 86709 / 13221 | 117.406 | [证据](../operations_live_v8_20261014/special_line/result.json) |
+| special_whole_story | passed | 143577 / 51615 | 446.313 | [证据](../operations_live_v8_20261014/special_whole_story/result.json) |
 
 ## 原始产物复核
 

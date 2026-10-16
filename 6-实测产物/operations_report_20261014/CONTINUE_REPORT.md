@@ -10,10 +10,10 @@
 
 | 案例 | 结果 | Input / Output Token | 壁钟秒 | 产物 |
 | --- | --- | ---: | ---: | --- |
-| round_1_continue | passed | 136620 / 50641 | 469.312 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_1_continue/result.json) |
-| round_2_continue | passed | 143009 / 49081 | 456.422 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_2_continue/result.json) |
-| round_3_continue | passed | 143577 / 49931 | 458.39 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/round_3_continue/result.json) |
-| special_continue_again | passed | 147129 / 26672 | 236.562 | [证据](C:/Users/20196/.codex/worktrees/story-operations-audit/StoryGenerate/6-实测产物/operations_live_v8_20261014/special_continue_again/result.json) |
+| round_1_continue | passed | 136620 / 50641 | 469.312 | [证据](../operations_live_v8_20261014/round_1_continue/result.json) |
+| round_2_continue | passed | 143009 / 49081 | 456.422 | [证据](../operations_live_v8_20261014/round_2_continue/result.json) |
+| round_3_continue | passed | 143577 / 49931 | 458.39 | [证据](../operations_live_v8_20261014/round_3_continue/result.json) |
+| special_continue_again | passed | 147129 / 26672 | 236.562 | [证据](../operations_live_v8_20261014/special_continue_again/result.json) |
 
 ## 原始产物复核
 
