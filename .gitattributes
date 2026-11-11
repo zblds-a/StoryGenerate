@@ -1,0 +1,2 @@
+# Preserve the exact, verified Git mailbox artifact; patch context has intentional spaces.
+docs/handoff/*.patch -text -whitespace
