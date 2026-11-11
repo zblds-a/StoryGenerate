@@ -1,15 +1,9 @@
 """Independent witness must catch delayed, missing and silent audio, not bless metadata."""
-import importlib.util
-from pathlib import Path
-
 import pytest
 
 np=pytest.importorskip('numpy')
 pytest.importorskip('scipy')
-module_path=Path(__file__).resolve().parents[3]/'ops/my-legend/evidence/audit_media_clock.py'
-spec=importlib.util.spec_from_file_location('clock_evidence',module_path)
-audit=importlib.util.module_from_spec(spec)
-spec.loader.exec_module(audit)
+from my_legend_production.production import audio_alignment as audit
 
 
 @pytest.mark.parametrize('delay',[-1200,-320,0,320,1200])

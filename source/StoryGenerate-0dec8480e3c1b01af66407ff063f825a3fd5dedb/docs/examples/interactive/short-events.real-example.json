@@ -1,0 +1,2486 @@
+[
+  {
+    "event_id": "7d5da7775a1a415eb1a57c8b79e5e4d1",
+    "seq": 1,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 1,
+    "generation_epoch": 1,
+    "type": "stage.changed",
+    "occurred_at": "2026-11-11T09:06:08.649171+00:00",
+    "payload": {
+      "stage": "outlining"
+    }
+  },
+  {
+    "event_id": "3c27f8d4c36a46de8a3247b9c2f2f625",
+    "seq": 2,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 4,
+    "generation_epoch": 1,
+    "type": "outline.delta",
+    "occurred_at": "2026-11-11T09:06:16.404251+00:00",
+    "payload": {
+      "attempt_id": "7aaac211ee0544bb967673961014bcd1",
+      "chunk_index": 1,
+      "field": "title",
+      "text": "录音笔"
+    }
+  },
+  {
+    "event_id": "5eb80e6279e748868425107eb5fc50fb",
+    "seq": 3,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 5,
+    "generation_epoch": 1,
+    "type": "outline.delta",
+    "occurred_at": "2026-11-11T09:06:18.482277+00:00",
+    "payload": {
+      "attempt_id": "7aaac211ee0544bb967673961014bcd1",
+      "chunk_index": 2,
+      "field": "premise",
+      "text": "雨夜，小墨借来的录音笔突然坏了。阿青帮忙修理，两人在修理过程中坦诚面对失误，最终决定一起向物主说明真相。"
+    }
+  },
+  {
+    "event_id": "8f304d7e63ca410199e9d1b91cc3766c",
+    "seq": 4,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 6,
+    "generation_epoch": 1,
+    "type": "outline.delta",
+    "occurred_at": "2026-11-11T09:06:20.220176+00:00",
+    "payload": {
+      "attempt_id": "7aaac211ee0544bb967673961014bcd1",
+      "chunk_index": 3,
+      "field": "title",
+      "text": "雨夜故障"
+    }
+  },
+  {
+    "event_id": "1d665f97301e40c58a4453539a7115bb",
+    "seq": 5,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 8,
+    "generation_epoch": 1,
+    "type": "outline.delta",
+    "occurred_at": "2026-11-11T09:06:28.910735+00:00",
+    "payload": {
+      "attempt_id": "7aaac211ee0544bb967673961014bcd1",
+      "chunk_index": 4,
+      "field": "title",
+      "text": "先试着修"
+    }
+  },
+  {
+    "event_id": "4814992c8839415e8c3d40193a7f604a",
+    "seq": 6,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 9,
+    "generation_epoch": 1,
+    "type": "outline.delta",
+    "occurred_at": "2026-11-11T09:06:29.910138+00:00",
+    "payload": {
+      "attempt_id": "7aaac211ee0544bb967673961014bcd1",
+      "chunk_index": 5,
+      "field": "premise",
+      "text": "阿青拿出工具，开始检查录音笔的内部，两人在修理过程中聊起这支录音笔的来历。"
+    }
+  },
+  {
+    "event_id": "a3747f19e80e4cfcaee310e6fe8137be",
+    "seq": 7,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 10,
+    "generation_epoch": 1,
+    "type": "outline.delta",
+    "occurred_at": "2026-11-11T09:06:30.707987+00:00",
+    "payload": {
+      "attempt_id": "7aaac211ee0544bb967673961014bcd1",
+      "chunk_index": 6,
+      "field": "title",
+      "text": "先联系物主"
+    }
+  },
+  {
+    "event_id": "5ed35df90bad4fbab8dde558825b7b8e",
+    "seq": 8,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 11,
+    "generation_epoch": 1,
+    "type": "outline.delta",
+    "occurred_at": "2026-11-11T09:06:30.929332+00:00",
+    "payload": {
+      "attempt_id": "7aaac211ee0544bb967673961014bcd1",
+      "chunk_index": 7,
+      "field": "premise",
+      "text": "小墨觉得应该立刻告诉物主，阿青建议先确认损坏程度再决定怎么说。"
+    }
+  },
+  {
+    "event_id": "bc9c609e5c2c414fbd24cc90d2f4a538",
+    "seq": 9,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 12,
+    "generation_epoch": 1,
+    "type": "outline.delta",
+    "occurred_at": "2026-11-11T09:06:31.297770+00:00",
+    "payload": {
+      "attempt_id": "7aaac211ee0544bb967673961014bcd1",
+      "chunk_index": 8,
+      "field": "title",
+      "text": "修理与坦白"
+    }
+  },
+  {
+    "event_id": "3272af8e67884d299156f9b0bd5224f5",
+    "seq": 10,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 15,
+    "generation_epoch": 1,
+    "type": "outline.ready",
+    "occurred_at": "2026-11-11T09:06:45.390947+00:00",
+    "payload": {
+      "outline": {
+        "title": "录音笔",
+        "premise": "雨夜，小墨借来的录音笔突然坏了。阿青帮忙修理，两人在修理过程中坦诚面对失误，最终决定一起向物主说明真相。",
+        "relationships": [
+          "小墨和阿青是彼此信任的伙伴，遇到困难时习惯一起面对。"
+        ],
+        "series_arc": "",
+        "episode_summaries": [
+          "小墨不小心弄坏了借来的录音笔，阿青帮忙修理，两人决定诚实面对物主。"
+        ],
+        "duration_sec": 180,
+        "scenes": [
+          {
+            "title": "雨夜故障",
+            "location": "小墨的房间",
+            "time_of_day": "夜晚",
+            "environment": "窗外雨声淅沥，屋内灯光温暖，桌上散落着录音设备和笔记本。",
+            "atmosphere": "安静中带着一丝焦虑，雨声衬托出室内的紧张感。",
+            "goal": "小墨发现录音笔坏了，向阿青求助，两人面对意外状况。",
+            "beats": [
+              "小墨反复按下录音笔的播放键，只有沙沙的杂音。",
+              "阿青推门进来，抖落伞上的雨水，注意到小墨紧皱的眉头。",
+              "小墨低声说录音笔坏了，这是从别人那里借来的。",
+              "阿青接过录音笔，翻来覆去检查，说可以试着修。",
+              "小墨犹豫着问要不要告诉物主，阿青说先看看能不能修好。"
+            ],
+            "background_prompt": "A cozy room at night, warm lamplight, rain streaking down the window, a desk cluttered with recording equipment and notebooks, Chinese guofeng illustration style, soft colors, no characters, no text, no watermarks.",
+            "must_include": [
+              "雨声",
+              "录音笔故障的沙沙声",
+              "小墨的焦虑",
+              "阿青的冷静"
+            ],
+            "must_avoid": [
+              "新增角色",
+              "过度戏剧化的反应",
+              "直接给出解决方案"
+            ],
+            "choices": [
+              {
+                "title": "先试着修",
+                "premise": "阿青拿出工具，开始检查录音笔的内部，两人在修理过程中聊起这支录音笔的来历。",
+                "id": "df6ccd5e5405422aa85d6059ba73e1af"
+              },
+              {
+                "title": "先联系物主",
+                "premise": "小墨觉得应该立刻告诉物主，阿青建议先确认损坏程度再决定怎么说。",
+                "id": "98dbd7c71ba84957a389b5a3daa0ed6c"
+              }
+            ]
+          },
+          {
+            "title": "修理与坦白",
+            "location": "小墨的房间",
+            "time_of_day": "夜晚",
+            "environment": "雨势渐小，桌上的工具摊开，录音笔被拆开，零件整齐排列。",
+            "atmosphere": "专注而坦诚，两人在修理过程中逐渐放下顾虑。",
+            "goal": "阿青修好录音笔，两人决定一起向物主说明情况。",
+            "beats": [
+              "阿青小心翼翼地拆开录音笔，指出一个松动的焊点。",
+              "小墨在旁边递工具，说起借录音笔时物主的信任。",
+              "阿青一边焊接一边说，修好了也要告诉人家实话。",
+              "小墨点头，说不能因为修好了就当没发生过。",
+              "录音笔重新亮起，两人对视，决定明天一起去说明。"
+            ],
+            "background_prompt": "A desk with disassembled recording device parts neatly arranged, tools scattered, rain easing outside the window, warm indoor lighting, Chinese guofeng illustration style, soft and warm tones, no characters, no text, no watermarks.",
+            "must_include": [
+              "修理的过程",
+              "两人的对话",
+              "录音笔重新工作的声音",
+              "共同的决定"
+            ],
+            "must_avoid": [
+              "新增角色",
+              "隐瞒或欺骗",
+              "过度煽情"
+            ],
+            "choices": []
+          }
+        ],
+        "character_portrayals": [
+          {
+            "role_id": "qing",
+            "story_name": "阿青",
+            "external_goal": "帮小墨修好录音笔，一起面对问题",
+            "emotional_avoidance": "不愿看到小墨独自承担压力",
+            "speech_style": "简短直接，先问清楚再动手，修理时偶尔自言自语",
+            "relationship_stance": "小墨的可靠伙伴，用行动表达关心"
+          },
+          {
+            "role_id": "mo",
+            "story_name": "小墨",
+            "external_goal": "修好录音笔，对物主诚实",
+            "emotional_avoidance": "害怕辜负别人的信任",
+            "speech_style": "温柔细心，喜欢问“会不会……”“你觉得……”，声音轻柔",
+            "relationship_stance": "信任阿青，愿意分享自己的担忧"
+          }
+        ]
+      },
+      "plan_id": "194d4c913ac54af1952bdf502609a393",
+      "fingerprint": "2d15935d1925a35389da4877974cbff8c1c135a8c3c3bb3ecc49e883386b6bcd"
+    }
+  },
+  {
+    "event_id": "cb404ec06ac84e72bc583b4e45aef179",
+    "seq": 11,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 15,
+    "generation_epoch": 1,
+    "type": "stage.changed",
+    "occurred_at": "2026-11-11T09:06:45.390947+00:00",
+    "payload": {
+      "stage": "outline_ready"
+    }
+  },
+  {
+    "event_id": "81802c00a2a746a1a0514391aae5f8fa",
+    "seq": 12,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 16,
+    "generation_epoch": 1,
+    "type": "background.spec.ready",
+    "occurred_at": "2026-11-11T09:06:45.400530+00:00",
+    "payload": {
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f",
+      "spec": {
+        "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f",
+        "revision": 1,
+        "plan_id": "194d4c913ac54af1952bdf502609a393",
+        "generation_epoch": 1,
+        "location": "小墨的房间",
+        "time_of_day": "夜晚",
+        "environment": "窗外雨声淅沥，屋内灯光温暖，桌上散落着录音设备和笔记本。",
+        "atmosphere": "安静中带着一丝焦虑，雨声衬托出室内的紧张感。",
+        "must_include": [
+          "雨声",
+          "录音笔故障的沙沙声",
+          "小墨的焦虑",
+          "阿青的冷静"
+        ],
+        "must_avoid": [
+          "新增角色",
+          "过度戏剧化的反应",
+          "直接给出解决方案"
+        ],
+        "art_style": "guofeng",
+        "composition": "环境建立镜头，前景留出角色叠加空间",
+        "prompt": "A cozy room at night, warm lamplight, rain streaking down the window, a desk cluttered with recording equipment and notebooks, Chinese guofeng illustration style, soft colors, no characters, no text, no watermarks.。统一guofeng风格，纯环境，前景留白，不含人物、文字或水印。",
+        "negative_prompt": "人物，主角，文字，字幕，水印，标志",
+        "aspect_ratio": "16:9",
+        "parameters": {
+          "width": 1536,
+          "height": 864
+        }
+      },
+      "hash": "37b6393f6639a608174d21948d45c544077f4f099a4204665bee08ae96a637ef",
+      "status": "disabled"
+    }
+  },
+  {
+    "event_id": "889e14a8333247bdbb441f8049ff0cdc",
+    "seq": 13,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 16,
+    "generation_epoch": 1,
+    "type": "background.spec.ready",
+    "occurred_at": "2026-11-11T09:06:45.400530+00:00",
+    "payload": {
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5",
+      "spec": {
+        "scene_key": "3d904ed287914525b4e4c01e4a06dca5",
+        "revision": 1,
+        "plan_id": "194d4c913ac54af1952bdf502609a393",
+        "generation_epoch": 1,
+        "location": "小墨的房间",
+        "time_of_day": "夜晚",
+        "environment": "雨势渐小，桌上的工具摊开，录音笔被拆开，零件整齐排列。",
+        "atmosphere": "专注而坦诚，两人在修理过程中逐渐放下顾虑。",
+        "must_include": [
+          "修理的过程",
+          "两人的对话",
+          "录音笔重新工作的声音",
+          "共同的决定"
+        ],
+        "must_avoid": [
+          "新增角色",
+          "隐瞒或欺骗",
+          "过度煽情"
+        ],
+        "art_style": "guofeng",
+        "composition": "环境建立镜头，前景留出角色叠加空间",
+        "prompt": "A desk with disassembled recording device parts neatly arranged, tools scattered, rain easing outside the window, warm indoor lighting, Chinese guofeng illustration style, soft and warm tones, no characters, no text, no watermarks.。统一guofeng风格，纯环境，前景留白，不含人物、文字或水印。",
+        "negative_prompt": "人物，主角，文字，字幕，水印，标志",
+        "aspect_ratio": "16:9",
+        "parameters": {
+          "width": 1536,
+          "height": 864
+        }
+      },
+      "hash": "01765d0b3c5f09435536b547614043a86e7c0edca83050b03076c650a961dbd1",
+      "status": "disabled"
+    }
+  },
+  {
+    "event_id": "9521ebfdd14542aa8ae2b66f729f9950",
+    "seq": 14,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 16,
+    "generation_epoch": 1,
+    "type": "stage.changed",
+    "occurred_at": "2026-11-11T09:06:45.400530+00:00",
+    "payload": {
+      "stage": "writing"
+    }
+  },
+  {
+    "event_id": "ef37692f5477494c8a12c59511446ff3",
+    "seq": 15,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 17,
+    "generation_epoch": 1,
+    "type": "scene.started",
+    "occurred_at": "2026-11-11T09:06:45.413659+00:00",
+    "payload": {
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "84e71265bada4bda92d813618b6974fa",
+    "seq": 16,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 19,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:06:49.187635+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 1,
+      "field": "title",
+      "text": "雨夜故障",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "02541f9bc5704f97a2cc7395d42ab7ec",
+    "seq": 17,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 20,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:06:51.868738+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 2,
+      "field": "text",
+      "text": "窗外的雨声淅淅沥沥，敲打着玻璃。屋内，台灯的光圈拢着桌上散落的录音设备和笔记本。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "901b7090a3b149e6990d8d07c825f70a",
+    "seq": 18,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 21,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:06:53.857132+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 3,
+      "field": "text",
+      "text": "小墨坐在桌前，反复按下录音笔的播放键。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "a2b28b92e5d64e27a84846472ffe7a22",
+    "seq": 19,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 22,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:06:54.905014+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 4,
+      "field": "text",
+      "text": "怎么又是这样……",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "bfe317634c40487d9034bee3b132ddd4",
+    "seq": 20,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 23,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:06:56.497853+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 5,
+      "field": "text",
+      "text": "录音笔发出沙沙的杂音，像被揉皱的纸。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "e13f4403b39f42c886894399b5b47a09",
+    "seq": 21,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 24,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:06:58.484046+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 6,
+      "field": "text",
+      "text": "门被推开，阿青走进来，一边收起还在滴水的伞。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "ee5af6d7f2404c6b83fbfb2d81d08766",
+    "seq": 22,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 25,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:06:58.866110+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 7,
+      "field": "text",
+      "text": "雨下大了。你怎么还没睡？",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "4474718071ab4ddeb35880c60a58df9e",
+    "seq": 23,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 26,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:00.218112+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 8,
+      "field": "text",
+      "text": "阿青……这个，好像坏了。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "4cfda89ee88648cca040163d0022169f",
+    "seq": 24,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 27,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:02.382600+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 9,
+      "field": "text",
+      "text": "阿青接过录音笔，翻来覆去地看了一遍。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "69f2105401d8402c99d6406237c9dc54",
+    "seq": 25,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 28,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:03.103423+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 10,
+      "field": "text",
+      "text": "播放键没反应？",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "710b5cef2bbc4d32b9199f31b6c66541",
+    "seq": 26,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 29,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:05.199877+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 11,
+      "field": "text",
+      "text": "嗯。按了好多次，只有杂音。这是从别人那里借来的……会不会是我不小心弄坏的？",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "15db52c7f2124544a16e0472f54209c8",
+    "seq": 27,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 30,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:06.844783+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 12,
+      "field": "text",
+      "text": "阿青没有立刻回答，把录音笔凑近耳边，轻轻晃了晃。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "e438a826498c474f93c227f8ae5b4dbc",
+    "seq": 28,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 31,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:08.467105+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 13,
+      "field": "text",
+      "text": "不像是摔的。可能是接触问题。我可以拆开看看。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "e5d7b21ea7624348a463a27e9080df17",
+    "seq": 29,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 32,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:10.229545+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 14,
+      "field": "text",
+      "text": "你觉得……我们要不要先告诉物主？这样瞒着修，万一更坏了怎么办？",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "b005ea3dadfe45f788b9089ceed7ce8c",
+    "seq": 30,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 33,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:11.745032+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 15,
+      "field": "text",
+      "text": "阿青放下录音笔，看向小墨。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "29475ceae3114805808b644f5a860868",
+    "seq": 31,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 34,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:13.391542+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 16,
+      "field": "text",
+      "text": "先看看能不能修好。知道具体坏在哪里，告诉人家的时候也说得清楚。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "790ba45446184a558a4dae218e588651",
+    "seq": 32,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 35,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:14.894182+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 17,
+      "field": "text",
+      "text": "那……小心一点。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "20da00cba043406b8986af8bce01fedc",
+    "seq": 33,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 36,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:17.563312+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 18,
+      "field": "text",
+      "text": "阿青从抽屉里拿出小螺丝刀，在灯下开始拧开录音笔的背板。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "0430d050ab404eeb889791c2f2585c0c",
+    "seq": 34,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 37,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:19.214612+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 19,
+      "field": "text",
+      "text": "这机器有些年头了。谁借给你的？",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "cf59251f42cd440184cca32d56fc397c",
+    "seq": 35,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 38,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:20.883985+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 20,
+      "field": "text",
+      "text": "一个……之前一起做声音采集的朋友。他说这支笔录过很多珍贵的东西。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "94e3186dd88647c69a9e4601da474e9d",
+    "seq": 36,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 39,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:24.062254+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 21,
+      "field": "text",
+      "text": "阿青的手顿了顿，然后继续用工具轻轻拨开内部的一个小卡扣。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "7c8bca069401449792d1692451cef435",
+    "seq": 37,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 40,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:24.072676+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 22,
+      "field": "text",
+      "text": "难怪你这么紧张。别担心，只是个小问题。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "5220694ce2bd4da8a7a8622ae45abf76",
+    "seq": 38,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 41,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:26.279794+00:00",
+    "payload": {
+      "attempt_id": "a22722dfdda4414991cf7dacda7e9895",
+      "chunk_index": 23,
+      "field": "text",
+      "text": "雨声渐缓，只剩下偶尔的滴答。台灯下，两个人影凑在一起，围着那支被拆开的录音笔。",
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f"
+    }
+  },
+  {
+    "event_id": "3ce687875f2e4caba2a4053bb48e6881",
+    "seq": 39,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 45,
+    "generation_epoch": 1,
+    "type": "scene.ready",
+    "occurred_at": "2026-11-11T09:07:51.756709+00:00",
+    "payload": {
+      "scene_key": "aeb5f5b10f7f4b5e9c4d1d964fd1624f",
+      "scene": {
+        "scene_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f",
+        "scene_index": 1,
+        "title": "雨夜故障",
+        "location": "小墨的房间",
+        "dramatic_goal": "小墨发现录音笔坏了，向阿青求助，两人面对意外状况。",
+        "utterances": [
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l1",
+            "kind": "narration",
+            "speaker_role_id": null,
+            "narrator_id": "narrator",
+            "performer_id": "narrator",
+            "text": "窗外的雨声淅淅沥沥，敲打着玻璃。屋内，台灯的光圈拢着桌上散落的录音设备和笔记本。",
+            "emotion": "calm",
+            "tone_instruction": "气息平稳，用中低音铺开画面，句尾略收，留出不安的余味",
+            "emphasis": [
+              {
+                "span_text": "淅淅沥沥",
+                "occurrence": 1,
+                "start_char": 5,
+                "end_char": 9,
+                "strength": "medium"
+              },
+              {
+                "span_text": "散落",
+                "occurrence": 1,
+                "start_char": 28,
+                "end_char": 30,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 0.92,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "平稳地铺陈环境，营造宁静中略带不安的氛围。；在“屋内”后做短停顿，台灯光圈一句放慢，整体音量偏轻",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l2",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "小墨坐在桌前，反复按下录音笔的播放键。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l3",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "怎么又是这样……",
+            "emotion": "worried",
+            "tone_instruction": "压着喉咙低声自语，尾音往下掉，带一点发闷的无力感",
+            "emphasis": [
+              {
+                "span_text": "又是这样",
+                "occurrence": 1,
+                "start_char": 2,
+                "end_char": 6,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.88,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "低声自语，带着压抑的焦虑和一丝无助。；“怎么”轻轻带出，省略号处收住气息，不拖长音",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l4",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "录音笔发出沙沙的杂音，像被揉皱的纸。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l5",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "门被推开，阿青走进来，一边收起还在滴水的伞。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l6",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "雨下大了。你怎么还没睡？",
+            "emotion": "neutral",
+            "tone_instruction": "前半句平常陈述，后半句放轻，问句不逼人",
+            "emphasis": [
+              {
+                "span_text": "雨下大了",
+                "occurrence": 1,
+                "start_char": 0,
+                "end_char": 4,
+                "strength": "medium"
+              },
+              {
+                "span_text": "还没睡",
+                "occurrence": 1,
+                "start_char": 8,
+                "end_char": 11,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "语气平常，但目光已经落在小墨紧皱的眉头上。；两句之间留短停顿，问句尾音不上扬太多",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l7",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "阿青……这个，好像坏了。",
+            "emotion": "worried",
+            "tone_instruction": "先轻声叫名字，后半句气声化，像把坏消息慢慢递过去",
+            "emphasis": [
+              {
+                "span_text": "坏了",
+                "occurrence": 1,
+                "start_char": 9,
+                "end_char": 11,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.9,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "声音很轻，把录音笔递过去，带着歉意和不安。；“阿青”后停顿一拍，“好像”不要重读，句尾气息收弱",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l8",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "阿青接过录音笔，翻来覆去地看了一遍。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l9",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "播放键没反应？",
+            "emotion": "serious",
+            "tone_instruction": "短促确认，边问边把注意力落到设备上",
+            "emphasis": [
+              {
+                "span_text": "没反应",
+                "occurrence": 1,
+                "start_char": 3,
+                "end_char": 6,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 1.1,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "简短直接，边问边检查。；整句干净利落，句尾用降调",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l10",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "嗯。按了好多次，只有杂音。这是从别人那里借来的……会不会是我不小心弄坏的？",
+            "emotion": "worried",
+            "tone_instruction": "起句急促，说到“借来的”声音低下去，末句转为自我怀疑的轻问",
+            "emphasis": [
+              {
+                "span_text": "只有杂音",
+                "occurrence": 1,
+                "start_char": 8,
+                "end_char": 12,
+                "strength": "strong"
+              },
+              {
+                "span_text": "借来的",
+                "occurrence": 1,
+                "start_char": 20,
+                "end_char": 23,
+                "strength": "medium"
+              },
+              {
+                "span_text": "我不小心",
+                "occurrence": 1,
+                "start_char": 29,
+                "end_char": 33,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 1.05,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "手指无意识地绞在一起，透露出害怕辜负他人信任的心情。；“嗯”后稍停，“按了好多次”一口气带过，最后问句收得虚",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l11",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "阿青没有立刻回答，把录音笔凑近耳边，轻轻晃了晃。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l12",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "不像是摔的。可能是接触问题。我可以拆开看看。",
+            "emotion": "calm",
+            "tone_instruction": "冷静下判断，最后一句放平，像给出一个可执行的方案",
+            "emphasis": [
+              {
+                "span_text": "接触问题",
+                "occurrence": 1,
+                "start_char": 9,
+                "end_char": 13,
+                "strength": "medium"
+              },
+              {
+                "span_text": "拆开看看",
+                "occurrence": 1,
+                "start_char": 17,
+                "end_char": 21,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 0.98,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "语气冷静，试图用行动缓解小墨的焦虑。；“不像是摔的”说得笃定，三句之间停顿清晰",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l13",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "你觉得……我们要不要先告诉物主？这样瞒着修，万一更坏了怎么办？",
+            "emotion": "worried",
+            "tone_instruction": "犹豫着探问，句尾带出怕更坏的担忧，语速略缓",
+            "emphasis": [
+              {
+                "span_text": "告诉物主",
+                "occurrence": 1,
+                "start_char": 11,
+                "end_char": 15,
+                "strength": "strong"
+              },
+              {
+                "span_text": "更坏了",
+                "occurrence": 1,
+                "start_char": 24,
+                "end_char": 27,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 0.92,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "犹豫不决，在诚实与害怕后果之间拉扯。；“你觉得”后停顿，省略号处吸气，最后问句不下压",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l14",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "阿青放下录音笔，看向小墨。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l15",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "先看看能不能修好。知道具体坏在哪里，告诉人家的时候也说得清楚。",
+            "emotion": "serious",
+            "tone_instruction": "务实平稳地分步讲，后半句稍缓，表示在替对方考虑",
+            "emphasis": [
+              {
+                "span_text": "先看看能不能修好",
+                "occurrence": 1,
+                "start_char": 0,
+                "end_char": 8,
+                "strength": "medium"
+              },
+              {
+                "span_text": "说得清楚",
+                "occurrence": 1,
+                "start_char": 26,
+                "end_char": 30,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.96,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "平稳而务实，既照顾小墨的担忧，也给出理性的步骤。；两句间停顿，语气不重，像在整理思路",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l16",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "那……小心一点。",
+            "emotion": "worried",
+            "tone_instruction": "先迟疑应声，再压低声叮嘱，紧张感未全消",
+            "emphasis": [
+              {
+                "span_text": "小心一点",
+                "occurrence": 1,
+                "start_char": 3,
+                "end_char": 7,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.9,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "声音稍微放松了些，但仍紧盯着阿青的手。；“那”后拖半拍，省略号处轻吸气，叮嘱句不用力",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l17",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "阿青从抽屉里拿出小螺丝刀，在灯下开始拧开录音笔的背板。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l18",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "这机器有些年头了。谁借给你的？",
+            "emotion": "neutral",
+            "tone_instruction": "边动手边随口问，前半句平，问句轻带出来",
+            "emphasis": [
+              {
+                "span_text": "有些年头",
+                "occurrence": 1,
+                "start_char": 3,
+                "end_char": 7,
+                "strength": "medium"
+              },
+              {
+                "span_text": "谁借给你的",
+                "occurrence": 1,
+                "start_char": 9,
+                "end_char": 14,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "边修理边随口问起，试图让小墨放松。；第一句后留短停顿，问句尾音略降，不带审问感",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l19",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "一个……之前一起做声音采集的朋友。他说这支笔录过很多珍贵的东西。",
+            "emotion": "sad",
+            "tone_instruction": "提到朋友时语气低缓，说到“珍贵”气息微颤，像在掂量它的分量",
+            "emphasis": [
+              {
+                "span_text": "珍贵",
+                "occurrence": 1,
+                "start_char": 26,
+                "end_char": 28,
+                "strength": "strong"
+              },
+              {
+                "span_text": "很多",
+                "occurrence": 1,
+                "start_char": 24,
+                "end_char": 26,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 0.9,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "说到“珍贵”时，声音微微发颤，透露出这支笔的分量。；“一个”后停顿，省略号处轻吐气，“珍贵”后稍微收声",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l20",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "阿青的手顿了顿，然后继续用工具轻轻拨开内部的一个小卡扣。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l21",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "难怪你这么紧张。别担心，只是个小问题。",
+            "emotion": "reassuring",
+            "tone_instruction": "先点破对方紧张再放软收尾，后半句轻而稳，不安慰过头",
+            "emphasis": [
+              {
+                "span_text": "这么紧张",
+                "occurrence": 1,
+                "start_char": 3,
+                "end_char": 7,
+                "strength": "medium"
+              },
+              {
+                "span_text": "小问题",
+                "occurrence": 1,
+                "start_char": 15,
+                "end_char": 18,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.94,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "语气里难得地带上了一丝安抚的意味，但依旧简短。；“别担心”放轻，句尾收平，不留上扬",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "aeb5f5b10f7f4b5e9c4d1d964fd1624f-l22",
+            "kind": "narration",
+            "speaker_role_id": null,
+            "narrator_id": "narrator",
+            "performer_id": "narrator",
+            "text": "雨声渐缓，只剩下偶尔的滴答。台灯下，两个人影凑在一起，围着那支被拆开的录音笔。",
+            "emotion": "calm",
+            "tone_instruction": "音量放低，语速缓下来，把画面收拢到台灯下的两个人影",
+            "emphasis": [
+              {
+                "span_text": "渐缓",
+                "occurrence": 1,
+                "start_char": 2,
+                "end_char": 4,
+                "strength": "medium"
+              },
+              {
+                "span_text": "凑在一起",
+                "occurrence": 1,
+                "start_char": 22,
+                "end_char": 26,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 0.86,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "收束场景，让情绪在安静中沉淀。；“滴答”后停顿稍长，最后一句轻落，气息平稳收尾",
+            "audio_cue_ref": null
+          }
+        ]
+      },
+      "preview_blurb": "雨夜，小墨借来的录音笔坏了。阿青带来冷静的双手，但真正难修的是小墨心里的不安。",
+      "continuity": {
+        "facts": [
+          "录音笔是从一位与小墨共同做过声音采集的朋友那里借来的。",
+          "录音笔里录过被物主视为珍贵的东西。",
+          "阿青初步判断故障可能是内部接触问题，并已开始拆开检查。",
+          "阿青没有立刻修好，故障的具体原因尚待确认。"
+        ],
+        "open_threads": [
+          "录音笔能否被阿青成功修复？",
+          "小墨最终会如何向物主说明情况？",
+          "录音笔里“珍贵的东西”具体是什么，是否与损坏有关？"
+        ]
+      }
+    }
+  },
+  {
+    "event_id": "7de182acc1474370ae4df84b90aacd4f",
+    "seq": 40,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 45,
+    "generation_epoch": 1,
+    "type": "stage.changed",
+    "occurred_at": "2026-11-11T09:07:51.756709+00:00",
+    "payload": {
+      "stage": "writing"
+    }
+  },
+  {
+    "event_id": "cbada0e9141e4f5fa53cf41c617e2ffe",
+    "seq": 41,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 46,
+    "generation_epoch": 1,
+    "type": "scene.started",
+    "occurred_at": "2026-11-11T09:07:51.784158+00:00",
+    "payload": {
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "69f3af18b088423698edd90d5c773ce5",
+    "seq": 42,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 48,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:56.552841+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 1,
+      "field": "title",
+      "text": "修理与坦白",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "3cebfd0bbb104e59a82b78ce103602f9",
+    "seq": 43,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 49,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:07:59.218714+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 2,
+      "field": "text",
+      "text": "窗外的雨声渐渐小了。桌面上，录音笔被拆开，零件按照顺序整齐地排在一块软布上。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "ea1553908e944df782dd3a3b23007cf8",
+    "seq": 44,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 50,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:00.545622+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 3,
+      "field": "text",
+      "text": "找到了。这个焊点松了，接触不良。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "d29ef9a22eb748339b374dcf63a1d122",
+    "seq": 45,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 52,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:01.842405+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 4,
+      "field": "text",
+      "text": "阿青拿起电烙铁，轻微的电流声响起。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "9b4864c51fda4a91b82575cb40ea3001",
+    "seq": 46,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 53,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:03.309673+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 5,
+      "field": "text",
+      "text": "阿青，你手稳一点……会不会烫到旁边的零件？",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "c2232b2072f743e09791b65cac72d385",
+    "seq": 47,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 54,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:05.479540+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 6,
+      "field": "text",
+      "text": "不会。这种小活我常干。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "b784dd1eb34a4ad085cda2fb264f024e",
+    "seq": 48,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 55,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:06.690473+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 7,
+      "field": "text",
+      "text": "细小的松香味散开，焊锡轻轻融化又凝固。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "ed79ad9040d74e7785acec24377b6f91",
+    "seq": 49,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 56,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:08.375722+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 8,
+      "field": "text",
+      "text": "当初借的时候，她跟我说里面录了她外婆唱的歌。就这一份。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "3b8c93aad715498e8f10790c6f7b268e",
+    "seq": 50,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 57,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:09.645688+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 9,
+      "field": "text",
+      "text": "所以你这么着急。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "665d8684caed40dcb3ee0c1f04769413",
+    "seq": 51,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 58,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:11.714551+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 10,
+      "field": "text",
+      "text": "小墨点了点头，把桌上的一把镊子递给阿青。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "341f94f09c454f46a1ed9bb41c3cf7cf",
+    "seq": 52,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 59,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:12.365135+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 11,
+      "field": "text",
+      "text": "修好之后，我们得告诉她。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "bf92ce05f1244356a3a1816d97b2b842",
+    "seq": 53,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 60,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:14.018717+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 12,
+      "field": "text",
+      "text": "你觉得……她会生气吗？",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "5356c42ceb64465ba1eaf14f8f6c0a1f",
+    "seq": 54,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 61,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:16.135207+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 13,
+      "field": "text",
+      "text": "可能。但修好了不说，才是真的辜负她的信任。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "8cd3fab087094513ad659a0f2b989333",
+    "seq": 55,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 62,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:17.117757+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 14,
+      "field": "text",
+      "text": "小墨沉默了几秒，然后深吸一口气。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "bb8cf5c26c854fde91bd9cad564c8508",
+    "seq": 56,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 63,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:18.907193+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 15,
+      "field": "text",
+      "text": "你说得对。不能因为修好了，就当没发生过。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "458f558b8d2f4f24a45f3176c625834f",
+    "seq": 57,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 64,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:20.512354+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 16,
+      "field": "text",
+      "text": "阿青将最后一个外壳卡扣合上，发出清脆的“咔哒”声。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "25a876ce48e14e089b1ebbdcdba1cef4",
+    "seq": 58,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 65,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:21.213057+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 17,
+      "field": "text",
+      "text": "好了。试试。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "d5a9759deb2b497391e865290b7085a3",
+    "seq": 59,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 66,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:26.555477+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 18,
+      "field": "text",
+      "text": "小墨的手指悬在播放键上，犹豫了一下，然后轻轻按下。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "1f882fbfa37a426c981e09ecc245e0a4",
+    "seq": 60,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 67,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:26.578653+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 19,
+      "field": "text",
+      "text": "录音笔的指示灯亮起，先是一阵轻微的电流底噪，然后传出一段模糊而悠远的老歌片段。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "f178ef6de0144d848f7a31b61903b516",
+    "seq": 61,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 68,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:26.600712+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 20,
+      "field": "text",
+      "text": "小墨的眼睛亮了起来，脸上露出今晚第一个真正的笑容。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "ed0d60fb9feb45fdb70c9a9fb181d141",
+    "seq": 62,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 69,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:26.616865+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 21,
+      "field": "text",
+      "text": "是外婆的声音……没丢。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "f7e81d3536ef440795f83db18997a349",
+    "seq": 63,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 70,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:27.784824+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 22,
+      "field": "text",
+      "text": "阿青靠在椅背上，松了一口气，嘴角微微上扬。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "683686e3d9ac49a5ac6cc169bbac83dc",
+    "seq": 64,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 71,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:28.926540+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 23,
+      "field": "text",
+      "text": "明天，我陪你去。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "c0bef0a08b834109912d3c82a3a3054f",
+    "seq": 65,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 72,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:30.556723+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 24,
+      "field": "text",
+      "text": "小墨关掉录音笔，小心地把它握在手里，然后用力点了点头。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "aa09a3a44c5e4615b12c97e9787c0a69",
+    "seq": 66,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 73,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:31.412756+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 25,
+      "field": "text",
+      "text": "嗯。我们一起。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "7d53a13d77ca4a14ace6c0b631550f63",
+    "seq": 67,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 74,
+    "generation_epoch": 1,
+    "type": "scene.text.delta",
+    "occurred_at": "2026-11-11T09:08:33.437803+00:00",
+    "payload": {
+      "attempt_id": "0a30452767d54537bc5d5d4883cc98bb",
+      "chunk_index": 26,
+      "field": "text",
+      "text": "雨停了。窗外的夜色变得清澈，屋内的灯光笼罩着桌上那些被修复的零件，和两个不再需要独自承担秘密的人。",
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5"
+    }
+  },
+  {
+    "event_id": "4d2c75acf8964bcc8f1bdb3f68fd1e9d",
+    "seq": 68,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 78,
+    "generation_epoch": 1,
+    "type": "scene.ready",
+    "occurred_at": "2026-11-11T09:08:57.088526+00:00",
+    "payload": {
+      "scene_key": "3d904ed287914525b4e4c01e4a06dca5",
+      "scene": {
+        "scene_id": "3d904ed287914525b4e4c01e4a06dca5",
+        "scene_index": 2,
+        "title": "修理与坦白",
+        "location": "小墨的房间",
+        "dramatic_goal": "阿青修好录音笔，两人决定一起向物主说明情况。",
+        "utterances": [
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l1",
+            "kind": "narration",
+            "speaker_role_id": null,
+            "narrator_id": "narrator",
+            "performer_id": "narrator",
+            "text": "窗外的雨声渐渐小了。桌面上，录音笔被拆开，零件按照顺序整齐地排在一块软布上。",
+            "emotion": "calm",
+            "tone_instruction": "以平稳叙述起句，语速略放慢，像镜头缓缓推进",
+            "emphasis": [
+              {
+                "span_text": "渐渐小了",
+                "occurrence": 1,
+                "start_char": 5,
+                "end_char": 9,
+                "strength": "medium"
+              },
+              {
+                "span_text": "整齐地排",
+                "occurrence": 1,
+                "start_char": 27,
+                "end_char": 31,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 0.92,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "句间留半拍气口；‘软布上’尾音收轻，给下一句对话留空间。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l2",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "找到了。这个焊点松了，接触不良。",
+            "emotion": "serious",
+            "tone_instruction": "压低嗓音但咬字清楚，前半句像确认结果，后半句像陈述判断",
+            "emphasis": [
+              {
+                "span_text": "找到了",
+                "occurrence": 1,
+                "start_char": 0,
+                "end_char": 3,
+                "strength": "strong"
+              },
+              {
+                "span_text": "焊点松了",
+                "occurrence": 1,
+                "start_char": 6,
+                "end_char": 10,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 0.95,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "专注地看着手里的元件，语气平静但确定；‘找到了’后停顿约半秒，再说故障原因；尾字不拖。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l3",
+            "kind": "sfx",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "阿青拿起电烙铁，轻微的电流声响起。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l4",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "阿青，你手稳一点……会不会烫到旁边的零件？",
+            "emotion": "worried",
+            "tone_instruction": "气声偏多、音量放轻，劝告里带一点不确定的上扬",
+            "emphasis": [
+              {
+                "span_text": "手稳一点",
+                "occurrence": 1,
+                "start_char": 4,
+                "end_char": 8,
+                "strength": "medium"
+              },
+              {
+                "span_text": "烫到",
+                "occurrence": 1,
+                "start_char": 13,
+                "end_char": 15,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.9,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "声音轻柔，带着一丝紧张，身体微微前倾；‘阿青’轻唤；省略号处明显停顿，问句尾音不要飘太高。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l5",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "不会。这种小活我常干。",
+            "emotion": "calm",
+            "tone_instruction": "短促利落，像手上活没停，不带多余情绪",
+            "emphasis": [
+              {
+                "span_text": "不会",
+                "occurrence": 1,
+                "start_char": 0,
+                "end_char": 2,
+                "strength": "strong"
+              },
+              {
+                "span_text": "常干",
+                "occurrence": 1,
+                "start_char": 8,
+                "end_char": 10,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 1.05,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "手下没停，简短回应；两句间不换气过度；‘不会’咬实后立即接解释。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l6",
+            "kind": "sfx",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "细小的松香味散开，焊锡轻轻融化又凝固。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l7",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "当初借的时候，她跟我说里面录了她外婆唱的歌。就这一份。",
+            "emotion": "sad",
+            "tone_instruction": "声音低而慢，回忆感，像怕碰碎这件事",
+            "emphasis": [
+              {
+                "span_text": "外婆唱的歌",
+                "occurrence": 1,
+                "start_char": 16,
+                "end_char": 21,
+                "strength": "strong"
+              },
+              {
+                "span_text": "就这一份",
+                "occurrence": 1,
+                "start_char": 22,
+                "end_char": 26,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.88,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "看着那些零件，声音低下来，像是在回忆；‘她跟我说’之后略停；‘就这一份’单独放慢，尾音收住。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l8",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "所以你这么着急。",
+            "emotion": "neutral",
+            "tone_instruction": "语速偏慢，尾音略沉，像刚意识到对方的压力",
+            "emphasis": [
+              {
+                "span_text": "这么着急",
+                "occurrence": 1,
+                "start_char": 3,
+                "end_char": 7,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.9,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "抬起眼看了小墨一眼，手上动作稍停；‘所以’轻轻带过，‘这么着急’放慢；说完留半拍再动工具。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l9",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "小墨点了点头，把桌上的一把镊子递给阿青。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l10",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "修好之后，我们得告诉她。",
+            "emotion": "serious",
+            "tone_instruction": "平静而确定，不做商量口吻，句尾收稳",
+            "emphasis": [
+              {
+                "span_text": "得告诉她",
+                "occurrence": 1,
+                "start_char": 7,
+                "end_char": 11,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.95,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "接过镊子，语气不是商量，而是陈述一个事实；‘修好之后’后微顿；‘得’字咬实，不重砸。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l11",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "你觉得……她会生气吗？",
+            "emotion": "fearful",
+            "tone_instruction": "轻声问，气息浅，省略号处迟疑，尾音带一点探询",
+            "emphasis": [
+              {
+                "span_text": "会生气吗",
+                "occurrence": 1,
+                "start_char": 6,
+                "end_char": 10,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.85,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "轻声问，手指无意识地拨弄着桌边的笔；‘你觉得’后停顿；问句尾音轻收，不要拖长。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l12",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "可能。但修好了不说，才是真的辜负她的信任。",
+            "emotion": "serious",
+            "tone_instruction": "先承认可能，再转为坚定陈述，重音落在‘信任’",
+            "emphasis": [
+              {
+                "span_text": "可能",
+                "occurrence": 1,
+                "start_char": 0,
+                "end_char": 2,
+                "strength": "medium"
+              },
+              {
+                "span_text": "真的辜负",
+                "occurrence": 1,
+                "start_char": 12,
+                "end_char": 16,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.95,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "直视小墨，语气坚定；‘可能’短而轻；‘才是’后略顿，把‘真的辜负’说实。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l13",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "小墨沉默了几秒，然后深吸一口气。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l14",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "你说得对。不能因为修好了，就当没发生过。",
+            "emotion": "serious",
+            "tone_instruction": "声音比前句更清晰，像在说服自己，节奏逐步稳住",
+            "emphasis": [
+              {
+                "span_text": "不能因为",
+                "occurrence": 1,
+                "start_char": 5,
+                "end_char": 9,
+                "strength": "medium"
+              },
+              {
+                "span_text": "没发生过",
+                "occurrence": 1,
+                "start_char": 15,
+                "end_char": 19,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.95,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "声音变得清晰，像是在说服自己；‘你说得对’之后停顿一拍；后半句逐字咬清，尾音收住。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l15",
+            "kind": "sfx",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "阿青将最后一个外壳卡扣合上，发出清脆的“咔哒”声。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l16",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "好了。试试。",
+            "emotion": "neutral",
+            "tone_instruction": "简短干脆，三词分开说，最后一个词带轻微催促感",
+            "emphasis": [
+              {
+                "span_text": "好了",
+                "occurrence": 1,
+                "start_char": 0,
+                "end_char": 2,
+                "strength": "strong"
+              },
+              {
+                "span_text": "试试",
+                "occurrence": 1,
+                "start_char": 3,
+                "end_char": 5,
+                "strength": "medium"
+              }
+            ],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "把录音笔推到小墨面前；‘好了’后停半秒，再把录音笔推过去时说‘试试’。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l17",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "小墨的手指悬在播放键上，犹豫了一下，然后轻轻按下。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l18",
+            "kind": "sfx",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "narrator",
+            "text": "录音笔的指示灯亮起，先是一阵轻微的电流底噪，然后传出一段模糊而悠远的老歌片段。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "歌声带着岁月的质感，平静而温暖",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l19",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "小墨的眼睛亮了起来，脸上露出今晚第一个真正的笑容。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l20",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "是外婆的声音……没丢。",
+            "emotion": "tender",
+            "tone_instruction": "哽咽压住，气息断续但带笑，重点落在‘没丢’",
+            "emphasis": [
+              {
+                "span_text": "外婆的声音",
+                "occurrence": 1,
+                "start_char": 1,
+                "end_char": 6,
+                "strength": "strong"
+              },
+              {
+                "span_text": "没丢",
+                "occurrence": 1,
+                "start_char": 8,
+                "end_char": 10,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.85,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "声音有些哽咽，但充满欣喜；‘是’轻起；省略号处吸气一顿；‘没丢’先气声后落实。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l21",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "阿青靠在椅背上，松了一口气，嘴角微微上扬。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l22",
+            "kind": "dialogue",
+            "speaker_role_id": "qing",
+            "narrator_id": null,
+            "performer_id": "performer-qing",
+            "text": "明天，我陪你去。",
+            "emotion": "reassuring",
+            "tone_instruction": "低而稳，像把决定放下，简短但有分量",
+            "emphasis": [
+              {
+                "span_text": "我陪你去",
+                "occurrence": 1,
+                "start_char": 3,
+                "end_char": 7,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.9,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "语气简短，但不容置疑；‘明天’后微顿；‘我陪你去’说得平实，尾音不扬。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l23",
+            "kind": "action",
+            "speaker_role_id": null,
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "小墨关掉录音笔，小心地把它握在手里，然后用力点了点头。",
+            "emotion": null,
+            "tone_instruction": null,
+            "emphasis": [],
+            "speech_rate": 1.0,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": null,
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l24",
+            "kind": "dialogue",
+            "speaker_role_id": "mo",
+            "narrator_id": null,
+            "performer_id": "performer-mo",
+            "text": "嗯。我们一起。",
+            "emotion": "tender",
+            "tone_instruction": "轻而稳，先应声再补一句，像把心定下来",
+            "emphasis": [
+              {
+                "span_text": "一起",
+                "occurrence": 1,
+                "start_char": 4,
+                "end_char": 6,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.9,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "声音轻柔而坚定；‘嗯’轻应后停半拍；‘我们一起’放慢，尾音收暖。",
+            "audio_cue_ref": null
+          },
+          {
+            "line_id": "3d904ed287914525b4e4c01e4a06dca5-l25",
+            "kind": "narration",
+            "speaker_role_id": null,
+            "narrator_id": "narrator",
+            "performer_id": "narrator",
+            "text": "雨停了。窗外的夜色变得清澈，屋内的灯光笼罩着桌上那些被修复的零件，和两个不再需要独自承担秘密的人。",
+            "emotion": "calm",
+            "tone_instruction": "收束感，语速缓，画面感放轻，最后一句带一点释然",
+            "emphasis": [
+              {
+                "span_text": "雨停了",
+                "occurrence": 1,
+                "start_char": 0,
+                "end_char": 3,
+                "strength": "medium"
+              },
+              {
+                "span_text": "不再需要独自承担秘密",
+                "occurrence": 1,
+                "start_char": 36,
+                "end_char": 46,
+                "strength": "strong"
+              }
+            ],
+            "speech_rate": 0.88,
+            "pitch": null,
+            "volume": null,
+            "pauses": [],
+            "delivery_note": "‘雨停了’后停一拍；末句前吸气，尾音渐弱但不虚。",
+            "audio_cue_ref": null
+          }
+        ]
+      },
+      "preview_blurb": "雨夜，阿青精准地找到录音笔的故障，在焊接与对话中，两人不仅修好了物件，更做出了一个关于诚实的共同决定。",
+      "continuity": {
+        "facts": [
+          "阿青发现录音笔的故障是一个松动的焊点。",
+          "焊点被成功修复，录音笔恢复正常工作。",
+          "录音笔中存储的是物主外婆唱的歌，数据完好。",
+          "阿青和小墨共同决定，明天一起向物主坦白损坏并修复的事实。"
+        ],
+        "open_threads": [
+          "物主得知录音笔曾损坏又修好后会作何反应？",
+          "小墨和阿青将如何具体向物主说明情况？"
+        ]
+      }
+    }
+  },
+  {
+    "event_id": "0812fbf46ecc4319a08e58db021ef6c5",
+    "seq": 69,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 78,
+    "generation_epoch": 1,
+    "type": "stage.changed",
+    "occurred_at": "2026-11-11T09:08:57.088526+00:00",
+    "payload": {
+      "stage": "writing"
+    }
+  },
+  {
+    "event_id": "a5e7c433567144ae9353dee80a4912b1",
+    "seq": 70,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 80,
+    "generation_epoch": 1,
+    "type": "script.ready",
+    "occurred_at": "2026-11-11T09:08:57.167532+00:00",
+    "payload": {
+      "story_version_id": "f1452833de8949f7af02cec87f879fd7",
+      "fingerprint": "d9fa6f270e913059aad9a88c8320813848cb6968d7f14420e37c57524eaa7b90"
+    }
+  },
+  {
+    "event_id": "0661ec79bc7f4ce683c5dfba26f9b39b",
+    "seq": 71,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 80,
+    "generation_epoch": 1,
+    "type": "stage.changed",
+    "occurred_at": "2026-11-11T09:08:57.167532+00:00",
+    "payload": {
+      "stage": "script_ready"
+    }
+  },
+  {
+    "event_id": "2a4c6206c1834f5aa8b77985c305a2a5",
+    "seq": 72,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 81,
+    "generation_epoch": 1,
+    "type": "script.confirmed",
+    "occurred_at": "2026-11-11T09:08:57.225867+00:00",
+    "payload": {
+      "story_version_id": "f1452833de8949f7af02cec87f879fd7"
+    }
+  },
+  {
+    "event_id": "e48b1c489f5f41228566996bcfc6d7a3",
+    "seq": 73,
+    "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+    "revision": 81,
+    "generation_epoch": 1,
+    "type": "stage.changed",
+    "occurred_at": "2026-11-11T09:08:57.225867+00:00",
+    "payload": {
+      "stage": "confirmed"
+    }
+  }
+]

@@ -175,6 +175,7 @@ def run_audio(directory, paths_file):
             failures=read(Path(args.root)/result['preview_directory']/'technical_checks.json')['failures']
             tasks={t['task_id']:t for t in state['tasks']};patches=[];evidence=[]
             for tid,failure in failures.items():
+                require(bool(failure.get('raw_task_id')), 'AUDIO_REQUIRES_MANUAL_RECOVERY')
                 raw=pipe.registry.get(failure['raw_task_id'])
                 require(failure['error_code']=='ValueError' and raw and raw['status']=='success','AUDIO_REQUIRES_MANUAL_RECOVERY')
                 data,_=read_media(Path(args.root)/raw['result']['file'],48000,1)

@@ -9,6 +9,15 @@ from .playback import playback_view
 
 
 def register_production_routes(app, repository, artifacts: ArtifactStore, owner, capabilities, reconciler=None, legacy_stories=None):
+    import os
+    if os.environ.get('MY_LEGEND_INTERACTIVE_STORIES') == '1':
+        from .interactive import register as register_interactive
+        register_interactive(app, repository, artifacts, owner)
+    else:
+        @app.get('/api/v1/story-options')
+        def interactive_disabled(request: Request):
+            owner(request)
+            return {'code': 0, 'message': 'ok', 'data': {'enabled': False}}
     router = APIRouter(prefix="/api/v1")
 
     def translate(operation):

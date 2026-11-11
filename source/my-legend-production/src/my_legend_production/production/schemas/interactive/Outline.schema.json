@@ -1,0 +1,171 @@
+{
+  "$defs": {
+    "Direction": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "premise": {
+          "minLength": 1,
+          "title": "Premise",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "premise"
+      ],
+      "title": "Direction",
+      "type": "object"
+    },
+    "SceneCard": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "location": {
+          "minLength": 1,
+          "title": "Location",
+          "type": "string"
+        },
+        "time_of_day": {
+          "minLength": 1,
+          "title": "Time Of Day",
+          "type": "string"
+        },
+        "environment": {
+          "minLength": 1,
+          "title": "Environment",
+          "type": "string"
+        },
+        "atmosphere": {
+          "minLength": 1,
+          "title": "Atmosphere",
+          "type": "string"
+        },
+        "goal": {
+          "minLength": 1,
+          "title": "Goal",
+          "type": "string"
+        },
+        "beats": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Beats",
+          "type": "array"
+        },
+        "background_prompt": {
+          "minLength": 1,
+          "title": "Background Prompt",
+          "type": "string"
+        },
+        "must_include": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Must Include",
+          "type": "array"
+        },
+        "must_avoid": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Must Avoid",
+          "type": "array"
+        },
+        "choices": {
+          "items": {
+            "$ref": "#/$defs/Direction"
+          },
+          "maxItems": 3,
+          "title": "Choices",
+          "type": "array"
+        }
+      },
+      "required": [
+        "title",
+        "location",
+        "time_of_day",
+        "environment",
+        "atmosphere",
+        "goal",
+        "beats",
+        "background_prompt"
+      ],
+      "title": "SceneCard",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "premise": {
+      "minLength": 1,
+      "title": "Premise",
+      "type": "string"
+    },
+    "relationships": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Relationships",
+      "type": "array"
+    },
+    "series_arc": {
+      "default": "",
+      "title": "Series Arc",
+      "type": "string"
+    },
+    "episode_summaries": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 24,
+      "minItems": 1,
+      "title": "Episode Summaries",
+      "type": "array"
+    },
+    "duration_sec": {
+      "enum": [
+        90,
+        120,
+        150,
+        180,
+        300
+      ],
+      "title": "Duration Sec",
+      "type": "integer"
+    },
+    "scenes": {
+      "items": {
+        "$ref": "#/$defs/SceneCard"
+      },
+      "maxItems": 6,
+      "minItems": 2,
+      "title": "Scenes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "premise",
+    "relationships",
+    "episode_summaries",
+    "duration_sec",
+    "scenes"
+  ],
+  "title": "Outline",
+  "type": "object"
+}

@@ -1,0 +1,135 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "idempotency_key": {
+      "maxLength": 128,
+      "minLength": 8,
+      "title": "Idempotency Key",
+      "type": "string"
+    },
+    "form": {
+      "default": "short",
+      "enum": [
+        "short",
+        "series"
+      ],
+      "title": "Form",
+      "type": "string"
+    },
+    "method": {
+      "default": "assist",
+      "enum": [
+        "assist",
+        "idea",
+        "continue"
+      ],
+      "title": "Method",
+      "type": "string"
+    },
+    "idea": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Idea",
+      "type": "string"
+    },
+    "genre": {
+      "default": "国风奇幻",
+      "enum": [
+        "国风奇幻",
+        "冒险成长",
+        "悬疑推理",
+        "生活治愈"
+      ],
+      "title": "Genre",
+      "type": "string"
+    },
+    "feeling": {
+      "default": "warm",
+      "enum": [
+        "warm",
+        "light",
+        "tense",
+        "fantastic"
+      ],
+      "title": "Feeling",
+      "type": "string"
+    },
+    "ending": {
+      "default": "happy",
+      "enum": [
+        "happy",
+        "open",
+        "cliffhanger"
+      ],
+      "title": "Ending",
+      "type": "string"
+    },
+    "art_style": {
+      "default": "guofeng",
+      "enum": [
+        "watercolor",
+        "guofeng",
+        "animation"
+      ],
+      "title": "Art Style",
+      "type": "string"
+    },
+    "series_episodes": {
+      "default": 6,
+      "maximum": 24,
+      "minimum": 2,
+      "title": "Series Episodes",
+      "type": "integer"
+    },
+    "character_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 6,
+      "minItems": 1,
+      "title": "Character Ids",
+      "type": "array"
+    },
+    "source_session_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Session Id"
+    },
+    "output": {
+      "default": "audio",
+      "enum": [
+        "audio",
+        "script",
+        "h5"
+      ],
+      "title": "Output",
+      "type": "string"
+    },
+    "casting": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Casting"
+    }
+  },
+  "required": [
+    "idempotency_key",
+    "character_ids"
+  ],
+  "title": "Creation",
+  "type": "object"
+}

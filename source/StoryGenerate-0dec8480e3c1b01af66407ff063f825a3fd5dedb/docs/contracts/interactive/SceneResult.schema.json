@@ -1,0 +1,122 @@
+{
+  "$defs": {
+    "DraftLine": {
+      "properties": {
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "speaker_role_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Role Id"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "audio_cue_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Audio Cue Ref"
+        },
+        "performance_hint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Performance Hint"
+        }
+      },
+      "required": [
+        "kind",
+        "text"
+      ],
+      "title": "DraftLine",
+      "type": "object"
+    },
+    "DraftScene": {
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "location": {
+          "default": "",
+          "title": "Location",
+          "type": "string"
+        },
+        "dramatic_goal": {
+          "title": "Dramatic Goal",
+          "type": "string"
+        },
+        "lines": {
+          "items": {
+            "$ref": "#/$defs/DraftLine"
+          },
+          "minItems": 1,
+          "title": "Lines",
+          "type": "array"
+        }
+      },
+      "required": [
+        "title",
+        "dramatic_goal",
+        "lines"
+      ],
+      "title": "DraftScene",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "scene": {
+      "$ref": "#/$defs/DraftScene"
+    },
+    "facts": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Facts",
+      "type": "array"
+    },
+    "open_threads": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Open Threads",
+      "type": "array"
+    },
+    "preview_blurb": {
+      "maxLength": 160,
+      "minLength": 15,
+      "title": "Preview Blurb",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scene",
+    "preview_blurb"
+  ],
+  "title": "SceneResult",
+  "type": "object"
+}
