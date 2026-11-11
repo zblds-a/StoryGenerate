@@ -29,3 +29,6 @@ Thumbs.db
 .test-tmp/
 .test-tmp-*/
 *.egg-info/
+
+# Raw paid-model acceptance evidence (publish only reviewed summaries)
+6-实测产物/interactive_real_*/
