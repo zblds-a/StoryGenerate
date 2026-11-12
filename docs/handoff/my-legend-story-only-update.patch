@@ -1,15 +1,16 @@
-From dbd0e4e1eb34e430de367339dfa3dd4746967f52 Mon Sep 17 00:00:00 2001
+From 8ba977c0b22f86169a7851d999d65078f3658795 Mon Sep 17 00:00:00 2001
 From: xurui <xurui3@js.chinamobile.com>
-Date: Thu, 12 Nov 2026 09:48:27 +0800
-Subject: [PATCH] Complete story-only generation and preserve current upstream
- integration
+Date: Thu, 12 Nov 2026 10:05:27 +0800
+Subject: [PATCH] Story-only generation with manual startup and handoff
+ contracts
 
 ---
  .gitignore                                    |   2 +
- README.md                                     |   2 +
+ README.md                                     |   4 +
  .../my-legend/INTERACTIVE_STORY_SESSIONS.md   |   2 +
  ...0\203\346\226\271\346\241\210_20261111.md" |   2 +
  ...4\266\346\212\245\345\221\212_20261111.md" |   2 +
+ ...7\245\346\265\213\350\257\225_20261112.md" |  77 +++++
  ...5\245\345\245\221\347\272\246_20261112.md" | 185 ++++++++++++
  ...7\225\350\256\260\345\275\225_20261112.md" |  61 ++++
  ...6\245\346\226\207\346\241\243_20261111.md" | 269 ++++++++++++++++++
@@ -21,10 +22,12 @@ Subject: [PATCH] Complete story-only generation and preserve current upstream
  ops/my-legend/Start-H5DirectingWorker.ps1     |  15 +-
  ops/my-legend/Start-InteractiveFrontend.ps1   |   4 +-
  ops/my-legend/Start-SpinePreview.ps1          |  50 ++--
+ ops/my-legend/Start-StoryManualTest.ps1       | 127 +++++++++
  ops/my-legend/Startup.Common.ps1              | 114 +++++++-
  ops/my-legend/StoryModel.Common.ps1           |   2 +-
  ops/my-legend/Test-StartupPid.ps1             |  75 +++++
  .../prepare_interactive_offline_audio.py      |  24 --
+ ops/my-legend/run_story_manual_api.py         |  27 ++
  .../drama_engine/interactive/api.py"          |  17 +-
  .../drama_engine/interactive/backgrounds.py"  |   2 +
  .../drama_engine/interactive/generator.py"    |  16 +-
@@ -41,6 +44,7 @@ Subject: [PATCH] Complete story-only generation and preserve current upstream
  .../interactive/engine-files.sha256.json      |  14 +-
  ...0\203\346\226\271\346\241\210_20261111.md" |   2 +
  ...4\266\346\212\245\345\221\212_20261111.md" |   2 +
+ ...7\245\346\265\213\350\257\225_20261112.md" |  77 +++++
  ...5\245\345\245\221\347\272\246_20261112.md" | 185 ++++++++++++
  ...7\225\350\256\260\345\275\225_20261112.md" |  61 ++++
  .../scripts/acceptance_interactive_real.py    |  13 +-
@@ -82,13 +86,17 @@ Subject: [PATCH] Complete story-only generation and preserve current upstream
  .../tests/test_provider_errors.py             |  81 ++++++
  ...57\345\212\250\350\257\264\346\230\216.md" |  40 +++
  ...2\345\274\217\345\211\215\347\253\257.cmd" |  34 +++
- 77 files changed, 2359 insertions(+), 391 deletions(-)
+ 81 files changed, 2669 insertions(+), 391 deletions(-)
+ create mode 100644 "docs/requirements/my-legend/\346\225\205\344\272\213\347\224\237\346\210\220\345\220\257\345\212\250\344\270\216\344\272\272\345\267\245\346\265\213\350\257\225_20261112.md"
  create mode 100644 "docs/requirements/my-legend/\346\225\205\344\272\213\347\224\237\346\210\220\347\213\254\347\253\213\344\272\244\344\273\230\344\270\216\346\216\245\345\205\245\345\245\221\347\272\246_20261112.md"
  create mode 100644 "docs/requirements/my-legend/\346\225\205\344\272\213\347\224\237\346\210\220\347\213\254\347\253\213\344\272\244\344\273\230\346\265\213\350\257\225\350\256\260\345\275\225_20261112.md"
  create mode 100644 "docs/requirements/my-legend/\351\241\271\347\233\256\344\272\244\346\216\245\346\226\207\346\241\243_20261111.md"
+ create mode 100644 ops/my-legend/Start-StoryManualTest.ps1
  create mode 100644 ops/my-legend/Test-StartupPid.ps1
  delete mode 100644 ops/my-legend/prepare_interactive_offline_audio.py
+ create mode 100644 ops/my-legend/run_story_manual_api.py
  create mode 100644 source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/acceptance/interactive/story-only-real-20261112.json
+ create mode 100644 "source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/\346\225\205\344\272\213\347\224\237\346\210\220\345\220\257\345\212\250\344\270\216\344\272\272\345\267\245\346\265\213\350\257\225_20261112.md"
  create mode 100644 "source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/\346\225\205\344\272\213\347\224\237\346\210\220\347\213\254\347\253\213\344\272\244\344\273\230\344\270\216\346\216\245\345\205\245\345\245\221\347\272\246_20261112.md"
  create mode 100644 "source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/\346\225\205\344\272\213\347\224\237\346\210\220\347\213\254\347\253\213\344\272\244\344\273\230\346\265\213\350\257\225\350\256\260\345\275\225_20261112.md"
  create mode 100644 source/fingertip-legend-app/e2e/story-session.spec.ts
@@ -116,15 +124,17 @@ index 766a4b7..e9cc096 100644
  /source/*
  !/source/fingertip-legend-app/
 diff --git a/README.md b/README.md
-index 2bf818b..adad509 100644
+index 2bf818b..95f5f1c 100644
 --- a/README.md
 +++ b/README.md
-@@ -65,3 +65,5 @@ npm run dev:h5
+@@ -65,3 +65,7 @@ npm run dev:h5
  - [项目目录整理规则](docs/PROJECT_ORGANIZATION.md)
  
  新文件不要直接放在工作区根目录。请按上述规则放入对应分类目录或所属源码项目内。
 +
 +故事生成独立入口（不启动声音与演绎）：[功能、启动与下游契约](docs/requirements/my-legend/故事生成独立交付与接入契约_20261112.md)，[测试记录](docs/requirements/my-legend/故事生成独立交付测试记录_20261112.md)。
++
++[故事生成专用启动与人工测试](docs/requirements/my-legend/故事生成启动与人工测试_20261112.md)：独立数据库、真实聊天模型、无声音/舞台 Worker。
 diff --git a/docs/requirements/my-legend/INTERACTIVE_STORY_SESSIONS.md b/docs/requirements/my-legend/INTERACTIVE_STORY_SESSIONS.md
 index 3de2367..9eb9611 100644
 --- a/docs/requirements/my-legend/INTERACTIVE_STORY_SESSIONS.md
@@ -161,6 +171,89 @@ index 67c84d2..566b956 100644
  日期：2026-11-11。结论：**可以交付前后端联调分支；不能宣称真实故事首稿全部成功或整套媒体生产已经发布验收通过。**
  
  ## 1. 测试资产与证据口径
+diff --git "a/docs/requirements/my-legend/\346\225\205\344\272\213\347\224\237\346\210\220\345\220\257\345\212\250\344\270\216\344\272\272\345\267\245\346\265\213\350\257\225_20261112.md" "b/docs/requirements/my-legend/\346\225\205\344\272\213\347\224\237\346\210\220\345\220\257\345\212\250\344\270\216\344\272\272\345\267\245\346\265\213\350\257\225_20261112.md"
+new file mode 100644
+index 0000000..d2f486f
+--- /dev/null
++++ "b/docs/requirements/my-legend/\346\225\205\344\272\213\347\224\237\346\210\220\345\220\257\345\212\250\344\270\216\344\272\272\345\267\245\346\265\213\350\257\225_20261112.md"
+@@ -0,0 +1,77 @@
++# 启动故事生成并进行人工测试
++
++## 本机入口
++
++完整前后端工程位于 `H:\Projects\my-legend-handoff-20261111`，不是通用引擎目录 StoryGenerate。
++
++故事专用入口是 `ops/my-legend/Start-StoryManualTest.ps1`。它启动独立 PostgreSQL、角色目录 API、业务 API、新故事 Worker、H5 前端；不启动声音、舞台或旧生成 Worker。旧的“启动交互式前端.cmd”会连带启动媒体，本轮请使用新入口。
++
++需要 Docker Desktop 已启动、PowerShell 7.4+。本机已有 `.venv-interactive` 和前端依赖，直接运行：
++
++```powershell
++Set-Location H:\Projects\my-legend-handoff-20261111
++.\ops\my-legend\Start-StoryManualTest.ps1 -KeyFile "$env:USERPROFILE\.codex\runtime\story-acceptance-20261111\asset-b.dpapi"
++```
++
++KeyFile 是当前 Windows 用户此前保存的加密聊天模型密钥，不是明文密钥；不要改用此前返回 401 的另一份资产。也可预先安全设置 DRAMA_LLM_API_KEY 并省略 KeyFile。换电脑时须重新配置密钥及 Python/Node 依赖，不要直接复制 DPAPI 文件。
++
++成功后打开 `http://127.0.0.1:5193/#/pages/story-session/index`。首次进入点击“开始创作”进行本机登录，再进入故事页。此入口使用“墨羽、灵墨”两个明确的测试身份，不依赖同事的舞台素材目录；生成正文仍调用真实聊天模型。图片供应商默认关闭，页面会提示“背景生图未启用”。
++
++启动和登录不发起模型生成，点击“开始一起创作”、修改或重试后才可能产生模型调用。请先完成一篇短剧，核对流程后再增加测试量。
++
++## 推荐人工测试顺序
++
++| 顺序 | 操作 | 观察重点 |
++|---|---|---|
++| 1 | 选短剧、帮我构思、两个角色；高级题材选生活治愈，其他用默认值；开始一起创作 | 不填写灵感也能完成；出现三个不同方向 |
++| 2 | 点一个方向，等大纲完成 | 能看到标题、核心冲突、角色关系、分幕；预览不能直接确认 |
++| 3 | 点击更轻松、开放式结局或突出一个角色 | 大纲重新构思，旧版本不被自动确认；变化符合所选要求 |
++| 4 | 点击“按这个方向写剧本” | 正文逐幕推进，无须逐幕点击继续；正式分幕替换预览 |
++| 5 | 写作期间选第 2 幕，选“从这里调整后续”，点更温暖或保留悬念 | 先显示已接收；到边界暂停，展示影响范围；确认后重新出大纲，再确认创作 |
++| 6 | 等待剧本完成，阅读后点击“确认当前剧本” | 停在“剧本已确认”，不会出现声音或动画制作任务 |
++| 7 | 导出剧本与背景规格 | 下载 JSON；有当前版本、确认状态、内容指纹、正文和背景规格 |
++| 8 | 选择第 1 幕、“只改这一幕”、增加互动；确认范围及新大纲 | 只重做目标幕，其他幕正文应完全相同；旧确认版本保留在导出中 |
++| 9 | 写作期间刷新页面，或离开再返回 | 恢复同一会话，已完成正文保留，不另创建重复故事 |
++| 10 | 新故事写作中点取消，再刷新 | 状态保持已取消，不再启动下一幕；已发出的请求不能据此认定未计费 |
++| 11 | 新建长剧，默认六集，大纲阶段改三集；确认并完成首集 | 有三集概要，只展开并生成当前集 |
++| 12 | 首集确认后点“继续下一集” | 生成第 2 集，继承人物、前集事实和主线；不重做第 1 集 |
++
++第一次建议先做 1–7，第二次检查 8–10，最后再测长剧。真实生成可能需要数分钟，页面展示实际阶段而非虚假百分比。看到“等待边界”时等待当前幕结束，不需要连续点击同一个按钮。
++
++如果故事已经全部完成，可以在定稿后测试指定幕修改；只有选择“从这里调整后续”才允许影响之后的幕。短剧的结局控制完整故事；长剧需分别设置本集收束及系列最终走向。
++
++## 阅读时如何判断内容质量
++
++- 人物身份、说话习惯和已知信息是否一致，有无未选择的角色突然发声。
++- 每一幕是否有目标、行动、阻力与结果，前后事实和物品状态是否衔接。
++- 点选的“更轻松、更温暖、保留悬念”等是否落实在实际剧情，而不只是标题变化。
++- 单幕改写是否保留其他正文；指定修改后续时，受保护前文是否完全保留。
++- 短剧是否收束，长剧是否完成本集局部目标并留下合理主线。
++
++“已确认”表示选择当前版本，技术检查通过不代表文学或语义质量已由人工认可。建议记录会话 ID、目标幕、操作和不符合预期的原句，方便复现。
++
++## 停止与重启
++
++```powershell
++Set-Location H:\Projects\my-legend-handoff-20261111
++.\ops\my-legend\Start-StoryManualTest.ps1 -Stop
++```
++
++停止前先在页面取消尚未完成的生成。关闭浏览器不会停止 Worker。停止入口核对 PID、启动时间和命令后，仅结束自己的进程及带专用标记的数据库容器，不删除数据库或故事记录。重启仍使用上面的启动命令，已有会话会保留。
++
++数据和日志：`H:\Projects\my-legend-handoff-20261111\runtime\story-manual-test`。数据库容器为 `storygenerate-manual-test`，端口 25440，API 为 8895/8897，前端为 5193。测试数据与之前验收库、原声音制作任务隔离。
++
++## 排错
++
++| 现象 | 优先检查 |
++|---|---|
++| 5193 打不开 | frontend.err.log、Docker 状态、是否使用 PowerShell 7 |
++| 启动提示端口冲突 | 先停止占用端口的其他测试环境；脚本不会结束不属于自己的进程 |
++| 没有角色或开关未启用 | 应使用新故事专用入口，不能只运行 npm 或旧 API；启动器会核验这两项 |
++| 一直构思、没有内容 | story-worker.err.log；确认 Worker 仍在运行，模型服务可用 |
++| 401 或模型配置失败 | 当前密钥/网关权限，不能通过反复点按钮修复认证错误 |
++| 提示版本更新 | 阅读刷新后的内容再确认，确认类操作不会自动确认新稿 |
++| 提示供应商结果待核对 | 保存会话 ID，停止重复提交，先核对供应商调用结果与费用 |
++| 提示背景未启用 | 本人工测试默认如此，不影响故事生成；聊天模型资产不能当图片服务使用 |
++
++新电脑完整安装、正式业务身份和下游接入要求，见《故事生成独立交付与接入契约_20261112.md》。专用本机入口不是正式多用户部署方案。
 diff --git "a/docs/requirements/my-legend/\346\225\205\344\272\213\347\224\237\346\210\220\347\213\254\347\253\213\344\272\244\344\273\230\344\270\216\346\216\245\345\205\245\345\245\221\347\272\246_20261112.md" "b/docs/requirements/my-legend/\346\225\205\344\272\213\347\224\237\346\210\220\347\213\254\347\253\213\344\272\244\344\273\230\344\270\216\346\216\245\345\205\245\345\245\221\347\272\246_20261112.md"
 new file mode 100644
 index 0000000..0d732f2
@@ -1117,6 +1210,139 @@ index e175d15..5fdde95 100644
  }
  $taskCli = Join-Path $taskRoot 'source/fingertip-legend-app/node_modules/@dcloudio/vite-plugin-uni/bin/uni.js'
  if (-not (Assert-LegendListener 5193 $taskCli (Get-Command node).Source)) {
+diff --git a/ops/my-legend/Start-StoryManualTest.ps1 b/ops/my-legend/Start-StoryManualTest.ps1
+new file mode 100644
+index 0000000..2049eb2
+--- /dev/null
++++ b/ops/my-legend/Start-StoryManualTest.ps1
+@@ -0,0 +1,127 @@
++param([string]$Python, [string]$KeyFile, [switch]$Stop, [switch]$NoBrowser)
++$ErrorActionPreference = 'Stop'
++if ($PSVersionTable.PSVersion -lt [Version]'7.4') { throw 'Use PowerShell 7.4 or newer (pwsh).' }
++. "$PSScriptRoot/Startup.Common.ps1"
++$manualRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
++$manualRuntime = Join-Path $manualRoot 'runtime/story-manual-test'
++$manualEngine = Join-Path $manualRoot 'source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb'
++$manualContainer = 'storygenerate-manual-test'
++$manualState = Join-Path $manualRuntime 'processes.json'
++if ($Stop) {
++    if (Test-Path -LiteralPath $manualState) {
++        foreach ($item in (Get-Content -LiteralPath $manualState -Raw | ConvertFrom-Json)) {
++            $entry = Resolve-LegendPidFile $item.pid_file $item.executable $item.arguments
++            if ($entry) { Stop-Process -Id $entry.ProcessId; Write-Output ($item.name + ' stopped') }
++        }
++    }
++    $label = & docker inspect --format '{{index .Config.Labels "storygenerate.manual"}}' $manualContainer 2>$null
++    if ($LASTEXITCODE -eq 0 -and $label -eq '1') { & docker stop $manualContainer }
++    return
++}
++if (!$Python) { $Python = Join-Path $manualRoot '.venv-interactive/Scripts/python.exe' }
++if (!(Test-Path -LiteralPath $Python)) { throw 'Python environment missing. Pass -Python with an installed project environment.' }
++$manualNode = (Get-Command node -ErrorAction Stop).Source
++$manualFrontend = Join-Path $manualRoot 'source/fingertip-legend-app'
++$manualUni = Join-Path $manualFrontend 'node_modules/@dcloudio/vite-plugin-uni/bin/uni.js'
++if (!(Test-Path -LiteralPath $manualUni)) { throw 'Run npm ci in source/fingertip-legend-app first.' }
++$manualKey = $env:DRAMA_LLM_API_KEY
++if ($KeyFile) {
++    $secured = (Get-Content -LiteralPath $KeyFile -Raw).Trim() | ConvertTo-SecureString
++    try { $manualKey = [Net.NetworkCredential]::new('', $secured).Password } finally { $secured.Dispose() }
++}
++if (!$manualKey) { throw 'Set DRAMA_LLM_API_KEY or pass -KeyFile with this Windows user DPAPI encrypted key.' }
++New-Item -ItemType Directory -Path $manualRuntime -Force | Out-Null
++$manualRecords = [Collections.Generic.List[object]]::new()
++$manualEnv = @{
++    PYTHONPATH=((Join-Path $manualEngine '4-引擎代码') + ';' + (Join-Path $manualRoot 'source/my-legend-production/src'))
++    PYTHONUTF8='1'; MY_LEGEND_INTERACTIVE_STORIES='1'; MY_LEGEND_PRODUCTION_MODULES=''; MY_LEGEND_MANUAL_STORY_TEST='1'
++    STORY_DATABASE_URL='postgresql+psycopg://postgres:story-manual-local-only@127.0.0.1:25440/postgres'
++    STORY_DATABASE_SCHEMA='story_manual_engine'
++    MY_LEGEND_PRODUCTION_DSN='postgresql://postgres:story-manual-local-only@127.0.0.1:25440/postgres'
++    MY_LEGEND_PRODUCTION_SCHEMA='story_manual'; MY_LEGEND_PRODUCTION_RUNTIME=(Join-Path $manualRuntime 'production')
++    MY_LEGEND_STORY_RUNTIME=(Join-Path $manualRuntime 'app'); MY_LEGEND_STORY_URL='http://127.0.0.1:8897'
++    STORY_IMAGE_BASE_URL=''; STORY_IMAGE_API_KEY=''; STORY_IMAGE_MODEL=''; DRAMA_LLM_API_KEY=''
++}
++$tokenPath = Join-Path $manualRuntime 'service-token.dpapi'
++if (!(Test-Path -LiteralPath $tokenPath)) {
++    $token = [Guid]::NewGuid().ToString('N') + [Guid]::NewGuid().ToString('N')
++    ConvertTo-SecureString $token -AsPlainText -Force | ConvertFrom-SecureString | Set-Content -LiteralPath $tokenPath
++}
++$secured = (Get-Content -LiteralPath $tokenPath -Raw).Trim() | ConvertTo-SecureString
++try { $token = [Net.NetworkCredential]::new('', $secured).Password } finally { $secured.Dispose() }
++$manualEnv.MY_LEGEND_STORY_TOKEN = $token
++$manualEnv.STORY_API_KEYS = (@{$token=@{principal_id='story-manual';admin=$true}} | ConvertTo-Json -Compress)
++function Start-ManualService($Name, $Executable, $Arguments, $Directory, $Extra=@{}, [switch]$Wait) {
++    $pidPath = Join-Path $manualRuntime ($Name + '.pid')
++    if (!$Wait) {
++        $manualRecords.Add(@{name=$Name;pid_file=$pidPath;executable=$Executable;arguments=$Arguments})
++        $manualRecords | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $manualState
++        if (Resolve-LegendPidFile $pidPath $Executable $Arguments) { Write-Output "$Name reused"; return }
++    }
++    $childEnv = $manualEnv.Clone()
++    foreach ($pair in $Extra.GetEnumerator()) { $childEnv[$pair.Key] = $pair.Value }
++    $child = Start-LegendProcess -FilePath $Executable -Arguments $Arguments -WorkingDirectory $Directory -Environment $childEnv `
++        -StandardOutput (Join-Path $manualRuntime ($Name+'.out.log')) -StandardError (Join-Path $manualRuntime ($Name+'.err.log')) -Wait:$Wait
++    if ($Wait) { if ($child.ExitCode) { throw "$Name failed; see runtime/story-manual-test/$Name.err.log" } }
++    else { Write-LegendPidFile $pidPath $child.Id; Write-Output "$Name started" }
++}
++try {
++    foreach ($port in @(8897,8895,5193)) {
++        $expected = switch ($port) {8897 {'drama_engine.service serve'} 8895 {'run_story_manual_api.py'} 5193 {$manualUni}}
++        $executable = if ($port -eq 5193) {$manualNode} else {$Python}
++        $listening = Assert-LegendListener $port $expected $executable
++        $name = switch ($port) {8897 {'catalog-api'} 8895 {'business-api'} 5193 {'frontend'}}
++        if ($listening -and !(Resolve-LegendPidFile (Join-Path $manualRuntime ($name+'.pid')) $executable $expected)) {
++            throw "Port $port belongs to another environment. Stop that environment first; it will not be terminated here."
++        }
++    }
++    $database = & docker ps -a --filter "name=^/$manualContainer`$" --format '{{.Names}}'
++    if (!$database) {
++        & docker create --name $manualContainer --label storygenerate.manual=1 -p '127.0.0.1:25440:5432' `
++            -e POSTGRES_PASSWORD=story-manual-local-only postgres:16-alpine | Out-Null
++        if ($LASTEXITCODE) { throw 'Docker database creation failed. Start Docker Desktop and retry.' }
++    }
++    $label = & docker inspect --format '{{index .Config.Labels "storygenerate.manual"}}' $manualContainer
++    if ($label -ne '1') { throw 'Container name belongs to a different environment.' }
++    & docker start $manualContainer | Out-Null
++    $ready = $false
++    for ($attempt=0;$attempt -lt 30;$attempt++) {
++        & docker exec $manualContainer pg_isready -U postgres *> $null
++        if ($LASTEXITCODE -eq 0) {$ready=$true;break}; Start-Sleep -Milliseconds 500
++    }
++    if (!$ready) { throw 'Manual PostgreSQL database did not become ready.' }
++    Start-ManualService 'engine-migrate' $Python '-m drama_engine.service migrate' $manualEngine @{} -Wait
++    Start-ManualService 'session-migrate' $Python ('"'+(Join-Path $PSScriptRoot 'run_interactive_story_worker.py')+'" --migrate') $manualRoot @{} -Wait
++    Start-ManualService 'catalog-api' $Python '-m drama_engine.service serve --host 127.0.0.1 --port 8897' $manualEngine
++    Wait-LegendHttp 'http://127.0.0.1:8897/health' 'Character service'
++    $headers = @{Authorization=('Bearer '+$token)}
++    foreach ($role in @(@{id='legend-moyu';name='墨羽'},@{id='legend-lingmo';name='灵墨'})) {
++        try { $null=Invoke-RestMethod ('http://127.0.0.1:8897/v1/characters/'+$role.id) -Headers $headers }
++        catch {
++            if ([int]$_.Exception.Response.StatusCode -ne 404) { throw }
++            $body=@{characters=@(@{character_id=$role.id;expected_version=0;canon=@{name=$role.name};runtime_defaults=@{};assets=@{}})} | ConvertTo-Json -Depth 8
++            $null=Invoke-RestMethod 'http://127.0.0.1:8897/v1/characters/import' -Method Post -Headers $headers -ContentType 'application/json; charset=utf-8' -Body $body
++        }
++    }
++    Start-ManualService 'business-api' $Python ('"'+(Join-Path $PSScriptRoot 'run_story_manual_api.py')+'"') $manualRoot
++    Wait-LegendHttp 'http://127.0.0.1:8895/health' 'Business API'
++    $workerEnv=@{DRAMA_LLM_API_KEY=$manualKey;DRAMA_LLM_BASE_URL='http://yunshu.xzmoma.cn:3001/v1';STORY_LLM_FAST_MODEL='deepseek-v4.1-flash-1017';STORY_LLM_BALANCED_MODEL='deepseek-v4.1-flash-1017';STORY_LLM_STRONG_MODEL='qwen/deepseek-v4-pro';STORY_INTERACTIVE_THINKING='disabled';STORY_INTERACTIVE_STREAMING='1'}
++    Start-ManualService 'story-worker' $Python ('"'+(Join-Path $PSScriptRoot 'run_interactive_story_worker.py')+'"') $manualRoot $workerEnv
++    Start-ManualService 'frontend' $manualNode ('"'+$manualUni+'" --host 127.0.0.1 --port 5193') $manualFrontend @{VITE_USE_MOCK='false';VITE_LOCAL_BACKEND='true';VITE_API_BASE_URL='http://127.0.0.1:8895/api/v1'}
++    Wait-LegendHttp 'http://127.0.0.1:5193' 'Story frontend'
++    $login=Invoke-RestMethod 'http://127.0.0.1:8895/api/v1/auth/local' -Method Post -ContentType 'application/json' -Body '{}'
++    $checkHeaders=@{Authorization=('Bearer '+$login.data.accessToken)}
++    $options=Invoke-RestMethod 'http://127.0.0.1:8895/api/v1/story-options' -Headers $checkHeaders
++    $roles=Invoke-RestMethod 'http://127.0.0.1:8895/api/v1/characters' -Headers $checkHeaders
++    if (!$options.data.enabled -or !$options.data.story_only -or @($roles.data).Count -ne 2) {
++        throw 'Story-only readiness or manual character catalog check failed.'
++    }
++    $url='http://127.0.0.1:5193/#/pages/story-session/index'
++    Write-Output "Ready: $url"
++    Write-Output 'Use local login: 开始创作. Only story generation is enabled; backgrounds are disabled.'
++    Write-Output "Logs: $manualRuntime"
++    if (!$NoBrowser) { Start-Process $url | Out-Null }
++} finally {
++    $manualKey=$null; $manualEnv.Clear()
++    if ($workerEnv) {$workerEnv.Clear()}
++}
 diff --git a/ops/my-legend/Startup.Common.ps1 b/ops/my-legend/Startup.Common.ps1
 index 407bbaf..7c8d6d8 100644
 --- a/ops/my-legend/Startup.Common.ps1
@@ -1373,6 +1599,39 @@ index 75a11db..0000000
 -
 -if __name__ == '__main__':
 -    main()
+diff --git a/ops/my-legend/run_story_manual_api.py b/ops/my-legend/run_story_manual_api.py
+new file mode 100644
+index 0000000..0d098a6
+--- /dev/null
++++ b/ops/my-legend/run_story_manual_api.py
+@@ -0,0 +1,27 @@
++"""Local manual story test: real business/session API with two explicit test roles.
++
++The production character picker depends on licensed stage assets. This local
++entry supplies story-only identities without loading or changing those assets.
++"""
++import os
++from my_legend_production.story_api import create_app
++
++
++def main():
++    if os.environ.get('MY_LEGEND_MANUAL_STORY_TEST') != '1':
++        raise RuntimeError('MANUAL_STORY_TEST_FLAG_REQUIRED')
++    app = create_app()
++    app.router.routes[:] = [r for r in app.router.routes if getattr(r, 'path', '') != '/api/v1/characters']
++
++    @app.get('/api/v1/characters')
++    def roles():
++        return {'code': 0, 'message': 'ok', 'data': [
++            dict(id=cid, name=name, description='故事人工测试角色，不绑定舞台素材', avatarUrl='', owned=True)
++            for cid, name in [('legend-moyu', '墨羽'), ('legend-lingmo', '灵墨')]]}
++
++    import uvicorn
++    uvicorn.run(app, host='127.0.0.1', port=8895, access_log=False)
++
++
++if __name__ == '__main__':
++    main()
 diff --git "a/source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/4-\345\274\225\346\223\216\344\273\243\347\240\201/drama_engine/interactive/api.py" "b/source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/4-\345\274\225\346\223\216\344\273\243\347\240\201/drama_engine/interactive/api.py"
 index b5318c3..c4a1d3a 100644
 --- "a/source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/4-\345\274\225\346\223\216\344\273\243\347\240\201/drama_engine/interactive/api.py"
@@ -2032,6 +2291,89 @@ index 67c84d2..566b956 100644
  日期：2026-11-11。结论：**可以交付前后端联调分支；不能宣称真实故事首稿全部成功或整套媒体生产已经发布验收通过。**
  
  ## 1. 测试资产与证据口径
+diff --git "a/source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/\346\225\205\344\272\213\347\224\237\346\210\220\345\220\257\345\212\250\344\270\216\344\272\272\345\267\245\346\265\213\350\257\225_20261112.md" "b/source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/\346\225\205\344\272\213\347\224\237\346\210\220\345\220\257\345\212\250\344\270\216\344\272\272\345\267\245\346\265\213\350\257\225_20261112.md"
+new file mode 100644
+index 0000000..d2f486f
+--- /dev/null
++++ "b/source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/\346\225\205\344\272\213\347\224\237\346\210\220\345\220\257\345\212\250\344\270\216\344\272\272\345\267\245\346\265\213\350\257\225_20261112.md"
+@@ -0,0 +1,77 @@
++# 启动故事生成并进行人工测试
++
++## 本机入口
++
++完整前后端工程位于 `H:\Projects\my-legend-handoff-20261111`，不是通用引擎目录 StoryGenerate。
++
++故事专用入口是 `ops/my-legend/Start-StoryManualTest.ps1`。它启动独立 PostgreSQL、角色目录 API、业务 API、新故事 Worker、H5 前端；不启动声音、舞台或旧生成 Worker。旧的“启动交互式前端.cmd”会连带启动媒体，本轮请使用新入口。
++
++需要 Docker Desktop 已启动、PowerShell 7.4+。本机已有 `.venv-interactive` 和前端依赖，直接运行：
++
++```powershell
++Set-Location H:\Projects\my-legend-handoff-20261111
++.\ops\my-legend\Start-StoryManualTest.ps1 -KeyFile "$env:USERPROFILE\.codex\runtime\story-acceptance-20261111\asset-b.dpapi"
++```
++
++KeyFile 是当前 Windows 用户此前保存的加密聊天模型密钥，不是明文密钥；不要改用此前返回 401 的另一份资产。也可预先安全设置 DRAMA_LLM_API_KEY 并省略 KeyFile。换电脑时须重新配置密钥及 Python/Node 依赖，不要直接复制 DPAPI 文件。
++
++成功后打开 `http://127.0.0.1:5193/#/pages/story-session/index`。首次进入点击“开始创作”进行本机登录，再进入故事页。此入口使用“墨羽、灵墨”两个明确的测试身份，不依赖同事的舞台素材目录；生成正文仍调用真实聊天模型。图片供应商默认关闭，页面会提示“背景生图未启用”。
++
++启动和登录不发起模型生成，点击“开始一起创作”、修改或重试后才可能产生模型调用。请先完成一篇短剧，核对流程后再增加测试量。
++
++## 推荐人工测试顺序
++
++| 顺序 | 操作 | 观察重点 |
++|---|---|---|
++| 1 | 选短剧、帮我构思、两个角色；高级题材选生活治愈，其他用默认值；开始一起创作 | 不填写灵感也能完成；出现三个不同方向 |
++| 2 | 点一个方向，等大纲完成 | 能看到标题、核心冲突、角色关系、分幕；预览不能直接确认 |
++| 3 | 点击更轻松、开放式结局或突出一个角色 | 大纲重新构思，旧版本不被自动确认；变化符合所选要求 |
++| 4 | 点击“按这个方向写剧本” | 正文逐幕推进，无须逐幕点击继续；正式分幕替换预览 |
++| 5 | 写作期间选第 2 幕，选“从这里调整后续”，点更温暖或保留悬念 | 先显示已接收；到边界暂停，展示影响范围；确认后重新出大纲，再确认创作 |
++| 6 | 等待剧本完成，阅读后点击“确认当前剧本” | 停在“剧本已确认”，不会出现声音或动画制作任务 |
++| 7 | 导出剧本与背景规格 | 下载 JSON；有当前版本、确认状态、内容指纹、正文和背景规格 |
++| 8 | 选择第 1 幕、“只改这一幕”、增加互动；确认范围及新大纲 | 只重做目标幕，其他幕正文应完全相同；旧确认版本保留在导出中 |
++| 9 | 写作期间刷新页面，或离开再返回 | 恢复同一会话，已完成正文保留，不另创建重复故事 |
++| 10 | 新故事写作中点取消，再刷新 | 状态保持已取消，不再启动下一幕；已发出的请求不能据此认定未计费 |
++| 11 | 新建长剧，默认六集，大纲阶段改三集；确认并完成首集 | 有三集概要，只展开并生成当前集 |
++| 12 | 首集确认后点“继续下一集” | 生成第 2 集，继承人物、前集事实和主线；不重做第 1 集 |
++
++第一次建议先做 1–7，第二次检查 8–10，最后再测长剧。真实生成可能需要数分钟，页面展示实际阶段而非虚假百分比。看到“等待边界”时等待当前幕结束，不需要连续点击同一个按钮。
++
++如果故事已经全部完成，可以在定稿后测试指定幕修改；只有选择“从这里调整后续”才允许影响之后的幕。短剧的结局控制完整故事；长剧需分别设置本集收束及系列最终走向。
++
++## 阅读时如何判断内容质量
++
++- 人物身份、说话习惯和已知信息是否一致，有无未选择的角色突然发声。
++- 每一幕是否有目标、行动、阻力与结果，前后事实和物品状态是否衔接。
++- 点选的“更轻松、更温暖、保留悬念”等是否落实在实际剧情，而不只是标题变化。
++- 单幕改写是否保留其他正文；指定修改后续时，受保护前文是否完全保留。
++- 短剧是否收束，长剧是否完成本集局部目标并留下合理主线。
++
++“已确认”表示选择当前版本，技术检查通过不代表文学或语义质量已由人工认可。建议记录会话 ID、目标幕、操作和不符合预期的原句，方便复现。
++
++## 停止与重启
++
++```powershell
++Set-Location H:\Projects\my-legend-handoff-20261111
++.\ops\my-legend\Start-StoryManualTest.ps1 -Stop
++```
++
++停止前先在页面取消尚未完成的生成。关闭浏览器不会停止 Worker。停止入口核对 PID、启动时间和命令后，仅结束自己的进程及带专用标记的数据库容器，不删除数据库或故事记录。重启仍使用上面的启动命令，已有会话会保留。
++
++数据和日志：`H:\Projects\my-legend-handoff-20261111\runtime\story-manual-test`。数据库容器为 `storygenerate-manual-test`，端口 25440，API 为 8895/8897，前端为 5193。测试数据与之前验收库、原声音制作任务隔离。
++
++## 排错
++
++| 现象 | 优先检查 |
++|---|---|
++| 5193 打不开 | frontend.err.log、Docker 状态、是否使用 PowerShell 7 |
++| 启动提示端口冲突 | 先停止占用端口的其他测试环境；脚本不会结束不属于自己的进程 |
++| 没有角色或开关未启用 | 应使用新故事专用入口，不能只运行 npm 或旧 API；启动器会核验这两项 |
++| 一直构思、没有内容 | story-worker.err.log；确认 Worker 仍在运行，模型服务可用 |
++| 401 或模型配置失败 | 当前密钥/网关权限，不能通过反复点按钮修复认证错误 |
++| 提示版本更新 | 阅读刷新后的内容再确认，确认类操作不会自动确认新稿 |
++| 提示供应商结果待核对 | 保存会话 ID，停止重复提交，先核对供应商调用结果与费用 |
++| 提示背景未启用 | 本人工测试默认如此，不影响故事生成；聊天模型资产不能当图片服务使用 |
++
++新电脑完整安装、正式业务身份和下游接入要求，见《故事生成独立交付与接入契约_20261112.md》。专用本机入口不是正式多用户部署方案。
 diff --git "a/source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/\346\225\205\344\272\213\347\224\237\346\210\220\347\213\254\347\253\213\344\272\244\344\273\230\344\270\216\346\216\245\345\205\245\345\245\221\347\272\246_20261112.md" "b/source/StoryGenerate-0dec8480e3c1b01af66407ff063f825a3fd5dedb/docs/\346\225\205\344\272\213\347\224\237\346\210\220\347\213\254\347\253\213\344\272\244\344\273\230\344\270\216\346\216\245\345\205\245\345\245\221\347\272\246_20261112.md"
 new file mode 100644
 index 0000000..0d732f2

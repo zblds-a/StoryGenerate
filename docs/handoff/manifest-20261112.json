@@ -1,22 +1,22 @@
 {
   "base": "2f8439970c92d12412fc3cb476fb1842210a66e3",
   "previous_handoff": "dd9edba153dbc98571021900d98a9ff68b21859a",
-  "integration_commit": "4a36e382cc019fd9de44e7fdfb428c479d534194",
-  "integration_tree": "2db07e5bd6ea7e7fe0075590deea16e0d51b959a",
+  "integration_commit": "5795c576d49460606051a4e3916709ba27c92f53",
+  "integration_tree": "0f9d6bbcb99595352fccb745588f3f7d9493bf2f",
   "remote": "https://github.com/zblds-a/StoryGenerate",
   "branch": "codex/my-legend-story-generation",
   "patches": {
     "my-legend-interactive-story-sessions.patch": {
       "base": "2f8439970c92d12412fc3cb476fb1842210a66e3",
-      "patch_commit": "04bce635ca6dd5bdda18079d921bc98ea8d6907c",
-      "bytes": 696430,
-      "sha256": "e34e78882bca02c60a97c9c44cc6a79e85ea41c35655e9701d663378055ee5d2"
+      "patch_commit": "c956858a6b2fa97c6c7470b66492f75fab12ce7b",
+      "bytes": 722914,
+      "sha256": "b2e2c60329cc9859c58a656213c1529ec401d36f8f1413fa79a3aeb77c073c2c"
     },
     "my-legend-story-only-update.patch": {
       "base": "dd9edba153dbc98571021900d98a9ff68b21859a",
-      "patch_commit": "dbd0e4e1eb34e430de367339dfa3dd4746967f52",
-      "bytes": 280661,
-      "sha256": "66f14f3a953589178cdcf893dd0a35233d604f1ff8d9ea2688846ec57ec0756f"
+      "patch_commit": "8ba977c0b22f86169a7851d999d65078f3658795",
+      "bytes": 307158,
+      "sha256": "fc007a50d5c3213b2190c73eb2870ec8b9e1c1658c5936fb008241636964aa1c"
     }
   }
 }
