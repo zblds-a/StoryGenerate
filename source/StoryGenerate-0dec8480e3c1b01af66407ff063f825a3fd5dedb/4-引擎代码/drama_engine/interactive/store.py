@@ -108,9 +108,13 @@ def public(state):
                'confirmed': ['next_episode', 'change'], 'failed': ['retry']}.get(stage, [])
     if stage == 'failed':
         actions = [] if state.get('inflight_unknown') else (['retry', 'change'] if state.get('outline') else ['retry'])
+    if stage == 'outline_ready' and not state.get('source_delivery') and not state.get('approved_outline'):
+        actions = [*actions, 'set_preferences']
+    if state['creation']['form'] != 'series' or state['episode_number'] >= state['creation']['series_episodes']:
+        actions = [action for action in actions if action != 'next_episode']
     if stage not in ('cancelled', 'confirmed', 'media_ready'):
         actions = [*actions, 'cancel']
-    if any(b['status'] == 'failed' for b in state['backgrounds'].values()):
+    if stage != 'cancelled' and any(b['status'] == 'failed' for b in state['backgrounds'].values()):
         actions = [*actions, 'retry_background']
     value['available_actions'] = actions
     value['pending_change_fingerprint'] = fingerprint(state['pending_change']) if state['pending_change'] else None

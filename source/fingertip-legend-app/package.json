@@ -12,7 +12,8 @@
     "test": "vitest run",
     "check:assets": "node scripts/check-assets.mjs",
     "dev:mp-weixin": "uni -p mp-weixin",
-    "build:mp-weixin": "uni build -p mp-weixin"
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "test:e2e:story": "playwright test"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-5020420260813003",
@@ -29,6 +30,7 @@
     "@dcloudio/uni-cli-shared": "3.0.0-5020420260813003",
     "@dcloudio/uni-stacktracey": "3.0.0-5020420260813003",
     "@dcloudio/vite-plugin-uni": "3.0.0-5020420260813003",
+    "@playwright/test": "^1.58.2",
     "@vue/runtime-core": "3.4.21",
     "sass": "1.77.8",
     "typescript": "5.7.3",

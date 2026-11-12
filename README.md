@@ -65,3 +65,5 @@ npm run dev:h5
 - [项目目录整理规则](docs/PROJECT_ORGANIZATION.md)
 
 新文件不要直接放在工作区根目录。请按上述规则放入对应分类目录或所属源码项目内。
+
+故事生成独立入口（不启动声音与演绎）：[功能、启动与下游契约](docs/requirements/my-legend/故事生成独立交付与接入契约_20261112.md)，[测试记录](docs/requirements/my-legend/故事生成独立交付测试记录_20261112.md)。

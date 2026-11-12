@@ -185,3 +185,33 @@ def test_adjustment_while_finalizing_does_not_publish(service):
     Worker(service,Late).run_once()
     state=service.store.get(s['id'],'o')
     assert state['stage']=='change_ready' and state['delivery'] is None
+
+
+def test_cancelled_background_cannot_publish_late_image(service, tmp_path):
+    Image = pytest.importorskip('PIL.Image')
+    from drama_engine.interactive.backgrounds import BackgroundWorker
+    service.images_enabled = True
+    created = service.create('o', Creation(idempotency_key='cancel-image', character_ids=['a'],
+        method='idea', idea='竹林'), CHARS)
+    worker = Worker(service, ScriptedGenerator)
+    worker.run_once()
+    raw = service.store.get(created['id'], 'o')
+    service.command(created['id'], 'o', Command(command_id='bg-plan-confirm', expected_revision=raw['revision'],
+        kind='confirm_outline', target_id=raw['plan_id'], fingerprint=raw['outline_fingerprint']))
+    calls = []
+    class CancelImage:
+        def generate(self, spec):
+            calls.append(spec)
+            current = service.store.get(created['id'], 'o')
+            service.command(created['id'], 'o', Command(command_id='cancel-during-image',
+                expected_revision=current['revision'], kind='cancel'))
+            out = BytesIO()
+            Image.new('RGB', (400, 300)).save(out, format='PNG')
+            return out.getvalue(), 'fixture-image'
+    backgrounds = BackgroundWorker(service, CancelImage(), tmp_path)
+    assert backgrounds.run_once()
+    assert not backgrounds.run_once()
+    state = service.store.get(created['id'], 'o')
+    assert len(calls) == 1 and state['stage'] == 'cancelled'
+    assert all(bg['status'] == 'stale' for bg in state['backgrounds'].values())
+    assert not any(e['type'] == 'background.ready' for e in state['events'])

@@ -64,6 +64,16 @@
       "title": "Ending",
       "type": "string"
     },
+    "series_ending": {
+      "default": "open",
+      "enum": [
+        "happy",
+        "open",
+        "cliffhanger"
+      ],
+      "title": "Series Ending",
+      "type": "string"
+    },
     "art_style": {
       "default": "guofeng",
       "enum": [
@@ -103,7 +113,7 @@
       "title": "Source Session Id"
     },
     "output": {
-      "default": "audio",
+      "default": "script",
       "enum": [
         "audio",
         "script",

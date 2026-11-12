@@ -42,7 +42,6 @@ class ProductionRepository:
             db.execute((Path(__file__).parent / "migrations/004_work_archives.sql").read_text(encoding="utf-8"))
             db.execute((Path(__file__).parent / "migrations/005_auto_title.sql").read_text(encoding="utf-8"))
             db.execute((Path(__file__).parent / "migrations/006_flow_recovery.sql").read_text(encoding="utf-8"))
-            db.execute((Path(__file__).parent / "migrations/007_interactive_sources.sql").read_text(encoding="utf-8"))
 
     @staticmethod
     def event(db, job_id, kind, details):
@@ -67,10 +66,6 @@ class ProductionRepository:
                     accessible = db.execute("""SELECT 1 FROM artifacts a JOIN jobs j ON j.id=a.job_id
                         WHERE j.owner_id=%s AND a.kind=%s AND a.sha256=%s AND a.source_version_id=%s LIMIT 1""",
                         (owner_id, ref.kind, ref.sha256, ref.source_version_id)).fetchone()
-                    if not accessible:
-                        accessible = db.execute('''SELECT 1 FROM interactive_story_sources
-                            WHERE owner_id=%s AND kind=%s AND sha256=%s AND story_version_id=%s LIMIT 1''',
-                            (owner_id, ref.kind, ref.sha256, ref.source_version_id)).fetchone()
                     if not accessible:
                         raise ProductionError("SOURCE_ARTIFACT_NOT_OWNED")
             if isinstance(request.source, (SavedPerformanceSource, DirectedPerformanceSource)):

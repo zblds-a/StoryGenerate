@@ -34,11 +34,12 @@ class Creation(Model):
     genre: Literal['国风奇幻', '冒险成长', '悬疑推理', '生活治愈'] = '国风奇幻'
     feeling: Literal['warm', 'light', 'tense', 'fantastic'] = 'warm'
     ending: Literal['happy', 'open', 'cliffhanger'] = 'happy'
+    series_ending: Literal['happy', 'open', 'cliffhanger'] = 'open'
     art_style: Literal['watercolor', 'guofeng', 'animation'] = 'guofeng'
     series_episodes: int = Field(default=6, ge=2, le=24)
     character_ids: list[str] = Field(min_length=1, max_length=6)
     source_session_id: str | None = None
-    output: Literal['audio', 'script', 'h5'] = 'audio'
+    output: Literal['audio', 'script', 'h5'] = 'script'
     casting: dict | None = None
 
     @model_validator(mode='after')
@@ -58,12 +59,16 @@ class Command(Model):
     command_id: str = Field(min_length=8, max_length=128)
     expected_revision: int = Field(ge=1)
     kind: Literal['select_direction', 'revise_outline', 'confirm_outline', 'change', 'confirm_change',
-                  'confirm_script', 'next_episode', 'cancel', 'retry_background', 'retry']
+                  'confirm_script', 'next_episode', 'cancel', 'retry_background', 'retry', 'set_preferences']
     target_id: str | None = None
     fingerprint: str | None = None
     option_id: str | None = None
     text: str = Field(default='', max_length=2000)
     scope: Literal['scene', 'following'] = 'following'
+    ending: Literal['happy', 'open', 'cliffhanger'] | None = None
+    series_ending: Literal['happy', 'open', 'cliffhanger'] | None = None
+    focus_role_id: str | None = None
+    series_episodes: int | None = Field(default=None, ge=2, le=24)
 
 
 class Direction(Model):
@@ -119,9 +124,10 @@ class BackgroundSpec(Model):
 
 
 def options(images=False):
-    return {'version': 'story-options/1', 'enabled': True, 'images_enabled': images,
+    return {'version': 'story-options/2', 'enabled': True, 'images_enabled': images,
             'genres': list(GENRES), 'forms': ['short', 'series'], 'methods': ['assist', 'idea', 'continue'],
             'feelings': ['warm', 'light', 'tense', 'fantastic'], 'endings': ['happy', 'open', 'cliffhanger'],
             'art_styles': ['guofeng', 'watercolor', 'animation'], 'quick_changes': QUICK,
-            'defaults': {'form': 'short', 'series_episodes': 6, 'feeling': 'warm', 'ending': 'happy', 'art_style': 'guofeng'},
+            'defaults': {'form': 'short', 'series_episodes': 6, 'feeling': 'warm', 'ending': 'happy',
+                'series_ending': 'open', 'art_style': 'guofeng', 'output': 'script'},
             'streaming': 'sse', 'background_parallelism': 2}

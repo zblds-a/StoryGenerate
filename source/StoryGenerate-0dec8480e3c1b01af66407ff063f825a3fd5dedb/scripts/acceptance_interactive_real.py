@@ -48,7 +48,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--probe', action='store_true')
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--case', choices=['short', 'mystery', 'fantasy', 'adventure', 'series', 'continue', 'revise', 'outline_edit', 'mid_change', 'cancel'])
+    parser.add_argument('--case', choices=['short', 'mystery', 'fantasy', 'adventure', 'series', 'continue', 'revise', 'outline_edit', 'mid_change', 'cancel', 'preferences'])
     parser.add_argument('--stream', action='store_true')
     parser.add_argument('--source-id')
     parser.add_argument('--resume-id')
@@ -77,7 +77,7 @@ def scenario(args):
     engine = create_engine(args.database_url or 'sqlite:///' + str((args.output/'sessions.db').resolve()))
     store = Store(engine)
     store.migrate()
-    service = Service(store)
+    service = Service(store, story_only=True)
     chars = [dict(character_id=cid, role_id=cid, performer_id='performer-' + cid,
         canon={'name': name, 'immutable_facts': [fact]}, profile={'speech_style': style, 'goal': '和伙伴一起解决眼前困难'})
         for cid, name, fact, style in [('qing', '阿青', '擅长修理小物件', '简短直接，行动前先问清楚'),
@@ -154,7 +154,10 @@ def scenario(args):
         elif state['stage'] == 'directions_ready':
             command('select_direction', target_id=state['directions'][0]['id'])
         elif state['stage'] == 'outline_ready':
-            if args.case == 'outline_edit' and not adjusted:
+            if args.case == 'preferences' and not adjusted:
+                command('set_preferences', ending='open', focus_role_id='mo')
+                adjusted = True
+            elif args.case == 'outline_edit' and not adjusted:
                 command('revise_outline', option_id='lighter')
                 adjusted = True
             else:
@@ -191,6 +194,10 @@ def scenario(args):
     if args.case == 'mid_change':
         checks['changed_during_call'] = interaction[0] and state['generation_epoch'] > 1
         checks['protected_prefix_unchanged'] = state['scenes'][:len(state.get('protected_prefix',[]))] == state.get('protected_prefix')
+    if args.case == 'preferences':
+        checks['selected_ending_applied'] = state['creation']['ending'] == 'open'
+        checks['focus_recorded'] = any('mo' in item for item in state['feedback'])
+        checks['outline_revision_advanced'] = state['generation_epoch'] > 1
     report['checks'] = checks
     report['accepted'] = all(checks.values())
     report['source_sha256'] = source_hashes

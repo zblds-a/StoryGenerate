@@ -36,7 +36,7 @@ def env(tmp_path):
     service = Service(store)
     media = []
     worker = Worker(service, ScriptedGenerator, lambda s, key: media.append(key) or {'job_id': key})
-    state = service.create('owner', Creation(idempotency_key='creation-1', character_ids=['a'], method='idea', idea='相遇'), CHARS)
+    state = service.create('owner', Creation(idempotency_key='creation-1', character_ids=['a'], method='idea', idea='相遇', output='audio'), CHARS)
     return service, worker, state['id'], media
 
 
@@ -186,3 +186,80 @@ def test_short_and_series_choice_only(tmp_path):
         kind='select_direction', target_id=state['directions'][0]['id']))
     w.run_once()
     assert len(store.get(s['id'], 'o')['outline']['episode_summaries']) == 6
+
+
+def test_preferences_replan_and_reject_stale_approval(env):
+    svc, w, sid, _ = env
+    w.run_once()
+    before = svc.store.get(sid, 'owner')
+    cmd(env, 'set_preferences', ending='open', focus_role_id='a')
+    with pytest.raises(Conflict):
+        cmd(env, 'confirm_outline', target_id=before['plan_id'], fingerprint=before['outline_fingerprint'])
+    w.run_once()
+    after = svc.store.get(sid, 'owner')
+    assert after['creation']['ending'] == 'open'
+    assert after['generation_epoch'] == before['generation_epoch'] + 1
+    assert after['plan_id'] != before['plan_id']
+    assert 'a' in after['feedback'][-1]
+    cmd(env, 'confirm_outline', target_id=after['plan_id'], fingerprint=after['outline_fingerprint'])
+    with pytest.raises(Conflict):
+        cmd(env, 'set_preferences', ending='happy')
+
+
+def test_series_episode_count_changes_before_approval(env):
+    svc, w, _, _ = env
+    created = svc.create('owner', Creation(idempotency_key='series-count', character_ids=['a'],
+        form='series', method='idea', idea='寻找', output='script'), CHARS)
+    sid = created['id']
+    w.run_once()  # the older fixture session
+    w.run_once()
+    s = svc.store.get(sid, 'owner')
+    svc.command(sid, 'owner', Command(command_id='count-change', expected_revision=s['revision'],
+        kind='set_preferences', series_episodes=3))
+    w.run_once()
+    assert len(svc.store.get(sid, 'owner')['outline']['episode_summaries']) == 3
+    assert len(svc.store.get(sid, 'owner')['series_outline']['episode_summaries']) == 3
+
+
+def test_story_only_never_dispatches_media_or_legacy_work(env):
+    svc, _, sid, media = env
+    svc.story_only = True
+    with pytest.raises(Conflict, match='STORY_ONLY_OUTPUT_REQUIRED'):
+        svc.create('owner', Creation(idempotency_key='reject-audio', character_ids=['a'], output='audio'), CHARS)
+    worker = Worker(svc, ScriptedGenerator, lambda *args: media.append('unexpected'))
+    assert not worker.run_once()  # preexisting audio session remains untouched
+    assert svc.store.get(sid, 'owner')['stage'] == 'outlining'
+    created = svc.create('owner', Creation(idempotency_key='script-only', character_ids=['a'],
+        method='idea', idea='寻找', output='script'), CHARS)
+    story_env = svc, worker, created['id'], media
+    start(story_env)
+    finish(story_env)
+    s = svc.store.get(created['id'], 'owner')
+    cmd(story_env, 'confirm_script', target_id=s['delivery']['story_version_id'], fingerprint=s['script_fingerprint'])
+    assert svc.store.get(created['id'], 'owner')['stage'] == 'confirmed'
+    assert not worker.run_once()
+    assert media == []
+
+
+def test_single_scene_change_preserves_both_sides_and_confirmed_history(env):
+    svc, w, sid, _ = env
+    start(env)
+    finish(env)
+    before = svc.store.get(sid, 'owner')
+    cmd(env, 'confirm_script', target_id=before['delivery']['story_version_id'], fingerprint=before['script_fingerprint'])
+    # Legacy media dispatch is irrelevant here: emulate the confirmed-only terminal state.
+    svc.store.mutate(sid, 'owner', lambda s: s.update(stage='confirmed'))
+    cmd(env, 'change', target_id=before['scene_keys'][1], scope='scene', option_id='interaction')
+    pending = svc.store.get(sid, 'owner')['pending_change']
+    assert pending['start'] == 1 and pending['scope'] == 'scene'
+    cmd(env, 'confirm_change', fingerprint=fingerprint(pending))
+    assert w.run_once()
+    replanned = svc.store.get(sid, 'owner')
+    cmd(env, 'confirm_outline', target_id=replanned['plan_id'], fingerprint=replanned['outline_fingerprint'])
+    finish(env)
+    after = svc.store.get(sid, 'owner')
+    assert after['scenes'][0] == before['scenes'][0]
+    assert after['scenes'][2] == before['scenes'][2]
+    assert after['version_history'][0]['delivery'] == before['delivery']
+    assert after['delivery']['story_version_id'] != before['delivery']['story_version_id']
+    assert after['stage'] == 'script_ready'

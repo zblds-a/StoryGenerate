@@ -4,13 +4,16 @@ from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 from .models import Creation, Command, QUICK, BackgroundSpec, fingerprint
 from .store import Conflict, emit, now, public
+from .prompts import VERSION
 
 
 class Service:
-    def __init__(self, store, images_enabled=False):
-        self.store, self.images_enabled = store, images_enabled
+    def __init__(self, store, images_enabled=False, story_only=False):
+        self.store, self.images_enabled, self.story_only = store, images_enabled, story_only
 
     def create(self, owner, value: Creation, characters):
+        if self.story_only and value.output != 'script':
+            raise Conflict('STORY_ONLY_OUTPUT_REQUIRED')
         if {c['character_id'] for c in characters} != set(value.character_ids):
             raise Conflict('CHARACTERS_NOT_FOUND')
         for c in characters:
@@ -30,6 +33,8 @@ class Service:
         if source:
             creation = {**source['creation'], 'idempotency_key': value.idempotency_key,
                         'method': 'continue', 'source_session_id': source['id']}
+            if self.story_only:
+                creation.update(output='script', casting=None)
         state = dict(id=sid, owner=owner, revision=1, generation_epoch=1, creation=creation,
             characters=characters, created_at=now(), updated_at=now(), last_seq=0, events=[], commands={},
             stage='directions' if creation['method'] == 'assist' else 'outlining',
@@ -44,7 +49,7 @@ class Service:
             source_delivery=source['delivery'] if source else None,
             series_outline=source.get('series_outline') if source else None,
             call_records=[], call_count=0, unknown_usage_calls=0,
-            prompt_version='interactive-story/1',
+            prompt_version=VERSION,
             confirmed_version=None, delivery=None, media=None, metrics={'started_at': now()})
         emit(state, 'stage.changed', {'stage': state['stage']})
         return public(self.store.create(owner, value.idempotency_key, fingerprint(value.model_dump()), state))
@@ -52,6 +57,8 @@ class Service:
     def command(self, sid, owner, command: Command):
         digest = fingerprint(command.model_dump())
         def apply(s):
+            if self.story_only and s['creation']['output'] != 'script':
+                raise Conflict('STORY_ONLY_SESSION_REQUIRED')
             previous = s['commands'].get(command.command_id)
             if previous:
                 if previous['hash'] != digest:
@@ -69,6 +76,28 @@ class Service:
                     if bg['status'] in ('queued', 'running'):
                         bg['status'] = 'stale'
                 emit(s, 'generation.cancelled')
+            elif k == 'set_preferences':
+                if s['work'] or s.get('source_delivery') or s.get('approved_outline'):
+                    raise Conflict('PREFERENCES_FROZEN')
+                if command.focus_role_id and command.focus_role_id not in s['creation']['character_ids']:
+                    raise Conflict('UNAPPROVED_ROLE')
+                if (command.series_episodes is not None or command.series_ending is not None) and s['creation']['form'] != 'series':
+                    raise Conflict('SERIES_REQUIRED')
+                if command.ending is None and command.series_ending is None and not command.focus_role_id and command.series_episodes is None:
+                    raise Conflict('PREFERENCES_REQUIRED')
+                if command.ending is not None:
+                    s['creation']['ending'] = command.ending
+                if command.series_ending is not None:
+                    s['creation']['series_ending'] = command.series_ending
+                if command.series_episodes is not None:
+                    s['creation']['series_episodes'] = command.series_episodes
+                if command.focus_role_id:
+                    s['feedback'].append('突出角色 ' + command.focus_role_id + ' 的目标、选择与成长')
+                s['generation_epoch'] += 1
+                s['plan_id'], s['plan_revision'] = uuid4().hex, s['plan_revision'] + 1
+                s['stage'] = 'outlining'
+                emit(s, 'change.applied', {'scope': 'outline', 'ending': s['creation']['ending'],
+                    'series_episodes': s['creation']['series_episodes'], 'focus_role_id': command.focus_role_id})
             elif k == 'select_direction':
                 d = next((d for d in s['directions'] if d['id'] == command.target_id), None)
                 if not d:
@@ -152,6 +181,7 @@ class Service:
                     raise Conflict('UNKNOWN_CALL_REQUIRES_RECONCILIATION')
                 s['stage'] = s['failed_stage']
                 s['error_code'] = None
+                s['error_details'] = None
             elif k == 'next_episode':
                 # Returned descriptor is consumed by the client to create an idempotent child session.
                 if s['creation']['form'] != 'series' or s['episode_number'] >= s['creation']['series_episodes']:
@@ -224,6 +254,8 @@ class Worker:
 
     def run_once(self):
         for snapshot in self.store.all():
+            if self.service.story_only and snapshot['creation']['output'] != 'script':
+                continue  # Do not claim legacy media sessions in the story-only worker.
             if snapshot['stage'] not in ('directions', 'outlining', 'writing', 'media_pending'):
                 continue
             sid, owner = snapshot['id'], snapshot['owner']
@@ -322,7 +354,7 @@ class Worker:
                     return original(spec, system, user, *args, **kwargs)
             finally:
                 records = getattr(provider, 'call_history', [])[start:]
-                records = [{**record, 'interactive_prompt_version': 'interactive-story/1'} for record in records]
+                records = [{**record, 'interactive_prompt_version': VERSION} for record in records]
                 def account(s):
                     s['call_records'].extend(records)
                     unknown = not records or any(c.get('usage_source') == 'unavailable' for c in records)
@@ -354,6 +386,8 @@ class Worker:
                 # Preserve confirmed prefix exactly; a new plan cannot silently rewrite it.
                 if s['outline']:
                     prefix = len(s['scenes'])
+                    if len(result['scenes']) <= prefix:
+                        raise ValueError('OUTLINE_REWRITE_RANGE_MISSING')
                     result['scenes'][:prefix] = copy.deepcopy(s['outline']['scenes'][:prefix])
                     if s.get('change_scope') == 'scene':
                         result['scenes'] = [*s['outline']['scenes'][:prefix], result['scenes'][prefix],
@@ -362,9 +396,13 @@ class Worker:
                 s['scene_keys'] = [keys[i] if i < len(keys) else uuid4().hex for i in range(len(result['scenes']))]
                 for card in result['scenes']:
                     for choice in card['choices']:
-                        choice['id'] = uuid4().hex
+                        choice.setdefault('id', uuid4().hex)
                 s['outline'] = result
-                s['series_outline'] = s.get('series_outline') or copy.deepcopy(result)
+                series = copy.deepcopy(result)
+                if s.get('series_outline') and s['episode_number'] > 1:
+                    count = s['episode_number'] - 1
+                    series['episode_summaries'][:count] = s['series_outline']['episode_summaries'][:count]
+                s['series_outline'] = series
                 s['outline_fingerprint'] = fingerprint({'outline': result, 'characters': s['characters'],
                     'plan_revision': s['plan_revision'], 'creation': s['creation']})
                 s['stage'] = 'outline_ready'

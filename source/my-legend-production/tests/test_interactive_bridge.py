@@ -1,47 +1,33 @@
-"""No providers or production DB: exercise the real confirmed-delivery handoff."""
-from contextlib import contextmanager
+"""Story-only integration: confirmation exports a version, never a media job."""
 from pathlib import Path
 import json
 import pytest
-from my_legend_production.production.interactive import media_submit
-from my_legend_production.production.artifacts import ArtifactStore
-from my_legend_production.production.contracts import ProductionRequest
-
+from sqlalchemy import create_engine
+from drama_engine.interactive.store import Store, Conflict
+from drama_engine.interactive.service import Service, Worker
+from drama_engine.interactive.models import Creation, Command, fingerprint
 
 @pytest.fixture
 def delivery():
     return json.loads((Path(__file__).resolve().parents[1] / 'examples/source/story_delivery.json').read_text(encoding='utf-8'))
 
+def assert_story_confirmation(service, delivery):
+    service.store.migrate()
+    chars=[dict(character_id='a',role_id='a',performer_id='voice-a',canon={'name':'阿青'},profile={})]
+    s=service.create('alice',Creation(idempotency_key='story-confirm',character_ids=['a'],method='idea',idea='合作',output='script'),chars)
+    def ready(value):value.update(stage='script_ready',delivery=delivery,script_fingerprint=fingerprint(delivery))
+    service.store.mutate(s['id'],'alice',ready)
+    raw=service.store.get(s['id'],'alice')
+    c=Command(command_id='confirm-once',expected_revision=raw['revision'],kind='confirm_script',target_id=delivery['story_version_id'],fingerprint=fingerprint(delivery))
+    receipt=service.command(s['id'],'alice',c)
+    assert receipt['session']['stage']=='confirmed'
+    assert service.command(s['id'],'alice',c)['receipt']==receipt['receipt']
+    calls=[]
+    assert not Worker(service,lambda: calls.append('model'),lambda *args:calls.append('media')).run_once()
+    assert calls==[]
+    with pytest.raises(KeyError):service.store.get(s['id'],'bob')
+    return s['id']
 
-def test_no_media_before_script_confirmation(delivery, tmp_path):
-    with pytest.raises(ValueError, match='SCRIPT_CONFIRMATION_REQUIRED'):
-        media_submit(None, ArtifactStore(tmp_path))({'confirmed_version': None, 'delivery': delivery}, 'key')
-    assert list(tmp_path.iterdir()) == []
-
-
-def test_confirmed_version_registers_owned_sources_and_creates_existing_flow(delivery, tmp_path, monkeypatch):
-    statements, flows = [], []
-    class Repo:
-        @contextmanager
-        def transaction(self):yield self
-        def execute(self, query, parameters):statements.append((query, parameters))
-    def insert(self, owner, key, original, request, casting, work_id):
-        req = ProductionRequest.model_validate(request['sound'])
-        assert req.source.source_version_id == delivery['story_version_id']
-        assert req.source.delivery.source_version_id == req.source.manifest.source_version_id
-        assert req.review_policy == 'listen_first'
-        assert request['stage_mode'] == 'basic_stage/1'
-        flows.append((owner, key, original, request, casting, work_id))
-        return 'confirmed-flow'
-    monkeypatch.setattr('my_legend_production.production.flows.FlowService.insert', insert)
-    state = dict(id='session', owner='alice', story_id=delivery['story_id'],
-        confirmed_version=delivery['story_version_id'], delivery=delivery, creation={'output':'audio'})
-    result = media_submit(Repo(), ArtifactStore(tmp_path))(state, 'fixed-confirmed-key')
-    assert result['flow_id'] == 'confirmed-flow'
-    assert len(statements) == 2 and len(flows) == 1
-    assert all(params[0] == 'alice' and params[2] == delivery['story_version_id'] for _, params in statements)
-
-
-def test_mismatched_confirmed_version_is_rejected(delivery, tmp_path):
-    with pytest.raises(ValueError, match='SCRIPT_CONFIRMATION_REQUIRED'):
-        media_submit(None, ArtifactStore(tmp_path))({'confirmed_version':'different', 'delivery':delivery}, 'key')
+def test_story_only_confirmation(tmp_path,delivery):
+    service=Service(Store(create_engine('sqlite:///'+str(tmp_path/'s.db'))),story_only=True)
+    assert_story_confirmation(service,delivery)

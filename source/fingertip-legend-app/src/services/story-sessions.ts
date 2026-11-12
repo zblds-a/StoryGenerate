@@ -15,6 +15,7 @@ export const storySessions={
  list:()=>request<{items:{id:string;title:string;creation:StoryCreation;can_continue:boolean}[]}>('/story-sessions'),
  options:()=>request<{enabled:boolean;images_enabled:boolean;genres:string[];art_styles:string[]}>('/story-options'),
  create:(c:StoryCreation)=>request<StorySession>('/story-sessions',c),
+ export:(id:string)=>request<unknown>('/story-sessions/'+id+'/export'),
  get:(id:string)=>request<StorySession>('/story-sessions/'+id),
  command:(id:string,c:Record<string,unknown>)=>request<{receipt:{next_creation?:StoryCreation};session:StorySession}>('/story-sessions/'+id+'/commands',c),
  poll:(id:string,seq:number)=>request<{events:StoryEvent[];last_seq:number}>('/story-sessions/'+id+'/events?poll=true&after='+seq),
