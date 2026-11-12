@@ -1,0 +1,667 @@
+{
+  "sessions": 13,
+  "latest_states": {
+    "failed": 5,
+    "cancelled": 1,
+    "confirmed": 7
+  },
+  "paid_model_attempts_excluding_probe": 93,
+  "unknown_usage_attempts": 3,
+  "reported_input_tokens": 232361,
+  "reported_output_tokens": 151882,
+  "runs": [
+    {
+      "case": "adventure",
+      "session_id": "8ca1271c250048b2a958f334db4ed667",
+      "stage": "failed",
+      "error_code": "UNAPPROVED_ROLE",
+      "calls": 8,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 265.781,
+      "reported_input_tokens": 18151,
+      "reported_output_tokens": 14357,
+      "metrics": {
+        "started_at": "2026-11-11T09:12:47.664351+00:00",
+        "first_preview_at": "2026-11-11T09:12:53.576063+00:00",
+        "outline_ready_at": "2026-11-11T09:13:40.607542+00:00",
+        "first_scene_ready_at": "2026-11-11T09:14:43.585905+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "run_id": "adventure-1794388367"
+    },
+    {
+      "case": "adventure",
+      "session_id": "8ca1271c250048b2a958f334db4ed667",
+      "stage": "failed",
+      "error_code": "GENERATION_FAILED",
+      "error_details": {
+        "exception_type": "StructuredOutputError"
+      },
+      "calls": 10,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 111.375,
+      "reported_input_tokens": 22972,
+      "reported_output_tokens": 18405,
+      "metrics": {
+        "started_at": "2026-11-11T09:12:47.664351+00:00",
+        "first_preview_at": "2026-11-11T09:12:53.576063+00:00",
+        "outline_ready_at": "2026-11-11T09:13:40.607542+00:00",
+        "first_scene_ready_at": "2026-11-11T09:14:43.585905+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": "8ca1271c250048b2a958f334db4ed667",
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": false,
+        "event_sequence": true,
+        "no_unconfirmed_media": true
+      },
+      "accepted": false,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "b6378790e62dd46b3e25bff00bf5f0469119f14228c3cd25c68fff0241e39a7f",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "09b6756cede7b2b33e425fae968f3abe30c8c1565975b5b1107e4bfb188e3188",
+        "store.py": "460100023ce31dc140961d8a4f23e8d7294fd8391fb3ae202dbfc458ac1413d5",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "adventure-1794389162"
+    },
+    {
+      "case": "adventure",
+      "session_id": "ba9451a8816f498eae2762d393650df6",
+      "stage": "failed",
+      "error_code": "GENERATION_FAILED",
+      "error_details": {
+        "exception_type": "RemoteProtocolError"
+      },
+      "calls": 2,
+      "unknown_usage_calls": 1,
+      "elapsed_sec": 83.125,
+      "reported_input_tokens": 2981,
+      "reported_output_tokens": 1520,
+      "metrics": {
+        "started_at": "2026-11-11T09:29:54.487467+00:00",
+        "first_preview_at": "2026-11-11T09:29:58.022935+00:00",
+        "outline_ready_at": "2026-11-11T09:30:42.737868+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": false,
+        "event_sequence": true,
+        "no_unconfirmed_media": true
+      },
+      "accepted": false,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "f3f5645e2598f5b72efd4f1683091ff96a26a834e56d63d372c0f58e632d2813",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "6fed05b5a1179e5a095a94e95e241e75f15b868968764e786fd8e20ceb22f606",
+        "store.py": "d02c1f771f2a28d355ab78e9095e22519f546c6cf92e86b0f8f6e645cf97a66e",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "adventure-1794389394"
+    },
+    {
+      "case": "cancel",
+      "session_id": "68e04a0093ae4c3bb8d31b742ba82c4a",
+      "stage": "cancelled",
+      "error_code": null,
+      "error_details": null,
+      "calls": 1,
+      "unknown_usage_calls": 1,
+      "elapsed_sec": 4.312,
+      "reported_input_tokens": 0,
+      "reported_output_tokens": 0,
+      "metrics": {
+        "started_at": "2026-11-11T09:27:09.719386+00:00",
+        "first_preview_at": "2026-11-11T09:27:12.686396+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": true,
+      "checks": {
+        "terminal_state": true,
+        "event_sequence": true,
+        "no_unconfirmed_media": true
+      },
+      "accepted": true,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "b6378790e62dd46b3e25bff00bf5f0469119f14228c3cd25c68fff0241e39a7f",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "09b6756cede7b2b33e425fae968f3abe30c8c1565975b5b1107e4bfb188e3188",
+        "store.py": "460100023ce31dc140961d8a4f23e8d7294fd8391fb3ae202dbfc458ac1413d5",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "cancel-1794389229"
+    },
+    {
+      "case": "continue",
+      "session_id": "485b6fee773843a0bd985fb363fb6ddd",
+      "stage": "confirmed",
+      "error_code": null,
+      "error_details": null,
+      "calls": 6,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 177.094,
+      "reported_input_tokens": 19624,
+      "reported_output_tokens": 11114,
+      "metrics": {
+        "started_at": "2026-11-11T09:35:04.997030+00:00",
+        "outline_ready_at": "2026-11-11T09:35:54.998505+00:00",
+        "first_scene_ready_at": "2026-11-11T09:36:49.663529+00:00",
+        "script_ready_at": "2026-11-11T09:38:01.982249+00:00"
+      },
+      "stream": false,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": true,
+        "event_sequence": true,
+        "no_unconfirmed_media": true,
+        "ready_delivery": true,
+        "series_six_episode_plan": true,
+        "only_current_episode_generated": true
+      },
+      "accepted": true,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "f3f5645e2598f5b72efd4f1683091ff96a26a834e56d63d372c0f58e632d2813",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "6fed05b5a1179e5a095a94e95e241e75f15b868968764e786fd8e20ceb22f606",
+        "store.py": "d02c1f771f2a28d355ab78e9095e22519f546c6cf92e86b0f8f6e645cf97a66e",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "continue-1794389704"
+    },
+    {
+      "case": "fantasy",
+      "session_id": "8111a2c68cff49669d03fea2472db645",
+      "stage": "confirmed",
+      "error_code": null,
+      "calls": 9,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 251.797,
+      "reported_input_tokens": 20539,
+      "reported_output_tokens": 13494,
+      "metrics": {
+        "started_at": "2026-11-11T09:16:16.061553+00:00",
+        "first_preview_at": "2026-11-11T09:16:20.539394+00:00",
+        "outline_ready_at": "2026-11-11T09:17:11.517187+00:00",
+        "first_scene_ready_at": "2026-11-11T09:17:56.563698+00:00",
+        "script_ready_at": "2026-11-11T09:20:27.755369+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "run_id": "fantasy-1794388576"
+    },
+    {
+      "case": "mid_change",
+      "session_id": "fefee2c3ce45442f9858e241548776c4",
+      "stage": "confirmed",
+      "error_code": null,
+      "calls": 10,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 336.89,
+      "reported_input_tokens": 31508,
+      "reported_output_tokens": 18697,
+      "metrics": {
+        "started_at": "2026-11-11T09:18:53.432445+00:00",
+        "first_preview_at": "2026-11-11T09:18:58.115766+00:00",
+        "outline_ready_at": "2026-11-11T09:19:38.291330+00:00",
+        "first_scene_ready_at": "2026-11-11T09:20:34.718145+00:00",
+        "script_ready_at": "2026-11-11T09:24:30.199054+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": true,
+      "run_id": "mid_change-1794388733"
+    },
+    {
+      "case": "mystery",
+      "session_id": "4ae6738f2f834b26aafdae913dca22e4",
+      "stage": "failed",
+      "error_code": "UNAPPROVED_ROLE",
+      "calls": 2,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 105.375,
+      "reported_input_tokens": 5162,
+      "reported_output_tokens": 3321,
+      "metrics": {
+        "started_at": "2026-11-11T09:12:47.902924+00:00",
+        "first_preview_at": "2026-11-11T09:12:55.545467+00:00",
+        "outline_ready_at": "2026-11-11T09:13:46.910502+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "run_id": "mystery-1794388367"
+    },
+    {
+      "case": "mystery",
+      "session_id": "4ae6738f2f834b26aafdae913dca22e4",
+      "stage": "failed",
+      "error_code": "GENERATION_FAILED",
+      "calls": 5,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 137.703,
+      "reported_input_tokens": 11847,
+      "reported_output_tokens": 9587,
+      "metrics": {
+        "started_at": "2026-11-11T09:12:47.902924+00:00",
+        "first_preview_at": "2026-11-11T09:12:55.545467+00:00",
+        "outline_ready_at": "2026-11-11T09:13:46.910502+00:00",
+        "first_scene_ready_at": "2026-11-11T09:17:19.817313+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": "4ae6738f2f834b26aafdae913dca22e4",
+      "run_id": "mystery-1794388576"
+    },
+    {
+      "case": "mystery",
+      "session_id": "4ae6738f2f834b26aafdae913dca22e4",
+      "stage": "confirmed",
+      "error_code": null,
+      "error_details": null,
+      "calls": 10,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 152.954,
+      "reported_input_tokens": 23506,
+      "reported_output_tokens": 17332,
+      "metrics": {
+        "started_at": "2026-11-11T09:12:47.902924+00:00",
+        "first_preview_at": "2026-11-11T09:12:55.545467+00:00",
+        "outline_ready_at": "2026-11-11T09:13:46.910502+00:00",
+        "first_scene_ready_at": "2026-11-11T09:17:19.817313+00:00",
+        "script_ready_at": "2026-11-11T09:28:35.767766+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": "4ae6738f2f834b26aafdae913dca22e4",
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": true,
+        "event_sequence": true,
+        "no_unconfirmed_media": true,
+        "ready_delivery": true
+      },
+      "accepted": true,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "b6378790e62dd46b3e25bff00bf5f0469119f14228c3cd25c68fff0241e39a7f",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "09b6756cede7b2b33e425fae968f3abe30c8c1565975b5b1107e4bfb188e3188",
+        "store.py": "460100023ce31dc140961d8a4f23e8d7294fd8391fb3ae202dbfc458ac1413d5",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "mystery-1794389162"
+    },
+    {
+      "case": "outline_edit",
+      "session_id": "2e3de8706a084189bc1b1417a3da8c39",
+      "stage": "failed",
+      "error_code": "GENERATION_FAILED",
+      "error_details": {
+        "exception_type": "StructuredOutputError"
+      },
+      "calls": 7,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 270.531,
+      "reported_input_tokens": 20426,
+      "reported_output_tokens": 11234,
+      "metrics": {
+        "started_at": "2026-11-11T09:28:15.563737+00:00",
+        "first_preview_at": "2026-11-11T09:28:19.422109+00:00",
+        "outline_ready_at": "2026-11-11T09:29:07.568541+00:00",
+        "first_scene_ready_at": "2026-11-11T09:31:29.972222+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": false,
+        "event_sequence": true,
+        "no_unconfirmed_media": true
+      },
+      "accepted": false,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "b6378790e62dd46b3e25bff00bf5f0469119f14228c3cd25c68fff0241e39a7f",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "09b6756cede7b2b33e425fae968f3abe30c8c1565975b5b1107e4bfb188e3188",
+        "store.py": "460100023ce31dc140961d8a4f23e8d7294fd8391fb3ae202dbfc458ac1413d5",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "outline_edit-1794389295"
+    },
+    {
+      "case": "revise",
+      "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+      "stage": "confirmed",
+      "error_code": null,
+      "calls": 8,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 71.219,
+      "reported_input_tokens": 25455,
+      "reported_output_tokens": 12890,
+      "metrics": {
+        "started_at": "2026-11-11T09:06:08.649171+00:00",
+        "first_preview_at": "2026-11-11T09:06:16.404251+00:00",
+        "outline_ready_at": "2026-11-11T09:06:45.390947+00:00",
+        "first_scene_ready_at": "2026-11-11T09:07:51.756709+00:00",
+        "script_ready_at": "2026-11-11T09:20:04.522801+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": false,
+      "run_id": "revise-1794388733"
+    },
+    {
+      "case": "series",
+      "session_id": "504bf24730ae471e9f15b2cbb3eeab00",
+      "stage": "failed",
+      "error_code": "UNAPPROVED_ROLE",
+      "calls": 8,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 261.281,
+      "reported_input_tokens": 16267,
+      "reported_output_tokens": 11577,
+      "metrics": {
+        "started_at": "2026-11-11T09:06:21.792260+00:00",
+        "first_preview_at": "2026-11-11T09:06:25.394020+00:00",
+        "outline_ready_at": "2026-11-11T09:08:01.564936+00:00",
+        "first_scene_ready_at": "2026-11-11T09:09:05.042509+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "run_id": "series-1794387981"
+    },
+    {
+      "case": "series",
+      "session_id": "504bf24730ae471e9f15b2cbb3eeab00",
+      "stage": "failed",
+      "error_code": "UNAPPROVED_ROLE",
+      "calls": 9,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 59.484,
+      "reported_input_tokens": 18835,
+      "reported_output_tokens": 13738,
+      "metrics": {
+        "started_at": "2026-11-11T09:06:21.792260+00:00",
+        "first_preview_at": "2026-11-11T09:06:25.394020+00:00",
+        "outline_ready_at": "2026-11-11T09:08:01.564936+00:00",
+        "first_scene_ready_at": "2026-11-11T09:09:05.042509+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": "504bf24730ae471e9f15b2cbb3eeab00",
+      "run_id": "series-1794388367"
+    },
+    {
+      "case": "series",
+      "session_id": "504bf24730ae471e9f15b2cbb3eeab00",
+      "stage": "failed",
+      "error_code": "EPISODE_DURATION_OUT_OF_RANGE",
+      "calls": 13,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 117.844,
+      "reported_input_tokens": 28845,
+      "reported_output_tokens": 20560,
+      "metrics": {
+        "started_at": "2026-11-11T09:06:21.792260+00:00",
+        "first_preview_at": "2026-11-11T09:06:25.394020+00:00",
+        "outline_ready_at": "2026-11-11T09:08:01.564936+00:00",
+        "first_scene_ready_at": "2026-11-11T09:09:05.042509+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": "504bf24730ae471e9f15b2cbb3eeab00",
+      "run_id": "series-1794388515"
+    },
+    {
+      "case": "series",
+      "session_id": "504bf24730ae471e9f15b2cbb3eeab00",
+      "stage": "confirmed",
+      "error_code": null,
+      "error_details": null,
+      "calls": 15,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 50.578,
+      "reported_input_tokens": 33686,
+      "reported_output_tokens": 23112,
+      "metrics": {
+        "started_at": "2026-11-11T09:06:21.792260+00:00",
+        "first_preview_at": "2026-11-11T09:06:25.394020+00:00",
+        "outline_ready_at": "2026-11-11T09:08:01.564936+00:00",
+        "first_scene_ready_at": "2026-11-11T09:09:05.042509+00:00",
+        "script_ready_at": "2026-11-11T09:26:53.280226+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": "504bf24730ae471e9f15b2cbb3eeab00",
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": true,
+        "event_sequence": true,
+        "no_unconfirmed_media": true,
+        "ready_delivery": true,
+        "series_six_episode_plan": true,
+        "only_current_episode_generated": true
+      },
+      "accepted": true,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "b6378790e62dd46b3e25bff00bf5f0469119f14228c3cd25c68fff0241e39a7f",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "09b6756cede7b2b33e425fae968f3abe30c8c1565975b5b1107e4bfb188e3188",
+        "store.py": "460100023ce31dc140961d8a4f23e8d7294fd8391fb3ae202dbfc458ac1413d5",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "series-1794389162"
+    },
+    {
+      "case": "series",
+      "session_id": "a5f6258c328f452b8b2812f6841f5f76",
+      "stage": "failed",
+      "error_code": "GENERATION_FAILED",
+      "error_details": {
+        "exception_type": "RemoteProtocolError"
+      },
+      "calls": 8,
+      "unknown_usage_calls": 1,
+      "elapsed_sec": 247.937,
+      "reported_input_tokens": 15095,
+      "reported_output_tokens": 9585,
+      "metrics": {
+        "started_at": "2026-11-11T09:27:09.712385+00:00",
+        "first_preview_at": "2026-11-11T09:27:12.478991+00:00",
+        "outline_ready_at": "2026-11-11T09:28:22.618679+00:00",
+        "first_scene_ready_at": "2026-11-11T09:30:03.349952+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": false,
+        "event_sequence": true,
+        "no_unconfirmed_media": true,
+        "series_six_episode_plan": true,
+        "only_current_episode_generated": false
+      },
+      "accepted": false,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "b6378790e62dd46b3e25bff00bf5f0469119f14228c3cd25c68fff0241e39a7f",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "09b6756cede7b2b33e425fae968f3abe30c8c1565975b5b1107e4bfb188e3188",
+        "store.py": "460100023ce31dc140961d8a4f23e8d7294fd8391fb3ae202dbfc458ac1413d5",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "series-1794389229"
+    },
+    {
+      "case": "short",
+      "session_id": "1a129d037ada4c508334788c7db25c48",
+      "stage": "failed",
+      "error_code": "EPISODE_PLAN_COUNT_MISMATCH",
+      "calls": 1,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 133.188,
+      "reported_input_tokens": 2668,
+      "reported_output_tokens": 4142,
+      "metrics": {
+        "started_at": "2026-11-11T09:02:54.756916+00:00",
+        "first_preview_at": "2026-11-11T09:04:40.451661+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "run_id": "short-1794387774"
+    },
+    {
+      "case": "short",
+      "session_id": "83c13e514d0c411a8b33fa7a9e5b767b",
+      "stage": "confirmed",
+      "error_code": null,
+      "calls": 5,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 168.594,
+      "reported_input_tokens": 11727,
+      "reported_output_tokens": 9350,
+      "metrics": {
+        "started_at": "2026-11-11T09:06:08.649171+00:00",
+        "first_preview_at": "2026-11-11T09:06:16.404251+00:00",
+        "outline_ready_at": "2026-11-11T09:06:45.390947+00:00",
+        "first_scene_ready_at": "2026-11-11T09:07:51.756709+00:00",
+        "script_ready_at": "2026-11-11T09:08:57.167532+00:00"
+      },
+      "stream": true,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "run_id": "short-1794387968"
+    },
+    {
+      "case": "short",
+      "session_id": "55f9d8cc2ab44b0ea3b485c02af78d49",
+      "stage": "confirmed",
+      "error_code": null,
+      "error_details": null,
+      "calls": 6,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 211.609,
+      "reported_input_tokens": 13901,
+      "reported_output_tokens": 10357,
+      "metrics": {
+        "started_at": "2026-11-11T09:35:04.958307+00:00",
+        "outline_ready_at": "2026-11-11T09:35:45.431449+00:00",
+        "first_scene_ready_at": "2026-11-11T09:37:33.589967+00:00",
+        "script_ready_at": "2026-11-11T09:38:36.509664+00:00"
+      },
+      "stream": false,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": true,
+        "event_sequence": true,
+        "no_unconfirmed_media": true,
+        "ready_delivery": true
+      },
+      "accepted": true,
+      "source_sha256": {
+        "api.py": "76124f3b264d44b1550984b695701a953268c8cccd791600ab8de4efc5b2e3ad",
+        "backgrounds.py": "1022b973653ed26216c00059568d1b283fe29bdd04c555b848046e2c4142e536",
+        "generator.py": "f3f5645e2598f5b72efd4f1683091ff96a26a834e56d63d372c0f58e632d2813",
+        "models.py": "6db8723c0d685a6085bf070763446389cf0415b13a38ce95ab031eb230e21b91",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "6fed05b5a1179e5a095a94e95e241e75f15b868968764e786fd8e20ceb22f606",
+        "store.py": "d02c1f771f2a28d355ab78e9095e22519f546c6cf92e86b0f8f6e645cf97a66e",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      },
+      "run_id": "short-1794389704"
+    }
+  ],
+  "notes": [
+    "Iterative development runs, not one frozen-SHA success-rate benchmark.",
+    "No real TTS/SFX/image model calls.",
+    "Tokens are provider usage, not a currency invoice."
+  ]
+}

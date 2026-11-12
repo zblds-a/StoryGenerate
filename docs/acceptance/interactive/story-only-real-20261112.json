@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-12",
+  "fixture_browser_tests": 3,
+  "real_model_sample": {
+    "session_id": "b6fe018def1d4aa69db4fcd20bba687c",
+    "ending": "open",
+    "focus_recorded": true,
+    "generation_epoch": 2,
+    "final_stage": "confirmed",
+    "distinct_provider_attempts": 11,
+    "unknown_usage_calls": 0,
+    "media_calls": 0,
+    "image_calls": 0,
+    "human_semantic_review": "not_performed"
+  },
+  "attempts": [
+    {
+      "case": "preferences",
+      "session_id": "b6fe018def1d4aa69db4fcd20bba687c",
+      "stage": "failed",
+      "error_code": "GENERATION_FAILED",
+      "error_details": {
+        "exception_type": "StructuredOutputError"
+      },
+      "calls": 9,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 358.953,
+      "reported_input_tokens": 24979,
+      "reported_output_tokens": 16452,
+      "metrics": {
+        "started_at": "2026-11-12T01:22:51.212138+00:00",
+        "outline_ready_at": "2026-11-12T01:23:44.661988+00:00",
+        "first_scene_ready_at": "2026-11-12T01:26:23.864376+00:00"
+      },
+      "stream": false,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": null,
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": false,
+        "event_sequence": true,
+        "no_unconfirmed_media": true
+      },
+      "accepted": false,
+      "source_sha256": {
+        "api.py": "76aba74e81191110899f88105375dfce447d13689dd3bee678dccecb6d3e0e62",
+        "backgrounds.py": "a3368b12f21a377911a23cd5147ce8e4fad60ec4361373206ff95bdfcfa0655e",
+        "generator.py": "8ea5a304410d57d90b10d127f5a5f8fe57dfda6e3ad0ae4180d5cc3dfac08aed",
+        "models.py": "017b98a3a13408ed0c93b460d5b53965df624dbb39edb63bf8a9bb4a8d7c5e5a",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "91681bbbb8e6889d6c9cc874ec62e54af8c17104684685acdfb1742e4abbe865",
+        "store.py": "5cd84692f3c87b04285ddf971e2a208837e4083b9b782e5a44d72195ece72242",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      }
+    },
+    {
+      "case": "preferences",
+      "session_id": "b6fe018def1d4aa69db4fcd20bba687c",
+      "stage": "confirmed",
+      "error_code": null,
+      "error_details": {
+        "exception_type": "StructuredOutputError"
+      },
+      "calls": 11,
+      "unknown_usage_calls": 0,
+      "elapsed_sec": 67.75,
+      "reported_input_tokens": 30068,
+      "reported_output_tokens": 20330,
+      "metrics": {
+        "started_at": "2026-11-12T01:22:51.212138+00:00",
+        "outline_ready_at": "2026-11-12T01:23:44.661988+00:00",
+        "first_scene_ready_at": "2026-11-12T01:26:23.864376+00:00",
+        "script_ready_at": "2026-11-12T01:31:13.300150+00:00"
+      },
+      "stream": false,
+      "media_calls": 0,
+      "image_calls": 0,
+      "human_content_review": "not_performed",
+      "resumed_session": "b6fe018def1d4aa69db4fcd20bba687c",
+      "inflight_interaction_submitted": false,
+      "checks": {
+        "terminal_state": true,
+        "event_sequence": true,
+        "no_unconfirmed_media": true,
+        "ready_delivery": true
+      },
+      "accepted": true,
+      "source_sha256": {
+        "api.py": "76aba74e81191110899f88105375dfce447d13689dd3bee678dccecb6d3e0e62",
+        "backgrounds.py": "a3368b12f21a377911a23cd5147ce8e4fad60ec4361373206ff95bdfcfa0655e",
+        "generator.py": "68df64e3c71a2b1eac36cde17ef2e55bec79a3a171017e7cea1a1b582db2babe",
+        "models.py": "5a68d6a71cadbfcdf8412de6d2f8eba6fc779f5dc76f3a9ef38734cdeb6adb6d",
+        "prompts.py": "426238db9690e70eebd39b47c1d1abf60e78e5d62d55adb741149a8b636f02d0",
+        "service.py": "13807f9d91a8b642d1be54d2b5b74153038bdfb29febdb157c2e5bdd376bb7ff",
+        "store.py": "5cd84692f3c87b04285ddf971e2a208837e4083b9b782e5a44d72195ece72242",
+        "streaming.py": "9843ab62a50686926b83762c0870dd17cdf7c43432a76809854dbf40944fdc6f",
+        "__init__.py": "284c0a12c93dd6190e13fe62a906e76d0357e35ee6ae64bb8b4e495a1e947760"
+      }
+    }
+  ],
+  "http_replay": {
+    "session_id": "b6fe018def1d4aa69db4fcd20bba687c",
+    "checks": [
+      "authentication",
+      "owner_isolation",
+      "snapshot",
+      "export_exact_match",
+      "event_replay_no_gap_or_duplicate",
+      "cursor_conflict",
+      "stale_command_rejected",
+      "no_new_model_calls"
+    ],
+    "passed": true,
+    "paid_calls": 0
+  },
+  "counting_note": "Resume reports contain cumulative usage/call counts. Do not sum counts across attempts of the same session."
+}

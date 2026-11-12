@@ -1,5 +1,7 @@
 # StoryGenerate — AI 故事生成引擎 v0.2.1
 
+交互创作会话 v1（默认关闭）：[功能与前后端联调方案](docs/故事生成交互升级_功能说明与前后端接入联调方案_20261111.md)、[真实 API 与全量验收报告](docs/故事生成交互升级_测试验收报告_20261111.md)。支持选项构思、两次内容确认、逐幕事件、生成中调整与独立背景规格。已验证能力与尚未通过的发布门分别记录，不把局部技术通过视为全量上线验收。
+
 > **原 Phase 0–9 Roadmap 完成；获批大纲工作流正在进行真实模型验收。**
 
 一个完整的 AI 故事生成引擎，将爆款故事的结构规律（角色槽位、情节节拍、人物选择规律、事实账本、证据评审）编译成可执行的确定性流水线。支持多故事模式（病毒短剧 / 通用 / 悬疑推理解谜 / 连续剧连载）、多内容形态（广播剧 / 散文体 / 小说 / 口述故事 / 单口喜剧 / 相声）、Long-form 异步任务、SQL 持久化断点续传、角色记忆系统。
@@ -372,3 +374,7 @@ c6af30a Phase 9: close structural validators and persistent mode resume acceptan
 d9907fc Phase 9: new modes (mystery, serialized) + content form registry + 4 new forms + 42 tests
 6527076 Phase 8: close memory budget and Chinese keyword acceptance evidence
 ```
+
+当前故事前后端独立交付：[功能、启动与契约](docs/故事生成独立交付与接入契约_20261112.md)，[测试记录](docs/故事生成独立交付测试记录_20261112.md)。新入口只确认和导出剧本，不启动声音或演绎。
+
+[本机启动与人工测试](docs/故事生成启动与人工测试_20261112.md)。

@@ -1,0 +1,96 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "scene_key": {
+      "title": "Scene Key",
+      "type": "string"
+    },
+    "revision": {
+      "title": "Revision",
+      "type": "integer"
+    },
+    "plan_id": {
+      "title": "Plan Id",
+      "type": "string"
+    },
+    "generation_epoch": {
+      "title": "Generation Epoch",
+      "type": "integer"
+    },
+    "location": {
+      "title": "Location",
+      "type": "string"
+    },
+    "time_of_day": {
+      "title": "Time Of Day",
+      "type": "string"
+    },
+    "environment": {
+      "title": "Environment",
+      "type": "string"
+    },
+    "atmosphere": {
+      "title": "Atmosphere",
+      "type": "string"
+    },
+    "must_include": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Must Include",
+      "type": "array"
+    },
+    "must_avoid": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Must Avoid",
+      "type": "array"
+    },
+    "art_style": {
+      "title": "Art Style",
+      "type": "string"
+    },
+    "composition": {
+      "default": "环境建立镜头，前景留出角色叠加空间",
+      "title": "Composition",
+      "type": "string"
+    },
+    "prompt": {
+      "title": "Prompt",
+      "type": "string"
+    },
+    "negative_prompt": {
+      "default": "人物，主角，文字，字幕，水印，标志",
+      "title": "Negative Prompt",
+      "type": "string"
+    },
+    "aspect_ratio": {
+      "const": "16:9",
+      "default": "16:9",
+      "title": "Aspect Ratio",
+      "type": "string"
+    },
+    "parameters": {
+      "additionalProperties": true,
+      "title": "Parameters",
+      "type": "object"
+    }
+  },
+  "required": [
+    "scene_key",
+    "revision",
+    "plan_id",
+    "generation_epoch",
+    "location",
+    "time_of_day",
+    "environment",
+    "atmosphere",
+    "must_include",
+    "must_avoid",
+    "art_style",
+    "prompt"
+  ],
+  "title": "BackgroundSpec",
+  "type": "object"
+}

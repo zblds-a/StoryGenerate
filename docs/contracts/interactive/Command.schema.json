@@ -1,0 +1,151 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "command_id": {
+      "maxLength": 128,
+      "minLength": 8,
+      "title": "Command Id",
+      "type": "string"
+    },
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "kind": {
+      "enum": [
+        "select_direction",
+        "revise_outline",
+        "confirm_outline",
+        "change",
+        "confirm_change",
+        "confirm_script",
+        "next_episode",
+        "cancel",
+        "retry_background",
+        "retry",
+        "set_preferences"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "target_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target Id"
+    },
+    "fingerprint": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fingerprint"
+    },
+    "option_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Option Id"
+    },
+    "text": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Text",
+      "type": "string"
+    },
+    "scope": {
+      "default": "following",
+      "enum": [
+        "scene",
+        "following"
+      ],
+      "title": "Scope",
+      "type": "string"
+    },
+    "ending": {
+      "anyOf": [
+        {
+          "enum": [
+            "happy",
+            "open",
+            "cliffhanger"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ending"
+    },
+    "series_ending": {
+      "anyOf": [
+        {
+          "enum": [
+            "happy",
+            "open",
+            "cliffhanger"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Series Ending"
+    },
+    "focus_role_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Focus Role Id"
+    },
+    "series_episodes": {
+      "anyOf": [
+        {
+          "maximum": 24,
+          "minimum": 2,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Series Episodes"
+    }
+  },
+  "required": [
+    "command_id",
+    "expected_revision",
+    "kind"
+  ],
+  "title": "Command",
+  "type": "object"
+}

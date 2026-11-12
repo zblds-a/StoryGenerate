@@ -1,0 +1,18 @@
+{
+  "idempotency_key": "example-series",
+  "form": "series",
+  "method": "assist",
+  "idea": "",
+  "genre": "国风奇幻",
+  "feeling": "warm",
+  "ending": "happy",
+  "series_ending": "open",
+  "art_style": "guofeng",
+  "series_episodes": 6,
+  "character_ids": [
+    "replace-with-catalog-character"
+  ],
+  "source_session_id": null,
+  "output": "script",
+  "casting": null
+}

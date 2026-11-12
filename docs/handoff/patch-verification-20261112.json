@@ -1,0 +1,14 @@
+[
+  {
+    "patch": "my-legend-interactive-story-sessions.patch",
+    "base": "2f8439970c92d12412fc3cb476fb1842210a66e3",
+    "exact_tree_match": true,
+    "tree": "0f9d6bbcb99595352fccb745588f3f7d9493bf2f"
+  },
+  {
+    "patch": "my-legend-story-only-update.patch",
+    "base": "dd9edba153dbc98571021900d98a9ff68b21859a",
+    "exact_tree_match": true,
+    "tree": "0f9d6bbcb99595352fccb745588f3f7d9493bf2f"
+  }
+]
