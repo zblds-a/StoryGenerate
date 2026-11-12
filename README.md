@@ -67,3 +67,5 @@ npm run dev:h5
 新文件不要直接放在工作区根目录。请按上述规则放入对应分类目录或所属源码项目内。
 
 故事生成独立入口（不启动声音与演绎）：[功能、启动与下游契约](docs/requirements/my-legend/故事生成独立交付与接入契约_20261112.md)，[测试记录](docs/requirements/my-legend/故事生成独立交付测试记录_20261112.md)。
+
+[故事生成专用启动与人工测试](docs/requirements/my-legend/故事生成启动与人工测试_20261112.md)：独立数据库、真实聊天模型、无声音/舞台 Worker。
