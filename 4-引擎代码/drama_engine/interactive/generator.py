@@ -4,7 +4,7 @@ import json
 from typing import Literal
 from uuid import uuid4
 from pydantic import Field, create_model, model_validator
-from .models import Model, Outline, Directions, GENRES
+from .models import Model, Outline, Directions, SceneCard, GENRES
 from ..llm.router import resolve_spec
 from ..workflow.adapters import DraftLine, DraftScene, normalize_draft_stage_directions, DraftEpisode, LLMPerformanceAnnotator
 from ..workflow.schemas import (CharacterSnapshot, CharacterPortrayal, PlanContent, EpisodeOutline,
@@ -65,8 +65,10 @@ class Generator:
         expected_episodes = c['series_episodes'] if c['form'] == 'series' else 1
         if c['form'] == 'short':
             c.pop('series_episodes', None)
+            c.pop('series_ending', None)
         schema = create_model('InteractiveOutline_' + str(expected_episodes), __base__=StoryOutline,
-            episode_summaries=(list[str], Field(min_length=expected_episodes, max_length=expected_episodes)))
+            episode_summaries=(list[str], Field(min_length=expected_episodes, max_length=expected_episodes)),
+            scenes=(list[SceneCard], Field(min_length=max(2, len(state['scenes']) + 1), max_length=6)))
         mode, genre, recipe = GENRES[c['genre']]
         strategy = StoryStrategyResolver(RuleLibrary.load()).resolve(story_mode=mode, genre=genre,
             recipe_id=recipe, user_instruction=c['idea'], explicit_fields=['story_mode', 'genre', 'recipe_id'])
@@ -74,14 +76,16 @@ class Generator:
             '你是广播剧编剧。一次生成因果清楚的大纲、每幕背景描述和至多三个方向选项。'
             '只使用输入角色，保持身份与语言特点。不在背景提示词中画人物、文字、水印。'
             '短剧完整收束；长剧规划整个系列，仅展开当前集为2至6幕。所有角色ID必须来自输入。'
-            '已完成的幕是不可改前缀，新的分幕规划必须逐项保留此前缀。'
+            '已完成的幕是不可改前缀，新的分幕规划必须逐项保留此前缀，并至少保留一幕供调整。'
+            '如果存在受保护的后文，只修改指定幕，必须衔接后文中的既定事实。'
             '选择合适的单集篇幅，不能把整个系列一次写完。',
             {'creation': c, 'direction': state.get('direction'), 'characters': state['characters'],
              'strategy': strategy.model_dump(mode='json'),
              'episode_count_required': expected_episodes,
              'episode_number': state['episode_number'], 'previous_outline': state.get('outline'),
              'series_outline': state.get('series_outline'), 'history': state['history'],
-             'feedback': state.get('feedback', []), 'protected_scenes': state['scenes']}, schema).model_dump(mode='json')
+             'feedback': state.get('feedback', []), 'protected_scenes': state['scenes'],
+             'protected_future_scenes': state.get('protected_suffix', [])}, schema).model_dump(mode='json')
 
     def scene(self, state, index):
         card = state['outline']['scenes'][index]
@@ -93,6 +97,10 @@ class Generator:
             raise ValueError('DURATION_BUDGET_EXHAUSTED')
         target = max(20, round((state['outline']['duration_sec'] * 3.5 - spent) / remaining))
         maximum = min(max(30, int(1.3 * target)), max(30, hard_remaining // remaining))
+        if remaining == 1:
+            # Final scene may use the actual remaining episode budget. A small
+            # overshoot of its planning target is not a technical script error.
+            maximum = max(30, hard_remaining)
         budget = state.get('_spoken_budget_override') or (min(maximum, max(10, int(.55 * target))), min(maximum, target), maximum)
         schema = bound_scene_schema({c['role_id'] for c in state['characters']}, budget)
         result = self.call('storycraft_episode_writer',

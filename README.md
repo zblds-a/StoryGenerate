@@ -374,3 +374,5 @@ c6af30a Phase 9: close structural validators and persistent mode resume acceptan
 d9907fc Phase 9: new modes (mystery, serialized) + content form registry + 4 new forms + 42 tests
 6527076 Phase 8: close memory budget and Chinese keyword acceptance evidence
 ```
+
+当前故事前后端独立交付：[功能、启动与契约](docs/故事生成独立交付与接入契约_20261112.md)，[测试记录](docs/故事生成独立交付测试记录_20261112.md)。新入口只确认和导出剧本，不启动声音或演绎。

@@ -25,7 +25,10 @@ def register_routes(app, service, owner, resolve_characters, image_root, validat
     @router.get('/story-options')
     def get_options(request: Request):
         owner(request)
-        return envelope(options(service.images_enabled))
+        value = options(service.images_enabled)
+        value['outputs'] = ['script'] if service.story_only else ['script', 'audio', 'h5']
+        value['story_only'] = service.story_only
+        return envelope(value)
 
     @router.post('/story-sessions', status_code=202)
     def create(value: Creation, request: Request):
@@ -41,7 +44,8 @@ def register_routes(app, service, owner, resolve_characters, image_root, validat
         return envelope({'items': [{'id': s['id'], 'title': (s['outline'] or {}).get('title', '构思中的故事'),
             'stage': s['stage'], 'creation': s['creation'], 'episode_number': s['episode_number'],
             'can_continue': bool(s['confirmed_version'] and s['creation']['form'] == 'series'
-                                 and s['episode_number'] < s['creation']['series_episodes'])} for s in values[:100]]})
+                                 and s['episode_number'] < s['creation']['series_episodes'])} for s in values[:100]
+                                 if not service.story_only or s['creation']['output'] == 'script']})
 
     @router.get('/story-sessions/{sid}')
     def get(sid: str, request: Request):
@@ -98,6 +102,13 @@ def register_routes(app, service, owner, resolve_characters, image_root, validat
     @router.get('/story-sessions/{sid}/export')
     def export(sid: str, request: Request):
         state = invoke(lambda: service.store.get(sid, owner(request)))
-        return envelope({'delivery': state['delivery'], 'backgrounds': state['backgrounds']})
+        return envelope({'session_id': sid, 'revision': state['revision'],
+            'story_version_id': (state['delivery'] or {}).get('story_version_id'),
+            'confirmed': bool(state['confirmed_version'] and not state['pending_change']
+                and state['stage'] in ('confirmed', 'media_pending', 'media_ready')
+                and state['confirmed_version'] == (state['delivery'] or {}).get('story_version_id')),
+            'content_fingerprint': state.get('script_fingerprint'),
+            'delivery': state['delivery'], 'backgrounds': state['backgrounds'],
+            'version_history': state.get('version_history', [])})
 
     app.include_router(router)

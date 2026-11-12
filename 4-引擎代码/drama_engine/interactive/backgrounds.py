@@ -51,6 +51,8 @@ class BackgroundWorker:
         if not self.adapter:
             return False
         for snapshot in self.store.all():
+            if self.service.story_only and snapshot['creation']['output'] != 'script':
+                continue
             for key, bg in snapshot['backgrounds'].items():
                 if bg['status'] == 'running' and bg.get('expires_at', now()) < now():
                     def expire(s):

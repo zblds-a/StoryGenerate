@@ -23,7 +23,8 @@
         "next_episode",
         "cancel",
         "retry_background",
-        "retry"
+        "retry",
+        "set_preferences"
       ],
       "title": "Kind",
       "type": "string"
@@ -78,6 +79,66 @@
       ],
       "title": "Scope",
       "type": "string"
+    },
+    "ending": {
+      "anyOf": [
+        {
+          "enum": [
+            "happy",
+            "open",
+            "cliffhanger"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ending"
+    },
+    "series_ending": {
+      "anyOf": [
+        {
+          "enum": [
+            "happy",
+            "open",
+            "cliffhanger"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Series Ending"
+    },
+    "focus_role_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Focus Role Id"
+    },
+    "series_episodes": {
+      "anyOf": [
+        {
+          "maximum": 24,
+          "minimum": 2,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Series Episodes"
     }
   },
   "required": [

@@ -1,22 +1,25 @@
-# My Legend 集成补丁交付
+# 完整故事前后端交付
 
-`my-legend-interactive-story-sessions.patch` 是完整 Git mailbox 补丁，包含前后端示范、生产适配、嵌入引擎、测试、契约和说明，共两个提交。
+2026-11-12 当前交付只生成、确认和导出剧本，不启动声音、舞台或动画。
 
-- 原仓库：`frostdogstarscream/my-legend`。
-- 基线：`b7c24db2cc4a6c52b270c07ff2aa0e14c1850a77`，分支 `codex/theme-scenes-v0.6`。
-- 本地集成最终提交：`dd9edba153dbc98571021900d98a9ff68b21859a`。
-- 当前账号 zblds-a 对原仓库推送返回 403，因此由你方 StoryGenerate 仓库发布补丁，不冒称已推送同事仓库。
-
-在同事的 my-legend 克隆中执行：
+推荐获取完整远程代码：
 
 ```powershell
-git fetch origin
-git switch -c integration/interactive-story-review origin/codex/theme-scenes-v0.6
-git am --3way "补丁文件的本机完整路径"
+git fetch https://github.com/zblds-a/StoryGenerate.git codex/my-legend-story-generation
+git switch -c codex/story-generation-review FETCH_HEAD
 ```
 
-已在独立 worktree 从上述基线实际执行 git am，两次提交均成功，最终 Git tree 与本地评审集成提交完全相同。目标分支若已前进，仍需评审冲突和运行项目测试；不代表任何后续基线均可无冲突应用。
+该分支根目录是 my-legend 工程，保留上游历史，不要将其合并到通用引擎主分支。当前完整集成提交 `4a36e382cc019fd9de44e7fdfb428c479d534194`，基于同事最新 `codex/theme-scenes-v0.6` 的 `2f8439970c92d12412fc3cb476fb1842210a66e3`；包含其启动和错误归因修复。对同事原仓库仍无写权限，远程代码位于我方仓库的独立交付分支。
 
-同事在有写权限的账号下推送其评审分支，按功能与联调说明准备 PostgreSQL、独立 Worker、角色目录和媒体资产。不要在 StoryGenerate 引擎仓库根执行这个补丁。
+备用补丁各为一个汇总提交：
 
-默认功能关闭；真实样本与全量回归有明确未通过项，详见测试验收报告，不能把补丁交付视为发布通过。
+| 文件 | 使用起点 | SHA256 |
+|---|---|---|
+| my-legend-interactive-story-sessions.patch | 最新上游 2f84399，首次接入 | e34e78882bca02c60a97c9c44cc6a79e85ea41c35655e9701d663378055ee5d2 |
+| my-legend-story-only-update.patch | 已应用旧交付并停在 dd9edba | 66f14f3a953589178cdcf893dd0a35233d604f1ff8d9ea2688846ec57ec0756f |
+
+在 my-legend 克隆的独立评审分支执行 `git am --3way "所选补丁的绝对路径"`。已经应用旧补丁时只用增量补丁；增量同时继承最新上游修复。不要在 StoryGenerate 通用引擎根目录应用。
+
+两份补丁均已在各自起点创建独立 worktree，实际 git am 成功，最终 Git tree 均为 `2db07e5bd6ea7e7fe0075590deea16e0d51b959a`，与完整远程交付相同。汇总补丁提交 SHA 与远程保留历史的提交 SHA 不同，文件内容相同。机器证据见 manifest-20261112.json 和 patch-verification-20261112.json。
+
+详细功能、启动、前后端契约及下游边界见 [当前交接说明](../故事生成独立交付与接入契约_20261112.md)，验证与未验事项见 [测试记录](../故事生成独立交付测试记录_20261112.md)。新入口默认关闭，不因合并补丁自动启用。
